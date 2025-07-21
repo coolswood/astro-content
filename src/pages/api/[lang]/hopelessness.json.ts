@@ -16,19 +16,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return paths;
 };
 
+const revItems = new Set([0, 2, 4, 5, 7, 9, 12, 14, 18]);
+
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/bdi.json`),
+        path.resolve(`src/i18n/${lang}/tests/hopelessness.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
-      await fs.readFile(path.resolve(`src/i18n/en/tests/bdi.json`), 'utf-8'),
+      await fs.readFile(
+        path.resolve(`src/i18n/en/tests/hopelessness.json`),
+        'utf-8',
+      ),
     );
 
     const constants = JSON.parse(
@@ -38,41 +43,48 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const options = [
+      data.variants.wrong,
+      data.variants.maybe,
+      data.variants.maybeYes,
+      data.variants.yes,
+    ];
+
     const output = {
-      title: constants.bdi,
-      steps: Object.keys(data.steps).map((key: string) => ({
-        g: null,
-        v: data.steps[key].map((text: string, i: number) => ({
+      title: constants.hopelessness,
+      steps: data.steps.map((key: string, index: number) => ({
+        g: key,
+        v: options.map((text: any, id: number) => ({
           t: text,
-          s: i,
+          s: revItems.has(index) ? 4 - (id + 1) : id,
         })),
       })),
       result: [
         {
-          text: data.result.normal.text,
-          title: data.result.normal.title,
-          rangeBefore: 13,
+          text: data.result.positive.text,
+          title: data.result.positive.title,
+          rangeBefore: 9,
         },
         {
-          text: data.result.mild.text,
-          title: data.result.mild.title,
+          text: data.result.neutrally.text,
+          title: data.result.neutrally.title,
           rangeBefore: 24,
         },
         {
-          text: data.result.moderate.text,
-          title: data.result.moderate.title,
-          rangeBefore: 40,
+          text: data.result.negative.text,
+          title: data.result.negative.title,
+          rangeBefore: 42,
         },
         {
-          text: data.result.exacerbated.text,
-          title: data.result.exacerbated.title,
-          rangeBefore: 63,
+          text: data.result.hopeless.text,
+          title: data.result.hopeless.title,
+          rangeBefore: 60,
         },
       ],
       steps_description: Object.values(data.steps_description ?? {}),
       description: {
         text: data.description.text,
-        sourceLink: 'https://en.wikipedia.org/wiki/Beck_Depression_Inventory',
+        sourceLink: 'https://en.wikipedia.org/wiki/Beck_Hopelessness_Scale',
       },
       recommends: {
         activities: [

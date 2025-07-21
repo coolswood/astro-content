@@ -1,0 +1,452 @@
+{
+  "steps": [
+    "Hoe voelt u zich wanneer u hulp of een dienst moet aanvragen?",
+    "Hoe voelt u zich wanneer u voor een groot publiek moet spreken?",
+    "Hoe reageert u wanneer vreemden proberen een gesprek met u aan te knopen?",
+    "Hoe vaak vermijdt u telefoongesprekken of videogesprekken?",
+    "Hoe vaak probeert u sociale interacties buiten werk of studie te vermijden?",
+    "Voelt u zich ongemakkelijk wanneer u een kamer binnenloopt waar iedereen al zit?",
+    "Hoe ervaart u kritiek op sociale media?",
+    "Kiest u er vaak voor om tijdens werkvergaderingen te zwijgen?",
+    "Hoe voelt u zich wanneer u wordt gevraagd om uw mening voor een groep te geven?",
+    "Hoe voelt u zich op drukke plekken, zoals in de metro?",
+    "Hoe vaak vermijdt u om in het middelpunt van de belangstelling te staan in gezelschap?",
+    "Hoe vaak vermijdt u bezoeken aan openbare plaatsen zoals restaurants, clubs of bars?",
+    "Ervaart u angst wanneer u in het middelpunt van de belangstelling staat?",
+    "Hoe vaak ervaart u angst voor aankomende sociale interacties?",
+    "Voelt u zich ongemakkelijk bij communicatie met uw leidinggevenden?",
+    "Hoe vaak vermijdt u bezoeken aan grote winkelcentra of warenhuizen?",
+    "Hoe voelt u zich wanneer u iets nieuws moet proberen, bijvoorbeeld een nieuw café bezoeken?",
+    "Hoe voelt u zich wanneer u nieuwe taken moet uitvoeren voor een onbekend publiek?",
+    "Hoe vaak vermijdt u telefoongesprekken met mensen die u niet goed kent?",
+    "Voelt u zich angstig bij het retourneren van een product in de winkel?",
+    "Hoe voelt u zich als u op het laatste moment gevraagd wordt om publiekelijk op te treden?",
+    "Ervaart u angst wanneer u aantekeningen maakt in het bijzijn van anderen?",
+    "Voelt u zich angstig wanneer u een opdringerige verkoper afwijst?",
+    "Ervaart u angst wanneer u het oneens bent met mensen die u niet goed kent?",
+    "Hoe reageert u op onverwachte uitnodigingen voor bruiloften of andere festiviteiten?",
+    "Hoe vaak vermijdt u telefoongesprekken wanneer anderen aanwezig zijn?",
+    "Hoe vaak vermijdt u het om naar feestjes te gaan?",
+    "Hoe vaak vermijdt u het gebruik van openbare toiletten?",
+    "Hoe reageert u op uitnodigingen om af te spreken of op date te gaan met een potentiële partner?",
+    "Hoe vaak vermijdt u het beantwoorden van telefoontjes van onbekende nummers?",
+    "Hoe staat u tegenover het aangaan van gesprekken met onbekenden tijdens reizen of vakantie?",
+    "Ervaart u angst bij oogcontact met onbekenden?",
+    "Hoe vaak vermijdt u conflicten of discussies met vreemden?",
+    "Hoe staat u tegenover deelname aan groepsfoto's?",
+    "Hoe reageert u op voorstellen om u bij een nieuwe groep of gemeenschap aan te sluiten?",
+    "Hoe vaak vermijdt u ontmoetingen met onbekenden?",
+    "Ervaart u angst voor een praktijkexamen?",
+    "Ervaart u angst wanneer u met iemand praat?",
+    "Geeft u de voorkeur aan wandelen wanneer er weinig mensen op straat zijn?",
+    "Hoe vaak vermijdt u oogcontact met onbekenden?"
+  ],
+  "variants": {
+    "0": [
+      "Ik vraag er zonder moeite om, dat is normaal",
+      "Ik voel een klein ongemak, maar ik kom er wel doorheen",
+      "Het is ongemakkelijk, ik probeer het zelf op te lossen",
+      "Het is zeer ongemakkelijk, ik vermijd het"
+    ],
+    "1": [
+      "Zelfverzekerd en kalm",
+      "Met enige angst",
+      "Ik ben nerveus, maar ik kan optreden",
+      "Ik raak in paniek"
+    ],
+    "2": [
+      "Vriendelijk en open",
+      "Met voorzichtigheid en wantrouwen",
+      "Ik probeer een gesprek te vermijden",
+      "Ik ren letterlijk weg"
+    ],
+    "3": [
+      "Bijna nooit",
+      "Soms",
+      "Heel vaak",
+      "Bijna altijd"
+    ],
+    "4": [
+      "Bijna nooit",
+      "Af en toe",
+      "Heel vaak",
+      "Bijna altijd"
+    ],
+    "5": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "6": [
+      "Kalm, het is maar andermans mening",
+      "Ik raak er een beetje van, maar vergeet het snel",
+      "Ik maak me er erg druk om, het kan mijn dag verpesten",
+      "Het kan me ernstige angst bezorgen"
+    ],
+    "7": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "8": [
+      "Zelfverzekerd",
+      "Met enige angst",
+      "Zeer ongemakkelijk",
+      "Heel slecht"
+    ],
+    "9": [
+      "Helemaal normaal",
+      "Een beetje gespannen, maar het is oké",
+      "Zeer ongemakkelijk, ik vermijd zulke plekken",
+      "Paniek of ernstige angst"
+    ],
+    "10": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "11": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "12": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "13": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "14": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "15": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "16": [
+      "Het is een interessante ervaring, ik ben blij iets nieuws te proberen",
+      "Ik voel een klein ongemak, maar ik kom er wel doorheen",
+      "Ik probeer zulke situaties te vermijden",
+      "Het bezorgt me ernstige angst of paniek"
+    ],
+    "17": [
+      "Ik handel zelfverzekerd",
+      "Met enige angst",
+      "Ik probeer het te vermijden",
+      "Ik raak in paniek en ben bang"
+    ],
+    "18": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "19": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "20": [
+      "Ik treed op zonder problemen",
+      "Ik voel wat angst, maar ik ga akkoord",
+      "Zeer ongemakkelijk, maar ik stem toe",
+      "Ik weiger meteen"
+    ],
+    "21": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "22": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "23": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "24": [
+      "Ik accepteer het graag",
+      "Ik maak me een beetje zorgen, maar ik ga ervoor",
+      "Ik geef er de voorkeur aan dergelijke evenementen te vermijden",
+      "Ik wil er absoluut niet naartoe"
+    ],
+    "25": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "26": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "27": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "28": [
+      "Ik stem vrolijk toe",
+      "Ik maak me een beetje zorgen, maar ik ga mee",
+      "Ik probeer dates te vermijden",
+      "Ik weiger meteen"
+    ],
+    "29": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "30": [
+      "Ik maak kennis en praat met mensen",
+      "Ik word verlegen, maar ik maak kennis",
+      "Ik probeer contact te vermijden",
+      "Ik praat niet met onbekenden"
+    ],
+    "31": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "32": [
+      "Bijna nooit",
+      "Soms",
+      "Heel vaak",
+      "Bijna altijd"
+    ],
+    "33": [
+      "Ik stem graag toe",
+      "Ik voel me een beetje ongemakkelijk, maar ik ga akkoord",
+      "Ik geef de voorkeur aan vermijden",
+      "Ik weiger"
+    ],
+    "34": [
+      "Ik neem het aanbod graag aan",
+      "Ik word verlegen, maar ik ga akkoord",
+      "Ik verkies om niet mee te doen",
+      "Ik weiger"
+    ],
+    "35": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "36": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "37": [
+      "Geen",
+      "Lichte angst",
+      "Matige angst",
+      "Intensieve angst"
+    ],
+    "38": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ],
+    "39": [
+      "Nooit",
+      "Soms",
+      "Vaak",
+      "Altijd"
+    ]
+  },
+  "steps_description": {
+    "0": {
+      "text": "Sociophobia, oftewel sociale angststoornis, uit zich in een sterke vrees voor sociale interacties. Het vragen om hulp is een van de situaties die vaak angst oproepen bij mensen met deze stoornis.",
+      "fact": "Charles Darwin, de beroemde natuuronderzoeker en grondlegger van de evolutietheorie, leed aan ernstige sociophobia. Hij vermeed publieke optredens en kreeg vaak paniekaanvallen voor de noodzaak om met mensen om te gaan, ondanks zijn opmerkelijke prestaties."
+    },
+    "1": {
+      "text": "Glossofobie is de angst voor publieke optredens, een van de meest voorkomende vormen van sociophobia. Ongeveer 75% van de mensen ervaart enige mate van angst bij het spreken in het openbaar.",
+      "fact": "Volgens een enquête van de American Psychological Association ervaart ongeveer 30% van de Amerikanen een sterke angst voor publieke optredens, wat het tot een van de meest voorkomende angsten maakt."
+    },
+    "2": {
+      "text": "Een van de kernaspecten van sociophobia is de angst voor sociale interacties met onbekenden. Dit kan zich uiten in het vermijden van contact, de drang om onopvallend te zijn en in gevoelens van ongemak of angst.",
+      "fact": "Franz Kafka, de beroemde schrijver, leed aan ernstige sociophobia en had vaak moeite met het communiceren met vreemden. Zijn werken, zoals «Het Proces» en «Het Slot», weerspiegelen zijn diepe angsten en zorgen."
+    },
+    "3": {
+      "text": "Mensen met sociophobia vermijden vaak telefoongesprekken en videogesprekken uit angst verkeerd begrepen te worden of een slechte indruk te maken. Ze kunnen zich zorgen maken over hoe hun stem klinkt of wat ze zullen zeggen.",
+      "fact": "Een manier om de angst voor telefoongesprekken te verminderen is door oefening en voorbereiding. Het opstellen van een lijst met vragen en antwoorden voorafgaand aan het gesprek kan helpen om zich zekerder te voelen en de angst te verminderen."
+    },
+    "4": {
+      "text": "Sociophobia kan ervoor zorgen dat mensen sociale interacties buiten verplichte situaties (zoals werk of studie) vermijden, om zo niet geconfronteerd te worden met potentieel angstige sociale situaties.",
+      "fact": "Onderzoek toont aan dat ongeveer 15 miljoen Amerikanen (ongeveer 7% van de bevolking van de VS) aan sociophobia lijden, en een aanzienlijk deel van hen geeft de voorkeur aan het vermijden van sociale situaties buiten hun verplichte rollen."
+    },
+    "5": {
+      "text": "Het binnengaan van een volle kamer kan bijzonder angstaanjagend zijn voor mensen met sociophobia vanwege de vrees om in de schijnwerpers te staan. Ze kunnen zich zorgen maken dat ze bekeken of beoordeeld worden.",
+      "fact": "Albert Einstein, de grote fysicus, leed aan ernstige sociophobia en vermeed grote bijeenkomsten. Hij gaf er de voorkeur aan alleen te werken en alleen met nauwe vrienden en collega's te communiceren."
+    },
+    "6": {
+      "text": "Mensen met sociophobia kunnen kritiek zeer pijnlijk ervaren, vooral op sociale media waar deze publiek is en door velen gezien kan worden.",
+      "fact": "Digitale detox wordt steeds populairder. Veel mensen, waaronder beroemdheden, schakelen tijdelijk sociale media uit om hun mentale gezondheid te herstellen en de impact van negatieve kritiek te verminderen."
+    },
+    "7": {
+      "text": "Zwijgen kan een manier zijn om negatieve aandacht en potentiële kritiek te vermijden, maar het kan ook hun carrièrekansen en professionele mogelijkheden beperken.",
+      "fact": "Actief luisteren kan mensen helpen zich zekerder te voelen tijdens vergaderingen. Door zich te concentreren op luisteren en vooraf vragen of opmerkingen voor te bereiden, kan de angst verminderd worden en de deelname aan discussies verbeteren."
+    },
+    "8": {
+      "text": "Sociophobia kenmerkt zich door een sterke vrees in situaties waarin iemand door anderen beoordeeld kan worden. Wanneer u gevraagd wordt uw mening voor een groep te geven, kan dit de angst oproepen een fout te maken of negatief beoordeeld te worden."
+    },
+    "9": {
+      "text": "Mensen met sociophobia kunnen sterke onrust en ongemak ervaren op drukke plekken, zoals in de metro. Zulke locaties kunnen de angst opwekken om opgemerkt, beoordeeld te worden of geconfronteerd te worden met onverwachte sociale situaties.",
+      "fact": "Adele, de bekende Britse zangeres, lijdt aan sociophobia en paniekaanvallen. Zij vermijdt drukke plaatsen zoals de metro om het risico op paniekaanvallen te verkleinen."
+    },
+    "10": {
+      "text": "Mensen met sociophobia proberen vaak te voorkomen dat ze in het middelpunt van de belangstelling komen, uit angst voor kritiek of spot, wat hun wens versterkt om op de achtergrond te blijven."
+    },
+    "11": {
+      "text": "Volgens het National Institute of Mental Health in de VS ervaart ongeveer 12,1% van de bevolking gedurende hun leven een sociale angststoornis, wat vaak leidt tot het vermijden van openbare plaatsen."
+    },
+    "12": {
+      "text": "Onderzoek toont aan dat een matig niveau van angst de productiviteit kan verbeteren door het activeren van het sympathische zenuwstelsel en het verhogen van de concentratie. Dit fenomeen staat bekend als de Yerkes-Dodson wet."
+    },
+    "13": {
+      "text": "Angst voor sociale interactie, ook wel 'sociale angst' genoemd, kan variëren van lichte ongemakkelijkheid tot intense vrees. Het is de op twee na meest voorkomende psychische stoornis na depressie en alcoholisme."
+    },
+    "14": {
+      "text": "De angst voor autoriteitsfiguren wordt soms 'hiërarchofobie' genoemd. Hoewel het geen officiële medische term is, wordt het vaak gebruikt om de overmatige bezorgdheid bij interactie met mensen in hogere posities te beschrijven.",
+      "fact": "Warren Buffett, een van 's werelds meest succesvolle investeerders, ervoer in zijn jeugd een sterke angst voor publieke optredens en interacties met autoriteitsfiguren. Hij schreef zich zelfs in voor een cursus om deze angst te overwinnen, wat zijn carrière aanzienlijk ten goede kwam."
+    },
+    "15": {
+      "text": "De angst voor het bezoeken van winkelcentra kan verband houden met agorafobie – de vrees voor open ruimten of plekken waar het moeilijk is snel een uitgang te vinden. Dit kan echter ook een manifestatie zijn van sociophobia of crowdphobia (de angst voor menigten)."
+    },
+    "16": {
+      "text": "Psychologen noemen de angst voor het onbekende 'onverdraagzaamheid voor onzekerheid'. Deze toestand kan niet alleen invloed hebben op sociale situaties, maar ook op het nemen van beslissingen in het algemeen."
+    },
+    "17": {
+      "text": "De angst voor een onbekend publiek wordt 'sociale beoordelingsangst' genoemd. Dit is een combinatie van de vrees voor negatieve beoordeling en de angst voor nieuwe situaties.",
+      "fact": "Emma Stone, de Oscar-winnende actrice, sprak openlijk over haar strijd met paniekaanvallen, vooral wanneer zij voor een nieuw publiek moest optreden. Ze maakte gebruik van therapie en ademhalingstechnieken om hiermee om te gaan."
+    },
+    "18": {
+      "text": "De angst voor telefoongesprekken staat bekend als 'telefonofobie'. Dit fenomeen wordt steeds vaker gezien in het digitale tijdperk, waarin mensen gewend raken aan tekstuele communicatie.",
+      "fact": "Een onderzoek uitgevoerd door BankMyCell in 2019 toonde aan dat 76% van de millennials angst ervaart bij het voeren van een telefoongesprek. Bij Generatie Z is dit percentage nog hoger, namelijk 81%."
+    },
+    "19": {
+      "text": "Angst bij het retourneren van producten kan samenhangen met de vrees voor conflicten, negatieve beoordeling of een schuldgevoel omdat men ongemak veroorzaakt voor het winkelpersoneel.",
+      "fact": "Angst bij het retourneren van producten wordt vaak gekoppeld aan het bredere fenomeen 'assertofobie' – de angst om voor uw rechten op te komen of uw behoeften te uiten."
+    },
+    "20": {
+      "text": "Angst voor onvoorbereide optredens wordt vaak geassocieerd met het 'impostor-syndroom' – het gevoel dat u niet bekwaam genoeg bent en ontdekt kunt worden.",
+      "fact": "De techniek van 'improvisatiedenken' kan nuttig zijn. In plaats van in paniek te raken door een gebrek aan voorbereiding, kunt u de situatie zien als een kans voor spontane en oprechte interactie met het publiek."
+    },
+    "21": {
+      "text": "De angst om te schrijven of aantekeningen te maken in het bijzijn van anderen wordt soms 'scriptophobia' genoemd. Dit is een specifieke vorm van sociale angst, gerelateerd aan de vrees voor beoordeling door anderen.",
+      "fact": "Hoewel er geen exacte cijfers zijn over de prevalentie van deze angst, toonde een onderzoek gepubliceerd in het Journal of Anxiety Disorders aan dat ongeveer 7% van de mensen aanzienlijke ongemakken ervaart wanneer zij in het bijzijn van anderen moeten schrijven."
+    },
+    "22": {
+      "text": "Moeite met nee zeggen, vooral tegen opdringerige mensen, wordt door psychologen aangeduid als het 'pleaser-syndroom' of 'hulpzuchtigheid'. Dit komt voort uit de wens om conflicten te vermijden en de angst voor negatieve beoordeling.",
+      "fact": "Een onderzoek van de Universiteit van Pennsylvania toonde aan dat ongeveer 68% van de mensen ongemak ervaart wanneer zij 'nee' moeten zeggen in verkoopsituaties."
+    },
+    "23": {
+      "text": "Martin Luther King Jr., de bekende burgerrechtenstrijder, ervoer in het begin van zijn carrière sterke angst om zijn mening voor groepen te uiten. Door zijn angsten te overwinnen, werd hij een van de meest invloedrijke sprekers en leiders van de burgerrechtenbeweging."
+    },
+    "24": {
+      "text": "Mensen met sociophobia kunnen sterke angst en stress ervaren bij het ontvangen van onverwachte uitnodigingen voor bruiloften of andere festiviteiten. Zulke evenementen vereisen vaak interactie met veel mensen, wat extra belastend kan zijn.",
+      "fact": "Daniel Radcliffe, bekend van zijn rol als Harry Potter, lijdt aan sociophobia en vermijdt grote publieke evenementen. Hij geeft de voorkeur aan het doorbrengen van tijd met een kleine groep vrienden en familie."
+    },
+    "25": {
+      "text": "Mensen met sociophobia vermijden vaak telefoongesprekken in het bijzijn van anderen uit angst om gehoord en beoordeeld te worden. Ze maken zich zorgen over hoe hun stem klinkt, mogelijke fouten in hun spraak of dat hun gesprek een negatieve reactie kan uitlokken."
+    },
+    "26": {
+      "text": "Het vermijden van feestjes kan een vorm van 'beschermingsgedrag' zijn – een strategie die op korte termijn de angst vermindert, maar op de lange termijn kan leiden tot meer sociale isolatie en toenemende vrees."
+    },
+    "27": {
+      "text": "Onderzoeken tonen aan dat ongeveer 7-9% van de mensen lijdt aan paruresis, ook wel bekend als het 'verlegen plas-syndroom', waardoor zij het gebruik van openbare toiletten vermijden."
+    },
+    "28": {
+      "text": "Mensen met sociophobia kunnen sterke angst ervaren bij uitnodigingen voor ontmoetingen of dates. De voornaamste oorzaken zijn de angst voor negatieve beoordeling, onzekerheid over zichzelf en de bezorgdheid om fouten te maken in de communicatie."
+    },
+    "29": {
+      "text": "De angst voor telefoongesprekken, vooral van onbekende nummers, kan voortkomen uit de bezorgdheid dat u niet weet hoe u moet antwoorden of dat het gesprek niet verloopt zoals verwacht. Dit kan gepaard gaan met de vrees voor confrontaties of de noodzaak om snel te reageren op onverwachte vragen."
+    },
+    "30": {
+      "text": "Mensen met sociophobia kunnen aanzienlijke angst ervaren bij het aangaan van gesprekken met onbekenden tijdens reizen of vakantie. Ze vrezen negatieve beoordeling, iets ongepast doen of niet weten hoe ze een gesprek moeten voeren."
+    },
+    "31": {
+      "text": "Onderzoeken tonen aan dat ongeveer 60% van de mensen met sociale angst ongemak ervaart bij oogcontact, een aspect dat tot de meest zorgwekkende vormen van sociale interactie behoort."
+    },
+    "32": {
+      "text": "Mensen met sociophobia kunnen sterke angst ervaren bij de mogelijkheid van conflicten of discussies met onbekenden. Ze vrezen negatieve beoordeling, misverstanden of zelfs agressieve reacties, wat leidt tot het vermijden van potentiële conflict situaties."
+    },
+    "33": {
+      "text": "Volgens onderzoeken ervaart ongeveer 20-30% van de mensen aanzienlijk ongemak bij het maken van groepsfoto’s. Deze angst kan voortkomen uit de vrees voor negatieve beoordeling en ontevredenheid over hun eigen uiterlijk."
+    },
+    "34": {
+      "text": "Isaac Newton, de grote wetenschapper, was zeer introvert en vermeed deelname aan openbare evenementen en nieuwe groepen. Hij bracht liever tijd alleen door met zijn wetenschappelijk onderzoek."
+    },
+    "35": {
+      "text": "Onderzoeken tonen aan dat cognitieve gedragstherapie (CGT) zeer effectief kan zijn in de behandeling van sociale angst. CGT helpt mensen om negatieve gedachten te veranderen en een positievere houding aan te nemen tegenover sociale interacties."
+    },
+    "36": {
+      "text": "Angst voor het afleggen van een praktijkexamen is een veelvoorkomend probleem, vooral bij mensen met sociophobia. De vrees om beoordeeld te worden en de kans op falen kunnen de stress en zenuwen aanzienlijk verhogen.",
+      "fact": "Thomas Edison, de beroemde uitvinder, had moeite met traditionele leermethoden en examens. Hij leerde door praktische experimenten en ervaringen, en vermeed formele examens."
+    },
+    "37": {
+      "text": "Mensen met sociophobia ervaren vaak sterke angst bij gesprekken met anderen. De vrees voor negatieve beoordeling, zorgen over hoe hun woorden zullen worden opgevat en de angst om fouten te maken, kunnen de nervositeit versterken."
+    },
+    "38": {
+      "text": "Mensen met sociophobia geven vaak de voorkeur aan wandelen op momenten dat er weinig mensen op straat zijn, zodat zij sociale interacties die angst en stress oproepen, kunnen vermijden.",
+      "fact": "Howard Hughes, de beroemde Amerikaanse zakenman en piloot, stond bekend om zijn sociophobia en diverse fobieën. Hij koos voor solowandelingen en vermeed drukke plekken om zo onopgemerkt te blijven."
+    },
+    "39": {
+      "text": "Oogcontact activeert spiegelneuronen, wat het gevoel van empathie en begrip kan versterken, maar ook sterke emoties kan oproepen. Dit kan verklaren waarom oogcontact voor u zo belastend is."
+    }
+  },
+  "range": {
+    "normal": "Afwezigheid van sociophobia",
+    "mild": "Lichte sociophobia",
+    "moderate": "Ernstige sociophobia"
+  },
+  "result": {
+    "normal": {
+      "text": "Uw resultaten tonen aan dat u zich zelfverzekerd en comfortabel voelt in diverse sociale situaties. U ervaart geen significante moeilijkheden bij interacties met onbekenden, bij publieke optredens of bij deelname aan groepsactiviteiten. Dit wijst erop dat sociophobia bij u minimaal aanwezig is of zelfs geheel afwezig, waardoor u vrij en actief deel kunt nemen aan het sociale leven.",
+      "title": "Afwezigheid van sociophobia"
+    },
+    "mild": {
+      "text": "Uw resultaten tonen aan dat u in sociale situaties met enkele moeilijkheden te maken krijgt. U kunt zich onzeker voelen bij interacties met onbekenden, bij publieke optredens of bij deelname aan grote groepsactiviteiten. Dit wijst erop dat u lichte sociophobia ervaart. Met de juiste ondersteuning en oefening kunt u uw communicatieve vaardigheden verbeteren en zich comfortabeler voelen in sociale interacties.",
+      "title": "Lichte sociophobia"
+    },
+    "moderate": {
+      "text": "Uw resultaten wijzen op aanzienlijke moeilijkheden in sociale situaties. U ervaart sterke gevoelens van onzekerheid en angst bij interacties met onbekenden, bij publieke optredens of bij deelname aan groepsactiviteiten. Dit duidt op een ernstige vorm van sociophobia. Het is belangrijk te weten dat u met professionele hulp en de juiste therapie deze uitdagingen geleidelijk kunt overwinnen en zo de kwaliteit van uw leven kunt verbeteren.",
+      "title": "Ernstige sociophobia"
+    }
+  },
+  "description": {
+    "text": [
+      "Heeft u zich ooit afgevraagd hoe comfortabel u zich voelt in sociale situaties? Ervaart u angst wanneer u een gesprek met een onbekende moet beginnen of voor een publiek moet spreken? Onze test helpt u te begrijpen in welke mate tekenen van sociophobia bij u aanwezig zijn.",
+      "De test bestaat uit vragen die verschillende aspecten van sociale interactie behandelen, van communicatie met collega's tot deelname aan publieke evenementen. Door deze te beantwoorden, krijgt u meer inzicht in uw gevoelens en reacties in diverse situaties."
+    ]
+  }
+}

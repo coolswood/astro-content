@@ -16,19 +16,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return paths;
 };
 
+const revItems = new Set([4, 8, 12, 16, 18]);
+
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/bdi.json`),
+        path.resolve(`src/i18n/${lang}/tests/acceptance.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
-      await fs.readFile(path.resolve(`src/i18n/en/tests/bdi.json`), 'utf-8'),
+      await fs.readFile(
+        path.resolve(`src/i18n/en/tests/acceptance.json`),
+        'utf-8',
+      ),
     );
 
     const constants = JSON.parse(
@@ -38,41 +43,44 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const options = [
+      data.variants.never,
+      data.variants.seldom,
+      data.variants.often,
+      data.variants.always,
+    ];
+
+    const revItems = new Set([0, 1, 2, 4, 10, 15, 16, 17, 19]);
+
     const output = {
-      title: constants.bdi,
-      steps: Object.keys(data.steps).map((key: string) => ({
-        g: null,
-        v: data.steps[key].map((text: string, i: number) => ({
+      title: constants.acceptance,
+      steps: data.steps.map((key: string, index: number) => ({
+        g: key,
+        v: options.map((text: any, id: number) => ({
           t: text,
-          s: i,
+          s: revItems.has(index) ? id : 3 - id,
         })),
       })),
       result: [
         {
-          text: data.result.normal.text,
-          title: data.result.normal.title,
-          rangeBefore: 13,
+          text: data.result.low.text,
+          title: data.result.low.title,
+          rangeBefore: 20,
         },
         {
-          text: data.result.mild.text,
-          title: data.result.mild.title,
-          rangeBefore: 24,
-        },
-        {
-          text: data.result.moderate.text,
-          title: data.result.moderate.title,
+          text: data.result.middle.text,
+          title: data.result.middle.title,
           rangeBefore: 40,
         },
         {
-          text: data.result.exacerbated.text,
-          title: data.result.exacerbated.title,
-          rangeBefore: 63,
+          text: data.result.hight.text,
+          title: data.result.hight.title,
+          rangeBefore: 60,
         },
       ],
       steps_description: Object.values(data.steps_description ?? {}),
       description: {
         text: data.description.text,
-        sourceLink: 'https://en.wikipedia.org/wiki/Beck_Depression_Inventory',
       },
       recommends: {
         activities: [

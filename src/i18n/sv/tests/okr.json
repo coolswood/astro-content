@@ -1,0 +1,159 @@
+{
+  "steps": [
+    "Hur länge under dagen pågår tvångstankarna?",
+    "Hur påverkar tvångstankarna din vardagsrytm?",
+    "Hur mycket oroar dessa tankar dig?",
+    "Är det lätt för dig att stå emot tvångstankarna?",
+    "Kan du kontrollera dina tvångstankar?",
+    "Hur ofta utför du tvångshandlingar (kontrollerar telefonen utan anledning, tvättar händerna, etc.)?",
+    "Hur påverkar dessa handlingar ditt liv?",
+    "Hur känner du dig på grund av dessa handlingar?",
+    "Lyckas du motstå att utföra ritualer?",
+    "Hur väl kontrollerar du dina ritualer?"
+  ],
+  "variants": {
+    "0": [
+      "De existerar inte alls",
+      "Mindre än en timme",
+      "Från 1 till 3 timmar",
+      "Från 3 till 8 timmar",
+      "Mer än 8 timmar"
+    ],
+    "1": [
+      "Inte alls, jag lever som vanligt",
+      "Knappt märkbart",
+      "De komplicerar livet lite, men jag klarar mig",
+      "De stör avsevärt, jag måste ändra mina vanor",
+      "De har helt vänt upp och ned på mitt liv"
+    ],
+    "2": [
+      "De oroar mig inte alls",
+      "Lite obehagligt",
+      "Ganska starkt, men uthärdligt",
+      "Väldigt starkt, det påverkar mitt humör",
+      "Jag känner konstant starkt obehag"
+    ],
+    "3": [
+      "Jag lyckas nästan alltid",
+      "Jag lyckas ofta",
+      "Ibland lyckas jag",
+      "Jag kan sällan avfärda dem",
+      "Jag kan inte motstå dem alls"
+    ],
+    "4": [
+      "Ja, jag har full kontroll",
+      "För det mesta, ja",
+      "Ibland lyckas jag",
+      "Jag kan knappt kontrollera dem",
+      "Jag kan inte kontrollera dem alls"
+    ],
+    "5": [
+      "Aldrig",
+      "Mindre än en timme per dag",
+      "Från 1 till 3 timmar",
+      "Från 3 till 8 timmar",
+      "Mer än 8 timmar"
+    ],
+    "6": [
+      "Inte alls, allt är som vanligt",
+      "Knappt märkbart",
+      "De komplicerar saker lite, men inte kritiskt",
+      "De stör mycket, jag ändrar mina planer på grund av dem",
+      "Livet har förändrats till oigenkännlighet"
+    ],
+    "7": [
+      "Jag är inte orolig alls",
+      "Lite obekvämt",
+      "Märkbart obehagligt, men man kan leva med det",
+      "Starkt obehag, det tynger ner mig",
+      "Konstant känsla av starkt obehag"
+    ],
+    "8": [
+      "Jag kan nästan alltid hålla mig",
+      "Jag lyckas ganska ofta",
+      "Ibland kan jag avstå från dem",
+      "Jag lyckas sällan undvika dem",
+      "Jag kan inte motstå alls"
+    ],
+    "9": [
+      "Helt under min kontroll",
+      "Jag kontrollerar dem till största delen",
+      "Ibland kan jag styra dem",
+      "Jag kontrollerar dem nästan inte",
+      "Jag kan inte kontrollera dem alls"
+    ]
+  },
+  "steps_description": {
+    "0": {
+      "text": "För personer med måttlig OCD kan tvångstankar och kompulsioner ta mellan 1 och 3 timmar per dag, medan vid svår form kan dessa tankar och ritualer ta mer än 8 timmar per dag.",
+      "fact": "Forskning visar att mer än 60% av personer med OCD upplever tvångstankar dagligen."
+    },
+    "1": {
+      "text": "Omkring 50% av personer med OCD rapporterar att deras tvångstankar och kompulsioner stör deras vardagsliv avsevärt, inklusive arbete, studier och sociala interaktioner.",
+      "fact": "Frekventa och långvariga tvångstankar kan orsaka fysisk utmattning och hälsoproblem, såsom huvudvärk, matsmältningsproblem och kronisk trötthet."
+    },
+    "2": {
+      "text": "Stark oro på grund av tvångstankar kan manifestera sig som fysiska symptom, såsom huvudvärk, muskelspänningar och matsmältningsproblem.",
+      "fact": "Trots att Franklin Delano Roosevelt inte hade någon officiell OCD-diagnos, noterar historiker att hans tvångstankar orsakade honom betydande oro, vilket påverkade hans humör och vardagsliv."
+    },
+    "3": {
+      "text": "Styrkan och frekvensen av tvångstankar kan variera avsevärt mellan olika personer. Vissa kan hantera dem större delen av tiden, medan andra upplever konstanta svårigheter.",
+      "fact": "KBT, särskilt metoden exponering och förhindrande av ritualer (ERP), är den mest effektiva behandlingsmetoden för OCD, och hjälper människor att lära sig stå emot tvångstankar."
+    },
+    "4": {
+      "text": "Endast omkring 10-20% av personer med OCD rapporterar att de mestadels kan kontrollera sina tvångstankar.",
+      "fact": "Antidepressiva, såsom SSRI, hjälper ofta personer med OCD att minska intensiteten av tvångstankar och förbättra kontrollen över dem."
+    },
+    "5": {
+      "text": "De vanligaste tvångshandlingarna inkluderar frekvent handtvätt, upprepad kontroll av lås och hushållsapparater, samt upprepade handlingar som att röra vid vissa föremål eller upprepa vissa ord och fraser.",
+      "fact": "Mindre än 5% av personer med OCD utför tvångshandlingar mer än 8 timmar per dag, vilket allvarligt stör deras vardagsliv."
+    },
+    "6": {
+      "text": "Tvångshandlingar kan störa yrkesverksamheten, minska produktiviteten och orsaka svårigheter att utföra arbetsuppgifter. Vissa människor tvingas minska sina arbetstimmar eller till och med byta jobb på grund av sitt tillstånd.",
+      "fact": "Howard Hughes tvångshandlingar, såsom ständig handtvätt och undvikande av kontakt med andra, ledde till hans sociala isolering och betydande förändringar i hans liv. I slutändan påverkade hans OCD allvarligt hans hälsa och karriär."
+    },
+    "7": {
+      "text": "Tvångshandlingar åtföljs ofta av starka negativa känslor som ångest, skuld, skam och besvikelse. Dessa känslor kan avsevärt förstärka det allmänna obehaget och känslan av nedstämdhet.",
+      "fact": "Personer med OCD lider ofta av komorbida störningar, såsom depression och ångeststörningar, vilket förvärrar deras tillstånd och förstärker känslan av obehag."
+    },
+    "8": {
+      "text": "Stress- och ångestnivåer spelar en betydande roll i förmågan att motstå ritualer. Under perioder av förhöjd stress blir det svårare att motstå ritualer.",
+      "fact": "Fotbollsspelaren David Beckham har erkänt att han ibland kan motstå att utföra ritualer, särskilt med stöd från familj och terapeuter."
+    },
+    "9": {
+      "text": "Ungefär 30-35% av personer noterar att de i de flesta fall kan kontrollera sina ritualer.",
+      "fact": "Medvetenhets- och meditationsövningar kan hjälpa till att förbättra kontrollen över ritualer, bidra till att minska ångest och förbättra den allmänna psykiska hälsan."
+    }
+  },
+  "range": {
+    "normal": "Normalt tillstånd",
+    "light": "Lätt uttryckt OCD",
+    "severe": "Måttligt uttryckt OCD",
+    "extreme": "Svår OCD"
+  },
+  "result": {
+    "normal": {
+      "text": "Ditt tillstånd är inom normala gränser, symtom på tvångssyndrom saknas eller är extremt svaga. Du upplever inte något betydande obehag från tvångstankar och handlingar, och de påverkar inte ditt dagliga liv. Generellt känner du dig lugn och säker, dina tankar och handlingar är under kontroll.",
+      "title": "Normalt tillstånd"
+    },
+    "light": {
+      "text": "Du kan märka vissa egenheter i ditt tänkande och beteende. Du kanske har tankar som dyker upp periodvis, men de skapar inga allvarliga störningar i ditt dagliga liv. Det finns stunder när du känner behov av att utföra vissa handlingar, till exempel att noggrant tvätta händerna efter obehaglig kontakt eller dubbelkolla olika aspekter av ditt liv - från hemmets tillstånd till de senaste nyheterna. Dessa impulser uppstår dock bara i vissa situationer och är inte konstanta. Det viktiga är att du kan kontrollera dessa impulser utan att låta dem påverka din vanliga dagsrutin och livsstil väsentligt.",
+      "title": "Lätt uttryckt OCD"
+    },
+    "severe": {
+      "text": "Du känner ofta oro som tvingar dig att följa strikta regler i vardagen. Du har vissa preferenser som verkar extremt viktiga för dig - till exempel att använda sängkläder av ett specifikt märke eller att välja juice av en viss färg. Dina dagliga rutiner, som att klä på dig, följer en exakt ordning, och avvikelser från denna ordning orsakar obehag för dig. Du märker en tendens till överdriven noggrannhet, pedantiskt beteende och tvångsmässig strävan efter renlighet och ordning. Dessa egenskaper följer ofta med uttryckt OCD. Även om du ibland kan hoppa över några av dina ritualer och rationalisera din ångest i vissa situationer, inser du att din kontroll över dessa impulser är begränsad.",
+      "title": "Måttligt uttryckt OCD"
+    },
+    "extreme": {
+      "text": "Ditt dagliga liv genomsyras av en djup, genomträngande känsla av ångest. För att tillfälligt lindra detta tillstånd tar du till komplexa, ofta ologiska ritualer. Ibland känns det som om gränsen mellan verklighet och fantasi suddas ut, och du börjar tro på den magiska kraften i vissa handlingar, även om de strider mot rationellt tänkande. Du känner ett överväldigande behov av att utföra upprepade handlingar, oförmögen att stoppa eller kontrollera dem. Alla försök från omgivningen att störa den ordning du etablerat väcker stark irritation eller till och med ilska hos dig. Att inte utföra ritualer skapar en känsla av obestämd men stark fara. Detta tillstånd påverkar avsevärt din livskvalitet, begränsar din förmåga att fungera normalt i vardagliga situationer och upprätthålla hälsosamma sociala relationer.",
+      "title": "Svår OCD"
+    }
+  },
+  "description": {
+    "text": [
+      "OCD eller tvångssyndrom är ett tillstånd där tvångstankar eller bilder dyker upp i huvudet utan särskild anledning, vilket tvingar personen att utföra vissa handlingar om och om igen.",
+      "Det är anmärkningsvärt att OCD kan manifestera sig i många olika former. Vissa personer med OCD kan känna behov av strikt symmetri, andra av att ständigt räkna föremål eller mentalt upprepa vissa fraser. Dessa symtom kan ta upp till flera timmar per dag och avsevärt påverka det dagliga livet.",
+      "Denna störning är ganska vanlig och förekommer hos ungefär 2-3 personer av 100. Dess tydligt uttryckta former kan dock avsevärt försämra livskvaliteten och ta mycket energi."
+    ]
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "steps": [
+    "Yardım veya hizmet talep etmeniz gerektiğinde kendinizi nasıl hissediyorsunuz?",
+    "Büyük bir kalabalık karşısında konuşmanız gerektiğinde nasıl hissediyorsunuz?",
+    "Yabancılar sizinle konuşmaya çalıştığında nasıl tepki veriyorsunuz?",
+    "Telefon görüşmelerinden veya video konferanslardan ne sıklıkla kaçınıyorsunuz?",
+    "İş veya okul dışındaki insanlarla iletişim kurmaktan ne sıklıkla kaçınıyorsunuz?",
+    "Herkesin oturduğu bir odaya girdiğinizde rahatsızlık hissediyor musunuz?",
+    "Sosyal medyada aldığınız eleştirileri nasıl algılıyorsunuz?",
+    "İş toplantılarında genellikle sessiz kalmayı mı tercih ediyorsunuz?",
+    "Bir grup önünde fikirlerinizi söylemeniz gerektiğinde nasıl hissediyorsunuz?",
+    "Metro gibi kalabalık yerlerde nasıl hissediyorsunuz?",
+    "Dikkatlerin merkezinde olmayı ne sıklıkla önlemeye çalışıyorsunuz?",
+    "Restoranlar, kulüpler veya barlar gibi halka açık yerlere gitmekten ne sıklıkla kaçınıyorsunuz?",
+    "Dikkatlerin merkezinde olduğunuzda endişe hissediyor musunuz?",
+    "İnsanlarla iletişim kurmadan önce ne sıklıkla endişe hissediyorsunuz?",
+    "Yönetimle iletişim kurarken rahatsızlık hissediyor musunuz?",
+    "Büyük alışveriş merkezlerine veya mağazalara gitmekten ne sıklıkla kaçınıyorsunuz?",
+    "Yeni bir kafeye gitmek gibi yeni bir şey yapmanız gerektiğinde nasıl hissediyorsunuz?",
+    "Tanımadığınız bir kitleye yeni görevler yapmanız gerektiğinde nasıl hissediyorsunuz?",
+    "Tanımadığınız kişilere telefon etmekten ne sıklıkla kaçınıyorsunuz?",
+    "Bir mağazadan ürün iade ederken endişe hissediyor musunuz?",
+    "Son anda halka açık bir konuşma yapmanız gerektiğinde nasıl hissediyorsunuz?",
+    "Başka insanların önünde not alırken endişe hissediyor musunuz?",
+    "Israrcı bir satıcıya hayır derken endişe hissediyor musunuz?",
+    "Az tanıdığınız insanlara itiraz ederken endişe hissediyor musunuz?",
+    "Düğünler veya diğer etkinlikler için gelen beklenmedik davetlere nasıl tepki veriyorsunuz?",
+    "Başka insanların yanında telefon görüşmeleri yapmaktan ne sıklıkla kaçınıyorsunuz?",
+    "Bir partiye gitmekten ne sıklıkla kaçınıyorsunuz?",
+    "Umumi tuvaletlere gitmekten ne sıklıkla kaçınıyorsunuz?",
+    "Potansiyel bir partnerle buluşma tekliflerine nasıl tepki veriyorsunuz?",
+    "Bilinmeyen numaralardan gelen aramaları ne sıklıkla cevapsız bırakıyorsunuz?",
+    "Seyahat veya tatil sırasında yabancılarla iletişim kurmak hakkında ne düşünüyorsunuz?",
+    "Yabancıların gözlerine bakarken endişe hissediyor musunuz?",
+    "Yabancılarla tartışma veya çatışmalardan ne sıklıkla kaçınıyorsunuz?",
+    "Grup fotoğraflarına katılma konusunda ne düşünüyorsunuz?",
+    "Yeni bir grup veya topluluğa katılma tekliflerine nasıl tepki veriyorsunuz?",
+    "Yabancılarla buluşmaktan ne sıklıkla kaçınıyorsunuz?",
+    "Beceri ve yeteneklerinizi göstermeniz gereken sınavlardan önce endişe hissediyor musunuz?",
+    "Biriyle konuşurken endişe hissediyor musunuz?",
+    "Dışarı çıkmak için insanların az olduğu veya hiç olmadığı zamanları mı tercih ediyorsunuz?",
+    "Yabancıların gözlerine bakmaktan ne sıklıkla kaçınıyorsunuz?"
+  ],
+  "variants": {
+    "0": [
+      "Rahatça yardım isterim, bu normal",
+      "Biraz rahatsızım ama başa çıkabilirim",
+      "Rahat değilim, kendi başıma halletmeye çalışırım",
+      "Çok rahatsızım, bunu yapmaktan kaçınırım"
+    ],
+    "1": [
+      "Kendime güveniyorum ve sakınım",
+      "Biraz kaygılıyım",
+      "Gerginim ama konuşabilirim",
+      "Panik oluyorum"
+    ],
+    "2": [
+      "Dostane ve açık",
+      "Temkinli ve güvensiz",
+      "Konuşmadan kaçınırım",
+      "Kaçıp giderim"
+    ],
+    "3": ["Neredeyse hiç", "Bazen", "Oldukça sık", "Neredeyse her zaman"],
+    "4": ["Neredeyse hiç", "Ara sıra", "Oldukça sık", "Neredeyse her zaman"],
+    "5": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "6": [
+      "Sakinim, bu sadece bir başkasının görüşü",
+      "Biraz üzülüyorum ama çabuk unutuyorum",
+      "Beni çok etkiliyor, günümü mahvedebilir",
+      "Bu bende ciddi bir endişe yaratabilir"
+    ],
+    "7": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "8": [
+      "Kendime güveniyorum",
+      "Biraz kaygılıyım",
+      "Çok rahatsızım",
+      "Çok kötü hissediyorum"
+    ],
+    "9": [
+      "Tamamen normal",
+      "Biraz gerginim ama normal",
+      "Çok rahatsızım, böyle yerlerden kaçınıyorum",
+      "Panik veya ciddi endişe"
+    ],
+    "10": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "11": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "12": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "13": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "14": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "15": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "16": [
+      "Bu ilginç bir deneyim, yeni şeyler denemekten memnunum",
+      "Biraz rahatsızım ama başa çıkabilirim",
+      "Bu tür durumlardan kaçınmaya çalışıyorum",
+      "Bu bende yoğun endişe veya panik yaratıyor"
+    ],
+    "17": [
+      "Kendime güveniyorum",
+      "Biraz kaygılıyım",
+      "Kaçınmaya çalışıyorum",
+      "Panik ve korku yaşıyorum"
+    ],
+    "18": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "19": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "20": [
+      "Sorunsuz sunarım",
+      "Endişeliyim ama kabul ederim",
+      "Çok rahatsızım ama kabul ederim",
+      "Hemen reddederim"
+    ],
+    "21": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "22": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "23": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "24": [
+      "Memnuniyetle kabul ederim",
+      "Biraz endişeliyim ama giderim",
+      "Bu tür etkinliklerden kaçınmayı tercih ederim",
+      "Gitmek istemiyorum"
+    ],
+    "25": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "26": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "27": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "28": [
+      "Mutlu bir şekilde kabul ederim",
+      "Biraz endişeliyim ama giderim",
+      "Buluşmalardan kaçınmaya çalışırım",
+      "Hemen reddederim"
+    ],
+    "29": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "30": [
+      "Tanışır ve iletişim kurarım",
+      "Utanırım ama tanışırım",
+      "İletişimden kaçınmaya çalışırım",
+      "Yabancılarla iletişim kurmam"
+    ],
+    "31": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "32": ["Neredeyse hiç", "Bazen", "Oldukça sık", "Neredeyse her zaman"],
+    "33": [
+      "Memnuniyetle kabul ederim",
+      "Biraz rahatsızım ama kabul ederim",
+      "Katılmaktan kaçınmayı tercih ederim",
+      "Reddederim"
+    ],
+    "34": [
+      "Teklifi memnuniyetle kabul ederim",
+      "Utanırım ama kabul ederim",
+      "Katılmamayı tercih ederim",
+      "Reddederim"
+    ],
+    "35": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "36": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "37": ["Hayır", "Hafif kaygı", "Orta derecede kaygı", "Yoğun kaygı"],
+    "38": ["Asla", "Bazen", "Sık sık", "Sürekli"],
+    "39": ["Asla", "Bazen", "Sık sık", "Sürekli"]
+  },
+  "steps_description": {
+    "0": {
+      "text": "Sosyal fobi veya sosyal anksiyete bozukluğu, sosyal etkileşim içeren durumlardan önce ciddi kaygı yaşanmasıyla kendini gösterir. Yardım istemek, bu tür durumlarda sıkça kaygıya neden olan bir faktördür.",
+      "fact": "Evrim teorisinin ünlü doğabilimcisi Charles Darwin, ciddi sosyal fobi yaşamıştır. Halk önünde konuşmalardan kaçınır ve insanlarla etkileşimden önce sık sık panik ataklar yaşardı."
+    },
+    "1": {
+      "text": "Glossofobi — halk önünde konuşma korkusu, sosyal fobinin en yaygın biçimlerinden biridir. İnsanların yaklaşık %75'i bir dereceye kadar halk önünde konuşma korkusu yaşar.",
+      "fact": "Amerikan Psikoloji Derneği'nin anketine göre, Amerikalıların yaklaşık %30'u halka açık konuşmalardan ciddi şekilde korkmaktadır, bu da onu en yaygın korkulardan biri yapmaktadır."
+    },
+    "2": {
+      "text": "Sosyal fobinin temel unsurlarından biri, yabancılarla sosyal etkileşim korkusudur. Bu, temastan kaçınma, görünmez olmaya çalışma ve gariplik veya kaygı hissetme şeklinde kendini gösterebilir.",
+      "fact": "Franz Kafka, ünlü yazar, ciddi sosyal fobi yaşamış ve yabancılarla iletişim kurmada sıkıntılar çekmiştir. Eserleri, \"Dava\" ve \"Şato\" gibi, derin korku ve kaygılarını yansıtır."
+    },
+    "3": {
+      "text": "Sosyal fobi yaşayan insanlar, genellikle telefon görüşmelerinden ve video konferanslardan kaçınırlar çünkü yanlış anlaşılma veya kötü bir izlenim bırakma korkusu taşırlar. Seslerinin nasıl duyulduğu veya ne söyleyecekleri konusunda endişe duyabilirler.",
+      "fact": "Telefon görüşmelerinden önce hazırlık yapmak, bu kaygıyı azaltmanın yollarından biridir. Bir soru ve cevap listesi oluşturmak, kişinin kendini daha güvende hissetmesine ve korkuyu azaltmasına yardımcı olabilir."
+    },
+    "4": {
+      "text": "Sosyal fobi, insanları zorunlu durumlar dışında (iş veya okul gibi) iletişimden kaçınmaya teşvik edebilir, böylece potansiyel olarak kaygı uyandıran sosyal etkileşimlerle karşılaşmaktan kaçınırlar.",
+      "fact": "Araştırmalar, ABD nüfusunun yaklaşık %7'si olan yaklaşık 15 milyon Amerikalının sosyal fobi yaşadığını göstermektedir ve bu kişilerin önemli bir kısmı sosyal etkileşimlerden kaçınmayı tercih etmektedir."
+    },
+    "5": {
+      "text": "Dolu bir odaya girmek, sosyal fobi yaşayan insanlar için özellikle endişe verici olabilir çünkü dikkatlerin merkezinde olmaktan korkarlar. Üzerlerinde bakışların olacağı veya değerlendirme yapılacağı düşüncesi kaygı yaratabilir.",
+      "fact": "Büyük fizikçi Albert Einstein, ciddi sosyal fobi yaşamıştır ve büyük toplantılardan kaçınmıştır. Çoğunlukla yalnız çalışmayı ve yalnızca yakın arkadaşları ve meslektaşlarıyla iletişim kurmayı tercih etmiştir."
+    },
+    "6": {
+      "text": "Sosyal fobi yaşayan insanlar, sosyal medyada yapılan eleştirileri çok ciddi şekilde algılayabilirler, özellikle eleştiriler halka açık ve birçok kişi tarafından görülebilir olduğunda.",
+      "fact": "Dijital detoks giderek daha popüler hale geliyor. Birçok insan, ünlüler de dahil olmak üzere, ruh sağlıklarını yeniden kazanmaları ve olumsuz eleştirilerin etkilerini azaltmak için sosyal medyadan geçici olarak uzaklaşıyorlar."
+    },
+    "7": {
+      "text": "Sessiz kalmak, olumsuz dikkat ve olası eleştirilerden kaçınmanın bir yolu olabilir, ancak bu, kariyer gelişimini ve profesyonel fırsatları sınırlayabilir.",
+      "fact": "Aktif dinleme teknikleri, insanların toplantılarda kendilerini daha güvende hissetmelerine yardımcı olabilir. Örneğin, dinlemeye odaklanmak ve önceden sorular veya yorumlar hazırlamak, kaygıyı azaltmaya ve tartışmalara katılımı artırmaya yardımcı olabilir."
+    },
+    "8": {
+      "text": "Sosyal fobi, bireyin başkaları tarafından değerlendirilebileceği durumlarda ciddi kaygıya neden olur. Böyle bir durum, grup önünde görüş bildirme talebi olabilir. Bu, hata yapma veya olumsuz değerlendirilme korkusu yaratabilir."
+    },
+    "9": {
+      "text": "Sosyal fobi yaşayan insanlar, metro gibi kalabalık yerlerde ciddi endişe ve rahatsızlık hissedebilirler. Bu tür yerler, dikkat çekme, değerlendirilme veya beklenmedik sosyal durumlarla karşılaşma korkusunu tetikleyebilir.",
+      "fact": "Ünlü İngiliz şarkıcı Adele, sosyal fobi ve panik ataklardan muzdarip olduğunu kabul etmiştir. Metro gibi kalabalık yerlerden kaçınarak panik semptomlarının riskini azaltmaya çalışmaktadır."
+    },
+    "10": {
+      "text": "Sosyal fobi yaşayan insanlar, dikkatlerin merkezinde olmaktan kaçınmaya çalışırlar çünkü fazla ilgi çekmek ve başkalarının değerlendirmesine maruz kalmaktan korkarlar. Eleştiri veya alay edilme korkusu, gölgede kalma isteğini artırır."
+    },
+    "11": {
+      "text": "ABD Ulusal Ruh Sağlığı Enstitüsü'ne göre, nüfusun yaklaşık %12.1'i yaşamları boyunca sosyal anksiyete bozukluğu yaşar ve bu da onları halka açık yerlerden kaçınmaya yönlendirir."
+    },
+    "12": {
+      "text": "Araştırmalar, orta düzeyde kaygının performansı artırabileceğini, sempatik sinir sistemini harekete geçirerek konsantrasyonu güçlendirebileceğini göstermektedir. Bu olgu Yerkes-Dodson yasası olarak bilinir."
+    },
+    "13": {
+      "text": "Sosyal etkileşim öncesinde yaşanan kaygı, \"sosyal anksiyete\" olarak bilinir ve hafif rahatsızlıktan şiddetli korkuya kadar değişebilir. Bu, depresyon ve alkolizmden sonra en yaygın üçüncü psikiyatrik bozukluktur."
+    },
+    "14": {
+      "text": "Üst düzey figürlerle iletişim kurma korkusu, \"hiyerarşifobi\" olarak bilinir. Resmi bir tıbbi terim olmasa da, daha yüksek bir pozisyondaki insanlarla iletişim sırasında aşırı endişeyi tanımlamak için kullanılır.",
+      "fact": "Dünyanın en başarılı yatırımcılarından biri olan Warren Buffett, gençliğinde halk önünde konuşma ve üst düzey figürlerle iletişim kurma konusunda ciddi korkular yaşamıştır. Bu korkularını yenmek için katıldığı kurslar kariyerine büyük katkı sağlamıştır."
+    },
+    "15": {
+      "text": "Büyük alışveriş merkezlerine gitme korkusu, açık alanlar veya çıkışın zor olduğu yerlerden korkmayı içeren agorafobiyle ilişkili olabilir. Ancak bu, sosyal fobi veya kalabalık korkusu (oklofobi) ile de bağlantılı olabilir."
+    },
+    "16": {
+      "text": "Psikologlar, belirsizlik korkusunu \"belirsizliğe tahammülsüzlük\" olarak adlandırır. Bu durum sadece sosyal durumlarla sınırlı kalmaz, aynı zamanda karar verme süreçlerini de etkileyebilir."
+    },
+    "17": {
+      "text": "Tanımadığınız bir kitle önünde görev yapma korkusu \"sosyal değerlendirme anksiyetesi\" olarak bilinir. Bu, olumsuz değerlendirme korkusu ve yeni durumlar karşısında endişenin birleşimidir.",
+      "fact": "Oscar ödüllü oyuncu Emma Stone, özellikle yeni bir kitle önünde performans sergilemekle ilgili panik ataklar yaşadığını açıkça dile getirmiştir. Bu kaygılarla başa çıkmak için terapi ve nefes alma tekniklerinden faydalanmıştır."
+    },
+    "18": {
+      "text": "Tanımadığınız kişilere telefon etme korkusuna \"telefonofobi\" adı verilir. Bu, dijital iletişim çağında giderek daha yaygın hale gelen bir durumdur, çünkü insanlar yazılı iletişime alışkındır.",
+      "fact": "2019 yılında BankMyCell tarafından yapılan bir araştırma, milenyum kuşağının %76'sının telefon görüşmesi yaparken kaygı yaşadığını ortaya koymuştur. Z kuşağı arasında bu oran daha da yüksektir: %81."
+    },
+    "19": {
+      "text": "Ürün iade ederken yaşanan kaygı, çatışma korkusu, olumsuz değerlendirilme korkusu veya mağaza personeline \"rahatsızlık verme\" hissiyle ilgili olabilir.",
+      "fact": "Ürün iade kaygısı, daha geniş bir fenomen olan \"sertifikalı olma fobisi\" veya haklarını savunma korkusuyla ilişkilendirilebilir."
+    },
+    "20": {
+      "text": "Hazırlıksız konuşma korkusu, \"sahtekar sendromu\" ile ilişkilidir — yeterince yetkin olmadığınız ve \"deşifre\" edileceğiniz hissi.",
+      "fact": "İmprovize düşünme tekniği faydalı olabilir. Hazırlıksız olmaktan korkmak yerine, durumu spontane ve samimi bir iletişim fırsatı olarak görmek panik yapmayı engelleyebilir."
+    },
+    "21": {
+      "text": "Başka insanların yanında yazma veya not alma korkusuna \"skriptophobia\" denir. Bu, sosyal kaygının bir alt tipi olup, başkaları tarafından değerlendirileceği korkusuyla ilişkilidir.",
+      "fact": "Bu korkunun yaygınlığı hakkında kesin veriler bulunmamakla birlikte, Journal of Anxiety Disorders'da yayımlanan bir araştırma, insanların %7'sinin başka insanların yanında yazı yazarken önemli ölçüde rahatsızlık hissettiğini ortaya koymuştur."
+    },
+    "22": {
+      "text": "Israrcı insanlara hayır demekte zorlanmak, psikologlar tarafından \"memnun etme sendromu\" veya \"aşırı itaat etme hastalığı\" olarak adlandırılır. Bu, çatışmadan kaçınma ve olumsuz değerlendirilme korkusuyla ilgilidir.",
+      "fact": "Pensilvanya Üniversitesi tarafından yapılan bir araştırma, insanların yaklaşık %68'inin satış durumlarında \"hayır\" demekte zorlandığını göstermiştir."
+    },
+    "23": {
+      "text": "Martin Luther King Jr., kariyerinin başlarında gruplar önünde fikirlerini ifade ederken ciddi kaygılar yaşamıştır. Ancak, bu korkularını yenerek sivil haklar hareketinin en etkili hatiplerinden ve liderlerinden biri olmuştur."
+    },
+    "24": {
+      "text": "Sosyal fobi yaşayan insanlar, düğünler veya diğer büyük etkinlikler için alınan davetlere karşı ciddi kaygı ve stres yaşayabilirler. Bu tür etkinlikler, genellikle birçok insanla etkileşimi ve sosyal katılımı gerektirir, bu da onlar için zor olabilir.",
+      "fact": "Harry Potter rolüyle tanınan Daniel Radcliffe, sosyal fobi yaşamaktadır ve büyük halk etkinliklerinden sık sık kaçınmaktadır. Zamanını küçük arkadaş grupları ve ailesiyle geçirmeyi tercih eder."
+    },
+    "25": {
+      "text": "Sosyal fobi yaşayan insanlar, başkalarının yanında telefon görüşmeleri yapmaktan kaçınabilirler çünkü duyulma ve değerlendirilme korkusu yaşarlar. Seslerinin nasıl duyulacağı, konuşma sırasında yapacakları hatalar veya görüşmenin çevredeki insanlar tarafından olumsuz karşılanabileceği konusunda endişe duyabilirler."
+    },
+    "26": {
+      "text": "Partilerden kaçınma, kısa vadede kaygıyı azaltan ancak uzun vadede sosyal izolasyonu artıran ve korkuyu güçlendiren \"koruyucu davranış\" stratejisiyle ilişkili olabilir."
+    },
+    "27": {
+      "text": "Araştırmalar, insanların yaklaşık %7-9'unun \"parrezis\" olarak bilinen bir rahatsızlıktan muzdarip olduğunu ve bu durumun onları umumi tuvalet kullanmaktan kaçınmaya ittiğini göstermektedir."
+    },
+    "28": {
+      "text": "Sosyal fobi yaşayan insanlar, buluşma veya randevu teklifleri aldıklarında ciddi kaygı yaşayabilirler. Başlıca nedenler arasında olumsuz değerlendirme korkusu, özgüvensizlik ve iletişimde hata yapma endişesi yer alır."
+    },
+    "29": {
+      "text": "Bilinmeyen numaralardan gelen aramalardan korku, doğru yanıt verememe korkusu veya konuşmanın beklenildiği gibi gitmemesi endişesinden kaynaklanabilir. Bu, potansiyel bir çatışma korkusu veya beklenmedik sorulara hızlı tepki verme zorunluluğu ile ilişkilendirilebilir."
+    },
+    "30": {
+      "text": "Sosyal fobi yaşayan insanlar, seyahat veya tatil sırasında yabancılarla iletişim kurmaktan ciddi kaygı yaşayabilirler. Olumsuz değerlendirilme, uygunsuz bir şey yapma korkusu veya konuşmayı nasıl sürdüreceklerini bilememe endişesi taşıyabilirler."
+    },
+    "31": {
+      "text": "Araştırmalar, sosyal kaygı yaşayan insanların yaklaşık %60'ının göz teması kurarken rahatsızlık hissettiğini göstermektedir. Bu, sosyal etkileşimlerin en kaygı verici yönlerinden biri olabilir."
+    },
+    "32": {
+      "text": "Sosyal fobi yaşayan insanlar, yabancılarla tartışma veya çatışma olasılığı karşısında ciddi kaygı hissedebilirler. Olumsuz değerlendirme, yanlış anlaşılma veya hatta agresif bir tepki alma korkusu, potansiyel çatışma durumlarından kaçınmalarına neden olur."
+    },
+    "33": {
+      "text": "Araştırmalar, insanların yaklaşık %20-30'unun grup fotoğrafı çektirirken ciddi rahatsızlık hissettiğini göstermektedir. Bu kaygı, olumsuz değerlendirilme korkusu ve dış görünüşü kabul etmeme ile ilişkili olabilir."
+    },
+    "34": {
+      "text": "Büyük bilim insanı Isaac Newton da çok içe dönük biriydi ve sosyal etkinliklerden ve yeni gruplardan kaçınırdı. Zamanını yalnız başına bilimsel araştırmalar yaparak geçirmeyi tercih ederdi."
+    },
+    "35": {
+      "text": "Araştırmalar, bilişsel davranışçı terapinin (BDT) sosyal anksiyetenin tedavisinde çok etkili olabileceğini göstermektedir. BDT, insanların olumsuz düşüncelerini değiştirmelerine ve sosyal etkileşimlere karşı daha olumlu bir yaklaşım geliştirmelerine yardımcı olur."
+    },
+    "36": {
+      "text": "Beceri ve yeteneklerinizi göstermeniz gereken sınavlar öncesinde yaşanan kaygı, özellikle sosyal fobi yaşayan insanlar arasında yaygındır. Değerlendirilme korkusu ve başarısızlık ihtimali, stresi ve gerginliği artırabilir.",
+      "fact": "Ünlü mucit Thomas Edison, geleneksel öğrenme ve sınav yöntemleriyle ilgili zorluklar yaşamıştır. Resmi sınavlardan kaçınarak pratik deneyler ve uygulamalı çalışmalar yoluyla öğrenmeyi tercih etmiştir."
+    },
+    "37": {
+      "text": "Sosyal fobi yaşayan insanlar, biriyle konuşurken sık sık ciddi kaygı hissederler. Olumsuz değerlendirilme korkusu, söylediklerinin nasıl algılanacağına dair endişe ve hata yapma korkusu, kaygıyı ve gerginliği artırabilir."
+    },
+    "38": {
+      "text": "Sosyal fobi yaşayan insanlar, dışarı çıkmak için insanların az olduğu veya hiç olmadığı saatleri tercih ederler. Bu, kaygı ve stresi tetikleyen sosyal etkileşimlerden kaçınmalarına yardımcı olur.",
+      "fact": "Ünlü Amerikalı işadamı ve havacı Howard Hughes, sosyal fobi ve birçok fobiyle tanınırdı. Yalnız yürüyüşleri tercih eder ve kalabalık yerlerden kaçınırdı."
+    },
+    "39": {
+      "text": "Göz teması, ayna nöronlarını aktive eder, bu da empati ve anlayış hissini güçlendirebilir, ancak aynı zamanda güçlü duygular uyandırabilir. Bu, göz temasının neden böyle bir kaygı yarattığını açıklayabilir."
+    }
+  },
+  "range": {
+    "normal": "Sosyal fobi yok",
+    "mild": "Hafif sosyal fobi",
+    "moderate": "Ciddi sosyal fobi"
+  },
+  "result": {
+    "normal": {
+      "text": "Sonuçlarınız, çeşitli sosyal durumlarda kendinizi rahat ve güvenli hissettiğinizi göstermektedir. Yabancılarla etkileşimde bulunmak, kalabalık önünde konuşmak veya grup etkinliklerine katılmak gibi konularda önemli zorluklar yaşamıyorsunuz. Bu, sosyal fobi belirtilerinin sizde ya çok hafif olduğunu ya da tamamen olmadığını ve sosyal hayata özgürce ve aktif bir şekilde katılabildiğinizi göstermektedir.",
+      "title": "Sosyal fobi yok"
+    },
+    "mild": {
+      "text": "Sonuçlarınız, bazı sosyal durumlarda zorluklar yaşadığınızı göstermektedir. Yabancılarla etkileşimde bulunmak, kalabalık önünde konuşmak veya büyük grup etkinliklerine katılmak gibi durumlarda kendinizi rahatsız hissedebilirsiniz. Bu, hafif sosyal fobi belirtileri yaşadığınıza işaret etmektedir. Ancak, doğru destek ve pratikle, iletişim becerilerinizi geliştirerek sosyal etkileşimlerde daha rahat hissedebilirsiniz.",
+      "title": "Hafif sosyal fobi"
+    },
+    "moderate": {
+      "text": "Sonuçlarınız, sosyal durumlarda önemli zorluklar yaşadığınızı göstermektedir. Yabancılarla etkileşimde bulunmak, kalabalık önünde konuşmak veya grup etkinliklerine katılmak gibi konularda kendinizi güvensiz ve kaygılı hissedebilirsiniz. Bu, ciddi sosyal fobi belirtileri yaşadığınıza işaret etmektedir. Bu durumu profesyonel yardım ve destekle aşabileceğinizi unutmamanız önemlidir. Doğru tedavi ve terapi ile bu zorlukların üstesinden gelebilir ve yaşam kalitenizi artırabilirsiniz.",
+      "title": "Ciddi sosyal fobi"
+    }
+  },
+  "description": {
+    "text": [
+      "Sosyal durumlarda ne kadar rahat hissettiğinizi hiç merak ettiniz mi? Yabancılarla konuşmak veya kalabalık önünde konuşmak sizi endişelendiriyor mu? Testimiz, sosyal fobi belirtilerinin sizde ne kadar belirgin olduğunu anlamanıza yardımcı olabilir.",
+      "Test, iş arkadaşlarıyla iletişim kurmaktan halka açık etkinliklere katılmaya kadar sosyal etkileşimlerin farklı yönlerini kapsayan sorular içerir. Bu soruları yanıtlayarak, belirli durumlarda hislerinizi ve tepkilerinizi daha iyi anlayabilirsiniz."
+    ]
+  }
+}

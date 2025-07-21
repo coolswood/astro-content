@@ -22,13 +22,16 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/bdi.json`),
+        path.resolve(`src/i18n/${lang}/tests/irritation.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
-      await fs.readFile(path.resolve(`src/i18n/en/tests/bdi.json`), 'utf-8'),
+      await fs.readFile(
+        path.resolve(`src/i18n/en/tests/irritation.json`),
+        'utf-8',
+      ),
     );
 
     const constants = JSON.parse(
@@ -38,41 +41,55 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const options = [
+      data.variants.none,
+      data.variants.light,
+      data.variants.norm,
+      data.variants.hard,
+      data.variants.super,
+    ];
+
     const output = {
-      title: constants.bdi,
-      steps: Object.keys(data.steps).map((key: string) => ({
-        g: null,
-        v: data.steps[key].map((text: string, i: number) => ({
+      title: constants.irritation,
+      steps: data.steps.map((key: string) => ({
+        g: key,
+        v: options.map((text: any, id: number) => ({
           t: text,
-          s: i,
+          s: id,
         })),
       })),
       result: [
         {
           text: data.result.normal.text,
           title: data.result.normal.title,
-          rangeBefore: 13,
+          rangeBefore: 45,
         },
         {
-          text: data.result.mild.text,
-          title: data.result.mild.title,
-          rangeBefore: 24,
+          text: data.result.light.text,
+          title: data.result.light.title,
+          rangeBefore: 55,
         },
         {
-          text: data.result.moderate.text,
-          title: data.result.moderate.title,
-          rangeBefore: 40,
+          text: data.result.severe.text,
+          title: data.result.severe.title,
+          rangeBefore: 75,
         },
         {
-          text: data.result.exacerbated.text,
-          title: data.result.exacerbated.title,
-          rangeBefore: 63,
+          text: data.result.hard.text,
+          title: data.result.hard.title,
+          rangeBefore: 85,
+        },
+        {
+          text: data.result.extreme.text,
+          title: data.result.extreme.title,
+          rangeBefore: 100,
         },
       ],
       steps_description: Object.values(data.steps_description ?? {}),
       description: {
         text: data.description.text,
-        sourceLink: 'https://en.wikipedia.org/wiki/Beck_Depression_Inventory',
+        sourceLink:
+          'https://criminal-justice.iresearchnet.com/forensic-psychology/violence-risk-assessment/novaco-anger-scale-nas/',
       },
       recommends: {
         activities: [

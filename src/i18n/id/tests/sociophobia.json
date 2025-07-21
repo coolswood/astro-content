@@ -1,0 +1,337 @@
+{
+  "steps": [
+    "Bagaimana perasaan Anda ketika perlu meminta bantuan atau layanan?",
+    "Bagaimana perasaan Anda ketika harus berbicara di depan banyak orang?",
+    "Bagaimana reaksi Anda ketika orang asing mencoba memulai percakapan dengan Anda?",
+    "Seberapa sering Anda menghindari panggilan telepon atau konferensi video?",
+    "Seberapa sering Anda berusaha menghindari interaksi dengan orang-orang di luar pekerjaan atau studi Anda?",
+    "Apakah Anda merasa tidak nyaman saat memasuki ruangan di mana semua orang sudah duduk?",
+    "Bagaimana Anda menanggapi kritik di media sosial?",
+    "Apakah Anda sering memilih untuk diam dalam rapat kerja?",
+    "Bagaimana perasaan Anda ketika diminta untuk mengungkapkan pendapat di depan kelompok?",
+    "Bagaimana perasaan Anda di tempat-tempat yang ramai, seperti kereta bawah tanah?",
+    "Seberapa sering Anda berusaha menghindari menjadi pusat perhatian dalam suatu kelompok?",
+    "Seberapa sering Anda menghindari pergi ke tempat-tempat umum, seperti restoran, klub, atau bar?",
+    "Apakah Anda merasa cemas ketika berada di pusat perhatian?",
+    "Seberapa sering Anda merasa cemas sebelum berinteraksi dengan orang lain?",
+    "Apakah Anda merasa gelisah ketika berbicara dengan atasan?",
+    "Seberapa sering Anda menghindari pergi ke pusat perbelanjaan besar?",
+    "Bagaimana perasaan Anda ketika harus melakukan sesuatu yang baru, misalnya, pergi ke kafe baru?",
+    "Bagaimana perasaan Anda ketika menghadapi keharusan melakukan tugas baru di depan audiens yang tidak Anda kenal?",
+    "Seberapa sering Anda menghindari menelepon orang yang tidak begitu Anda kenal?",
+    "Apakah Anda merasa cemas ketika mengembalikan barang ke toko?",
+    "Bagaimana perasaan Anda jika diminta untuk berbicara di depan umum pada saat-saat terakhir?",
+    "Apakah Anda merasa cemas ketika menulis di hadapan orang lain?",
+    "Apakah Anda merasa cemas ketika menolak penjual yang gigih?",
+    "Apakah Anda merasa cemas ketika mengungkapkan ketidaksetujuan pada orang yang tidak begitu Anda kenal?",
+    "Bagaimana reaksi Anda terhadap undangan mendadak ke pernikahan atau perayaan lainnya?",
+    "Seberapa sering Anda menghindari percakapan telepon di hadapan orang lain?",
+    "Seberapa sering Anda menghindari pesta?",
+    "Seberapa sering Anda menghindari penggunaan toilet umum?",
+    "Bagaimana reaksi Anda terhadap ajakan untuk bertemu atau kencan dengan calon pasangan?",
+    "Seberapa sering Anda menghindari menjawab panggilan dari nomor yang tidak dikenal?",
+    "Bagaimana perasaan Anda tentang berinteraksi dengan orang asing selama perjalanan atau liburan?",
+    "Apakah Anda merasa cemas ketika menatap mata orang asing?",
+    "Seberapa sering Anda menghindari konflik atau perdebatan dengan orang asing?",
+    "Bagaimana perasaan Anda tentang berpartisipasi dalam foto kelompok?",
+    "Bagaimana reaksi Anda terhadap tawaran untuk bergabung dengan kelompok atau komunitas baru?",
+    "Seberapa sering Anda menghindari pertemuan dengan orang-orang yang tidak Anda kenal?",
+    "Apakah Anda merasa cemas sebelum mengikuti ujian keterampilan praktis?",
+    "Apakah Anda merasa cemas ketika berbicara dengan seseorang?",
+    "Apakah Anda lebih suka berjalan-jalan ketika jalanan sepi atau tidak ada orang sama sekali?",
+    "Seberapa sering Anda menghindari kontak mata dengan orang asing?"
+  ],
+  "variants": {
+    "0": [
+      "Dengan mudah meminta, ini normal",
+      "Merasa sedikit tidak nyaman, tapi bisa mengatasi",
+      "Tidak nyaman, berusaha mengatasi sendiri",
+      "Sangat tidak nyaman, menghindarinya"
+    ],
+    "1": [
+      "Percaya diri dan tenang",
+      "Dengan sedikit kecemasan",
+      "Gugup, tapi bisa tampil",
+      "Saya merasa panik"
+    ],
+    "2": [
+      "Ramah dan terbuka",
+      "Dengan hati-hati dan curiga",
+      "Mencoba menghindari percakapan",
+      "Benar-benar lari menjauh"
+    ],
+    "3": [
+      "Hampir tidak pernah",
+      "Kadang-kadang",
+      "Cukup sering",
+      "Hampir selalu"
+    ],
+    "4": [
+      "Hampir tidak pernah",
+      "Kadang-kadang",
+      "Cukup sering",
+      "Hampir selalu"
+    ],
+    "5": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "6": [
+      "Tenang, itu hanya pendapat orang lain",
+      "Sedikit kesal, tapi cepat lupa",
+      "Sangat terganggu, bisa merusak hari saya",
+      "Bisa menimbulkan kecemasan yang kuat"
+    ],
+    "7": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "8": [
+      "Percaya diri",
+      "Dengan sedikit kecemasan",
+      "Sangat tidak nyaman",
+      "Sangat buruk"
+    ],
+    "9": [
+      "Benar-benar normal",
+      "Sedikit tegang, tapi itu normal",
+      "Sangat tidak nyaman, menghindari tempat-tempat seperti itu",
+      "Panik atau kecemasan yang kuat"
+    ],
+    "10": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "11": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "12": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "13": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "14": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "15": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "16": [
+      "Ini pengalaman menarik, senang mencoba hal baru",
+      "Merasa sedikit tidak nyaman, tapi bisa mengatasi",
+      "Berusaha menghindari situasi seperti itu",
+      "Ini menimbulkan kecemasan yang kuat atau panik"
+    ],
+    "17": [
+      "Bertindak dengan percaya diri",
+      "Dengan sedikit kecemasan",
+      "Berusaha menghindarinya",
+      "Mengalami panik dan ketakutan"
+    ],
+    "18": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "19": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "20": [
+      "Akan tampil tanpa masalah",
+      "Merasa cemas, tapi setuju",
+      "Sangat tidak nyaman, tapi setuju",
+      "Saya langsung menolak"
+    ],
+    "21": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "22": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "23": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "24": [
+      "Dengan senang hati menerima",
+      "Sedikit khawatir, tapi pergi",
+      "Lebih suka menghindari acara seperti itu",
+      "Sangat tidak ingin pergi"
+    ],
+    "25": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "26": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "27": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "28": [
+      "Dengan gembira menyetujui",
+      "Sedikit khawatir, tapi pergi",
+      "Berusaha menghindari kencan",
+      "Langsung menolak"
+    ],
+    "29": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "30": [
+      "Berkenalan dan berinteraksi",
+      "Malu, tapi berkenalan",
+      "Berusaha menghindari interaksi",
+      "Tidak berinteraksi dengan orang asing"
+    ],
+    "31": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "32": [
+      "Hampir tidak pernah",
+      "Kadang-kadang",
+      "Cukup sering",
+      "Hampir selalu"
+    ],
+    "33": [
+      "Dengan senang hati menyetujui",
+      "Sedikit tidak nyaman, tapi setuju",
+      "Lebih suka menghindari",
+      "Menolak"
+    ],
+    "34": [
+      "Dengan senang hati menerima tawaran",
+      "Malu, tapi setuju",
+      "Lebih suka tidak bergabung",
+      "Menolak"
+    ],
+    "35": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "36": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "37": ["Tidak", "Kecemasan ringan", "Kecemasan sedang", "Kecemasan intens"],
+    "38": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"],
+    "39": ["Tidak pernah", "Kadang-kadang", "Sering", "Selalu"]
+  },
+  "steps_description": {
+    "0": {
+      "text": "Sosiofobia, atau gangguan kecemasan sosial, terwujud dalam kecemasan yang kuat terhadap situasi interaksi sosial. Meminta bantuan adalah salah satu situasi umum yang menyebabkan kecemasan pada orang dengan gangguan ini.",
+      "fact": "Charles Darwin, naturalis terkenal dan pencipta teori evolusi, menderita sosiofobia yang parah. Dia menghindari pidato publik dan sering mengalami serangan panik ketika harus berinteraksi dengan orang lain, meskipun memiliki prestasi yang luar biasa."
+    },
+    "1": {
+      "text": "Glossofobia adalah ketakutan akan berbicara di depan umum, salah satu bentuk sosiofobia yang paling umum. Sekitar 75% orang mengalami tingkat ketakutan tertentu sebelum berbicara di depan umum.",
+      "fact": "Menurut survei American Psychological Association, sekitar 30% orang Amerika mengalami ketakutan yang kuat terhadap pidato publik, menjadikannya salah satu ketakutan yang paling umum."
+    },
+    "2": {
+      "text": "Salah satu aspek utama dari sosiofobia adalah ketakutan akan interaksi sosial dengan orang asing. Ini dapat terwujud dalam menghindari kontak, keinginan untuk tidak terlihat, dan perasaan canggung atau cemas.",
+      "fact": "Franz Kafka, penulis terkenal, menderita sosiofobia yang parah dan sering mengalami kesulitan ketika berkomunikasi dengan orang asing. Karya-karyanya, seperti \"Proses\" dan \"Kastil\", mencerminkan ketakutan dan kecemasannya yang mendalam."
+    },
+    "3": {
+      "text": "Orang dengan sosiofobia sering menghindari panggilan telepon dan konferensi video karena takut salah dimengerti atau memberi kesan buruk. Mereka mungkin khawatir tentang bagaimana suara mereka terdengar atau tentang apa yang akan mereka katakan.",
+      "fact": "Salah satu cara untuk mengurangi kecemasan sebelum melakukan panggilan telepon adalah latihan dan persiapan. Membuat daftar pertanyaan dan jawaban sebelum menelepon dapat membantu seseorang merasa lebih percaya diri dan mengurangi ketakutan."
+    },
+    "4": {
+      "text": "Sosiofobia dapat membuat orang menghindari interaksi di luar situasi wajib (seperti pekerjaan atau studi) untuk tidak menghadapi interaksi sosial yang berpotensi menimbulkan kecemasan.",
+      "fact": "Penelitian menunjukkan bahwa sekitar 15 juta orang Amerika (sekitar 7% dari populasi AS) menderita sosiofobia, dan sebagian besar dari mereka lebih memilih untuk menghindari situasi sosial di luar peran wajib mereka."
+    },
+    "5": {
+      "text": "Memasuki ruangan yang penuh bisa sangat membuat cemas bagi orang dengan sosiofobia karena takut menjadi objek perhatian. Mereka mungkin khawatir bahwa mereka akan diperhatikan atau dievaluasi.",
+      "fact": "Albert Einstein, fisikawan hebat, menderita sosiofobia yang parah dan menghindari pertemuan besar. Dia lebih suka bekerja sendiri dan berkomunikasi hanya dengan teman dekat dan kolega."
+    },
+    "6": {
+      "text": "Orang dengan sosiofobia bisa sangat sensitif terhadap kritik, terutama di media sosial, di mana kritik itu bersifat publik dan dapat dilihat oleh banyak orang.",
+      "fact": "Detoksifikasi digital menjadi semakin populer. Banyak orang, termasuk selebriti, untuk sementara menonaktifkan media sosial untuk memulihkan kesehatan mental mereka dan mengurangi dampak kritik negatif."
+    },
+    "7": {
+      "text": "Diam bisa menjadi cara untuk menghindari perhatian negatif dan kritik potensial, tetapi juga dapat membatasi pertumbuhan karir dan peluang profesional mereka.",
+      "fact": "Teknik mendengar aktif dapat membantu orang merasa lebih percaya diri dalam pertemuan. Misalnya, fokus pada mendengarkan dan mempersiapkan pertanyaan atau komentar sebelumnya dapat membantu mengurangi kecemasan dan meningkatkan partisipasi dalam diskusi."
+    },
+    "8": {
+      "text": "Sosiofobia ditandai dengan kecemasan yang kuat dalam situasi di mana seseorang dapat dievaluasi oleh orang lain. Salah satu situasi seperti itu adalah permintaan untuk mengungkapkan pendapat di depan kelompok. Ini dapat menimbulkan ketakutan akan membuat kesalahan atau dinilai negatif."
+    },
+    "9": {
+      "text": "Orang dengan sosiofobia dapat mengalami kegelisahan dan ketidaknyamanan yang kuat di tempat-tempat yang ramai, seperti kereta bawah tanah. Tempat-tempat seperti itu dapat menimbulkan ketakutan akan diperhatikan, dievaluasi, atau menghadapi situasi sosial yang tidak terduga.",
+      "fact": "Adele, penyanyi Inggris terkenal, menderita sosiofobia dan serangan panik. Dia menghindari tempat-tempat ramai, seperti kereta bawah tanah, untuk mengurangi risiko munculnya gejala panik."
+    },
+    "10": {
+      "text": "Orang dengan sosiofobia sering berusaha menghindari menjadi pusat perhatian agar tidak menarik perhatian berlebihan dan tidak dinilai oleh orang sekitar. Mereka mungkin takut akan kritik atau ejekan, yang memperkuat keinginan untuk tetap di belakang layar."
+    },
+    "11": {
+      "text": "Menurut National Institute of Mental Health AS, sekitar 12,1% populasi mengalami gangguan kecemasan sosial sepanjang hidup mereka, yang sering menyebabkan mereka menghindari tempat-tempat umum."
+    },
+    "12": {
+      "text": "Penelitian menunjukkan bahwa tingkat kecemasan sedang sebenarnya dapat meningkatkan kinerja, dengan mengaktifkan sistem saraf simpatis dan meningkatkan konsentrasi. Fenomena ini dikenal sebagai hukum Yerkes-Dodson."
+    },
+    "13": {
+      "text": "Kecemasan sebelum interaksi sosial dikenal sebagai \"kecemasan sosial\" dan dapat bervariasi dari ketidaknyamanan ringan hingga ketakutan yang kuat. Ini adalah gangguan mental ketiga yang paling umum setelah depresi dan alkoholisme."
+    },
+    "14": {
+      "text": "Ketakutan terhadap tokoh otoritas memiliki namanya sendiri - \"hierarkofobia\". Ini bukan istilah medis resmi, tetapi sering digunakan untuk menggambarkan kekhawatiran berlebihan ketika berkomunikasi dengan orang-orang yang memiliki posisi lebih tinggi.",
+      "fact": "Warren Buffett, salah satu investor paling sukses di dunia, di masa mudanya mengalami ketakutan yang kuat akan berbicara di depan umum dan berkomunikasi dengan tokoh otoritas. Ia bahkan mendaftar kursus untuk mengatasi ketakutan ini, yang kemudian sangat membantu karirnya."
+    },
+    "15": {
+      "text": "Ketakutan akan pergi ke pusat perbelanjaan dapat terkait dengan agorafobia - ketakutan akan ruang terbuka atau tempat-tempat di mana sulit untuk menemukan jalan keluar dengan cepat. Namun, ini juga bisa menjadi manifestasi dari sosiofobia atau oclofobia (ketakutan akan kerumunan)."
+    },
+    "16": {
+      "text": "Para psikolog menyebut ketakutan akan ketidakpastian sebagai \"intoleransi terhadap ketidakpastian\". Kondisi ini dapat mempengaruhi tidak hanya situasi sosial, tetapi juga pengambilan keputusan secara keseluruhan."
+    },
+    "17": {
+      "text": "Ketakutan di depan audiens yang tidak dikenal disebut \"kecemasan evaluasi sosial\". Ini adalah kombinasi dari ketakutan akan evaluasi negatif dan ketakutan akan situasi baru.",
+      "fact": "Emma Stone, pemenang Oscar, secara terbuka berbicara tentang perjuangannya dengan serangan panik, terutama dalam situasi yang melibatkan tampil di depan audiens baru. Dia menggunakan terapi dan teknik pernapasan untuk mengatasi hal ini."
+    },
+    "18": {
+      "text": "Ketakutan akan panggilan telepon telah mendapat nama \"telefonofobia\". Fenomena ini menjadi semakin umum di era komunikasi digital, ketika orang terbiasa dengan komunikasi teks.",
+      "fact": "Studi yang dilakukan oleh BankMyCell pada tahun 2019 menunjukkan bahwa 76% milenial mengalami kecemasan saat harus melakukan panggilan telepon. Di antara generasi Z, angka ini bahkan lebih tinggi - 81%."
+    },
+    "19": {
+      "text": "Kecemasan saat mengembalikan barang dapat terkait dengan ketakutan akan konflik, ketakutan akan evaluasi negatif, atau perasaan bersalah karena \"menyebabkan ketidaknyamanan\" bagi staf toko.",
+      "fact": "Kecemasan saat mengembalikan barang sering terkait dengan fenomena yang lebih luas yang dikenal sebagai \"assertofobia\" - ketakutan untuk mempertahankan hak-hak Anda atau mengungkapkan kebutuhan Anda."
+    },
+    "20": {
+      "text": "Ketakutan akan pidato yang tidak dipersiapkan sering terkait dengan \"sindrom penipu\" - perasaan bahwa Anda tidak cukup kompeten dan bisa \"dibongkar\".",
+      "fact": "Teknik \"pemikiran improvisasi\" bisa berguna. Alih-alih panik karena kurangnya persiapan, cobalah memandang situasi sebagai kesempatan untuk komunikasi yang spontan dan tulus dengan audiens."
+    },
+    "21": {
+      "text": "Ketakutan menulis atau membuat catatan di hadapan orang lain terkadang disebut \"skriptofobia\". Ini adalah kasus khusus dari kecemasan sosial yang terkait dengan ketakutan akan evaluasi dari orang sekitar.",
+      "fact": "Tidak ada data yang tepat tentang prevalensi ketakutan ini, tetapi studi yang diterbitkan dalam Journal of Anxiety Disorders menunjukkan bahwa sekitar 7% orang mengalami ketidaknyamanan yang signifikan ketika harus menulis di hadapan orang lain."
+    },
+    "22": {
+      "text": "Kesulitan menolak, terutama kepada orang yang gigih, psikolog menyebutnya \"sindrom keinginan menyenangkan\" atau \"penyakit kepatuhan\". Ini terkait dengan keinginan untuk menghindari konflik dan ketakutan akan evaluasi negatif.",
+      "fact": "Sebuah studi yang dilakukan oleh University of Pennsylvania menunjukkan bahwa sekitar 68% orang mengalami ketidaknyamanan ketika harus mengatakan \"tidak\" dalam situasi penjualan."
+    },
+    "23": {
+      "text": "Martin Luther King Jr., aktivis hak-hak sipil yang terkenal, pada awal karirnya mengalami kecemasan yang kuat ketika mengungkapkan pendapatnya di depan kelompok. Namun, dengan mengatasi ketakutannya, dia menjadi salah satu orator dan pemimpin gerakan hak asasi manusia yang paling berpengaruh."
+    },
+    "24": {
+      "text": "Orang dengan sosiofobia dapat mengalami kecemasan dan stres yang kuat ketika menerima undangan mendadak ke pernikahan atau perayaan lainnya. Acara-acara seperti itu sering melibatkan komunikasi dengan banyak orang dan partisipasi dalam interaksi sosial, yang bisa sangat sulit bagi mereka.",
+      "fact": "Daniel Radcliffe, terkenal karena perannya sebagai Harry Potter, mengalami sosiofobia dan sering menghindari acara publik besar. Dia lebih suka menghabiskan waktu dalam kelompok kecil teman dan keluarga."
+    },
+    "25": {
+      "text": "Orang dengan sosiofobia sering menghindari percakapan telepon di hadapan orang lain karena takut didengar dan dievaluasi. Mereka mungkin khawatir tentang bagaimana suara mereka terdengar, tentang kesalahan bicara yang mungkin, atau bahwa percakapan mereka akan menimbulkan reaksi negatif dari orang sekitar."
+    },
+    "26": {
+      "text": "Menghindari pesta bisa terkait dengan \"perilaku perlindungan\" - strategi yang dalam jangka pendek mengurangi kecemasan, tetapi dalam jangka panjang dapat meningkatkan isolasi sosial dan ketakutan."
+    },
+    "27": {
+      "text": "Menurut penelitian, sekitar 7-9% orang menderita paruresis, juga dikenal sebagai sindrom buang air kecil malu, yang membuat mereka menghindari penggunaan toilet umum."
+    },
+    "28": {
+      "text": "Orang dengan sosiofobia dapat mengalami kecemasan yang kuat ketika menerima tawaran untuk bertemu atau berkencan. Alasan utama termasuk ketakutan akan evaluasi negatif, kurangnya kepercayaan diri, dan kekhawatiran tentang kemungkinan kesalahan dalam komunikasi."
+    },
+    "29": {
+      "text": "Ketakutan akan panggilan telepon, terutama dari nomor yang tidak dikenal, bisa disebabkan oleh kekhawatiran bahwa seseorang tidak tahu bagaimana menjawab dengan benar, atau bahwa percakapan mungkin tidak berjalan seperti yang diharapkan. Ini dapat mencakup ketakutan akan kemungkinan konfrontasi atau kebutuhan untuk merespons dengan cepat pertanyaan yang tidak terduga."
+    },
+    "30": {
+      "text": "Orang dengan sosiofobia dapat mengalami kecemasan yang signifikan ketika berkomunikasi dengan orang asing selama perjalanan atau liburan. Mereka mungkin takut evaluasi negatif, melakukan sesuatu yang tidak pantas, atau tidak tahu bagaimana mempertahankan percakapan."
+    },
+    "31": {
+      "text": "Penelitian menunjukkan bahwa sekitar 60% orang dengan kecemasan sosial mengalami ketidaknyamanan dengan kontak mata. Ini bisa menjadi salah satu aspek interaksi sosial yang paling membuat cemas."
+    },
+    "32": {
+      "text": "Orang dengan sosiofobia dapat mengalami kecemasan yang kuat dengan kemungkinan konflik atau perselisihan dengan orang asing. Mereka mungkin takut akan evaluasi negatif, kesalahpahaman, atau bahkan reaksi agresif, yang menyebabkan penghindaran situasi yang berpotensi konflik."
+    },
+    "33": {
+      "text": "Menurut penelitian, sekitar 20-30% orang mengalami ketidaknyamanan yang signifikan ketika difoto, terutama dalam kelompok. Kecemasan ini dapat dikaitkan dengan ketakutan akan evaluasi negatif dan ketidakpuasan dengan penampilan mereka sendiri."
+    },
+    "34": {
+      "text": "Isaac Newton, ilmuwan hebat, juga sangat tertutup dan menghindari partisipasi dalam acara publik dan kelompok baru. Dia lebih suka menghabiskan waktu sendirian untuk penelitian ilmiah."
+    },
+    "35": {
+      "text": "Penelitian menunjukkan bahwa terapi perilaku kognitif (CBT) dapat sangat efektif dalam mengatasi kecemasan sosial. CBT membantu orang mengubah pikiran negatif dan mengembangkan sikap yang lebih positif terhadap interaksi sosial."
+    },
+    "36": {
+      "text": "Kecemasan sebelum mengikuti ujian keterampilan praktis adalah masalah umum, terutama di antara orang dengan sosiofobia. Ketakutan akan dievaluasi dan kemungkinan kegagalan dapat meningkatkan stres dan gugup.",
+      "fact": "Thomas Edison, penemu terkenal, mengalami kesulitan dengan metode pembelajaran tradisional dan ujian. Dia lebih suka belajar melalui eksperimen praktis dan pengalaman, menghindari ujian formal."
+    },
+    "37": {
+      "text": "Orang dengan sosiofobia sering mengalami kecemasan yang kuat ketika berbicara dengan orang lain. Ketakutan akan evaluasi negatif, kekhawatiran tentang bagaimana kata-kata mereka akan diterima, dan kekhawatiran akan membuat kesalahan dapat meningkatkan kecemasan dan gugup."
+    },
+    "38": {
+      "text": "Orang dengan sosiofobia sering lebih suka berjalan-jalan pada waktu ketika jalanan sepi atau tidak ada orang sama sekali. Ini membantu mereka menghindari interaksi sosial yang dapat menyebabkan kecemasan dan stres.",
+      "fact": "Howard Hughes, pengusaha dan aviator Amerika terkenal yang dikenal dengan sosiofobia dan beragam fobia, lebih suka jalan-jalan sendirian dan menghindari tempat-tempat ramai. Dia berusaha untuk tidak terlihat dan menghindari interaksi sosial."
+    },
+    "39": {
+      "text": "Kontak mata mengaktifkan neuron cermin, yang dapat meningkatkan perasaan empati dan pemahaman, tetapi juga dapat menimbulkan emosi yang kuat. Ini bisa menjadi salah satu alasan mengapa kontak mata menimbulkan kecemasan seperti itu."
+    }
+  },
+  "range": {
+    "normal": "Tidak ada sosiofobia",
+    "mild": "Sosiofobia tingkat sedang",
+    "moderate": "Sosiofobia tingkat berat"
+  },
+  "result": {
+    "normal": {
+      "text": "Hasil Anda menunjukkan bahwa Anda merasa percaya diri dan nyaman dalam berbagai situasi sosial. Anda tidak mengalami kesulitan yang signifikan ketika berinteraksi dengan orang asing, berbicara di depan publik, atau berpartisipasi dalam kegiatan kelompok. Ini menunjukkan bahwa sosiofobia pada diri Anda lemah atau tidak ada sama sekali, yang memungkinkan Anda untuk berpartisipasi secara bebas dan aktif dalam kehidupan sosial.",
+      "title": "Tidak ada sosiofobia"
+    },
+    "mild": {
+      "text": "Hasil Anda menunjukkan bahwa Anda menghadapi beberapa kesulitan dalam situasi sosial. Anda mungkin merasa tidak percaya diri ketika berinteraksi dengan orang asing, berbicara di depan publik, atau berpartisipasi dalam kegiatan kelompok besar. Ini menunjukkan bahwa Anda memiliki sosiofobia tingkat sedang. Namun, dengan dukungan dan latihan yang tepat, Anda dapat meningkatkan keterampilan komunikasi Anda dan merasa lebih nyaman dalam interaksi sosial.",
+      "title": "Sosiofobia tingkat sedang"
+    },
+    "moderate": {
+      "text": "Hasil Anda menunjukkan kesulitan signifikan yang Anda alami dalam situasi sosial. Anda mungkin merasa sangat tidak percaya diri dan cemas ketika berinteraksi dengan orang asing, berbicara di depan publik, atau berpartisipasi dalam kegiatan kelompok. Ini menunjukkan bentuk sosiofobia yang berat. Penting untuk diingat bahwa situasi seperti ini dapat diatasi dengan mencari bantuan dan dukungan profesional. Dengan pendekatan dan terapi yang tepat, Anda dapat secara bertahap mengatasi kesulitan ini dan meningkatkan kualitas hidup Anda.",
+      "title": "Sosiofobia tingkat berat"
+    }
+  },
+  "description": {
+    "text": [
+      "Pernahkah Anda bertanya-tanya seberapa nyaman Anda merasa dalam situasi sosial? Apakah Anda mengalami kecemasan ketika perlu berbicara dengan orang asing atau tampil di depan audiens? Tes kami akan membantu Anda memahami sejauh mana Anda menunjukkan tanda-tanda sosiofobia.",
+      "Tes ini terdiri dari pertanyaan yang mencakup berbagai aspek interaksi sosial, mulai dari komunikasi dengan kolega hingga partisipasi dalam acara publik. Dengan menjawabnya, Anda akan dapat lebih memahami perasaan dan reaksi Anda dalam situasi tertentu."
+    ]
+  }
+}

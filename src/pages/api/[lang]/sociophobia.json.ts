@@ -22,13 +22,16 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/bdi.json`),
+        path.resolve(`src/i18n/${lang}/tests/sociophobia.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
-      await fs.readFile(path.resolve(`src/i18n/en/tests/bdi.json`), 'utf-8'),
+      await fs.readFile(
+        path.resolve(`src/i18n/en/tests/sociophobia.json`),
+        'utf-8',
+      ),
     );
 
     const constants = JSON.parse(
@@ -38,41 +41,37 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const options = [data.variants.no, data.variants.yes];
+
     const output = {
-      title: constants.bdi,
-      steps: Object.keys(data.steps).map((key: string) => ({
-        g: null,
-        v: data.steps[key].map((text: string, i: number) => ({
+      title: constants.sociophobia,
+      steps: data.steps.map((key: string, index: number) => ({
+        g: key,
+        v: data.variants[index].map((text: any, id: number) => ({
           t: text,
-          s: i,
+          s: id,
         })),
       })),
       result: [
         {
           text: data.result.normal.text,
           title: data.result.normal.title,
-          rangeBefore: 13,
+          rangeBefore: 40,
         },
         {
           text: data.result.mild.text,
           title: data.result.mild.title,
-          rangeBefore: 24,
+          rangeBefore: 90,
         },
         {
           text: data.result.moderate.text,
           title: data.result.moderate.title,
-          rangeBefore: 40,
-        },
-        {
-          text: data.result.exacerbated.text,
-          title: data.result.exacerbated.title,
-          rangeBefore: 63,
+          rangeBefore: 120,
         },
       ],
       steps_description: Object.values(data.steps_description ?? {}),
       description: {
         text: data.description.text,
-        sourceLink: 'https://en.wikipedia.org/wiki/Beck_Depression_Inventory',
       },
       recommends: {
         activities: [

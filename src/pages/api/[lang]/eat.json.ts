@@ -22,13 +22,13 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/bdi.json`),
+        path.resolve(`src/i18n/${lang}/tests/eat.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
-      await fs.readFile(path.resolve(`src/i18n/en/tests/bdi.json`), 'utf-8'),
+      await fs.readFile(path.resolve(`src/i18n/en/tests/eat.json`), 'utf-8'),
     );
 
     const constants = JSON.parse(
@@ -38,41 +38,43 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const options = [
+      data.variants.always,
+      data.variants.often,
+      data.variants.seldom,
+      data.variants.never,
+    ];
+
     const output = {
-      title: constants.bdi,
-      steps: Object.keys(data.steps).map((key: string) => ({
-        g: null,
-        v: data.steps[key].map((text: string, i: number) => ({
+      title: constants.eat,
+      steps: data.steps.map((key: string, i: number) => ({
+        g: key,
+        v: options.map((text: any, id: number) => ({
           t: text,
-          s: i,
+          s: data.steps.length - 1 === i ? id : 3 - id,
         })),
       })),
       result: [
         {
-          text: data.result.normal.text,
-          title: data.result.normal.title,
-          rangeBefore: 13,
+          text: data.result.low.text,
+          title: data.result.low.title,
+          rangeBefore: 30,
         },
         {
-          text: data.result.mild.text,
-          title: data.result.mild.title,
-          rangeBefore: 24,
+          text: data.result.middle.text,
+          title: data.result.middle.title,
+          rangeBefore: 45,
         },
         {
-          text: data.result.moderate.text,
-          title: data.result.moderate.title,
-          rangeBefore: 40,
-        },
-        {
-          text: data.result.exacerbated.text,
-          title: data.result.exacerbated.title,
-          rangeBefore: 63,
+          text: data.result.hight.text,
+          title: data.result.hight.title,
+          rangeBefore: 78,
         },
       ],
       steps_description: Object.values(data.steps_description ?? {}),
       description: {
         text: data.description.text,
-        sourceLink: 'https://en.wikipedia.org/wiki/Beck_Depression_Inventory',
+        sourceLink: 'https://en.wikipedia.org/wiki/Eating_Attitudes_Test',
       },
       recommends: {
         activities: [

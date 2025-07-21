@@ -16,19 +16,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return paths;
 };
 
+const revItems = new Set([4, 8, 12, 16, 18]);
+
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/bdi.json`),
+        path.resolve(`src/i18n/${lang}/tests/sdvg.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
-      await fs.readFile(path.resolve(`src/i18n/en/tests/bdi.json`), 'utf-8'),
+      await fs.readFile(path.resolve(`src/i18n/en/tests/sdvg.json`), 'utf-8'),
     );
 
     const constants = JSON.parse(
@@ -38,41 +40,45 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const options = [
+      data.variants.never,
+      data.variants.rarely,
+      data.variants.sometimes,
+      data.variants.often,
+      data.variants.always,
+    ];
+
     const output = {
-      title: constants.bdi,
-      steps: Object.keys(data.steps).map((key: string) => ({
-        g: null,
-        v: data.steps[key].map((text: string, i: number) => ({
+      title: constants.sdvg,
+      steps: data.steps.map((key: string) => ({
+        g: key,
+        v: options.map((text: any, id: number) => ({
           t: text,
-          s: i,
+          s: id,
         })),
       })),
       result: [
         {
-          text: data.result.normal.text,
-          title: data.result.normal.title,
-          rangeBefore: 13,
+          text: data.result.low.text,
+          title: data.result.low.title,
+          rangeBefore: 30,
         },
         {
-          text: data.result.mild.text,
-          title: data.result.mild.title,
-          rangeBefore: 24,
+          text: data.result.middle.text,
+          title: data.result.middle.title,
+          rangeBefore: 45,
         },
         {
-          text: data.result.moderate.text,
-          title: data.result.moderate.title,
-          rangeBefore: 40,
-        },
-        {
-          text: data.result.exacerbated.text,
-          title: data.result.exacerbated.title,
-          rangeBefore: 63,
+          text: data.result.hight.text,
+          title: data.result.hight.title,
+          rangeBefore: 72,
         },
       ],
       steps_description: Object.values(data.steps_description ?? {}),
       description: {
         text: data.description.text,
-        sourceLink: 'https://en.wikipedia.org/wiki/Beck_Depression_Inventory',
+        sourceLink:
+          'https://en.wikipedia.org/wiki/Adult_ADHD_Self-Report_Scale',
       },
       recommends: {
         activities: [
