@@ -16,8 +16,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return paths;
 };
 
-const revItems = new Set([4, 8, 12, 16, 18]);
-
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
