@@ -1,0 +1,168 @@
+{
+  "steps": [
+    "How long do obsessive thoughts last during the day?",
+    "How do obsessive thoughts affect your daily routine?",
+    "How much do these thoughts bother you?",
+    "Is it easy for you to resist obsessive thoughts?",
+    "Can you control your obsessive thoughts?",
+    "How often do you engage in compulsive actions (checking your phone unnecessarily, picking at your face, biting your lips, washing your hands, etc.)?",
+    "How do these actions affect your life?",
+    "How do you feel because of these actions?",
+    "Are you able to resist performing rituals?",
+    "How well do you control your rituals?"
+  ],
+  "variants": {
+    "0": [
+      "Not at all",
+      "Less than an hour",
+      "1 to 3 hours",
+      "3 to 8 hours",
+      "More than 8 hours"
+    ],
+    "1": [
+      "Not at all, I live as usual",
+      "Barely noticeable",
+      "Slightly complicates life, but I manage",
+      "Significantly hinders, I have to change habits",
+      "Completely turned my life upside down"
+    ],
+    "2": [
+      "Not at all bothersome",
+      "Slightly unpleasant",
+      "Quite bothersome, but bearable",
+      "Very much, it affects my mood",
+      "Constantly feel strong discomfort"
+    ],
+    "3": [
+      "Almost always succeed",
+      "Often manage",
+      "Sometimes succeed",
+      "I rarely can brush them off",
+      "Can't resist at all"
+    ],
+    "4": [
+      "Yes, fully in control",
+      "Mostly yes",
+      "Sometimes succeed",
+      "Barely can",
+      "Can't control at all"
+    ],
+    "5": [
+      "Never",
+      "Less than an hour a day",
+      "1 to 3 hours",
+      "3 to 8 hours",
+      "More than 8 hours"
+    ],
+    "6": [
+      "Not at all, everything as usual",
+      "Barely noticeable",
+      "Slightly complicates, but not critical",
+      "Significantly hinders, I change my plans",
+      "Life has changed beyond recognition"
+    ],
+    "7": [
+      "Not worried at all",
+      "Slightly uncomfortable",
+      "Noticeably unpleasant, but manageable",
+      "Strong discomfort, it depresses me",
+      "Constantly feel strong discomfort"
+    ],
+    "8": [
+      "Almost always can resist",
+      "Quite often manage",
+      "Sometimes can refuse",
+      "Rarely can avoid",
+      "Can't resist at all"
+    ],
+    "9": [
+      "Completely under my control",
+      "Mostly under control",
+      "Sometimes can manage",
+      "Barely under control",
+      "Can't control at all"
+    ]
+  },
+  "steps_description": {
+    "0": {
+      "text": "For people with a moderate form of OCD, intrusive thoughts and compulsions can take up 1 to 3 hours a day, whereas in severe cases, these thoughts and rituals can take up more than 8 hours a day.",
+      "fact": "Research shows that over 60% of people with OCD experience intrusive thoughts daily."
+    },
+    "1": {
+      "text": "About 50% of people with OCD report that their intrusive thoughts and compulsions significantly interfere with their daily lives, including work, study, and social interactions.",
+      "fact": "Frequent and prolonged intrusive thoughts can cause physical exhaustion and health problems such as headaches, digestive issues, and chronic fatigue."
+    },
+    "2": {
+      "text": "Severe anxiety due to intrusive thoughts can manifest as physical symptoms such as headaches, muscle tension, and digestive problems.",
+      "fact": "Although Frederick Delano Roosevelt did not have an official diagnosis of OCD, historians note that his intrusive thoughts caused him significant anxiety, affecting his mood and daily life."
+    },
+    "3": {
+      "text": "The intensity and frequency of intrusive thoughts can vary greatly among different people. Some can manage them most of the time, while others experience constant difficulties.",
+      "fact": "Cognitive-behavioral therapy, especially the method of exposure and response prevention (ERP), is the most effective treatment for OCD, helping people learn to resist intrusive thoughts."
+    },
+    "4": {
+      "text": "Only about 10-20% of people with OCD report that they can mostly control their intrusive thoughts.",
+      "fact": "Antidepressants such as SSRIs often help people with OCD reduce the intensity of intrusive thoughts and improve control over them."
+    },
+    "5": {
+      "text": "The most common compulsive actions include frequent hand washing, repeated checking of locks and household appliances, as well as repetitive actions such as touching certain objects or repeating certain words and phrases.",
+      "fact": "Less than 5% of people with OCD perform compulsive actions for more than 8 hours a day, which significantly interferes with their daily lives."
+    },
+    "6": {
+      "text": "Compulsive actions can interfere with professional activities, reducing productivity and causing difficulties in fulfilling work duties. Some people have to reduce working hours or even change jobs due to their condition.",
+      "fact": "Howard Hughes' compulsive actions, such as constant hand washing and avoiding contact with others, led to his social isolation and significant changes in his life. Ultimately, his OCD significantly affected his health and career."
+    },
+    "7": {
+      "text": "Compulsive actions are often accompanied by strong negative emotions such as anxiety, guilt, shame, and frustration. These emotions can significantly enhance overall discomfort and feelings of depression.",
+      "fact": "People with OCD often suffer from comorbid disorders such as depression and anxiety disorders, which exacerbate their condition and increase feelings of discomfort."
+    },
+    "8": {
+      "text": "Stress and anxiety levels play a significant role in the ability to resist rituals. In periods of increased stress, resisting rituals becomes more difficult.",
+      "fact": "Footballer David Beckham has admitted that he sometimes manages to resist performing rituals, especially with the support of family and therapists."
+    },
+    "9": {
+      "text": "Approximately 30-35% of people report that they can control their rituals most of the time.",
+      "fact": "Mindfulness practices and meditation can help improve control over rituals, reduce anxiety, and enhance overall mental well-being."
+    }
+  },
+  "range": {
+    "normal": "Normal condition",
+    "light": "Mild OCD",
+    "severe": "Moderate OCD",
+    "extreme": "Severe OCD"
+  },
+  "result": {
+    "normal": {
+      "text": "Your condition is within normal limits, and symptoms of obsessive-compulsive disorder are either absent or very mild. You do not experience significant discomfort from obsessive thoughts and actions, and they do not affect your daily life. Overall, you feel calm and confident, your thoughts and actions are under control.",
+      "title": "Normal condition"
+    },
+    "light": {
+      "text": "You notice some oddities in your behavior and thoughts. Perhaps a certain idea has been bothering you for a while, but it generally does not interfere with your life. Sometimes you may want to wash your hands frequently after meeting an unpleasant person or check if everything is okay at home, in your documents, in the news. But these are situational cases, and generally, you can resist these states so they do not disrupt your usual rhythm.",
+      "title": "Mild OCD"
+    },
+    "severe": {
+      "text": "It seems that you often feel anxious and therefore have to live by certain rules. It is important to you that the bed linen is of a certain brand, the juice is of a certain color. You dress in a strict order and feel uncomfortable when you cannot do everything in the system you are used to. Scrupulousness, pedantry, and the manic desire to clean everything and do things 'the right way' are common companions of severe OCD. You may skip certain rituals and rationalize your anxiety in certain situations, but you probably understand that you only partially control it. You may also be bothered by nervous tics: you blink often, scratch your skin (especially when at rest), pick at wounds and lips.",
+      "title": "Moderate OCD"
+    },
+    "extreme": {
+      "text": "It seems that your life is filled with overwhelming anxiety. Sometimes you can temporarily dampen it by performing elaborate rituals. It may seem that you occasionally lose contact with reality, and magical thinking starts to dominate over logical thinking. For example, you believe that if you perform a certain action several times, it will somehow improve your condition, even if it contradicts common sense. You find it extremely difficult to control and stop repetitive behavior. If other people try to change the 'established order', it causes irritation and anger. You feel a vague threat if you do not perform the rituals. This may manifest in various phobias: fear of getting sick and dying or premonition of an accident that might happen to you or your loved ones. You probably also suffer from nervous tics, strange allergies, dermatitis, are painfully sensitive to bright light and loud noises, constantly scratch your skin, etc.",
+      "title": "Severe OCD"
+    }
+  },
+  "description": {
+    "text": [
+      "OCD, or obsessive-compulsive disorder, is a condition where obsessive thoughts or images appear in the head without any particular reason, forcing a person to repeatedly perform certain actions.",
+      "For example, the obsessive fear of infection, which forces a person to wash their hands dozens or even hundreds of times a day; or the fear of burglary, which causes a person to constantly check if the door is locked and the lock is working.",
+      "This disorder is quite common and affects about 2-3 out of 100 people. However, its severe forms can significantly impair the quality of life and drain a lot of energy."
+    ]
+  },
+  "instagram": [
+    "18102494377465371",
+    "18063165274869773",
+    "18059033021125338",
+    "17958172832927446",
+    "18049053749368917",
+    "17917173762081191",
+    "17853708132424290"
+  ]
+}
