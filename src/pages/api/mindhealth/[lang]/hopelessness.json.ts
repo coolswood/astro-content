@@ -1,20 +1,12 @@
 // src/pages/api/[lang]/[test].json.ts
-import type { APIRoute, GetStaticPaths } from 'astro';
+import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 
 export const prerender = true;
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const langs = await fs.readdir('src/i18n');
-  const paths: { params: { lang: string } }[] = [];
-
-  for (const lang of langs) {
-    paths.push({ params: { lang } });
-  }
-
-  return paths;
-};
+export const getStaticPaths = getLangStaticPaths;
 
 const revItems = new Set([0, 2, 4, 5, 7, 9, 12, 14, 18]);
 

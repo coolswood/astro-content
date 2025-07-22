@@ -1,0 +1,24 @@
+---
+export const prerender = true;
+export const partial = true;
+
+import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import fs from 'fs/promises';
+import path from 'path';
+
+export const getStaticPaths = getLangStaticPaths;
+
+const { lang } = Astro.params;
+
+const data = JSON.parse(
+	await fs.readFile(
+		path.resolve(`src/i18n/${lang}/tests/das/descriptions.json`),
+		'utf-8',
+	),
+);
+
+console.log(data);
+---
+
+<p>{data.approval[0]}</p>
+<p>{data.approval[1]}</p>

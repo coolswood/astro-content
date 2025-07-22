@@ -8,22 +8,20 @@ export const prerender = true;
 
 export const getStaticPaths = getLangStaticPaths;
 
-const revItems = new Set([3, 5, 6, 8, 11, 16, 17, 18, 20]);
-
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/burnout.json`),
+        path.resolve(`src/i18n/${lang}/tests/das/das.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/en/tests/burnout.json`),
+        path.resolve(`src/i18n/en/tests/das/das.json`),
         'utf-8',
       ),
     );
@@ -36,52 +34,36 @@ export const GET: APIRoute = async ({ params }) => {
     );
 
     const options = [
-      data.variants.never,
-      data.variants.seldom,
-      data.variants.often,
-      data.variants.always,
+      data.options[0],
+      data.options[1],
+      data.options[2],
+      data.options[3],
+      data.options[4],
     ];
 
     const output = {
-      title: constants.burnout,
-      steps: data.steps.map((key: string, index: number) => ({
+      steps: data.steps.map((key: string, i: number) => ({
         g: key,
         v: options.map((text: any, id: number) => ({
           t: text,
-          s: revItems.has(index) ? 4 - id : id + 1,
+          s: id - 2,
         })),
       })),
-      result: [
-        {
-          text: data.result.low.text,
-          title: data.result.low.title,
-          rangeBefore: 32,
-        },
-        {
-          text: data.result.middle.text,
-          title: data.result.middle.title,
-          rangeBefore: 63,
-        },
-        {
-          text: data.result.hight.text,
-          title: data.result.hight.title,
-          rangeBefore: 88,
-        },
-      ],
       steps_description: Object.values(data.steps_description ?? {}),
       description: {
-        text: data.description.text,
-        sourceLink: 'https://en.wikipedia.org/wiki/Maslach_Burnout_Inventory',
-      },
-      recommends: {
-        activities: [
-          'dfdzsWz4nJ',
-          'DzseWuFv2t',
-          'kdzYJ4njVJ',
-          'lsafnanS3sf',
-          'lsvnnDSnsdl',
-          'naslSLnadfl',
-        ],
+        text: `
+      <p>${data.description.text[0]}</p>
+      <p>${data.description.text[1]}</p>
+      <p>${data.description.text[2]}</p>
+      <li>${data.description.text[3]}</li>
+      <li>${data.description.text[4]}</li>
+      <li>${data.description.text[5]}</li>
+      <li>${data.description.text[6]}</li>
+      <li>${data.description.text[7]}</li>
+      <li>${data.description.text[8]}</li>
+      <li>${data.description.text[9]}</li>
+      <p>${data.description.text[10]}</p>
+    `,
       },
       instagram: data.instagram || en.instagram,
     };
