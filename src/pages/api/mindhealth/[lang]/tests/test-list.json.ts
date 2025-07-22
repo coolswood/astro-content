@@ -49,7 +49,7 @@ export const GET: APIRoute = async ({ params }) => {
 
     const hopelessness = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/hopelessness.json`),
+        path.resolve(`src/i18n/${lang}/tests/hopeless.json`),
         'utf-8',
       ),
     );

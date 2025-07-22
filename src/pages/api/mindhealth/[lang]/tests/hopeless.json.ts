@@ -16,14 +16,14 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const data = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/tests/hopelessness.json`),
+        path.resolve(`src/i18n/${lang}/tests/hopeless.json`),
         'utf-8',
       ),
     );
 
     const en = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/en/tests/hopelessness.json`),
+        path.resolve(`src/i18n/en/tests/hopeless.json`),
         'utf-8',
       ),
     );
