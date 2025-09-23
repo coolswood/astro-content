@@ -22,7 +22,7 @@ const distortionsModules = import.meta.glob<StoryModule>(
 );
 
 type CategoryConfig = {
-  category: 'base' | 'depression' | 'distortions';
+  category: 'BASE' | 'DEPRESSION' | 'DISTORTIONS';
   prefix: `../[lang]/story/${string}`;
   slugs: readonly string[];
   modules: Record<string, () => Promise<StoryModule>>;
@@ -30,19 +30,19 @@ type CategoryConfig = {
 
 const categories: CategoryConfig[] = [
   {
-    category: 'base',
+    category: 'BASE',
     prefix: '../[lang]/story/base/',
     slugs: baseStorySlugs,
     modules: baseModules,
   },
   {
-    category: 'depression',
+    category: 'DEPRESSION',
     prefix: '../[lang]/story/depression/',
     slugs: depressionStorySlugs,
     modules: depressionModules,
   },
   {
-    category: 'distortions',
+    category: 'DISTORTIONS',
     prefix: '../[lang]/story/distortions/',
     slugs: distortionsStorySlugs,
     modules: distortionsModules,
@@ -89,7 +89,7 @@ export const GET: APIRoute = async () => {
           );
         }
 
-        items.push({ category, article: story.id });
+        items.push({ category: category, article: story.id });
       }
     }
 
