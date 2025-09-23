@@ -1,28 +1,29 @@
 import type { APIRoute } from 'astro';
-import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
-import { storySlugs as baseStorySlugs } from './base/list.json.ts';
-import { storySlugs as depressionStorySlugs } from './depression/list.json.ts';
-import { storySlugs as distortionsStorySlugs } from './distortions/list.json.ts';
+import { storySlugs as baseStorySlugs } from '../[lang]/story/base/list.json.ts';
+import { storySlugs as depressionStorySlugs } from '../[lang]/story/depression/list.json.ts';
+import { storySlugs as distortionsStorySlugs } from '../[lang]/story/distortions/list.json.ts';
 
 export const prerender = true;
 
-export const getStaticPaths = getLangStaticPaths;
+const DEFAULT_LANG = 'ru';
 
 type StoryModule = {
   GET: APIRoute;
 };
 
-const baseModules = import.meta.glob<StoryModule>('./base/*.json.ts');
+const baseModules = import.meta.glob<StoryModule>(
+  '../[lang]/story/base/*.json.ts',
+);
 const depressionModules = import.meta.glob<StoryModule>(
-  './depression/*.json.ts',
+  '../[lang]/story/depression/*.json.ts',
 );
 const distortionsModules = import.meta.glob<StoryModule>(
-  './distortions/*.json.ts',
+  '../[lang]/story/distortions/*.json.ts',
 );
 
 type CategoryConfig = {
   category: 'base' | 'depression' | 'distortions';
-  prefix: `./${string}`;
+  prefix: `../[lang]/story/${string}`;
   slugs: readonly string[];
   modules: Record<string, () => Promise<StoryModule>>;
 };
@@ -30,32 +31,29 @@ type CategoryConfig = {
 const categories: CategoryConfig[] = [
   {
     category: 'base',
-    prefix: './base/',
+    prefix: '../[lang]/story/base/',
     slugs: baseStorySlugs,
     modules: baseModules,
   },
   {
     category: 'depression',
-    prefix: './depression/',
+    prefix: '../[lang]/story/depression/',
     slugs: depressionStorySlugs,
     modules: depressionModules,
   },
   {
     category: 'distortions',
-    prefix: './distortions/',
+    prefix: '../[lang]/story/distortions/',
     slugs: distortionsStorySlugs,
     modules: distortionsModules,
   },
 ];
 
-export const GET: APIRoute = async ({ params }) => {
-  const lang = params.lang!;
+export const GET: APIRoute = async () => {
+  const lang = DEFAULT_LANG;
 
   try {
-    const items: Array<{
-      category: string;
-      article: string;
-    }> = [];
+    const items: Array<{ category: string; article: string }> = [];
 
     for (const { category, prefix, slugs, modules } of categories) {
       for (const slug of slugs) {
@@ -83,10 +81,9 @@ export const GET: APIRoute = async ({ params }) => {
           );
         }
 
-        items.push({
-          category,
-          article: slug,
-        });
+        await response.json();
+
+        items.push({ category, article: slug });
       }
     }
 
