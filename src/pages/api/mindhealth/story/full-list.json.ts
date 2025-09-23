@@ -81,9 +81,15 @@ export const GET: APIRoute = async () => {
           );
         }
 
-        await response.json();
+        const story = await response.json();
 
-        items.push({ category, article: slug });
+        if (typeof story.id !== 'string') {
+          throw new Error(
+            `Story module for slug "${slug}" in category "${category}" returned invalid id`,
+          );
+        }
+
+        items.push({ category, article: story.id });
       }
     }
 
