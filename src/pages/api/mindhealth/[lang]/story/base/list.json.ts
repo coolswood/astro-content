@@ -19,7 +19,7 @@ type StoryModule = {
   GET: APIRoute;
 };
 
-const storySlugs = [
+export const storySlugs = [
   'start',
   'triangle',
   'automatic',
