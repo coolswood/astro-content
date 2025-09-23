@@ -20,16 +20,16 @@ type StoryModule = {
 };
 
 export const storySlugs = [
-  'key',
-  'approval',
-  'love',
-  'love_exercise',
-  'achievements',
-  'achievements_exercise',
-  'omnipotence',
-  'omnipotence_exercise',
-  'autonomy',
-  'autonomy_exercise',
+  'distortions_key',
+  'distortions_approval',
+  'distortions_love',
+  'distortions_love_exercise',
+  'distortions_achievements',
+  'distortions_achievements_exercise',
+  'distortions_omnipotence',
+  'distortions_omnipotence_exercise',
+  'distortions_autonomy',
+  'distortions_autonomy_exercise',
 ] as const;
 
 const storyModules = import.meta.glob<StoryModule>('./*.json.ts');
