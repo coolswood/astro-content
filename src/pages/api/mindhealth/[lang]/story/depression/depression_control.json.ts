@@ -7,7 +7,7 @@ import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import {
   activitylink,
   important,
-  instagram,
+  instagramStep,
   q,
   dialog,
 } from '@/lib/storyHelper';
@@ -67,7 +67,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_2.texts[0]}</p>`,
             `<p>${story.screen_2.texts[1]}</p>`,
             `<p>${story.screen_2.texts[2]}</p>`,
-            instagram(story.instagram || storyEn.instagram),
+            ...instagramStep(story.instagram, storyEn.instagram),
             `<p>${story.screen_2.texts[3]}</p>`,
             `<p>${story.screen_2.texts[4]}</p>`,
             `<li>${story.screen_2.texts[5]}</li>`,

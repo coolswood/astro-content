@@ -7,7 +7,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
-import { important, instagram, q } from '@/lib/storyHelper';
+import { important, instagramStep, q } from '@/lib/storyHelper';
 
 export const prerender = true;
 
@@ -61,7 +61,7 @@ export const GET: APIRoute = async ({ params }) => {
           __typename: 'ScreenText',
           steps: [
             `<p>${story.screen_2.texts[0]}</p>`,
-            instagram(story.instagram || storyEn.instagram),
+            ...instagramStep(story.instagram, storyEn.instagram),
             `<p>${story.screen_2.texts[1]}</p>`,
             `<p>${story.screen_2.texts[2]}</p>`,
             `<p>${story.screen_2.texts[3]}</p>`,

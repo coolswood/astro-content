@@ -2,6 +2,21 @@ export const instagram = (ids: string[]) => {
   return `<instagram ids="${ids.join(',')}"></instagram>`;
 };
 
+export const instagramStep = (
+  primary?: string[],
+  fallback?: string[],
+): string[] => {
+  if (primary?.length) {
+    return [instagram(primary)];
+  }
+
+  if (fallback?.length) {
+    return [instagram(fallback)];
+  }
+
+  return [];
+};
+
 export const q = (key: string, author: string): string => {
   return `<q data-author="${author}">${key}</q>`;
 };
