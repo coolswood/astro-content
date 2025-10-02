@@ -30,6 +30,11 @@ export const storySlugs = [
   'distortions_omnipotence_exercise',
   'distortions_autonomy',
   'distortions_autonomy_exercise',
+  'distortions_owed',
+  'distortions_owed_exercise',
+  'distortions_perfectionism',
+  'distortions_perfectionism_exercise',
+  'distortions_way',
 ] as const;
 
 const storyModules = import.meta.glob<StoryModule>('./*.json.ts');
