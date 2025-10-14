@@ -97,9 +97,9 @@ export const GET: APIRoute = async () => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken story file' }),
-      { status: 404 },
+    console.error('Error generating full-list.json:', err);
+    throw new Error(
+      `Failed to generate full-list.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

@@ -60,7 +60,9 @@ export const GET: APIRoute = async ({ params }) => {
         const response = await module.GET({ params: { lang } } as any);
 
         if (!response.ok) {
-          throw new Error(`Story module for slug "${slug}" responded with ${response.status}`);
+          throw new Error(
+            `Story module for slug "${slug}" responded with ${response.status}`,
+          );
         }
 
         const story = await response.json();
@@ -72,7 +74,9 @@ export const GET: APIRoute = async ({ params }) => {
           time: story.time,
           type: story.type,
           img: story.img,
-          ...(typeof story.isPremium === 'boolean' ? { isPremium: story.isPremium } : {}),
+          ...(typeof story.isPremium === 'boolean'
+            ? { isPremium: story.isPremium }
+            : {}),
         };
 
         return {
@@ -87,9 +91,9 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken story file' }),
-      { status: 404 },
+    console.error(`Error generating ${lang}/story/distortions/list.json:`, err);
+    throw new Error(
+      `Failed to generate ${lang}/story/distortions/list.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

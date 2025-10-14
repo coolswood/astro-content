@@ -43,7 +43,7 @@ export const storySlugs = [
   'depression_disability',
   'depression_death',
   'depression_unemployment',
-  'depression_nonDepression',
+  'depression_non_depression',
 ] as const;
 
 const storyModules = import.meta.glob<StoryModule>('./*.json.ts');
@@ -100,9 +100,9 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken story file' }),
-      { status: 404 },
+    console.error(`Error generating ${lang}/story/depression/list.json:`, err);
+    throw new Error(
+      `Failed to generate ${lang}/story/depression/list.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

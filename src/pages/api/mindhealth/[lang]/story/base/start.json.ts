@@ -15,7 +15,7 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const story = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/story/start.json`),
+        path.resolve(process.cwd(), `src/i18n/${lang}/story/start.json`),
         'utf-8',
       ),
     );

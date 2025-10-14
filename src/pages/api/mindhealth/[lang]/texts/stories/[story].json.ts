@@ -31,10 +31,9 @@ export const GET: APIRoute = async ({ params }) => {
   const story = (params.story ?? '').toLowerCase();
 
   if (!ALLOWED.has(story)) {
-    return new Response(
-      JSON.stringify({ error: 'Unknown story identifier' }),
-      { status: 404 },
-    );
+    return new Response(JSON.stringify({ error: 'Unknown story identifier' }), {
+      status: 404,
+    });
   }
 
   try {
@@ -46,10 +45,10 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response(JSON.stringify(cards), {
       headers: { 'Content-Type': 'application/json' },
     });
-  } catch {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken story file' }),
-      { status: 404 },
+  } catch (err) {
+    console.error(`Error generating ${lang}/texts/stories/${story}.json:`, err);
+    throw new Error(
+      `Failed to generate ${lang}/texts/stories/${story}.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };
