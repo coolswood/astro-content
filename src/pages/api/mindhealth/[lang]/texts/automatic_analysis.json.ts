@@ -32,10 +32,10 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response(JSON.stringify(payload), {
       headers: { 'Content-Type': 'application/json' },
     });
-  } catch {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken text file' }),
-      { status: 404 },
+  } catch (err) {
+    console.error(`Error generating automatic_analysis.json:`, err);
+    throw new Error(
+      `Failed to generate automatic_analysis.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

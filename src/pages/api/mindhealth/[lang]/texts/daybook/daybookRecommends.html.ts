@@ -31,10 +31,13 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response(render(content), {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
-  } catch {
-    return new Response('Not found or broken text file', {
-      status: 404,
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
+  } catch (err) {
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/texts/daybook/daybookRecommends.html.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/texts/daybook/daybookRecommends.html.ts: ${err instanceof Error ? err.message : String(err)}`,
+    );
   }
 };

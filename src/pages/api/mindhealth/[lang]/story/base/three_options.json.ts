@@ -90,9 +90,9 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken three_options file' }),
-      { status: 404 },
+    console.error(`Error generating three_options.json:`, err);
+    throw new Error(
+      `Failed to generate three_options.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

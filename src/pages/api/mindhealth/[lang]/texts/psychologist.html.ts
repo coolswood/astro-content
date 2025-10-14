@@ -57,9 +57,12 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
   } catch (err) {
-    return new Response('Not found or broken text file', {
-      status: 404,
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/texts/psychologist.html.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/texts/psychologist.html.ts: ${err instanceof Error ? err.message : String(err)}`,
+    );
   }
 };

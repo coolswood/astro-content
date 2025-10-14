@@ -113,9 +113,9 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken guilt file' }),
-      { status: 404 },
+    console.error(`Error generating depression_guilt.json:`, err);
+    throw new Error(
+      `Failed to generate depression_guilt.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

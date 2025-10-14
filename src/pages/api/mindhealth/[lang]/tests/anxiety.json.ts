@@ -96,9 +96,9 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken test file' }),
-      { status: 404 },
+    console.error(`Error generating anxiety.json:`, err);
+    throw new Error(
+      `Failed to generate anxiety.json: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

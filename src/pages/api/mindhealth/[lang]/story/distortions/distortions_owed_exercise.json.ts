@@ -30,7 +30,9 @@ export const GET: APIRoute = async ({ params }) => {
       screen1Steps.push(`<p>${text}</p>`);
     });
 
-    screen1Steps.push(q(story.screen_1.quote.text, story.screen_1.quote.author));
+    screen1Steps.push(
+      q(story.screen_1.quote.text, story.screen_1.quote.author),
+    );
 
     const screen2Steps: string[] = [];
 
@@ -88,9 +90,12 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken owed_exercise file' }),
-      { status: 404 },
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/story/distortions/distortions_owed_exercise.json.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/distortions/distortions_owed_exercise.json.ts: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

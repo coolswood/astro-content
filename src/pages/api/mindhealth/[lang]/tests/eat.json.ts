@@ -85,9 +85,12 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken test file' }),
-      { status: 404 },
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/tests/eat.json.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/tests/eat.json.ts: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

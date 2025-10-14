@@ -21,7 +21,10 @@ export const GET: APIRoute = async ({ params }) => {
     );
 
     const storyEn = JSON.parse(
-      await fs.readFile(path.resolve(`src/i18n/en/story/start.json`), 'utf-8'),
+      await fs.readFile(
+        path.resolve(process.cwd(), `src/i18n/en/story/start.json`),
+        'utf-8',
+      ),
     );
 
     const output = {
@@ -99,9 +102,12 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken test file' }),
-      { status: 404 },
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/story/base/start.json.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/base/start.json.ts: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

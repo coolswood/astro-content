@@ -15,10 +15,7 @@ const render = (items: string[]) => {
   }
 
   const [first, ...rest] = items;
-  return [
-    wrap('p', first),
-    ...rest.map((text) => wrap('li', text)),
-  ]
+  return [wrap('p', first), ...rest.map((text) => wrap('li', text))]
     .filter(Boolean)
     .join('');
 };
@@ -35,10 +32,13 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response(render(items), {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
-  } catch {
-    return new Response('Not found or broken text file', {
-      status: 404,
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
+  } catch (err) {
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/texts/diary/analysis/hint.html.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/texts/diary/analysis/hint.html.ts: ${err instanceof Error ? err.message : String(err)}`,
+    );
   }
 };

@@ -96,11 +96,12 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({
-        error: 'Not found or broken omnipotence_exercise file',
-      }),
-      { status: 404 },
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/story/distortions/distortions_omnipotence_exercise.json.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/distortions/distortions_omnipotence_exercise.json.ts: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

@@ -43,7 +43,9 @@ export const GET: APIRoute = async ({ params }) => {
     });
 
     screen1Steps.push(...instagramStep(story.instagram, storyEn.instagram));
-    screen1Steps.push(q(story.screen_1.quote.text, story.screen_1.quote.author));
+    screen1Steps.push(
+      q(story.screen_1.quote.text, story.screen_1.quote.author),
+    );
 
     const screen2Steps: string[] = [];
 
@@ -61,7 +63,9 @@ export const GET: APIRoute = async ({ params }) => {
       screen2Steps.push(`<p>${text}</p>`);
     });
 
-    screen2Steps.push(q(story.screen_2.quote.text, story.screen_2.quote.author));
+    screen2Steps.push(
+      q(story.screen_2.quote.text, story.screen_2.quote.author),
+    );
 
     const screen3Steps: string[] = [];
 
@@ -79,7 +83,9 @@ export const GET: APIRoute = async ({ params }) => {
       screen3Steps.push(`<p>${text}</p>`);
     });
 
-    screen3Steps.push(q(story.screen_3.quote.text, story.screen_3.quote.author));
+    screen3Steps.push(
+      q(story.screen_3.quote.text, story.screen_3.quote.author),
+    );
 
     const output = {
       id: 'DISTORTIONS_OWED',
@@ -110,9 +116,12 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken owed file' }),
-      { status: 404 },
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/story/distortions/distortions_owed.json.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/distortions/distortions_owed.json.ts: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

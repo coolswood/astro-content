@@ -15,10 +15,7 @@ const wrap = (tag: string, text?: string) =>
   text ? `<${tag}>${text}</${tag}>` : '';
 
 const render = ({ h2, texts = [] }: MoodFinish) =>
-  [
-    wrap('h2', h2),
-    ...texts.map((text) => wrap('p', text)),
-  ]
+  [wrap('h2', h2), ...texts.map((text) => wrap('p', text))]
     .filter(Boolean)
     .join('');
 
@@ -34,10 +31,13 @@ export const GET: APIRoute = async ({ params }) => {
     return new Response(render(content), {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
-  } catch {
-    return new Response('Not found or broken text file', {
-      status: 404,
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
+  } catch (err) {
+    console.error(
+      `Error generating src/pages/api/mindhealth/[lang]/texts/mood/finish.html.ts:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate src/pages/api/mindhealth/[lang]/texts/mood/finish.html.ts: ${err instanceof Error ? err.message : String(err)}`,
+    );
   }
 };
