@@ -1,452 +1,318 @@
 {
   "steps": [
-    "Wie fühlen Sie sich, wenn Sie um Hilfe oder einen Gefallen bitten müssen?",
-    "Wie fühlen Sie sich, wenn Sie vor einem großen Publikum sprechen müssen?",
-    "Wie reagieren Sie, wenn Fremde versuchen, ein Gespräch mit Ihnen zu beginnen?",
-    "Wie oft vermeiden Sie Telefonate oder Videokonferenzen?",
-    "Wie oft vermeiden Sie soziale Kontakte außerhalb der Arbeit oder des Studiums?",
-    "Fühlen Sie sich unwohl, wenn Sie einen Raum betreten, in dem bereits alle sitzen?",
-    "Wie empfinden Sie Kritik in sozialen Medien?",
-    "Schweigen Sie oft bei Arbeitsbesprechungen?",
-    "Wie fühlen Sie sich, wenn Sie aufgefordert werden, Ihre Meinung vor einer Gruppe zu äußern?",
-    "Wie fühlen Sie sich an Orten mit vielen Menschen, wie z.B. in der U-Bahn?",
-    "Wie oft versuchen Sie, im Mittelpunkt der Aufmerksamkeit zu vermeiden?",
-    "Wie oft meiden Sie öffentliche Orte wie Restaurants, Clubs oder Bars?",
-    "Verspüren Sie Angst, wenn Sie im Mittelpunkt der Aufmerksamkeit stehen?",
-    "Wie oft verspüren Sie Angst vor bevorstehenden sozialen Interaktionen?",
+    "Wie fühlen Sie sich, wenn Sie um Hilfe oder eine Dienstleistung bitten müssen?",
+    "Wie geht es Ihnen, wenn ein Auftritt vor einem großen Publikum ansteht?",
+    "Wie reagieren Sie, wenn fremde Personen ein Gespräch mit Ihnen beginnen?",
+    "Wie häufig vermeiden Sie Telefonate oder Videokonferenzen?",
+    "Wie oft versuchen Sie, außerhalb von Arbeit oder Studium Kontakte zu meiden?",
+    "Empfinden Sie Unbehagen, wenn Sie einen Raum betreten, in dem bereits alle sitzen?",
+    "Wie gehen Sie mit Kritik in sozialen Medien um?",
+    "Halten Sie sich in Besprechungen eher zurück?",
+    "Wie fühlen Sie sich, wenn man Sie bittet, Ihre Meinung vor einer Gruppe zu äußern?",
+    "Wie geht es Ihnen an sehr vollen Orten, etwa in der U-Bahn?",
+    "Wie oft versuchen Sie, im Freundeskreis nicht im Mittelpunkt zu stehen?",
+    "Wie häufig meiden Sie öffentliche Orte wie Restaurants, Clubs oder Bars?",
+    "Erleben Sie Angst, wenn Sie im Mittelpunkt stehen?",
+    "Wie oft spüren Sie Anspannung, bevor Gespräche oder Begegnungen bevorstehen?",
     "Fühlen Sie sich unwohl, wenn Sie mit Vorgesetzten sprechen?",
-    "Wie oft meiden Sie große Einkaufszentren oder Kaufhäuser?",
-    "Wie fühlen Sie sich, wenn Sie etwas Neues tun müssen, wie z.B. ein neues Café besuchen?",
-    "Wie fühlen Sie sich, wenn Sie neue Aufgaben vor einem unbekannten Publikum ausführen müssen?",
-    "Wie oft vermeiden Sie es, wenig bekannte Personen anzurufen?",
-    "Verspüren Sie Angst, wenn Sie Waren in einem Geschäft zurückgeben?",
-    "Wie fühlen Sie sich, wenn Sie in letzter Minute gebeten werden, öffentlich zu sprechen?",
-    "Verspüren Sie Angst, wenn Sie in Anwesenheit anderer Notizen machen?",
-    "Fühlen Sie sich ängstlich, wenn Sie einem hartnäckigen Verkäufer absagen müssen?",
-    "Verspüren Sie Angst, wenn Sie Ihre Meinungsverschiedenheit gegenüber wenig bekannten Personen äußern?",
-    "Wie reagieren Sie auf unerwartete Einladungen zu Hochzeiten oder anderen Feierlichkeiten?",
-    "Wie oft vermeiden Sie Telefongespräche in Anwesenheit anderer Personen?",
-    "Wie oft meiden Sie Partys oder gesellige Zusammenkünfte?",
-    "Wie oft vermeiden Sie die Benutzung öffentlicher Toiletten?",
-    "Wie reagieren Sie auf Vorschläge, sich mit einem potenziellen Partner zu treffen oder auf ein Date zu gehen?",
-    "Wie oft vermeiden Sie es, Anrufe von unbekannten Nummern anzunehmen?",
-    "Wie stehen Sie zum Umgang mit fremden Menschen während Reisen oder im Urlaub?",
-    "Verspüren Sie Angst, wenn Sie Fremden in die Augen schauen?",
-    "Wie oft vermeiden Sie Konflikte oder Auseinandersetzungen mit Fremden?",
-    "Wie stehen Sie zur Teilnahme an Gruppenfotos?",
-    "Wie reagieren Sie auf Vorschläge, einer neuen Gruppe oder Gemeinschaft beizutreten?",
-    "Wie oft vermeiden Sie Treffen mit unbekannten Personen?",
-    "Verspüren Sie Angst vor praktischen Prüfungen, bei denen Ihre Fähigkeiten getestet werden?",
-    "Verspüren Sie Angst, wenn Sie mit jemandem sprechen?",
-    "Gehen Sie lieber spazieren, wenn wenige oder keine Menschen auf der Straße sind?",
-    "Wie oft vermeiden Sie es, Fremden in die Augen zu schauen?"
+    "Wie häufig vermeiden Sie Besuche in großen Einkaufszentren oder Warenhäusern?",
+    "Wie geht es Ihnen, wenn Sie etwas Neues ausprobieren sollen, z. B. ein neues Café besuchen?",
+    "Wie fühlen Sie sich, wenn Sie neue Aufgaben vor einer unbekannten Gruppe erledigen sollen?",
+    "Wie oft vermeiden Sie Anrufe von unbekannten Nummern?",
+    "Empfinden Sie Angst, wenn Sie Ware im Geschäft zurückgeben?",
+    "Wie geht es Ihnen, wenn Sie kurzfristig öffentlich sprechen sollen?",
+    "Werden Sie angespannt, wenn Sie in Anwesenheit anderer etwas notieren?",
+    "Empfinden Sie Angst, wenn Sie einer aufdringlichen Verkaufsperson widersprechen müssen?",
+    "Fühlen Sie Anspannung, wenn Sie Fremden gegenüber eine abweichende Meinung äußern?",
+    "Wie reagieren Sie auf unerwartete Einladungen zu Hochzeiten oder anderen Festen?",
+    "Wie häufig vermeiden Sie Telefonate, wenn andere mithören könnten?",
+    "Wie oft sagen Sie Einladungen zu Partys ab?",
+    "Wie oft vermeiden Sie öffentliche Toiletten?",
+    "Wie reagieren Sie auf Vorschläge, sich zu treffen oder zu einem Date zu gehen?",
+    "Wie häufig nehmen Sie Anrufe von unbekannten Nummern nicht an?",
+    "Wie finden Sie Gespräche mit fremden Personen auf Reisen oder im Urlaub?",
+    "Empfinden Sie Anspannung, wenn Sie Fremden in die Augen sehen?",
+    "Wie oft vermeiden Sie Konflikte oder Auseinandersetzungen mit Unbekannten?",
+    "Wie stehen Sie zu Gruppenfotos?",
+    "Wie reagieren Sie auf Vorschläge, einer neuen Gruppe oder Community beizutreten?",
+    "Wie häufig vermeiden Sie Treffen mit unbekannten Personen?",
+    "Empfinden Sie Anspannung vor Prüfungen praktischer Fertigkeiten?",
+    "Werden Sie bei Gesprächen mit anderen ängstlich?",
+    "Spazieren Sie lieber zu Zeiten, in denen kaum Menschen unterwegs sind?",
+    "Wie oft vermeiden Sie es, Fremden in die Augen zu sehen?"
   ],
   "variants": {
     "0": [
-      "Ich bitte problemlos um Hilfe, das ist normal",
-      "Ich fühle leichtes Unbehagen, komme aber zurecht",
-      "Unangenehm, ich versuche es selbst zu lösen",
-      "Sehr unangenehm, ich vermeide es"
+      "Ich frage problemlos; das ist für mich normal",
+      "Leichtes Unbehagen, aber ich schaffe das",
+      "Unangenehm, ich versuche es allein zu bewältigen",
+      "Sehr unangenehm, ich vermeide es eher"
     ],
     "1": [
-      "Selbstsicher und ruhig",
+      "Sicher und ruhig",
       "Mit etwas Nervosität",
-      "Nervös, aber ich kann auftreten",
-      "Ich bekomme Panik"
+      "Ich bin nervös, kann aber auftreten",
+      "Ich gerate in Panik"
     ],
     "2": [
-      "Freundlich und offen",
-      "Mit Vorsicht und Misstrauen",
-      "Ich versuche, das Gespräch zu vermeiden",
-      "Ich laufe regelrecht davon"
+      "Offen und freundlich",
+      "Mit Vorsicht und Zurückhaltung",
+      "Ich versuche das Gespräch zu vermeiden",
+      "Ich gehe möglichst schnell weg"
     ],
-    "3": [
-      "Fast nie",
-      "Manchmal",
-      "Ziemlich oft",
-      "Fast immer"
-    ],
-    "4": [
-      "Fast nie",
-      "Von Zeit zu Zeit",
-      "Ziemlich oft",
-      "Fast immer"
-    ],
-    "5": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
+    "3": ["Fast nie", "Manchmal", "Ziemlich oft", "Fast immer"],
+    "4": ["Fast nie", "Ab und zu", "Ziemlich oft", "Fast immer"],
+    "5": ["Nie", "Manchmal", "Oft", "Ständig"],
     "6": [
-      "Gelassen, es ist nur fremde Meinung",
-      "Etwas aufgebracht, aber schnell vergessen",
-      "Stark betroffen, es kann meinen Tag ruinieren",
-      "Es kann starke Angst bei mir auslösen"
+      "Gelassen – es ist nur eine Meinung",
+      "Etwas getroffen, vergesse es aber rasch",
+      "Es belastet mich deutlich; der Tag ist getrübt",
+      "Das löst starke Angst in mir aus"
     ],
-    "7": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "8": [
-      "Selbstbewusst",
-      "Mit etwas Nervosität",
-      "Sehr unwohl",
-      "Sehr schlecht"
-    ],
+    "7": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "8": ["Sicher", "Mit etwas Nervosität", "Sehr unwohl", "Sehr schlecht"],
     "9": [
-      "Völlig normal",
-      "Etwas angespannt, aber das ist normal",
-      "Sehr unwohl, ich meide solche Orte",
-      "Panik oder starke Angst"
+      "Völlig in Ordnung",
+      "Etwas angespannt, aber okay",
+      "Sehr unangenehm – ich meide solche Orte",
+      "Panik bzw. starke Angst"
     ],
-    "10": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "11": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "12": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
-    "13": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "14": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
-    "15": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
+    "10": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "11": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "12": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
+    "13": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "14": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
+    "15": ["Nie", "Manchmal", "Oft", "Ständig"],
     "16": [
-      "Es ist eine interessante Erfahrung, ich probiere gerne Neues",
-      "Ich fühle leichtes Unbehagen, komme aber zurecht",
-      "Ich versuche, solche Situationen zu vermeiden",
-      "Es löst starke Angst oder Panik bei mir aus"
+      "Interessant – ich probiere gern Neues",
+      "Leichtes Unbehagen, aber ich mache es",
+      "Ich meide solche Situationen eher",
+      "Das löst starke Angst oder Panik aus"
     ],
     "17": [
       "Ich handle selbstsicher",
       "Mit etwas Nervosität",
-      "Ich versuche, es zu vermeiden",
-      "Ich erlebe Panik und Angst"
+      "Ich versuche es zu vermeiden",
+      "Ich erlebe Panik und starke Furcht"
     ],
-    "18": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "19": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
+    "18": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "19": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
     "20": [
       "Ich trete ohne Probleme auf",
-      "Ich fühle mich nervös, stimme aber zu",
-      "Sehr unwohl, aber ich stimme zu",
+      "Ich bin nervös, sage aber zu",
+      "Sehr unwohl, ich sage dennoch zu",
       "Ich lehne sofort ab"
     ],
-    "21": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
-    "22": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
-    "23": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
+    "21": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
+    "22": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
+    "23": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
     "24": [
-      "Ich nehme gerne an",
-      "Ich bin etwas nervös, gehe aber hin",
-      "Ich vermeide solche Veranstaltungen lieber",
+      "Ich nehme gern an",
+      "Etwas nervös, aber ich gehe hin",
+      "Ich meide solche Anlässe",
       "Ich möchte auf keinen Fall hingehen"
     ],
-    "25": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "26": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "27": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
+    "25": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "26": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "27": ["Nie", "Manchmal", "Oft", "Ständig"],
     "28": [
-      "Ich stimme freudig zu",
-      "Ich bin etwas nervös, gehe aber hin",
-      "Ich versuche, Dates zu vermeiden",
+      "Ich sage erfreut zu",
+      "Etwas nervös, aber ich gehe hin",
+      "Ich meide Dates eher",
       "Ich lehne sofort ab"
     ],
-    "29": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
+    "29": ["Nie", "Manchmal", "Oft", "Ständig"],
     "30": [
-      "Ich lerne Leute kennen und unterhalte mich",
-      "Ich bin schüchtern, lerne aber neue Leute kennen",
-      "Ich versuche, Gespräche zu vermeiden",
-      "Ich unterhalte mich nicht mit Fremden"
+      "Ich komme leicht ins Gespräch",
+      "Ich bin schüchtern, versuche es aber",
+      "Ich meide Gespräche eher",
+      "Ich spreche nicht mit Fremden"
     ],
-    "31": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
-    "32": [
-      "Fast nie",
-      "Manchmal",
-      "Ziemlich oft",
-      "Fast immer"
-    ],
+    "31": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
+    "32": ["Fast nie", "Manchmal", "Ziemlich oft", "Fast immer"],
     "33": [
-      "Ich stimme gerne zu",
-      "Etwas unwohl, aber ich stimme zu",
+      "Gern dabei",
+      "Etwas unwohl, aber ich mache mit",
       "Ich vermeide es lieber",
       "Ich lehne ab"
     ],
     "34": [
-      "Ich nehme den Vorschlag gerne an",
-      "Ich bin schüchtern, stimme aber zu",
+      "Ich nehme die Einladung gern an",
+      "Ich bin verlegen, stimme aber zu",
       "Ich trete lieber nicht bei",
       "Ich lehne ab"
     ],
-    "35": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "36": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
-    "37": [
-      "Nein",
-      "Leichte Angst",
-      "Mäßige Angst",
-      "Intensive Angst"
-    ],
-    "38": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ],
-    "39": [
-      "Nie",
-      "Manchmal",
-      "Oft",
-      "Ständig"
-    ]
+    "35": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "36": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
+    "37": ["Nein", "Leichte Angst", "Mäßige Angst", "Starke Angst"],
+    "38": ["Nie", "Manchmal", "Oft", "Ständig"],
+    "39": ["Nie", "Manchmal", "Oft", "Ständig"]
   },
   "steps_description": {
     "0": {
-      "text": "Sozialphobie oder soziale Angststörung zeigt sich in starker Angst vor Situationen sozialer Interaktion. Um Hilfe zu bitten ist eine der häufigsten Situationen, die bei Menschen mit dieser Störung Angst auslöst.",
-      "fact": "Charles Darwin, der bekannte Naturforscher und Begründer der Evolutionstheorie, litt unter schwerer Sozialphobie. Er vermied öffentliche Auftritte und erlitt oft Panikattacken, wenn er mit Menschen interagieren musste, trotz seiner herausragenden Leistungen."
+      "text": "Die soziale Angststörung (soziale Phobie) zeigt sich als starke Anspannung in sozialen Situationen. Um Hilfe zu bitten, ist für Betroffene oft besonders herausfordernd.",
+      "fact": "Auch sehr erfolgreiche Menschen berichteten über ausgeprägte soziale Ängste und mieden öffentliche Auftritte über lange Zeit."
     },
     "1": {
-      "text": "Glossophobie – die Angst vor öffentlichen Reden – ist eine der häufigsten Formen der Sozialphobie. Etwa 75% der Menschen erleben ein gewisses Maß an Angst vor dem Sprechen in der Öffentlichkeit.",
-      "fact": "Laut einer Umfrage der American Psychological Association erleben etwa 30% der Amerikaner starke Angst vor öffentlichen Reden, was sie zu einer der häufigsten Ängste macht."
+      "text": "Glossophobie – die Angst vor öffentlichem Sprechen – zählt zu den häufigsten Formen sozialer Ängste. Viele Menschen erleben zumindest eine gewisse Nervosität vor Publikum.",
+      "fact": "Befragungen zeigen, dass ein relevanter Anteil der Bevölkerung deutliche Auftrittsangst angibt."
     },
     "2": {
-      "text": "Ein Schlüsselaspekt der Sozialphobie ist die Angst vor sozialen Interaktionen mit fremden Menschen. Dies kann sich in der Vermeidung von Kontakten, dem Bestreben, unbemerkt zu bleiben, und in Gefühlen der Unbeholfenheit oder Angst äußern.",
-      "fact": "Franz Kafka, der bekannte Schriftsteller, litt unter schwerer Sozialphobie und hatte oft Schwierigkeiten im Umgang mit Fremden. Seine Werke wie \"Der Prozess\" und \"Das Schloss\" spiegeln seine tiefen Ängste und Befürchtungen wider."
+      "text": "Der Kontakt mit Fremden kann bei sozialer Angst zu Vermeidung, dem Wunsch nach Unsichtbarkeit und ausgeprägter Verlegenheit führen.",
+      "fact": "Literarische Werke und Biografien spiegeln diese Erfahrungen häufig wider."
     },
     "3": {
-      "text": "Menschen mit Sozialphobie vermeiden oft Telefongespräche und Videokonferenzen aus Angst, missverstanden zu werden oder einen schlechten Eindruck zu hinterlassen. Sie machen sich Sorgen darüber, wie ihre Stimme klingt oder was sie sagen werden.",
-      "fact": "Eine Möglichkeit, Angstzustände vor Telefongesprächen zu reduzieren, ist Übung und Vorbereitung. Das Erstellen einer Liste mit Fragen und Antworten vor dem Anruf kann einer Person helfen, sich selbstbewusster zu fühlen und Ängste zu reduzieren."
+      "text": "Telefonate und Videokonferenzen werden oft gemieden – aus Sorge, sich zu blamieren oder falsch verstanden zu werden.",
+      "fact": "Vorbereitung (Stichpunkte, Fragen) kann die Anspannung vor Gesprächen spürbar senken."
     },
     "4": {
-      "text": "Sozialphobie kann Menschen dazu bringen, soziale Kontakte außerhalb von Pflichtsituationen (wie Arbeit oder Studium) zu vermeiden, um potenziell beängstigenden sozialen Interaktionen aus dem Weg zu gehen.",
-      "fact": "Studien zeigen, dass etwa 15 Millionen Amerikaner (etwa 7% der US-Bevölkerung) an Sozialphobie leiden, und ein erheblicher Teil von ihnen vermeidet soziale Situationen außerhalb ihrer Pflichtaufgaben."
+      "text": "Außerhalb verpflichtender Rollen (Arbeit/Studium) werden Kontakte häufig reduziert, um angstauslösende Situationen zu vermeiden.",
+      "fact": "Schätzungen zufolge ist soziale Angst weit verbreitet und führt oft zu Rückzug."
     },
     "5": {
-      "text": "Das Betreten eines vollen Raumes kann für Menschen mit Sozialphobie besonders beängstigend sein, da sie befürchten, im Mittelpunkt der Aufmerksamkeit zu stehen. Sie machen sich Sorgen, dass sie angeschaut oder bewertet werden könnten.",
-      "fact": "Albert Einstein, der große Physiker, litt unter starker Sozialphobie und mied große Versammlungen. Er zog es vor, allein zu arbeiten und nur mit engen Freunden und Kollegen zu kommunizieren."
+      "text": "Das Betreten eines vollen Raums kann Angst vor Bewertung auslösen – das Gefühl, im Blickfeld anderer zu stehen.",
+      "fact": "Viele Betroffene bevorzugen kleinere, vertraute Gruppen und überschaubare Settings."
     },
     "6": {
-      "text": "Menschen mit Sozialphobie können Kritik sehr schmerzlich wahrnehmen, besonders in sozialen Medien, wo sie öffentlich ist und von vielen Menschen gesehen werden kann.",
-      "fact": "Digitale Entgiftung wird immer beliebter. Viele Menschen, darunter auch Prominente, schalten sich vorübergehend von sozialen Medien ab, um ihre psychische Gesundheit wiederherzustellen und die Auswirkungen negativer Kritik zu reduzieren."
+      "text": "Öffentliche Kritik – etwa in sozialen Medien – kann besonders belastend sein, da sie für viele sichtbar ist.",
+      "fact": "Digitale Pausen („Digital Detox“) helfen, Stressoren zu reduzieren und Abstand zu gewinnen."
     },
     "7": {
-      "text": "Schweigen kann ein Weg sein, negative Aufmerksamkeit und potenzielle Kritik zu vermeiden, aber es kann auch das berufliche Wachstum und die beruflichen Möglichkeiten einschränken.",
-      "fact": "Techniken des aktiven Zuhörens können Menschen helfen, sich bei Besprechungen selbstbewusster zu fühlen. Zum Beispiel kann die Konzentration auf das Zuhören und die vorherige Vorbereitung von Fragen oder Kommentaren dazu beitragen, Ängste zu reduzieren und die Beteiligung an Diskussionen zu verbessern."
+      "text": "Sich zurückzuhalten kann kurzfristig schützen, begrenzt jedoch Sichtbarkeit und Mitgestaltung im Job.",
+      "fact": "Aktives Zuhören und vorbereitete Beiträge erleichtern die Beteiligung an Meetings."
     },
     "8": {
-      "text": "Sozialphobie zeichnet sich durch starke Angst in Situationen aus, in denen man von anderen bewertet werden könnte. Eine solche Situation ist die Aufforderung, seine Meinung vor einer Gruppe zu äußern. Dies kann Angst vor Fehlern oder negativer Bewertung auslösen."
+      "text": "Vor Gruppen die eigene Meinung zu sagen, triggert häufig Bewertungsangst und die Furcht, Fehler zu machen."
     },
     "9": {
-      "text": "Menschen mit Sozialphobie können starke Besorgnis und Unbehagen an Orten mit vielen Menschen, wie U-Bahnen, empfinden. Solche Orte können Angst auslösen, bemerkt oder bewertet zu werden oder unerwarteten sozialen Situationen zu begegnen.",
-      "fact": "Adele, die bekannte britische Sängerin, leidet unter Sozialphobie und Panikattacken. Sie meidet überfüllte Orte wie U-Bahnen, um das Risiko von Paniksymptomen zu verringern."
+      "text": "Große Menschenmengen können Übererregung und Angst verstärken – viele Betroffene meiden daher sehr volle Orte.",
+      "fact": "Langsames Atmen und klare Ausstiegsstrategien (z. B. ruhige Zonen) helfen, Anspannung zu regulieren."
     },
     "10": {
-      "text": "Menschen mit Sozialphobie versuchen oft, im Mittelpunkt der Aufmerksamkeit zu vermeiden, um nicht zusätzliches Interesse auf sich zu ziehen und nicht von anderen bewertet zu werden. Sie können Angst vor Kritik oder Spott haben, was den Wunsch verstärkt, im Hintergrund zu bleiben."
+      "text": "Nicht im Mittelpunkt zu stehen, vermindert das Gefühl, beobachtet und beurteilt zu werden."
     },
     "11": {
-      "text": "Laut dem National Institute of Mental Health in den USA leiden etwa 12,1% der Bevölkerung im Laufe ihres Lebens an einer sozialen Angststörung, was oft zur Vermeidung öffentlicher Orte führt."
+      "text": "Soziale Angst führt häufig zu Meidungsverhalten im öffentlichen Raum und kann die Teilhabe einschränken."
     },
     "12": {
-      "text": "Untersuchungen zeigen, dass ein mäßiges Angstniveau die Leistung tatsächlich verbessern kann, indem es das sympathische Nervensystem aktiviert und die Konzentration erhöht. Dieses Phänomen ist als Yerkes-Dodson-Gesetz bekannt."
+      "text": "Ein moderates Erregungsniveau kann Leistung steigern (Yerkes-Dodson-Gesetz) – zu viel Angst blockiert jedoch."
     },
     "13": {
-      "text": "Angst vor sozialer Interaktion ist als \"soziale Angst\" bekannt und kann von leichtem Unbehagen bis zu starker Furcht reichen. Es ist die dritthäufigste psychische Störung nach Depression und Alkoholismus."
+      "text": "Soziale Anspannung reicht von leichtem Unbehagen bis zu deutlicher Angst – ein sehr verbreitetes Muster."
     },
     "14": {
-      "text": "Die Angst vor Autoritätspersonen hat einen eigenen Namen - \"Hierarchophobie\". Dies ist kein offizieller medizinischer Begriff, wird aber häufig verwendet, um übermäßige Besorgnis bei der Kommunikation mit Personen in höheren Positionen zu beschreiben.",
-      "fact": "Warren Buffett, einer der erfolgreichsten Investoren der Welt, litt in seiner Jugend unter starker Angst vor öffentlichen Reden und der Kommunikation mit Autoritätspersonen. Er meldete sich sogar für einen Kurs an, um diese Angst zu überwinden, was seiner Karriere später erheblich half."
+      "text": "Gespräche mit Autoritätspersonen können zusätzliche Bewertungsangst auslösen.",
+      "fact": "Trainings in Gesprächsführung und Rollenspiele fördern Sicherheit in hierarchischen Situationen."
     },
     "15": {
-      "text": "Die Angst vor dem Besuch von Einkaufszentren kann mit Agoraphobie zusammenhängen - der Angst vor offenen Räumen oder Orten, wo es schwierig ist, schnell einen Ausweg zu finden. Es kann aber auch ein Ausdruck von Sozialphobie oder Ochluphobie (Angst vor Menschenmengen) sein."
+      "text": "Das Meiden großer Einkaufszentren kann mit Agoraphobie oder sozialer Angst zusammenhängen."
     },
     "16": {
-      "text": "Psychologen nennen die Angst vor dem Unbekannten \"Ungewissheitstoleranz\". Dieser Zustand kann nicht nur soziale Situationen, sondern auch die Entscheidungsfindung im Allgemeinen beeinflussen."
+      "text": "Geringe Toleranz gegenüber Ungewissheit verstärkt Unsicherheit in neuen Situationen."
     },
     "17": {
-      "text": "Die Angst vor einem unbekannten Publikum wird als \"soziale Bewertungsangst\" bezeichnet. Es ist eine Kombination aus Angst vor negativer Bewertung und Furcht vor neuen Situationen.",
-      "fact": "Emma Stone, Oscar-Preisträgerin, hat offen über ihren Kampf mit Panikattacken gesprochen, besonders in Situationen, die mit Auftritten vor neuen Publikum verbunden sind. Sie nutzte Therapie und Atemtechniken, um damit umzugehen."
+      "text": "Vor einer unbekannten Gruppe aufzutreten, kombiniert Neuheit und Bewertungsdruck – ein häufiger Angstauslöser.",
+      "fact": "Atem- und Fokusübungen vor dem Auftritt erhöhen die Handlungsfähigkeit."
     },
     "18": {
-      "text": "Die Angst vor Telefonanrufen wird als \"Telefonphobie\" bezeichnet. Dieses Phänomen wird im Zeitalter der digitalen Kommunikation immer häufiger, wenn Menschen sich an textbasierte Kommunikation gewöhnen.",
-      "fact": "Eine von BankMyCell im Jahr 2019 durchgeführte Studie zeigte, dass 76% der Millennials Angstzustände erleben, wenn sie einen Telefonanruf tätigen müssen. Unter der Generation Z ist dieser Prozentsatz noch höher – 81%."
+      "text": "Telefonangst nimmt in Zeiten textbasierter Kommunikation zu.",
+      "fact": "Viele fühlen sich bei asynchroner Kommunikation sicherer, da sie mehr Zeit für Antworten haben."
     },
     "19": {
-      "text": "Angst bei der Rückgabe von Waren kann mit Konfliktangst, Furcht vor negativer Bewertung oder Schuldgefühlen zusammenhängen, dem Personal \"Unannehmlichkeiten zu bereiten\".",
-      "fact": "Angst bei der Rückgabe von Waren hängt oft mit einem breiteren Phänomen zusammen, das als \"Assertophobie\" bekannt ist – die Angst, seine Rechte zu verteidigen oder seine Bedürfnisse auszudrücken."
+      "text": "Rückgaben im Geschäft können Konflikt- und Bewertungsangst aktivieren.",
+      "fact": "Kurzskripte („Ich möchte das gern zurückgeben, weil …“) erhöhen die Durchsetzungsfähigkeit."
     },
     "20": {
-      "text": "Die Angst vor unvorbereiteten Auftritten hängt oft mit dem \"Hochstapler-Syndrom\" zusammen – dem Gefühl, nicht kompetent genug zu sein und möglicherweise \"entlarvt\" zu werden.",
-      "fact": "Die Technik des \"Improvisationsdenkens\" kann hilfreich sein. Statt wegen mangelnder Vorbereitung in Panik zu geraten, versuchen Sie, die Situation als Gelegenheit für spontane und aufrichtige Kommunikation mit dem Publikum zu betrachten."
+      "text": "Unvorbereitetes Sprechen befeuert oft den inneren Hochstapler-Zweifel (Impostor-Gefühl).",
+      "fact": "Impro-Techniken fördern Flexibilität und senken Perfektionsdruck."
     },
     "21": {
-      "text": "Die Angst, in Anwesenheit anderer Menschen zu schreiben oder Notizen zu machen, wird manchmal als \"Skriptophobie\" bezeichnet. Es ist ein spezieller Fall sozialer Angst, der mit der Furcht vor Bewertung durch andere verbunden ist.",
-      "fact": "Genaue Daten zur Verbreitung dieser Angst gibt es nicht, aber eine im Journal of Anxiety Disorders veröffentlichte Studie zeigte, dass etwa 7% der Menschen erhebliches Unbehagen empfinden, wenn sie in Anwesenheit anderer schreiben müssen."
+      "text": "Schreiben vor anderen kann Bewertungsangst triggern – ein spezifischer sozialer Stressor.",
+      "fact": "Die Häufigkeit ist unklar; Betroffene berichten jedoch über deutliche Belastung."
     },
     "22": {
-      "text": "Schwierigkeiten, besonders beharrlichen Menschen abzusagen, nennen Psychologen \"Gefälligkeitssyndrom\" oder \"Dienstbarkeitserkrankung\". Dies hängt mit dem Wunsch zusammen, Konflikte zu vermeiden und der Angst vor negativer Bewertung.",
-      "fact": "Eine von der University of Pennsylvania durchgeführte Studie zeigte, dass etwa 68% der Menschen Unbehagen empfinden, wenn sie in Verkaufssituationen \"Nein\" sagen müssen."
+      "text": "Nein-Sagen fällt bei Angst vor Ablehnung schwer; Durchsetzungsfähigkeit lässt sich trainieren.",
+      "fact": "Ich-Botschaften und klare Grenzen reduzieren Stress in Verkaufssituationen."
     },
     "23": {
-      "text": "Martin Luther King Jr., bekannter Bürgerrechtler, erlebte zu Beginn seiner Karriere starke Angst, wenn er seine Meinung vor Gruppen äußern musste. Durch die Überwindung seiner Ängste wurde er jedoch zu einem der einflussreichsten Redner und Führungspersönlichkeiten der Menschenrechtsbewegung."
+      "text": "Vor Gruppen die eigene Haltung zu äußern, erfordert Mut – viele wachsen mit Übung über anfängliche Angst hinaus."
     },
     "24": {
-      "text": "Menschen mit Sozialphobie können starke Angst und Stress erleben, wenn sie unerwartete Einladungen zu Hochzeiten oder anderen Feierlichkeiten erhalten. Solche Veranstaltungen beinhalten oft Kommunikation mit vielen Menschen und die Teilnahme an sozialen Interaktionen, was für sie besonders schwierig sein kann.",
-      "fact": "Daniel Radcliffe, bekannt durch seine Rolle als Harry Potter, leidet unter Sozialphobie und meidet oft große öffentliche Veranstaltungen. Er verbringt lieber Zeit in kleinen Gruppen von Freunden und Familie."
+      "text": "Unerwartete Feste bedeuten viele Kontakte und Aufmerksamkeit – beides kann Angst verstärken.",
+      "fact": "Kleine, planbare Schritte (An- und Abmelde-Optionen, Begleitung) erleichtern die Teilnahme."
     },
     "25": {
-      "text": "Menschen mit Sozialphobie vermeiden oft Telefongespräche in Anwesenheit anderer aus Angst, gehört und bewertet zu werden. Sie können sich Sorgen darüber machen, wie ihre Stimme klingt, über mögliche Sprachfehler oder darüber, dass ihr Gespräch negative Reaktionen bei anderen hervorrufen könnte."
+      "text": "Telefonate vor anderen werden oft vermieden – aus Sorge, beurteilt zu werden."
     },
     "26": {
-      "text": "Die Vermeidung von Partys kann mit \"Schutzverhalten\" zusammenhängen – einer Strategie, die kurzfristig Angst reduziert, aber langfristig soziale Isolation und Angst verstärken kann."
+      "text": "Meiden wirkt kurzfristig entlastend, verfestigt langfristig jedoch Angst und Isolation."
     },
     "27": {
-      "text": "Laut Studien leiden etwa 7-9% der Menschen unter Paruresis, auch bekannt als schüchterne Blase, was sie dazu bringt, öffentliche Toiletten zu meiden."
+      "text": "Manche Menschen nutzen öffentliche Toiletten ungern; Scham und Bewertungsangst spielen mitunter eine Rolle."
     },
     "28": {
-      "text": "Menschen mit Sozialphobie können starke Angst erleben, wenn sie Vorschläge für Treffen oder Dates erhalten. Zu den Hauptgründen gehören die Angst vor negativer Bewertung, mangelndes Selbstvertrauen und Sorgen über mögliche Kommunikationsfehler."
+      "text": "Einladungen zu Dates aktivieren häufig Unsicherheit und Bewertungsangst.",
+      "fact": "Realistische Erwartungen und klare Absprachen senken den Druck."
     },
     "29": {
-      "text": "Die Angst vor Telefonanrufen, besonders von unbekannten Nummern, kann durch Sorgen ausgelöst werden, nicht zu wissen, wie man richtig antwortet, oder dass das Gespräch nicht wie erwartet verläuft. Dies kann die Angst vor möglicher Konfrontation oder die Notwendigkeit beinhalten, schnell auf unerwartete Fragen zu reagieren."
+      "text": "Unbekannte Anrufe erzeugen Unsicherheit über Verlauf und Anforderungen des Gesprächs."
     },
     "30": {
-      "text": "Menschen mit Sozialphobie können erhebliche Angst beim Umgang mit Fremden während Reisen oder im Urlaub erleben. Sie können sich vor negativer Bewertung fürchten, etwas Unangemessenes zu tun oder nicht zu wissen, wie sie ein Gespräch aufrechterhalten sollen."
+      "text": "Auf Reisen mit Fremden zu sprechen kann bereichernd sein – und zugleich Bewertungsangst auslösen."
     },
     "31": {
-      "text": "Studien zeigen, dass etwa 60% der Menschen mit sozialer Angst Unbehagen beim Blickkontakt empfinden. Dies kann einer der beängstigendsten Aspekte sozialer Interaktionen sein."
+      "text": "Direkter Blickkontakt wird von vielen als intensiv erlebt und kann Anspannung steigern."
     },
     "32": {
-      "text": "Menschen mit Sozialphobie können starke Angst bei möglichen Konflikten oder Auseinandersetzungen mit Fremden erleben. Sie können sich vor negativer Bewertung, Missverständnissen oder sogar aggressiven Reaktionen fürchten, was zur Vermeidung aller potenziell konfliktreichen Situationen führt."
+      "text": "Konflikte mit Unbekannten werden oft gemieden – aus Sorge vor Eskalation oder negativer Bewertung."
     },
     "33": {
-      "text": "Laut Studien erleben etwa 20-30% der Menschen erhebliches Unbehagen beim Fotografiertwerden, besonders in Gruppen. Diese Angst kann mit der Furcht vor negativer Bewertung und der Ablehnung des eigenen Aussehens zusammenhängen."
+      "text": "Gruppenfotos können Unsicherheit über das eigene Erscheinungsbild und mögliche Bewertungen wecken."
     },
     "34": {
-      "text": "Isaac Newton, der große Wissenschaftler, war ebenfalls sehr zurückgezogen und vermied die Teilnahme an öffentlichen Veranstaltungen und neuen Gruppen. Er verbrachte lieber Zeit allein mit wissenschaftlicher Forschung."
+      "text": "Neuen Gruppen beizutreten bedeutet Offenheit und Sichtbarkeit – beides kann verunsichern."
     },
     "35": {
-      "text": "Studien zeigen, dass kognitive Verhaltenstherapie (KVT) sehr wirksam bei der Behandlung sozialer Angst sein kann. KVT hilft Menschen, negative Gedanken zu ändern und eine positivere Einstellung zu sozialen Interaktionen zu entwickeln."
+      "text": "Kognitive Verhaltenstherapie (KVT) gilt als wirksam bei sozialer Angst: Sie reduziert Vermeidung und stärkt Kompetenzen."
     },
     "36": {
-      "text": "Angst vor praktischen Prüfungen ist ein häufiges Problem, besonders bei Menschen mit Sozialphobie. Die Furcht, bewertet zu werden, und die Möglichkeit des Scheiterns können Stress und Nervosität verstärken.",
-      "fact": "Thomas Edison, der bekannte Erfinder, hatte Schwierigkeiten mit traditionellen Lernmethoden und Prüfungen. Er lernte lieber durch praktische Experimente und Erfahrungen und vermied formelle Prüfungen."
+      "text": "Praktische Prüfungen kombinieren Beobachtung und Bewertung – ein klassischer Angstauslöser.",
+      "fact": "Probe-Settings und klare Kriterien erhöhen die Sicherheit."
     },
     "37": {
-      "text": "Menschen mit Sozialphobie erleben oft starke Angst bei Gesprächen mit anderen Menschen. Die Furcht vor negativer Bewertung, Sorgen darüber, wie ihre Worte aufgenommen werden, und die Angst, Fehler zu machen, können Angst und Nervosität verstärken."
+      "text": "Gespräche können Angst machen – aus Sorge, falsch verstanden oder bewertet zu werden."
     },
     "38": {
-      "text": "Menschen mit Sozialphobie ziehen es oft vor, zu Zeiten spazieren zu gehen, wenn wenige oder keine Menschen auf der Straße sind. Dies hilft ihnen, soziale Interaktionen zu vermeiden, die Angst und Stress auslösen können.",
-      "fact": "Howard Hughes, der berühmte amerikanische Geschäftsmann und Luftfahrtpionier, bekannt für seine Sozialphobie und zahlreiche Phobien, bevorzugte einsame Spaziergänge und mied überfüllte Orte. Er versuchte, unbemerkt zu bleiben und soziale Interaktionen zu vermeiden."
+      "text": "Weniger frequentierte Zeiten ermöglichen entspannte Spaziergänge mit geringerer sozialer Dichte.",
+      "fact": "Individuelle Expositionsschritte helfen, vertraute Wege schrittweise zu erweitern."
     },
     "39": {
-      "text": "Blickkontakt aktiviert Spiegelneuronen, was das Gefühl von Empathie und Verständnis verstärken, aber auch starke Emotionen auslösen kann. Dies könnte einer der Gründe sein, warum Blickkontakt solche Angst auslöst."
+      "text": "Blickkontakt aktiviert soziale Resonanz – bei sensibler Wahrnehmung kann das schnell überwältigend wirken."
     }
   },
   "range": {
-    "normal": "Keine Sozialphobie",
-    "mild": "Mittelschwere Sozialphobie",
-    "moderate": "Schwere Sozialphobie"
+    "normal": "Keine Hinweise auf soziale Angst",
+    "mild": "Leicht ausgeprägte soziale Ängstlichkeit",
+    "moderate": "Deutlich ausgeprägte soziale Ängstlichkeit"
   },
   "result": {
     "normal": {
-      "text": "Ihre Ergebnisse zeigen, dass Sie sich in verschiedenen sozialen Situationen selbstsicher und wohl fühlen. Sie haben keine erheblichen Schwierigkeiten im Umgang mit Fremden, beim Sprechen vor Publikum oder bei der Teilnahme an Gruppenveranstaltungen. Dies deutet darauf hin, dass Sozialphobie bei Ihnen entweder schwach ausgeprägt ist oder völlig fehlt, was Ihnen erlaubt, frei und aktiv am gesellschaftlichen Leben teilzunehmen.",
-      "title": "Keine Sozialphobie"
+      "title": "Keine Hinweise auf soziale Angst",
+      "text": "Ihre Antworten deuten darauf hin, dass Sie sich in den meisten sozialen Situationen sicher fühlen. Gespräche mit Unbekannten, Beiträge in Runden oder Auftritte vor Publikum verursachen in der Regel keinen ausgeprägten Druck. Das spricht für eine freie, gelassene Interaktion im sozialen Umfeld."
     },
     "mild": {
-      "text": "Ihre Ergebnisse zeigen, dass Sie auf einige Schwierigkeiten in sozialen Situationen stoßen. Sie könnten sich unsicher fühlen im Umgang mit Fremden, beim Sprechen vor Publikum oder bei der Teilnahme an großen Gruppenveranstaltungen. Dies deutet auf eine mittelschwere Sozialphobie hin. Mit der richtigen Unterstützung und Übung können Sie jedoch Ihre Kommunikationsfähigkeiten verbessern und sich in sozialen Interaktionen wohler fühlen.",
-      "title": "Mittelschwere Sozialphobie"
+      "title": "Leicht ausgeprägte soziale Ängstlichkeit",
+      "text": "In bestimmten Situationen – etwa bei Auftritten, im Kontakt mit Unbekannten oder wenn Aufmerksamkeit auf Ihnen liegt – erleben Sie spürbare Anspannung. Das ist weit verbreitet. Mit Unterstützung, Übung und passenden Strategien lässt sich die Sicherheit im Umgang mit solchen Situationen gut ausbauen."
     },
     "moderate": {
-      "text": "Ihre Ergebnisse weisen auf erhebliche Schwierigkeiten hin, die Sie in sozialen Situationen erleben. Sie könnten starke Unsicherheit und Angst spüren bei Interaktionen mit Fremden, beim Sprechen vor Publikum oder bei der Teilnahme an Gruppenveranstaltungen. Dies deutet auf eine schwere Form der Sozialphobie hin. Es ist wichtig zu wissen, dass Sie mit dieser Situation umgehen können, indem Sie professionelle Hilfe und Unterstützung suchen. Mit dem richtigen Ansatz und Therapie können Sie diese Schwierigkeiten schrittweise überwinden und Ihre Lebensqualität verbessern.",
-      "title": "Schwere Sozialphobie"
+      "title": "Deutlich ausgeprägte soziale Ängstlichkeit",
+      "text": "Soziale Situationen lösen bei Ihnen häufig starke Anspannung und Vermeidungstendenzen aus. Das kann Selbstvertrauen und soziale Teilhabe einschränken. Diese Erfahrungen sind belastend – gleichzeitig gibt es wirksame Wege, die Angst Schritt für Schritt zu verringern und sich im Miteinander freier zu fühlen."
     }
   },
   "description": {
     "text": [
-      "Haben Sie sich jemals gefragt, wie wohl Sie sich in sozialen Situationen fühlen? Erleben Sie Angst, wenn Sie einen Fremden ansprechen oder vor einem Publikum sprechen müssen? Unser Test hilft Ihnen zu verstehen, wie ausgeprägt die Anzeichen einer Sozialphobie bei Ihnen sind.",
-      "Der Test besteht aus Fragen, die verschiedene Aspekte sozialer Interaktion abdecken, von der Kommunikation mit Kollegen bis zur Teilnahme an öffentlichen Veranstaltungen. Indem Sie diese beantworten, können Sie Ihre Gefühle und Reaktionen in verschiedenen Situationen besser verstehen."
+      "Wie wohl fühlen Sie sich in sozialen Situationen? Nervosität bei Begegnungen, neuen Kontakten oder Auftritten ist häufig.",
+      "Dieser Fragebogen hilft, die eigene Reaktion besser einzuordnen und mögliche Anzeichen sozialer Ängstlichkeit zu erkennen – ein erster Schritt, um Sicherheit aufzubauen und Begegnungen entspannter zu gestalten."
     ]
   }
 }
