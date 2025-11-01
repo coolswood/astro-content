@@ -1,12 +1,12 @@
 // src/pages/api/[lang]/intermediate.json.ts
-// Миграция файла intermediate по аналогии с Вашим start.json.ts.
-// Минимально: без лишней логики; li() заменены на строковые теги <li>...</li>; instagram fallback на en, как в start.
+// Миграция файла intermediate по аналогии с Вашим start.json.ts (минимально; без лишней логики).
 
 import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import { instagramStep, q } from '@/lib/storyHelper';
+import { processScreen } from '@/lib/storyContentProcessor';
 
 export const prerender = true;
 
@@ -21,6 +21,11 @@ export const GET: APIRoute = async ({ params }) => {
         path.resolve(`src/i18n/${lang}/story/intermediate.json`),
         'utf-8',
       ),
+    );
+
+    // Получаем common для stepper
+    const common = JSON.parse(
+      await fs.readFile(path.resolve(`src/i18n/${lang}/common.json`), 'utf-8'),
     );
 
     // Как в start: английский fallback только для instagram.
@@ -40,62 +45,92 @@ export const GET: APIRoute = async ({ params }) => {
       time: 7,
       type: 'theory',
       img: 'intermediate',
-      screens: [
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<h2>${story.title}</h2>`,
-            `<p>${story.screen_1.texts[0]}</p>`,
-            `<p>${story.screen_1.texts[1]}</p>`,
-            `<p>${story.screen_1.texts[2]}</p>`,
-            ...instagramStep(story.instagram, storyEn.instagram),
-            `<p>${story.screen_1.texts[3]}</p>`,
-            `<li>${story.screen_1.texts[4]}</li>`,
-            `<li>${story.screen_1.texts[5]}</li>`,
-            `<li>${story.screen_1.texts[6]}</li>`,
-            `<p>${story.screen_1.texts[7]}</p>`,
-          ],
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_2.texts[0]}</p>`,
-            `<p>${story.screen_2.stepper[0]}</p>`,
-            `<p>${story.screen_2.stepper[1]}</p>`,
-            `<p>${story.screen_2.stepper[2]}</p>`,
-            `<p>${story.screen_2.stepper[3]}</p>`,
-            `<p>${story.screen_2.stepper[4]}</p>`,
-            `<p>${story.screen_2.stepper[5]}</p>`,
-            `<p>${story.screen_2.texts[1]}</p>`,
-          ],
-        },
-        {
-          __typename: 'ScreenTest',
-          question: story.test.question,
-          answers: [
-            story.test.answers[0],
-            story.test.answers[1],
-            story.test.answers[2],
-            story.test.answers[3],
-          ],
-          correctAnswer: 1,
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_3.texts[0]}</p>`,
-            `<p>${story.screen_3.texts[1]}</p>`,
-            `<li>${story.screen_3.texts[2]}</li>`,
-            `<li>${story.screen_3.texts[3]}</li>`,
-            `<p>${story.screen_3.texts[4]}</p>`,
-            `<p>${story.screen_3.texts[5]}</p>`,
-            `<p>${story.screen_3.texts[6]}</p>`,
-            q(story.screen_3.quote.text, story.screen_3.quote.author),
-            `<p>${story.screen_3.texts[7]}</p>`,
-            `<p>${story.screen_3.texts[8]}</p>`,
-          ],
-        },
-      ],
+      screens:
+        lang === 'ru'
+          ? [
+              {
+                __typename: 'ScreenText',
+                steps: [
+                  `<h2>${story.title}</h2>`,
+                  ...processScreen(story.screen_1, common),
+                ],
+              },
+              {
+                __typename: 'ScreenText',
+                steps: processScreen(story.screen_2, common),
+              },
+              {
+                __typename: 'ScreenTest',
+                question: story.test.question,
+                answers: [
+                  story.test.answers[0],
+                  story.test.answers[1],
+                  story.test.answers[2],
+                  story.test.answers[3],
+                ],
+                correctAnswer: 1,
+              },
+              {
+                __typename: 'ScreenText',
+                steps: processScreen(story.screen_3, common),
+              },
+            ]
+          : [
+              {
+                __typename: 'ScreenText',
+                steps: [
+                  `<h2>${story.title}</h2>`,
+                  `<p>${story.screen_1.texts[0]}</p>`,
+                  `<p>${story.screen_1.texts[1]}</p>`,
+                  `<p>${story.screen_1.texts[2]}</p>`,
+                  ...instagramStep(story.instagram, storyEn.instagram),
+                  `<p>${story.screen_1.texts[3]}</p>`,
+                  `<li>${story.screen_1.texts[4]}</li>`,
+                  `<li>${story.screen_1.texts[5]}</li>`,
+                  `<li>${story.screen_1.texts[6]}</li>`,
+                  `<p>${story.screen_1.texts[7]}</p>`,
+                ],
+              },
+              {
+                __typename: 'ScreenText',
+                steps: [
+                  `<p>${story.screen_2.texts[0]}</p>`,
+                  `<p>${story.screen_2.stepper[0]}</p>`,
+                  `<p>${story.screen_2.stepper[1]}</p>`,
+                  `<p>${story.screen_2.stepper[2]}</p>`,
+                  `<p>${story.screen_2.stepper[3]}</p>`,
+                  `<p>${story.screen_2.stepper[4]}</p>`,
+                  `<p>${story.screen_2.stepper[5]}</p>`,
+                  `<p>${story.screen_2.texts[1]}</p>`,
+                ],
+              },
+              {
+                __typename: 'ScreenTest',
+                question: story.test.question,
+                answers: [
+                  story.test.answers[0],
+                  story.test.answers[1],
+                  story.test.answers[2],
+                  story.test.answers[3],
+                ],
+                correctAnswer: 1,
+              },
+              {
+                __typename: 'ScreenText',
+                steps: [
+                  `<p>${story.screen_3.texts[0]}</p>`,
+                  `<p>${story.screen_3.texts[1]}</p>`,
+                  `<li>${story.screen_3.texts[2]}</li>`,
+                  `<li>${story.screen_3.texts[3]}</li>`,
+                  `<p>${story.screen_3.texts[4]}</p>`,
+                  `<p>${story.screen_3.texts[5]}</p>`,
+                  `<p>${story.screen_3.texts[6]}</p>`,
+                  q(story.screen_3.quote.text, story.screen_3.quote.author),
+                  `<p>${story.screen_3.texts[7]}</p>`,
+                  `<p>${story.screen_3.texts[8]}</p>`,
+                ],
+              },
+            ],
     };
 
     return new Response(JSON.stringify(output), {
@@ -107,7 +142,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/base/intermediate.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/base/intermediate.json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };
