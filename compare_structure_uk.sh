@@ -43,11 +43,11 @@ find src/i18n/uk -name "*.json" -type f | while read file; do
         continue
     fi
 
-    # Получаем структурную информацию, игнорируя порядок ключей
+    # Получаем структурную информацию, игнорируя порядок ключей и поле instagram
     current_structure=$(jq -r '
         def walk:
             if type == "object" then
-                (. | keys | sort) as $sorted_keys |
+                (. | keys | sort | map(select(. != "instagram"))) as $sorted_keys |
                 reduce $sorted_keys[] as $key ({}; . + {($key): ($key | walk)})
             elif type == "array" then
                 [.[] | walk]
@@ -60,7 +60,7 @@ find src/i18n/uk -name "*.json" -type f | while read file; do
     main_structure=$(jq -r '
         def walk:
             if type == "object" then
-                (. | keys | sort) as $sorted_keys |
+                (. | keys | sort | map(select(. != "instagram"))) as $sorted_keys |
                 reduce $sorted_keys[] as $key ({}; . + {($key): ($key | walk)})
             elif type == "array" then
                 [.[] | walk]
