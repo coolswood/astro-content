@@ -1,159 +1,147 @@
 {
   "steps": [
-    "Wie lange beschäftigen Sie zwanghafte Gedanken im Laufe des Tages?",
-    "Wie beeinflussen diese Zwangsgedanken Ihren Alltag?",
-    "Wie stark belasten Sie diese Gedanken?",
-    "Fällt es Ihnen leicht, den Zwangsgedanken zu widerstehen?",
-    "Können Sie Ihre Zwangsgedanken unter Kontrolle halten?",
-    "Wie häufig führen Sie Zwangshandlungen aus (z.B. unnötiges Handychecken, zwanghaftes Kratzen, ständiges Händewaschen usw.)?",
-    "Inwieweit beeinträchtigen diese Handlungen Ihr Leben?",
-    "Wie fühlen Sie sich durch diese Handlungen?",
-    "Gelingt es Ihnen, den Ritualen zu widerstehen?",
-    "Wie gut haben Sie Ihre Rituale im Griff?"
+    "Wie lange halten Zwangsgedanken über den Tag an?",
+    "Wie beeinflussen Zwangsgedanken Ihren Alltag?",
+    "Wie stark belasten diese Gedanken?",
+    "Wie oft widerstehen Sie Zwangsgedanken?",
+    "Können Sie Ihre Zwangsgedanken steuern?",
+    "Wie oft führen Sie Zwangshandlungen aus (z. B. unnötiges Kontrollieren des Handys, Händewaschen etc.)?",
+    "Wie wirken sich diese Handlungen auf Ihr Leben aus?",
+    "Wie fühlen Sie sich wegen dieser Handlungen?",
+    "Gelingt es Ihnen, auf Rituale zu verzichten?",
+    "Wie gut haben Sie Ihre Rituale unter Kontrolle?"
   ],
   "variants": {
     "0": [
-      "Gar nicht vorhanden",
+      "Gar nicht",
       "Weniger als eine Stunde",
-      "1 bis 3 Stunden",
-      "3 bis 8 Stunden",
+      "1–3 Stunden",
+      "3–8 Stunden",
       "Mehr als 8 Stunden"
     ],
     "1": [
-      "Gar nicht, ich lebe wie gewohnt",
-      "Kaum merkbar",
-      "Etwas komplizierter, aber noch bewältigbar",
-      "Deutlich störend, ich muss meine Gewohnheiten ändern",
-      "Komplett auf den Kopf gestellt"
+      "Überhaupt nicht, alles wie gewohnt",
+      "Kaum spürbar",
+      "Etwas hinderlich, ich komme dennoch zurecht",
+      "Deutlich belastend, ich muss Gewohnheiten ändern",
+      "Sie verändern mein Leben grundlegend"
     ],
     "2": [
-      "Überhaupt nicht störend",
+      "Überhaupt nicht",
       "Leicht unangenehm",
-      "Ziemlich stark, aber erträglich",
-      "Sehr stark und beeinflusst meine Stimmung",
-      "Ständig ein starkes Unbehagen"
+      "Deutlich, aber erträglich",
+      "Sehr stark, es beeinflusst meine Stimmung",
+      "Anhaltendes starkes Unbehagen"
     ],
-    "3": [
-      "Fast immer gelingt es mir",
-      "Oft komme ich dagegen an",
-      "Manchmal schaffe ich es",
-      "Selten kann ich sie abwenden",
-      "Ich kann mich ihnen gar nicht widersetzen"
-    ],
-    "4": [
-      "Ja, ich habe sie komplett unter Kontrolle",
-      "Meistens schon",
-      "Manchmal gelingt es",
-      "Kaum unter Kontrolle",
-      "Überhaupt nicht kontrollierbar"
-    ],
+    "3": ["Fast immer", "Häufig", "Manchmal", "Selten", "Gar nicht"],
+    "4": ["Ja, vollständig", "Überwiegend ja", "Manchmal", "Kaum", "Gar nicht"],
     "5": [
-      "Nie",
-      "Weniger als eine Stunde am Tag",
-      "1 bis 3 Stunden",
-      "3 bis 8 Stunden",
+      "Niemals",
+      "Weniger als eine Stunde pro Tag",
+      "1–3 Stunden",
+      "3–8 Stunden",
       "Mehr als 8 Stunden"
     ],
     "6": [
-      "Gar nicht, alles wie üblich",
-      "Kaum spürbar",
-      "Etwas mühsam, aber nicht kritisch",
-      "Ziemlich störend, ich muss meine Pläne ändern",
-      "Mein Leben hat sich völlig verändert"
+      "Überhaupt nicht, alles wie üblich",
+      "Kaum merklich",
+      "Etwas hinderlich, aber nicht gravierend",
+      "Stark einschränkend, ich ändere deshalb Pläne",
+      "Mein Leben hat sich grundlegend verändert"
     ],
     "7": [
-      "Überhaupt keine Sorge",
-      "Etwas unangenehm",
+      "Überhaupt keine Belastung",
+      "Leichtes Unbehagen",
       "Spürbar unangenehm, aber aushaltbar",
-      "Starkes Unbehagen, es belastet mich sehr",
-      "Ständig ein sehr starkes Unbehagen"
+      "Starke Belastung, das belastet mich stark",
+      "Anhaltendes starkes Unbehagen"
     ],
     "8": [
-      "Fast immer kann ich mich zurückhalten",
-      "Ziemlich oft klappt es",
-      "Manchmal schaffe ich es",
-      "Selten gelingt es mir",
-      "Ich kann gar nicht widerstehen"
+      "Fast immer kann ich widerstehen",
+      "Ziemlich häufig gelingt es",
+      "Manchmal kann ich darauf verzichten",
+      "Selten gelingt es mir, sie zu vermeiden",
+      "Gar nicht"
     ],
     "9": [
-      "Völlig in meiner Hand",
-      "Größtenteils kontrollierbar",
-      "Gelegentlich kann ich sie steuern",
-      "Kaum unter Kontrolle",
-      "Überhaupt nicht kontrollierbar"
+      "Völlig unter Kontrolle",
+      "Größtenteils unter Kontrolle",
+      "Manchmal kontrollierbar",
+      "Kaum kontrollierbar",
+      "Gar nicht kontrollierbar"
     ]
   },
   "steps_description": {
     "0": {
-      "text": "Bei einer moderaten Zwangsstörung dauern Zwangsgedanken und -handlungen meist 1 bis 3 Stunden täglich, während bei schwerer Ausprägung mehr als 8 Stunden am Tag davon eingenommen werden können.",
-      "fact": "Studien zeigen, dass über 60 % der Menschen mit einer Zwangsstörung täglich Zwangsgedanken erleben."
+      "text": "Bei einer moderaten Zwangsstörung nehmen Zwangsgedanken und Zwangshandlungen häufig 1–3 Stunden pro Tag ein; bei einer schweren Ausprägung können es über 8 Stunden sein.",
+      "fact": "Studien zeigen, dass über 60 % der Menschen mit Zwangsstörung täglich Zwangsgedanken erleben."
     },
     "1": {
-      "text": "Rund die Hälfte der Betroffenen berichtet, dass Zwangsgedanken und -rituale ihren Alltag stark beeinträchtigen – von der Arbeit über das Studium bis zu sozialen Kontakten.",
-      "fact": "Dauerhafte oder häufige Zwangsgedanken können zu körperlicher Erschöpfung führen und Probleme wie Kopfschmerzen, Verdauungsstörungen oder chronische Müdigkeit verursachen."
+      "text": "Rund 50 % der Betroffenen berichten, dass Zwangsgedanken und Zwangshandlungen den Alltag deutlich beeinträchtigen – etwa Arbeit, Ausbildung und soziale Kontakte.",
+      "fact": "Häufige und lang anhaltende Zwangsgedanken können zu körperlicher Erschöpfung und Beschwerden führen, z. B. Kopfschmerzen, Verdauungsprobleme und chronische Müdigkeit."
     },
     "2": {
-      "text": "Heftige Ängste im Zusammenhang mit Zwangsgedanken können sich in körperlichen Symptomen äußern, zum Beispiel in Kopfschmerzen, Muskelverspannungen oder Magen-Darm-Beschwerden.",
-      "fact": "Obwohl Frederick Delano Roosevelt nie offiziell die Diagnose Zwangsstörung erhielt, vermerken Historiker, dass seine ausgeprägten Zwangsgedanken beträchtliche Sorgen und Belastungen in seinem Alltag auslösten."
+      "text": "Starke Belastung durch Zwangsgedanken kann mit körperlichen Symptomen einhergehen, etwa Kopfschmerzen, Muskelanspannung und Verdauungsproblemen.",
+      "fact": "Viele bekannte Persönlichkeiten haben über belastende Zwangsgedanken berichtet; solche Erfahrungen können Stimmung und Alltag deutlich beeinflussen."
     },
     "3": {
-      "text": "Die Intensität und Häufigkeit von Zwangsgedanken unterscheiden sich stark von Person zu Person. Manche kommen damit oft zurecht, andere haben damit dauerhaft zu kämpfen.",
-      "fact": "Kognitive Verhaltenstherapie, besonders Exposition mit Reaktionsverhinderung (ERP), gilt als wirksamste Behandlungsmethode gegen Zwangsstörungen und ermöglicht Betroffenen, besser gegen Zwangsgedanken anzukämpfen."
+      "text": "Intensität und Häufigkeit von Zwangsgedanken variieren stark. Manche kommen die meiste Zeit zurecht, andere kämpfen dauerhaft damit.",
+      "fact": "KVT, insbesondere Exposition mit Reaktionsverhinderung (ERP), gilt als sehr wirksam: Sie hilft, Zwangsgedanken auszuhalten und Ritualen zu widerstehen."
     },
     "4": {
-      "text": "Nur etwa 10–20 % der Menschen mit Zwangsstörungen sagen, dass sie ihre Zwangsgedanken weitgehend kontrollieren können.",
-      "fact": "Antidepressiva (etwa SSRIs) können die Intensität der Zwangsgedanken reduzieren und Betroffenen helfen, besser damit umzugehen."
+      "text": "Nur etwa 10–20 % der Betroffenen berichten, ihre Zwangsgedanken überwiegend kontrollieren zu können.",
+      "fact": "Antidepressiva wie SSRIs können die Intensität von Zwangsgedanken senken und die Steuerbarkeit verbessern."
     },
     "5": {
-      "text": "Typische Zwangshandlungen sind ständiges Händewaschen, wiederholtes Prüfen von Schlössern oder Elektrogeräten sowie sich wiederholende Rituale, zum Beispiel Berühren bestimmter Gegenstände oder ständiges Wiederholen bestimmter Worte.",
-      "fact": "Unter 5 % der Betroffenen verbringen mehr als 8 Stunden pro Tag mit Zwangshandlungen, was ihren Alltag stark einschränkt."
+      "text": "Häufige Zwangshandlungen sind z. B. häufiges Händewaschen, wiederholtes Kontrollieren von Schlössern oder Geräten sowie repetitives Berühren oder inneres Wiederholen von Wörtern und Sätzen.",
+      "fact": "Weniger als 5 % der Betroffenen verbringen über 8 Stunden täglich mit Zwangshandlungen – das beeinträchtigt das Leben massiv."
     },
     "6": {
-      "text": "Zwangshandlungen erschweren oft die berufliche Tätigkeit, senken die Produktivität und machen das Erledigen der Arbeitsaufgaben schwierig. Manche reduzieren ihre Arbeitszeit oder wechseln sogar den Job aufgrund ihres Zustands.",
-      "fact": "Howard Hughes litt unter teils extremen Zwangshandlungen wie permanentem Händewaschen und Menschenmeidung. Das führte zu sozialer Isolation und beeinträchtigte schließlich seine Gesundheit und Karriere enorm."
+      "text": "Zwangshandlungen können die berufliche Leistungsfähigkeit mindern und die Aufgabenerledigung erschweren. Manche reduzieren Arbeitszeiten oder wechseln den Job.",
+      "fact": "Ausgeprägte Zwänge können zu sozialer Isolation und deutlichen Veränderungen im Berufs- und Privatleben führen."
     },
     "7": {
-      "text": "Zwangshandlungen gehen oft mit negativen Emotionen wie Angst, Schuld, Scham oder Frust einher. Diese Gefühle verstärken das allgemeine Unwohlsein und können zu Niedergeschlagenheit führen.",
-      "fact": "Viele Menschen mit Zwangsstörungen haben Begleiterkrankungen wie Depression oder Angststörungen, die ihr Leiden erhöhen und das Unbehagen steigern."
+      "text": "Zwangsstörungen gehen oft mit intensiven Emotionen einher, etwa Angst, Schuld, Scham oder Frustration – sie verstärken das allgemeine Belastungserleben.",
+      "fact": "Komorbide Störungen wie Depressionen und Angststörungen sind häufig und erhöhen die Belastung zusätzlich."
     },
     "8": {
-      "text": "Der Grad von Stress und Unruhe spielt eine große Rolle dabei, ob man Ritualen widerstehen kann. In besonders stressigen Phasen fällt es oft schwerer, sich dagegen zu wehren.",
-      "fact": "Fußballspieler David Beckham erzählte offen, wie er manchmal gegen seine Rituale ankämpft – insbesondere mithilfe seiner Familie und professioneller Unterstützung."
+      "text": "Stress- und Angstniveau beeinflussen, wie gut sich Rituale unterlassen lassen: In Phasen erhöhter Belastung fällt der Verzicht oft schwerer.",
+      "fact": "Der Fußballer David Beckham berichtete, dass es ihm mit Unterstützung der Familie und Therapeut*innen zeitweise gelingt, auf Rituale zu verzichten."
     },
     "9": {
-      "text": "Bei rund 30–35 % der Betroffenen gelingt es, ihre Rituale in der Mehrzahl der Fälle zu kontrollieren.",
-      "fact": "Achtsamkeitsübungen und Meditation können helfen, Rituale besser im Griff zu behalten, Ängste zu mindern und insgesamt die Psyche zu stärken."
+      "text": "Etwa 30–35 % geben an, ihre Rituale meist kontrollieren zu können.",
+      "fact": "Achtsamkeits- und Meditationspraxis kann die Steuerbarkeit verbessern, Angst reduzieren und das psychische Wohlbefinden stärken."
     }
   },
   "range": {
-    "normal": "Normaler Zustand",
-    "light": "Leicht ausgeprägtes Zwangsverhalten",
-    "severe": "Mäßig ausgeprägtes Zwangsverhalten",
-    "extreme": "Schweres Zwangsverhalten"
+    "normal": "Unauffälliger Bereich",
+    "light": "Leicht ausgeprägte Zwangssymptomatik",
+    "severe": "Mittelgradig ausgeprägte Zwangssymptomatik",
+    "extreme": "Ausgeprägte Zwangssymptomatik"
   },
   "result": {
     "normal": {
-      "text": "Sie liegen im Normalbereich: Die Symptome einer Zwangsstörung sind entweder gar nicht oder nur sehr schwach vorhanden. Sie verspüren keinen großen Druck durch zwanghafte Gedanken und Handlungen, und diese beeinträchtigen Ihren Alltag nicht. Sie fühlen sich allgemein ruhig und sicher, Ihre Gedanken und Ihr Verhalten sind gut kontrollierbar.",
-      "title": "Normaler Zustand"
+      "title": "Unauffälliger Bereich",
+      "text": "Ihre Ergebnisse deuten nicht auf ausgeprägte Anzeichen einer Zwangsstörung hin. Zwangsgedanken oder -impulse – falls vorhanden – verursachen keinen spürbaren Leidensdruck und beeinträchtigen den Alltag nicht. Insgesamt behalten Sie Gedanken und Verhalten gut im Blick und erleben Stabilität."
     },
     "light": {
-      "text": "Sie beobachten an sich einige Besonderheiten in Denken und Verhalten. Vielleicht haben Sie hin und wieder fixe Ideen, die jedoch Ihren Alltag nicht groß stören. Manchmal empfinden Sie das Bedürfnis, die Hände zu waschen, wenn etwas Unangenehmes passiert, oder Sie wollen sich vergewissern, dass daheim alles in Ordnung ist. Meist sind das aber einzelne Situationen, und insgesamt schaffen Sie es, diese Impulse zu bändigen, sodass Ihr üblicher Rhythmus ungestört bleibt.",
-      "title": "Leicht ausgeprägtes Zwangsverhalten"
+      "title": "Leicht ausgeprägte Anzeichen",
+      "text": "Mitunter treten wiederkehrende Gedanken oder das Bedürfnis auf, etwas nachzukontrollieren – vor allem in Stresssituationen. Diese Erscheinungen sind nicht dauerhaft und stören den gewohnten Rhythmus in der Regel nicht. Meist behalten Sie die Impulse im Griff und bewältigen Alltagsaufgaben gut. Falls einzelne Gedanken oder Handlungen Ihnen Sorge bereiten, können sanfte Selbstregulationstechniken helfen, das emotionale Gleichgewicht zu stabilisieren."
     },
     "severe": {
-      "text": "Sie scheinen sich oft ängstlich zu fühlen und brauchen klare Regeln für Ihr tägliches Leben. Es ist Ihnen wichtig, dass die Bettwäsche von einer bestimmten Marke ist oder der Saft eine bestimmte Farbe hat. Sie ziehen sich in einer festgelegten Reihenfolge an und fühlen sich unwohl, wenn etwas diesen Ablauf stört. Sorgfalt, Pedanterie und das starke Bedürfnis nach Sauberkeit und Ordnung sind häufige Begleiterscheinungen einer ausgeprägteren Zwangsstörung. In manchen Fällen können Sie ein Ritual aussetzen oder Ihre Angst in gewissen Situationen rational abmildern, doch Sie spüren wahrscheinlich, dass Sie das nicht durchgehend kontrollieren. Möglicherweise sind auch nervöse Ticks wie ständiges Zwinkern, Kratzen an Hautstellen (gerade im Ruhezustand), Zupfen an Wunden oder an den Lippen vorhanden.",
-      "title": "Mäßig ausgeprägtes Zwangsverhalten"
+      "title": "Mittelgradig ausgeprägte Anzeichen",
+      "text": "Hartnäckige Gedanken oder Rituale können die Angst kurzfristig senken, zugleich aber Freiräume einschränken oder merklich Zeit beanspruchen. Das Streben nach Ordnung, Kontrolle oder bestimmten Ritualen kann Spannung erzeugen – besonders, wenn äußere Umstände gewohnte Regeln durchkreuzen. Vieles gelingt bereits selbstständig; punktuelle fachliche Unterstützung kann jedoch helfen, die Belastung zu reduzieren und die Flexibilität zu erhöhen."
     },
     "extreme": {
-      "text": "Ihr Alltag scheint stark von einer allgegenwärtigen Angst geprägt zu sein. Sie versuchen oft, diese Angst durch komplizierte, zum Teil unlogische Rituale zu mildern. Mitunter scheint die Grenze zwischen Realität und magischem Denken zu verschwimmen: Sie glauben vielleicht, dass ein bestimmtes, mehrfach wiederholtes Tun Ihnen Erleichterung bringt, auch wenn es keinerlei rationalem Prinzip folgt. Das Aufhören oder Abbrechen dieser Handlungen fällt Ihnen extrem schwer. Falls andere Personen versuchen, Ihre festgelegte Ordnung zu durchbrechen, reagieren Sie gereizt oder aggressiv. Es entsteht ein Gefühl diffuser Bedrohung, sobald Sie die Rituale unterlassen. Das kann sich in diversen Phobien äußern, etwa Angst vor Krankheiten oder Unfällen bei Ihnen selbst oder nahestehenden Menschen. Wahrscheinlich beobachten Sie auch nervöse Ticks, ungewöhnliche „Allergien“, Hautreizungen, starke Licht- oder Geräuschempfindlichkeit usw.",
-      "title": "Schweres Zwangsverhalten"
+      "title": "Ausgeprägte Anzeichen einer Zwangsstörung",
+      "text": "Ihre Antworten legen nahe, dass Zwangsgedanken und Rituale den Alltag und das emotionale Befinden deutlich beeinflussen. Bleiben gewohnte Handlungen aus, kann starke Anspannung entstehen. In solchen Fällen ist professionelle Unterstützung ein wichtiger Schritt, um Entlastung zu schaffen und den Druck zu senken. Hilfe ist verfügbar – und Sie können sie in Anspruch nehmen."
     }
   },
   "description": {
     "text": [
-      "OCD, auf Deutsch Zwangsstörung, äußert sich durch sich aufdrängende Gedanken oder Bilder, die keinen offensichtlichen Grund haben, und Betroffene zu bestimmten Handlungen zwingen.",
-      "Zum Beispiel kann es eine ausgeprägte Angst vor Schmutz geben, die jemanden dazu bewegt, sich dutzendfach die Hände zu waschen, oder eine übersteigerte Sorge vor Einbrüchen, sodass man pausenlos kontrolliert, ob alle Türen und Schlösser sicher sind.",
-      "Solche Zwangsstörungen kommen relativ häufig vor: Ungefähr 2–3 von 100 Menschen sind betroffen. Doch besonders ausgeprägte Formen können das Leben stark beeinträchtigen und sehr viel Energie kosten."
+      "Die Zwangsstörung (OCD/ZS) ist durch aufdringliche Gedanken (Zwangsgedanken) und wiederholte Handlungen oder mentale Rituale (Zwangshandlungen) gekennzeichnet, die kurzfristig Angst mindern sollen.",
+      "Das Spektrum ist breit: von gelegentlichen Zwangsgedanken bis zu Ritualen, die spürbar Zeit und Aufmerksamkeit binden.",
+      "Die Störung ist vergleichsweise häufig. Achtsamer Umgang mit eigenen Empfindungen und frühzeitige Unterstützung bei Bedarf helfen, Lebensqualität und seelisches Wohlbefinden zu erhalten."
     ]
   }
 }
