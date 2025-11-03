@@ -167,7 +167,7 @@ export const GET: APIRoute = async ({ params }) => {
               color: '#F2A873',
             },
             78: {
-              title: eat.result.hight.title,
+              title: eat.result.high.title,
               color: '#F27373',
             },
           },
@@ -186,7 +186,7 @@ export const GET: APIRoute = async ({ params }) => {
               color: '#F2A873',
             },
             72: {
-              title: sdvg.result.hight.title,
+              title: sdvg.result.high.title,
               color: '#F27373',
             },
           },
@@ -256,7 +256,7 @@ export const GET: APIRoute = async ({ params }) => {
               color: '#F2A873',
             },
             88: {
-              title: burnout.result.hight.title,
+              title: burnout.result.high.title,
               color: '#F27373',
             },
           },
@@ -361,7 +361,7 @@ export const GET: APIRoute = async ({ params }) => {
               color: '#F2A873',
             },
             60: {
-              title: acceptance.result.hight.title,
+              title: acceptance.result.high.title,
               color: '#73F2BD',
             },
           },

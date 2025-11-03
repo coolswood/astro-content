@@ -59,8 +59,8 @@ export const GET: APIRoute = async ({ params }) => {
           rangeBefore: 45,
         },
         {
-          text: data.result.hight.text,
-          title: data.result.hight.title,
+          text: data.result.high.text,
+          title: data.result.high.title,
           rangeBefore: 72,
         },
       ],
