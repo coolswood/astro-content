@@ -1,28 +1,37 @@
 #!/bin/bash
 
-echo "🔍 Сравнение структуры JSON файлов в папке de с веткой main..."
+echo "🔍 Сравнение структуры JSON файлов в папке de с папкой ru..."
 
 # Получаем список JSON файлов в de директории
-find src/i18n/de -name "*.json" -type f | while read file; do
-    echo "Проверяем файл: $file"
+find src/i18n/de -name "*.json" -type f | while read de_file; do
+    echo "Проверяем файл: $de_file"
 
-    # Получаем содержимое файлов из обеих веток
-    current_content=$(git show trans:"$file" 2>/dev/null)
-    main_content=$(git show main:"$file" 2>/dev/null)
+    # Создаем соответствующий путь для ru файла
+    ru_file=$(echo "$de_file" | sed 's|src/i18n/de/|src/i18n/ru/|')
+
+    # Проверяем существование ru файла
+    if [ ! -f "$ru_file" ]; then
+        echo "❌ Файл $ru_file не существует"
+        continue
+    fi
+
+    # Получаем содержимое файлов
+    de_content=$(cat "$de_file" 2>/dev/null)
+    ru_content=$(cat "$ru_file" 2>/dev/null)
 
     if [ $? -ne 0 ]; then
-        echo "❌ Ошибка при чтении файла $file"
+        echo "❌ Ошибка при чтении файлов"
         continue
     fi
 
     # Создаем временные файлы для сравнения
-    echo "$current_content" > /tmp/current.json
-    echo "$main_content" > /tmp/main.json
+    echo "$de_content" > /tmp/de.json
+    echo "$ru_content" > /tmp/ru.json
 
     # Проверяем валидность JSON
-    if ! jq empty /tmp/current.json 2>/dev/null || ! jq empty /tmp/main.json 2>/dev/null; then
-        echo "❌ Невалидный JSON в файле $file"
-        rm -f /tmp/current.json /tmp/main.json
+    if ! jq empty /tmp/de.json 2>/dev/null || ! jq empty /tmp/ru.json 2>/dev/null; then
+        echo "❌ Невалидный JSON в файлах"
+        rm -f /tmp/de.json /tmp/ru.json
         continue
     fi
 
@@ -32,56 +41,81 @@ find src/i18n/de -name "*.json" -type f | while read file; do
     # 3. Наборы ключей в объектах (без учета порядка)
 
     # Сравниваем типы верхнего уровня
-    current_type=$(jq -r 'type' /tmp/current.json)
-    main_type=$(jq -r 'type' /tmp/main.json)
+    de_type=$(jq -r 'type' /tmp/de.json)
+    ru_type=$(jq -r 'type' /tmp/ru.json)
 
-    if [ "$current_type" != "$main_type" ]; then
-        echo "❌ Несоответствие типа данных: $file ($current_type vs $main_type)"
-        git checkout main -- "$file"
-        echo "✅ Файл $file откачен до версии main"
-        rm -f /tmp/current.json /tmp/main.json
+    if [ "$de_type" != "$ru_type" ]; then
+        echo "❌ Несоответствие типа данных: $de_file ($de_type vs $ru_type)"
+        rm -f /tmp/de.json /tmp/ru.json
         continue
     fi
 
-    # Получаем структурную информацию, игнорируя порядок ключей и поле instagram
-    current_structure=$(jq -r '
+    # Получаем структурную информацию с размерами массивов, игнорируя порядок ключей и поле instagram
+    de_structure=$(jq -r '
         def walk:
             if type == "object" then
                 (. | keys | sort | map(select(. != "instagram"))) as $sorted_keys |
                 reduce $sorted_keys[] as $key ({}; . + {($key): ($key | walk)})
             elif type == "array" then
-                [.[] | walk]
+                (.[] | walk)
             else
                 type
             end;
         walk | path(..) | join(".")
-    ' /tmp/current.json | sort)
+    ' /tmp/de.json | sort)
 
-    main_structure=$(jq -r '
+    ru_structure=$(jq -r '
         def walk:
             if type == "object" then
                 (. | keys | sort | map(select(. != "instagram"))) as $sorted_keys |
                 reduce $sorted_keys[] as $key ({}; . + {($key): ($key | walk)})
             elif type == "array" then
-                [.[] | walk]
+                (.[] | walk)
             else
                 type
             end;
         walk | path(..) | join(".")
-    ' /tmp/main.json | sort)
+    ' /tmp/ru.json | sort)
 
     # Сравниваем структуры
-    if [ "$current_structure" != "$main_structure" ]; then
-        echo "❌ Найдено несоответствие в структуре файла: $file"
-        echo "Откатываем файл до версии из main..."
-        git checkout main -- "$file"
-        echo "✅ Файл $file откачен до версии main"
+    if [ "$de_structure" != "$ru_structure" ]; then
+        echo "❌ Найдено несоответствие в структуре файла: $de_file"
+        echo "Структура не совпадает с $ru_file"
     else
-        echo "✅ Структура файла $file совпадает"
+        echo "✅ Структура файла $de_file совпадает"
     fi
 
+    # Дополнительная проверка размеров массивов
+    echo "Проверка размеров массивов..."
+
+    # Проверяем вложенные массивы в screen_*
+    screen_arrays=$(jq -r '
+        keys[] as $screen_key |
+        if $screen_key | startswith("screen_") then
+            .[$screen_key] |
+            to_entries[] | select(.value | type == "array") |
+            "\($screen_key).\(.key)"
+        else
+            empty
+        end
+    ' /tmp/de.json 2>/dev/null | sort)
+
+    array_mismatch=0
+    echo "$screen_arrays" | while read array_path; do
+        if [ -n "$array_path" ]; then
+            # Получаем размеры массивов
+            de_size=$(jq -r ".$array_path | length // \"missing\"" /tmp/de.json 2>/dev/null)
+            ru_size=$(jq -r ".$array_path | length // \"missing\"" /tmp/ru.json 2>/dev/null)
+
+            if [ "$de_size" != "$ru_size" ]; then
+                echo "  🔸 Массив $array_path: DE имеет $de_size элементов, RU имеет $ru_size элементов"
+                array_mismatch=1
+            fi
+        fi
+    done
+
     # Очищаем временные файлы
-    rm -f /tmp/current.json /tmp/main.json
+    rm -f /tmp/de.json /tmp/ru.json
     echo "---"
 done
 
