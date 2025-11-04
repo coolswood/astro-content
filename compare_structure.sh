@@ -1,23 +1,36 @@
 #!/bin/bash
 
-echo "🔍 Сравнение структуры JSON файлов в папке de с папкой ru..."
+# Проверяем наличие аргумента
+if [ $# -eq 0 ]; then
+    echo "❌ Ошибка: Укажите язык для сравнения"
+    echo "Использование: $0 <lang>"
+    echo "Пример: $0 de"
+    echo "Пример: $0 uk"
+    echo "Пример: $0 en"
+    exit 1
+fi
 
-# Получаем список JSON файлов в de директории
-find src/i18n/de -name "*.json" -type f | while read de_file; do
-    echo "Проверяем файл: $de_file"
+TARGET_LANG=$1
+BASE_LANG="ru"
 
-    # Создаем соответствующий путь для ru файла
-    ru_file=$(echo "$de_file" | sed 's|src/i18n/de/|src/i18n/ru/|')
+echo "🔍 Сравнение структуры JSON файлов в папке $TARGET_LANG с папкой $BASE_LANG..."
 
-    # Проверяем существование ru файла
-    if [ ! -f "$ru_file" ]; then
-        echo "❌ Файл $ru_file не существует"
+# Получаем список JSON файлов в целевой директории
+find src/i18n/$TARGET_LANG -name "*.json" -type f | while read target_file; do
+    echo "Проверяем файл: $target_file"
+
+    # Создаем соответствующий путь для базового файла
+    base_file=$(echo "$target_file" | sed "s|src/i18n/$TARGET_LANG/|src/i18n/$BASE_LANG/|")
+
+    # Проверяем существование базового файла
+    if [ ! -f "$base_file" ]; then
+        echo "❌ Файл $base_file не существует"
         continue
     fi
 
     # Получаем содержимое файлов
-    de_content=$(cat "$de_file" 2>/dev/null)
-    ru_content=$(cat "$ru_file" 2>/dev/null)
+    target_content=$(cat "$target_file" 2>/dev/null)
+    base_content=$(cat "$base_file" 2>/dev/null)
 
     if [ $? -ne 0 ]; then
         echo "❌ Ошибка при чтении файлов"
@@ -25,13 +38,13 @@ find src/i18n/de -name "*.json" -type f | while read de_file; do
     fi
 
     # Создаем временные файлы для сравнения
-    echo "$de_content" > /tmp/de.json
-    echo "$ru_content" > /tmp/ru.json
+    echo "$target_content" > /tmp/target.json
+    echo "$base_content" > /tmp/base.json
 
     # Проверяем валидность JSON
-    if ! jq empty /tmp/de.json 2>/dev/null || ! jq empty /tmp/ru.json 2>/dev/null; then
+    if ! jq empty /tmp/target.json 2>/dev/null || ! jq empty /tmp/base.json 2>/dev/null; then
         echo "❌ Невалидный JSON в файлах"
-        rm -f /tmp/de.json /tmp/ru.json
+        rm -f /tmp/target.json /tmp/base.json
         continue
     fi
 
@@ -41,17 +54,17 @@ find src/i18n/de -name "*.json" -type f | while read de_file; do
     # 3. Наборы ключей в объектах (без учета порядка)
 
     # Сравниваем типы верхнего уровня
-    de_type=$(jq -r 'type' /tmp/de.json)
-    ru_type=$(jq -r 'type' /tmp/ru.json)
+    target_type=$(jq -r 'type' /tmp/target.json)
+    base_type=$(jq -r 'type' /tmp/base.json)
 
-    if [ "$de_type" != "$ru_type" ]; then
-        echo "❌ Несоответствие типа данных: $de_file ($de_type vs $ru_type)"
-        rm -f /tmp/de.json /tmp/ru.json
+    if [ "$target_type" != "$base_type" ]; then
+        echo "❌ Несоответствие типа данных: $target_file ($target_type vs $base_type)"
+        rm -f /tmp/target.json /tmp/base.json
         continue
     fi
 
     # Получаем структурную информацию с размерами массивов, игнорируя порядок ключей и поле instagram
-    de_structure=$(jq -r '
+    target_structure=$(jq -r '
         def walk:
             if type == "object" then
                 (. | keys | sort | map(select(. != "instagram"))) as $sorted_keys |
@@ -62,9 +75,9 @@ find src/i18n/de -name "*.json" -type f | while read de_file; do
                 type
             end;
         walk | path(..) | join(".")
-    ' /tmp/de.json | sort)
+    ' /tmp/target.json | sort)
 
-    ru_structure=$(jq -r '
+    base_structure=$(jq -r '
         def walk:
             if type == "object" then
                 (. | keys | sort | map(select(. != "instagram"))) as $sorted_keys |
@@ -75,14 +88,14 @@ find src/i18n/de -name "*.json" -type f | while read de_file; do
                 type
             end;
         walk | path(..) | join(".")
-    ' /tmp/ru.json | sort)
+    ' /tmp/base.json | sort)
 
     # Сравниваем структуры
-    if [ "$de_structure" != "$ru_structure" ]; then
-        echo "❌ Найдено несоответствие в структуре файла: $de_file"
-        echo "Структура не совпадает с $ru_file"
+    if [ "$target_structure" != "$base_structure" ]; then
+        echo "❌ Найдено несоответствие в структуре файла: $target_file"
+        echo "Структура не совпадает с $base_file"
     else
-        echo "✅ Структура файла $de_file совпадает"
+        echo "✅ Структура файла $target_file совпадает"
     fi
 
     # Дополнительная проверка размеров массивов
@@ -98,24 +111,24 @@ find src/i18n/de -name "*.json" -type f | while read de_file; do
         else
             empty
         end
-    ' /tmp/de.json 2>/dev/null | sort)
+    ' /tmp/target.json 2>/dev/null | sort)
 
     array_mismatch=0
     echo "$screen_arrays" | while read array_path; do
         if [ -n "$array_path" ]; then
             # Получаем размеры массивов
-            de_size=$(jq -r ".$array_path | length // \"missing\"" /tmp/de.json 2>/dev/null)
-            ru_size=$(jq -r ".$array_path | length // \"missing\"" /tmp/ru.json 2>/dev/null)
+            target_size=$(jq -r ".$array_path | length // \"missing\"" /tmp/target.json 2>/dev/null)
+            base_size=$(jq -r ".$array_path | length // \"missing\"" /tmp/base.json 2>/dev/null)
 
-            if [ "$de_size" != "$ru_size" ]; then
-                echo "  🔸 Массив $array_path: DE имеет $de_size элементов, RU имеет $ru_size элементов"
+            if [ "$target_size" != "$base_size" ]; then
+                echo "  🔸 Массив $array_path: $TARGET_LANG имеет $target_size элементов, $BASE_LANG имеет $base_size элементов"
                 array_mismatch=1
             fi
         fi
     done
 
     # Очищаем временные файлы
-    rm -f /tmp/de.json /tmp/ru.json
+    rm -f /tmp/target.json /tmp/base.json
     echo "---"
 done
 
