@@ -1,39 +1,39 @@
 {
   "title": "Günü Kontrol Altına Al",
-  "statement": "Bu teknik, depresyon veya erteleme eğilimi olan kişiler için faydalıdır. Öz disiplininizi geliştirmenize ve zamanınızı daha iyi yönetmenize yardımcı olabilir.",
+  "statement": "Bu yöntem, depresyon ya da erteleme eğilimi olanlar için yararlıdır; özdisiplini güçlendirmenize ve zamanı daha verimli yönetmenize yardımcı olur.",
   "description": [
-    "Bir sonraki güne hazırlanmak için, akşam oturup gününüzün planını yazın.",
-    "Temel versiyonda 4 sütun doldurmanızı öneriyoruz:",
-    "1️⃣ Birinci sütun — «Zaman». Görevin yaklaşık tamamlanma süresi. Belirli bir zaman aralığı da olabilir.",
-    "2️⃣ İkinci sütun — «Öncesi». Yapmak istediğiniz şeylerin saatlik planıdır. Aynı anda çok fazla şey yazmayın: Her saatlik satıra bir veya iki kelime ile bir aktivite veya eylem belirtin.",
-    "Örneğin, küçük bir şey olabilir: Duş almak, kahvaltı yapmak, çamaşır yıkamak. Ya da daha fazla enerji gerektiren bir şey: temizlik 🧹, sınav hazırlığı 🧪, özgeçmiş yazma ✍🏼 vb.",
-    "3️⃣ Günün sonunda üçüncü sütuna — «Sonrası» — ne yaptığınızı yazın.",
-    "Gerçekten gün boyunca ne yaptığınızı buraya kaydedin. Planladığınız şeylerle eşleşebilir veya farklı olabilir — bu tamamen normaldir, endişelenmeyin.",
-    "«Öncesi» listesinin yalnızca küçük bir kısmını bile gerçekleştirebilseniz, gününüzü planlamak oldukça faydalı ve görsel olarak açıklayıcı bir süreç olabilir.",
-    "4️⃣ Dördüncü sütun — «Zevk». Rutin işlerden bile zevk alabilirsiniz.",
-    "En önemli şey, ileriye doğru bir adım atmanın bile belirli bir tatmin duygusu sağladığıdır. Görevin ne kadar keyifli olduğunu 10 üzerinden değerlendirin."
+    "Ertesi güne hazırlanmak için akşam oturun ve gününüzün planını yazın.",
+    "Temel sürümde 4 sütun doldurmanızı öneririz:",
+    "1️⃣ Birinci sütun — «Zaman». Görevin yaklaşık tamamlanma süresi; gerekirse belirli bir zaman aralığı da olabilir.",
+    "2️⃣ İkinci sütun — «Öncesi». Yapmak istediklerinizin saatlik planıdır. Aynı anda çok şey yazmayın; her saatlik satıra bir etkinlik ya da eylemi bir-iki kelimeyle not edin.",
+    "Örneğin: Duş almak, kahvaltı yapmak, çamaşır yıkamak gibi küçük işler; ya da daha çok enerji isteyen temizlik 🧹, sınav hazırlığı 🧪, özgeçmiş yazma ✍🏼 vb.",
+    "3️⃣ Günün sonunda üçüncü sütuna — «Sonrası» — gerçekte ne yaptığınızı yazın.",
+    "Gün içinde gerçekten yaptıklarınızı buraya kaydedin. Planla örtüşebilir ya da farklı olabilir — bu tamamen normaldir, endişelenmeyin.",
+    "«Öncesi» listesinin küçük bir kısmını bile gerçekleştirmek, planlamayı yine de çok faydalı ve görsel olarak açıklayıcı kılar.",
+    "4️⃣ Dördüncü sütun — «Zevk». Rutin işlerden de keyif alınabilir.",
+    "Önemli olan, ileriye atılan küçük bir adımın bile tatmin duygusu vermesidir. Her görevin keyif düzeyini 10 üzerinden değerlendirin."
   ],
   "task": [
-    "Bir sonraki güne hazırlanmak için, akşam oturup gününüzün planını yazın.",
-    "Temel versiyonda 4 sütun doldurmanızı öneriyoruz:",
+    "Ertesi güne hazırlanmak için akşam oturup gününüzün planını yazın.",
+    "Temel sürümde 4 sütun doldurmanızı öneririz:",
     "1️⃣ Birinci sütun — «Zaman». Görevin yaklaşık tamamlanma süresi.",
-    "2️⃣ İkinci sütun — «Öncesi». Yapmak istediğiniz şeylerin saatlik planıdır.",
+    "2️⃣ İkinci sütun — «Öncesi». Yapmak istediklerinizin saatlik planı.",
     "3️⃣ Günün sonunda üçüncü sütuna — «Sonrası» — ne yaptığınızı yazın.",
-    "Gerçekten gün boyunca ne yaptığınızı buraya kaydedin.",
+    "Gün içinde gerçekten yaptıklarınızı buraya kaydedin.",
     "4️⃣ Dördüncü sütun — «Zevk». Görevin ne kadar keyifli olduğunu 10 üzerinden değerlendirin."
   ],
   "table": {
     "header": ["Zaman", "Öncesi", "Sonrası", "Zevk"],
     "example": {
-      "0": ["Uyanmak", "Uyandım, dişlerimi fırçaladım"],
-      "1": ["Kahvaltı yapmak", "Kahvaltı yaptım"],
-      "2": ["Odayı temizlemek", "Arkadaşımla telefonda konuştum"],
-      "3": ["Sınava hazırlanmak", "Dizi izledim"]
+      "0": ["Uyanma", "Uyandım; dişlerimi fırçaladım"],
+      "1": ["Kahvaltı", "Kahvaltı yaptım"],
+      "2": ["Odayı toplamak", "Arkadaşımla telefonda konuştum"],
+      "3": ["Sınava hazırlık", "Dizi izledim"]
     }
   },
   "expectations": [
-    "Eylemlerin önemini ve değerini sürekli olarak sorgulama eğiliminizi durdurur ve bir şeyi yapıp yapmamaya karar vermenizi kolaylaştırır.",
-    "Zorunlu görevleri ve keyif aldığınız aktiviteleri dengeli bir şekilde planlamanıza yardımcı olur.",
-    "Düzenli olarak günlük plan yaparsanız, motivasyonunuzun arttığını fark edeceksiniz, çünkü küçük bir şey yapmak bile harekete geçemeyeceğiniz yönündeki inancınızı çürütecektir."
+    "Eylemlerin önemini ve değerini sürekli sorgulama eğilimini frenler; bir işi yapıp yapmamaya karar vermeyi kolaylaştırır.",
+    "Zorunlu görevlerle keyif veren aktiviteleri dengeli biçimde planlamayı destekler.",
+    "Düzenli planlama motivasyonu artırır; küçük bir adım bile harekete geçemeyeceğiniz inancını zayıflatır."
   ]
 }
