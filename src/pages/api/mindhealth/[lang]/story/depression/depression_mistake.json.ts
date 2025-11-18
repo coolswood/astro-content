@@ -8,7 +8,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
-import { activitylink, q, dialog } from '@/lib/storyHelper';
+import { activitylink, q, dialog, instagramStep } from '@/lib/storyHelper';
 
 export const prerender = true;
 
@@ -46,6 +46,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_1.texts[2]}</p>`,
             `<p>${story.screen_1.texts[3]}</p>`,
             `<p>${story.screen_1.texts[4]}</p>`,
+            ...instagramStep(story.instagram),
             `<p>${story.screen_1.texts[5]}</p>`,
             `<p>${story.screen_1.texts[6]}</p>`,
             `<li>${story.screen_1.texts[7]}</li>`,
@@ -86,7 +87,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_mistake.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_mistake.json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
-import { important, q, activitylink } from '@/lib/storyHelper';
+import { important, q, activitylink, instagramStep } from '@/lib/storyHelper';
 
 export const prerender = true;
 
@@ -39,6 +39,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_1.texts[0]}</p>`,
             `<p>${story.screen_1.texts[1]}</p>`,
             `<p>${story.screen_1.texts[2]}</p>`,
+            ...instagramStep(story.instagram),
             `<p>${story.screen_1.texts[3]}</p>`,
             `<p>${story.screen_1.texts[4]}</p>`,
             `<li>${story.screen_1.texts[5]}</li>`,
@@ -92,7 +93,9 @@ export const GET: APIRoute = async ({ params }) => {
   } catch (err) {
     console.error(`Error generating three_options.json:`, err);
     throw new Error(
-      `Failed to generate three_options.json: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate three_options.json: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

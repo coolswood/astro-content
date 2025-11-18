@@ -5,7 +5,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
-import { important, q } from '@/lib/storyHelper';
+import { important, q, instagramStep } from '@/lib/storyHelper';
 
 export const prerender = true;
 
@@ -51,6 +51,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_2.texts[1]}</p>`,
             `<p>${story.screen_2.texts[2]}</p>`,
             `<p>${story.screen_2.texts[3]}</p>`,
+            ...instagramStep(story.instagram),
             `<p>${story.screen_2.texts[4]}</p>`,
             `<p>${story.screen_2.texts[5]}</p>`,
           ],
@@ -89,7 +90,9 @@ export const GET: APIRoute = async ({ params }) => {
   } catch (err) {
     console.error(`Error generating suicide.json:`, err);
     throw new Error(
-      `Failed to generate suicide.json: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate suicide.json: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };
