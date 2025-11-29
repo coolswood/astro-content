@@ -68,10 +68,20 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const [headers, sounds] = await Promise.all([
-      loadI18nJson<Record<string, string>>(lang, 'relax/headers.json'),
-      loadI18nJson<Record<string, string>>(lang, 'relax/sounds.json'),
-    ]);
+    const relaxModules = import.meta.glob<{
+      default: { headers: Record<string, string>; sounds: Record<string, string> };
+    }>('@/i18n/*/relax.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/relax.json`;
+    const module = relaxModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const headers = module.default.headers;
+    const sounds = module.default.sounds;
 
     const payload = CATEGORIES.map(({ header, sounds: ids }) => ({
       title: headers[header] ?? '',
