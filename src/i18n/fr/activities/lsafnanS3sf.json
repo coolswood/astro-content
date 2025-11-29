@@ -1,39 +1,42 @@
 {
-  "title": "Journée sous contrôle",
-  "statement": "Cette technique est utile pour les personnes souffrant de dépression ou de procrastination. Elle peut vous aider à améliorer votre auto-organisation et la gestion de votre temps.",
+  "title": "Une journée sous votre contrôle",
+  "statement": "Cette technique est utile pour les personnes qui souffrent de dépression ou ont tendance à procrastiner. Elle peut vous aider à mieux vous organiser et à reprendre la maîtrise de votre temps.",
   "description": [
-    "Le soir, avant le lendemain, asseyez-vous et écrivez votre emploi du temps pour la journée.",
-    "Dans la version de base, nous proposons de remplir 4 colonnes :",
-    "1️⃣ Première colonne — «Heure». Heure approximative pour accomplir une tâche. Cela peut être un intervalle de temps.",
-    "2️⃣ Deuxième colonne — «Avant». Il s'agit d'un plan horaire de ce que vous souhaitez faire. N'écrivez pas trop d'un coup : pour chaque heure, notez un ou deux mots indiquant une activité ou une tâche.",
-    "Par exemple, cela peut être quelque chose de simple : prendre une douche, prendre le petit-déjeuner, lancer une machine. Ou quelque chose de plus exigeant : faire le ménage 🧹, préparer un examen 🧪, rédiger un CV ✍🏼, etc.",
-    "3️⃣ À la fin de chaque journée, écrivez dans la troisième colonne — «Après».",
-    "Ici, vous devez noter ce que vous avez réellement fait tout au long de la journée. Vos activités peuvent correspondre à votre plan ou en différer, et c'est tout à fait normal, ne vous inquiétez pas.",
-    "Même si vous ne réalisez qu'une petite partie de votre liste «Avant», le simple fait de planifier votre journée peut être un processus très utile et visuellement clair.",
-    "4️⃣ Quatrième colonne — «Satisfaction». Même les tâches routinières peuvent procurer du plaisir.",
-    "L'essentiel est que le simple fait de progresser apporte déjà une certaine satisfaction. Évaluez sur une échelle de 1 à 10 à quel point la tâche vous a été agréable."
+    "Le soir, la veille de la journée suivante, asseyez-vous et rédigez le programme de votre journée.",
+    "Dans la version de base, nous vous proposons de remplir 4 colonnes :",
+    "1️⃣ Première colonne — « Heure ». Il s’agit de l’heure approximative à laquelle vous comptez réaliser la tâche. Cela peut aussi être un créneau horaire.",
+    "2️⃣ Deuxième colonne — « Avant ». C’est un planning heure par heure de ce que vous souhaitez faire. Inutile d’en écrire trop : pour chaque ligne horaire, notez un ou deux mots qui décrivent une activité ou une action.",
+    "Par exemple, cela peut être quelque chose de simple : prendre une douche, prendre le petit-déjeuner, lancer une machine à laver. Ou quelque chose de plus exigeant : faire le ménage 🧹, préparer un examen 🧪, rédiger un CV ✍🏼, etc.",
+    "3️⃣ À la fin de chaque journée, remplissez la troisième colonne — « Après ».",
+    "Vous y notez ce que vous avez réellement fait au cours de la journée. Vos activités peuvent correspondre à ce qui était prévu ou être différentes — c’est normal, ne vous inquiétez pas.",
+    "Même si vous ne réalisez qu’une petite partie de ce qui figurait dans la colonne « Avant », le simple fait de planifier votre journée peut déjà être très utile et rendre votre emploi du temps plus clair.",
+    "4️⃣ Quatrième colonne — « Plaisir ». Même les tâches routinières peuvent procurer une certaine satisfaction.",
+    "Et surtout, le simple fait d’avancer procure déjà du plaisir. Indiquez, sur une échelle de 0 à 10, à quel point il vous a été agréable d’accomplir chaque tâche."
   ],
   "task": [
-    "Le soir, avant le lendemain, asseyez-vous et écrivez votre emploi du temps pour la journée.",
-    "Dans la version de base, nous proposons de remplir 4 colonnes :",
-    "1️⃣ Première colonne — «Heure». Heure approximative pour accomplir une tâche.",
-    "2️⃣ Deuxième colonne — «Avant». Il s'agit d'un plan horaire de ce que vous souhaitez faire.",
-    "3️⃣ À la fin de chaque journée, écrivez dans la troisième colonne — «Après».",
-    "Ici, vous devez noter ce que vous avez réellement fait tout au long de la journée.",
-    "4️⃣ Quatrième colonne — «Satisfaction». Évaluez sur une échelle de 1 à 10 à quel point la tâche vous a été agréable."
+    "Le soir, la veille de la journée suivante, asseyez-vous et écrivez le programme de votre journée.",
+    "Dans la version de base, nous vous proposons de remplir 4 colonnes :",
+    "1️⃣ Première colonne — « Heure ». Il s’agit de l’heure approximative à laquelle vous comptez réaliser la tâche. Cela peut aussi être un créneau horaire.",
+    "2️⃣ Deuxième colonne — « Avant ». Il s’agit d’un planning heure par heure de ce que vous souhaitez faire.",
+    "3️⃣ À la fin de chaque journée, remplissez la troisième colonne — « Après ».",
+    "Vous y notez ce que vous avez réellement fait au cours de la journée.",
+    "4️⃣ Quatrième colonne — « Plaisir ». Indiquez, sur une échelle de 0 à 10, à quel point il vous a été agréable de réaliser chaque tâche."
   ],
   "table": {
-    "header": ["Heure", "Avant", "Après", "Satisfaction"],
+    "header": ["Heure", "Avant", "Après", "Plaisir"],
     "example": {
-      "0": ["Se réveiller", "Je me suis réveillé, j’ai brossé mes dents"],
-      "1": ["Prendre le petit-déjeuner", "J’ai pris mon petit-déjeuner"],
-      "2": ["Faire le ménage", "J’ai parlé au téléphone avec un ami"],
-      "3": ["Préparer un examen", "J’ai regardé une série"]
+      "0": [
+        "Se réveiller",
+        "Je me suis réveillé·e, je me suis brossé les dents"
+      ],
+      "1": ["Prendre le petit-déjeuner", "J’ai pris le petit-déjeuner"],
+      "2": ["Ranger la chambre", "J’ai parlé au téléphone avec un·e ami·e"],
+      "3": ["Préparation à l’examen", "J’ai regardé une série"]
     }
   },
   "expectations": [
-    "Vous aidera à arrêter de trop réfléchir à l’importance et à la valeur des actions et vous aidera à résoudre vos conflits internes sur la nécessité ou non d’agir",
-    "Vous aidera à planifier votre temps de manière équilibrée, en incluant à la fois des tâches obligatoires et des activités qui vous procurent du plaisir",
-    "Si vous établissez régulièrement un planning quotidien, vous remarquerez bientôt une augmentation de votre motivation, car commencer à agir réfutera votre croyance selon laquelle vous êtes incapable d'accomplir quelque chose"
+    "Réduira votre tendance à réfléchir sans cesse à l’importance ou à la valeur de chaque action et vous aidera à apaiser les conflits intérieurs du type « faut-il faire quelque chose ou pas ».",
+    "Vous aidera à organiser votre temps de manière plus équilibrée, en combinant ce que vous devez faire pour différentes raisons avec des activités qui vous font plaisir.",
+    "Si vous établissez régulièrement ce planning quotidien, vous remarquerez bientôt que votre motivation augmente, car en commençant à faire ne serait-ce qu’un peu, vous contredisez progressivement l’idée que vous seriez incapable de faire quoi que ce soit."
   ]
 }

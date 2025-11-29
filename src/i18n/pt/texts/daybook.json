@@ -1,7 +1,63 @@
 {
-  "h2": "Diário",
-  "texts": [
-    "Mantenha registros do seu bem-estar em formato livre para análise posterior.",
-    "Você pode usar esta seção como um diário, registrando tudo o que aconteceu durante o dia. Ou, se preferir, escreva sobre situações específicas para trabalhar posteriormente com um psicólogo."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "A nossa equipa desenvolveu um algoritmo único para analisar registos de diário, ajudando significativamente os utilizadores a examinarem os seus pensamentos. O nosso modelo foi treinado com base em dados abertos e materiais educativos sobre terapia cognitivo-comportamental (TCC).",
+      "Aqui estão algumas recomendações para melhorar a qualidade da análise dos seus registos:",
+      "Descreva não apenas os acontecimentos, mas também os seus pensamentos e emoções em detalhe. Lembre-se de que a qualidade da análise depende diretamente da qualidade do seu registo.",
+      "Tente descrever uma situação ou um pensamento específico. Se ocorreram vários eventos no mesmo dia, é melhor criar um segundo registo e analisá-lo separadamente.",
+      "Embora o algoritmo tenha sido desenvolvido para identificar crenças irracionais e destrutivas nos seus registos, também pode mencionar momentos positivos."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Nossa equipe desenvolveu um algoritmo único para análise de registros de diário, que ajuda significativamente os usuários a analisarem seus pensamentos. Nosso modelo foi treinado com base em dados abertos e materiais educacionais sobre terapia cognitivo-comportamental.",
+      "Você pode descrever uma situação que o preocupa ou compartilhar seus sentimentos em formato livre. Nosso algoritmo analisará seu texto e fornecerá resultados que o ajudarão a entender melhor a si mesmo e seus pensamentos.",
+      "Confira uma demonstração da análise clicando no botão abaixo.",
+      "Texto para análise:",
+      "<i>Sinto como se as pessoas ao meu redor me vissem como um fracasso. Por exemplo, hoje cometi um erro no trabalho. Meu chefe pediu para que eu o corrigisse. No entanto, seu tom foi tal que não pude deixar de sentir que ele realmente me considera um fracassado.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Nossa equipe desenvolveu um algoritmo único para análise de registros. A AI vai estudar sua situação, ajudar a vê-la de uma nova perspectiva e fornecer recomendações úteis dentro do framework da TCC.",
+      "Descreva não apenas os eventos, mas também detalhe suas emoções e pensamentos. Lembre-se de que a qualidade da análise depende diretamente da qualidade do seu registro.",
+      "Tente descrever uma situação ou pensamento específico. Se vários eventos ocorreram durante o dia, é melhor criar um segundo registro e analisá-lo separadamente."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Às vezes, os instrumentos clássicos da TCC podem não ser suficientes, e nesses momentos é útil recorrer às melhores práticas de outras abordagens.",
+      "A análise profunda dos sonhos permitirá que você revele crenças intermediárias e profundas que são difíceis de acessar conscientemente.",
+      "Nosso modelo de AI realizará uma análise clássica dos seus sonhos, o que lhe dará a oportunidade de entender melhor o seu subconsciente, facilitando o trabalho com as técnicas da psicologia cognitiva."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Às vezes, tendemos a dar mais importância às palavras e ações dos outros do que realmente têm. Erros no trabalho são comuns e não definem seu valor como profissional ou como pessoa. Lembre-se de suas realizações e pontos fortes que fazem de você uma pessoa única.",
+    "solutions": [
+      "Tente separar a crítica construtiva das avaliações pessoais. Seu chefe talvez apenas tenha apontado um erro, o que é uma parte normal do processo de trabalho.",
+      "Pense nos sucessos e conquistas passadas no trabalho. Isso ajudará você a perceber que um erro não faz de você um fracasso.",
+      "Trabalhe no fortalecimento da sua autoestima. Quanto maior sua autoestima, menos você tenderá a interpretar as palavras dos outros como críticas à sua pessoa."
+    ],
+    "distortion": "Selecionado devido à generalização de um incidente (erro no trabalho) para uma avaliação geral da personalidade (\"todos acham que sou um fracasso\")",
+    "negativeThought": "Eu sinto que todos ao meu redor me veem como um fracasso",
+    "adaptiveResponse": "Um erro no trabalho não define quem eu sou como profissional ou como pessoa. É importante aprender com os erros e lembrar dos meus sucessos e qualidades."
+  },
+  "mockGptDream": {
+    "common": "O sonho simboliza uma jornada interior através de medos e desejos ocultos. A atmosfera do castelo, o mar agitado e a destruição podem refletir um sentimento de instabilidade e experiências emocionais profundas. A psicanálise interpreta esses sonhos como a expressão de conflitos internos e a busca por autoconhecimento.",
+    "symbols": [
+      "🏰 Castelo: Símbolo de segurança, poder e isolamento. Pode indicar seu estado interior e limites.",
+      "🌊 Mar agitado: Símbolo de emoções fortes, medos subconscientes e mudanças.",
+      "🔮 Espelho maciço: Símbolo de autoconhecimento, reflexo do \"eu\" interior e sua percepção."
+    ],
+    "transfer": [
+      "🧑‍💼 Seu reflexo no espelho com mudanças pode refletir seu desejo de entender e aceitar sua verdadeira essência.",
+      "🏰 O castelo pode representar sua proteção e isolamento do mundo exterior, e sua destruição – o medo de perder essa proteção.",
+      "🌊 O mar, tornando-se mais agitado, pode simbolizar suas crescentes experiências emocionais e o medo diante de forças incontroláveis."
+    ],
+    "desires": "Desejo oculto de obter compreensão e controle sobre suas emoções e medos profundos, e busca por iluminação interior e autoconhecimento.",
+    "fears": "Medo de mudanças e instabilidade, de perder o controle e de ver o mundo familiar ser destruído.",
+    "middle": "Eu busco estabilidade e segurança na minha vida.",
+    "deep": "Eu acredito que as forças e emoções internas podem ser destrutivas, e preciso estar preparado para quaisquer mudanças e desafios.",
+    "conclusion": "O sonho reflete conflitos e medos internos relacionados a mudanças e autoconhecimento. Sua psique tenta integrar novas percepções e lidar com experiências emocionais profundas."
+  }
 }

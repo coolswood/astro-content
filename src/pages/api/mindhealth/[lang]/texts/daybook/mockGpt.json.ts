@@ -20,10 +20,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const content = await loadI18nJson<MockGpt>(
-      lang,
-      'texts/daybook/mockGpt.json',
-    );
+    const daybookModules = import.meta.glob<{
+      default: { mockGpt: MockGpt };
+    }>('@/i18n/*/texts/daybook.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/daybook.json`;
+    const module = daybookModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const content = module.default.mockGpt;
 
     const payload = {
       consolation: content.consolation ?? '',

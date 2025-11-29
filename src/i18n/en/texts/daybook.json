@@ -1,7 +1,63 @@
 {
-  "h2": "Wellness Journal",
-  "texts": [
-    "Chronicle your well-being in an unstructured format for reflective analysis.",
-    "Utilize this space as a daily log, capturing the day's events. Alternatively, detail specific scenarios for further exploration with a psychologist."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Our team has developed a unique algorithm for analyzing journal entries, which greatly helps users in examining their thoughts. Our model has been trained using open data and educational materials on cognitive behavioral therapy (CBT).",
+      "Here are some recommendations to improve the quality of your entry analysis:",
+      "Describe not only events but also delve into your emotions and thoughts in detail. Remember that the quality of the analysis directly depends on the quality of your entry.",
+      "Try to describe one specific situation or thought. If multiple events occurred during the day, it's better to create a second entry and analyze it separately.",
+      "While the algorithm is designed to identify irrational and destructive beliefs in your entries, you can also mention positive moments."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Our team has developed a unique algorithm for analyzing diary entries that significantly helps users in analyzing their thoughts. Our model is trained on open data and training materials on cognitive behavioral therapy.",
+      "You can describe a situation that worries you or share your feelings in a free form. Our algorithm will analyze your text and give you results that will help you better understand yourself and your thoughts.",
+      "Check out a demo of the analysis by clicking the button below.",
+      "Text to be analyzed:",
+      "<i>I feel like people around me see me as a failure. For example, today at work there was a mistake on my part. My supervisor asked me to correct it. However, his tone was such that I couldn't help but feel that he really thinks I am a failure.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Our team has developed a unique algorithm for analyzing records. AI will study your situation, help you look at it from a different perspective, and provide useful recommendations within the framework of CBT.",
+      "Describe not only the events but also elaborate on your emotions and thoughts. Remember that the quality of the analysis directly depends on the quality of your record.",
+      "Try to describe one specific situation or thought. If several events occurred in a day, it is better to create a second record and analyze it separately."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Sometimes classical CBT tools may not be enough; in these moments, it is helpful to turn to best practices from other approaches.",
+      "Deep dream psychoanalysis will allow you to uncover intermediate and deep beliefs that are hard to access consciously.",
+      "Our AI model will perform a classical psychoanalysis of your dream, giving you the opportunity to better understand your subconscious, which will facilitate working with cognitive psychology techniques."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Sometimes we tend to give more meaning to other people's words and actions than they actually have. Mistakes at work are common and they don't define your value as a professional or a person. Remember your achievements and strengths that make you unique.",
+    "solutions": [
+      "Try to separate constructive criticism from personal evaluations. Your boss may have simply pointed out a mistake, which is a normal part of the work process.",
+      "Think about past successes and achievements at work. This will help you see that one mistake doesn't make you a failure.",
+      "Work on strengthening your self-esteem. The higher your self-esteem, the less likely you are to perceive others' words as criticism of your personality."
+    ],
+    "distortion": "Chosen due to generalizing one incident (mistake at work) to an overall personality assessment (\"everyone thinks I'm a failure\")",
+    "negativeThought": "I feel that everyone around me thinks I'm a failure",
+    "adaptiveResponse": "One mistake at work doesn't define me as a professional or a person. It's important to learn from mistakes and remember your successes and qualities."
+  },
+  "mockGptDream": {
+    "common": "The dream symbolizes an inner journey through fears and hidden desires. The atmosphere of the castle, the stormy sea, and the destruction may reflect a sense of instability and deep emotional experiences. Psychoanalysis interprets such dreams as an expression of inner conflicts and the pursuit of self-knowledge.",
+    "symbols": [
+      "🏰 Castle: Symbol of security, power, and isolation. May indicate your inner state and boundaries.",
+      "🌊 Stormy sea: Symbol of strong emotions, subconscious fears, and changes.",
+      "🔮 Massive mirror: Symbol of self-knowledge, reflection of the inner «self» and its perception."
+    ],
+    "transfer": [
+      "🧑‍💼 Your altered reflection in the mirror may reflect your desire to understand and accept your true essence.",
+      "🏰 The castle may represent your protection and isolation from the outside world, and its destruction – the fear of losing this protection.",
+      "🌊 The sea becoming stormier may symbolize your growing emotional experiences and fear of uncontrollable forces."
+    ],
+    "desires": "The hidden desire to gain understanding and control over your deep emotions and fears, the aspiration for inner enlightenment and self-knowledge.",
+    "fears": "Fear of changes and instability, of losing control and the destruction of the familiar world.",
+    "middle": "I strive for stability and security in my life.",
+    "deep": "I believe that inner forces and emotions can be destructive, and I need to be ready for any changes and challenges.",
+    "conclusion": "The dream reflects inner conflicts and fears associated with changes and self-knowledge. Your psyche is trying to integrate new realizations and cope with deep emotional experiences."
+  }
 }

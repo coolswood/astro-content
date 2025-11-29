@@ -1,7 +1,63 @@
 {
-  "h2": "Günlük",
-  "texts": [
-    "Duygu durumunuzu ve düşüncelerinizi serbest biçimde yazın; sonra yeniden dönüp analiz edebilirsiniz.",
-    "Bu bölümü günün olaylarını not ettiğiniz kişisel bir günlük olarak kullanabilir ya da daha sonra — gerekirse bir psikologla birlikte — çalışmak üzere tek tek durumları kaydedebilirsiniz."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Ekibimiz, günlük kayıtlarını analiz eden ve düşünce ile duygularınızı daha derinlemesine anlamanıza yardımcı olan özgün bir algoritma geliştirdi. Model, açık veriler ve Bilişsel Davranışçı Terapi (BDT) kaynaklarıyla eğitildi.",
+      "Aşağıda, kayıtlarınızın analiz kalitesini artırmaya yardımcı olabilecek birkaç öneri bulabilirsiniz:",
+      "Yalnızca olayları değil, olan bitene dair duygularınızı ve düşüncelerinizi de yazın. Unutmayın: Kayıt ne kadar net ve ayrıntılıysa, analiz o kadar faydalı olur.",
+      "Tek bir somut durum ya da düşünceye odaklanmaya çalışın. Gün içinde birkaç önemli olay yaşandıysa, her biri için ayrı kayıt oluşturmak daha kullanışlıdır.",
+      "Algoritma, akıldışı ve yıkıcı kalıpları belirlemeye yardımcı olur; ancak denge ve gelişim için olumlu anları da not etmekten çekinmeyin."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Ekibimiz, günlük kayıtlarını analiz eden ve düşünce ile tepkilerinizi daha derinlemesine kavramanıza yardımcı olan özgün bir algoritma geliştirdi. Model, açık veriler ve Bilişsel Davranışçı Terapi kaynaklarıyla eğitildi.",
+      "Sizi kaygılandıran bir durumu betimleyebilir ya da serbest biçimde düşüncelerinizi paylaşabilirsiniz. Algoritma metninizi işler ve içinizde olup biteni daha iyi anlamanıza yardımcı olacak içgörüler sunar.",
+      "Aşağıdaki düğmeye basarak bir analiz örneğine bakabilirsiniz.",
+      "Analiz edilecek metin:",
+      "<i>Sanki çevremdekiler beni başarısız biri olarak görüyor. Bugün işte bir hata yaptım; yöneticim düzeltmemi istedi. Sesi bana soğuk ve yargılayıcı geldi, sanki gerçekten beni başarısız sanıyormuş gibi.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Ekibimiz, kayıtları analiz etmek için özgün bir algoritma geliştirdi. Yapay zekâ, durumunuzu inceleyip ona farklı bir açıdan bakmanıza yardımcı olur ve BDT çerçevesinde yararlı öneriler sunar.",
+      "Yalnızca olayları değil, duygularınızı ve düşüncelerinizi de ayrıntılı biçimde yazın. Unutmayın: Analizin niteliği doğrudan yazdıklarınızın niteliğine bağlıdır.",
+      "Tek bir somut durumu ya da düşünceyi betimlemeye çalışın. Gün içinde birkaç olay olduysa, her biri için ayrı kayıt oluşturup bunları ayrı ayrı analiz etmek daha iyidir."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Bazen BDT’nin standart araçları yeterli gelmeyebilir; böyle anlarda diğer psikolojik yaklaşımlardan yararlanmak faydalı olabilir.",
+      "Rüya analizi, gündelik yaşamda fark edilmesi zor olabilen derin duygulanımlar ve inançlara nazikçe dokunmayı sağlayabilir.",
+      "Yapay zekâ modelimiz, klasik yorum ilkelerine dayanarak rüyanızı inceler ve içsel süreçleri daha iyi anlamanıza; bilişsel psikoloji teknikleriyle çalışmanızı destekleyebilecek varsayımlar sunar."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Bazen başkalarının sözlerine ve tepkilerine gereğinden fazla anlam yükleriz. İşte yapılan hatalar herkesin başına gelir ve ne mesleki ne de insani değerimizi belirlemez. Sahip olduğunuz başarılar, güçlü yanlar ve deneyimler hem profesyonel hem de kişisel açıdan donanımlı olduğunuzu gösterir.",
+    "solutions": [
+      "İşle ilgili yapıcı yorumu, kişiliğe yönelik bir değerlendirmeden ayırmaya çalışın. Yönetici yalnızca görevle ilgili bir noktayı vurgulamış olabilir; bu, işleyişin doğal bir parçasıdır.",
+      "Geçmişte iyi başa çıktığınız anları ve başarılarınızı hatırlayın. Böylece tabloyu daha geniş görür ve tek bir olaydan genel hüküm vermezsiniz.",
+      "Özsaygınızı destekleyecek adımlar üzerinde çalışın. Kendinizi ne kadar güvende hissederseniz, iş yerindeki geri bildirimleri kişisel bir eleştiri gibi algılamanız o kadar zor olur."
+    ],
+    "distortion": "İşteki tek bir olayı (hata) tüm özdeğerine genelleyip kendini “herkes beni başarısız görüyor” diye etiketleme eğilimi nedeniyle seçildi.",
+    "negativeThought": "Sanki herkes beni başarısız biri olarak görüyor",
+    "adaptiveResponse": "Tek bir hata ne mesleki ne de insani kimliğimi tanımlamaz. Bu tür durumları, becerilerim ve geçmiş başarılarıma dayanarak öğrenme fırsatına çevirebilirim."
+  },
+  "mockGptDream": {
+    "common": "Rüyalar, korkular, yoğun duygular ve örtük arzular üzerinden içe doğru bir yolculuğu yansıtabilir. Şato, fırtınalı deniz ve yıkım atmosferi; istikrarsızlık hissi ve derin duygusal süreçlere işaret edebilir. Bu tür bir kurgu, zihnin iç çatışmaları anlamlandırma ve kendini keşfe yönelme çabasını sıkça simgeler.",
+    "symbols": [
+      "🏰 Şato: Güvenlik, özerklik ve sınırlar. Kişisel koruma ve iç alan ihtiyacını yansıtabilir.",
+      "🌊 Fırtınalı deniz: Yoğun duygular, iç dalgalanmalar ve değişim.",
+      "🔮 Büyük ayna: Öz-bilinç, sahici “ben”le temas ve içsel yansıtma."
+    ],
+    "transfer": [
+      "🧑‍💼 Aynada değişen benlik imgesi, sahici kimliği arayışa ve iç nitelikleri daha iyi anlama isteğine işaret edebilir.",
+      "🏰 Şato, koruma ve kişisel sınırlar anlamına gelebilir; yıkımı ise bunları yitirme korkusu ya da gerilim yaratan önemli değişimler olabilir.",
+      "🌊 Şiddetlenen deniz, yükselen duyguları ve denetimi zor olanla yüzleşme kaygısını yansıtabilir."
+    ],
+    "desires": "Derin duyguları daha iyi anlamak, içsel açıklık ve dayanıklılık kazanmak.",
+    "fears": "Değişim ve belirsizlik korkusu; denetim ve istikrarı yitirme kaygısı.",
+    "middle": "Yaşamımda kendimi daha sağlam ve güvende hissetmek istiyorum.",
+    "deep": "Bazen güçlü duyguların kontrolümden çıkabileceğinden endişe ediyorum; bu yüzden değişime hazırlanmak ve iç dayanağımı güçlendirmek istiyorum.",
+    "conclusion": "Bu rüya, istikrar arayışı, kendini anlama ve değişime uyumla ilgili iç süreçleri yansıtıyor olabilir. Zihin, yaşananları anlamlandırıp yeni içgörüleri bütünleştirmeye çalışıyor."
+  }
 }

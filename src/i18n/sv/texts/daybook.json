@@ -1,7 +1,63 @@
 {
-  "h2": "Dagbok",
-  "texts": [
-    "För anteckningar om ditt välbefinnande i fri form för senare analys.",
-    "Du kan använda detta avsnitt som en dagbok, registrera allt som händer under dagen. Eller notera specifika situationer för senare bearbetning med en psykolog."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Vårt team har utvecklat en unik algoritm för analys av dagboksanteckningar, som avsevärt hjälper användare att analysera sina tankar. Vår modell är tränad på öppna data och utbildningsmaterial inom kognitiv beteendeterapi (KBT).",
+      "Här är några rekommendationer för att förbättra kvaliteten på analysen av dina anteckningar:",
+      "Beskriv inte bara händelser, utan fördjupa dig även i dina känslor och tankar. Kom ihåg att kvaliteten på analysen är direkt beroende av kvaliteten på din anteckning.",
+      "Försök att beskriva en specifik situation eller tanke. Om flera händelser har inträffat under dagen, skapa hellre en andra anteckning och analysera den separat.",
+      "Även om algoritmen är inriktad på att hitta irrationella och destruktiva tankemönster i dina anteckningar, kan du också nämna positiva aspekter."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Vårt team har utvecklat en unik algoritm för analys av dagboksanteckningar, som avsevärt hjälper användare att analysera sina tankar. Vår modell är tränad på öppna data och utbildningsmaterial inom kognitiv beteendeterapi.",
+      "Du kan beskriva en situation som oroar dig eller dela med dig av dina upplevelser i fri form. Vår algoritm kommer att analysera din text och ge dig resultat som hjälper dig att bättre förstå dig själv och dina tankar.",
+      "Bekanta dig med en demonstrationsversion av analysen genom att klicka på knappen nedan.",
+      "Text för analys:",
+      "<i>Jag har en känsla av att människor omkring mig ser mig som en misslyckad person. Till exempel gjorde jag ett misstag på jobbet idag. Min chef bad mig att rätta till det. Men hans ton var sådan att jag inte kunde undgå att känna: han anser verkligen att jag är en misslyckad person.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Vårt team har utvecklat en unik algoritm för analys av anteckningar. AI kommer att studera din situation, hjälpa dig att se den från ett annat perspektiv och ge användbara rekommendationer inom ramen för KBT.",
+      "Beskriv inte bara händelser, utan fördjupa dig även i dina känslor och tankar. Kom ihåg att kvaliteten på analysen är direkt beroende av kvaliteten på din anteckning.",
+      "Försök att beskriva en specifik situation eller tanke. Om flera händelser har inträffat under dagen, skapa hellre en andra anteckning och analysera den separat."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Ibland kan klassiska KBT-verktyg vara otillräckliga, och i dessa stunder kan det vara bra att vända sig till bästa praxis från andra inriktningar.",
+      "En djupgående psykoanalys av drömmar kommer att låta dig upptäcka mellannivå- och djupa övertygelser som är svåråtkomliga för medvetandet.",
+      "Vår AI-modell kommer att genomföra en klassisk psykoanalys av din dröm, vilket ger dig möjlighet att bättre förstå ditt undermedvetna, vilket underlättar arbetet även med kognitiv psykologiska tekniker."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Ibland tenderar vi att tillskriva andras ord och handlingar större betydelse än de faktiskt har. Misstag på jobbet är vanliga och de definierar inte ditt värde som specialist eller människa. Kom ihåg dina prestationer och styrkor som gör dig unik.",
+    "solutions": [
+      "Försök att separera konstruktiv kritik från personliga bedömningar. Din chef påpekade förmodligen bara ett fel, vilket är en normal del av arbetsprocessen.",
+      "Tänk på tidigare framgångar och prestationer på jobbet. Detta hjälper dig att inse att ett misstag inte gör dig till en misslyckad person.",
+      "Arbeta med att stärka din självkänsla. Ju högre självkänsla du har, desto mindre benägen kommer du vara att uppfatta andras ord som kritik mot din person."
+    ],
+    "distortion": "Vald på grund av generalisering av en enstaka incident (misstag på jobbet) till en allmän bedömning av personligheten («alla anser mig vara en misslyckad person»)",
+    "negativeThought": "Jag känner att alla omkring mig anser att jag är en misslyckad person",
+    "adaptiveResponse": "Ett misstag på jobbet definierar mig inte som specialist eller människa. Det är viktigt att lära sig av misstagen och komma ihåg sina framgångar och kvaliteter."
+  },
+  "mockGptDream": {
+    "common": "Drömmen symboliserar en inre resa genom rädslor och dolda begär. Slottets atmosfär, det stormiga havet och förstörelsen kan spegla en känsla av instabilitet och djupa känslomässiga upplevelser. Psykoanalysen tolkar sådana drömmar som uttryck för inre konflikter och en strävan efter självkännedom.",
+    "symbols": [
+      "🏰 Slott: Symbol för trygghet, makt och isolering. Kan indikera ditt inre tillstånd och gränser.",
+      "🌊 Stormigt hav: Symbol för starka känslor, undermedvetna rädslor och förändringar.",
+      "🔮 Massiv spegel: Symbol för självkännedom, reflektion av det inre «jaget» och dess uppfattning."
+    ],
+    "transfer": [
+      "🧑‍💼 Din spegelbild med förändringar kan återspegla din strävan efter att förstå och acceptera ditt sanna väsen.",
+      "🏰 Slottet kan representera ditt skydd och isolering från omvärlden, och dess förstörelse – rädslan för att förlora detta skydd.",
+      "🌊 Havet som blir alltmer stormigt kan symbolisera dina växande känslomässiga upplevelser och rädsla för okontrollerbara krafter."
+    ],
+    "desires": "En dold önskan att finna förståelse och kontroll över dina djupa känslor och rädslor, en strävan efter inre upplysning och självkännedom.",
+    "fears": "Rädsla för förändringar och instabilitet, för förlust av kontroll och förstörelse av den välbekanta världen.",
+    "middle": "Jag strävar efter stabilitet och trygghet i mitt liv.",
+    "deep": "Jag tror att inre krafter och känslor kan vara destruktiva, och jag måste vara beredd på alla förändringar och utmaningar.",
+    "conclusion": "Drömmen återspeglar inre konflikter och rädslor relaterade till förändringar och självkännedom. Din psyke försöker integrera nya insikter och hantera djupa känslomässiga upplevelser."
+  }
 }

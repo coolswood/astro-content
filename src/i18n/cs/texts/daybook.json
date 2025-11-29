@@ -1,7 +1,63 @@
 {
-  "h2": "Deník",
-  "texts": [
-    "Zaznamenávejte si ve volné formě poznámky o svém duševním stavu pro následnou analýzu.",
-    "Tuto sekci můžete využít jako deník, zachytit vše, co se za den událo. Nebo zaznamenávat specifické situace pro následné zpracování s psychologem."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Náš tým vyvinul unikátní algoritmus pro analýzu deníkových záznamů, který výrazně pomáhá uživatelům analyzovat jejich myšlenky. Náš model je trénován na základě otevřených dat a vzdělávacích materiálů o kognitivně-behaviorální terapii (KBT).",
+      "Zde je několik doporučení pro zvýšení kvality analýzy vašich záznamů:",
+      "Popisujte nejen události, ale také podrobně rozvíjejte své emoce a myšlenky. Pamatujte, že kvalita analýzy přímo závisí na kvalitě vašeho záznamu.",
+      "Snažte se popsat jednu konkrétní situaci nebo myšlenku. Pokud se během dne událo několik věcí, raději vytvořte druhý záznam a analyzujte ho samostatně.",
+      "I když je algoritmus zaměřen na hledání iracionálních a destruktivních vzorců ve vašich záznamech, můžete také zmiňovat pozitivní momenty."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Náš tým vyvinul unikátní algoritmus pro analýzu deníkových záznamů, který výrazně pomáhá uživatelům analyzovat jejich myšlenky. Náš model je trénován na základě otevřených dat a vzdělávacích materiálů o kognitivně-behaviorální terapii.",
+      "Můžete popsat znepokojující situaci nebo se podělit o své prožitky volnou formou. Náš algoritmus analyzuje váš text a poskytne vám výsledky, které vám pomohou lépe porozumět sobě a svým myšlenkám.",
+      "Seznamte se s ukázkovou variantou analýzy kliknutím na tlačítko níže.",
+      "Text k analýze:",
+      "<i>Mám pocit, že mě okolí vnímá jako neúspěšného člověka. Například dnes v práci došlo k chybě z mé strany. Můj nadřízený mě požádal, abych ji opravil. Jeho tón byl však takový, že jsem nemohl necítit: opravdu mě považuje za neúspěšného.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Náš tým vyvinul unikátní algoritmus pro analýzu záznamů. AI prostuduje vaši situaci, pomůže vám podívat se na ni z jiného úhlu a poskytne užitečná doporučení v rámci KBT.",
+      "Popisujte nejen události, ale také podrobně rozvíjejte své emoce a myšlenky. Pamatujte, že kvalita analýzy přímo závisí na kvalitě vašeho záznamu.",
+      "Snažte se popsat jednu konkrétní situaci nebo myšlenku. Pokud se během dne událo několik věcí, raději vytvořte druhý záznam a analyzujte ho samostatně."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Někdy klasické nástroje KBT nemusí stačit, v těchto momentech je užitečné obrátit se k nejlepším praktikám jiných směrů.",
+      "Hluboká psychoanalýza snu vám umožní odhalit těžko dostupná přechodná a hluboká přesvědčení ve vašem vědomí.",
+      "Náš AI model provede klasickou psychoanalýzu vašeho snu, což vám dá možnost lépe porozumět svému podvědomí, což usnadní práci i s technikami kognitivní psychologie."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Někdy máme tendenci přikládat slovům a činům ostatních větší význam, než ve skutečnosti mají. Chyby v práci jsou běžné a nedefinují vaši hodnotu jako odborníka nebo člověka. Pamatujte na své úspěchy a silné stránky, které vás činí jedinečným.",
+    "solutions": [
+      "Snažte se oddělovat konstruktivní kritiku od osobních hodnocení. Váš nadřízený pravděpodobně jen poukázal na chybu, což je normální součást pracovního procesu.",
+      "Zamyslete se nad minulými úspěchy a dosaženými výsledky v práci. To vám pomůže uvědomit si, že jedna chyba z vás nedělá neúspěšného člověka.",
+      "Pracujte na posílení sebevědomí. Čím vyšší je vaše sebevědomí, tím méně budete mít tendenci vnímat slova ostatních jako kritiku své osobnosti."
+    ],
+    "distortion": "Vybráno kvůli zobecnění jednoho incidentu (chyby v práci) na celkové hodnocení osobnosti (\"všichni mě považují za neúspěšného\")",
+    "negativeThought": "Mám pocit, že mě všichni kolem považují za neúspěšného",
+    "adaptiveResponse": "Jedna chyba v práci mě nedefinuje jako odborníka nebo člověka. Je důležité se z chyb poučit a pamatovat na své úspěchy a kvality."
+  },
+  "mockGptDream": {
+    "common": "Sen symbolizuje vnitřní cestu skrz strachy a skrytá přání. Atmosféra hradu, rozbouřené moře a destrukce mohou odrážet pocit nestability a hluboké emocionální prožitky. Psychoanalýza interpretuje takové sny jako vyjádření vnitřních konfliktů a touhu po sebepoznání.",
+    "symbols": [
+      "🏰 Hrad: Symbol bezpečí, moci a izolace. Může ukazovat na váš vnitřní stav a hranice.",
+      "🌊 Rozbouřené moře: Symbol silných emocí, podvědomých strachů a změn.",
+      "🔮 Masivní zrcadlo: Symbol sebepoznání, odraz vašeho vnitřního \"já\" a jeho vnímání."
+    ],
+    "transfer": [
+      "🧑‍💼 Váš odraz v zrcadle se změnami může odrážet vaši touhu pochopit a přijmout svou pravou podstatu.",
+      "🏰 Hrad může představovat vaši ochranu a izolaci od vnějšího světa a jeho zničení – strach ze ztráty této ochrany.",
+      "🌊 Moře, které se stává bouřlivějším, může symbolizovat vaše narůstající emocionální prožitky a strach z neovladatelných sil."
+    ],
+    "desires": "Skrytá touha získat porozumění a kontrolu nad svými hlubokými emocemi a strachy, snaha o vnitřní osvícení a sebepoznání.",
+    "fears": "Strach ze změn a nestability, ze ztráty kontroly a zničení známého světa.",
+    "middle": "Usiluji o stabilitu a bezpečí ve svém životě.",
+    "deep": "Věřím, že vnitřní síly a emoce mohou být destruktivní, a potřebuji být připraven na jakékoli změny a výzvy.",
+    "conclusion": "Sen odráží vnitřní konflikty a strachy spojené se změnami a sebepoznáním. Vaše psychika se snaží integrovat nová uvědomění a vypořádat se s hlubokými emocionálními prožitky."
+  }
 }

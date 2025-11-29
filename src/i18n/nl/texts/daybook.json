@@ -1,7 +1,63 @@
 {
-  "h2": "Dagboek",
-  "texts": [
-    "Houd notities bij over je welzijn in vrije vorm voor latere analyse.",
-    "Je kunt deze sectie gebruiken als een dagboek om alles wat er die dag is gebeurd vast te leggen, of specifieke situaties opschrijven voor verdere bespreking met een psycholoog."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Ons team heeft een uniek algoritme ontwikkeld voor de analyse van dagboeknotities, wat gebruikers aanzienlijk helpt bij het begrijpen van hun gedachten. Ons model is getraind op basis van openbare gegevens en lesmateriaal over cognitieve gedragstherapie (CGT).",
+      "Hier zijn enkele aanbevelingen om de kwaliteit van de analyse van je notities te verbeteren:",
+      "Beschrijf niet alleen de gebeurtenissen, maar geef ook gedetailleerd inzicht in je emoties en gedachten. Onthoud dat de kwaliteit van de analyse direct afhankelijk is van de kwaliteit van je invoer.",
+      "Probeer één specifieke situatie of gedachte te beschrijven. Als er meerdere gebeurtenissen op een dag hebben plaatsgevonden, maak dan een aparte notitie en analyseer deze afzonderlijk.",
+      "Hoewel het algoritme zich richt op het identificeren van irrationele en destructieve overtuigingen in je notities, kun je ook positieve momenten benoemen."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Ons team heeft een uniek algoritme ontwikkeld voor de analyse van dagboeknotities, wat gebruikers aanzienlijk helpt bij het begrijpen van hun gedachten. Ons model is getraind op basis van openbare gegevens en lesmateriaal over cognitieve gedragstherapie.",
+      "Je kunt in vrije vorm een situatie beschrijven die je bezighoudt of je gevoelens delen. Ons algoritme zal je tekst analyseren en resultaten geven die je helpen jezelf en je gedachten beter te begrijpen.",
+      "Bekijk een demonstratie van de analyse door op de onderstaande knop te klikken.",
+      "Tekst voor analyse:",
+      "<i>Ik heb het gevoel dat de mensen om me heen me als een mislukkeling zien. Vandaag maakte ik bijvoorbeeld een fout op het werk. Mijn leidinggevende vroeg me om die te corrigeren. Maar zijn toon was zo dat ik niet anders kon dan voelen: hij vindt me echt een mislukkeling.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Ons team heeft een uniek algoritme ontwikkeld voor het analyseren van dagboeknotities. De AI bestudeert jouw situatie, helpt je er vanuit een ander perspectief naar te kijken en geeft nuttige aanbevelingen binnen het kader van CGT.",
+      "Beschrijf niet alleen de gebeurtenissen, maar ga ook dieper in op je emoties en gedachten. Onthoud dat de kwaliteit van de analyse direct afhangt van de kwaliteit van je invoer.",
+      "Probeer je te richten op één specifieke situatie of gedachte. Als er meerdere gebeurtenissen op een dag zijn, is het beter om een aparte notitie te maken en deze afzonderlijk te analyseren."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Soms zijn de klassieke CGT-technieken niet voldoende. In zulke momenten kan het nuttig zijn om de beste praktijken uit andere benaderingen toe te passen.",
+      "Diepe droomanalyse kan helpen om moeilijk toegankelijke tussenliggende en diepgewortelde overtuigingen bloot te leggen.",
+      "Ons AI-model voert een klassieke psychoanalyse van je droom uit. Dit geeft je de kans om je onderbewustzijn beter te begrijpen, wat je zal helpen bij het toepassen van cognitieve psychologische technieken."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Soms geven we te veel betekenis aan de woorden en daden van anderen. Fouten op het werk zijn normaal en bepalen niet jouw waarde als professional of als mens. Denk aan je prestaties en sterke punten die jou uniek maken.",
+    "solutions": [
+      "Probeer constructieve kritiek te onderscheiden van persoonlijke oordelen. Je leidinggevende heeft waarschijnlijk gewoon een fout aangewezen, wat een normaal onderdeel van het werkproces is.",
+      "Denk aan je eerdere successen en prestaties op het werk. Dit helpt je inzien dat één fout je geen mislukkeling maakt.",
+      "Werk aan het versterken van je zelfvertrouwen. Hoe sterker je zelfbeeld, hoe minder je geneigd zult zijn om de woorden van anderen als een aanval op je persoonlijkheid te zien."
+    ],
+    "distortion": "Gekozen vanwege het generaliseren van één incident (een fout op het werk) naar een algehele beoordeling van de persoonlijkheid (\"iedereen vindt me een mislukkeling\").",
+    "negativeThought": "Ik heb het gevoel dat iedereen om me heen me een mislukkeling vindt.",
+    "adaptiveResponse": "Eén fout op het werk definieert mij niet als professional of als mens. Het is belangrijk om van fouten te leren en mijn successen en kwaliteiten te onthouden."
+  },
+  "mockGptDream": {
+    "common": "Dromen symboliseren een innerlijke reis door angsten en verborgen verlangens. De sfeer van het kasteel, de woeste zee en de vernietiging kunnen een gevoel van instabiliteit en diepe emotionele ervaringen weerspiegelen. In de psychoanalyse worden zulke dromen geïnterpreteerd als een uitdrukking van innerlijke conflicten en een zoektocht naar zelfinzicht.",
+    "symbols": [
+      "🏰 Kasteel: Symbool van bescherming, macht en isolatie. Kan wijzen op je innerlijke toestand en persoonlijke grenzen.",
+      "🌊 Woeste zee: Symbool van intense emoties, onbewuste angsten en veranderingen.",
+      "🔮 Groot spiegel: Symbool van zelfkennis, reflectie van het innerlijke 'zelf' en hoe je jezelf waarneemt."
+    ],
+    "transfer": [
+      "🧑‍💼 Je spiegelbeeld met veranderingen kan je verlangen weerspiegelen om jezelf beter te begrijpen en je ware identiteit te accepteren.",
+      "🏰 Het kasteel kan je bescherming en isolatie van de buitenwereld symboliseren, terwijl de vernietiging ervan de angst kan uitdrukken om deze bescherming te verliezen.",
+      "🌊 De zee die onstuimiger wordt, kan symbool staan voor je groeiende emotionele onrust en angst voor oncontroleerbare krachten."
+    ],
+    "desires": "Een verborgen verlangen naar begrip en controle over je diepste emoties en angsten, een streven naar innerlijke verlichting en zelfbewustzijn.",
+    "fears": "Angst voor verandering en instabiliteit, voor het verlies van controle en de vernietiging van je vertrouwde wereld.",
+    "middle": "Ik streef naar stabiliteit en veiligheid in mijn leven.",
+    "deep": "Ik geloof dat innerlijke krachten en emoties destructief kunnen zijn, en ik moet voorbereid zijn op veranderingen en uitdagingen.",
+    "conclusion": "De droom weerspiegelt innerlijke conflicten en angsten die verband houden met verandering en zelfinzicht. Je psyche probeert nieuwe inzichten te integreren en om te gaan met diepe emotionele ervaringen."
+  }
 }
