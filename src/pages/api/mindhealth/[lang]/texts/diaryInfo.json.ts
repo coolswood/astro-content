@@ -47,11 +47,21 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const [info, stepper, common] = await Promise.all([
-      loadI18nJson<DiaryInfo>(lang, 'texts/diary/info.json'),
-      loadI18nJson<DiaryStepper>(lang, 'texts/diary/stepper.json'),
-      loadI18nJson<Record<string, string>>(lang, 'common.json'),
-    ]);
+    const diaryModules = import.meta.glob<{
+      default: { info: DiaryInfo; stepper: DiaryStepper };
+    }>('@/i18n/*/texts/diary.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/diary.json`;
+    const module = diaryModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const info = module.default.info;
+    const stepper = module.default.stepper;
+    const common = await loadI18nJson<Record<string, string>>(lang, 'common.json');
 
     const stepperPayload = STEPPER_KEYS.reduce(
       (acc, key) => ({

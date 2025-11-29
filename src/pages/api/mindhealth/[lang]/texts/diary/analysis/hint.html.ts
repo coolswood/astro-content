@@ -24,10 +24,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const items = await loadI18nJson<string[]>(
-      lang,
-      'texts/diary/analysis/hint.json',
-    );
+    const diaryModules = import.meta.glob<{
+      default: { analysis: { hint: string[] } };
+    }>('@/i18n/*/texts/diary.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/diary.json`;
+    const module = diaryModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const items = module.default.analysis.hint;
 
     return new Response(render(items), {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
