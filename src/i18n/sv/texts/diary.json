@@ -1,0 +1,74 @@
+{
+  "info": {
+    "event": "Låt oss börja med att identifiera den trigger som orsakade negativa tankar eller känslor. Triggern kan vara en helt obetydlig händelse eller till och med din egen tanke.",
+    "thought": "Automatiska tankar genereras av händelsen och leder till uppkomsten av negativa känslor. Känslorna i sin tur orsakar försämrat tillstånd och uppkomst av nya automatiska tankar. Det blir en negativ spiral som är svår att bryta sig ur. För att förhindra att den uppstår, identifiera den automatiska tanken så snart som möjligt och skriv ner den i din dagbok.",
+    "body": "Försök att återvända till det ögonblick då triggern uppstod. Kom ihåg vilka obehagliga förnimmelser i kroppen som var närvarande i det ögonblicket.",
+    "behavior": "Hur var ditt beteende efteråt? Vad gjorde du efter att ha upplevt de negativa känslorna?",
+    "response": "Efter att ha identifierat den automatiska tanken måste du rikta din uppmärksamhet mot den och reflektera över den. Vanligtvis innehåller automatiska tankar logiska fel och förvrängningar. Din uppgift är att ge ett rationellt svar på förvrängningarna och forma en ny inställning.",
+    "conclusion": "Beskriv resultatet av ditt arbete - hur dina känslor och tankar har förändrats, vad du planerar att ändra i dina reaktioner om en liknande händelse skulle upprepas.",
+    "comparison": "Ge argument som bekräftar din automatiska tanke och argument som motbevisar den. Detta hjälper dig att förstå hur objektiv och verklig den är."
+  },
+  "stepper": {
+    "event": "Jag gjorde ett misstag med en arbetsuppgift på jobbet",
+    "thought": "Jag gör ständigt misstag i arbetet, alla omkring mig hatar mig för det",
+    "body": "Ökad hjärtfrekvens, tyngdkänsla i bröstet",
+    "behavior": "Smällde i dörren",
+    "response": "Det finns inga människor som inte gör misstag, och jag kan inte förutsäga vad andra tänker",
+    "conclusion": "Nästa gång jag gör ett misstag kommer jag inte att försöka gissa andras reaktioner. Jag kommer också att skapa en checklista för att kontrollera mitt arbete så att jag inte gör samma misstag igen"
+  },
+  "analysis": {
+    "description": [
+      "Förvandla dagboksskrivande från en rutin till en fascinerande process. Istället för att bara räkna upp händelser, berätta om din dag som en spännande historia.",
+      "Artificiell intelligens hjälper dig: den analyserar din berättelse och föreslår automatiskt hur du bäst kan fylla i din dagbok genom att välja lämpliga kategorier och fält.",
+      "Du kan alltid redigera och komplettera det som AI har föreslagit, vilket gör anteckningen ännu mer personlig och exakt.",
+      "Allt du skriver sparas i din dagbok, så din berättelse försvinner inte efter analysen.",
+      "AI gör processen att arbeta med tankar inte bara användbar utan också intressant, och förvandlar vanligt dagboksskrivande till ett kreativt självuttryck."
+    ],
+    "hint": [
+      "Beskriv vad som hände, dina känslor och tankar. I din berättelse, försök att nämna:",
+      "Vad det var för händelse",
+      "Vilken automatisk tanke som uppstod",
+      "Fysiska förnimmelser, känslor",
+      "Ett adaptivt svar på den automatiska tanken",
+      "Slutsats från situationen"
+    ]
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Registrering av känslor istället för tankar",
+      "description": "Känslor kan inte motbevisas i ett adaptivt svar, de bör registreras i ett separat steg.",
+      "wrong": "Jag känner ångest",
+      "right": "Jag tror att jag inte kommer att klara det"
+    },
+    {
+      "title": "Otydliga formuleringar",
+      "description": "Den automatiska tanken kan vara för generellt formulerad.",
+      "wrong": "Allt är dåligt",
+      "right": "Jag tror att mina kollegor anser att jag är inkompetent"
+    },
+    {
+      "title": "Registrering av fakta istället för tolkning",
+      "description": "Det är viktigt att notera din inställning till det som hänt. Fakta om händelsen noterade vi i föregående steg.",
+      "wrong": "Jag kom försent till jobbet",
+      "right": "Nu kommer chefen att tro att jag är oansvarig"
+    },
+    {
+      "title": "För komplicerad och förvirrande formulering",
+      "description": "Tankar bör skrivas ner enkelt och tydligt, annars blir det svårt att ge ett adaptivt svar.",
+      "wrong": "Jag har en tendens att anta att min åsikt inte spelar någon roll",
+      "right": "Min åsikt är inte viktig för någon"
+    },
+    {
+      "title": "Överhoppning av den automatiska tanken",
+      "description": "Vissa människor skriver direkt ner alternativa tankar eller svar på automatiska tankar.",
+      "wrong": "Jag måste tänka positivt",
+      "right": "Jag är inte säker på att jag klarar det"
+    },
+    {
+      "title": "Ignorering av nyckelakningar",
+      "description": "Ibland registrerar människor bara de tankar som verkar mer acceptabla och ignorerar de huvudsakliga eller smärtsamma automatiska tankarna.",
+      "wrong": "Jag oroar mig lite för framtiden",
+      "right": "Jag kommer aldrig att lyckas"
+    }
+  ]
+}

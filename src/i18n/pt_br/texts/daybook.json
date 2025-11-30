@@ -1,7 +1,71 @@
 {
-  "h2": "Diário",
-  "texts": [
-    "Registre como você está se sentindo de forma livre para análise posterior.",
-    "Você pode usar esta seção como um diário, anotando tudo o que aconteceu no seu dia. Ou pode registrar situações específicas para trabalhar com seu psicólogo mais tarde."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Nossa equipe desenvolveu um algoritmo exclusivo para analisar registros de diário, ajudando significativamente os usuários a refletirem sobre seus pensamentos. Nosso modelo foi treinado com base em dados abertos e materiais educacionais sobre terapia cognitivo-comportamental (TCC).",
+      "Aqui estão algumas recomendações para melhorar a qualidade da análise dos seus registros:",
+      "Descreva não apenas os eventos, mas também detalhe suas emoções e pensamentos. Lembre-se de que a qualidade da análise depende diretamente da qualidade do seu registro.",
+      "Tente descrever uma situação ou pensamento específico. Se vários eventos ocorreram no mesmo dia, é melhor criar um segundo registro e analisá-lo separadamente.",
+      "Embora o algoritmo tenha sido projetado para identificar crenças irracionais e destrutivas em seus registros, você também pode mencionar momentos positivos."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Nossa equipe desenvolveu um algoritmo exclusivo para análise de registros de diário, que auxilia significativamente na compreensão de seus pensamentos. Nosso modelo foi treinado com base em dados abertos e materiais de estudo sobre terapia cognitivo-comportamental.",
+      "Você pode descrever uma situação que o preocupa ou compartilhar suas emoções livremente. Nosso algoritmo analisará seu texto e fornecerá resultados que ajudarão você a se conhecer melhor.",
+      "Confira uma análise demonstrativa clicando no botão abaixo.",
+      "Texto para análise:",
+      "<i>Sinto que as pessoas ao meu redor me veem como um fracassado. Por exemplo, hoje cometi um erro no trabalho. Meu chefe pediu que eu corrigisse, mas seu tom me fez sentir que ele realmente me considera um fracassado.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Nossa equipe desenvolveu um algoritmo exclusivo para análise de registros. A IA examinará sua situação, ajudará você a vê-la sob outra perspectiva e oferecerá recomendações úteis no contexto da TCC.",
+      "Descreva não apenas os acontecimentos, mas também detalhe suas emoções e pensamentos. Lembre-se de que a qualidade da análise depende da qualidade do seu registro.",
+      "Tente descrever uma situação ou pensamento específico. Se ocorreram vários eventos durante o dia, crie um registro separado para cada um e analise-os individualmente."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Às vezes, as ferramentas clássicas da TCC podem não ser suficientes, e nesses momentos é útil recorrer às melhores práticas de outras abordagens.",
+      "A análise profunda de sonhos pode revelar crenças intermediárias e profundas que estão fora do alcance da consciência.",
+      "Nosso modelo de IA realizará uma análise clássica do seu sonho, permitindo que você compreenda melhor seu subconsciente e facilite o trabalho com as técnicas da psicologia cognitiva."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Às vezes, atribuímos mais importância às palavras e ações dos outros do que elas realmente têm. Erros no trabalho são comuns e não definem seu valor como profissional ou pessoa. Lembre-se de suas conquistas e pontos fortes que tornam você único.",
+    "solutions": [
+      "Tente separar críticas construtivas de julgamentos pessoais. Seu chefe pode ter apenas apontado um erro, o que é parte normal do processo de trabalho.",
+      "Reflita sobre seus sucessos e conquistas anteriores. Isso ajudará você a perceber que um único erro não o define como fracassado.",
+      "Trabalhe no fortalecimento da autoestima. Quanto mais forte sua autoestima, menos você verá comentários como críticas à sua personalidade."
+    ],
+    "distortion": "Generalização de um único incidente (erro no trabalho) para uma avaliação geral da personalidade (\"todos me consideram um fracassado\").",
+    "negativeThought": "Sinto que todos ao meu redor me consideram um fracassado.",
+    "adaptiveResponse": "Um erro no trabalho não define quem eu sou como profissional ou pessoa. É importante aprender com os erros e lembrar dos meus sucessos e qualidades."
+  },
+  "mockGptDream": {
+    "common": "O sonho simboliza uma jornada interna através de medos e desejos ocultos. A imagem de um castelo, um mar revolto e destruição pode refletir sentimentos de instabilidade e profundas emoções. A psicanálise interpreta esses sonhos como uma expressão de conflitos internos e busca por autoconhecimento.",
+    "symbols": [
+      "🏰 Castelo: símbolo de proteção, poder e isolamento. Pode indicar seu estado interno e suas barreiras emocionais.",
+      "🌊 Mar revolto: representa emoções intensas, medos subconscientes e mudanças.",
+      "🔮 Espelho imponente: simboliza o autoconhecimento, o reflexo do eu interior e sua percepção."
+    ],
+    "transfer": [
+      "🧑‍💼 Seu reflexo no espelho com alterações pode indicar seu desejo de compreender e aceitar sua verdadeira essência.",
+      "🏰 O castelo pode representar sua proteção e isolamento do mundo exterior, enquanto sua destruição simboliza o medo de perder essa segurança.",
+      "🌊 O mar revolto pode simbolizar emoções intensas e o medo de forças incontroláveis."
+    ],
+    "desires": "Desejo oculto de alcançar compreensão e controle sobre suas emoções profundas e medos, buscando clareza e autodescoberta.",
+    "fears": "Medo de mudanças e instabilidade, de perder o controle e ver seu mundo desmoronar.",
+    "middle": "Eu busco estabilidade e segurança na minha vida.",
+    "deep": "Acredito que emoções intensas podem ser destrutivas, e sinto a necessidade de estar preparado para desafios e mudanças.",
+    "conclusion": "O sonho reflete conflitos internos e medos relacionados a mudanças e autoconhecimento. Sua mente busca integrar novos entendimentos e lidar com emoções profundas."
+  },
+  "daybookShare": {
+    "h2": "Compartilhe seus pensamentos com os outros",
+    "texts": [
+      "Compartilhe suas ideias e receba feedback de outros usuários!",
+      "Inspire outras pessoas com sua história, proponha um tema interessante para reflexão ou compartilhe algo que o incomoda. Sua ideia pode ser um apoio em um momento difícil ou simplesmente alegrar o dia de alguém.",
+      "Tudo isso é completamente anônimo, e você sempre poderá ocultar suas postagens se quiser."
+    ]
+  }
 }

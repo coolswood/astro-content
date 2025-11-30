@@ -35,7 +35,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const premium = await loadI18nJson<PremiumJson>(lang, 'texts/premium.json');
+    const premiumModules = import.meta.glob<{
+      default: PremiumJson;
+    }>('@/i18n/*/texts/premium.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/premium.json`;
+    const module = premiumModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const premium = module.default;
 
     const list = ITEMS.map(({ id, key, subscription }) => ({
       id,

@@ -1,0 +1,74 @@
+{
+  "info": {
+    "event": "Mari kita mulai dengan menentukan pemicu yang menyebabkan pikiran atau emosi negatif. Pemicunya bisa berupa kejadian yang sangat kecil atau bahkan pikiran Anda sendiri.",
+    "thought": "Pikiran otomatis dihasilkan oleh suatu peristiwa dan menyebabkan munculnya emosi negatif. Emosi pada gilirannya menyebabkan kondisi memburuk dan munculnya pikiran otomatis baru. Hasilnya adalah lingkaran negatif yang sulit diputus. Untuk mencegah terjadinya, segera identifikasi pikiran otomatis dan tuliskan dalam buku harian Anda.",
+    "body": "Cobalah untuk kembali ke momen ketika pemicu muncul. Ingatlah sensasi tidak menyenangkan apa yang Anda rasakan di tubuh Anda saat itu.",
+    "behavior": "Bagaimana perilaku Anda setelahnya? Apa yang Anda lakukan setelah mengalami emosi negatif?",
+    "response": "Setelah mengidentifikasi pikiran otomatis, perlu untuk memusatkan perhatian pada pikiran tersebut dan merenungkannya. Biasanya pikiran otomatis mengandung kesalahan logika dan distorsi. Tugas Anda adalah memberikan respons rasional terhadap distorsi tersebut dan membentuk pola pikir baru.",
+    "conclusion": "Jelaskan hasil dari pekerjaan Anda - bagaimana emosi dan pikiran Anda berubah, apa yang akan Anda ubah dalam reaksi Anda jika peristiwa serupa terulang.",
+    "comparison": "Berikan argumen yang mendukung pikiran otomatis Anda dan argumen yang membantahnya. Ini akan membantu Anda memahami seberapa objektif dan realistis pikiran tersebut."
+  },
+  "stepper": {
+    "event": "Saya mengacaukan tugas di tempat kerja",
+    "thought": "Saya selalu membuat kesalahan dalam pekerjaan, semua orang membenci saya karenanya",
+    "body": "Detak jantung meningkat, rasa berat di dada",
+    "behavior": "Membanting pintu",
+    "response": "Tidak ada orang yang tidak pernah membuat kesalahan, dan saya tidak bisa memprediksi pikiran orang lain",
+    "conclusion": "Lain kali ketika saya membuat kesalahan, saya tidak akan mencoba menebak reaksi orang lain. Saya juga akan membuat daftar periksa untuk memeriksa pekerjaan saya agar tidak mengulangi kesalahan yang sama"
+  },
+  "analysis": {
+    "description": [
+      "Ubahlah pengisian buku harian dari rutinitas menjadi proses yang menyenangkan. Alih-alih sekadar mencatat peristiwa biasa, ceritakan tentang hari Anda sebagai kisah yang menarik.",
+      "Kecerdasan buatan akan membantu Anda: AI akan menganalisis cerita Anda dan secara otomatis menyarankan cara terbaik untuk mengisi buku harian, memilih kategori dan kolom yang sesuai.",
+      "Anda selalu dapat mengedit dan melengkapi apa yang disarankan oleh AI, membuat catatan lebih personal dan akurat.",
+      "Semua yang ditulis akan tersimpan dalam buku harian, sehingga cerita Anda tidak akan hilang setelah dianalisis.",
+      "AI membuat proses bekerja dengan pikiran tidak hanya bermanfaat, tetapi juga menarik, mengubah pengisian buku harian biasa menjadi ekspresi kreatif."
+    ],
+    "hint": [
+      "Jelaskan apa yang terjadi, perasaan dan pikiran Anda. Dalam cerita Anda, cobalah untuk menyebutkan:",
+      "Peristiwa apa yang terjadi",
+      "Pikiran otomatis apa yang muncul",
+      "Sensasi fisik, emosi",
+      "Respons adaptif terhadap pikiran otomatis",
+      "Kesimpulan dari situasi tersebut"
+    ]
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Mencatat emosi alih-alih pikiran",
+      "description": "Perasaan tidak dapat dibantah dalam respons adaptif, mereka harus dicatat pada langkah terpisah.",
+      "wrong": "Saya merasa cemas",
+      "right": "Saya berpikir bahwa saya tidak akan bisa mengatasi ini"
+    },
+    {
+      "title": "Rumusan yang tidak jelas",
+      "description": "Pikiran otomatis bisa dicatat terlalu umum.",
+      "wrong": "Semuanya buruk",
+      "right": "Saya berpikir bahwa rekan kerja saya menganggap saya tidak kompeten"
+    },
+    {
+      "title": "Mencatat fakta alih-alih interpretasi",
+      "description": "Penting untuk mencatat sikap Anda terhadap apa yang terjadi. Kita sudah mencatat fakta kejadian pada langkah sebelumnya.",
+      "wrong": "Saya terlambat masuk kerja",
+      "right": "Sekarang bos akan berpikir bahwa saya tidak bertanggung jawab"
+    },
+    {
+      "title": "Rumusan yang terlalu rumit dan membingungkan",
+      "description": "Pikiran harus dicatat dengan sederhana dan jelas, jika tidak akan sulit untuk memberikan respons adaptif.",
+      "wrong": "Saya cenderung beranggapan bahwa pendapat saya tidak penting",
+      "right": "Pendapat saya tidak penting bagi siapapun"
+    },
+    {
+      "title": "Melewatkan pikiran otomatis",
+      "description": "Beberapa orang langsung mencatat pikiran alternatif atau jawaban terhadap pikiran otomatis.",
+      "wrong": "Saya harus berpikir positif",
+      "right": "Saya tidak yakin bisa mengatasinya"
+    },
+    {
+      "title": "Mengabaikan pikiran kunci",
+      "description": "Terkadang orang hanya mencatat pikiran yang tampak lebih dapat diterima, mengabaikan pikiran otomatis yang penting atau menyakitkan.",
+      "wrong": "Saya sedikit cemas tentang masa depan",
+      "right": "Saya tidak akan pernah berhasil"
+    }
+  ]
+}

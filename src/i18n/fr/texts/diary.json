@@ -1,0 +1,74 @@
+{
+  "info": {
+    "event": "Commençons par définir le déclencheur qui a provoqué des pensées ou des émotions négatives. Un déclencheur peut être un événement tout à fait insignifiant ou même votre propre pensée.",
+    "thought": "Les pensées automatiques sont générées par un événement et mènent à l'apparition d'émotions négatives. Ces émotions, à leur tour, provoquent une détérioration de l'état et l'émergence de nouvelles pensées automatiques. Il en résulte un cycle de négativité difficile à briser. Pour prévenir son apparition, identifiez le plus tôt possible la pensée automatique et notez-la dans un journal.",
+    "body": "Essayez de revenir au moment de l'apparition du déclencheur. Rappelez-vous quelles sensations désagréables étaient présentes dans votre corps à ce moment-là.",
+    "behavior": "Quel a été votre comportement par la suite ? Que avez-vous fait après avoir ressenti des émotions négatives ?",
+    "response": "Après avoir identifié la pensée automatique, il est nécessaire de lui prêter attention et de la réfléchir. En général, les pensées automatiques contiennent des erreurs logiques et des distorsions. Votre tâche est de répondre rationnellement aux distorsions et de former une nouvelle attitude.",
+    "conclusion": "Décrivez le résultat de votre travail - comment vos émotions et pensées ont changé, ce que vous envisagez de changer dans vos réactions si un événement similaire se reproduit.",
+    "comparison": "Donnez des arguments qui soutiennent votre pensée automatique et des arguments qui la réfutent. Cela vous aidera à comprendre à quel point elle est objective et réelle."
+  },
+  "stepper": {
+    "event": "J'ai raté une tâche au travail",
+    "thought": "Je fais tout le temps des erreurs dans mon travail, et tout le monde autour de moi me déteste pour cela.",
+    "body": "Augmentation des palpitations cardiaques, lourdeur dans la poitrine.",
+    "behavior": "Claquer la porte",
+    "response": "Il n'y a pas de personnes qui ne fassent pas d'erreurs, et je ne peux pas prédire les pensées de ceux qui m'entourent",
+    "conclusion": "La prochaine fois que je ferai une erreur, je n'essaierai pas de deviner la réaction des autres. Je conserverai également une liste de contrôle pour vérifier mon travail afin de ne pas commettre à nouveau la même erreur."
+  },
+  "analysis": {
+    "description": [
+      "Faites en sorte que remplir votre journal ne soit plus une corvée, mais un processus amusant. Au lieu de vous contenter de relater les événements, racontez votre journée sous la forme d'une histoire passionnante.",
+      "L'intelligence artificielle vous aidera : elle analysera votre histoire et vous suggérera automatiquement la meilleure façon de compléter votre journal en sélectionnant les catégories et les champs appropriés.",
+      "Vous pouvez toujours modifier et étoffer les suggestions de l'IA, ce qui rend l'enregistrement encore plus personnel et précis.",
+      "Tout ce qui est écrit sera sauvegardé dans un journal, de sorte que votre histoire ne sera pas perdue une fois analysée.",
+      "L'IA rend le processus de travail sur les pensées non seulement utile mais aussi intéressant, transformant le simple remplissage d'un journal en une expression créative de soi."
+    ],
+    "hint": [
+      "Décrivez ce qui s'est passé, vos sentiments et vos pensées. Dans votre récit, essayez de mentionner",
+      "Quel était cet événement ?",
+      "Quelle pensée automatique a surgi",
+      "Sensations physiques, émotions",
+      "Réponse adaptative à la pensée automatique",
+      "Conclusion de la situation"
+    ]
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Enregistrer les émotions au lieu des pensées",
+      "description": "Les émotions ne peuvent pas être réfutées dans une réponse adaptative et doivent être enregistrées dans une étape distincte.",
+      "wrong": "Je me sens anxieux",
+      "right": "Je pense que je ne pourrai pas y arriver"
+    },
+    {
+      "title": "Formulations vagues",
+      "description": "Un pensée automatique peut être notée de manière trop générale.",
+      "wrong": "Tout va mal",
+      "right": "Je pense que mes collègues me considèrent incompétent"
+    },
+    {
+      "title": "Enregistrer un fait au lieu d’une interprétation",
+      "description": "Il est important de noter votre ressenti envers l’événement. Le fait de l’événement a été enregistré à l’étape précédente.",
+      "wrong": "Je suis arrivé en retard au travail",
+      "right": "Maintenant, mon patron pensera que je suis irresponsable"
+    },
+    {
+      "title": "Formulation trop complexe et confuse",
+      "description": "Les pensées doivent être notées simplement et clairement, sinon il sera difficile de donner une réponse adaptative.",
+      "wrong": "J’ai tendance à croire que mon opinion n’a pas d’importance",
+      "right": "Mon opinion n’a d’importance pour personne"
+    },
+    {
+      "title": "Sauter la pensée automatique",
+      "description": "Certaines personnes notent immédiatement des pensées alternatives ou des réponses aux pensées automatiques.",
+      "wrong": "Je dois penser positivement",
+      "right": "Je ne suis pas sûr de pouvoir gérer cela"
+    },
+    {
+      "title": "Ignorer les pensées clés",
+      "description": "Parfois, les gens notent seulement les pensées qui semblent plus acceptables, en ignorant les pensées automatiques clés ou douloureuses.",
+      "wrong": "Je suis un peu inquiet pour l'avenir",
+      "right": "Je ne réussirai jamais"
+    }
+  ]
+}

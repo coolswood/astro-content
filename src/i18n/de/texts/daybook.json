@@ -1,7 +1,71 @@
 {
-  "h2": "Tagesjournal",
-  "texts": [
-    "Notieren Sie Ihr Befinden und Ihre Gedanken in freier Form, um später darauf zurückzukommen und sie zu analysieren.",
-    "Sie können diesen Bereich als persönliches Tagebuch nutzen oder einzelne Situationen festhalten, um sie anschließend gezielt zu bearbeiten – auch gemeinsam mit einer Psycholog*in."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Unser Team hat einen eigenen Algorithmus zur Analyse von Tagebucheinträgen entwickelt, der Ihnen hilft, Ihre Gedanken und Emotionen besser zu verstehen. Das Modell wurde auf offenen Daten sowie auf Materialien zur Kognitiven Verhaltenstherapie (KVT) trainiert.",
+      "Im Folgenden finden Sie einige Hinweise, mit denen Sie die Qualität der Analyse Ihrer Einträge verbessern können:",
+      "Beschreiben Sie nicht nur die Ereignisse, sondern auch Ihre Emotionen und Gedanken dazu. Denken Sie daran: Je präziser und detaillierter der Eintrag ist, desto hilfreicher ist die Auswertung.",
+      "Konzentrieren Sie sich möglichst auf eine konkrete Situation oder einen einzelnen Gedanken. Wenn sich im Laufe eines Tages mehrere wichtige Ereignisse ergeben, ist es sinnvoll, für jedes einen eigenen Eintrag anzulegen.",
+      "Der Algorithmus hilft, irrationale und dysfunktionale Überzeugungen zu erkennen – scheuen Sie sich jedoch nicht, auch positive Momente festzuhalten: Sie sind wichtig für Gleichgewicht und Entwicklung."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Unser Team hat einen eigenen Algorithmus zur Analyse von Tagebucheinträgen entwickelt, der Ihnen hilft, Ihre Gedanken und Reaktionen besser zu verstehen. Das Modell wurde auf offenen Daten sowie auf Materialien zur Kognitiven Verhaltenstherapie (KVT) trainiert.",
+      "Sie können eine Situation beschreiben, die Sie belastet, oder Ihre Gedanken frei formulieren. Der Algorithmus verarbeitet Ihren Text und liefert Erkenntnisse, die dabei helfen, sich selbst und das, was in Ihnen vorgeht, besser zu verstehen.",
+      "Ein Beispiel für die Analyse finden Sie über den Button unten.",
+      "Text zur Analyse:",
+      "<i>Mir scheint, dass andere mich als Versager*in sehen. Heute habe ich bei der Arbeit einen Fehler gemacht, und meine Führungskraft bat mich, ihn zu korrigieren. Der Tonfall wirkte auf mich kühl und tadelnd – so, als hielte man mich tatsächlich für eine*n Versager*in.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Unser Team hat einen eigenen Algorithmus zur Analyse Ihrer Einträge entwickelt. Die KI analysiert Ihre Situation, eröffnet eine neue Perspektive und gibt hilfreiche Empfehlungen im Rahmen der Kognitiven Verhaltenstherapie (KVT).",
+      "Beschreiben Sie nicht nur die Ereignisse, sondern schildern Sie auch Ihre Emotionen und Gedanken dazu ausführlich. Denken Sie daran: Die Qualität der Auswertung steht in direktem Zusammenhang mit der Qualität Ihres Eintrags.",
+      "Konzentrieren Sie sich möglichst auf eine konkrete Situation oder einen einzelnen Gedanken. Wenn sich an einem Tag mehrere Ereignisse ergeben, legen Sie am besten separate Einträge an und analysieren Sie diese jeweils separat."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Manchmal reichen die Standardwerkzeuge der Kognitiven Verhaltenstherapie (KVT) nicht aus; in solchen Momenten kann es hilfreich sein, Impulse aus anderen psychologischen Ansätzen zu nutzen.",
+      "Die Traumanalyse kann helfen, sich behutsam tief verwurzelten Erfahrungen und Überzeugungen zu nähern, die im Alltag nicht immer leicht zugänglich sind.",
+      "Unser KI-Modell analysiert Ihren Traum auf Basis klassischer Interpretationsprinzipien und schlägt Hypothesen vor, die helfen können, innere Prozesse besser zu verstehen und Ihre Arbeit mit Techniken der kognitiven Psychologie zu unterstützen."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Manchmal messen wir den Worten und Reaktionen anderer mehr Bedeutung bei, als ihnen zusteht. Fehler im Arbeitsalltag passieren jedem und sagen nichts über unseren Wert – weder als Fachkraft noch als Mensch. Sie haben Erfolge, Stärken und Erfahrungen, die Ihre berufliche und persönliche Kompetenz belegen.",
+    "solutions": [
+      "Unterscheiden Sie eine sachliche Rückmeldung zur Arbeit von einer Bewertung Ihrer Person. Vielleicht hat Ihre Führungskraft lediglich auf die Aufgabe hingewiesen – das ist ein normaler Teil des Arbeitsprozesses.",
+      "Erinnern Sie sich an frühere Erfolge und Situationen, in denen Sie Aufgaben gut gemeistert haben. Das hilft, die Situation mit mehr Abstand zu betrachten und keine weitreichenden Schlüsse aus einem einzelnen Vorfall zu ziehen.",
+      "Arbeiten Sie an der Stärkung Ihres Selbstwerts. Je sicherer Sie sich fühlen, desto leichter lassen sich Rückmeldungen annehmen, ohne sie als persönliche Kritik zu erleben."
+    ],
+    "distortion": "Ausgewählt wegen Übergeneralisierung: Aus einem einzelnen Vorfall (Fehler bei der Arbeit) wird auf Selbstwert und Selbstbild insgesamt geschlossen („Alle halten mich für eine*n Versager*in“).",
+    "negativeThought": "Mir scheint, dass alle mich für eine*n Versager*in halten",
+    "adaptiveResponse": "Ein einzelner Fehler definiert mich weder als Fachkraft noch als Mensch. Ich kann aus solchen Situationen lernen und mich auf meine Fähigkeiten sowie frühere Erfolge stützen."
+  },
+  "mockGptDream": {
+    "common": "Träume können eine innere Reise durch Ängste, starke Gefühle und verborgene Wünsche widerspiegeln. Die Szenerie aus Schloss, stürmischem Meer und Zerstörung kann ein Gefühl von Instabilität und tiefgreifenden emotionalen Prozessen symbolisieren. Solche Motive deuten häufig darauf hin, dass die Psyche innere Konflikte verarbeitet und sich der Selbsterkenntnis annähert.",
+    "symbols": [
+      "🏰 Schloss: Symbol für Sicherheit, Autonomie und Grenzen. Kann Ihr Bedürfnis nach Schutz und einem inneren Rückzugsraum widerspiegeln.",
+      "🌊 Stürmisches Meer: Bild starker Gefühle, innerer Unruhe und Veränderung.",
+      "🔮 Großer Spiegel: Symbol für Selbsterkenntnis, den Kontakt zum authentischen Selbst und innere Selbstreflexion."
+    ],
+    "transfer": [
+      "🧑‍💼 Ein sich im Spiegel veränderndes Selbstbild kann auf die Suche nach einer authentischen Identität und den Wunsch hinweisen, die eigenen inneren Qualitäten besser zu verstehen.",
+      "🏰 Das Schloss kann Schutz und persönliche Grenzen symbolisieren; seine Zerstörung wiederum die Angst vor deren Verlust oder bedeutsame Veränderungen, die Anspannung auslösen.",
+      "🌊 Eine sich steigernde Meeresbrandung kann wachsende Emotionen und Aufwühlungen spiegeln – ebenso die Sorge, mit etwas schwer Kontrollierbarem konfrontiert zu sein."
+    ],
+    "desires": "Der Wunsch, die eigenen tiefen Emotionen besser zu verstehen, innere Klarheit zu finden und Stabilität zu gewinnen.",
+    "fears": "Angst vor Veränderungen und Ungewissheit; Sorge, Kontrolle und Stabilität zu verlieren.",
+    "middle": "Ich möchte mich in meinem Leben stabil und sicher fühlen.",
+    "deep": "Manchmal fürchte ich, dass starke Emotionen außer Kontrolle geraten könnten; deshalb möchte ich auf Veränderungen vorbereitet sein und meine innere Standfestigkeit stärken.",
+    "conclusion": "Dieser Traum kann innere Prozesse widerspiegeln, die mit der Suche nach Stabilität, besserem Selbstverständnis und der Anpassung an Veränderungen zusammenhängen. Die Psyche versucht, Erlebtes zu verarbeiten und neue innere Einsichten zu integrieren."
+  },
+  "daybookShare": {
+    "h2": "Teilen Sie Ihre Gedanken mit anderen",
+    "texts": [
+      "Tauschen Sie Ideen aus und erhalten Sie herzliche Unterstützung von anderen Nutzer*innen.",
+      "Erzählen Sie Ihre Geschichte, schlagen Sie ein Thema zum Nachdenken vor oder teilen Sie, was Sie gerade beschäftigt. Ihre Erfahrungen können jemandem in einer schwierigen Phase Halt geben – oder einfach ein Gefühl von Verbundenheit schenken.",
+      "Alle Beiträge sind anonym. Auf Wunsch können Sie sie jederzeit ausblenden oder löschen."
+    ]
+  }
 }

@@ -33,10 +33,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const content = await loadI18nJson<MoodStart>(
-      lang,
-      'texts/mood/start.json',
-    );
+    const moodModules = import.meta.glob<{
+      default: { start: MoodStart };
+    }>('@/i18n/*/texts/mood.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/mood.json`;
+    const module = moodModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const content = module.default.start;
 
     return new Response(render(content), {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },

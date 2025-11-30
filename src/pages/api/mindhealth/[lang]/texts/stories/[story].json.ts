@@ -37,10 +37,25 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   try {
-    const cards = await loadI18nJson<StoryCard[]>(
-      lang,
-      `stories/${story}.json`,
-    );
+    const storiesModules = import.meta.glob<{
+      default: Record<string, StoryCard[]>;
+    }>('@/i18n/*/stories.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/stories.json`;
+    const module = storiesModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const cards = module.default[story];
+
+    if (!cards) {
+      return new Response(JSON.stringify({ error: 'Story not found' }), {
+        status: 404,
+      });
+    }
 
     return new Response(JSON.stringify(cards), {
       headers: { 'Content-Type': 'application/json' },

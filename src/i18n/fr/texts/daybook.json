@@ -1,7 +1,71 @@
 {
-  "h2": "Journal quotidien",
-  "texts": [
-    "Tenez un registre de votre bien-être sous forme libre afin de pouvoir l'analyser ultérieurement.",
-    "Vous pouvez utiliser cette section comme un journal pour noter tout ce qui s'est passé au cours de la journée. Vous pouvez également y noter des situations spécifiques en vue d'un travail plus approfondi avec un psychologue."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Notre équipe a développé un algorithme unique pour analyser les entrées de journal, ce qui aide considérablement les utilisateurs à examiner leurs pensées. Notre modèle a été entraîné à partir de données ouvertes et de supports pédagogiques sur la thérapie cognitive et comportementale (TCC).",
+      "Voici quelques recommandations pour améliorer la qualité de l'analyse de vos entrées :",
+      "Décrivez non seulement les événements, mais aussi vos émotions et pensées en détail. N'oubliez pas que la qualité de l'analyse dépend directement de la qualité de votre entrée.",
+      "Essayez de décrire une situation ou une pensée spécifique. S'il y a eu plusieurs événements dans la journée, il est préférable de créer une seconde entrée et de l'analyser séparément.",
+      "Bien que l'algorithme soit conçu pour détecter les croyances irrationnelles et destructrices dans vos entrées, vous pouvez également mentionner des moments positifs."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Notre équipe a développé un algorithme unique pour analyser les entrées de journal, ce qui aide considérablement les utilisateurs à analyser leurs pensées. Notre modèle est formé à partir de données ouvertes et de matériel de formation à la thérapie cognitivo-comportementale.",
+      "Vous pouvez décrire une situation qui vous préoccupe ou partager vos sentiments dans un formulaire libre. Notre algorithme analysera votre texte et vous donnera des résultats qui vous aideront à mieux vous comprendre et à mieux comprendre vos pensées.",
+      "Découvrez une démonstration de l'analyse en cliquant sur le bouton ci-dessous.",
+      "Texte à analyser :",
+      "<i>J'ai l'impression que les gens autour de moi me considèrent comme un raté. Par exemple, aujourd'hui au travail, j'ai commis une erreur. Mon supérieur m'a demandé de la corriger. Cependant, son ton était tel que je n'ai pas pu m'empêcher de penser qu'il pense vraiment que je suis un raté.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Notre équipe a développé un algorithme unique pour analyser les enregistrements. L'IA étudiera votre situation, vous aidera à la voir sous un autre angle et vous fournira des recommandations utiles dans le cadre de la TCC.",
+      "Décrivez non seulement les événements, mais aussi développez vos émotions et pensées. Rappelez-vous que la qualité de l'analyse dépend directement de la qualité de votre enregistrement.",
+      "Essayez de décrire une situation ou une pensée spécifique. Si plusieurs événements se sont produits en une journée, il est préférable de créer un deuxième enregistrement et de l'analyser séparément."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Parfois, les outils classiques de la TCC peuvent ne pas suffire; dans ces moments-là, il est utile de se tourner vers les meilleures pratiques d'autres approches.",
+      "Une analyse approfondie des rêves vous permettra de découvrir des croyances intermédiaires et profondes difficiles d'accès pour la conscience.",
+      "Notre modèle d'IA effectuera une analyse classique de votre rêve, vous donnant l'opportunité de mieux comprendre votre subconscient, ce qui facilitera le travail avec les techniques de la psychologie cognitive."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Parfois, nous avons tendance à donner plus de sens aux paroles et aux actions des autres qu'elles n'en ont réellement. Les erreurs au travail sont courantes et ne définissent pas votre valeur en tant que professionnel ou personne. Rappelez-vous vos réalisations et vos points forts qui vous rendent unique.",
+    "solutions": [
+      "Essayez de séparer les critiques constructives des évaluations personnelles. Votre patron a peut-être simplement signalé une erreur, ce qui fait partie normale du processus de travail.",
+      "Pensez aux succès et aux réalisations passés au travail. Cela vous aidera à voir qu'une seule erreur ne fait pas de vous un échec.",
+      "Travaillez à renforcer votre estime de soi. Plus votre estime de soi est élevée, moins vous aurez tendance à percevoir les paroles des autres comme une critique de votre personnalité."
+    ],
+    "distortion": "Choisi en raison de la généralisation d'un incident (erreur au travail) à une évaluation globale de la personnalité («tout le monde pense que je suis un échec»)",
+    "negativeThought": "J'ai l'impression que tout le monde autour de moi pense que je suis un échec",
+    "adaptiveResponse": "Une erreur au travail ne me définit pas en tant que professionnel ou personne. Il est important d'apprendre de ses erreurs et de se souvenir de ses succès et de ses qualités."
+  },
+  "mockGptDream": {
+    "common": "Le rêve symbolise un voyage intérieur à travers les peurs et les désirs cachés. L'atmosphère du château, la mer agitée et la destruction peuvent refléter un sentiment d'instabilité et des expériences émotionnelles profondes. La psychanalyse interprète ces rêves comme une expression de conflits intérieurs et une quête de connaissance de soi.",
+    "symbols": [
+      "🏰 Château : Symbole de sécurité, de pouvoir et d'isolement. Peut indiquer votre état intérieur et vos limites.",
+      "🌊 Mer agitée : Symbole d'émotions fortes, de peurs subconscientes et de changements.",
+      "🔮 Miroir massif : Symbole de connaissance de soi, reflet du «moi» intérieur et de sa perception."
+    ],
+    "transfer": [
+      "🧑‍💼 Votre reflet altéré dans le miroir peut refléter votre désir de comprendre et d'accepter votre vraie nature.",
+      "🏰 Le château peut représenter votre protection et votre isolement du monde extérieur, et sa destruction – la peur de perdre cette protection.",
+      "🌊 La mer devenant plus agitée peut symboliser vos expériences émotionnelles croissantes et la peur des forces incontrôlables."
+    ],
+    "desires": "Le désir caché de comprendre et de contrôler vos émotions profondes et vos peurs, l'aspiration à l'illumination intérieure et à la connaissance de soi.",
+    "fears": "Peur des changements et de l'instabilité, de perdre le contrôle et de la destruction du monde familier.",
+    "middle": "Je cherche la stabilité et la sécurité dans ma vie.",
+    "deep": "Je crois que les forces intérieures et les émotions peuvent être destructrices, et je dois être prêt à tout changement et défi.",
+    "conclusion": "Le rêve reflète des conflits intérieurs et des peurs liés aux changements et à la connaissance de soi. Votre psyché essaie d'intégrer de nouvelles prises de conscience et de faire face à des expériences émotionnelles profondes."
+  },
+  "daybookShare": {
+    "h2": "Partagez vos pensées avec les autres",
+    "texts": [
+      "Partagez vos idées et recevez des retours d'autres utilisateurs !",
+      "Inspirez les autres avec votre histoire, proposez un sujet intéressant à méditer ou partagez ce qui vous préoccupe. Votre idée pourrait soutenir quelqu'un dans un moment difficile ou simplement remonter le moral de quelqu'un.",
+      "Tout cela est complètement anonyme et vous pouvez toujours masquer vos publications si vous le souhaitez."
+    ]
+  }
 }

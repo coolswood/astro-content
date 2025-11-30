@@ -1,7 +1,71 @@
 {
-  "h2": "Diario",
-  "texts": [
-    "Tieni traccia del tuo stato d'animo in forma libera per un'analisi successiva.",
-    "Puoi utilizzare questa sezione come un diario giornaliero per annotare tutto ciò che è accaduto durante il giorno oppure scrivere situazioni specifiche da elaborare successivamente con il tuo psicologo."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Il nostro team ha sviluppato un algoritmo unico per l'analisi delle annotazioni del diario, che aiuta significativamente gli utenti a esaminare i loro pensieri. Il nostro modello è stato addestrato utilizzando dati aperti e materiali di studio sulla terapia cognitivo-comportamentale (CBT).",
+      "Ecco alcuni consigli per migliorare la qualità dell'analisi delle tue annotazioni:",
+      "Descrivi non solo gli eventi, ma approfondisci anche le tue emozioni e i tuoi pensieri. Ricorda che la qualità dell'analisi dipende direttamente dalla qualità della tua annotazione.",
+      "Cerca di descrivere una situazione o un pensiero specifico. Se durante la giornata sono accaduti più eventi, è meglio creare una seconda annotazione e analizzarla separatamente.",
+      "Sebbene l'algoritmo sia progettato per individuare convinzioni irrazionali e distruttive nelle tue annotazioni, puoi anche menzionare momenti positivi."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Il nostro team ha sviluppato un algoritmo unico per l'analisi dei diari che aiuta notevolmente gli utenti a esaminare i loro pensieri. Il nostro modello è stato addestrato utilizzando dati aperti e materiali didattici basati sulla terapia cognitivo-comportamentale.",
+      "Potete descrivere una situazione che vi preoccupa o condividere i vostri sentimenti in forma libera. Il nostro algoritmo analizzerà il vostro testo e vi fornirà risultati che vi aiuteranno a comprendere meglio voi stessi e i vostri pensieri.",
+      "Date un'occhiata alla versione dimostrativa dell'analisi cliccando sul pulsante qui sotto.",
+      "Testo da analizzare:",
+      "<i>Provo la sensazione che gli altri mi vedano come un fallito. Ad esempio, oggi al lavoro ho commesso un errore. Il mio capo mi ha chiesto di correggerlo. Tuttavia, il suo tono era tale che non ho potuto fare a meno di sentire che lui mi consideri davvero un fallito.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Il nostro team ha sviluppato un algoritmo unico per l'analisi delle registrazioni. AI esaminerà la vostra situazione, vi aiuterà a vederla da una prospettiva diversa e fornirà consigli utili nell'ambito della terapia cognitivo-comportamentale.",
+      "Descrivete non solo gli eventi, ma approfondite anche le vostre emozioni e i vostri pensieri. Ricordate che la qualità dell'analisi dipende direttamente dalla qualità della vostra registrazione.",
+      "Cercate di descrivere una situazione o un pensiero specifico. Se durante la giornata si sono verificati più eventi, è meglio creare una seconda registrazione e analizzarla separatamente."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "A volte gli strumenti classici della terapia cognitivo-comportamentale potrebbero non essere sufficienti, in questi momenti è utile rivolgersi alle migliori pratiche di altri approcci.",
+      "Un'analisi profonda dei sogni vi permetterà di rivelare convinzioni intermedie e profonde difficili da raggiungere con la coscienza.",
+      "Il nostro modello AI eseguirà un'analisi classica del vostro sogno, offrendovi l'opportunità di comprendere meglio il vostro subconscio, facilitando il lavoro con le tecniche della psicologia cognitiva."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "A volte tendiamo a dare più importanza alle parole e azioni degli altri di quanto effettivamente abbiano. Gli errori sul lavoro sono comuni e non definiscono il vostro valore come professionista o come persona. Ricordatevi dei vostri successi e delle vostre qualità, che vi rendono unici.",
+    "solutions": [
+      "Cercate di distinguere tra critica costruttiva e giudizi personali. Il vostro capo potrebbe semplicemente aver segnalato un errore, il che è una parte normale del processo lavorativo.",
+      "Pensate ai successi e ai risultati ottenuti in passato sul lavoro. Questo vi aiuterà a capire che un singolo errore non vi rende un fallimento.",
+      "Lavorate per rafforzare la vostra autostima. Più alta sarà la vostra autostima, meno tenderete a percepire le parole degli altri come critiche alla vostra persona."
+    ],
+    "distortion": "Selezionato a causa della generalizzazione di un singolo incidente (errore sul lavoro) in un giudizio globale sulla personalità (\"tutti mi considerano un fallimento\")",
+    "negativeThought": "Sento che tutti intorno a me mi considerano un fallimento",
+    "adaptiveResponse": "Un errore sul lavoro non definisce chi sono come professionista o persona. È importante imparare dagli errori e ricordarsi dei propri successi e qualità."
+  },
+  "mockGptDream": {
+    "common": "Il sogno simboleggia un viaggio interiore attraverso paure e desideri nascosti. L'atmosfera del castello, il mare in tempesta e la distruzione possono riflettere un senso di instabilità e intense emozioni. La psicoanalisi interpreta questi sogni come espressione di conflitti interiori e desiderio di autoconoscenza.",
+    "symbols": [
+      "🏰 Castello: Simbolo di sicurezza, potere e isolamento. Può indicare il vostro stato interiore e i confini personali.",
+      "🌊 Mare in tempesta: Simbolo di emozioni intense, paure subconscie e cambiamenti.",
+      "🔮 Specchio massiccio: Simbolo di autoconoscenza, riflesso del 'sé' interiore e della sua percezione."
+    ],
+    "transfer": [
+      "🧑‍💼 Il vostro riflesso nello specchio con dei cambiamenti potrebbe riflettere il vostro desiderio di comprendere e accettare la vostra vera essenza.",
+      "🏰 Il castello potrebbe rappresentare la vostra protezione e l'isolamento dal mondo esterno, e la sua distruzione il timore di perdere questa sicurezza.",
+      "🌊 Il mare che diventa sempre più burrascoso potrebbe simboleggiare i vostri crescenti turbamenti emotivi e la paura di forze incontrollabili."
+    ],
+    "desires": "Desiderio nascosto di ottenere comprensione e controllo sulle proprie emozioni profonde e paure, aspirazione all'illuminazione interiore e all'autoconoscenza.",
+    "fears": "Paura dei cambiamenti e dell'instabilità, timore di perdere il controllo e vedere distrutto il mondo familiare.",
+    "middle": "Aspiro alla stabilità e alla sicurezza nella mia vita.",
+    "deep": "Credo che le forze e le emozioni interiori possano essere distruttive, e devo essere pronto a qualsiasi cambiamento e sfida.",
+    "conclusion": "Il sogno riflette conflitti interiori e paure legate ai cambiamenti e all'autoconoscenza. La vostra psiche sta cercando di integrare nuove consapevolezze e affrontare intense emozioni profonde."
+  },
+  "daybookShare": {
+    "h2": "Condividi i Tuoi Pensieri con Altri",
+    "texts": [
+      "Condividi le tue idee e ricevi feedback da altri utenti!",
+      "Ispira gli altri con la tua storia, proponi un tema interessante su cui riflettere o condividi ciò che ti preoccupa. La tua idea potrebbe essere di sostegno in un momento difficile o semplicemente far sorridere qualcuno.",
+      "Tutto questo è completamente anonimo e puoi sempre nascondere i tuoi post se lo desideri."
+    ]
+  }
 }

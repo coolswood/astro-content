@@ -13,11 +13,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const items = await loadI18nJson<string[]>(
-      lang,
-      'texts/diary/analysis/description.json',
-    );
+    const diaryModules = import.meta.glob<{
+      default: { analysis: { description: string[] } };
+    }>('@/i18n/*/texts/diary.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/diary.json`;
+    const module = diaryModules[modulePath];
 
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const items = module.default.analysis.description;
     const html = items.map((text) => wrap('p', text)).join('');
 
     return new Response(html, {

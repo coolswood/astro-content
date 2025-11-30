@@ -1,7 +1,71 @@
 {
-  "h2": "Dziennik",
-  "texts": [
-    "Prowadź zapiski o swoim samopoczuciu w dowolnej formie do późniejszej analizy.",
-    "Możesz korzystać z tej sekcji jako dziennika, rejestrować wszystkie wydarzenia dnia lub zapisywać specyficzne sytuacje do późniejszej pracy z psychologiem."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Nasz zespół opracował unikalny algorytm do analizy wpisów w dzienniku, który znacząco pomaga użytkownikom w analizie ich myśli. Nasz model został wytrenowany na podstawie otwartych danych oraz materiałów edukacyjnych z zakresu terapii poznawczo-behawioralnej (CBT).",
+      "Oto kilka zaleceń dotyczących poprawy jakości analizy Twoich wpisów:",
+      "Opisuj nie tylko wydarzenia, ale także szczegółowo przedstawiaj swoje emocje i myśli. Pamiętaj, że jakość analizy zależy bezpośrednio od jakości Twojego wpisu.",
+      "Spróbuj opisać jedną konkretną sytuację lub myśl. Jeśli w ciągu dnia wydarzyło się kilka rzeczy, lepiej stwórz osobny wpis i przeanalizuj go oddzielnie.",
+      "Chociaż algorytm ma na celu identyfikację irracjonalnych i destrukcyjnych przekonań, możesz również uwzględniać pozytywne momenty."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Nasz zespół opracował unikalny algorytm do analizy wpisów w dzienniku, który znacząco pomaga użytkownikom w analizie ich myśli. Nasz model został wytrenowany na podstawie otwartych danych i materiałów edukacyjnych z terapii poznawczo-behawioralnej.",
+      "Możesz opisać sytuację, która cię martwi, lub podzielić się swoimi przeżyciami w dowolnej formie. Nasz algorytm przeanalizuje twój tekst i przedstawi wyniki, które pomogą ci lepiej zrozumieć siebie i swoje myśli.",
+      "Zapoznaj się z wersją demonstracyjną analizy, klikając przycisk poniżej.",
+      "Tekst do analizy:",
+      "<i>Czuję, że otoczenie widzi we mnie nieudacznika. Na przykład dzisiaj w pracy popełniłem błąd. Mój szef poprosił mnie o jego naprawienie. Jednak jego ton był taki, że nie mogłem nie poczuć, że naprawdę uważa mnie za nieudacznika.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Nasz zespół opracował unikalny algorytm do analizy wpisów. AI przeanalizuje twoją sytuację, pomoże spojrzeć na nią z innej perspektywy i udzieli przydatnych wskazówek w ramach CBT.",
+      "Opisuj nie tylko wydarzenia, ale także dokładnie ujawniaj swoje emocje i myśli. Pamiętaj, że jakość analizy zależy bezpośrednio od jakości twojego wpisu.",
+      "Postaraj się opisać jedną konkretną sytuację lub myśl. Jeśli w ciągu dnia wydarzyło się kilka zdarzeń, lepiej stwórz drugi wpis i przeanalizuj go osobno."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Czasami klasyczne narzędzia CBT mogą nie wystarczyć, w takich momentach warto sięgnąć po najlepsze praktyki z innych nurtów.",
+      "Głęboka psychoanaliza snu pozwoli ci odkryć trudno dostępne dla świadomości przekonania pośrednie i głębokie.",
+      "Nasz model AI przeprowadzi klasyczną psychoanalizę twojego snu, co da ci możliwość lepszego zrozumienia swojego podświadomości, co ułatwi pracę z technikami psychologii poznawczej."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Czasami mamy tendencję do nadawania większego znaczenia słowom i działaniom innych ludzi, niż one naprawdę mają. Błędy w pracy są normalne i nie definiują twojej wartości jako specjalisty lub człowieka. Pamiętaj o swoich osiągnięciach i mocnych stronach, które czynią cię wyjątkowym.",
+    "solutions": [
+      "Postaraj się oddzielić konstruktywną krytykę od osobistych ocen. Twój szef prawdopodobnie tylko zwrócił uwagę na błąd, co jest normalną częścią procesu pracy.",
+      "Pomyśl o swoich dotychczasowych sukcesach i osiągnięciach w pracy. Pomoże ci to dostrzec, że jeden błąd nie czyni cię nieudacznikiem.",
+      "Pracuj nad wzmocnieniem samooceny. Im wyższa będzie twoja samoocena, tym mniej będziesz skłonny odbierać słowa innych jako krytykę swojej osoby."
+    ],
+    "distortion": "Wybrane z powodu uogólnienia jednego incydentu (błąd w pracy) na ogólną ocenę osobowości (\"wszyscy uważają mnie za nieudacznika\")",
+    "negativeThought": "Czuję, że wszyscy wokół uważają mnie za nieudacznika",
+    "adaptiveResponse": "Jeden błąd w pracy nie definiuje mnie jako specjalisty ani człowieka. Ważne jest, aby uczyć się na błędach i pamiętać o swoich sukcesach i zaletach."
+  },
+  "mockGptDream": {
+    "common": "Sen symbolizuje wewnętrzną podróż przez lęki i ukryte pragnienia. Atmosfera zamku, wzburzone morze i zniszczenie mogą odzwierciedlać poczucie niestabilności i głębokie emocjonalne przeżycia. Psychoanaliza interpretuje takie sny jako wyraz wewnętrznych konfliktów i dążenie do samopoznania.",
+    "symbols": [
+      "🏰 Zamek: Symbol bezpieczeństwa, władzy i izolacji. Może wskazywać na twoje wewnętrzne stany i granice.",
+      "🌊 Wzburzone morze: Symbol silnych emocji, podświadomych lęków i zmian.",
+      "🔮 Ogromne lustro: Symbol samopoznania, odzwierciedlenie wewnętrznego \"ja\" i jego postrzegania."
+    ],
+    "transfer": [
+      "🧑‍💼 Twoje odbicie w lustrze z pewnymi zmianami może odzwierciedlać twoje dążenie do zrozumienia i zaakceptowania swojej prawdziwej natury.",
+      "🏰 Zamek może reprezentować twoją ochronę i izolację od świata zewnętrznego, a jego zniszczenie – lęk przed utratą tego bezpieczeństwa.",
+      "🌊 Morze, stające się bardziej wzburzone, może symbolizować narastające emocjonalne przeżycia i lęk przed niekontrolowanymi siłami."
+    ],
+    "desires": "Ukryte pragnienie zdobycia zrozumienia i kontroli nad swoimi głębokimi emocjami i lękami, dążenie do wewnętrznego oświecenia i samopoznania.",
+    "fears": "Lęk przed zmianami i niestabilnością, przed utratą kontroli i zniszczeniem znanego świata.",
+    "middle": "Dążę do stabilności i bezpieczeństwa w moim życiu.",
+    "deep": "Wierzę, że wewnętrzne siły i emocje mogą być niszczycielskie, dlatego muszę być gotów na wszelkie zmiany i wyzwania.",
+    "conclusion": "Sen odzwierciedla wewnętrzne konflikty i lęki związane ze zmianami i samopoznaniem. Twoja psychika próbuje zintegrować nowe świadomości i poradzić sobie z głębokimi emocjonalnymi przeżyciami."
+  },
+  "daybookShare": {
+    "h2": "Podziel się swoimi myślami z innymi",
+    "texts": [
+      "Dziel się swoimi pomysłami i otrzymuj informacje zwrotne od innych użytkowników!",
+      "Zainspiruj innych swoją historią, zaproponuj interesujący temat do przemyśleń lub podziel się tym, co cię niepokoi. Twoja idea może okazać się wsparciem w trudnym momencie lub po prostu poprawić komuś nastrój.",
+      "Wszystko to jest całkowicie anonimowe, a w każdej chwili możesz ukryć swoje wpisy, jeśli zechcesz."
+    ]
+  }
 }

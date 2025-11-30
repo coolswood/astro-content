@@ -55,12 +55,27 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   try {
-    const distortion = await loadI18nJson<DistortionJson>(
-      lang,
-      `distortions/${distortionParam}.json`,
-    );
+    const distortionsModules = import.meta.glob<{
+      default: Record<string, any>;
+    }>('@/i18n/*/distortions.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/distortions.json`;
+    const module = distortionsModules[modulePath];
 
-    const dialog = distortion.dialog.map((entry, index) => {
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const distortion = module.default[distortionParam];
+
+    if (!distortion) {
+      return new Response(JSON.stringify({ error: 'Distortion not found' }), {
+        status: 404,
+      });
+    }
+
+    const dialog = distortion.dialog.map((entry: any, index: number) => {
       if (typeof entry === 'string') {
         return {
           type: index % 2 === 0 ? MINE : YOURS,
@@ -85,7 +100,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/texts/distortions/[distortion].json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/texts/distortions/[distortion].json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

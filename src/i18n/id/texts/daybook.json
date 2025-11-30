@@ -1,7 +1,71 @@
 {
-  "h2": "Buku Harian",
-  "texts": [
-    "Catat tentang kondisi Anda dalam bentuk bebas untuk analisis di kemudian hari.",
-    "Anda dapat menggunakan bagian ini sebagai buku harian, mencatat semua yang terjadi sepanjang hari. Atau mencatat situasi spesifik untuk dibahas lebih lanjut dengan psikolog."
-  ]
+  "daybookRecommends": {
+    "texts": [
+      "Tim kami telah mengembangkan algoritma unik untuk menganalisis catatan harian, yang sangat membantu pengguna dalam menganalisis pikiran mereka. Model kami dilatih berdasarkan data terbuka dan materi pembelajaran tentang terapi perilaku kognitif (CBT).",
+      "Berikut beberapa rekomendasi untuk meningkatkan kualitas analisis catatan Anda:",
+      "Jelaskan tidak hanya peristiwa, tetapi juga uraikan secara detail emosi dan pikiran Anda. Ingat, kualitas analisis bergantung langsung pada kualitas catatan Anda.",
+      "Cobalah untuk mendeskripsikan satu situasi atau pikiran tertentu. Jika dalam sehari terjadi beberapa peristiwa, lebih baik buat catatan kedua dan analisis secara terpisah.",
+      "Meskipun algoritma ini bertujuan mencari pola pikir yang tidak rasional dan destruktif dalam catatan Anda, Anda juga dapat menyebutkan momen-momen positif."
+    ]
+  },
+  "daybookStart": {
+    "texts": [
+      "Tim kami telah mengembangkan algoritma unik untuk menganalisis catatan harian, yang sangat membantu pengguna dalam menganalisis pikiran mereka. Model kami dilatih berdasarkan data terbuka dan materi pembelajaran tentang terapi perilaku kognitif.",
+      "Anda dapat mendeskripsikan situasi yang mengkhawatirkan Anda atau berbagi perasaan Anda dengan bebas. Algoritma kami akan menganalisis teks Anda dan memberikan hasil yang membantu Anda lebih memahami diri dan pikiran Anda.",
+      "Lihat contoh demonstrasi analisis dengan mengklik tombol di bawah ini.",
+      "Teks untuk dianalisis:",
+      "<i>Saya merasa seolah-olah orang-orang di sekitar melihat saya sebagai orang yang gagal. Misalnya, hari ini terjadi kesalahan dari pihak saya di tempat kerja. Atasan saya meminta saya untuk memperbaikinya. Namun, nada bicaranya membuat saya tidak bisa tidak merasakan: dia benar-benar menganggap saya sebagai orang yang gagal.</i>"
+    ]
+  },
+  "gptCbt": {
+    "texts": [
+      "Tim kami telah mengembangkan algoritma unik untuk menganalisis catatan. AI akan mempelajari situasi Anda, membantu melihatnya dari sudut pandang berbeda, dan memberikan rekomendasi bermanfaat dalam kerangka CBT.",
+      "Jelaskan tidak hanya peristiwa, tetapi juga uraikan secara detail emosi dan pikiran Anda. Ingat, kualitas analisis bergantung langsung pada kualitas catatan Anda.",
+      "Cobalah untuk mendeskripsikan satu situasi atau pikiran tertentu. Jika dalam sehari terjadi beberapa peristiwa, lebih baik buat catatan kedua dan analisis secara terpisah."
+    ]
+  },
+  "gptCbtDream": {
+    "texts": [
+      "Terkadang alat CBT klasik mungkin tidak cukup, pada saat-saat seperti ini, bermanfaat untuk beralih ke praktik terbaik dari pendekatan lain.",
+      "Analisis mendalam terhadap mimpi Anda akan memungkinkan Anda mengungkap keyakinan perantara dan mendalam yang sulit diakses oleh kesadaran.",
+      "Model AI kami akan melakukan psikoanalisis klasik terhadap mimpi Anda, ini akan memberi Anda kesempatan untuk lebih memahami alam bawah sadar Anda, yang akan memudahkan pekerjaan dengan teknik psikologi kognitif."
+    ]
+  },
+  "mockGpt": {
+    "consolation": "Terkadang kita cenderung memberikan makna lebih pada kata-kata dan tindakan orang lain daripada yang sebenarnya mereka maksudkan. Kesalahan di tempat kerja adalah hal biasa dan tidak menentukan nilai Anda sebagai profesional atau sebagai manusia. Ingatlah prestasi dan kekuatan Anda yang membuat Anda unik.",
+    "solutions": [
+      "Cobalah memisahkan kritik konstruktif dari penilaian pribadi. Atasan Anda mungkin hanya menunjukkan kesalahan, yang merupakan bagian normal dari proses kerja.",
+      "Pikirkan tentang keberhasilan dan pencapaian masa lalu di tempat kerja. Ini akan membantu Anda melihat bahwa satu kesalahan tidak menjadikan Anda orang yang gagal.",
+      "Bekerjalah pada penguatan harga diri. Semakin tinggi harga diri Anda, semakin kecil kemungkinan Anda cenderung menafsirkan kata-kata orang lain sebagai kritik terhadap kepribadian Anda."
+    ],
+    "distortion": "Dipilih karena menggeneralisasi satu insiden (kesalahan di tempat kerja) menjadi penilaian umum tentang kepribadian (\"semua orang menganggap saya gagal\")",
+    "negativeThought": "Saya merasa semua orang di sekitar menganggap saya sebagai orang yang gagal",
+    "adaptiveResponse": "Satu kesalahan di tempat kerja tidak mendefinisikan saya sebagai profesional atau sebagai manusia. Penting untuk belajar dari kesalahan dan mengingat keberhasilan dan kualitas diri sendiri."
+  },
+  "mockGptDream": {
+    "common": "Mimpi melambangkan perjalanan batin melalui ketakutan dan keinginan tersembunyi. Suasana kastil, laut yang bergejolak, dan kehancuran dapat mencerminkan perasaan ketidakstabilan dan pengalaman emosional yang mendalam. Psikoanalisis menafsirkan mimpi seperti itu sebagai ungkapan konflik batin dan keinginan untuk pengenalan diri.",
+    "symbols": [
+      "🏰 Kastil: Simbol perlindungan, kekuasaan, dan isolasi. Dapat menunjukkan keadaan batin dan batasan Anda.",
+      "🌊 Laut bergejolak: Simbol emosi kuat, ketakutan bawah sadar, dan perubahan.",
+      "🔮 Cermin besar: Simbol pengenalan diri, refleksi dari \"diri\" batin dan persepsinya."
+    ],
+    "transfer": [
+      "🧑‍💼 Refleksi Anda di cermin dengan perubahan mungkin mencerminkan keinginan Anda untuk memahami dan menerima esensi sejati Anda.",
+      "🏰 Kastil dapat mewakili perlindungan dan isolasi Anda dari dunia luar, dan kehancurannya – ketakutan akan kehilangan perlindungan ini.",
+      "🌊 Laut yang semakin bergejolak dapat melambangkan pengalaman emosional Anda yang meningkat dan ketakutan akan kekuatan yang tidak terkendali."
+    ],
+    "desires": "Keinginan tersembunyi untuk mendapatkan pemahaman dan kendali atas emosi dan ketakutan mendalam Anda, keinginan untuk pencerahan batin dan pengenalan diri.",
+    "fears": "Ketakutan akan perubahan dan ketidakstabilan, akan kehilangan kendali dan kehancuran dunia yang familiar.",
+    "middle": "Saya berusaha untuk stabilitas dan keamanan dalam hidup saya.",
+    "deep": "Saya percaya bahwa kekuatan dan emosi batin dapat bersifat merusak, dan saya perlu siap menghadapi perubahan dan tantangan apa pun.",
+    "conclusion": "Mimpi mencerminkan konflik batin dan ketakutan terkait dengan perubahan dan pengenalan diri. Psikis Anda mencoba mengintegrasikan kesadaran baru dan mengatasi pengalaman emosional yang mendalam."
+  },
+  "daybookShare": {
+    "h2": "Bagikan pemikiran Anda dengan orang lain",
+    "texts": [
+      "Bagikan ide-ide Anda dan dapatkan umpan balik dari pengguna lain!",
+      "Inspirasi orang lain dengan cerita Anda, tawarkan topik menarik untuk direnungkan atau bagikan apa yang mengkhawatirkan Anda. Ide Anda bisa menjadi dukungan di saat sulit atau sekadar mencerahkan suasana hati seseorang.",
+      "Semua ini benar-benar anonim, dan Anda selalu dapat menyembunyikan catatan Anda jika Anda mau."
+    ]
+  }
 }

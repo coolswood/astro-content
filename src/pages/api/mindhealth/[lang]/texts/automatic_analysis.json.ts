@@ -19,10 +19,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const items = await loadI18nJson<AutomaticAnalysisItem[]>(
-      lang,
-      'texts/automatic_analysis.json',
-    );
+    const diaryModules = import.meta.glob<{
+      default: { automaticAnalysis: AutomaticAnalysisItem[] };
+    }>('@/i18n/*/texts/diary.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/diary.json`;
+    const module = diaryModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const items = module.default.automaticAnalysis;
 
     const payload = items.map((item, index) => ({
       id: IDS[index] ?? `item-${index}`,

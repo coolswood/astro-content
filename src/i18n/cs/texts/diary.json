@@ -1,0 +1,74 @@
+{
+  "info": {
+    "event": "Začněme definováním spouštěče, který vyvolal negativní myšlenky nebo emoce. Spouštěčem může být naprosto nevýznamná událost nebo dokonce vaše vlastní myšlenka.",
+    "thought": "Automatické myšlenky jsou vyvolány událostí a vedou ke vzniku negativních emocí. Emoce zase způsobují zhoršení stavu a vznik nových automatických myšlenek. Vzniká tak koloběh negativity, ze kterého je těžké se vymanit. Abyste zabránili jeho vzniku, co nejdříve identifikujte automatickou myšlenku a zapište ji do deníku.",
+    "body": "Zkuste se vrátit do okamžiku, kdy se spouštěč objevil. Vzpomeňte si, jaké nepříjemné tělesné pocity jste v tu chvíli měli.",
+    "behavior": "Jaké bylo vaše chování poté? Co jste udělali poté, co jste zažili negativní emoce?",
+    "response": "Po identifikaci automatické myšlenky je nutné na ni zaměřit pozornost a promyslet ji. Automatické myšlenky obvykle obsahují logické chyby a zkreslení. Vaším úkolem je poskytnout racionální odpověď na tato zkreslení a vytvořit nový postoj.",
+    "conclusion": "Popište výsledek vaší práce - jak se změnily vaše emoce a myšlenky, co plánujete změnit ve svých reakcích, pokud se podobná událost opakuje.",
+    "comparison": "Uveďte argumenty potvrzující vaši automatickou myšlenku a argumenty, které ji vyvracejí. To vám pomůže pochopit, nakolik je objektivní a reálná."
+  },
+  "stepper": {
+    "event": "Pokazil jsem úkol v práci",
+    "thought": "Neustále dělám chyby v práci, všichni kolem mě za to nenávidí",
+    "body": "Zrychlený tep, tíha na hrudi",
+    "behavior": "Práskl jsem dveřmi",
+    "response": "Neexistují lidé, kteří nedělají chyby, a nemohu předvídat myšlenky ostatních",
+    "conclusion": "Příště, když udělám chybu, nebudu se snažit hádat reakci okolí. Také si vytvořím kontrolní seznam pro kontrolu své práce, abych tuto chybu znovu neudělal"
+  },
+  "analysis": {
+    "description": [
+      "Proměňte vyplňování deníku z rutiny ve fascinující proces. Místo obyčejného výčtu událostí popište svůj den jako poutavý příběh.",
+      "Umělá inteligence vám pomůže: analyzuje váš příběh a automaticky navrhne, jak nejlépe vyplnit deník, vybere vhodné kategorie a pole.",
+      "Vždy budete moci upravit a doplnit to, co AI navrhla, což učiní záznam ještě osobnějším a přesnějším.",
+      "Vše, co napíšete, se uloží do deníku, takže váš příběh se po analýze neztratí.",
+      "AI dělá proces práce s myšlenkami nejen užitečným, ale i zajímavým, proměňuje běžné vyplňování deníku v kreativní sebevyjádření."
+    ],
+    "hint": [
+      "Popište, co se stalo, vaše pocity a myšlenky. Ve svém vyprávění se snažte zmínit:",
+      "O jakou událost šlo",
+      "Jaká automatická myšlenka se objevila",
+      "Fyzické pocity, emoce",
+      "Adaptivní odpověď na automatickou myšlenku",
+      "Závěr ze situace"
+    ]
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Zaznamenávání emocí místo myšlenek",
+      "description": "Pocity nelze vyvrátit v adaptivní odpovědi, měly by být zaznamenány v samostatném kroku.",
+      "wrong": "Cítím úzkost",
+      "right": "Myslím si, že to nezvládnu"
+    },
+    {
+      "title": "Nejasné formulace",
+      "description": "Automatická myšlenka může být zapsána příliš obecně.",
+      "wrong": "Všechno je špatně",
+      "right": "Myslím si, že mě kolegové považují za nekompetentního"
+    },
+    {
+      "title": "Zaznamenávání faktu místo interpretace",
+      "description": "Je důležité zachytit váš postoj k tomu, co se stalo. Faktickou událost jsme zaznamenali v předchozím kroku.",
+      "wrong": "Přišel jsem pozdě do práce",
+      "right": "Teď si šéf bude myslet, že jsem nezodpovědný"
+    },
+    {
+      "title": "Příliš složitá a komplikovaná formulace",
+      "description": "Myšlenky by měly být zapsány jednoduše a srozumitelně, jinak bude obtížné poskytnout adaptivní odpověď.",
+      "wrong": "Mám tendenci se domnívat, že můj názor nemá význam",
+      "right": "Můj názor nikoho nezajímá"
+    },
+    {
+      "title": "Vynechání automatické myšlenky",
+      "description": "Někteří lidé rovnou zapisují alternativní myšlenky nebo odpovědi na automatické myšlenky.",
+      "wrong": "Musím myslet pozitivně",
+      "right": "Nejsem si jistý, že to zvládnu"
+    },
+    {
+      "title": "Ignorování klíčových myšlenek",
+      "description": "Někdy lidé zaznamenávají pouze ty myšlenky, které se zdají přijatelnější, a ignorují klíčové nebo bolestivé automatické myšlenky.",
+      "wrong": "Trochu se obávám budoucnosti",
+      "right": "Nikdy nedosáhnu úspěchu"
+    }
+  ]
+}
