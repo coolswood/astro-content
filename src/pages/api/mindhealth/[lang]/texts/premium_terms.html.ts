@@ -23,10 +23,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const content = await loadI18nJson<HeadingPage>(
-      lang,
-      'texts/premium_terms.json',
-    );
+    const premiumModules = import.meta.glob<{
+      default: { terms: HeadingPage };
+    }>('@/i18n/*/texts/premium.json', { eager: true });
+    const modulePath = `/src/i18n/${lang}/texts/premium.json`;
+    const module = premiumModules[modulePath];
+
+    if (!module) {
+      return new Response(JSON.stringify({ error: 'Language not found' }), {
+        status: 404,
+      });
+    }
+
+    const content = module.default.terms;
 
     return new Response(render(content), {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },

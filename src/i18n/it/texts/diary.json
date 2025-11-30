@@ -32,5 +32,43 @@
       "Risposta adattiva al pensiero automatico",
       "Conclusione dalla situazione"
     ]
-  }
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Registrare le emozioni invece dei pensieri",
+      "description": "I sentimenti non possono essere confutati in una risposta adattiva e devono essere registrati in un passaggio separato.",
+      "wrong": "Mi sento ansioso",
+      "right": "Penso che non riuscirò a farcela"
+    },
+    {
+      "title": "Formulazioni vaghe",
+      "description": "Un pensiero automatico può essere registrato in modo troppo generale.",
+      "wrong": "Va tutto male",
+      "right": "Penso che i miei colleghi mi considerino incompetente"
+    },
+    {
+      "title": "Registrare un fatto invece di un'interpretazione",
+      "description": "È importante registrare il vostro atteggiamento verso l'evento. Il fatto è stato registrato nel passaggio precedente.",
+      "wrong": "Sono in ritardo al lavoro",
+      "right": "Ora il capo penserà che sono irresponsabile"
+    },
+    {
+      "title": "Formulazione troppo complessa e confusa",
+      "description": "I pensieri dovrebbero essere registrati in modo semplice e chiaro, altrimenti sarà difficile fornire una risposta adattiva.",
+      "wrong": "Tendo a credere che la mia opinione non conti",
+      "right": "La mia opinione non conta per nessuno"
+    },
+    {
+      "title": "Saltare il pensiero automatico",
+      "description": "Alcune persone registrano immediatamente pensieri alternativi o risposte ai pensieri automatici.",
+      "wrong": "Devo pensare positivamente",
+      "right": "Non sono sicuro di farcela"
+    },
+    {
+      "title": "Ignorare i pensieri chiave",
+      "description": "A volte le persone registrano solo i pensieri che sembrano più accettabili, ignorando i pensieri automatici chiave o dolorosi.",
+      "wrong": "Sono un po' preoccupato per il futuro",
+      "right": "Non avrò mai successo"
+    }
+  ]
 }

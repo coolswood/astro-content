@@ -32,5 +32,43 @@
       "Resposta adaptativa ao pensamento automático",
       "Conclusão tirada da situação"
     ]
-  }
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Registrar emoções em vez de pensamentos",
+      "description": "Sentimentos não podem ser refutados em uma resposta adaptativa e devem ser registrados em uma etapa separada.",
+      "wrong": "Sinto-me ansioso",
+      "right": "Penso que não conseguirei lidar com isso"
+    },
+    {
+      "title": "Formulações vagas",
+      "description": "Um pensamento automático pode ser registrado de forma muito geral.",
+      "wrong": "Tudo está ruim",
+      "right": "Acho que meus colegas me consideram incompetente"
+    },
+    {
+      "title": "Registrar um fato em vez de uma interpretação",
+      "description": "É importante registrar sua atitude em relação ao ocorrido. O fato foi registrado na etapa anterior.",
+      "wrong": "Cheguei atrasado ao trabalho",
+      "right": "Agora o chefe vai achar que sou irresponsável"
+    },
+    {
+      "title": "Formulação muito complexa e confusa",
+      "description": "Os pensamentos devem ser registrados de forma simples e clara, caso contrário, será difícil fornecer uma resposta adaptativa.",
+      "wrong": "Tendo a acreditar que minha opinião não importa",
+      "right": "Minha opinião não importa para ninguém"
+    },
+    {
+      "title": "Ignorando o pensamento automático",
+      "description": "Algumas pessoas registram imediatamente pensamentos alternativos ou respostas aos pensamentos automáticos.",
+      "wrong": "Eu preciso pensar positivamente",
+      "right": "Não tenho certeza se posso lidar com isso"
+    },
+    {
+      "title": "Ignorando pensamentos importantes",
+      "description": "Às vezes, as pessoas registram apenas os pensamentos que parecem mais aceitáveis, ignorando pensamentos automáticos importantes ou dolorosos.",
+      "wrong": "Estou um pouco preocupado com o futuro",
+      "right": "Nunca terei sucesso"
+    }
+  ]
 }

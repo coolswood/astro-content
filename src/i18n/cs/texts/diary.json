@@ -32,5 +32,43 @@
       "Adaptivní odpověď na automatickou myšlenku",
       "Závěr ze situace"
     ]
-  }
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Zaznamenávání emocí místo myšlenek",
+      "description": "Pocity nelze vyvrátit v adaptivní odpovědi, měly by být zaznamenány v samostatném kroku.",
+      "wrong": "Cítím úzkost",
+      "right": "Myslím si, že to nezvládnu"
+    },
+    {
+      "title": "Nejasné formulace",
+      "description": "Automatická myšlenka může být zapsána příliš obecně.",
+      "wrong": "Všechno je špatně",
+      "right": "Myslím si, že mě kolegové považují za nekompetentního"
+    },
+    {
+      "title": "Zaznamenávání faktu místo interpretace",
+      "description": "Je důležité zachytit váš postoj k tomu, co se stalo. Faktickou událost jsme zaznamenali v předchozím kroku.",
+      "wrong": "Přišel jsem pozdě do práce",
+      "right": "Teď si šéf bude myslet, že jsem nezodpovědný"
+    },
+    {
+      "title": "Příliš složitá a komplikovaná formulace",
+      "description": "Myšlenky by měly být zapsány jednoduše a srozumitelně, jinak bude obtížné poskytnout adaptivní odpověď.",
+      "wrong": "Mám tendenci se domnívat, že můj názor nemá význam",
+      "right": "Můj názor nikoho nezajímá"
+    },
+    {
+      "title": "Vynechání automatické myšlenky",
+      "description": "Někteří lidé rovnou zapisují alternativní myšlenky nebo odpovědi na automatické myšlenky.",
+      "wrong": "Musím myslet pozitivně",
+      "right": "Nejsem si jistý, že to zvládnu"
+    },
+    {
+      "title": "Ignorování klíčových myšlenek",
+      "description": "Někdy lidé zaznamenávají pouze ty myšlenky, které se zdají přijatelnější, a ignorují klíčové nebo bolestivé automatické myšlenky.",
+      "wrong": "Trochu se obávám budoucnosti",
+      "right": "Nikdy nedosáhnu úspěchu"
+    }
+  ]
 }

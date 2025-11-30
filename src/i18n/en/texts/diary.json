@@ -32,5 +32,43 @@
       "Adaptive response to automatic thought",
       "Conclusion"
     ]
-  }
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Recording emotions instead of thoughts",
+      "description": "Feelings cannot be refuted in an adaptive response and should be recorded in a separate step.",
+      "wrong": "I feel anxious",
+      "right": "I think I won’t be able to cope"
+    },
+    {
+      "title": "Vague formulations",
+      "description": "An automatic thought may be recorded too generally.",
+      "wrong": "Everything is bad",
+      "right": "I think my colleagues consider me incompetent"
+    },
+    {
+      "title": "Recording facts instead of interpretations",
+      "description": "It is important to note your attitude toward the event. The fact of the event was recorded in the previous step.",
+      "wrong": "I was late for work",
+      "right": "Now my boss will think I’m irresponsible"
+    },
+    {
+      "title": "Too complex and confusing formulation",
+      "description": "Thoughts should be recorded simply and clearly; otherwise, it will be difficult to provide an adaptive response.",
+      "wrong": "I tend to believe that my opinion doesn’t matter",
+      "right": "My opinion doesn’t matter to anyone"
+    },
+    {
+      "title": "Skipping the automatic thought",
+      "description": "Some people immediately record alternative thoughts or responses to automatic thoughts.",
+      "wrong": "I must think positively",
+      "right": "I’m not sure I can handle it"
+    },
+    {
+      "title": "Ignoring key thoughts",
+      "description": "Sometimes people only record thoughts that seem more acceptable, ignoring key or painful automatic thoughts.",
+      "wrong": "I’m a bit worried about the future",
+      "right": "I’ll never succeed"
+    }
+  ]
 }

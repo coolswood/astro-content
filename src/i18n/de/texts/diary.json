@@ -32,5 +32,43 @@
       "Ihre hilfreiche Antwort auf den automatischen Gedanken",
       "Welche Schlussfolgerung Sie aus dieser Situation gezogen haben"
     ]
-  }
+  },
+  "automaticAnalysis": [
+    {
+      "title": "Emotionen statt Gedanken aufschreiben",
+      "description": "Emotionen lassen sich für sich genommen weder widerlegen noch durch einen hilfreichen Alternativgedanken verändern. Wir erfassen sie separat; hier geht es darum, den Gedanken festzuhalten, der das Gefühl ausgelöst hat.",
+      "wrong": "Ich fühle mich ängstlich",
+      "right": "Ich denke, ich werde das nicht schaffen"
+    },
+    {
+      "title": "Zu allgemeine Formulierung",
+      "description": "Manchmal wird ein Gedanke sehr allgemein notiert, sodass unklar bleibt, was genau das Gefühl auslöst. Besser konkret formulieren.",
+      "wrong": "Alles ist schlecht",
+      "right": "Ich denke, dass meine Kolleg*innen mich für inkompetent halten"
+    },
+    {
+      "title": "Fakt statt Interpretation notieren",
+      "description": "Hier ist Ihre Deutung des Geschehens gefragt, nicht der bloße Fakt. Das Ereignis haben wir bereits zuvor festgehalten.",
+      "wrong": "Ich bin zur Arbeit zu spät gekommen",
+      "right": "Meine Führungskraft könnte jetzt denken, ich sei unzuverlässig"
+    },
+    {
+      "title": "Komplizierte, verworrene Formulierung",
+      "description": "Gedanken am besten einfach und klar formulieren – so lässt sich ein hilfreicher Alternativgedanke leichter finden.",
+      "wrong": "Ich neige dazu anzunehmen, dass meine Meinung keine Bedeutung hat",
+      "right": "Meine Meinung ist niemandem wichtig"
+    },
+    {
+      "title": "Den automatischen Gedanken überspringen",
+      "description": "Mitunter möchte man direkt zu positiven Aussagen übergehen. Wichtig ist jedoch, den automatischen Gedanken zunächst wahrzunehmen und festzuhalten, damit Sie ihn anschließend bearbeiten können.",
+      "wrong": "Ich sollte positiv denken",
+      "right": "Ich bin mir nicht sicher, ob ich das schaffe"
+    },
+    {
+      "title": "Schlüsselgedanken ignorieren",
+      "description": "Mitunter werden nur mildere Gedanken notiert, während die schmerzhaftesten gemieden werden. Gerade das Anerkennen der Schlüsselgedanken hilft, sich selbst besser zu verstehen.",
+      "wrong": "Ich mache mir ein wenig Sorgen um die Zukunft",
+      "right": "Ich werde nie Erfolg haben"
+    }
+  ]
 }
