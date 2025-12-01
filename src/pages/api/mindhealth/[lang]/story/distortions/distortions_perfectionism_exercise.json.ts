@@ -15,25 +15,33 @@ export const GET: APIRoute = async ({ params }) => {
     const story = JSON.parse(
       await fs.readFile(
         path.resolve(
-          `src/i18n/${lang}/story/distortions/perfectionism_exercise.json`,
+          `src/i18n/${lang}/story/distortions/perfectionism.json`,
         ),
         'utf-8',
       ),
     );
 
-    const screen1Steps: string[] = [`<h2>${story.title}</h2>`];
+    // Проверяем что есть секция exercise
+    if (!story.exercise) {
+      throw new Error(`exercise section not found in perfectionism.json for language ${lang}`);
+    }
 
-    story.screen_1.texts.forEach((text: string) => {
+    // Используем данные из секции exercise
+    const exercise = story.exercise;
+
+    const screen1Steps: string[] = [`<h2>${exercise.title}</h2>`];
+
+    exercise.screen_1.texts.forEach((text: string) => {
       screen1Steps.push(`<p>${text}</p>`);
     });
 
     screen1Steps.push(
-      q(story.screen_1.quote.text, story.screen_1.quote.author),
+      q(exercise.screen_1.quote.text, exercise.screen_1.quote.author),
     );
 
     const screen2Steps: string[] = [];
 
-    story.screen_2.texts.forEach((text: string, index: number) => {
+    exercise.screen_2.texts.forEach((text: string, index: number) => {
       if (index === 0 || index === 14) {
         screen2Steps.push(`<h2>${text}</h2>`);
         return;
@@ -49,7 +57,7 @@ export const GET: APIRoute = async ({ params }) => {
 
     const screen3Steps: string[] = [];
 
-    story.screen_3.texts.forEach((text: string, index: number) => {
+    exercise.screen_3.texts.forEach((text: string, index: number) => {
       if (index === 4 || index === 9 || index === 11) {
         screen3Steps.push(`<h2>${text}</h2>`);
         return;
@@ -65,7 +73,7 @@ export const GET: APIRoute = async ({ params }) => {
 
     const screen4Steps: string[] = [];
 
-    story.screen_4.texts.forEach((text: string, index: number) => {
+    exercise.screen_4.texts.forEach((text: string, index: number) => {
       if ([0, 7, 10, 14, 15, 19, 22].includes(index)) {
         screen4Steps.push(`<h2>${text}</h2>`);
         return;
@@ -118,11 +126,11 @@ export const GET: APIRoute = async ({ params }) => {
     });
   } catch (err) {
     console.error(
-      `Error generating src/pages/api/mindhealth/[lang]/story/distortions/distortions_perfectionism_exercise.json.ts:`,
+      `Error generating src/pages/api/mindhealth/[lang]/story/distortions/distortions_perfectionism.json.ts:`,
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/distortions/distortions_perfectionism_exercise.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/distortions/distortions_perfectionism.json.ts: ${err instanceof Error ? err.message : String(err)}`,
     );
   }
 };

@@ -23,10 +23,19 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const content = await loadI18nJson<HeadingPage>(
+    // Загружаем diary.json и извлекаем секцию smer
+    const diaryContent = await loadI18nJson<{
+      smer?: HeadingPage;
+    }>(
       lang,
-      'texts/intermediate/smer.json',
+      'texts/diary.json',
     );
+
+    const content = diaryContent.smer;
+
+    if (!content) {
+      throw new Error(`smer section not found in diary.json for language ${lang}`);
+    }
 
     return new Response(render(content), {
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
