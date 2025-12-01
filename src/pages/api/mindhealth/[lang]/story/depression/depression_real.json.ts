@@ -18,12 +18,17 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const story = JSON.parse(
+    let story;
+
+    const fullStory = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/story/depression/real.json`),
+        path.resolve(
+          `src/i18n/${lang}/story/depression/real_rebuff_self_help.json`,
+        ),
         'utf-8',
       ),
     );
+    story = fullStory.real;
 
     const output = {
       id: 'DEPRESSION_REAL',
@@ -99,7 +104,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_real.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_real.json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

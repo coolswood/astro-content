@@ -17,12 +17,17 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const story = JSON.parse(
+    let story;
+
+    const fullStory = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/story/depression/death.json`),
+        path.resolve(
+          `src/i18n/${lang}/story/depression/control_death_diagnostic.json`,
+        ),
         'utf-8',
       ),
     );
+    story = fullStory.death;
 
     const output = {
       id: 'DEPRESSION_DEATH',
@@ -88,7 +93,9 @@ export const GET: APIRoute = async ({ params }) => {
   } catch (err) {
     console.error(`Error generating depression_death.json:`, err);
     throw new Error(
-      `Failed to generate depression_death.json: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate depression_death.json: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

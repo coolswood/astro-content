@@ -18,12 +18,17 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const story = JSON.parse(
+    let story;
+
+    const fullStory = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/story/depression/mistake.json`),
+        path.resolve(
+          `src/i18n/${lang}/story/depression/mirror_mistake_nonDepression.json`,
+        ),
         'utf-8',
       ),
     );
+    story = fullStory.mistake;
 
     const output = {
       id: 'DEPRESSION_MISTAKE',
