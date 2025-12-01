@@ -17,17 +17,24 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const story = JSON.parse(
+    let story;
+
+    const fullStory = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/story/depression/duty.json`),
+        path.resolve(
+          `src/i18n/${lang}/story/depression/duty_guilt_incrimination.json`,
+        ),
         'utf-8',
       ),
     );
+    story = fullStory.duty;
 
     // Как в start: английский fallback только для instagram.
     const storyEn = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/en/story/depression/duty.json`),
+        path.resolve(
+          `src/i18n/en/story/depression/duty_guilt_incrimination.json`,
+        ),
         'utf-8',
       ),
     );
@@ -112,7 +119,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_duty.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_duty.json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

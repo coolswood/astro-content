@@ -17,17 +17,24 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const story = JSON.parse(
+    let story;
+
+    const fullStory = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/story/depression/perfectionism.json`),
+        path.resolve(
+          `src/i18n/${lang}/story/depression/perfectionism_plan_read.json`,
+        ),
         'utf-8',
       ),
     );
+    story = fullStory.perfectionism;
 
     // Как в start: английский fallback только для instagram.
     const storyEn = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/en/story/depression/perfectionism.json`),
+        path.resolve(
+          `src/i18n/en/story/depression/perfectionism_plan_read.json`,
+        ),
         'utf-8',
       ),
     );
@@ -117,7 +124,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_perfectionism.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/depression_perfectionism.json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

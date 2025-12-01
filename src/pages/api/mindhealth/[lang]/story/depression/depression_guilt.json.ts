@@ -18,12 +18,17 @@ export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
 
   try {
-    const story = JSON.parse(
+    let story;
+
+    const fullStory = JSON.parse(
       await fs.readFile(
-        path.resolve(`src/i18n/${lang}/story/depression/guilt.json`),
+        path.resolve(
+          `src/i18n/${lang}/story/depression/duty_guilt_incrimination.json`,
+        ),
         'utf-8',
       ),
     );
+    story = fullStory.guilt;
 
     const output = {
       id: 'DEPRESSION_GUILT',
@@ -115,7 +120,9 @@ export const GET: APIRoute = async ({ params }) => {
   } catch (err) {
     console.error(`Error generating depression_guilt.json:`, err);
     throw new Error(
-      `Failed to generate depression_guilt.json: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate depression_guilt.json: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };
