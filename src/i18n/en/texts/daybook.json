@@ -1,71 +1,71 @@
 {
   "daybookRecommends": {
     "texts": [
-      "Our team has developed a unique algorithm for analyzing journal entries, which greatly helps users in examining their thoughts. Our model has been trained using open data and educational materials on cognitive behavioral therapy (CBT).",
-      "Here are some recommendations to improve the quality of your entry analysis:",
-      "Describe not only events but also delve into your emotions and thoughts in detail. Remember that the quality of the analysis directly depends on the quality of your entry.",
-      "Try to describe one specific situation or thought. If multiple events occurred during the day, it's better to create a second entry and analyze it separately.",
-      "While the algorithm is designed to identify irrational and destructive beliefs in your entries, you can also mention positive moments."
+      "Our team has created a unique diary-analysis algorithm that helps you better understand your thoughts and emotions. It is trained on open data and materials based on cognitive behavioral therapy (CBT).",
+      "Below are a few tips to help improve the quality of the analysis of your entries:",
+      "Describe not only events, but also your emotions and thoughts about what happened. Remember: the more specific and detailed your entry is, the more helpful the analysis will be.",
+      "Try to focus on one specific situation or thought. If several important things happened during the day, it’s better to create a separate entry for each one.",
+      "The algorithm helps identify irrational and unhelpful beliefs, but don’t hesitate to note positive moments too — they are just as important for balance and growth."
     ]
   },
   "daybookStart": {
     "texts": [
-      "Our team has developed a unique algorithm for analyzing diary entries that significantly helps users in analyzing their thoughts. Our model is trained on open data and training materials on cognitive behavioral therapy.",
-      "You can describe a situation that worries you or share your feelings in a free form. Our algorithm will analyze your text and give you results that will help you better understand yourself and your thoughts.",
-      "Check out a demo of the analysis by clicking the button below.",
-      "Text to be analyzed:",
-      "<i>I feel like people around me see me as a failure. For example, today at work there was a mistake on my part. My supervisor asked me to correct it. However, his tone was such that I couldn't help but feel that he really thinks I am a failure.</i>"
+      "Our team has developed a unique journal-analysis algorithm that helps you better understand your thoughts and reactions. The model is trained on open data and materials based on cognitive behavioral therapy (CBT).",
+      "You can describe a situation that is bothering you or simply share your thoughts in free form. The algorithm will process your text and highlight insights that can help you better understand yourself and what’s going on inside.",
+      "Tap the button below to see an example of the analysis.",
+      "Text for analysis:",
+      "<i>I feel as if people around me see me as a failure. Today at work I made a mistake, and my manager asked me to fix it. His tone felt cold and judgmental, as if he really thinks I’m a failure.</i>"
     ]
   },
   "gptCbt": {
     "texts": [
-      "Our team has developed a unique algorithm for analyzing records. AI will study your situation, help you look at it from a different perspective, and provide useful recommendations within the framework of CBT.",
-      "Describe not only the events but also elaborate on your emotions and thoughts. Remember that the quality of the analysis directly depends on the quality of your record.",
-      "Try to describe one specific situation or thought. If several events occurred in a day, it is better to create a second record and analyze it separately."
+      "Our team has created a unique algorithm that analyzes your entries. The AI looks at your situation from different angles and offers helpful CBT-based recommendations.",
+      "Describe not only what happened, but also your emotions and thoughts in detail. Remember: the clearer your entry is, the more accurate and useful the analysis will be.",
+      "Try to focus on one specific situation or thought at a time. If several important things happened during the day, it’s better to create separate entries so you can analyze each one individually."
     ]
   },
   "gptCbtDream": {
     "texts": [
-      "Sometimes classical CBT tools may not be enough; in these moments, it is helpful to turn to best practices from other approaches.",
-      "Deep dream psychoanalysis will allow you to uncover intermediate and deep beliefs that are hard to access consciously.",
-      "Our AI model will perform a classical psychoanalysis of your dream, giving you the opportunity to better understand your subconscious, which will facilitate working with cognitive psychology techniques."
+      "Sometimes standard CBT tools are not enough, and in those moments it can be helpful to draw on ideas from other psychological approaches as well.",
+      "Dream analysis can gently tap into deeper experiences and beliefs that are not always easy to notice in everyday life.",
+      "Our AI model will analyse your dream using classic principles of interpretation and suggest hypotheses that can help you better understand your inner processes and support your work with cognitive and CBT-based techniques."
     ]
   },
   "mockGpt": {
-    "consolation": "Sometimes we tend to give more meaning to other people's words and actions than they actually have. Mistakes at work are common and they don't define your value as a professional or a person. Remember your achievements and strengths that make you unique.",
+    "consolation": "Sometimes we give other people’s words and reactions more weight than they really deserve. Mistakes at work happen to everyone and do not define our worth as professionals or as human beings. You have achievements, strengths and experience that speak for your competence and personal value.",
     "solutions": [
-      "Try to separate constructive criticism from personal evaluations. Your boss may have simply pointed out a mistake, which is a normal part of the work process.",
-      "Think about past successes and achievements at work. This will help you see that one mistake doesn't make you a failure.",
-      "Work on strengthening your self-esteem. The higher your self-esteem, the less likely you are to perceive others' words as criticism of your personality."
+      "Try to separate a constructive comment about your work from a judgment of you as a person. It may be that your manager simply pointed out something that needed to be corrected in the task — and that is a natural part of the work process.",
+      "Remind yourself of your past successes and situations where you handled tasks well. This helps you see the situation in perspective and not draw conclusions about yourself based on a single episode.",
+      "Focus on strengthening your self-esteem. The more confident you feel, the easier it is to receive work-related feedback without experiencing it as personal criticism."
     ],
-    "distortion": "Chosen due to generalizing one incident (mistake at work) to an overall personality assessment (\"everyone thinks I'm a failure\")",
-    "negativeThought": "I feel that everyone around me thinks I'm a failure",
-    "adaptiveResponse": "One mistake at work doesn't define me as a professional or a person. It's important to learn from mistakes and remember your successes and qualities."
+    "distortion": "Chosen because it turns a single incident (a mistake at work) into a sweeping judgment about yourself (“everyone thinks I’m a failure”).",
+    "negativeThought": "It feels like everyone around me thinks I’m a failure.",
+    "adaptiveResponse": "One mistake does not define me as a professional or as a person. I can learn from this situation and rely on my skills and past successes."
   },
   "mockGptDream": {
-    "common": "The dream symbolizes an inner journey through fears and hidden desires. The atmosphere of the castle, the stormy sea, and the destruction may reflect a sense of instability and deep emotional experiences. Psychoanalysis interprets such dreams as an expression of inner conflicts and the pursuit of self-knowledge.",
+    "common": "A dream like this can reflect an inner journey through fears, intense feelings and unspoken wishes. The castle, the stormy sea and the destruction may symbolise a sense of instability and deep emotional changes. Such a storyline is often linked to the psyche’s attempt to understand inner conflicts and move toward self-exploration.",
     "symbols": [
-      "🏰 Castle: Symbol of security, power, and isolation. May indicate your inner state and boundaries.",
-      "🌊 Stormy sea: Symbol of strong emotions, subconscious fears, and changes.",
-      "🔮 Massive mirror: Symbol of self-knowledge, reflection of the inner «self» and its perception."
+      "🏰 Castle: A symbol of safety, autonomy and boundaries. It may reflect your need for protection and your own inner space.",
+      "🌊 Stormy sea: An image of strong emotions, inner turbulence and change.",
+      "🔮 Massive mirror: A symbol of self-knowledge, contact with your true self and deep inner reflection."
     ],
     "transfer": [
-      "🧑‍💼 Your altered reflection in the mirror may reflect your desire to understand and accept your true essence.",
-      "🏰 The castle may represent your protection and isolation from the outside world, and its destruction – the fear of losing this protection.",
-      "🌊 The sea becoming stormier may symbolize your growing emotional experiences and fear of uncontrollable forces."
+      "🧑‍💼 The changing image of yourself in the mirror may point to a search for an authentic identity and a desire to understand your inner qualities better.",
+      "🏰 The castle can symbolise protection and personal boundaries, while its destruction may represent fear of losing them or important changes that feel tense and unsettling.",
+      "🌊 The intensifying sea storm may mirror growing emotions and worries, as well as fear of facing something that feels hard to control."
     ],
-    "desires": "The hidden desire to gain understanding and control over your deep emotions and fears, the aspiration for inner enlightenment and self-knowledge.",
-    "fears": "Fear of changes and instability, of losing control and the destruction of the familiar world.",
-    "middle": "I strive for stability and security in my life.",
-    "deep": "I believe that inner forces and emotions can be destructive, and I need to be ready for any changes and challenges.",
-    "conclusion": "The dream reflects inner conflicts and fears associated with changes and self-knowledge. Your psyche is trying to integrate new realizations and cope with deep emotional experiences."
+    "desires": "A wish to better understand your deeper emotions and to find inner clarity and stability.",
+    "fears": "Fear of change and uncertainty, worries about losing control and stability.",
+    "middle": "I want to feel stable and safe in my life.",
+    "deep": "Sometimes I’m afraid that strong emotions might get out of control, so I want to be prepared for changes and strengthen my inner foundation.",
+    "conclusion": "This dream may reflect inner processes linked to the search for stability, self-understanding and adaptation to change. Your psyche is trying to process what you’re going through and integrate new inner insights."
   },
   "daybookShare": {
-    "h2": "Share Your Thoughts with Others",
+    "h2": "Share your thoughts with others",
     "texts": [
-      "Share your ideas and get feedback from other users!",
-      "Inspire others with your story, suggest an interesting topic to ponder, or share what's troubling you. Your idea might support someone in a tough time or simply lift someone's spirits.",
-      "It's all completely anonymous, and you can hide your posts anytime you want."
+      "Exchange ideas and receive kind support from other users.",
+      "Tell your story, suggest a topic for reflection, or share what’s on your heart and mind right now. Your experience may support someone in a difficult moment or simply give them a sense of connection.",
+      "All posts are anonymous. If you wish, you can always hide or delete them."
     ]
   }
 }

@@ -1,317 +1,452 @@
 {
   "steps": [
-    "How do you feel when you need to ask for help or a service?",
-    "How do you feel when you need to speak in front of a large audience?",
+    "How do you feel when you need to ask someone for help or a service?",
+    "How do you feel when you have to speak in front of a large audience?",
     "How do you react when strangers try to start a conversation with you?",
-    "How often do you avoid phone calls or video conferences?",
-    "How often do you try to avoid socializing with people outside of work or school?",
-    "Do you feel uncomfortable when entering a room where everyone is already seated?",
-    "How do you perceive criticism on social media?",
+    "How often do you avoid phone calls or video meetings?",
+    "How often do you try to avoid interacting with people outside of work or study?",
+    "Do you feel uncomfortable walking into a room where everyone is already seated?",
+    "How do you react to criticism on social media?",
     "Do you often prefer to stay silent in work meetings?",
-    "How do you feel when asked to give your opinion in front of a group?",
-    "How do you feel in places with large crowds, such as the subway?",
-    "How often do you try to avoid being the center of attention in a company?",
-    "How often do you avoid going to public places like restaurants, clubs, or bars?",
-    "Do you experience anxiety when being the center of attention?",
-    "How often do you experience anxiety before upcoming social interactions?",
-    "Do you feel anxious when communicating with management?",
-    "How often do you avoid going to large shopping centers or department stores?",
-    "How do you feel when you need to do something new, like visit a new cafe?",
-    "How do you feel when faced with performing new tasks in front of an unfamiliar audience?",
-    "How often do you avoid calls to less familiar people?",
+    "How do you feel when you’re asked to share your opinion in front of a group?",
+    "How do you feel in crowded places, such as on the subway?",
+    "How often do you try to avoid being the center of attention in a group?",
+    "How often do you avoid going to public places such as restaurants, clubs or bars?",
+    "Do you feel anxious when you are the center of attention?",
+    "How often do you feel anxious before upcoming interactions with other people?",
+    "Do you feel uneasy when talking to your manager or other leaders at work?",
+    "How often do you avoid going to large shopping malls or department stores?",
+    "How do you feel when you need to do something new, for example, visit a new café?",
+    "How do you feel when you have to do new tasks in front of an unfamiliar audience?",
+    "How often do you avoid calling people you don’t know well?",
     "Do you feel anxious when returning an item to a store?",
-    "How do you feel if you are asked to speak publicly at the last minute?",
-    "Do you experience anxiety when making notes in the presence of others?",
-    "Do you feel anxious when refusing a persistent salesperson?",
-    "Do you feel anxious when expressing disagreement to less familiar people?",
+    "How do you feel if you’re asked to give a public talk at the last minute?",
+    "Do you feel anxious when writing or making notes in the presence of others?",
+    "Do you feel anxious when saying no to a pushy salesperson?",
+    "Do you feel anxious when expressing disagreement with people you don’t know well?",
     "How do you react to unexpected invitations to weddings or other celebrations?",
-    "How often do you avoid phone conversations in the presence of others?",
-    "How often do you avoid parties in a company?",
-    "How often do you avoid using public restrooms?",
-    "How do you react to proposals to meet or go on a date with a potential partner?",
+    "How often do you avoid phone calls when other people are nearby?",
+    "How often do you avoid going to parties or social gatherings?",
+    "How often do you avoid using public toilets?",
+    "How do you react to invitations to meet or go on a date with a potential partner?",
     "How often do you avoid answering calls from unknown numbers?",
-    "How do you feel about talking to strangers while traveling or on vacation?",
-    "Do you experience anxiety when making eye contact with strangers?",
+    "How do you feel about talking to strangers while travelling or on holiday?",
+    "Do you feel anxious when looking strangers in the eye?",
     "How often do you avoid conflicts or arguments with strangers?",
-    "How do you feel about participating in group photographs?",
-    "How do you react to proposals to join a new group or community?",
-    "How often do you avoid meeting new people?",
-    "Do you feel anxious before exams in practical skills and abilities?",
-    "Do you experience anxiety when talking to someone?",
-    "Do you prefer to walk when there are few or no people outside?",
+    "How do you feel about taking part in group photos?",
+    "How do you react to invitations to join a new group or community?",
+    "How often do you avoid meetings with people you don’t know well?",
+    "Do you feel anxious before a practical skills or performance exam?",
+    "Do you feel anxious when talking to someone?",
+    "Do you prefer to go for walks when there are few or no people outside?",
     "How often do you avoid making eye contact with strangers?"
   ],
   "variants": {
     "0": [
-      "I ask easily, it’s normal",
-      "I feel a little uncomfortable, but I manage",
-      "Uncomfortable, I try to cope myself",
-      "Very uncomfortable, I avoid it"
+      "I ask easily, it feels normal",
+      "I feel a bit uncomfortable, but I can handle it",
+      "It’s uncomfortable, I try to manage on my own instead",
+      "It’s very uncomfortable, I avoid it"
     ],
     "1": [
       "Confident and calm",
       "With some anxiety",
-      "Nervous, but I can perform",
-      "I panic"
+      "I’m nervous, but I can still speak",
+      "I feel panicky"
     ],
     "2": [
       "Friendly and open",
-      "With caution and distrust",
+      "Cautious and wary",
       "I try to avoid the conversation",
-      "I literally run away"
+      "I quickly walk away"
     ],
-    "3": ["Almost never", "Sometimes", "Quite often", "Almost always"],
-    "4": ["Almost never", "From time to time", "Quite often", "Almost always"],
-    "5": ["Never", "Sometimes", "Often", "Constantly"],
+    "3": [
+      "Almost never",
+      "Sometimes",
+      "Quite often",
+      "Almost always"
+    ],
+    "4": [
+      "Almost never",
+      "From time to time",
+      "Quite often",
+      "Almost always"
+    ],
+    "5": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
     "6": [
-      "Calm, it’s just someone else's opinion",
-      "A little upset, but quickly forget",
-      "Very upset, it can ruin my day",
-      "It can cause me great anxiety"
+      "Calmly, it’s just someone else’s opinion",
+      "I get a bit upset, but quickly forget",
+      "I take it hard, it can ruin my day",
+      "It can trigger strong anxiety"
     ],
-    "7": ["Never", "Sometimes", "Often", "Constantly"],
-    "8": ["Confidently", "With some anxiety", "Very uncomfortable", "Very bad"],
+    "7": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "8": [
+      "Confident",
+      "With some anxiety",
+      "Very uncomfortable",
+      "Very distressed"
+    ],
     "9": [
-      "Completely normal",
-      "A little tense, but it’s normal",
+      "Completely fine",
+      "A bit tense, but it’s okay",
       "Very uncomfortable, I avoid such places",
-      "Panic or severe anxiety"
+      "Panic or intense anxiety"
     ],
-    "10": ["Never", "Sometimes", "Often", "Constantly"],
-    "11": ["Never", "Sometimes", "Often", "Constantly"],
-    "12": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
-    "13": ["Never", "Sometimes", "Often", "Constantly"],
-    "14": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
-    "15": ["Never", "Sometimes", "Often", "Constantly"],
+    "10": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "11": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "12": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
+    "13": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "14": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
+    "15": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
     "16": [
-      "It’s an interesting experience, I’m glad to try new things",
-      "I feel a little uncomfortable, but I manage",
+      "It feels interesting, I’m glad to try something new",
+      "I feel a bit uncomfortable, but I can handle it",
       "I try to avoid such situations",
-      "It causes me great anxiety or panic"
+      "It causes strong anxiety or panic"
     ],
     "17": [
       "I act confidently",
       "With some anxiety",
       "I try to avoid it",
-      "I experience panic and fear"
+      "I feel panic and fear"
     ],
-    "18": ["Never", "Sometimes", "Often", "Constantly"],
-    "19": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
+    "18": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "19": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
     "20": [
-      "I will perform without problems",
-      "I feel anxious, but I agree",
-      "Very uncomfortable, but I agree",
-      "I immediately refuse"
+      "I can speak without any problem",
+      "I feel anxious but agree",
+      "Very uncomfortable, but I still agree",
+      "I refuse right away"
     ],
-    "21": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
-    "22": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
-    "23": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
+    "21": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
+    "22": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
+    "23": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
     "24": [
       "I gladly accept",
-      "A little worried, but I go",
+      "I’m a bit nervous, but I go",
       "I prefer to avoid such events",
       "I really don’t want to go"
     ],
-    "25": ["Never", "Sometimes", "Often", "Constantly"],
-    "26": ["Never", "Sometimes", "Often", "Constantly"],
-    "27": ["Never", "Sometimes", "Often", "Constantly"],
-    "28": [
-      "I gladly agree",
-      "A little worried, but I go",
-      "I try to avoid dates",
-      "I immediately refuse"
+    "25": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
     ],
-    "29": ["Never", "Sometimes", "Often", "Constantly"],
+    "26": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "27": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "28": [
+      "I happily agree",
+      "I’m a bit nervous, but I go",
+      "I try to avoid dates",
+      "I immediately say no"
+    ],
+    "29": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
     "30": [
-      "I meet and talk",
-      "I am shy, but I meet",
-      "I try to avoid conversations",
+      "I get to know people and chat",
+      "I feel shy, but still talk",
+      "I try to avoid such interactions",
       "I don’t talk to strangers"
     ],
-    "31": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
-    "32": ["Almost never", "Sometimes", "Quite often", "Almost always"],
+    "31": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
+    "32": [
+      "Almost never",
+      "Sometimes",
+      "Quite often",
+      "Almost always"
+    ],
     "33": [
-      "I gladly agree",
-      "A little uncomfortable, but I agree",
-      "I prefer to avoid",
-      "I refuse"
+      "I’m happy to join in",
+      "I feel a bit awkward, but agree",
+      "I prefer to avoid it",
+      "I say no"
     ],
     "34": [
-      "I gladly accept the offer",
-      "I am shy, but I agree",
+      "I’m glad to accept the invitation",
+      "I feel shy, but agree",
       "I prefer not to join",
       "I refuse"
     ],
-    "35": ["Never", "Sometimes", "Often", "Constantly"],
-    "36": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
-    "37": ["No", "Mild anxiety", "Moderate anxiety", "Intense anxiety"],
-    "38": ["Never", "Sometimes", "Often", "Constantly"],
-    "39": ["Never", "Sometimes", "Often", "Constantly"]
+    "35": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "36": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
+    "37": [
+      "No",
+      "Mild anxiety",
+      "Moderate anxiety",
+      "Intense anxiety"
+    ],
+    "38": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ],
+    "39": [
+      "Never",
+      "Sometimes",
+      "Often",
+      "All the time"
+    ]
   },
   "steps_description": {
     "0": {
-      "text": "Social phobia, or social anxiety disorder, is characterized by intense anxiety in social interaction situations. Asking for help is one of the common situations that cause anxiety in people with this disorder.",
-      "fact": "Charles Darwin, a famous naturalist and author of the theory of evolution, suffered from severe social phobia. He avoided public speaking and often experienced panic attacks before having to interact with people, despite his outstanding achievements."
+      "text": "Social phobia, or social anxiety disorder, shows up as intense anxiety in situations involving social interaction. Asking for help is one of the everyday situations that can be very stressful for people with social anxiety.",
+      "fact": "Charles Darwin, the famous naturalist and author of the theory of evolution, struggled with severe social anxiety. He avoided public appearances and often experienced panic attacks before having to interact with people, despite his outstanding achievements."
     },
     "1": {
-      "text": "Glossophobia is the fear of public speaking, one of the most common forms of social phobia. About 75% of people experience some degree of fear before speaking in public.",
-      "fact": "According to a survey by the American Psychological Association, about 30% of Americans experience a strong fear of public speaking, making it one of the most common fears."
+      "text": "Glossophobia is the fear of public speaking and is one of the most common forms of social anxiety. Around 75% of people experience some degree of fear before speaking in public.",
+      "fact": "According to a survey by the American Psychological Association, about 30% of Americans report strong fear of public speaking, making it one of the most widespread fears."
     },
     "2": {
-      "text": "One of the key aspects of social phobia is the fear of social interactions with strangers. This can manifest as avoiding contacts, striving to be unnoticed, and feeling awkward or anxious.",
-      "fact": "Franz Kafka, a famous writer, suffered from severe social phobia and often had difficulties interacting with strangers. His works, such as 'The Trial' and 'The Castle,' reflect his deep fears and anxieties."
+      "text": "One of the key aspects of social anxiety is fear of interacting with unfamiliar people. This can show up as avoiding contact, trying to remain unnoticed, and feeling awkward or anxious.",
+      "fact": "Writer Franz Kafka lived with severe social anxiety and often struggled to talk to strangers. His works, such as “The Trial” and “The Castle”, reflect deep fears and feelings of alienation."
     },
     "3": {
-      "text": "People with social phobia often avoid phone calls and video conferences due to the fear of being misunderstood or making a bad impression. They may worry about how their voice sounds or what they will say.",
-      "fact": "One way to reduce anxiety before phone calls is practice and preparation. Making a list of questions and answers before the call can help a person feel more confident and reduce fear."
+      "text": "People with social anxiety often avoid phone calls and video meetings because they’re afraid of being misunderstood or making a bad impression. They may worry about how their voice sounds or what exactly they will say.",
+      "fact": "One way to reduce anxiety before phone calls is practising and preparing in advance. Writing down key points or questions can help a person feel more confident and less fearful."
     },
     "4": {
-      "text": "Social phobia can lead people to avoid socializing outside of mandatory situations (such as work or school) to avoid potentially anxiety-provoking social interactions.",
-      "fact": "Research shows that about 15 million Americans (approximately 7% of the US population) suffer from social phobia, and a significant portion of them prefer to avoid social situations outside their mandatory roles."
+      "text": "Social anxiety can lead people to avoid communication outside of obligatory contexts (such as work or study) so they don’t have to face potentially stressful social situations.",
+      "fact": "Studies suggest that around 15 million Americans (about 7% of the population) live with social anxiety, and many of them prefer to stay away from social situations beyond their required roles."
     },
     "5": {
-      "text": "Entering a crowded room can be especially anxiety-inducing for people with social phobia due to the fear of being the center of attention. They may worry about being watched or judged.",
-      "fact": "Albert Einstein, a great physicist, suffered from severe social phobia and avoided large gatherings. He preferred to work alone and communicate only with close friends and colleagues."
+      "text": "Entering a room where everyone is already seated can be especially stressful for people with social anxiety because of the fear of being the center of attention. They may worry that others are looking at them or judging them.",
+      "fact": "Albert Einstein, the great physicist, also struggled with strong social anxiety and avoided large gatherings. He preferred working alone and communicating only with close friends and colleagues."
     },
     "6": {
-      "text": "People with social phobia can be very sensitive to criticism, especially on social media, where it is public and can be seen by many people.",
-      "fact": "Digital detox is becoming increasingly popular. Many people, including celebrities, temporarily disconnect from social media to restore their mental health and reduce the impact of negative criticism."
+      "text": "People with social anxiety may experience criticism very painfully, especially on social media where comments are public and visible to many.",
+      "fact": "Digital detox is becoming more popular: many people, including public figures, periodically step away from social media to protect their mental health and reduce exposure to negative feedback."
     },
     "7": {
-      "text": "Silence can be a way to avoid negative attention and potential criticism, but it can also limit their career growth and professional opportunities.",
-      "fact": "Active listening techniques can help people feel more confident in meetings. For example, focusing on listening and preparing questions or comments in advance can help reduce anxiety and improve participation in discussions."
+      "text": "Staying silent in meetings can be a way to avoid negative attention and possible criticism, but it may also limit career growth and professional opportunities.",
+      "fact": "Active listening techniques can help people feel more confident in meetings. For example, focusing on listening and preparing a couple of questions or comments in advance can lower anxiety and make it easier to participate."
     },
     "8": {
-      "text": "Social phobia is characterized by intense anxiety in situations where a person may be evaluated by others. One such situation is being asked to give their opinion in front of a group. This can cause fear of making a mistake or being negatively evaluated."
+      "text": "Social anxiety is marked by strong worry in situations where a person might be evaluated by others. Being asked to share an opinion in front of a group is one of those situations and can trigger fears of making a mistake or being judged negatively."
     },
     "9": {
-      "text": "People with social phobia may feel significant anxiety and discomfort in places with large crowds, such as the subway. Such places can induce fear of being noticed, judged, or encountering unexpected social situations.",
-      "fact": "Adele, a famous British singer, suffers from social phobia and panic attacks. She avoids crowded places like the subway to reduce the risk of panic symptoms."
+      "text": "People with social anxiety may feel very uncomfortable and tense in crowded places like the subway. Such environments can trigger fears of being noticed, judged or drawn into unexpected social interactions.",
+      "fact": "Adele, the well-known British singer, has spoken about her social anxiety and panic attacks. She avoids crowded places such as the underground to reduce the risk of intense anxiety symptoms."
     },
     "10": {
-      "text": "People with social phobia often try to avoid being the center of attention to avoid attracting unnecessary interest and evaluation from others. They may fear criticism or ridicule, which increases the desire to stay in the background."
+      "text": "People with social anxiety often try not to be the center of attention so they don’t attract extra interest or criticism. They may fear negative comments or ridicule, which reinforces the wish to stay in the background."
     },
     "11": {
-      "text": "According to the National Institute of Mental Health in the USA, about 12.1% of the population experience social anxiety disorder at some point in their lives, often leading to avoidance of public places."
+      "text": "According to the U.S. National Institute of Mental Health, about 12.1% of people experience social anxiety disorder at some point in their lives, and this frequently leads to avoiding public places."
     },
     "12": {
-      "text": "Research shows that moderate levels of anxiety can actually improve performance by activating the sympathetic nervous system and increasing concentration. This phenomenon is known as the Yerkes-Dodson law."
+      "text": "Research shows that a moderate level of anxiety can actually improve performance by activating the sympathetic nervous system and boosting concentration. This is known as the Yerkes–Dodson law."
     },
     "13": {
-      "text": "Anxiety before social interaction is known as 'social anxiety' and can range from mild discomfort to severe fear. It is the third most common mental disorder after depression and alcoholism."
+      "text": "Anxiety before social interaction is known as social anxiety and can range from mild discomfort to intense fear. It is considered the third most common mental health condition after depression and alcohol dependence."
     },
     "14": {
-      "text": "Fear of authority figures is called 'hierophobia.' This is not an official medical term, but it is often used to describe excessive anxiety when interacting with people in higher positions.",
-      "fact": "Warren Buffett, one of the most successful investors in the world, experienced strong fear of public speaking and communication with authority figures in his youth. He even enrolled in a course to overcome this fear, which later significantly helped his career."
+      "text": "Fear of interacting with authority figures is sometimes called “hierarchophobia”. This is not an official medical diagnosis, but the term is often used to describe heightened worry when dealing with people in higher positions.",
+      "fact": "Warren Buffett, one of the most successful investors in the world, once struggled with strong fear of public speaking and talking to authority figures. He signed up for a course to work through this fear, which later had a big positive impact on his career."
     },
     "15": {
-      "text": "Fear of going to shopping centers can be associated with agoraphobia - the fear of open spaces or places where it is difficult to quickly find an exit. However, it can also be a manifestation of social phobia or ochlophobia (fear of crowds)."
+      "text": "Fear of going to shopping malls can be linked to agoraphobia — fear of open spaces or places where it might be hard to leave quickly. It can also be a manifestation of social anxiety or ochlophobia (fear of crowds)."
     },
     "16": {
-      "text": "Psychologists call the fear of the unknown 'intolerance of uncertainty.' This condition can affect not only social situations but also decision-making in general."
+      "text": "Psychologists call fear of the unknown “intolerance of uncertainty”. It can affect not only social situations but decision-making in general, making any new or unfamiliar experience feel threatening."
     },
     "17": {
-      "text": "Fear of performing in front of an unfamiliar audience is called 'social evaluative anxiety.' It is a combination of fear of negative evaluation and fear of new situations.",
-      "fact": "Emma Stone, an Oscar-winning actress, openly spoke about her struggle with panic attacks, especially in situations involving performances in front of new audiences. She used therapy and breathing techniques to cope with this."
+      "text": "Fear of performing in front of an unfamiliar audience is called “fear of social evaluation”. It combines worry about being judged by others with anxiety about new situations.",
+      "fact": "Actress Emma Stone has spoken openly about her struggle with panic attacks, especially around public performances in new settings. She uses therapy and breathing techniques to help manage these experiences."
     },
     "18": {
-      "text": "Fear of phone calls is called 'telephobia.' This phenomenon is becoming more common in the digital communication era, where people are accustomed to text communication.",
-      "fact": "A study conducted by BankMyCell in 2019 found that 76% of millennials experience anxiety when they need to make a phone call. Among Generation Z, this figure is even higher - 81%."
+      "text": "Fear of phone calls is sometimes called “phone phobia”. It is becoming more common in the digital age, as many people grow more used to text-based communication than voice calls.",
+      "fact": "A 2019 BankMyCell study found that 76% of millennials feel anxious about making phone calls. Among Generation Z, the number was even higher — around 81%."
     },
     "19": {
-      "text": "Anxiety when returning goods can be associated with fear of conflict, fear of negative evaluation, or a sense of guilt for 'causing inconvenience' to store staff.",
-      "fact": "Anxiety when returning goods is often associated with the broader phenomenon known as 'assertophobia' - the fear of asserting one's rights or expressing one's needs."
+      "text": "Anxiety about returning items to a store can be linked to fear of conflict, fear of negative judgment or a sense of guilt for “causing inconvenience” to staff.",
+      "fact": "This type of anxiety is often part of a broader pattern called “assertophobia” — fear of standing up for one’s rights or expressing one’s needs."
     },
     "20": {
-      "text": "Fear of unprepared performances is often associated with 'imposter syndrome' - the feeling that you are not competent enough and may be 'exposed.'",
-      "fact": "The technique of 'improvisational thinking' can be helpful. Instead of panicking due to lack of preparation, try to perceive the situation as an opportunity for spontaneous and sincere communication with the audience."
+      "text": "Fear of being asked to speak without preparation is often connected to impostor syndrome — the feeling that you are not competent enough and might be “exposed”.",
+      "fact": "Practising an improvisational mindset can be helpful. Instead of panicking because you haven’t prepared, you can try to treat the situation as an opportunity for honest, spontaneous conversation with the audience."
     },
     "21": {
-      "text": "Fear of writing or making notes in the presence of others is sometimes called 'scriptophobia.' It is a specific case of social anxiety related to the fear of being evaluated by others.",
-      "fact": "There is no exact data on the prevalence of this fear, but a study published in the Journal of Anxiety Disorders showed that about 7% of people experience significant discomfort when they need to write in the presence of others."
+      "text": "Fear of writing or taking notes in front of others is sometimes referred to as “scriptophobia”. It is a specific form of social anxiety linked to fear of being watched and judged.",
+      "fact": "There are no exact statistics on how common this fear is, but a study published in the Journal of Anxiety Disorders found that about 7% of people feel strong discomfort when they have to write in the presence of others."
     },
     "22": {
-      "text": "Difficulties in saying 'no,' especially to persistent people, are called 'pleaser syndrome' or 'people-pleasing disorder' by psychologists. This is associated with the desire to avoid conflict and fear of negative evaluation.",
-      "fact": "A study conducted by the University of Pennsylvania found that about 68% of people experience discomfort when they need to say 'no' in sales situations."
+      "text": "Difficulty saying no, especially to pushy people, is related to what psychologists sometimes call “people-pleasing” or an excessive need to be liked. It often stems from a wish to avoid conflict and fear of negative judgment.",
+      "fact": "A study at the University of Pennsylvania found that around 68% of people feel uncomfortable when they need to say “no” in sales situations."
     },
     "23": {
-      "text": "Martin Luther King Jr., a famous civil rights activist, experienced strong anxiety when expressing his opinion in front of groups at the beginning of his career. However, by overcoming his fears, he became one of the most influential speakers and leaders of the civil rights movement."
+      "text": "Martin Luther King Jr., the famous civil rights leader, also experienced strong anxiety about expressing his views in front of groups early in his career. By repeatedly facing his fears, he eventually became one of the most powerful speakers and human rights advocates in history."
     },
     "24": {
-      "text": "People with social phobia may experience significant anxiety and stress when receiving unexpected invitations to weddings or other celebrations. Such events often involve interacting with many people and participating in social interactions, which can be particularly challenging for them.",
-      "fact": "Daniel Radcliffe, known for his role as Harry Potter, suffers from social phobia and often avoids large public events. He prefers to spend time in small groups of friends and family."
+      "text": "People with social anxiety may feel strong stress and worry when they receive unexpected invitations to weddings or other celebrations. Such events often involve many people and social interactions, which can be particularly challenging.",
+      "fact": "Daniel Radcliffe, known for his role as Harry Potter, has spoken about his social anxiety and often avoids large public events, preferring time with small groups of friends and family."
     },
     "25": {
-      "text": "People with social phobia often avoid phone conversations in the presence of others due to the fear of being heard and evaluated. They may worry about how their voice sounds, possible mistakes in their speech, or that their conversation will cause a negative reaction from others."
+      "text": "People with social anxiety often avoid making phone calls when others are nearby because they fear being overheard and judged. They may worry about how their voice sounds, about making mistakes in speech or about others reacting negatively to their conversation."
     },
     "26": {
-      "text": "Avoiding parties can be associated with 'protective behavior' - a strategy that reduces anxiety in the short term but can increase social isolation and fear in the long term."
+      "text": "Avoiding parties can be a form of “safety behaviour” — a strategy that reduces anxiety in the short term but, over time, can increase social isolation and make fears stronger."
     },
     "27": {
-      "text": "According to studies, about 7-9% of people suffer from paruresis, also known as shy bladder syndrome, which makes them avoid using public restrooms."
+      "text": "Studies suggest that about 7–9% of people live with paruresis, also known as “shy bladder syndrome”, which can lead them to avoid using public toilets."
     },
     "28": {
-      "text": "People with social phobia may experience significant anxiety when receiving proposals to meet or go on a date. The main reasons include fear of negative evaluation, lack of self-confidence, and concern about possible mistakes in communication."
+      "text": "People with social anxiety may feel particularly anxious when they receive invitations to meet or go on a date. Common reasons include fear of negative evaluation, low self-confidence and worries about saying or doing something “wrong”."
     },
     "29": {
-      "text": "Fear of phone calls, especially from unknown numbers, can be caused by worry about not knowing how to respond correctly, or that the conversation may not go as expected. This can include fear of possible confrontation or the need to quickly respond to unexpected questions."
+      "text": "Fear of answering phone calls, especially from unknown numbers, can be linked to worry about not knowing how to respond or that the conversation may go in an uncomfortable direction. It may include fear of confrontation or of having to answer unexpected questions on the spot."
     },
     "30": {
-      "text": "People with social phobia may experience significant anxiety when interacting with strangers during travel or vacation. They may fear negative evaluation, doing something inappropriate, or not knowing how to maintain the conversation."
+      "text": "People with social anxiety can feel very tense when talking to strangers while travelling or on holiday. They may be afraid of negative evaluation, doing something inappropriate or not knowing how to keep the conversation going."
     },
     "31": {
-      "text": "Studies show that about 60% of people with social anxiety experience discomfort during eye contact. This can be one of the most anxiety-inducing aspects of social interactions."
+      "text": "Research shows that about 60% of people with social anxiety feel uncomfortable making eye contact. This can be one of the most stressful aspects of social interaction for them."
     },
     "32": {
-      "text": "People with social phobia may experience significant anxiety at the possibility of conflicts or arguments with strangers. They may fear negative evaluation, misunderstanding, or even aggressive reactions, leading to avoidance of any potentially conflictual situations."
+      "text": "People with social anxiety may feel strong tension at the thought of conflicts or arguments with strangers. They may worry about negative evaluation, misunderstanding or aggression, which leads them to avoid any potentially confrontational situations."
     },
     "33": {
-      "text": "According to studies, about 20-30% of people experience significant discomfort when being photographed, especially in groups. This anxiety can be associated with fear of negative evaluation and dissatisfaction with their appearance."
+      "text": "Studies suggest that around 20–30% of people feel significant discomfort when being photographed, especially in groups. This anxiety is often linked to fear of negative evaluation and dissatisfaction with one’s appearance."
     },
     "34": {
-      "text": "Isaac Newton, a great scientist, was also very reserved and avoided participating in public events and new groups. He preferred to spend time alone conducting scientific research."
+      "text": "Isaac Newton, the great scientist, was also very reserved and avoided taking part in public events or new groups. He preferred to spend his time alone, focused on his research."
     },
     "35": {
-      "text": "Studies show that cognitive behavioral therapy (CBT) can be very effective in treating social anxiety. CBT helps people change negative thoughts and develop a more positive attitude toward social interactions."
+      "text": "Research shows that cognitive behavioural therapy (CBT) can be very effective in treating social anxiety. CBT helps people change negative thinking patterns and develop a more supportive attitude toward social interactions."
     },
     "36": {
-      "text": "Anxiety before exams in practical skills and abilities is a common problem, especially among people with social phobia. The fear of being evaluated and the possibility of failure can increase stress and nervousness.",
-      "fact": "Thomas Edison, a famous inventor, had difficulties with traditional methods of learning and exams. He preferred to learn through practical experiments and experiences, avoiding formal exams."
+      "text": "Anxiety before practical or performance exams is very common, especially among people with social anxiety. Fear of being evaluated and the possibility of failure can intensify stress and nervousness.",
+      "fact": "Inventor Thomas Edison had difficulty with traditional teaching methods and exams. He preferred to learn through experiments and hands-on work, often avoiding formal testing."
     },
     "37": {
-      "text": "People with social phobia often experience significant anxiety when talking to others. Fear of negative evaluation, worry about how their words will be perceived, and fear of making a mistake can increase anxiety and nervousness."
+      "text": "People with social anxiety often feel intense worry when talking to others. Fear of negative evaluation, concern about how their words will be perceived and worry about making mistakes can significantly increase anxiety."
     },
     "38": {
-      "text": "People with social phobia often prefer to walk when there are few or no people outside. This helps them avoid social interactions that can cause anxiety and stress.",
-      "fact": "Howard Hughes, a famous American businessman and aviator, known for his social phobia and numerous phobias, preferred solitary walks and avoided crowded places. He tried to remain unnoticed and avoid social interactions."
+      "text": "People with social anxiety often prefer to go for walks at times when there are few or no people outside. This helps them avoid social interactions that might trigger anxiety and stress.",
+      "fact": "Howard Hughes, the famous American businessman and aviator, known for his social anxiety and multiple phobias, preferred solitary walks and avoided crowded places, trying to remain unnoticed and limit social contact."
     },
     "39": {
-      "text": "Eye contact activates mirror neurons, which can enhance feelings of empathy and understanding but also cause strong emotions. This can be one of the reasons why eye contact causes such anxiety."
+      "text": "Eye contact activates mirror neurons, which can strengthen feelings of empathy and connection but also trigger strong emotions. This may be one of the reasons why eye contact can feel so anxiety-provoking."
     }
   },
   "range": {
-    "normal": "No social phobia",
-    "mild": "Mild social phobia",
-    "moderate": "Severe social phobia"
+    "normal": "No social anxiety",
+    "mild": "Moderate social anxiety",
+    "moderate": "Severe social anxiety"
   },
   "result": {
     "normal": {
-      "text": "Your results show that you feel confident and comfortable in various social situations. You do not experience significant difficulties in interacting with strangers, speaking in front of an audience, or participating in group events. This indicates that you have either mild or no social phobia, allowing you to actively and freely participate in social life.",
-      "title": "No social phobia"
+      "text": "Your results suggest that you generally feel confident in most social situations. Contact with unfamiliar people, taking part in discussions or speaking in front of an audience typically does not cause you strong discomfort. This means you can interact with others freely and usually feel at ease in social settings.",
+      "title": "No signs of social anxiety"
     },
     "mild": {
-      "text": "Your results show that you encounter some difficulties in social situations. You may feel insecure when interacting with strangers, speaking in front of an audience, or participating in large group events. This indicates that you have mild social phobia. However, with the right support and practice, you can improve your communication skills and feel more comfortable in social interactions.",
-      "title": "Mild social phobia"
+      "text": "Your answers indicate that certain social situations can bring tension or self-doubt. Talking to unfamiliar people, speaking up or being the center of attention may feel stressful at times. This is a very common experience, and with support and practice your confidence can grow noticeably over time.",
+      "title": "Moderate social anxiety"
     },
     "moderate": {
-      "text": "Your results indicate significant difficulties you experience in social situations. You may feel very insecure and anxious when interacting with strangers, speaking in front of an audience, or participating in group events. This indicates a severe form of social phobia. It is important to remember that you can cope with this situation by seeking professional help and support. With the right approach and therapy, you can gradually overcome these difficulties and improve your quality of life.",
-      "title": "Severe social phobia"
+      "text": "Your results suggest that social situations may cause you significant anxiety and discomfort. This can affect your self-confidence and your willingness to engage with other people. These feelings can be exhausting, but with support and a willingness to work on this condition, it is possible to gradually reduce anxiety and feel more free and secure in communication.",
+      "title": "Pronounced social anxiety"
     }
   },
   "description": {
     "text": [
-      "Have you ever wondered how comfortable you feel in social situations? Do you experience anxiety when you need to talk to a stranger or speak in front of an audience? Our test will help you understand how pronounced your signs of social phobia are.",
-      "The test consists of questions covering various aspects of social interaction, from talking to colleagues to participating in public events. By answering them, you can better understand your feelings and reactions in different situations."
+      "How comfortable do you feel in social situations? Anxiety around conversations, meeting new people or speaking in front of others is a very common reaction.",
+      "This test can help you better understand your relationship with social interactions and the possible level of social anxiety. Noticing your own reactions is an important step towards building confidence and feeling calmer and more at ease around other people."
     ]
   },
   "instagram": [
