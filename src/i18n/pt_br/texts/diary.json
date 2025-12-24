@@ -1,83 +1,82 @@
 {
   "info": {
-    "event": "Vamos começar identificando o gatilho que causou os pensamentos ou emoções negativas. O gatilho pode ser um evento aparentemente insignificante ou até mesmo um pensamento seu.",
-    "thought": "Pensamentos automáticos são gerados por um evento e levam ao surgimento de emoções negativas. Essas emoções, por sua vez, podem piorar o estado emocional e gerar novos pensamentos automáticos, formando um ciclo vicioso de negatividade, do qual é difícil sair. Para evitar que isso aconteça, identifique o quanto antes o pensamento automático e registre-o no seu diário.",
-    "body": "Tente voltar ao momento em que o gatilho ocorreu. Lembre-se das sensações desconfortáveis no corpo que você teve naquele instante.",
-    "behavior": "Como foi o seu comportamento depois? O que você fez após sentir essas emoções negativas?",
-    "response": "Após identificar o pensamento automático, é necessário analisá-lo e refletir sobre ele. Normalmente, pensamentos automáticos contêm erros lógicos e distorções cognitivas. Seu objetivo é formular uma resposta racional às distorções e desenvolver uma nova crença mais realista.",
-    "conclusion": "Descreva o resultado do seu trabalho: como suas emoções e pensamentos mudaram e o que você pretende modificar nas suas reações, caso um evento semelhante aconteça novamente.",
-    "comparison": "Apresente argumentos que sustentam seu pensamento automático e argumentos que o refutam. Isso ajudará você a compreender o quanto ele é objetivo e real."
+    "event": "Vamos começar identificando o gatilho que despertou emoções ou pensamentos desagradáveis. Um gatilho pode ser tanto um acontecimento importante quanto algo bem pequeno — ou até mesmo um pensamento que surgiu de repente.",
+    "thought": "O pensamento automático surge como resposta a um evento e desencadeia uma onda de emoções. Essas emoções podem se intensificar e gerar novos pensamentos negativos, criando um ciclo vicioso. Para evitar que isso ganhe força, tente identificar o pensamento automático o quanto antes e anotá-lo.",
+    "body": "Lembre-se do momento em que o gatilho apareceu e observe as sensações no corpo. Que reações desagradáveis, exatamente, você sentiu?",
+    "behavior": "Como você se comportou depois que essas emoções surgiram? O que você fez — ou, ao contrário, deixou de fazer?",
+    "response": "Quando você percebe um pensamento automático, é importante examiná-lo com atenção. Muitas vezes, esses pensamentos trazem distorções cognitivas e falhas de lógica. Sua tarefa é encontrar uma resposta racional e mais realista, e formar uma crença de apoio.",
+    "conclusion": "Descreva a que conclusões você chegou: se seu estado emocional mudou, como você enxerga a situação agora e o que gostaria de tentar da próxima vez, em condições parecidas.",
+    "comparison": "Anote os argumentos que sustentam o pensamento automático e aqueles que o contradizem. Isso ajuda a avaliá-lo com mais objetividade e a enxergar a situação de forma mais ampla."
   },
   "stepper": {
-    "event": "Eu cometi um erro em uma tarefa no trabalho",
-    "thought": "Eu estou sempre cometendo erros no trabalho, todos ao meu redor me odeiam por isso",
-    "body": "Aceleração dos batimentos cardíacos, peso no peito",
-    "behavior": "Bati a porta com força",
-    "response": "Não existem pessoas que nunca cometem erros, e eu não posso prever o que os outros estão pensando",
-    "conclusion": "Da próxima vez que eu cometer um erro, não tentarei adivinhar a reação dos outros. Além disso, vou criar uma checklist para revisar meu trabalho e evitar repetir esse erro"
+    "event": "Cometi um erro em uma tarefa no trabalho",
+    "thought": "Tenho a impressão de que erro com frequência e que, por isso, as pessoas ao meu redor me tratam mal",
+    "body": "Senti o coração acelerar e um aperto no peito",
+    "behavior": "Bati a porta com força e fui embora",
+    "response": "Todo mundo comete erros, e isso faz parte do trabalho. Eu não posso saber o que os outros realmente pensam, e minhas suposições podem não estar corretas",
+    "conclusion": "Se essa situação se repetir, vou tentar não tirar conclusões precipitadas sobre a reação dos outros. Também vou criar um checklist para revisar as tarefas, aumentar minha confiança e reduzir a chance de erros parecidos"
   },
   "analysis": {
     "description": [
-      "Transforme o preenchimento do diário em um processo envolvente. Em vez de listar os eventos do dia de forma rotineira, conte sobre seu dia como se fosse uma história emocionante.",
-      "A inteligência artificial irá ajudar você: ela analisará sua narrativa e sugerirá automaticamente as melhores categorias e campos para completar seu diário.",
-      "Você sempre poderá editar e complementar as sugestões do AI, tornando a entrada ainda mais personalizada e precisa.",
-      "Tudo o que você escrever será salvo no diário, garantindo que sua história não se perca após a análise.",
-      "O AI torna o processo de trabalho com pensamentos não apenas útil, mas também interessante, transformando o preenchimento do diário em uma forma criativa de autoexpressão."
+      "Transforme o diário de uma tarefa rotineira em um processo criativo e envolvente. Em vez de apenas listar acontecimentos, tente contar o seu dia como uma pequena história.",
+      "A IA vai te apoiar: ela analisa o seu relato e sugere a melhor forma de preencher o diário, escolhendo categorias e campos adequados.",
+      "Você sempre pode ajustar e complementar o que a IA sugerir, para que o registro continue o mais pessoal e preciso possível.",
+      "Seu texto fica salvo no diário — ou seja, ele não desaparece após a análise e estará sempre disponível para você.",
+      "A IA torna o trabalho com pensamentos não só útil, mas também inspirador, transformando o preenchimento do diário em um espaço de expressão e autocuidado."
     ],
     "hint": [
-      "Descreva o que aconteceu, seus sentimentos e pensamentos. Tente incluir em seu relato:",
-      "Qual foi o evento ocorrido",
+      "Descreva o acontecimento, seus sentimentos e pensamentos. No seu relato, procure mencionar:",
+      "O que aconteceu",
       "Qual pensamento automático surgiu",
-      "Sensações físicas e emoções",
-      "Resposta adaptativa ao pensamento automático",
-      "Conclusão ou aprendizado da situação"
+      "Quais emoções e sensações físicas você sentiu",
+      "Sua resposta adaptativa ao pensamento automático",
+      "Que conclusão você tirou dessa situação"
     ]
   },
   "automaticAnalysis": [
     {
-      "title": "Registro de emoções em vez de pensamentos",
-      "description": "As emoções não podem ser refutadas em uma resposta adaptativa e devem ser registradas em uma etapa separada.",
-      "wrong": "Estou me sentindo ansioso",
-      "right": "Eu penso que não serei capaz de lidar com isso"
+      "title": "Anotar emoções em vez de pensamentos",
+      "description": "Emoções, por si só, não podem ser refutadas nem mudadas com uma resposta adaptativa. Nós as registramos separadamente; aqui, o importante é anotar o pensamento que gerou o sentimento.",
+      "wrong": "Eu sinto ansiedade",
+      "right": "Eu penso que não vou conseguir dar conta"
     },
     {
-      "title": "Formulação vaga",
-      "description": "O pensamento automático pode ser registrado de forma muito geral.",
-      "wrong": "Tudo está ruim",
-      "right": "Eu acho que meus colegas me consideram incompetente"
+      "title": "Formulação genérica demais",
+      "description": "Às vezes, o pensamento é anotado de forma muito ampla, e aí fica difícil entender o que exatamente está causando o desconforto. É melhor deixar mais específico.",
+      "wrong": "Está tudo ruim",
+      "right": "Eu penso que meus colegas me consideram incompetente"
     },
     {
-      "title": "Registro de fatos em vez de interpretações",
-      "description": "É importante registrar sua interpretação do que aconteceu. O fato do evento foi registrado na etapa anterior.",
-      "wrong": "Eu cheguei atrasado ao trabalho",
-      "right": "Agora o meu chefe vai pensar que eu sou irresponsável"
+      "title": "Registrar um fato em vez da interpretação",
+      "description": "Neste passo, é importante registrar a sua interpretação do que aconteceu, e não apenas o fato. O evento já foi anotado antes.",
+      "wrong": "Eu cheguei atrasada ao trabalho",
+      "right": "Agora meu chefe pode achar que eu sou irresponsável"
     },
     {
-      "title": "Formulação muito complexa e confusa",
-      "description": "Os pensamentos devem ser registrados de forma simples e clara, caso contrário será difícil formular uma resposta adaptativa.",
-      "wrong": "Eu tenho tendência a acreditar que minha opinião não tem importância",
+      "title": "Formulação complexa e confusa",
+      "description": "É melhor anotar os pensamentos com palavras simples e claras. Assim, fica mais fácil formular uma resposta adaptativa e acolhedora.",
+      "wrong": "Eu tenho a tendência de acreditar que minha opinião não tem valor",
       "right": "Minha opinião não importa para ninguém"
     },
     {
-      "title": "Pular o registro do pensamento automático",
-      "description": "Algumas pessoas registram diretamente pensamentos alternativos ou respostas aos pensamentos automáticos.",
-      "wrong": "Eu devo pensar positivamente",
-      "right": "Eu não tenho certeza se vou conseguir lidar com isso"
+      "title": "Pular o pensamento automático",
+      "description": "Às vezes dá vontade de ir direto para afirmações positivas. Mas é importante primeiro perceber e anotar o pensamento automático, para depois poder trabalhá-lo.",
+      "wrong": "Eu devo pensar positivo",
+      "right": "Eu não tenho certeza de que vou conseguir"
     },
     {
-      "title": "Ignorar pensamentos-chave",
-      "description": "Às vezes, as pessoas registram apenas os pensamentos que parecem mais aceitáveis, ignorando pensamentos automáticos-chave ou dolorosos.",
-      "wrong": "Estou um pouco preocupado com o futuro",
-      "right": "Eu nunca vou alcançar o sucesso"
+      "title": "Ignorar os pensamentos principais",
+      "description": "Às vezes anotamos apenas pensamentos mais leves, evitando os mais dolorosos. Mas reconhecer os pensamentos centrais é o que ajuda a se entender melhor.",
+      "wrong": "Eu fico um pouco ansiosa com o futuro",
+      "right": "Eu nunca vou ter sucesso"
     }
-  ]
-,
+  ],
   "smer": {
-"h2": "Estabeleça uma conexão com os pensamentos automáticos",
-"texts": [
-  "Crenças intermediárias são regras que usamos para perceber a realidade.",
-  "Crenças distorcidas podem gerar pensamentos destrutivos, que chamamos de automáticos.",
-  "Nesta seção, você pode conectar esses conceitos para uma análise mais detalhada."
-]
-}
+    "h2": "Conecte suas crenças aos pensamentos automáticos",
+    "texts": [
+      "As crenças intermediárias são regras e pressupostos por meio dos quais interpretamos o mundo ao nosso redor.",
+      "Quando essas crenças se distorcem, elas podem gerar pensamentos automáticos — muitas vezes duros e autocríticos.",
+      "Nesta seção, você pode relacionar suas crenças e seus pensamentos automáticos para, depois, compreendê-los com mais profundidade e começar a trabalhar mudanças."
+    ]
+  }
 }
