@@ -1,50 +1,74 @@
-// src/pages/api/[lang]/[test].json.ts
 import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
+import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 
 export const prerender = true;
 
 // Mapping from old story names to new merged files and their keys inside the files
 const STORY_FILE_MAPPING: Record<string, { file: string; key: string }> = {
-  'depression_control': { file: 'control_death_diagnostic', key: 'control' },
-  'depression_death': { file: 'control_death_diagnostic', key: 'death' },
-  'depression_diagnostic': { file: 'control_death_diagnostic', key: 'diagnostic' },
+  depression_control: { file: 'control_death_diagnostic', key: 'control' },
+  depression_death: { file: 'control_death_diagnostic', key: 'death' },
+  depression_diagnostic: {
+    file: 'control_death_diagnostic',
+    key: 'diagnostic',
+  },
 
-  'depression_disability': { file: 'disability_disease_distortions', key: 'disability' },
-  'depression_disease': { file: 'disability_disease_distortions', key: 'disease' },
-  'depression_distortions': { file: 'disability_disease_distortions', key: 'distortions' },
+  depression_disability: {
+    file: 'disability_disease_distortions',
+    key: 'disability',
+  },
+  depression_disease: {
+    file: 'disability_disease_distortions',
+    key: 'disease',
+  },
+  depression_distortions: {
+    file: 'disability_disease_distortions',
+    key: 'distortions',
+  },
 
-  'depression_duty': { file: 'duty_guilt_incrimination', key: 'duty' },
-  'depression_guilt': { file: 'duty_guilt_incrimination', key: 'guilt' },
-  'depression_incrimination': { file: 'duty_guilt_incrimination', key: 'incrimination' },
+  depression_duty: { file: 'duty_guilt_incrimination', key: 'duty' },
+  depression_guilt: { file: 'duty_guilt_incrimination', key: 'guilt' },
+  depression_incrimination: {
+    file: 'duty_guilt_incrimination',
+    key: 'incrimination',
+  },
 
-  'depression_label': { file: 'label_lawyer_lazy', key: 'label' },
-  'depression_lawyer': { file: 'label_lawyer_lazy', key: 'lawyer' },
-  'depression_lazy': { file: 'label_lawyer_lazy', key: 'lazy' },
+  depression_label: { file: 'label_lawyer_lazy', key: 'label' },
+  depression_lawyer: { file: 'label_lawyer_lazy', key: 'lawyer' },
+  depression_lazy: { file: 'label_lawyer_lazy', key: 'lazy' },
 
-  'depression_mirror': { file: 'mirror_mistake_nonDepression', key: 'mirror' },
-  'depression_mistake': { file: 'mirror_mistake_nonDepression', key: 'mistake' },
-  'depression_non_depression': { file: 'mirror_mistake_nonDepression', key: 'nonDepression' },
+  depression_mirror: { file: 'mirror_mistake_nonDepression', key: 'mirror' },
+  depression_mistake: { file: 'mirror_mistake_nonDepression', key: 'mistake' },
+  depression_non_depression: {
+    file: 'mirror_mistake_nonDepression',
+    key: 'nonDepression',
+  },
 
-  'depression_perfectionism': { file: 'perfectionism_plan_read', key: 'perfectionism' },
-  'depression_plan': { file: 'perfectionism_plan_read', key: 'plan' },
-  'depression_read': { file: 'perfectionism_plan_read', key: 'read' },
+  depression_perfectionism: {
+    file: 'perfectionism_plan_read',
+    key: 'perfectionism',
+  },
+  depression_plan: { file: 'perfectionism_plan_read', key: 'plan' },
+  depression_read: { file: 'perfectionism_plan_read', key: 'read' },
 
-  'depression_real': { file: 'real_rebuff_self_help', key: 'real' },
-  'depression_rebuff': { file: 'real_rebuff_self_help', key: 'rebuff' },
-  'depression_self_help': { file: 'real_rebuff_self_help', key: 'self_help' },
+  depression_real: { file: 'real_rebuff_self_help', key: 'real' },
+  depression_rebuff: { file: 'real_rebuff_self_help', key: 'rebuff' },
+  depression_self_help: { file: 'real_rebuff_self_help', key: 'self_help' },
 
-  'depression_trap': { file: 'trap_unemployment_vitamins', key: 'trap' },
-  'depression_unemployment': { file: 'trap_unemployment_vitamins', key: 'unemployment' },
-  'depression_vitamins': { file: 'trap_unemployment_vitamins', key: 'vitamins' },
+  depression_trap: { file: 'trap_unemployment_vitamins', key: 'trap' },
+  depression_unemployment: {
+    file: 'trap_unemployment_vitamins',
+    key: 'unemployment',
+  },
+  depression_vitamins: { file: 'trap_unemployment_vitamins', key: 'vitamins' },
 };
 
 export async function getStaticPaths() {
-  const langs = await fs.readdir('src/i18n');
+  const langPaths = await getLangStaticPaths();
 
   const nestedPaths = await Promise.all(
-    langs.map(async (lang) => {
+    langPaths.map(async ({ params: { lang } }) => {
       try {
         // Check if depression directory exists
         await fs.access(`src/i18n/${lang}/story/depression`);
@@ -53,8 +77,10 @@ export async function getStaticPaths() {
           withFileTypes: true,
         });
         // Filter to make sure we have JSON files (for validation)
-        items
-          .filter((item) => item.isFile() && item.name.endsWith('.json'));
+        const jsonFiles = items.filter(
+          (item) => item.isFile() && item.name.endsWith('.json'),
+        );
+        if (jsonFiles.length === 0) return [];
 
         // Generate paths for all stories from the mapping
         const paths = [];
@@ -103,7 +129,9 @@ export const GET: APIRoute = async ({ params }) => {
     // Get the specific story from the merged file
     const storyData = fileContent[mapping.key];
     if (!storyData) {
-      throw new Error(`Story key "${mapping.key}" not found in file ${mapping.file}.json`);
+      throw new Error(
+        `Story key "${mapping.key}" not found in file ${mapping.file}.json`,
+      );
     }
 
     const output = {
@@ -121,7 +149,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/[story]-short.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/depression/[story]-short.json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

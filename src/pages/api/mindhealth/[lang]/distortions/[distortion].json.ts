@@ -1,17 +1,15 @@
-// src/pages/api/[lang]/[test].json.ts
+import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import type { APIRoute } from 'astro';
-import fs from 'fs/promises';
-import path from 'path';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const langs = await fs.readdir('src/i18n');
+  const langPaths = await getLangStaticPaths();
   const distortionsModules = import.meta.glob<{
     default: Record<string, any>;
   }>('@/i18n/*/distortions.json', { eager: true });
 
-  const nestedPaths = langs.map((lang) => {
+  return langPaths.flatMap(({ params: { lang } }) => {
     const modulePath = `/src/i18n/${lang}/distortions.json`;
     const module = distortionsModules[modulePath];
     if (!module) return [];
@@ -20,8 +18,6 @@ export async function getStaticPaths() {
       params: { lang, distortion },
     }));
   });
-
-  return nestedPaths.flat();
 }
 
 export const GET: APIRoute = async ({ params }) => {
