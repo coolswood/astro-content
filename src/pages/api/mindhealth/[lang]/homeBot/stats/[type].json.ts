@@ -6,10 +6,18 @@ export const prerender = true;
 const CATEGORIES = ['daysCommon', 'daysInRow', 'daysMissed'] as const;
 type Category = (typeof CATEGORIES)[number];
 
+const MAPPING: Record<string, Category> = {
+  DAYS_COMMON: 'daysCommon',
+  DAYS_IN_ROW: 'daysInRow',
+  DAYS_MISSED: 'daysMissed',
+};
+
+const URL_TYPES = Object.keys(MAPPING);
+
 export const getStaticPaths = async () => {
   const langPaths = await getLangStaticPaths();
   return langPaths.flatMap(({ params }) =>
-    CATEGORIES.map((type) => ({
+    URL_TYPES.map((type) => ({
       params: { lang: params.lang, type },
     })),
   );
@@ -17,9 +25,10 @@ export const getStaticPaths = async () => {
 
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
-  const type = params.type as Category;
+  const type = params.type!;
+  const categoryKey = MAPPING[type];
 
-  if (!CATEGORIES.includes(type)) {
+  if (!categoryKey) {
     return new Response(JSON.stringify({ error: 'Unknown category' }), {
       status: 404,
     });
@@ -39,7 +48,7 @@ export const GET: APIRoute = async ({ params }) => {
       });
     }
 
-    const data = module.default[type];
+    const data = module.default[categoryKey];
 
     if (!data) {
       return new Response(JSON.stringify({ error: 'Category not found' }), {
