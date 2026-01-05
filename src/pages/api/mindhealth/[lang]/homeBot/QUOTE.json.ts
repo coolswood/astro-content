@@ -1,5 +1,5 @@
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
-import type { APIRoute } from 'astro';
+import { createTranslationEndpoint } from '@/lib/createTranslationEndpoint';
 
 export const prerender = true;
 
@@ -10,32 +10,12 @@ interface Quote {
   author: string;
 }
 
-export const GET: APIRoute = async ({ params }) => {
-  const lang = params.lang!;
+const quotesModules = import.meta.glob<{
+  default: Quote[];
+}>('@/i18n/*/homeBot/quotes.json', { eager: true });
 
-  try {
-    const quotesModules = import.meta.glob<{
-      default: Quote[];
-    }>('@/i18n/*/homeBot/quotes.json', { eager: true });
-
-    const modulePath = `/src/i18n/${lang}/homeBot/quotes.json`;
-    const module = quotesModules[modulePath];
-
-    if (!module) {
-      throw new Error(
-        `Quotes translation for language "${lang}" not found at /src/i18n/${lang}/homeBot/quotes.json`,
-      );
-    }
-
-    return new Response(JSON.stringify(module.default), {
-      headers: { 'Content-Type': 'application/json' },
-    });
-  } catch (err) {
-    console.error(`Error generating QUOTE.json for ${lang}:`, err);
-    throw new Error(
-      `Failed to generate QUOTE.json for ${lang}: ${
-        err instanceof Error ? err.message : String(err)
-      }`,
-    );
-  }
-};
+export const GET = createTranslationEndpoint(
+  'QUOTE.json',
+  quotesModules,
+  'homeBot/quotes.json',
+);
