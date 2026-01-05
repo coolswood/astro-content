@@ -77,7 +77,10 @@ export async function getStaticPaths() {
           withFileTypes: true,
         });
         // Filter to make sure we have JSON files (for validation)
-        items.filter((item) => item.isFile() && item.name.endsWith('.json'));
+        const jsonFiles = items.filter(
+          (item) => item.isFile() && item.name.endsWith('.json'),
+        );
+        if (jsonFiles.length === 0) return [];
 
         // Generate paths for all stories from the mapping
         const paths = [];
