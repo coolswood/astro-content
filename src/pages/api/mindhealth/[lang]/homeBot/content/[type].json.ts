@@ -16,8 +16,15 @@ const CATEGORIES = [
 ] as const;
 type Category = (typeof CATEGORIES)[number];
 
-const MAPPING: Record<string, Category> = {
-  DAYS: 'days',
+const MAPPING: Record<string, string> = {
+  FIRST: 'days.fist',
+  SECOND: 'days.second',
+  THIRD: 'days.third',
+  FOURTH: 'days.fourth',
+  FIFTH: 'days.fifth',
+  EIGHTH: 'days.eighth',
+  TENTH: 'days.tenth',
+  FIFTEENTH: 'days.fifteenth',
   AFFIRMATIONS: 'affirmations',
   APP_UPDATED: 'appUpdated',
   NEVER_USED: 'neverUsed',
@@ -42,15 +49,15 @@ export const getStaticPaths = async () => {
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
   const type = params.type!;
-  const categoryKey = MAPPING[type];
+  const categoryPath = MAPPING[type];
 
-  if (!categoryKey) {
+  if (!categoryPath) {
     throw new Error(`Unknown category: ${type}`);
   }
 
   try {
     const contentModules = import.meta.glob<{
-      default: Record<Category, any>;
+      default: Record<string, any>;
     }>('@/i18n/*/homeBot/content.json', { eager: true });
 
     const modulePath = `/src/i18n/${lang}/homeBot/content.json`;
@@ -62,11 +69,14 @@ export const GET: APIRoute = async ({ params }) => {
       );
     }
 
-    const data = module.default[categoryKey];
+    // Resolve dot-notated path
+    const data = categoryPath
+      .split('.')
+      .reduce((obj, key) => obj?.[key], module.default);
 
-    if (!data) {
+    if (data === undefined) {
       throw new Error(
-        `Category "${categoryKey}" not found in content.json for language "${lang}"`,
+        `Path "${categoryPath}" not found in content.json for language "${lang}"`,
       );
     }
 
