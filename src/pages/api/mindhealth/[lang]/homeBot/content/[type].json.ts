@@ -45,9 +45,7 @@ export const GET: APIRoute = async ({ params }) => {
   const categoryKey = MAPPING[type];
 
   if (!categoryKey) {
-    return new Response(JSON.stringify({ error: 'Unknown category' }), {
-      status: 404,
-    });
+    throw new Error(`Unknown category: ${type}`);
   }
 
   try {
@@ -59,17 +57,17 @@ export const GET: APIRoute = async ({ params }) => {
     const module = contentModules[modulePath];
 
     if (!module) {
-      return new Response(JSON.stringify({ error: 'Language not found' }), {
-        status: 404,
-      });
+      throw new Error(
+        `Content translation for language "${lang}" not found at /src/i18n/${lang}/homeBot/content.json`,
+      );
     }
 
     const data = module.default[categoryKey];
 
     if (!data) {
-      return new Response(JSON.stringify({ error: 'Category not found' }), {
-        status: 404,
-      });
+      throw new Error(
+        `Category "${categoryKey}" not found in content.json for language "${lang}"`,
+      );
     }
 
     return new Response(JSON.stringify(data), {

@@ -26,9 +26,9 @@ export const GET: APIRoute = async ({ params }) => {
     const module = diaryModules[modulePath];
 
     if (!module) {
-      return new Response(JSON.stringify({ error: 'Language not found' }), {
-        status: 404,
-      });
+      throw new Error(
+        `Automatic analysis translation for language "${lang}" not found at /src/i18n/${lang}/texts/diary.json`,
+      );
     }
 
     const items = module.default.automaticAnalysis;
@@ -44,7 +44,9 @@ export const GET: APIRoute = async ({ params }) => {
   } catch (err) {
     console.error(`Error generating automatic_analysis.json:`, err);
     throw new Error(
-      `Failed to generate automatic_analysis.json: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate automatic_analysis.json: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

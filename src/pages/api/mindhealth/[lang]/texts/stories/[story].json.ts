@@ -31,9 +31,7 @@ export const GET: APIRoute = async ({ params }) => {
   const story = (params.story ?? '').toLowerCase();
 
   if (!ALLOWED.has(story)) {
-    return new Response(JSON.stringify({ error: 'Unknown story identifier' }), {
-      status: 404,
-    });
+    throw new Error(`Unknown story identifier: ${story}`);
   }
 
   try {
@@ -44,17 +42,17 @@ export const GET: APIRoute = async ({ params }) => {
     const module = storiesModules[modulePath];
 
     if (!module) {
-      return new Response(JSON.stringify({ error: 'Language not found' }), {
-        status: 404,
-      });
+      throw new Error(
+        `Stories translation for language "${lang}" not found at /src/i18n/${lang}/stories.json`,
+      );
     }
 
     const cards = module.default[story];
 
     if (!cards) {
-      return new Response(JSON.stringify({ error: 'Story not found' }), {
-        status: 404,
-      });
+      throw new Error(
+        `Story "${story}" not found in stories.json for language "${lang}"`,
+      );
     }
 
     return new Response(JSON.stringify(cards), {
@@ -63,7 +61,9 @@ export const GET: APIRoute = async ({ params }) => {
   } catch (err) {
     console.error(`Error generating ${lang}/texts/stories/${story}.json:`, err);
     throw new Error(
-      `Failed to generate ${lang}/texts/stories/${story}.json: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate ${lang}/texts/stories/${story}.json: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };
