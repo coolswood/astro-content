@@ -1,4 +1,4 @@
-// src/pages/api/[lang]/[test].json.ts
+import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
@@ -6,10 +6,10 @@ import path from 'path';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const langs = await fs.readdir('src/i18n');
+  const langPaths = await getLangStaticPaths();
 
   const nestedPaths = await Promise.all(
-    langs.map(async (lang) => {
+    langPaths.map(async ({ params: { lang } }) => {
       const items = await fs.readdir(`src/i18n/${lang}/story`, {
         withFileTypes: true,
       });
@@ -52,7 +52,9 @@ export const GET: APIRoute = async ({ params }) => {
       err,
     );
     throw new Error(
-      `Failed to generate src/pages/api/mindhealth/[lang]/story/base/[story]-short.json.ts: ${err instanceof Error ? err.message : String(err)}`,
+      `Failed to generate src/pages/api/mindhealth/[lang]/story/base/[story]-short.json.ts: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };

@@ -1,6 +1,9 @@
 import fs from 'fs/promises';
+import path from 'path';
 
 export async function getLangStaticPaths() {
-  const langs = await fs.readdir('src/i18n');
-  return langs.map((lang) => ({ params: { lang } }));
+  const items = await fs.readdir('src/i18n', { withFileTypes: true });
+  return items
+    .filter((item) => item.isDirectory())
+    .map((item) => ({ params: { lang: item.name } }));
 }
