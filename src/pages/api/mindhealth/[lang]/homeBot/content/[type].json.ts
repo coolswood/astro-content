@@ -3,13 +3,29 @@ import type { APIRoute } from 'astro';
 
 export const prerender = true;
 
-const CATEGORIES = ['daysCommon', 'daysInRow', 'daysMissed'] as const;
+const CATEGORIES = [
+  'days',
+  'affirmations',
+  'appUpdated',
+  'neverUsed',
+  'premiumThanks',
+  'quote',
+  'readArticle',
+  'testExpired',
+  'header',
+] as const;
 type Category = (typeof CATEGORIES)[number];
 
 const MAPPING: Record<string, Category> = {
-  DAYS_COMMON: 'daysCommon',
-  DAYS_IN_ROW: 'daysInRow',
-  DAYS_MISSED: 'daysMissed',
+  DAYS: 'days',
+  AFFIRMATIONS: 'affirmations',
+  APP_UPDATED: 'appUpdated',
+  NEVER_USED: 'neverUsed',
+  PREMIUM_THANKS: 'premiumThanks',
+  QUOTE: 'quote',
+  READ_ARTICLE: 'readArticle',
+  TEST_EXPIRED: 'testExpired',
+  HEADER: 'header',
 };
 
 const URL_TYPES = Object.keys(MAPPING);
@@ -33,16 +49,16 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   try {
-    const statsModules = import.meta.glob<{
-      default: Record<Category, string[]>;
-    }>('@/i18n/*/homeBot/stats.json', { eager: true });
+    const contentModules = import.meta.glob<{
+      default: Record<Category, any>;
+    }>('@/i18n/*/homeBot/content.json', { eager: true });
 
-    const modulePath = `/src/i18n/${lang}/homeBot/stats.json`;
-    const module = statsModules[modulePath];
+    const modulePath = `/src/i18n/${lang}/homeBot/content.json`;
+    const module = contentModules[modulePath];
 
     if (!module) {
       throw new Error(
-        `Stats translation for language "${lang}" not found at /src/i18n/${lang}/homeBot/stats.json`,
+        `Content translation for language "${lang}" not found at /src/i18n/${lang}/homeBot/content.json`,
       );
     }
 
@@ -50,7 +66,7 @@ export const GET: APIRoute = async ({ params }) => {
 
     if (!data) {
       throw new Error(
-        `Category "${categoryKey}" not found in stats.json for language "${lang}"`,
+        `Category "${categoryKey}" not found in content.json for language "${lang}"`,
       );
     }
 
@@ -58,9 +74,9 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    console.error(`Error generating stats/${type}.json for ${lang}:`, err);
+    console.error(`Error generating content/${type}.json for ${lang}:`, err);
     throw new Error(
-      `Failed to generate stats/${type}.json: ${
+      `Failed to generate content/${type}.json: ${
         err instanceof Error ? err.message : String(err)
       }`,
     );

@@ -32,17 +32,17 @@ export const GET: APIRoute = async ({ params }) => {
     const module = distortionsModules[modulePath];
 
     if (!module) {
-      return new Response(JSON.stringify({ error: 'Language not found' }), {
-        status: 404,
-      });
+      throw new Error(
+        `Distortions translation for language "${lang}" not found at /src/i18n/${lang}/distortions.json`,
+      );
     }
 
     const data = module.default[distortion];
 
     if (!data) {
-      return new Response(JSON.stringify({ error: 'Distortion not found' }), {
-        status: 404,
-      });
+      throw new Error(
+        `Distortion "${distortion}" not found in distortions.json for language "${lang}"`,
+      );
     }
 
     const output = {
@@ -58,9 +58,14 @@ export const GET: APIRoute = async ({ params }) => {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'Not found or broken test file' }),
-      { status: 404 },
+    console.error(
+      `Error generating distortions/${distortion}.json for ${lang}:`,
+      err,
+    );
+    throw new Error(
+      `Failed to generate distortions/${distortion}.json: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
     );
   }
 };
