@@ -18,13 +18,11 @@ type Category = (typeof CATEGORIES)[number];
 
 const MAPPING: Record<string, string> = {
   FIRST: 'days.fist',
-  SECOND: 'days.second',
   THIRD: 'days.third',
   FOURTH: 'days.fourth',
   FIFTH: 'days.fifth',
   EIGHTH: 'days.eighth',
   TENTH: 'days.tenth',
-  FIFTEENTH: 'days.fifteenth',
   AFFIRMATIONS: 'affirmations',
   APP_UPDATED: 'appUpdated',
   NEVER_USED: 'neverUsed',
