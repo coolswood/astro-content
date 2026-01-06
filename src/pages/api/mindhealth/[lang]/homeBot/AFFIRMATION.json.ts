@@ -7,10 +7,10 @@ export const getStaticPaths = getLangStaticPaths;
 
 const affirmationsModules = import.meta.glob<{
   default: string[];
-}>('@/i18n/*/homeBot/affirmations.json', { eager: true });
+}>('@/i18n/*/homeBot/affirmation.json', { eager: true });
 
 export const GET = createTranslationEndpoint(
   'AFFIRMATION.json',
   affirmationsModules,
-  'homeBot/affirmations.json',
+  'homeBot/affirmation.json',
 );

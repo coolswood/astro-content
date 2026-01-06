@@ -23,7 +23,7 @@ const MAPPING: Record<string, string> = {
   FIFTH: 'days.fifth',
   EIGHTH: 'days.eighth',
   TENTH: 'days.tenth',
-  AFFIRMATIONS: 'affirmations',
+  AFFIRMATION: 'affirmation',
   APP_UPDATED: 'appUpdated',
   NEVER_USED: 'neverUsed',
   PREMIUM_THANKS: 'premiumThanks',
