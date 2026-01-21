@@ -57,7 +57,7 @@ export const GET: APIRoute = async ({ params }) => {
       title: story.title,
       description: story.description,
       time: 6,
-      type: 'exercise',
+      type: 'theory',
       img: 'distortions_way',
       screens: [
         {
