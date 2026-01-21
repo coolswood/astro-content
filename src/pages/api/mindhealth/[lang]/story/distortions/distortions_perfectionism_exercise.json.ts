@@ -14,16 +14,16 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const story = JSON.parse(
       await fs.readFile(
-        path.resolve(
-          `src/i18n/${lang}/story/distortions/perfectionism.json`,
-        ),
+        path.resolve(`src/i18n/${lang}/story/distortions/perfectionism.json`),
         'utf-8',
       ),
     );
 
     // Проверяем что есть секция exercise
     if (!story.exercise) {
-      throw new Error(`exercise section not found in perfectionism.json for language ${lang}`);
+      throw new Error(
+        `exercise section not found in perfectionism.json for language ${lang}`,
+      );
     }
 
     // Используем данные из секции exercise
@@ -96,8 +96,8 @@ export const GET: APIRoute = async ({ params }) => {
       id: 'DISTORTIONS_PERFECTIONISM_EXERCISE',
       color: '#BABFF3',
       url: 'distortions-perfectionism_exercise',
-      title: story.title,
-      description: story.description,
+      title: exercise.title,
+      description: exercise.description,
       time: 10,
       type: 'exercise',
       img: 'exercise',

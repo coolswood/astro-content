@@ -20,16 +20,16 @@ export const GET: APIRoute = async ({ params }) => {
   try {
     const story = JSON.parse(
       await fs.readFile(
-        path.resolve(
-          `src/i18n/${lang}/story/distortions/autonomy.json`,
-        ),
+        path.resolve(`src/i18n/${lang}/story/distortions/autonomy.json`),
         'utf-8',
       ),
     );
 
     // Проверяем что есть секция exercise
     if (!story.exercise) {
-      throw new Error(`exercise section not found in autonomy.json for language ${lang}`);
+      throw new Error(
+        `exercise section not found in autonomy.json for language ${lang}`,
+      );
     }
 
     // Используем данные из секции exercise
@@ -48,7 +48,7 @@ export const GET: APIRoute = async ({ params }) => {
         {
           __typename: 'ScreenText',
           steps: [
-            `<h2>${story.title}</h2>`,
+            `<h2>${exercise.title}</h2>`,
             `<p>${exercise.screen_1.texts[0]}</p>`,
             `<p>${exercise.screen_1.texts[1]}</p>`,
             important(exercise.screen_1.texts[2]),

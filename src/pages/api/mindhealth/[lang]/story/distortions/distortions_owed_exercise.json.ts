@@ -21,7 +21,9 @@ export const GET: APIRoute = async ({ params }) => {
 
     // Проверяем что есть секция exercise
     if (!story.exercise) {
-      throw new Error(`exercise section not found in owed.json for language ${lang}`);
+      throw new Error(
+        `exercise section not found in owed.json for language ${lang}`,
+      );
     }
 
     // Используем данные из секции exercise
@@ -73,8 +75,8 @@ export const GET: APIRoute = async ({ params }) => {
       id: 'DISTORTIONS_OWED_EXERCISE',
       color: '#BABFF3',
       url: 'distortions-owed_exercise',
-      title: story.title,
-      description: story.description,
+      title: exercise.title,
+      description: exercise.description,
       time: 8,
       type: 'exercise',
       img: 'exercise',
