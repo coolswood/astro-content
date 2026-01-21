@@ -57,8 +57,8 @@ export const GET: APIRoute = async ({ params }) => {
       title: story.title,
       description: story.description,
       time: 6,
-      type: 'theory',
-      img: 'distortions_way',
+      type: 'exercise',
+      img: 'exercise',
       screens: [
         {
           __typename: 'ScreenText' as const,

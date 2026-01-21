@@ -22,6 +22,7 @@ type StoryModule = {
 export const storySlugs = [
   'distortions_key',
   'distortions_approval',
+  'distortions_way',
   'distortions_love',
   'distortions_love_exercise',
   'distortions_achievements',
@@ -34,7 +35,6 @@ export const storySlugs = [
   'distortions_owed_exercise',
   'distortions_perfectionism',
   'distortions_perfectionism_exercise',
-  'distortions_way',
 ] as const;
 
 const storyModules = import.meta.glob<StoryModule>('./*.json.ts');
