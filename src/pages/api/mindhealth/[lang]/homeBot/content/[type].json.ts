@@ -26,7 +26,7 @@ const MAPPING: Record<string, string> = {
   AFFIRMATION: 'affirmation',
   APP_UPDATED: 'appUpdated',
   NEVER_USED: 'neverUsed',
-  PREMIUM_THANKS: 'premiumThanks',
+  PREMIUM_THANKS: 'premiumThanks.content',
   QUOTE: 'quote',
   READ_ARTICLE: 'readArticle',
   TEST_EXPIRED: 'testExpired',
