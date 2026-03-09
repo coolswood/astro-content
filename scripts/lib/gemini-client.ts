@@ -1,5 +1,29 @@
 import puppeteer, { Page, Browser } from 'puppeteer-core';
 
+async function retryAction<T>(
+  action: () => Promise<T>,
+  retries = 3,
+): Promise<T> {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await action();
+    } catch (e: any) {
+      if (
+        e.message.includes('detached Frame') ||
+        e.message.includes('disposed') ||
+        e.message.includes('Target closed')
+      ) {
+        if (i === retries - 1) throw e;
+        // Silent retry for UI stability
+        await new Promise((r) => setTimeout(r, 1000));
+        continue;
+      }
+      throw e;
+    }
+  }
+  throw new Error('Retry action failed after all attempts');
+}
+
 /**
  * Connects to a running Chrome/Chromium browser via the DevTools protocol.
  * The browser must be started with --remote-debugging-port=9222.
@@ -104,11 +128,38 @@ export async function interactWithGemini(
           const items = Array.from(
             document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"]'),
           );
-          const target = items.find((item) =>
-            (item as HTMLElement).innerText
-              .toLowerCase()
-              .includes(keyword.toLowerCase()),
-          ) as HTMLElement;
+
+          const findEnabledItem = (k: string) =>
+            items.find((item) => {
+              const el = item as HTMLElement;
+              const text = el.innerText.toLowerCase();
+              // Игнорируем "Быстрая" (Flash) всегда
+              if (text.includes('быстрая')) return false;
+
+              const isDisabled =
+                el.hasAttribute('disabled') ||
+                el.getAttribute('aria-disabled') === 'true' ||
+                el.classList.contains('mat-mdc-menu-item-disabled');
+              return text.includes(k.toLowerCase()) && !isDisabled;
+            }) as HTMLElement;
+
+          let target = findEnabledItem(keyword);
+
+          // Если запрошенная модель недоступна, пробуем разрешенный фолбек
+          if (!target) {
+            console.log(
+              `⚠️ Модель "${keyword}" недоступна, ищем разрешенную альтернативу...`,
+            );
+            // Если была запрошена Pro, пробуем Думающую
+            if (keyword.toLowerCase() === 'pro') {
+              target = findEnabledItem('Думающая');
+            }
+            // Если была запрошена Думающая, пробуем Pro (на случай если в коде поменяли приоритет)
+            else if (keyword.toLowerCase().includes('думающ')) {
+              target = findEnabledItem('Pro');
+            }
+          }
+
           if (target) {
             target.click();
             return true;
@@ -117,23 +168,24 @@ export async function interactWithGemini(
         }, modelKeyword);
 
         if (selected) {
-          console.log(`✅ Модель ${modelKeyword} выбрана.`);
+          console.log(`✅ Модель выбрана (запрошено: ${modelKeyword}).`);
           await new Promise((r) => setTimeout(r, 2000));
         } else {
-          console.log(
-            `⚠️ Модель "${modelKeyword}" не найдена, используем текущую.`,
+          throw new Error(
+            `❌ КРИТИЧЕСКАЯ ОШИБКА: Ни Pro, ни Думающая модели не доступны. Использование "Быстрой" модели запрещено. ПЕРЕРЫВ.`,
           );
-          await page.keyboard.press('Escape');
         }
-      } catch {
-        console.log('⚠️ Меню выбора модели не найдено, продолжаем...');
+      } catch (e: any) {
+        console.log(`⚠️ Ошибка при выборе модели: ${e.message}`);
+        // Если это наша критическая ошибка про отсутствие моделей — пробрасываем выше
+        if (e.message.includes('КРИТИЧЕСКАЯ ОШИБКА')) throw e;
       }
 
       // Ввод и отправка промпта
       console.log('⌨️ Отправка сообщения...');
       const inputSelector = '.ql-editor';
-      await page.waitForSelector(inputSelector);
-      await page.click(inputSelector);
+      await retryAction(() => page.waitForSelector(inputSelector));
+      await retryAction(() => page.click(inputSelector));
       await page.evaluate(
         (sel, text) => {
           const el = document.querySelector(sel);
@@ -146,14 +198,16 @@ export async function interactWithGemini(
       await page.keyboard.press('Backspace');
 
       const sendBtnSelector = 'button.send-button';
-      await page.waitForSelector(sendBtnSelector);
-      await page.click(sendBtnSelector);
+      await retryAction(() => page.waitForSelector(sendBtnSelector));
+      await retryAction(() => page.click(sendBtnSelector));
 
       // Ожидание ответа
       console.log('⌛ Ожидание ответа...');
       const thoughtsBtnSelector = 'button.thoughts-header-button';
       try {
-        await page.waitForSelector(thoughtsBtnSelector, { timeout: 20000 });
+        await retryAction(() =>
+          page.waitForSelector(thoughtsBtnSelector, { timeout: 20000 }),
+        );
         console.log('🤔 Идёт процесс рассуждения/генерации...');
         await page.waitForFunction(
           (sel) => {

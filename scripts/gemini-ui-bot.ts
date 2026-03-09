@@ -122,7 +122,7 @@ async function run() {
         const res1Raw = await interactWithGemini(
           page,
           `${currentUxPrompt}\n\nJSON:\n${JSON.stringify(anonymized)}`,
-          'Думающая',
+          'Pro',
           false,
         );
         if (res1Raw.trim().toLowerCase().includes('все хорошо')) {
@@ -145,7 +145,7 @@ async function run() {
         const res2Raw = await interactWithGemini(
           page,
           `${currentEditorPrompt}\n\nJSON:\n${localizedText}`,
-          'Думающая',
+          'Pro',
           true,
         );
         if (!res2Raw.trim().toLowerCase().includes('все хорошо')) {
@@ -164,7 +164,7 @@ async function run() {
         const res3Raw = await interactWithGemini(
           page,
           `${techPrompt}\n\nJSON:\n${localizedText}`,
-          'Думающая',
+          'Pro',
           true,
         );
         if (!res3Raw.trim().toLowerCase().includes('все хорошо')) {
