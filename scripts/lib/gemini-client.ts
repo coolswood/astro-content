@@ -1,0 +1,343 @@
+import puppeteer, { Page, Browser } from 'puppeteer-core';
+
+/**
+ * Connects to a running Chrome/Chromium browser via the DevTools protocol.
+ * The browser must be started with --remote-debugging-port=9222.
+ */
+export async function connectToBrowser(): Promise<Browser> {
+  const versionResponse = await fetch('http://127.0.0.1:9222/json/version');
+  const versionData = await versionResponse.json();
+  return puppeteer.connect({
+    browserWSEndpoint: versionData.webSocketDebuggerUrl,
+    defaultViewport: null,
+  });
+}
+
+/**
+ * Opens a Gemini page in the browser or returns an existing one.
+ */
+export async function getGeminiPage(browser: Browser): Promise<Page> {
+  const pages = await browser.pages();
+  const existing = pages.find((p) => p.url().includes('gemini.google.com'));
+  if (existing) {
+    await existing.bringToFront();
+    return existing;
+  }
+  const page = await browser.newPage();
+  await page.goto('https://gemini.google.com/app', {
+    waitUntil: 'networkidle2',
+  });
+  return page;
+}
+
+/**
+ * Sends a prompt to Gemini and returns the model's text response.
+ *
+ * @param page - Puppeteer page connected to gemini.google.com
+ * @param prompt - The full text prompt to submit
+ * @param modelKeyword - Substring to match the model in the selector menu (e.g. 'Быстрая', 'Думающая')
+ * @param shouldStartNewChat - Whether to start a new chat before sending
+ * @param retries - Number of retry attempts on failure
+ */
+export async function interactWithGemini(
+  page: Page,
+  prompt: string,
+  modelKeyword: string = 'Быстрая',
+  shouldStartNewChat: boolean = false,
+  retries = 3,
+): Promise<string> {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      console.log(`🤖 Попытка ${attempt}/${retries}...`);
+
+      if (shouldStartNewChat) {
+        console.log('🆕 Запуск нового чата...');
+        try {
+          const newChatBtn =
+            'a[data-test-id="new-chat-button"], button[aria-label="Новый чат"]';
+          const btnFound = await page.$(newChatBtn);
+          if (btnFound) {
+            await page.click(newChatBtn);
+          } else {
+            console.log('🔄 Кнопка "Новый чат" не найдена, переход по URL...');
+            await page.goto('https://gemini.google.com/app', {
+              waitUntil: 'networkidle2',
+            });
+          }
+          await new Promise((r) => setTimeout(r, 2000));
+        } catch {
+          console.log(
+            '⚠️ Ошибка при создании нового чата, пробуем продолжить...',
+          );
+        }
+      }
+
+      // Проверка и включение временного чата
+      try {
+        const tempChatBtnSelector = 'button.temp-chat-button';
+        await page.waitForSelector(tempChatBtnSelector, { timeout: 10000 });
+        const isTempChatOn = await page.evaluate((sel) => {
+          const btn = document.querySelector(sel);
+          return btn?.classList.contains('temp-chat-on') || false;
+        }, tempChatBtnSelector);
+
+        if (!isTempChatOn) {
+          console.log('🔘 Включение временного чата...');
+          await page.click(tempChatBtnSelector);
+          await new Promise((r) => setTimeout(r, 2000));
+        }
+      } catch {
+        console.log("⚠️ Кнопка 'Временный чат' не найдена, продолжаем...");
+      }
+
+      // Выбор модели
+      try {
+        console.log(`🎯 Выбор модели ${modelKeyword}...`);
+        const modelSelectorBtn =
+          'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
+        await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
+        await page.click(modelSelectorBtn);
+        await page.waitForSelector('.mat-mdc-menu-item, [role="menuitem"]', {
+          timeout: 10000,
+        });
+        const selected = await page.evaluate((keyword) => {
+          const items = Array.from(
+            document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"]'),
+          );
+          const target = items.find((item) =>
+            (item as HTMLElement).innerText
+              .toLowerCase()
+              .includes(keyword.toLowerCase()),
+          ) as HTMLElement;
+          if (target) {
+            target.click();
+            return true;
+          }
+          return false;
+        }, modelKeyword);
+
+        if (selected) {
+          console.log(`✅ Модель ${modelKeyword} выбрана.`);
+          await new Promise((r) => setTimeout(r, 2000));
+        } else {
+          console.log(
+            `⚠️ Модель "${modelKeyword}" не найдена, используем текущую.`,
+          );
+          await page.keyboard.press('Escape');
+        }
+      } catch {
+        console.log('⚠️ Меню выбора модели не найдено, продолжаем...');
+      }
+
+      // Ввод и отправка промпта
+      console.log('⌨️ Отправка сообщения...');
+      const inputSelector = '.ql-editor';
+      await page.waitForSelector(inputSelector);
+      await page.click(inputSelector);
+      await page.evaluate(
+        (sel, text) => {
+          const el = document.querySelector(sel);
+          if (el) (el as HTMLElement).innerText = text;
+        },
+        inputSelector,
+        prompt,
+      );
+      await page.keyboard.press('Space');
+      await page.keyboard.press('Backspace');
+
+      const sendBtnSelector = 'button.send-button';
+      await page.waitForSelector(sendBtnSelector);
+      await page.click(sendBtnSelector);
+
+      // Ожидание ответа
+      console.log('⌛ Ожидание ответа...');
+      const thoughtsBtnSelector = 'button.thoughts-header-button';
+      try {
+        await page.waitForSelector(thoughtsBtnSelector, { timeout: 20000 });
+        console.log('🤔 Идёт процесс рассуждения/генерации...');
+        await page.waitForFunction(
+          (sel) => {
+            const btn = document.querySelector(sel);
+            const label =
+              btn?.querySelector('.thoughts-header-button-label')
+                ?.textContent || '';
+            return (
+              label.includes('процесс') ||
+              label.includes('reasoning') ||
+              label.includes('размышления')
+            );
+          },
+          { timeout: 300000, polling: 2000 },
+          thoughtsBtnSelector,
+        );
+      } catch {
+        console.log('ℹ️ Блок рассуждений не появился или уже прошел.');
+      }
+
+      console.log('✍️ Чтение ответа...');
+      // Ждем, пока исчезнет кнопка "Остановить генерацию" (если она есть) и появится текст
+      await page.waitForFunction(
+        () => {
+          const stopBtns = Array.from(
+            document.querySelectorAll('button'),
+          ).filter(
+            (b) =>
+              b
+                .getAttribute('aria-label')
+                ?.toLowerCase()
+                .includes('остановить') ||
+              b.getAttribute('aria-label')?.toLowerCase().includes('stop'),
+          );
+          if (stopBtns.length > 0) return false; // Еще генерирует
+
+          const responses = document.querySelectorAll('.model-response-text');
+          return (
+            responses.length > 0 &&
+            (responses[responses.length - 1] as HTMLElement).innerText.length >
+              0
+          );
+        },
+        { timeout: 300000, polling: 2000 },
+      );
+
+      // Дополнительная стабилизация: ждем, пока длина текста перестанет меняться в течение 5 секунд
+      let previousLength = 0;
+      let stableCount = 0;
+      while (stableCount < 5) {
+        await new Promise((r) => setTimeout(r, 1000));
+
+        const { currentLength, hasCopyButton } = await page.evaluate(() => {
+          const responses = document.querySelectorAll('.model-response-text');
+          const latestResponse =
+            responses.length > 0
+              ? (responses[responses.length - 1] as HTMLElement)
+              : null;
+
+          // Gemini UI injects .copy-button or a button with Copy/Копировать label when done
+          const copyBtns = Array.from(
+            document.querySelectorAll('button'),
+          ).filter((b) => {
+            const label = (b.getAttribute('aria-label') || '').toLowerCase();
+            return label.includes('копировать') || label.includes('copy');
+          });
+
+          return {
+            currentLength: latestResponse ? latestResponse.innerText.length : 0,
+            hasCopyButton: copyBtns.length >= responses.length, // Rough check if the latest one has buttons
+          };
+        });
+
+        if (currentLength > 0 && currentLength === previousLength) {
+          stableCount++;
+          // Если мы уверены, что появились финальные кнопки интерфейса — можно не ждать все 5 секунд
+          if (hasCopyButton && stableCount >= 2) break;
+        } else {
+          stableCount = 0;
+          previousLength = currentLength;
+        }
+      }
+
+      console.log('✅ Генерация завершена.');
+
+      const responseText = await page.evaluate(() => {
+        const responses = document.querySelectorAll('.model-response-text');
+        return (responses[responses.length - 1] as HTMLElement).innerText;
+      });
+
+      if (!responseText || responseText.length < 10) {
+        throw new Error('Пустой или слишком короткий ответ от Gemini.');
+      }
+
+      return responseText;
+    } catch (error) {
+      console.error(`❌ Ошибка на попытке ${attempt}:`, error);
+      if (attempt === retries) throw error;
+      console.log('🔄 Перезагрузка страницы для повторной попытки...');
+      await page.reload({ waitUntil: 'networkidle2' });
+    }
+  }
+  return '';
+}
+
+/**
+ * Clean and parse a string that might contain JSON wrapped in markdown or other text.
+ */
+export function parseGeminiJson<T>(text: string): T {
+  // Ищем первый подходящий JSON-блок (объект или массив)
+  const match = text.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+
+  const jsonString = match ? match[0] : text;
+  const cleanedText = jsonString
+    .replace(/^JSON/i, '')
+    .replace(/^```json/i, '')
+    .replace(/```$/i, '')
+    .trim();
+
+  try {
+    return JSON.parse(cleanedText);
+  } catch (e) {
+    try {
+      const repaired = repairJson(cleanedText);
+      const parsed = JSON.parse(repaired);
+      console.warn(
+        '⚠️ ПРЕДУПРЕЖДЕНИЕ: JSON был обрезан (вероятно, из-за лимита токенов) и автоматически восстановлен.',
+      );
+      return parsed;
+    } catch (e2) {
+      console.error('❌ ОШИБКА ПАРСИНГА JSON. СЫРОЙ ОТВЕТ ОТ GEMINI:');
+      console.error('-------------------------------------------');
+      console.error(text);
+      console.error('-------------------------------------------');
+      throw new Error(
+        `No valid JSON object found in response. Raw response logged above.`,
+      );
+    }
+  }
+}
+
+/**
+ * Пытается закрыть открытые фигурные и квадратные скобки (и строки) в обрезанном JSON.
+ */
+function repairJson(json: string): string {
+  let text = json.trim();
+  const stack: string[] = [];
+  let inString = false;
+  let escaped = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    if (escaped) {
+      escaped = false;
+      continue;
+    }
+    if (char === '\\') {
+      escaped = true;
+      continue;
+    }
+    if (char === '"') {
+      inString = !inString;
+      continue;
+    }
+    if (!inString) {
+      if (char === '{') stack.push('}');
+      else if (char === '[') stack.push(']');
+      else if (char === '}') {
+        if (stack[stack.length - 1] === '}') stack.pop();
+      } else if (char === ']') {
+        if (stack[stack.length - 1] === ']') stack.pop();
+      }
+    }
+  }
+
+  let result = text;
+  // Если мы остались внутри строки, закрываем её
+  if (inString) {
+    result += '"';
+  }
+
+  // Убираем возможную запятую в конце перед закрытием структур
+  result = result.replace(/,\s*$/, '');
+
+  // Закрываем скобки в обратном порядке
+  return result + stack.reverse().join('');
+}

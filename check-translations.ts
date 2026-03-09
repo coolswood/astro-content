@@ -63,6 +63,7 @@ const SCRIPT_MAP: Record<string, string> = {
   nl: 'éÉëËïÏèÈêÊàÀâÂóÓöÖûÛçÇîÎüÜáÁ',
   // Portuguese
   pt: 'áÁàÀâÂãÃçÇéÉêÊíÍóÓôÔõÕúÚªºüÜïÏ',
+  'pt-BR': 'áÁàÀâÂãÃçÇéÉêÊíÍóÓôÔõÕúÚªºüÜïÏ',
   pt_br: 'áÁàÀâÂãÃçÇéÉêÊíÍóÓôÔõÕúÚªºüÜïÏ',
   // French
   fr: 'éÉàÀèÈùÙâÂêÊîÎôÔûÛëËïÏüÜçÇœŒíÍáÁ',
@@ -157,4 +158,5 @@ if (problematicFiles.length === 0) {
   console.log(`Summary:`);
   console.log(`- Files with errors: ${problematicFiles.length}`);
   console.log(`- Total problematic words: ${totalErrors}`);
+  process.exit(1);
 }

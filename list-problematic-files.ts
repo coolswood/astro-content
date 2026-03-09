@@ -42,7 +42,11 @@ function shouldIgnorePath(path: string): boolean {
   return path === 'instagram' || path.endsWith('.instagram');
 }
 
-function compareStructure(value1: any, value2: any, path: string = ''): boolean {
+function compareStructure(
+  value1: any,
+  value2: any,
+  path: string = '',
+): boolean {
   if (shouldIgnorePath(path)) {
     return true;
   }
@@ -67,8 +71,12 @@ function compareStructure(value1: any, value2: any, path: string = ''): boolean 
     const keys2 = Object.keys(value2).sort();
 
     // Фильтруем ключи, исключая instagram
-    const filteredKeys1 = keys1.filter(key => !shouldIgnorePath(path ? `${path}.${key}` : key));
-    const filteredKeys2 = keys2.filter(key => !shouldIgnorePath(path ? `${path}.${key}` : key));
+    const filteredKeys1 = keys1.filter(
+      (key) => !shouldIgnorePath(path ? `${path}.${key}` : key),
+    );
+    const filteredKeys2 = keys2.filter(
+      (key) => !shouldIgnorePath(path ? `${path}.${key}` : key),
+    );
 
     // Проверяем наличие всех ключей
     for (const key of filteredKeys1) {
@@ -84,7 +92,9 @@ function compareStructure(value1: any, value2: any, path: string = ''): boolean 
     }
 
     // Рекурсивно проверяем общие ключи
-    const commonKeys = filteredKeys1.filter(key => filteredKeys2.includes(key));
+    const commonKeys = filteredKeys1.filter((key) =>
+      filteredKeys2.includes(key),
+    );
     for (const key of commonKeys) {
       const newPath = path ? `${path}.${key}` : key;
       if (!compareStructure(value1[key], value2[key], newPath)) {
@@ -166,7 +176,9 @@ function main() {
     console.log('Использование: bun list-problematic-files.ts <язык>');
     console.log('Пример: bun list-problematic-files.ts de');
     console.log('');
-    console.log('Примечание: Этот скрипт выводит только список файлов с проблемами в структуре');
+    console.log(
+      'Примечание: Этот скрипт выводит только список файлов с проблемами в структуре',
+    );
     console.log('(игнорируя различия в поле "instagram")');
     process.exit(1);
   }
@@ -182,7 +194,9 @@ function main() {
   if (problematicFiles.length === 0) {
     console.log(`✅ Все файлы имеют корректную структуру`);
   } else {
-    console.log(`❌ Найдено ${problematicFiles.length} файлов с проблемами в структуре:`);
+    console.log(
+      `❌ Найдено ${problematicFiles.length} файлов с проблемами в структуре:`,
+    );
     console.log('');
 
     for (const file of problematicFiles) {
@@ -191,6 +205,7 @@ function main() {
 
     console.log('');
     console.log(`📁 Всего проблемных файлов: ${problematicFiles.length}`);
+    process.exit(1);
   }
 }
 
