@@ -8,14 +8,21 @@ async function retryAction<T>(
     try {
       return await action();
     } catch (e: any) {
+      const msg = e.message.toLowerCase();
       if (
-        e.message.includes('detached Frame') ||
-        e.message.includes('disposed') ||
-        e.message.includes('Target closed')
+        msg.includes('detached frame') ||
+        msg.includes('disposed') ||
+        msg.includes('target closed') ||
+        msg.includes('timed out') ||
+        msg.includes('context destroyed') ||
+        e.name === 'ProtocolError'
       ) {
         if (i === retries - 1) throw e;
         // Silent retry for UI stability
-        await new Promise((r) => setTimeout(r, 1000));
+        console.log(
+          `⚠️ Puppeteer error ignored, retrying (${i + 1}/${retries}): ${e.message}`,
+        );
+        await new Promise((r) => setTimeout(r, 2000));
         continue;
       }
       throw e;
@@ -34,6 +41,7 @@ export async function connectToBrowser(): Promise<Browser> {
   return puppeteer.connect({
     browserWSEndpoint: versionData.webSocketDebuggerUrl,
     defaultViewport: null,
+    protocolTimeout: 300000, // 5 minutes (default is 30s)
   });
 }
 
@@ -41,20 +49,25 @@ export async function connectToBrowser(): Promise<Browser> {
  * Opens a Gemini page in the browser or returns an existing one.
  */
 export async function getGeminiPage(browser: Browser): Promise<Page> {
-  const pages = await browser.pages();
-  const existing = pages.find((p) => p.url().includes('gemini.google.com'));
-  if (existing) {
-    await existing.bringToFront();
-    return existing;
-  }
-  const page = await browser.newPage();
-  await page.goto('https://gemini.google.com/app', {
-    waitUntil: 'networkidle2',
+  return retryAction(async () => {
+    const pages = await browser.pages();
+    const existing = pages.find((p) => p.url().includes('gemini.google.com'));
+    if (existing) {
+      await existing.bringToFront();
+      return existing;
+    }
+    const page = await browser.newPage();
+    page.setDefaultTimeout(300000);
+    page.setDefaultNavigationTimeout(300000);
+    await page.goto('https://gemini.google.com/app', {
+      waitUntil: 'networkidle2',
+    });
+    return page;
   });
-  return page;
 }
 
-/**
+/*
+
  * Sends a prompt to Gemini and returns the model's text response.
  *
  * @param page - Puppeteer page connected to gemini.google.com
@@ -117,6 +130,9 @@ export async function interactWithGemini(
       // Выбор модели
       try {
         console.log(`🎯 Выбор модели ${modelKeyword}...`);
+        // Небольшая пауза перед первой попыткой выбора модели:
+        // меню режимов иногда появляется раньше, чем список моделей полностью прогрузится.
+        await new Promise((r) => setTimeout(r, 1000));
         const modelSelectorBtn =
           'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
         await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
@@ -307,7 +323,23 @@ export async function interactWithGemini(
       console.error(`❌ Ошибка на попытке ${attempt}:`, error);
       if (attempt === retries) throw error;
       console.log('🔄 Перезагрузка страницы для повторной попытки...');
-      await page.reload({ waitUntil: 'networkidle2' });
+      try {
+        await page.reload({ waitUntil: 'networkidle2' });
+      } catch (reloadError: any) {
+        console.error(
+          '❌ Ошибка при перезагрузке страницы:',
+          reloadError.message,
+        );
+        try {
+          console.log('🌐 Попытка прямого перехода на главную Gemini...');
+          await page.goto('https://gemini.google.com/app', {
+            waitUntil: 'networkidle2',
+          });
+        } catch (gotoError: any) {
+          console.error('❌ Критческая ошибка навигации:', gotoError.message);
+          if (attempt === retries) throw reloadError;
+        }
+      }
     }
   }
   return '';
@@ -327,11 +359,18 @@ export function parseGeminiJson<T>(text: string): T {
     .replace(/```$/i, '')
     .trim();
 
+  // Дополнительная очистка: экранируем кавычки внутри HTML-атрибутов,
+  // которые Gemini иногда забывает экранировать (например, <q author="Текст">)
+  const preprocessedText = cleanedText.replace(
+    /(\s[a-z-]+)="([^"]+)"/gi,
+    '$1=\\"$2\\"',
+  );
+
   try {
-    return JSON.parse(cleanedText);
+    return JSON.parse(preprocessedText);
   } catch (e) {
     try {
-      const repaired = repairJson(cleanedText);
+      const repaired = repairJson(preprocessedText);
       const parsed = JSON.parse(repaired);
       console.warn(
         '⚠️ ПРЕДУПРЕЖДЕНИЕ: JSON был обрезан (вероятно, из-за лимита токенов) и автоматически восстановлен.',

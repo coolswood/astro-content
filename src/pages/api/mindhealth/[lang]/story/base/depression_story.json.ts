@@ -6,10 +6,80 @@ import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import { instagramStep, dialog } from '@/lib/storyHelper';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 
 export const prerender = true;
 
 export const getStaticPaths = getLangStaticPaths;
+
+function legacyBuildScreens(story: any, storyEn: any) {
+  return [
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<h2>${story.title}</h2>`,
+        `<p>${story.screen_1.texts[0]}</p>`,
+        `<p>${story.screen_1.texts[1]}</p>`,
+        `<p>${story.screen_1.texts[2]}</p>`,
+        `<p>${story.screen_1.texts[3]}</p>`,
+        `<p>${story.screen_1.texts[4]}</p>`,
+        `<p>${story.screen_1.texts[5]}</p>`,
+        ...instagramStep(story.instagram, storyEn.instagram),
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<p>${story.screen_2.texts[0]}</p>`,
+        dialog({ psy: true, text: story.screen_2.dialog[0] }),
+        dialog({ text: story.screen_2.dialog[1] }),
+        dialog({ psy: true, text: story.screen_2.dialog[2] }),
+        dialog({ text: story.screen_2.dialog[3] }),
+        dialog({ psy: true, text: story.screen_2.dialog[4] }),
+        dialog({ text: story.screen_2.dialog[5] }),
+        dialog({ psy: true, text: story.screen_2.dialog[6] }),
+        dialog({ text: story.screen_2.dialog[7] }),
+        dialog({ psy: true, text: story.screen_2.dialog[8] }),
+        dialog({ text: story.screen_2.dialog[9] }),
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<p>${story.screen_3.texts[0]}</p>`,
+        `<p>${story.screen_3.texts[1]}</p>`,
+        `<p>${story.screen_3.texts[2]}</p>`,
+        `<p>${story.screen_3.texts[3]}</p>`,
+      ],
+    },
+  ];
+}
+
+function taggedBuildScreens(story: any, storyEn: any) {
+  return [
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<h2>${story.title}</h2>`,
+        ...renderTaggedTexts(story.screen_1.texts, {
+          instagramFallback: storyEn.instagram,
+        }),
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: renderTaggedTexts(story.screen_2.texts, {
+        instagramFallback: storyEn.instagram,
+      }),
+    },
+    {
+      __typename: 'ScreenText',
+      steps: renderTaggedTexts(story.screen_3.texts, {
+        instagramFallback: storyEn.instagram,
+      }),
+    },
+  ];
+}
 
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
@@ -30,6 +100,10 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const screens = hasTaggedStory(story)
+      ? taggedBuildScreens(story, storyEn)
+      : legacyBuildScreens(story, storyEn);
+
     const output = {
       id: 'DEPRESSION_STORY',
       color: '#F3BABA',
@@ -39,46 +113,7 @@ export const GET: APIRoute = async ({ params }) => {
       time: 5,
       type: 'theory',
       img: 'depression_story',
-      screens: [
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<h2>${story.title}</h2>`,
-            `<p>${story.screen_1.texts[0]}</p>`,
-            `<p>${story.screen_1.texts[1]}</p>`,
-            `<p>${story.screen_1.texts[2]}</p>`,
-            `<p>${story.screen_1.texts[3]}</p>`,
-            `<p>${story.screen_1.texts[4]}</p>`,
-            `<p>${story.screen_1.texts[5]}</p>`,
-            ...instagramStep(story.instagram, storyEn.instagram),
-          ],
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_2.texts[0]}</p>`,
-            dialog({ psy: true, text: story.screen_2.dialog[0] }),
-            dialog({ text: story.screen_2.dialog[1] }),
-            dialog({ psy: true, text: story.screen_2.dialog[2] }),
-            dialog({ text: story.screen_2.dialog[3] }),
-            dialog({ psy: true, text: story.screen_2.dialog[4] }),
-            dialog({ text: story.screen_2.dialog[5] }),
-            dialog({ psy: true, text: story.screen_2.dialog[6] }),
-            dialog({ text: story.screen_2.dialog[7] }),
-            dialog({ psy: true, text: story.screen_2.dialog[8] }),
-            dialog({ text: story.screen_2.dialog[9] }),
-          ],
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_3.texts[0]}</p>`,
-            `<p>${story.screen_3.texts[1]}</p>`,
-            `<p>${story.screen_3.texts[2]}</p>`,
-            `<p>${story.screen_3.texts[3]}</p>`,
-          ],
-        },
-      ],
+      screens,
     };
 
     return new Response(JSON.stringify(output), {

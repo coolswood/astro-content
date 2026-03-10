@@ -1,20 +1,21 @@
 /**
- * Flattens a nested JSON object into a single-level object with dotted keys.
- * Only string values are kept in the flattened object.
+ * Flattens a nested JSON object into a single-level object with a safe separator (\u001f).
+ * Keeps original value types (string, number, boolean).
  */
-export function flatten(obj: any, prefix = ''): Record<string, string> {
-  const result: Record<string, string> = {};
+export function flatten(obj: any, prefix = ''): Record<string, any> {
+  const result: Record<string, any> = {};
+  const separator = '\u001f';
 
   for (const key in obj) {
     if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;
 
     const value = obj[key];
-    const newKey = prefix ? `${prefix}.${key}` : key;
+    const newKey = prefix ? `${prefix}${separator}${key}` : key;
 
     if (typeof value === 'object' && value !== null) {
       Object.assign(result, flatten(value, newKey));
     } else {
-      result[newKey] = String(value);
+      result[newKey] = value;
     }
   }
 
@@ -22,21 +23,23 @@ export function flatten(obj: any, prefix = ''): Record<string, string> {
 }
 
 /**
- * Reconstructs a nested JSON object from a flattened object with dotted keys.
+ * Reconstructs a nested JSON object from a flattened object with a safe separator (\u001f).
  */
 export function unflatten(flat: Record<string, any>): any {
   const keysList = Object.keys(flat);
   if (keysList.length === 0) return {};
 
+  const separator = '\u001f';
+
   // Check if root should be an array
-  const firstKeyParts = keysList[0].split('.');
+  const firstKeyParts = keysList[0].split(separator);
   const isRootArray = !isNaN(Number(firstKeyParts[0]));
   const result: any = isRootArray ? [] : {};
 
   for (const key in flat) {
     if (!Object.prototype.hasOwnProperty.call(flat, key)) continue;
 
-    const keys = key.split('.');
+    const keys = key.split(separator);
     let current = result;
 
     for (let i = 0; i < keys.length; i++) {

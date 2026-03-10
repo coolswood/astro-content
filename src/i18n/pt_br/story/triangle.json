@@ -42,7 +42,7 @@
       "Emoção: alegria e orgulho.",
       "Comportamento: você sorri e liga para as pessoas próximas para contar a novidade.",
       "Os problemas começam quando ficamos presos em um ciclo negativo.",
-      "Um pensamento disfuncional gera sentimentos pesados e comportamentos ineficazes que, por sua vez, reforçam aquele pensamento.",
+      "<important>Um pensamento disfuncional gera sentimentos pesados e comportamentos ineficazes que, por sua vez, reforçam aquele pensamento.</important>",
       "É como uma bola de neve que vai crescendo enquanto desce a montanha."
     ]
   },
@@ -58,23 +58,21 @@
   "screen_3": {
     "texts": [
       "Mas há uma saída — e a TCC serve justamente para isso.",
-      "Vamos dar uma olhada no diálogo entre uma psicóloga e sua cliente para entender melhor como essa tríade funciona na vida real:"
-    ],
-    "dialog": [
-      "Sinto ansiedade o tempo todo. Parece que faço tudo errado e que as pessoas estão me julgando.",
-      "Vamos analisar uma situação específica? O que aconteceu na última vez que você sentiu essa ansiedade?",
-      "Eu estava fazendo uma apresentação no trabalho. Eu tremia e minha voz falhava. Parecia que todos me olhavam com julgamento.",
-      "E que pensamento passou pela sua cabeça logo antes da ansiedade aumentar?",
-      "Provavelmente pensei: “Vou estragar tudo” ou “Vão achar que sou incompetente”.",
-      "Entendi. Então, o pensamento foi: “Vou estragar tudo”. Emoções: ansiedade e medo. Comportamento: tremor e voz falhando.",
-      "Agora, vamos checar se esse pensamento é preciso.",
-      "Houve alguma evidência real de que você estragou tudo?",
-      "Bom... a apresentação não foi perfeita, mas também não foi um desastre. Meus colegas até fizeram perguntas no final.",
-      "Então, o pensamento “Vou estragar tudo” foi um exagero. Algo mais realista seria: “Estou nervosa, mas consigo lidar com isso”.",
-      "E mesmo se eu cometer um erro, isso não significa que sou incompetente. Significa que sou um ser humano e estou nervosa; além disso, ainda estou ganhando experiência em falar em público.",
-      "Se você tivesse esse pensamento de apoio, como se sentiria e como agiria?",
-      "Acho que eu ficaria mais calma e agiria com mais confiança.",
-      "Exatamente!"
+      "Vamos dar uma olhada no diálogo entre uma psicóloga e sua cliente para entender melhor como essa tríade funciona na vida real:",
+      "<dialog>Sinto ansiedade o tempo todo. Parece que faço tudo errado e que as pessoas estão me julgando.</dialog>",
+      "<dialog psy=\"true\">Vamos analisar uma situação específica? O que aconteceu na última vez que você sentiu essa ansiedade?</dialog>",
+      "<dialog>Eu estava fazendo uma apresentação no trabalho. Eu tremia e minha voz falhava. Parecia que todos me olhavam com julgamento.</dialog>",
+      "<dialog psy=\"true\">E que pensamento passou pela sua cabeça logo antes da ansiedade aumentar?</dialog>",
+      "<dialog>Provavelmente pensei: “Vou estragar tudo” ou “Vão achar que sou incompetente”.</dialog>",
+      "<dialog psy=\"true\">Entendi. Então, o pensamento foi: “Vou estragar tudo”. Emoções: ansiedade e medo. Comportamento: tremor e voz falhando.</dialog>",
+      "<dialog psy=\"true\">Agora, vamos checar se esse pensamento é preciso.</dialog>",
+      "<dialog psy=\"true\">Houve alguma evidência real de que você estragou tudo?</dialog>",
+      "<dialog>Bom... a apresentação não foi perfeita, mas também não foi um desastre. Meus colegas até fizeram perguntas no final.</dialog>",
+      "<dialog psy=\"true\">Então, o pensamento “Vou estragar tudo” foi um exagero. Algo mais realista seria: “Estou nervosa, mas consigo lidar com isso”.</dialog>",
+      "<dialog psy=\"true\">E mesmo se eu cometer um erro, isso não significa que sou incompetente. Significa que sou um ser humano e estou nervosa; além disso, ainda estou ganhando experiência em falar em público.</dialog>",
+      "<dialog psy=\"true\">Se você tivesse esse pensamento de apoio, como se sentiria e como agiria?</dialog>",
+      "<dialog>Acho que eu ficaria mais calma e agiria com mais confiança.</dialog>",
+      "<dialog psy=\"true\">Exatamente!</dialog>"
     ]
   },
   "screen_4": {

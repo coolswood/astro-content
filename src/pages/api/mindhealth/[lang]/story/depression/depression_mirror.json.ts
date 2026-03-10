@@ -8,6 +8,8 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory } from '@/lib/storyTaggedTextsHelper';
+import { buildTaggedStoryScreens } from '@/lib/storyTaggedScreens';
 import { activitylink, dialog, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -30,6 +32,10 @@ export const GET: APIRoute = async ({ params }) => {
     );
     story = fullStory.mirror;
 
+    const taggedScreens = hasTaggedStory(story)
+      ? buildTaggedStoryScreens(story, {})
+      : undefined;
+
     const output = {
       id: 'DEPRESSION_MIRROR',
       color: '#BABFF3',
@@ -40,7 +46,7 @@ export const GET: APIRoute = async ({ params }) => {
       type: 'exercise',
       img: 'exercise',
       isPremium: true,
-      screens: [
+      screens: taggedScreens ?? [
         {
           __typename: 'ScreenText',
           steps: [

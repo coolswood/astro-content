@@ -8,6 +8,8 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory } from '@/lib/storyTaggedTextsHelper';
+import { buildTaggedStoryScreens } from '@/lib/storyTaggedScreens';
 import { important, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -30,6 +32,10 @@ export const GET: APIRoute = async ({ params }) => {
     );
     story = fullStory.vitamins;
 
+    const taggedScreens = hasTaggedStory(story)
+      ? buildTaggedStoryScreens(story, {})
+      : undefined;
+
     const output = {
       id: 'DEPRESSION_VITAMINS',
       color: '#FFBFBF',
@@ -39,7 +45,7 @@ export const GET: APIRoute = async ({ params }) => {
       time: 6,
       type: 'theory',
       img: 'depression_vitamins',
-      screens: [
+      screens: taggedScreens ?? [
         {
           // @ts-ignore
           __typename: 'ScreenText',

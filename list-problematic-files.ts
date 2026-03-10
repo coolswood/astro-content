@@ -46,6 +46,7 @@ function compareStructure(
   value1: any,
   value2: any,
   path: string = '',
+  isStory: boolean = false,
 ): boolean {
   if (shouldIgnorePath(path)) {
     return true;
@@ -97,18 +98,18 @@ function compareStructure(
     );
     for (const key of commonKeys) {
       const newPath = path ? `${path}.${key}` : key;
-      if (!compareStructure(value1[key], value2[key], newPath)) {
+      if (!compareStructure(value1[key], value2[key], newPath, isStory)) {
         return false;
       }
     }
   } else if (Array.isArray(value1) && Array.isArray(value2)) {
-    if (value1.length !== value2.length) {
+    if (!isStory && value1.length !== value2.length) {
       return false;
     }
 
     const minLength = Math.min(value1.length, value2.length);
     for (let i = 0; i < minLength; i++) {
-      if (!compareStructure(value1[i], value2[i], `${path}[${i}]`)) {
+      if (!compareStructure(value1[i], value2[i], `${path}[${i}]`, isStory)) {
         return false;
       }
     }
@@ -152,7 +153,10 @@ function getProblematicFiles(sourceLang: string, targetLang: string): string[] {
       continue;
     }
 
-    if (!compareStructure(sourceJson, targetJson)) {
+    const isStoryFile =
+      relativePath.startsWith('story/') || relativePath.includes('/story/');
+
+    if (!compareStructure(sourceJson, targetJson, '', isStoryFile)) {
       problematicFiles.push(relativePath);
     }
   }

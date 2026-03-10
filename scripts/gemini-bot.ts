@@ -23,19 +23,11 @@ async function isGitDirty(filePath: string): Promise<boolean> {
   }
 }
 
-async function getAllJsonFiles(dir: string): Promise<string[]> {
-  let results: string[] = [];
-  const list = await fs.readdir(dir);
-  for (const file of list) {
-    const filePath = path.join(dir, file);
-    const stat = await fs.stat(filePath);
-    if (stat && stat.isDirectory()) {
-      results = results.concat(await getAllJsonFiles(filePath));
-    } else if (filePath.endsWith('.json')) {
-      results.push(filePath);
-    }
-  }
-  return results;
+async function getJsonFilesFlat(dir: string): Promise<string[]> {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+    .map((entry) => path.join(dir, entry.name));
 }
 
 async function translateFile(
@@ -92,7 +84,7 @@ async function translateFile(
   const flatKeys = Object.keys(flattened);
   const chunkSize = parseInt(process.argv[4] || '80');
   const totalChunks = Math.ceil(flatKeys.length / chunkSize);
-  let finalFlatLocalized: Record<string, string> = {};
+  let finalFlatLocalized: Record<string, any> = {};
 
   // Попытка возобновления
   try {
@@ -121,7 +113,7 @@ async function translateFile(
       );
     }
 
-    const chunkDataFlat: Record<string, string> = {};
+    const chunkDataFlat: Record<string, any> = {};
     chunkKeys.forEach((k) => (chunkDataFlat[k] = flattened[k]));
     const chunkData = unflatten(chunkDataFlat);
 
@@ -243,7 +235,7 @@ async function run() {
 
   const stats = await fs.stat(fullInputPath);
   if (stats.isDirectory()) {
-    files = await getAllJsonFiles(fullInputPath);
+    files = await getJsonFilesFlat(fullInputPath);
   } else {
     files = [fullInputPath];
   }
@@ -279,11 +271,38 @@ async function run() {
       console.log(`\n🚀 --- ПРОХОД ${iteration} из ${maxIterations} ---`);
 
       for (const file of files) {
-        await translateFile(file, page, targetFolder, glossaryText, {
-          trans: transPrompt,
-          editor: editorPrompt,
-          tech: techPrompt,
-        });
+        const relativePath = path.relative(
+          path.join(process.cwd(), 'src/i18n/ru'),
+          file,
+        );
+        const targetFilePath = path.join(
+          process.cwd(),
+          'src/i18n',
+          targetFolder,
+          relativePath,
+        );
+
+        if (await isGitDirty(targetFilePath)) {
+          console.log(
+            `⏭️ Пропуск: у файла есть незакомиченные изменения: ${targetFilePath}`,
+          );
+          continue;
+        }
+
+        try {
+          await translateFile(file, page, targetFolder, glossaryText, {
+            trans: transPrompt,
+            editor: editorPrompt,
+            tech: techPrompt,
+          });
+        } catch (fileError: any) {
+          console.error(
+            `❌ Ошибка при обработке файла ${file}:`,
+            fileError.message,
+          );
+          console.log('⏭️ Переход к следующему файлу...');
+          continue;
+        }
 
         console.log(`\n🔍 Валидация для файла: ${file}`);
         try {
