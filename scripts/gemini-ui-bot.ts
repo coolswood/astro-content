@@ -15,9 +15,9 @@ import { loadPrompt } from './lib/prompt-loader.js';
 import { anonymizeKeys, restoreKeys } from './lib/key-anonymizer.js';
 
 async function run() {
-  const targetLang = 'pt-BR';
   const fileName = process.argv[2] || 'app_interface.json';
-  const chunkSize = parseInt(process.argv[3] || '80');
+  const targetLang = (process.argv[3] || 'pt_br').toLowerCase().replace('-', '_');
+  const chunkSize = parseInt(process.argv[4] || '80');
 
   // Исходный файл: сначала ищем в scripts/, потом в src/i18n/ru/
   const scriptsFilePath = path.join(process.cwd(), 'scripts', fileName);
