@@ -92,3 +92,50 @@ export function deepMerge(target: any, source: any): any {
 
   return result;
 }
+
+/**
+ * Filters 'update' object to only include keys that exist in 'source' object
+ * and have the same type (or both are objects).
+ */
+export function filterByStructure(source: any, update: any): any | undefined {
+  if (
+    typeof source !== 'object' ||
+    source === null ||
+    typeof update !== 'object' ||
+    update === null
+  ) {
+    return typeof source === typeof update ? update : undefined;
+  }
+
+  const result: any = Array.isArray(source) ? [] : {};
+  let hasChanges = false;
+
+  for (const key in update) {
+    if (!Object.prototype.hasOwnProperty.call(update, key)) continue;
+    if (!Object.prototype.hasOwnProperty.call(source, key)) {
+      console.warn(`⚠️ Пропуск "лишнего" ключа: ${key}`);
+      continue;
+    }
+
+    const sourceValue = source[key];
+    const updateValue = update[key];
+
+    if (
+      typeof updateValue === 'object' &&
+      updateValue !== null &&
+      typeof sourceValue === 'object' &&
+      sourceValue !== null
+    ) {
+      const nested = filterByStructure(sourceValue, updateValue);
+      if (nested !== undefined) {
+        result[key] = nested;
+        hasChanges = true;
+      }
+    } else if (typeof updateValue === typeof sourceValue) {
+      result[key] = updateValue;
+      hasChanges = true;
+    }
+  }
+
+  return hasChanges ? result : undefined;
+}

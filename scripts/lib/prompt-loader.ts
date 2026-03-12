@@ -38,8 +38,36 @@ export async function loadPrompt(
   const targetLang = targetLangMatch?.[1]?.trim() ?? lang;
   const targetMarket = targetMarketMatch?.[1]?.trim() ?? lang;
 
-  return baseTemplate
-    .replace('{{LANG_STYLE}}', styleContent)
+  let content = baseTemplate.replace('{{LANG_STYLE}}', styleContent);
+
+  // Resolve {{INCLUDE:fileName}}
+  const fragmentsDir = path.join(PROMPTS_DIR, 'base', 'fragments');
+  
+  async function resolveIncludes(text: string): Promise<string> {
+    const includeRegex = /\{\{INCLUDE:\s*(.+?)\s*\}\}/g;
+    let match;
+    let result = text;
+    
+    // We use a while loop to support nested includes if needed
+    while ((match = includeRegex.exec(result)) !== null) {
+      const fileName = match[1];
+      const filePath = path.join(fragmentsDir, fileName);
+      try {
+        const fragmentContent = await fs.readFile(filePath, 'utf-8');
+        result = result.replace(match[0], fragmentContent);
+        // Reset regex state to catch new includes in the inserted content
+        includeRegex.lastIndex = 0;
+      } catch (e) {
+        console.warn(`⚠️ Fragment not found: ${fileName} at ${filePath}`);
+        result = result.replace(match[0], `(MISSING INCLUDE: ${fileName})`);
+      }
+    }
+    return result;
+  }
+
+  content = await resolveIncludes(content);
+
+  return content
     .replace(/\{\{TARGET_LANG\}\}/g, targetLang)
     .replace(/\{\{TARGET_MARKET\}\}/g, targetMarket);
 }

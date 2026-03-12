@@ -79,7 +79,7 @@ export async function getGeminiPage(browser: Browser): Promise<Page> {
 export async function interactWithGemini(
   page: Page,
   prompt: string,
-  modelKeyword: string = 'Быстрая',
+  modelKeyword: string = 'Pro',
   shouldStartNewChat: boolean = false,
   retries = 3,
 ): Promise<string> {
@@ -96,19 +96,30 @@ export async function interactWithGemini(
       }
 
       // Выбор модели
-      try {
-        console.log(`🎯 Выбор модели ${modelKeyword}...`);
-        // Небольшая пауза перед первой попыткой выбора модели:
-        // меню режимов иногда появляется раньше, чем список моделей полностью прогрузится.
-        await new Promise((r) => setTimeout(r, 2000));
-        const modelSelectorBtn =
-          'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
-        await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
+      console.log(`🎯 Выбор модели ${modelKeyword}...`);
+      // Небольшая пауза перед первой попыткой выбора модели:
+      // меню режимов иногда появляется раньше, чем список моделей полностью прогрузится.
+      await new Promise((r) => setTimeout(r, 2000));
+      const modelSelectorBtn =
+        'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
+      await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
+
+      // Проверяем текущую выбранную модель
+      let currentModel = await page.evaluate((sel) => {
+        return (document.querySelector(sel) as HTMLElement)?.innerText.toLowerCase() || '';
+      }, modelSelectorBtn);
+
+      console.log(`ℹ️ Текущая модель в интерфейсе: "${currentModel}"`);
+
+      // Если текущая модель - "Быстрая" или она не совпадает с запрошенной, пробуем переключить
+      if (currentModel.includes('быстрая') || !currentModel.includes(modelKeyword.toLowerCase())) {
+        console.log(`🔄 Переключение на ${modelKeyword}...`);
         await page.click(modelSelectorBtn);
         await page.waitForSelector('.mat-mdc-menu-item, [role="menuitem"]', {
           timeout: 10000,
         });
-        const selected = await page.evaluate((keyword) => {
+
+        const selectedResult = await page.evaluate((keyword) => {
           const items = Array.from(
             document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"]'),
           );
@@ -131,14 +142,11 @@ export async function interactWithGemini(
 
           // Если запрошенная модель недоступна, пробуем разрешенный фолбек
           if (!target) {
-            console.log(
-              `⚠️ Модель "${keyword}" недоступна, ищем разрешенную альтернативу...`,
-            );
             // Если была запрошена Pro, пробуем Думающую
             if (keyword.toLowerCase() === 'pro') {
               target = findEnabledItem('Думающая');
             }
-            // Если была запрошена Думающая, пробуем Pro (на случай если в коде поменяли приоритет)
+            // Если была запрошена Думающая, пробуем Pro
             else if (keyword.toLowerCase().includes('думающ')) {
               target = findEnabledItem('Pro');
             }
@@ -146,23 +154,32 @@ export async function interactWithGemini(
 
           if (target) {
             target.click();
-            return true;
+            return { success: true, name: target.innerText };
           }
-          return false;
+          return { success: false };
         }, modelKeyword);
 
-        if (selected) {
-          console.log(`✅ Модель выбрана (запрошено: ${modelKeyword}).`);
+        if (selectedResult.success) {
+          console.log(`✅ Выбрана модель: ${selectedResult.name}`);
           await new Promise((r) => setTimeout(r, 2000));
         } else {
           throw new Error(
-            `❌ КРИТИЧЕСКАЯ ОШИБКА: Ни Pro, ни Думающая модели не доступны. Использование "Быстрой" модели запрещено. ПЕРЕРЫВ.`,
+            `❌ КРИТИЧЕСКАЯ ОШИБКА: Ни Pro, ни Думающая модели не доступны. Использование "Быстрой" модели запрещено.`,
           );
         }
-      } catch (e: any) {
-        console.log(`⚠️ Ошибка при выборе модели: ${e.message}`);
-        // Если это наша критическая ошибка про отсутствие моделей — пробрасываем выше
-        if (e.message.includes('КРИТИЧЕСКАЯ ОШИБКА')) throw e;
+      } else {
+        console.log(`✅ Модель ${modelKeyword} уже выбрана.`);
+      }
+
+      // Финальная проверка перед отправкой
+      currentModel = await page.evaluate((sel) => {
+        return (document.querySelector(sel) as HTMLElement)?.innerText.toLowerCase() || '';
+      }, modelSelectorBtn);
+
+      if (currentModel.includes('быстрая')) {
+        throw new Error(
+          `❌ КРИТИЧЕСКАЯ ОШИБКА: Обнаружена модель "Быстрая" непосредственно перед отправкой. Обрыв.`,
+        );
       }
 
       // Ввод и отправка промпта
