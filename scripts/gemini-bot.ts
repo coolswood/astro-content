@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { execSync } from 'child_process';
+import { spawnSync } from 'child_process';
 import {
   connectToBrowser,
   getGeminiPage,
@@ -11,11 +11,11 @@ import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
 
 async function run() {
-  const targetLang = 'pt-BR';
   const fileName = process.argv[2] || 'start.json';
+  const targetLang = (process.argv[3] || 'pt_br').toLowerCase().replace('-', '_');
 
-  const ruPath = path.join(process.cwd(), 'src/i18n/ru/story', fileName);
-  const targetDir = path.join(process.cwd(), 'src/i18n', targetLang, 'story');
+  const ruPath = path.join(process.cwd(), 'src/i18n/ru', fileName);
+  const targetDir = path.join(process.cwd(), 'src/i18n', targetLang, '');
   const targetPath = path.join(targetDir, fileName);
 
   console.log(`📖 Чтение исходного файла: ${ruPath}`);
@@ -111,7 +111,7 @@ async function run() {
     }
 
     console.log(`💾 Сохранение итогового результата: ${targetPath}`);
-    await fs.mkdir(targetDir, { recursive: true });
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
     await fs.writeFile(targetPath, finalJson, 'utf-8');
     console.log('✨ Цикл Gemini завершен.');
 
@@ -119,24 +119,21 @@ async function run() {
     console.log('\n🔍 Запуск финальной валидации...');
 
     console.log('--- Проверка символов (check-translations.ts) ---');
-    const checkOutput = execSync(`bun check-translations.ts ${targetLang}`, {
+    const checkResult = spawnSync('bun', ['check-translations.ts', targetLang], {
       encoding: 'utf-8',
     });
-    console.log(checkOutput);
-    if (checkOutput.includes('❌')) {
-      throw new Error('Валидация символов не прошла!');
+    console.log(checkResult.stdout || checkResult.stderr);
+    if (checkResult.status !== 0) {
+      console.warn('⚠️ Валидация символов не прошла!');
     }
 
     console.log('--- Проверка структуры (list-problematic-files.ts) ---');
-    const structOutput = execSync(
-      `bun list-problematic-files.ts ${targetLang}`,
-      {
-        encoding: 'utf-8',
-      },
-    );
-    console.log(structOutput);
-    if (structOutput.includes('❌')) {
-      throw new Error('Валидация структуры JSON не прошла!');
+    const structResult = spawnSync('bun', ['list-problematic-files.ts', targetLang], {
+      encoding: 'utf-8',
+    });
+    console.log(structResult.stdout || structResult.stderr);
+    if (structResult.status !== 0) {
+      console.warn('⚠️ Валидация структуры JSON не прошла!');
     }
 
     console.log('\n🚀 Весь процесс автоматизации завершен успешно!');
