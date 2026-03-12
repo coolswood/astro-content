@@ -12,13 +12,11 @@ import { loadPrompt } from './lib/prompt-loader.js';
 import { flatten, unflatten, deepMerge } from './lib/json-utils.js';
 import type { Page } from 'puppeteer-core';
 
-/**
- * Filters the update JSON to only include keys that exist in the source JSON at their respective levels.
- * This prevents "lifted" keys from being added to the root or wrong levels.
- */
-function filterByStructure(source: any, update: any): any {
-  if (typeof source !== 'object' || source === null) return undefined;
-  if (typeof update !== 'object' || update === null) return undefined;
+async function run() {
+  const fileName = process.argv[2] || 'start.json';
+  const targetLang = (process.argv[3] || 'pt_br')
+    .toLowerCase()
+    .replace('-', '_');
 
   const result: any = Array.isArray(source) ? [] : {};
   let hasChanges = false;
@@ -84,11 +82,22 @@ async function translateFile(
   );
   const targetPath = path.join(
     process.cwd(),
-    'src/i18n',
-    targetLang.replace('-', '_').toLowerCase(),
-    relativePath,
+    'scripts/prompts',
+    targetLang,
+    'partial_glossary.json',
   );
-  const targetDir = path.dirname(targetPath);
+  let glossary = await loadGlossary(glossaryPath);
+  if (glossary.length === 0) {
+    const backupGlossaryPath = path.join(
+      process.cwd(),
+      'scripts/prompts',
+      targetLang,
+      'glossary.json',
+    );
+    console.log(`⚠️ Глоссарий не найден в ${glossaryPath}, пробуем ${backupGlossaryPath}`);
+    glossary = await loadGlossary(backupGlossaryPath);
+  }
+  const glossaryText = formatGlossary(glossary);
 
   const langPromptsDir = path.join(
     process.cwd(),
@@ -177,7 +186,7 @@ async function translateFile(
     );
     const res1Raw = await interactWithGemini(
       page,
-      `${currentTransPrompt}\n\nВот текст для перевода:\n${JSON.stringify(chunkData)}`,
+      `${currentTransPrompt}\n\nВот текст для перевода:\n${ruContent}`,
       'Pro',
       false,
     );
@@ -202,7 +211,7 @@ async function translateFile(
     console.log('🚀 ШАГ 2: Редактура (Editing)...');
     const res2Raw = await interactWithGemini(
       page,
-      `${cleanPrompt(prompts.editor)}\n\nВот текст для редактуры:\n${localizedText}`,
+      `${editorPromptBase}\n\nВот текст для редактуры:\n${translatedJson}`,
       'Pro',
       true,
     );
@@ -237,7 +246,7 @@ async function translateFile(
     console.log('🚀 ШАГ 3: Технический аудит (Tech Review)...');
     const res3Raw = await interactWithGemini(
       page,
-      `${cleanPrompt(prompts.tech)}\n\nВот текст для тех-аудита:\n${localizedText}`,
+      `${techPromptBase}\n\nВот текст для тех-аудита:\n${res2Handled}`,
       'Pro',
       true,
     );
@@ -283,169 +292,33 @@ async function translateFile(
     console.log(`✅ Чанк ${currentChunkIndex} сохранен во временный файл.`);
   }
 
-  const finalLocalizedJson = unflatten(finalFlatLocalized);
-
-  // Очистка временного файла после успешного завершения всех чанков
-  try {
-    await fs.unlink(partialPath);
-  } catch (e) {}
-
-  // Если исходный файл был массивом, конвертируем обратно в массив
-  // Если исходный файл был массивом, unflatten уже вернет массив, если ключи начинаются с чисел.
-  // Но для уверенности проверим тип исходного JSON.
-  const resultJson =
-    Array.isArray(sourceJson) && !Array.isArray(finalLocalizedJson)
-      ? Object.values(finalLocalizedJson)
-      : finalLocalizedJson;
-
-  console.log(`💾 Сохранение: ${targetPath}`);
-  await fs.mkdir(targetDir, { recursive: true });
-  await fs.writeFile(targetPath, JSON.stringify(resultJson, null, 2), 'utf-8');
-}
-
-async function run() {
-  const inputPath = process.argv[2] || 'homeBot';
-  const rawLang = process.argv[3] || 'pt-BR'; // Например, pt-BR
-
-  // pt-BR -> Prompts folder (pt-BR), pt_br -> i18n folder (pt_br)
-  const targetLang = rawLang;
-  const targetFolder = rawLang.replace('-', '_').toLowerCase();
-
-  const fullInputPath = path.resolve(process.cwd(), 'src/i18n/ru', inputPath);
-  let files: string[] = [];
-
-  const stats = await fs.stat(fullInputPath);
-  if (stats.isDirectory()) {
-    files = await getJsonFilesFlat(fullInputPath);
-  } else {
-    files = [fullInputPath];
-  }
-
-  console.log(`📂 Найдено файлов для обработки: ${files.length}`);
-
-  console.log(`📜 Чтение промптов и глоссария...`);
-  const glossaryPath = path.join(
-    process.cwd(),
-    'scripts/prompts',
-    targetLang,
-    'glossary.json',
-  );
-  const glossary = await loadGlossary(glossaryPath);
-  const glossaryText = formatGlossary(glossary);
-
-  const [transPrompt, editorPrompt, techPrompt] = await Promise.all([
-    loadPrompt('text', 'main', targetLang),
-    loadPrompt('text', 'editor', targetLang),
-    loadPrompt('text', 'tech', targetLang),
-  ]);
-
-  console.log('🔗 Подключение к браузеру...');
-  const browser = await connectToBrowser();
-  const page = await getGeminiPage(browser);
-
-  try {
-    let iteration = 0;
-    const maxIterations = 3;
-
-    while (iteration < maxIterations) {
-      iteration++;
-      console.log(`\n🚀 --- ПРОХОД ${iteration} из ${maxIterations} ---`);
-
-      for (const file of files) {
-        const relativePath = path.relative(
-          path.join(process.cwd(), 'src/i18n/ru'),
-          file,
-        );
-        const targetFilePath = path.join(
-          process.cwd(),
-          'src/i18n',
-          targetFolder,
-          relativePath,
-        );
-
-        if (await isGitDirty(targetFilePath)) {
-          console.log(
-            `⏭️ Пропуск: у файла есть незакомиченные изменения: ${targetFilePath}`,
-          );
-          continue;
-        }
-
-        try {
-          await translateFile(file, page, targetFolder, glossaryText, {
-            trans: transPrompt,
-            editor: editorPrompt,
-            tech: techPrompt,
-          });
-        } catch (fileError: any) {
-          console.error(
-            `❌ Ошибка при обработке файла ${file}:`,
-            fileError.message,
-          );
-          console.log('⏭️ Переход к следующему файлу...');
-          continue;
-        }
-
-        console.log(`\n🔍 Валидация для файла: ${file}`);
-        try {
-          execSync(`bun check-translations.ts ${targetFolder}`, {
-            stdio: 'inherit',
-          });
-          execSync(`bun list-problematic-files.ts ${targetFolder}`, {
-            stdio: 'inherit',
-          });
-        } catch (e: any) {
-          console.warn(
-            `⚠️ Валидация выявила проблемы в ${file}. Скрипт продолжит работу.`,
-          );
-        }
-      }
-
-      console.log('\n🔍 Запуск финальной проверки всех файлов...');
-      let problematicFiles: string[] = [];
-      try {
-        // Мы запускаем их через execSync, чтобы видеть вывод в консоли
-        execSync(`bun check-translations.ts ${targetFolder}`, {
-          stdio: 'inherit',
-        });
-        execSync(`bun list-problematic-files.ts ${targetFolder}`, {
-          stdio: 'inherit',
-        });
-        // Если дошли сюда, значит list-problematic-files завершился с кодом 0
-        console.log('\n✅ Весь процесс автоматизации завершен успешно!');
-        return; // Выходим из run() после успеха
-      } catch (e: any) {
-        // Если ошибка — значит есть проблемные файлы. Попробуем их спарсить.
-        // list-problematic-files.ts выводит имена файлов построчно.
-        const output = execSync(
-          `bun list-problematic-files.ts ${targetFolder}`,
-        ).toString();
-        problematicFiles = output
-          .split('\n')
-          .map((line) => line.trim())
-          .filter((line) => line.endsWith('.json'));
-
-        if (problematicFiles.length === 0) {
-          console.error('❌ Валидация упала, но список файлов пуст.');
-          break;
-        }
-
-        console.log(
-          `❌ Найдено проблемных файлов: ${problematicFiles.length}.`,
-        );
-
-        if (iteration < maxIterations) {
-          console.log(
-            `⚠️ Есть проблемные файлы (${problematicFiles.length}). Попробуем еще раз...`,
-          );
-          // Мы не откатываем файлы автоматически, чтобы не терять прогресс.
-          // Если файл уже переведен, но в нем есть ошибки, Gemini попробует исправить его на следующей итерации.
-        } else {
-          console.log(
-            '⚠️ Достигнут лимит попыток (3). Оставшиеся файлы требуют ручного вмешательства.',
-          );
-        }
-      }
+    console.log('--- Проверка символов (check-translations.ts) ---');
+    const checkResult = spawnSync(
+      'bun',
+      ['check-translations.ts', targetLang],
+      {
+        encoding: 'utf-8',
+      },
+    );
+    console.log(checkResult.stdout || checkResult.stderr);
+    if (checkResult.status !== 0) {
+      console.warn('⚠️ Валидация символов не прошла!');
     }
+
+    console.log('--- Проверка структуры (list-problematic-files.ts) ---');
+    const structResult = spawnSync(
+      'bun',
+      ['list-problematic-files.ts', targetLang],
+      {
+        encoding: 'utf-8',
+      },
+    );
+    console.log(structResult.stdout || structResult.stderr);
+    if (structResult.status !== 0) {
+      console.warn('⚠️ Валидация структуры JSON не прошла!');
+    }
+
+    console.log('\n🚀 Весь процесс автоматизации завершен успешно!');
   } catch (error) {
     console.error('❌ Скрипт завершился с критической ошибкой:', error);
   } finally {
