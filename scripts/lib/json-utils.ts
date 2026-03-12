@@ -61,3 +61,34 @@ export function unflatten(flat: Record<string, any>): any {
 
   return result;
 }
+
+/**
+ * Recursively merges two objects. If a key in the source is an object,
+ * it will be merged with the corresponding key in the target.
+ */
+export function deepMerge(target: any, source: any): any {
+  if (typeof source !== 'object' || source === null) return source;
+  if (typeof target !== 'object' || target === null) return source;
+
+  const result = Array.isArray(target) ? [...target] : { ...target };
+
+  for (const key in source) {
+    if (!Object.prototype.hasOwnProperty.call(source, key)) continue;
+
+    const sourceValue = source[key];
+    const targetValue = target[key];
+
+    if (
+      typeof sourceValue === 'object' &&
+      sourceValue !== null &&
+      typeof targetValue === 'object' &&
+      targetValue !== null
+    ) {
+      result[key] = deepMerge(targetValue, sourceValue);
+    } else {
+      result[key] = sourceValue;
+    }
+  }
+
+  return result;
+}

@@ -88,43 +88,11 @@ export async function interactWithGemini(
       console.log(`🤖 Попытка ${attempt}/${retries}...`);
 
       if (shouldStartNewChat) {
-        console.log('🆕 Запуск нового чата...');
-        try {
-          const newChatBtn =
-            'a[data-test-id="new-chat-button"], button[aria-label="Новый чат"]';
-          const btnFound = await page.$(newChatBtn);
-          if (btnFound) {
-            await page.click(newChatBtn);
-          } else {
-            console.log('🔄 Кнопка "Новый чат" не найдена, переход по URL...');
-            await page.goto('https://gemini.google.com/app', {
-              waitUntil: 'networkidle2',
-            });
-          }
-          await new Promise((r) => setTimeout(r, 2000));
-        } catch {
-          console.log(
-            '⚠️ Ошибка при создании нового чата, пробуем продолжить...',
-          );
-        }
-      }
-
-      // Проверка и включение временного чата
-      try {
-        const tempChatBtnSelector = 'button.temp-chat-button';
-        await page.waitForSelector(tempChatBtnSelector, { timeout: 10000 });
-        const isTempChatOn = await page.evaluate((sel) => {
-          const btn = document.querySelector(sel);
-          return btn?.classList.contains('temp-chat-on') || false;
-        }, tempChatBtnSelector);
-
-        if (!isTempChatOn) {
-          console.log('🔘 Включение временного чата...');
-          await page.click(tempChatBtnSelector);
-          await new Promise((r) => setTimeout(r, 2000));
-        }
-      } catch {
-        console.log("⚠️ Кнопка 'Временный чат' не найдена, продолжаем...");
+        console.log('🆕 Запуск нового чата через переход по ссылке...');
+        await page.goto('https://gemini.google.com/app', {
+          waitUntil: 'networkidle2',
+        });
+        await new Promise((r) => setTimeout(r, 2000));
       }
 
       // Выбор модели
@@ -132,7 +100,7 @@ export async function interactWithGemini(
         console.log(`🎯 Выбор модели ${modelKeyword}...`);
         // Небольшая пауза перед первой попыткой выбора модели:
         // меню режимов иногда появляется раньше, чем список моделей полностью прогрузится.
-        await new Promise((r) => setTimeout(r, 1000));
+        await new Promise((r) => setTimeout(r, 2000));
         const modelSelectorBtn =
           'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
         await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
@@ -347,45 +315,79 @@ export async function interactWithGemini(
 
 /**
  * Clean and parse a string that might contain JSON wrapped in markdown or other text.
+ * If parsing fails, it tries to repair it or asks Gemini to fix it.
  */
-export function parseGeminiJson<T>(text: string): T {
-  // Ищем первый подходящий JSON-блок (объект или массив)
-  const match = text.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+export async function parseGeminiJson<T>(
+  text: string,
+  page?: Page,
+  modelKeyword: string = 'Pro',
+): Promise<T> {
+  const tryParse = (rawText: string): T | null => {
+    // Ищем первый подходящий JSON-блок (объект или массив)
+    const match = rawText.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+    const jsonString = match ? match[0] : rawText;
+    const cleanedText = jsonString
+      .replace(/^JSON/i, '')
+      .replace(/^```json/i, '')
+      .replace(/```$/i, '')
+      .trim();
 
-  const jsonString = match ? match[0] : text;
-  const cleanedText = jsonString
-    .replace(/^JSON/i, '')
-    .replace(/^```json/i, '')
-    .replace(/```$/i, '')
-    .trim();
+    // Дополнительная очистка: экранируем кавычки внутри HTML-атрибутов
+    const preprocessedText = cleanedText.replace(
+      /(\s[a-z-]+)="([^"]+)"/gi,
+      '$1=\\"$2\\"',
+    );
 
-  // Дополнительная очистка: экранируем кавычки внутри HTML-атрибутов,
-  // которые Gemini иногда забывает экранировать (например, <q author="Текст">)
-  const preprocessedText = cleanedText.replace(
-    /(\s[a-z-]+)="([^"]+)"/gi,
-    '$1=\\"$2\\"',
-  );
-
-  try {
-    return JSON.parse(preprocessedText);
-  } catch (e) {
     try {
-      const repaired = repairJson(preprocessedText);
-      const parsed = JSON.parse(repaired);
-      console.warn(
-        '⚠️ ПРЕДУПРЕЖДЕНИЕ: JSON был обрезан (вероятно, из-за лимита токенов) и автоматически восстановлен.',
-      );
-      return parsed;
-    } catch (e2) {
-      console.error('❌ ОШИБКА ПАРСИНГА JSON. СЫРОЙ ОТВЕТ ОТ GEMINI:');
-      console.error('-------------------------------------------');
-      console.error(text);
-      console.error('-------------------------------------------');
-      throw new Error(
-        `No valid JSON object found in response. Raw response logged above.`,
-      );
+      return JSON.parse(preprocessedText);
+    } catch (e) {
+      try {
+        const repaired = repairJson(preprocessedText);
+        return JSON.parse(repaired);
+      } catch (e2) {
+        return null;
+      }
+    }
+  };
+
+  const parsed = tryParse(text);
+  if (parsed !== null) return parsed;
+
+  // Если не распарсилось и у нас есть доступ к странице, просим Gemini исправить
+  if (page) {
+    console.log('⚠️ Ошибка парсинга JSON. Просим Gemini исправить...');
+    for (let fixAttempt = 1; fixAttempt <= 2; fixAttempt++) {
+      try {
+        const fixPrompt = `В твоем предыдущем ответе была ошибка в структуре JSON. 
+Пожалуйста, исправь ее и выведи СТРОГО только валидный JSON объект, без лишнего текста и пояснений. 
+Вот твой предыдущий (ошибочный) ответ:
+\n${text}`;
+
+        const fixedRaw = await interactWithGemini(
+          page,
+          fixPrompt,
+          modelKeyword,
+          false, // Продолжаем в том же чате
+        );
+
+        const fixedParsed = tryParse(fixedRaw);
+        if (fixedParsed !== null) {
+          console.log('✅ Gemini исправил JSON ошибку.');
+          return fixedParsed;
+        }
+      } catch (fixError) {
+        console.error(`❌ Попытка исправления ${fixAttempt} не удалась:`, fixError);
+      }
     }
   }
+
+  console.error('❌ ОШИБКА ПАРСИНГА JSON. СЫРОЙ ОТВЕТ ОТ GEMINI:');
+  console.error('-------------------------------------------');
+  console.error(text);
+  console.error('-------------------------------------------');
+  throw new Error(
+    `No valid JSON object found in response after repair attempts. Raw response logged above.`,
+  );
 }
 
 /**

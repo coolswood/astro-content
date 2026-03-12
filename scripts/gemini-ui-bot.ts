@@ -132,7 +132,11 @@ async function run() {
         }
 
         // Извлекаем глоссарий сразу после Stage 1
-        const stage1Chunk = parseGeminiJson<GeminiResponse>(res1Raw);
+        const stage1Chunk = await parseGeminiJson<GeminiResponse>(
+          res1Raw,
+          page,
+          'Pro',
+        );
         globalGlossary = mergeGlossary(globalGlossary, stage1Chunk.glossary);
         console.log(
           `📚 Глоссарий после Stage 1: ${globalGlossary.length} терминов.`,
@@ -149,7 +153,11 @@ async function run() {
           true,
         );
         if (!res2Raw.trim().toLowerCase().includes('все хорошо')) {
-          const partialUpdates = parseGeminiJson<Record<string, any>>(res2Raw);
+          const partialUpdates = await parseGeminiJson<Record<string, any>>(
+            res2Raw,
+            page,
+            'Pro',
+          );
           const currentData = JSON.parse(localizedText);
           const mergedData = { ...currentData, ...partialUpdates };
           localizedText = JSON.stringify(mergedData);
@@ -168,7 +176,11 @@ async function run() {
           true,
         );
         if (!res3Raw.trim().toLowerCase().includes('все хорошо')) {
-          const partialUpdates = parseGeminiJson<Record<string, any>>(res3Raw);
+          const partialUpdates = await parseGeminiJson<Record<string, any>>(
+            res3Raw,
+            page,
+            'Pro',
+          );
           const currentData = JSON.parse(localizedText);
           const mergedData = { ...currentData, ...partialUpdates };
           localizedText = JSON.stringify(mergedData);
@@ -182,8 +194,11 @@ async function run() {
         await page.close();
 
         // Парсим финальный локализованный JSON и восстанавливаем оригинальные ключи
-        const finalLocalizedChunk =
-          parseGeminiJson<Record<string, any>>(localizedText);
+        const finalLocalizedChunk = await parseGeminiJson<Record<string, any>>(
+          localizedText,
+          page,
+          'Pro',
+        );
         const restoredLocalized = restoreKeys(finalLocalizedChunk, keyMap);
         Object.assign(finalLocalizedJson, restoredLocalized);
 

@@ -9,8 +9,49 @@ import {
 } from './lib/gemini-client.js';
 import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
-import { flatten, unflatten } from './lib/json-utils.js';
+import { flatten, unflatten, deepMerge } from './lib/json-utils.js';
 import type { Page } from 'puppeteer-core';
+
+/**
+ * Filters the update JSON to only include keys that exist in the source JSON at their respective levels.
+ * This prevents "lifted" keys from being added to the root or wrong levels.
+ */
+function filterByStructure(source: any, update: any): any {
+  if (typeof source !== 'object' || source === null) return undefined;
+  if (typeof update !== 'object' || update === null) return undefined;
+
+  const result: any = Array.isArray(source) ? [] : {};
+  let hasChanges = false;
+
+  for (const key in update) {
+    if (!Object.prototype.hasOwnProperty.call(update, key)) continue;
+    if (!Object.prototype.hasOwnProperty.call(source, key)) {
+      console.warn(`⚠️ Пропуск "лишнего" ключа: ${key}`);
+      continue;
+    }
+
+    const sourceValue = source[key];
+    const updateValue = update[key];
+
+    if (
+      typeof updateValue === 'object' &&
+      updateValue !== null &&
+      typeof sourceValue === 'object' &&
+      sourceValue !== null
+    ) {
+      const nested = filterByStructure(sourceValue, updateValue);
+      if (nested !== undefined) {
+        result[key] = nested;
+        hasChanges = true;
+      }
+    } else if (typeof updateValue === typeof sourceValue) {
+      result[key] = updateValue;
+      hasChanges = true;
+    }
+  }
+
+  return hasChanges ? result : undefined;
+}
 
 async function isGitDirty(filePath: string): Promise<boolean> {
   try {
@@ -116,10 +157,21 @@ async function translateFile(
     const chunkDataFlat: Record<string, any> = {};
     chunkKeys.forEach((k) => (chunkDataFlat[k] = flattened[k]));
     const chunkData = unflatten(chunkDataFlat);
+    const isStory =
+      relativePath.startsWith('story' + path.sep) ||
+      relativePath.startsWith('story/');
+
+    const cleanPrompt = (p: string) => {
+      if (!isStory) return p;
+      return p.replace(
+        /- СТРОГО СОХРАНЯЙ СТРУКТУРУ: Запрещено изменять количество элементов в массивах.*/g,
+        '',
+      );
+    };
 
     // ШАГ 1: Перевод
     console.log('🚀 ШАГ 1: Перевод (Transcreation)...');
-    const currentTransPrompt = prompts.trans.replace(
+    const currentTransPrompt = cleanPrompt(prompts.trans).replace(
       '{{GLOSSARY}}',
       glossaryText,
     );
@@ -138,7 +190,11 @@ async function translateFile(
       continue;
     }
 
-    const translatedChunk = parseGeminiJson<Record<string, any>>(res1Raw);
+    const translatedChunk = await parseGeminiJson<Record<string, any>>(
+      res1Raw,
+      page,
+      'Pro',
+    );
     let currentLocalizedJson = translatedChunk;
     let localizedText = JSON.stringify(currentLocalizedJson);
 
@@ -146,7 +202,7 @@ async function translateFile(
     console.log('🚀 ШАГ 2: Редактура (Editing)...');
     const res2Raw = await interactWithGemini(
       page,
-      `${prompts.editor}\n\nВот текст для редактуры:\n${localizedText}`,
+      `${cleanPrompt(prompts.editor)}\n\nВот текст для редактуры:\n${localizedText}`,
       'Pro',
       true,
     );
@@ -155,12 +211,24 @@ async function translateFile(
       !res2Raw.trim().toLowerCase().includes('all set') &&
       !res2Raw.trim().toLowerCase().includes('все хорошо')
     ) {
-      const partialUpdates = parseGeminiJson<Record<string, any>>(res2Raw);
-      currentLocalizedJson = { ...currentLocalizedJson, ...partialUpdates };
-      localizedText = JSON.stringify(currentLocalizedJson);
-      console.log(
-        `✨ Stage 2: Применены правки для ${Object.keys(partialUpdates).length} ключей.`,
+      const partialUpdates = await parseGeminiJson<Record<string, any>>(
+        res2Raw,
+        page,
+        'Pro',
       );
+      const filteredUpdates = filterByStructure(
+        currentLocalizedJson,
+        partialUpdates,
+      );
+      if (filteredUpdates) {
+        currentLocalizedJson = deepMerge(currentLocalizedJson, filteredUpdates);
+        localizedText = JSON.stringify(currentLocalizedJson);
+        console.log(
+          `✨ Stage 2: Применены правки для ${Object.keys(flatten(filteredUpdates)).length} ключей.`,
+        );
+      } else {
+        console.log('✨ Stage 2: Без изменений (структура не совпала)');
+      }
     } else {
       console.log('✨ Stage 2: Без изменений (Все хорошо)');
     }
@@ -169,7 +237,7 @@ async function translateFile(
     console.log('🚀 ШАГ 3: Технический аудит (Tech Review)...');
     const res3Raw = await interactWithGemini(
       page,
-      `${prompts.tech}\n\nВот текст для тех-аудита:\n${localizedText}`,
+      `${cleanPrompt(prompts.tech)}\n\nВот текст для тех-аудита:\n${localizedText}`,
       'Pro',
       true,
     );
@@ -179,11 +247,24 @@ async function translateFile(
       !res3Raw.trim().toLowerCase().includes('all set') &&
       !res3Raw.trim().toLowerCase().includes('все хорошо')
     ) {
-      const partialUpdates = parseGeminiJson<Record<string, any>>(res3Raw);
-      chunkFinalJson = { ...currentLocalizedJson, ...partialUpdates };
-      console.log(
-        `✨ Stage 3: Применены правки для ${Object.keys(partialUpdates).length} ключей.`,
+      const partialUpdates = await parseGeminiJson<Record<string, any>>(
+        res3Raw,
+        page,
+        'Pro',
       );
+      const filteredUpdates = filterByStructure(
+        currentLocalizedJson,
+        partialUpdates,
+      );
+      if (filteredUpdates) {
+        chunkFinalJson = deepMerge(currentLocalizedJson, filteredUpdates);
+        console.log(
+          `✨ Stage 3: Применены правки для ${Object.keys(flatten(filteredUpdates)).length} ключей.`,
+        );
+      } else {
+        chunkFinalJson = currentLocalizedJson;
+        console.log('✨ Stage 3: Без изменений (структура не совпала)');
+      }
     } else {
       chunkFinalJson = currentLocalizedJson;
       console.log('✨ Stage 3: Без изменений (Все хорошо)');

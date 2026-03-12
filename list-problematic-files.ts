@@ -47,24 +47,28 @@ function compareStructure(
   value2: any,
   path: string = '',
   isStory: boolean = false,
-): boolean {
+): string[] {
+  const errors: string[] = [];
+
   if (shouldIgnorePath(path)) {
-    return true;
+    return errors;
   }
 
   if (value1 === null && value2 === null) {
-    return true;
+    return errors;
   }
 
   if (value1 === null || value2 === null) {
-    return false;
+    errors.push(`[${path}] One of values is null`);
+    return errors;
   }
 
   const type1 = typeof value1;
   const type2 = typeof value2;
 
   if (type1 !== type2) {
-    return false;
+    errors.push(`[${path}] Type mismatch: ${type1} vs ${type2}`);
+    return errors;
   }
 
   if (type1 === 'object' && !Array.isArray(value1) && !Array.isArray(value2)) {
@@ -82,13 +86,17 @@ function compareStructure(
     // Проверяем наличие всех ключей
     for (const key of filteredKeys1) {
       if (!filteredKeys2.includes(key)) {
-        return false;
+        errors.push(
+          `[${path ? path + '.' : ''}${key}] Missing key in target file`,
+        );
       }
     }
 
     for (const key of filteredKeys2) {
       if (!filteredKeys1.includes(key)) {
-        return false;
+        errors.push(
+          `[${path ? path + '.' : ''}${key}] Extra key in target file`,
+        );
       }
     }
 
@@ -98,27 +106,30 @@ function compareStructure(
     );
     for (const key of commonKeys) {
       const newPath = path ? `${path}.${key}` : key;
-      if (!compareStructure(value1[key], value2[key], newPath, isStory)) {
-        return false;
-      }
+      errors.push(...compareStructure(value1[key], value2[key], newPath, isStory));
     }
   } else if (Array.isArray(value1) && Array.isArray(value2)) {
     if (!isStory && value1.length !== value2.length) {
-      return false;
+      errors.push(
+        `[${path}] Array length mismatch: ${value1.length} vs ${value2.length}`,
+      );
     }
 
     const minLength = Math.min(value1.length, value2.length);
     for (let i = 0; i < minLength; i++) {
-      if (!compareStructure(value1[i], value2[i], `${path}[${i}]`, isStory)) {
-        return false;
-      }
+      errors.push(
+        ...compareStructure(value1[i], value2[i], `${path}[${i}]`, isStory),
+      );
     }
   }
 
-  return true;
+  return errors;
 }
 
-function getProblematicFiles(sourceLang: string, targetLang: string): string[] {
+function getProblematicFiles(
+  sourceLang: string,
+  targetLang: string,
+): Map<string, string[]> {
   const sourceDir = `src/i18n/${sourceLang}`;
   const targetDir = `src/i18n/${targetLang}`;
 
@@ -134,30 +145,33 @@ function getProblematicFiles(sourceLang: string, targetLang: string): string[] {
 
   const sourceFiles = getAllJsonFiles(sourceDir);
   const targetFiles = getAllJsonFiles(targetDir);
-  const problematicFiles: string[] = [];
+  const problematicFiles = new Map<string, string[]>();
 
   for (const sourceFile of sourceFiles) {
     const relativePath = relative(sourceDir, sourceFile);
     const targetFile = join(targetDir, relativePath);
 
     if (!existsSync(targetFile)) {
-      problematicFiles.push(relativePath);
+      problematicFiles.set(relativePath, ['File missing in target language']);
       continue;
     }
 
     const sourceJson = parseJsonFile(sourceFile);
     const targetJson = parseJsonFile(targetFile);
 
-    if (sourceJson === null || targetJson === null) {
-      problematicFiles.push(relativePath);
+    if (sourceJson === null) {
+      problematicFiles.set(relativePath, ['Failed to parse source JSON']);
+      continue;
+    }
+    if (targetJson === null) {
+      problematicFiles.set(relativePath, ['Failed to parse target JSON']);
       continue;
     }
 
-    const isStoryFile =
-      relativePath.startsWith('story/') || relativePath.includes('/story/');
-
-    if (!compareStructure(sourceJson, targetJson, '', isStoryFile)) {
-      problematicFiles.push(relativePath);
+    const isStory = relativePath.startsWith('story/') || relativePath.includes('/story/');
+    const errors = compareStructure(sourceJson, targetJson, '', isStory);
+    if (errors.length > 0) {
+      problematicFiles.set(relativePath, errors);
     }
   }
 
@@ -166,11 +180,11 @@ function getProblematicFiles(sourceLang: string, targetLang: string): string[] {
     const sourceFile = join(sourceDir, relativePath);
 
     if (!existsSync(sourceFile)) {
-      problematicFiles.push(relativePath);
+      problematicFiles.set(relativePath, ['Extra file in target language']);
     }
   }
 
-  return problematicFiles.sort();
+  return problematicFiles;
 }
 
 function main() {
@@ -179,36 +193,37 @@ function main() {
   if (args.length !== 1) {
     console.log('Использование: bun list-problematic-files.ts <язык>');
     console.log('Пример: bun list-problematic-files.ts de');
-    console.log('');
-    console.log(
-      'Примечание: Этот скрипт выводит только список файлов с проблемами в структуре',
-    );
-    console.log('(игнорируя различия в поле "instagram")');
     process.exit(1);
   }
 
   const targetLang = args[0];
   const sourceLang = 'ru';
 
-  console.log(`🔍 Поиск проблемных файлов: ${sourceLang} → ${targetLang}`);
+  console.log(`🔍 Поиск структурных проблем: ${sourceLang} → ${targetLang}`);
   console.log('');
 
   const problematicFiles = getProblematicFiles(sourceLang, targetLang);
 
-  if (problematicFiles.length === 0) {
+  if (problematicFiles.size === 0) {
     console.log(`✅ Все файлы имеют корректную структуру`);
   } else {
     console.log(
-      `❌ Найдено ${problematicFiles.length} файлов с проблемами в структуре:`,
+      `❌ Найдено ${problematicFiles.size} файлов с проблемами в структуре:`,
     );
     console.log('');
 
-    for (const file of problematicFiles) {
-      console.log(file);
+    const sortedPaths = Array.from(problematicFiles.keys()).sort();
+
+    for (const file of sortedPaths) {
+      const errors = problematicFiles.get(file)!;
+      console.log(`📄 ${file}`);
+      for (const err of errors) {
+        console.log(`   ⚠️ ${err}`);
+      }
+      console.log('');
     }
 
-    console.log('');
-    console.log(`📁 Всего проблемных файлов: ${problematicFiles.length}`);
+    console.log(`📁 Всего проблемных файлов: ${problematicFiles.size}`);
     process.exit(1);
   }
 }
