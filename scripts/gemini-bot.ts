@@ -12,7 +12,9 @@ import { loadPrompt } from './lib/prompt-loader.js';
 
 async function run() {
   const fileName = process.argv[2] || 'start.json';
-  const targetLang = (process.argv[3] || 'pt_br').toLowerCase().replace('-', '_');
+  const targetLang = (process.argv[3] || 'pt_br')
+    .toLowerCase()
+    .replace('-', '_');
 
   const ruPath = path.join(process.cwd(), 'src/i18n/ru', fileName);
   const targetDir = path.join(process.cwd(), 'src/i18n', targetLang, '');
@@ -24,9 +26,21 @@ async function run() {
   console.log(`📜 Чтение промптов...`);
   const glossaryPath = path.join(
     process.cwd(),
-    'scripts/partial_glossary_app_interface.json',
+    'scripts/prompts',
+    targetLang,
+    'partial_glossary.json',
   );
-  const glossary = await loadGlossary(glossaryPath);
+  let glossary = await loadGlossary(glossaryPath);
+  if (glossary.length === 0) {
+    const backupGlossaryPath = path.join(
+      process.cwd(),
+      'scripts/prompts',
+      targetLang,
+      'glossary.json',
+    );
+    console.log(`⚠️ Глоссарий не найден в ${glossaryPath}, пробуем ${backupGlossaryPath}`);
+    glossary = await loadGlossary(backupGlossaryPath);
+  }
   const glossaryText = formatGlossary(glossary);
 
   const [transPromptBase, editorPromptBase, techPromptBase] = await Promise.all(
@@ -51,7 +65,7 @@ async function run() {
     const res1Raw = await interactWithGemini(
       page,
       `${currentTransPrompt}\n\nВот текст для перевода:\n${ruContent}`,
-      'Думающая',
+      'Pro',
       false,
     );
     if (res1Raw.trim().toLowerCase().includes('все хорошо')) {
@@ -68,7 +82,7 @@ async function run() {
     const res2Raw = await interactWithGemini(
       page,
       `${editorPromptBase}\n\nВот текст для редактуры:\n${translatedJson}`,
-      'Думающая',
+      'Pro',
       true,
     );
     if (
@@ -91,7 +105,7 @@ async function run() {
     const res3Raw = await interactWithGemini(
       page,
       `${techPromptBase}\n\nВот текст для тех-аудита:\n${res2Handled}`,
-      'Думающая',
+      'Pro',
       true,
     );
     if (
@@ -119,18 +133,26 @@ async function run() {
     console.log('\n🔍 Запуск финальной валидации...');
 
     console.log('--- Проверка символов (check-translations.ts) ---');
-    const checkResult = spawnSync('bun', ['check-translations.ts', targetLang], {
-      encoding: 'utf-8',
-    });
+    const checkResult = spawnSync(
+      'bun',
+      ['check-translations.ts', targetLang],
+      {
+        encoding: 'utf-8',
+      },
+    );
     console.log(checkResult.stdout || checkResult.stderr);
     if (checkResult.status !== 0) {
       console.warn('⚠️ Валидация символов не прошла!');
     }
 
     console.log('--- Проверка структуры (list-problematic-files.ts) ---');
-    const structResult = spawnSync('bun', ['list-problematic-files.ts', targetLang], {
-      encoding: 'utf-8',
-    });
+    const structResult = spawnSync(
+      'bun',
+      ['list-problematic-files.ts', targetLang],
+      {
+        encoding: 'utf-8',
+      },
+    );
     console.log(structResult.stdout || structResult.stderr);
     if (structResult.status !== 0) {
       console.warn('⚠️ Валидация структуры JSON не прошла!');
