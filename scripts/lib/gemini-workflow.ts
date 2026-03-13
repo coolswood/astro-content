@@ -59,7 +59,9 @@ export async function runGeminiWorkflow(
   const currentEditorPrompt = prompts.editor.replace('{{GLOSSARY}}', glossaryText);
   const res2Raw = await interactWithGemini(
     page,
-    `${currentEditorPrompt}\n\nВот исходный текст (для сверки):\n${sourceContent}\n\nВот текст для редактуры:\n${currentHandledJson}`,
+    isUI 
+      ? `${currentEditorPrompt}\n\nВот исходный текст (для сверки):\n${sourceContent}\n\nВот текст для редактуры:\n${currentHandledJson}`
+      : `${currentEditorPrompt}\n\nВот текст для редактуры:\n${currentHandledJson}`,
     model,
     true
   );
@@ -77,7 +79,7 @@ export async function runGeminiWorkflow(
   console.log('\n🚀 ШАГ 3: Технический аудит...');
   const res3Raw = await interactWithGemini(
     page,
-    `${prompts.tech}\n\nВот исходный текст (для сверки):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}`,
+    `${prompts.tech}\n\nВот текст для тех-аудита:\n${currentHandledJson}`,
     model,
     true
   );

@@ -1,5 +1,12 @@
 import puppeteer, { Page, Browser } from 'puppeteer-core';
 
+export class TerminalError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'TerminalError';
+  }
+}
+
 async function retryAction<T>(
   action: () => Promise<T>,
   retries = 3,
@@ -111,13 +118,19 @@ export async function interactWithGemini(
 
       console.log(`ℹ️ Текущая модель в интерфейсе: "${currentModel}"`);
 
-      // Если текущая модель - "Быстрая" или она не совпадает с запрошенной, пробуем переключить
-      if (currentModel.includes('быстрая') || !currentModel.includes(modelKeyword.toLowerCase())) {
+      // Если текущая модель - "Быстрая", пробуем переключить ОБЯЗАТЕЛЬНО
+      // Или если она не совпадает с запрошенной
+      const isFast = currentModel.includes('быстрая') || currentModel.includes('flash');
+
+      if (isFast || !currentModel.includes(modelKeyword.toLowerCase())) {
         console.log(`🔄 Переключение на ${modelKeyword}...`);
         await page.click(modelSelectorBtn);
         await page.waitForSelector('.mat-mdc-menu-item, [role="menuitem"]', {
           timeout: 10000,
         });
+
+        // Ждем 2 секунды, чтобы интерфейс успел обновить доступность моделей (disabled/enabled)
+        await new Promise((r) => setTimeout(r, 2000));
 
         const selectedResult = await page.evaluate((keyword) => {
           const items = Array.from(
@@ -163,7 +176,7 @@ export async function interactWithGemini(
           console.log(`✅ Выбрана модель: ${selectedResult.name}`);
           await new Promise((r) => setTimeout(r, 2000));
         } else {
-          throw new Error(
+          throw new TerminalError(
             `❌ КРИТИЧЕСКАЯ ОШИБКА: Ни Pro, ни Думающая модели не доступны. Использование "Быстрой" модели запрещено.`,
           );
         }
@@ -176,8 +189,8 @@ export async function interactWithGemini(
         return (document.querySelector(sel) as HTMLElement)?.innerText.toLowerCase() || '';
       }, modelSelectorBtn);
 
-      if (currentModel.includes('быстрая')) {
-        throw new Error(
+      if (currentModel.includes('быстрая') || currentModel.includes('flash')) {
+        throw new TerminalError(
           `❌ КРИТИЧЕСКАЯ ОШИБКА: Обнаружена модель "Быстрая" непосредственно перед отправкой. Обрыв.`,
         );
       }
