@@ -1,8 +1,5 @@
 import fs from 'fs/promises';
 import {
-  connectToBrowser,
-} from './lib/gemini-client.js';
-import {
   loadGlossary,
   formatGlossary,
   mergeGlossary,
@@ -11,9 +8,12 @@ import { loadPrompt } from './lib/prompt-loader.js';
 
 import { parseBotArgs, resolveBotPaths } from './lib/bot-utils.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
+import { GeminiProvider } from './lib/providers/gemini-provider.js';
+import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import type { AIProvider } from './lib/types.js';
 
 async function run() {
-  const { fileName, targetLang, chunkSize } = parseBotArgs();
+  const { fileName, targetLang, chunkSize, provider: providerType } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
 
   const [main, editor, tech] = await Promise.all([
@@ -31,7 +31,14 @@ async function run() {
     `📦 Всего ключей: ${keys.length}. Чанков: ${Math.ceil(keys.length / chunkSize)}`,
   );
 
-  const browser = await connectToBrowser();
+  let provider: AIProvider;
+  if (providerType === 'chatgpt') {
+    provider = new ChatGPTProvider();
+  } else {
+    provider = new GeminiProvider();
+  }
+  
+  await provider.init();
 
   let finalLocalizedJson: Record<string, any> = {};
   let globalGlossary = await loadGlossary(paths.partialGlossaryPath);
@@ -72,13 +79,8 @@ async function run() {
       const glossaryText = formatGlossary(globalGlossary);
 
       try {
-        const page = await browser.newPage();
-        await page.goto('https://gemini.google.com/app', {
-          waitUntil: 'networkidle2',
-        });
-
         const result = await runGeminiWorkflow(
-          page,
+          provider,
           JSON.stringify(chunkData),
           { main, editor, tech },
           { glossaryText, isUI: true }
@@ -105,7 +107,6 @@ async function run() {
            );
         }
 
-        await page.close();
         await new Promise((r) => setTimeout(r, 5000));
       } catch (e) {
         console.error(`🛑 Ошибка в чанке ${Math.floor(i / chunkSize) + 1}:`, e);
@@ -121,8 +122,9 @@ async function run() {
   } catch (error) {
     console.error('❌ Критическая ошибка:', error);
   } finally {
-    await browser.disconnect();
+    await provider.close();
   }
 }
 
 run().catch(console.error);
+

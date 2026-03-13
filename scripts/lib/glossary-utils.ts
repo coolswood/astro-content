@@ -11,11 +11,21 @@ export async function loadGlossary(
   try {
     const data = JSON.parse(await fs.readFile(glossaryPath, 'utf-8'));
     if (Array.isArray(data) && data.length > 0) {
-      console.log(`📚 Загружен глоссарий: ${data.length} терминов.`);
-      return data as GlossaryItem[];
+      console.log(`📚 Загружен глоссарий: ${data.length} терминов из ${glossaryPath}`);
+      return data.map((item: any) => {
+        const langValue = item.lang || item.pt_br || '';
+        if (!langValue) {
+          console.warn(`⚠️ Проблема с термином "${item.ru}": перевод не найден (ни в lang, ни в pt_br)`);
+        }
+        return {
+          ru: item.ru,
+          lang: langValue,
+          context: item.context || ''
+        };
+      });
     }
   } catch {
-    console.log('⚠️ Глоссарий не найден или пуст.');
+    console.log(`⚠️ Глоссарий не найден или пуст: ${glossaryPath}`);
   }
   return [];
 }
@@ -25,7 +35,7 @@ export async function loadGlossary(
  */
 export function formatGlossary(glossary: GlossaryItem[]): string {
   return glossary.length > 0
-    ? glossary.map((g) => `- ${g.ru}: ${g.pt_br}`).join('\n')
+    ? glossary.map((g) => `- ${g.ru}: ${g.lang}`).join('\n')
     : 'Пусто.';
 }
 

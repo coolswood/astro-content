@@ -1,15 +1,14 @@
 import fs from 'fs/promises';
-import {
-  connectToBrowser,
-  getGeminiPage,
-} from './lib/gemini-client.js';
 import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
 import { parseBotArgs, resolveBotPaths, runBotValidation } from './lib/bot-utils.js';
-import { runGeminiWorkflow } from './lib/gemini-workflow.js';
+import { runGeminiWorkflow } from './lib/gemini-workflow.ts';
+import { GeminiProvider } from './lib/providers/gemini-provider.js';
+import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import type { AIProvider } from './lib/types.js';
 
 async function run() {
-  const { fileName, targetLang } = parseBotArgs();
+  const { fileName, targetLang, provider: providerType } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
 
   console.log(`📖 Чтение исходного файла: ${paths.ruPath}`);
@@ -29,13 +28,19 @@ async function run() {
     loadPrompt('text', 'tech', targetLang),
   ]);
 
-  console.log('🔗 Подключение к браузеру...');
-  const browser = await connectToBrowser();
+  let provider: AIProvider;
+  if (providerType === 'chatgpt') {
+    provider = new ChatGPTProvider();
+  } else {
+    provider = new GeminiProvider();
+  }
+
+  console.log(`🔗 Инициализация провайдера: ${providerType}...`);
+  await provider.init();
 
   try {
-    const page = await getGeminiPage(browser);
     const result = await runGeminiWorkflow(
-      page,
+      provider,
       ruContent,
       { main, editor, tech },
       { glossaryText, isUI: false }
@@ -46,15 +51,15 @@ async function run() {
       console.log(`💾 Сохранение итогового результата: ${paths.targetPath}`);
       await fs.mkdir(paths.targetDir, { recursive: true });
       await fs.writeFile(paths.targetPath, finalJson, 'utf-8');
-      console.log('✨ Цикл Gemini завершен.');
+      console.log('✨ Цикл перевода завершен.');
     }
 
     runBotValidation(targetLang);
   } catch (error) {
     console.error('❌ Скрипт завершился с ошибкой:', error);
   } finally {
-    await browser.disconnect();
-    console.log('👋 Отключено от браузера.');
+    await provider.close();
+    console.log('👋 Сессия провайдера завершена.');
   }
 }
 

@@ -11,8 +11,9 @@ export function parseBotArgs() {
     .toLowerCase()
     .replace('-', '_');
   const chunkSize = parseInt(process.argv[4] || '80');
+  const provider = (process.argv[5] || 'gemini').toLowerCase() as 'gemini' | 'chatgpt';
 
-  return { fileName, targetLang, chunkSize };
+  return { fileName, targetLang, chunkSize, provider };
 }
 
 /**
