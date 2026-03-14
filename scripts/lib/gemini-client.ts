@@ -93,6 +93,9 @@ export async function interactWithGemini(
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       console.log(`🤖 Попытка ${attempt}/${retries}...`);
+      
+      // Обеспечиваем фокус на вкладке
+      await page.bringToFront();
 
       if (shouldStartNewChat) {
         console.log('🆕 Запуск нового чата через переход по ссылке...');

@@ -10,6 +10,7 @@ export interface WorkflowOptions {
   model?: string;
   glossaryText?: string;
   isUI?: boolean;
+  stage3Provider?: AIProvider;
 }
 
 /**
@@ -78,8 +79,9 @@ export async function runGeminiWorkflow(
 
   // ШАГ 3: Технический аудит (Tech Review)
   console.log('\n🚀 ШАГ 3: Технический аудит...');
+  const s3Provider = options.stage3Provider || provider;
   const currentTechPrompt = prompts.tech.replace('{{GLOSSARY}}', glossaryText);
-  const res3Raw = await provider.interact(
+  const res3Raw = await s3Provider.interact(
     `${currentTechPrompt}\n\nВот исходный текст (для сверки смысла):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}`,
     { model, shouldStartNewChat: true },
   );
@@ -89,7 +91,7 @@ export async function runGeminiWorkflow(
     !res3Raw.trim().toLowerCase().includes('все хорошо')
   ) {
     const partialUpdates =
-      await provider.parseJson<Record<string, any>>(res3Raw);
+      await s3Provider.parseJson<Record<string, any>>(res3Raw);
     finalJson = { ...finalJson, ...partialUpdates };
     console.log(
       `✨ Stage 3: Применены правки для ${Object.keys(partialUpdates).length} ключей.`,

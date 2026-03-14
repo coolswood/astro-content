@@ -9,7 +9,7 @@ export interface GeminiResponse {
   glossary: GlossaryItem[];
 }
 
-export type ProviderType = 'gemini' | 'chatgpt';
+export type ProviderType = 'gemini' | 'chatgpt' | 'claude';
 
 export interface AIProvider {
   type: ProviderType;

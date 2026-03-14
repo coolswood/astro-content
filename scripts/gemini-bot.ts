@@ -5,6 +5,7 @@ import { parseBotArgs, resolveBotPaths, runBotValidation } from './lib/bot-utils
 import { runGeminiWorkflow } from './lib/gemini-workflow.ts';
 import { GeminiProvider } from './lib/providers/gemini-provider.js';
 import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import { ClaudeProvider } from './lib/providers/claude-provider.js';
 import type { AIProvider } from './lib/types.js';
 
 async function run() {
@@ -31,8 +32,23 @@ async function run() {
   let provider: AIProvider;
   if (providerType === 'chatgpt') {
     provider = new ChatGPTProvider();
+  } else if (providerType === 'claude') {
+    provider = new ClaudeProvider();
   } else {
     provider = new GeminiProvider();
+  }
+
+  let stage3Provider: AIProvider | undefined;
+  
+  // Если провайдер НЕ указан явно в аргументах (argv[5]), 
+  // то используем "умный дефолт": Gemini для шагов 1-2 и Claude для шага 3.
+  // Если провайдер указан (например, 'gemini' или 'chatgpt'), используем его для всех этапов.
+  const explicitProvider = process.argv[5];
+  
+  if (!explicitProvider) {
+    console.log('🔗 Инициализация дополнительного провайдера для этапа 3 (дефолт): claude...');
+    stage3Provider = new ClaudeProvider();
+    await stage3Provider.init();
   }
 
   console.log(`🔗 Инициализация провайдера: ${providerType}...`);
@@ -43,7 +59,7 @@ async function run() {
       provider,
       ruContent,
       { main, editor, tech },
-      { glossaryText, isUI: false }
+      { glossaryText, isUI: false, stage3Provider }
     );
 
     if (result.status === 'success') {
@@ -59,6 +75,9 @@ async function run() {
     console.error('❌ Скрипт завершился с ошибкой:', error);
   } finally {
     await provider.close();
+    if (stage3Provider) {
+      await stage3Provider.close();
+    }
     console.log('👋 Сессия провайдера завершена.');
   }
 }
