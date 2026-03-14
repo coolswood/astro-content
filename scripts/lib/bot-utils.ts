@@ -2,6 +2,29 @@ import fs from 'fs/promises';
 import path from 'path';
 import { spawnSync } from 'child_process';
 
+export async function listJsonFiles(dirPath: string): Promise<string[]> {
+  const entries = await fs.readdir(dirPath, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+    .map((entry) => entry.name);
+}
+
+/**
+ * Checks if a file is uncommitted in git.
+ */
+export function isUncommitted(filePath: string): boolean {
+  try {
+    const result = spawnSync('git', ['status', '--porcelain', filePath], {
+      encoding: 'utf-8',
+    });
+    // If output is not empty, it means the file is either modified, untracked, or staged.
+    return !!result.stdout?.trim();
+  } catch {
+    // If git is not available or fails, assume we should process it just in case.
+    return true;
+  }
+}
+
 /**
  * Parses common CLI arguments for Gemini bots.
  */
@@ -11,7 +34,7 @@ export function parseBotArgs() {
     .toLowerCase()
     .replace('-', '_');
   const chunkSize = parseInt(process.argv[4] || '80');
-  const provider = (process.argv[5] || 'gemini').toLowerCase() as 'gemini' | 'chatgpt';
+  const provider = (process.argv[5] || 'gemini').toLowerCase() as 'gemini' | 'chatgpt' | 'claude';
 
   return { fileName, targetLang, chunkSize, provider };
 }
@@ -34,6 +57,14 @@ export async function resolveBotPaths(fileName: string, targetLang: string) {
     // Keep i18nFilePath as default
   }
 
+  let isDirectory = false;
+  try {
+    const stats = await fs.stat(ruPath);
+    isDirectory = stats.isDirectory();
+  } catch {
+    // File or directory does not exist
+  }
+
   const targetDir = path.join(cwd, 'src/i18n', targetLang);
   const targetPath = path.join(targetDir, fileName);
   
@@ -50,6 +81,7 @@ export async function resolveBotPaths(fileName: string, targetLang: string) {
     glossaryPath,
     partialGlossaryPath,
     partialPath,
+    isDirectory,
   };
 }
 

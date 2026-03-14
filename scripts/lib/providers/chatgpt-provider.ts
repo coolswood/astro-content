@@ -21,20 +21,35 @@ export class ChatGPTProvider implements AIProvider {
     options?: { model?: string; shouldStartNewChat?: boolean },
   ): Promise<string> {
     if (options?.shouldStartNewChat) {
+      console.log('🔄 Starting new chat on ChatGPT...');
       await this.page.goto('https://chatgpt.com/?temporary-chat=true', {
         waitUntil: 'networkidle2',
       });
     }
 
+    // Ensure the tab is active
+    await this.page.bringToFront();
+
     const inputSelector = '#prompt-textarea';
     await this.page.waitForSelector(inputSelector);
 
+    // Focus first
+    await this.page.focus(inputSelector);
+
     // Type prompt
-    console.log(`⌨️ Typing prompt (${prompt.length} chars)...`);
+    console.log(`⌨️ Inserting prompt to ChatGPT (${prompt.length} chars)...`);
+    
+    // Using execCommand for better compatibility with rich-text editors
     await this.page.evaluate(
       (sel, text) => {
-        const el = document.querySelector(sel);
-        if (el) (el as HTMLElement).innerText = text;
+        const el = document.querySelector(sel) as HTMLElement;
+        if (el) {
+          el.focus();
+          // Clear prefix if any
+          el.innerText = '';
+          document.execCommand('insertText', false, text);
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+        }
       },
       inputSelector,
       prompt,

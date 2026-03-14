@@ -10,11 +10,18 @@ import { parseBotArgs, resolveBotPaths } from './lib/bot-utils.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
 import { GeminiProvider } from './lib/providers/gemini-provider.js';
 import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import { ClaudeProvider } from './lib/providers/claude-provider.js';
 import type { AIProvider } from './lib/types.js';
 
 async function run() {
   const { fileName, targetLang, chunkSize, provider: providerType } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
+
+  if (paths.isDirectory) {
+    console.error(`\n❌ Ошибка: "${fileName}" является директорией.`);
+    console.error(`📝 Пожалуйста, укажите конкретный файл, например: "homeBot/content.json"`);
+    process.exit(1);
+  }
 
   const [main, editor, tech] = await Promise.all([
     loadPrompt('ui', 'main', targetLang),
@@ -34,10 +41,26 @@ async function run() {
   let provider: AIProvider;
   if (providerType === 'chatgpt') {
     provider = new ChatGPTProvider();
+  } else if (providerType === 'claude') {
+    provider = new ClaudeProvider();
   } else {
     provider = new GeminiProvider();
   }
+
+  let stage3Provider: AIProvider | undefined;
   
+  // Если провайдер НЕ указан явно в аргументах (argv[5]), 
+  // то используем "умный дефолт": Gemini для шагов 1-2 и Claude для шага 3.
+  // Если провайдер указан (например, 'gemini' или 'chatgpt'), используем его для всех этапов.
+  const explicitProvider = process.argv[5];
+  
+  if (!explicitProvider) {
+    console.log('🔗 Инициализация дополнительного провайдера для этапа 3 (дефолт): claude...');
+    stage3Provider = new ClaudeProvider();
+    await stage3Provider.init();
+  }
+
+  console.log(`🔗 Инициализация основного провайдера: ${providerType}...`);
   await provider.init();
 
   let finalLocalizedJson: Record<string, any> = {};
@@ -83,7 +106,7 @@ async function run() {
           provider,
           JSON.stringify(chunkData),
           { main, editor, tech },
-          { glossaryText, isUI: true }
+          { glossaryText, isUI: true, stage3Provider }
         );
 
         if (result.status === 'success' && result.localizedJson) {
@@ -123,8 +146,10 @@ async function run() {
     console.error('❌ Критическая ошибка:', error);
   } finally {
     await provider.close();
+    if (stage3Provider) {
+      await stage3Provider.close();
+    }
   }
 }
 
 run().catch(console.error);
-
