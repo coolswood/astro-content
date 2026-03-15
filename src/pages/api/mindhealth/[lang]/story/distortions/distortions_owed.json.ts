@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 import { instagramStep, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -44,7 +45,7 @@ export const GET: APIRoute = async ({ params }) => {
 
     screen1Steps.push(...instagramStep(story.instagram, storyEn.instagram));
     screen1Steps.push(
-      q(story.screen_1.quote.text, story.screen_1.quote.author),
+      q(story.screen_1.quote?.text, story.screen_1.quote?.author),
     );
 
     const screen2Steps: string[] = [];
@@ -64,7 +65,7 @@ export const GET: APIRoute = async ({ params }) => {
     });
 
     screen2Steps.push(
-      q(story.screen_2.quote.text, story.screen_2.quote.author),
+      q(story.screen_2.quote?.text, story.screen_2.quote?.author),
     );
 
     const screen3Steps: string[] = [];
@@ -84,7 +85,7 @@ export const GET: APIRoute = async ({ params }) => {
     });
 
     screen3Steps.push(
-      q(story.screen_3.quote.text, story.screen_3.quote.author),
+      q(story.screen_3.quote?.text, story.screen_3.quote?.author),
     );
 
     const output = {
@@ -96,7 +97,26 @@ export const GET: APIRoute = async ({ params }) => {
       time: 7,
       type: 'theory',
       img: 'distortions_owed',
-      screens: [
+
+      screens: hasTaggedStory(story)
+        ? [
+            {
+              __typename: 'ScreenText',
+              steps: [
+                `<h2>${story.title}</h2>`,
+                ...renderTaggedTexts(story.screen_1.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+              ]
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_2.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_3.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            }
+          ]
+        : [
         {
           __typename: 'ScreenText' as const,
           steps: screen1Steps,

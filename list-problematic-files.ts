@@ -42,6 +42,14 @@ function shouldIgnorePath(path: string): boolean {
   return path === 'instagram' || path.endsWith('.instagram');
 }
 
+function shouldCheckArrayLength(path: string, isStory: boolean): boolean {
+  if (!isStory) {
+    return true;
+  }
+  // В историях разрешаем разную длину только для текстовых блоков повествования
+  return !path.endsWith('.texts');
+}
+
 function compareStructure(
   value1: any,
   value2: any,
@@ -109,7 +117,7 @@ function compareStructure(
       errors.push(...compareStructure(value1[key], value2[key], newPath, isStory));
     }
   } else if (Array.isArray(value1) && Array.isArray(value2)) {
-    if (!isStory && value1.length !== value2.length) {
+    if (shouldCheckArrayLength(path, isStory) && value1.length !== value2.length) {
       errors.push(
         `[${path}] Array length mismatch: ${value1.length} vs ${value2.length}`,
       );

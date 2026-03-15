@@ -8,6 +8,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 import { important, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -34,7 +35,26 @@ export const GET: APIRoute = async ({ params }) => {
       time: 5,
       type: 'theory',
       img: 'distortions_omnipotence',
-      screens: [
+
+      screens: hasTaggedStory(story)
+        ? [
+            {
+              __typename: 'ScreenText',
+              steps: [
+                `<h2>${story.title}</h2>`,
+                ...renderTaggedTexts(story.screen_1.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+              ]
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_2.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_3.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            }
+          ]
+        : [
         // Screen 1
         {
           __typename: 'ScreenText',
@@ -72,7 +92,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<li>${story.screen_2.texts[10]}</li>`,
             `<li>${story.screen_2.texts[11]}</li>`,
             `<li>${story.screen_2.texts[12]}</li>`,
-            q(story.screen_2.quote.text, story.screen_2.quote.author),
+            q(story.screen_2.quote?.text, story.screen_2.quote?.author),
           ],
         },
         // Screen 3
@@ -92,7 +112,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_3.texts[10]}</p>`,
             `<p>${story.screen_3.texts[11]}</p>`,
             `<p>${story.screen_3.texts[12]}</p>`,
-            q(story.screen_3.quote.text, story.screen_3.quote.author),
+            q(story.screen_3.quote?.text, story.screen_3.quote?.author),
           ],
         },
       ],

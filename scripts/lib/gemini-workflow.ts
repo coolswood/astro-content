@@ -24,28 +24,43 @@ export interface WorkflowOptions {
  * Safely applies updates to a JSON structure, preserving arrays.
  */
 function applyUpdates(base: any, updates: any): any {
+  // 1. Если оба - массивы, это полная замена
+  if (Array.isArray(base) && Array.isArray(updates)) {
+    console.log('🔄 Stage Update: FULL ARRAY REPLACEMENT');
+    return updates;
+  }
+
+  // 2. Если base - массив, а updates - объект (частичное обновление массива)
   if (Array.isArray(base)) {
-    // If AI returned an array, assume it's a full replacement
-    if (Array.isArray(updates)) {
-      console.log('🔄 Stage Update: FULL ARRAY REPLACEMENT');
-      return updates;
-    }
-    // If it's an object with numeric keys, it's a partial update
     console.log('🧩 Stage Update: PARTIAL ARRAY UPDATE');
     const newArray = [...base];
     for (const key in updates) {
       const idx = parseInt(key);
       if (!isNaN(idx) && idx >= 0 && idx < newArray.length) {
-        if (typeof newArray[idx] === 'object' && newArray[idx] !== null && typeof updates[key] === 'object' && updates[key] !== null) {
-          newArray[idx] = { ...newArray[idx], ...updates[key] };
-        } else {
-          newArray[idx] = updates[key];
-        }
+        newArray[idx] = applyUpdates(newArray[idx], updates[key]);
       }
     }
     return newArray;
   }
-  return { ...base, ...updates };
+
+  // 3. Если оба - объекты (не массивы)
+  if (
+    typeof base === 'object' && base !== null &&
+    typeof updates === 'object' && updates !== null
+  ) {
+    const result = { ...base };
+    for (const key in updates) {
+      if (key in result) {
+        result[key] = applyUpdates(result[key], updates[key]);
+      } else {
+        result[key] = updates[key];
+      }
+    }
+    return result;
+  }
+
+  // 4. Для примитивов или если типы не совпадают
+  return updates;
 }
 
 /**
@@ -72,7 +87,7 @@ export async function runGeminiWorkflow(
     s1FullPrompt,
     { 
       model: s1Model, 
-      shouldStartNewChat: false, 
+      shouldStartNewChat: firstRun, 
       sessionId: isPersistent ? 'stage1' : undefined 
     },
   );

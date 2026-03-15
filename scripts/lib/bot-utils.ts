@@ -17,10 +17,21 @@ export function isUncommitted(filePath: string): boolean {
     const result = spawnSync('git', ['status', '--porcelain', filePath], {
       encoding: 'utf-8',
     });
+    
+    // Процесс не запустился (например, команды git нет в системе)
+    if (result.error) {
+      return true;
+    }
+    
+    // Команда завершилась с ошибкой (например, репозиторий не инициализирован)
+    if (result.status !== 0) {
+      return true;
+    }
+    
     // If output is not empty, it means the file is either modified, untracked, or staged.
     return !!result.stdout?.trim();
   } catch {
-    // If git is not available or fails, assume we should process it just in case.
+    // Страховка на случай непредвиденных исключений
     return true;
   }
 }

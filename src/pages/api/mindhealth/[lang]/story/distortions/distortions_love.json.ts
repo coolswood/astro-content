@@ -8,6 +8,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 import { important, instagramStep, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -42,7 +43,26 @@ export const GET: APIRoute = async ({ params }) => {
       time: 6,
       type: 'theory',
       img: 'distortions_love',
-      screens: [
+
+      screens: hasTaggedStory(story)
+        ? [
+            {
+              __typename: 'ScreenText',
+              steps: [
+                `<h2>${story.title}</h2>`,
+                ...renderTaggedTexts(story.screen_1.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+              ]
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_2.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_3.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            }
+          ]
+        : [
         // Screen 1
         {
           __typename: 'ScreenText',
@@ -80,7 +100,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<li>${story.screen_2.texts[9]}</li>`,
             `<p>${story.screen_2.texts[10]}</p>`,
             `<p>${story.screen_2.texts[11]}</p>`,
-            q(story.screen_2.quote.text, story.screen_2.quote.author),
+            q(story.screen_2.quote?.text, story.screen_2.quote?.author),
             `<p>${story.screen_2.texts[12]}</p>`,
             `<p>${story.screen_2.texts[13]}</p>`,
             `<p>${story.screen_2.texts[14]}</p>`,
@@ -99,7 +119,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_3.texts[2]}</p>`,
             `<p>${story.screen_3.texts[3]}</p>`,
             `<p>${story.screen_3.texts[4]}</p>`,
-            q(story.screen_3.quote.text, story.screen_3.quote.author),
+            q(story.screen_3.quote?.text, story.screen_3.quote?.author),
             `<p>${story.screen_3.texts[5]}</p>`,
             `<p>${story.screen_3.texts[6]}</p>`,
             `<p>${story.screen_3.texts[7]}</p>`,

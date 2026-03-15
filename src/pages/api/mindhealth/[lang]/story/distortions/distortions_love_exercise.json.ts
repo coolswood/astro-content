@@ -8,6 +8,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 import { important, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -42,7 +43,26 @@ export const GET: APIRoute = async ({ params }) => {
       time: 6,
       type: 'exercise',
       img: 'exercise',
-      screens: [
+
+      screens: hasTaggedStory(exercise)
+        ? [
+            {
+              __typename: 'ScreenText',
+              steps: [
+                `<h2>${exercise.title}</h2>`,
+                ...renderTaggedTexts(exercise.screen_1.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+              ]
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(exercise.screen_2.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(exercise.screen_3.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            }
+          ]
+        : [
         // Screen 1
         {
           __typename: 'ScreenText',
@@ -58,7 +78,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${exercise.screen_1.texts[7]}</p>`,
             `<p>${exercise.screen_1.texts[8]}</p>`,
             `<p>${exercise.screen_1.texts[9]}</p>`,
-            q(exercise.screen_1.quote.text, exercise.screen_1.quote.author),
+            q(exercise.screen_1.quote?.text, exercise.screen_1.quote?.author),
           ],
         },
         // Screen 2
@@ -77,7 +97,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${exercise.screen_2.texts[9]}</p>`,
             `<p>${exercise.screen_2.texts[10]}</p>`,
             `<p>${exercise.screen_2.texts[11]}</p>`,
-            q(exercise.screen_2.quote.text, exercise.screen_2.quote.author),
+            q(exercise.screen_2.quote?.text, exercise.screen_2.quote?.author),
             `<p>${exercise.screen_2.texts[12]}</p>`,
             `<p>${exercise.screen_2.texts[13]}</p>`,
             `<p>${exercise.screen_2.texts[14]}</p>`,

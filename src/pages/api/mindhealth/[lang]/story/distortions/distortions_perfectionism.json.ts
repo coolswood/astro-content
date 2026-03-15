@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 import { q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -36,7 +37,7 @@ export const GET: APIRoute = async ({ params }) => {
     });
 
     screen1Steps.push(
-      q(story.screen_1.quote.text, story.screen_1.quote.author),
+      q(story.screen_1.quote?.text, story.screen_1.quote?.author),
     );
 
     const screen2Steps: string[] = [];
@@ -91,7 +92,30 @@ export const GET: APIRoute = async ({ params }) => {
       time: 9,
       type: 'theory',
       img: 'distortions_perfectionism',
-      screens: [
+
+      screens: hasTaggedStory(story)
+        ? [
+            {
+              __typename: 'ScreenText',
+              steps: [
+                `<h2>${story.title}</h2>`,
+                ...renderTaggedTexts(story.screen_1.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+              ]
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_2.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_3.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_4.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            }
+          ]
+        : [
         {
           __typename: 'ScreenText' as const,
           steps: screen1Steps,

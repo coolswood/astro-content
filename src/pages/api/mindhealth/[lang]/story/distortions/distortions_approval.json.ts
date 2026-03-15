@@ -7,6 +7,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 import { important, instagramStep, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -41,7 +42,37 @@ export const GET: APIRoute = async ({ params }) => {
       time: 8,
       type: 'theory',
       img: 'distortions_approval',
-      screens: [
+
+      screens: hasTaggedStory(story)
+        ? [
+            {
+              __typename: 'ScreenText',
+              steps: [
+                `<h2>${story.title}</h2>`,
+                ...renderTaggedTexts(story.screen_1.texts, { instagramFallback: storyEn.instagram })
+              ]
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_2.texts, { instagramFallback: storyEn.instagram })
+            },
+            {
+              __typename: 'ScreenTest',
+              question: story.test.question,
+              answers: [
+                story.test.answers[0],
+                story.test.answers[1],
+                story.test.answers[2],
+                story.test.answers[3],
+              ],
+              correctAnswer: 2,
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_3.texts, { instagramFallback: storyEn.instagram })
+            }
+          ]
+        : [
         {
           __typename: 'ScreenText',
           steps: [
@@ -51,7 +82,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_1.texts[2]}</p>`,
             `<p>${story.screen_1.texts[3]}</p>`,
             `<p>${story.screen_1.texts[4]}</p>`,
-            q(story.screen_1.quote.text, story.screen_1.quote.author),
+            q(story.screen_1.quote?.text, story.screen_1.quote?.author),
             `<p>${story.screen_1.texts[5]}</p>`,
             important(story.screen_1.texts[6]),
             `<p>${story.screen_1.texts[7]}</p>`,

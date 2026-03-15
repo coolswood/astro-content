@@ -21,155 +21,148 @@ export class ClaudeProvider implements AIProvider {
     });
   }
 
+  private lock: Promise<any> = Promise.resolve();
+
   async interact(
     prompt: string,
     options?: { model?: string; shouldStartNewChat?: boolean },
   ): Promise<string> {
-    if (options?.shouldStartNewChat) {
-      console.log('🔄 Starting new chat on Claude...');
-      await this.page.goto('https://claude.ai/new?incognito', {
-        waitUntil: 'networkidle2',
-      });
-    }
+    const previousLock = this.lock;
 
-    // Ensure the tab is active
-    await this.page.bringToFront();
+    const currentLock = previousLock.then(async () => {
+      if (options?.shouldStartNewChat) {
+        console.log('🔄 Starting new chat on Claude...');
+        await this.page.goto('https://claude.ai/new?incognito', {
+          waitUntil: 'networkidle2',
+        });
+      }
 
-    const inputSelector = 'div[aria-label="Write your prompt to Claude"]';
-    await this.page.waitForSelector(inputSelector);
+      // Ensure the tab is active
+      await this.page.bringToFront();
 
-    // Click to ensure focus and cursor presence
-    await this.page.click(inputSelector);
-    await new Promise(r => setTimeout(r, 200));
-    await this.page.focus(inputSelector);
+      const inputSelector = 'div[aria-label="Write your prompt to Claude"]';
+      await this.page.waitForSelector(inputSelector);
 
-    // Type prompt
-    console.log(`⌨️ Inserting prompt to Claude (${prompt.length} chars)...`);
-    
-    // For contenteditable editors like ProseMirror/Tiptap, 
-    // execCommand('insertText') is the most reliable way to trigger internal state updates.
-    const insertionSuccess = await this.page.evaluate(
-      (sel, text) => {
-        const el = document.querySelector(sel) as HTMLElement;
-        if (!el) return false;
+      // Click to ensure focus and cursor presence
+      await this.page.click(inputSelector);
+      await new Promise(r => setTimeout(r, 200));
+      await this.page.focus(inputSelector);
 
-        el.focus();
-        // Clear existing just in case (though it should be empty)
-        el.innerText = ''; 
-        
-        // Use execCommand for better integration with the editor's model
-        const success = document.execCommand('insertText', false, text);
-        
-        // If execCommand failed, fallback to innerText
-        if (!success) {
-          el.innerText = text;
-          el.dispatchEvent(new Event('input', { bubbles: true }));
+      // Type prompt
+      console.log(`⌨️ Inserting prompt to Claude (${prompt.length} chars)...`);
+      
+      const insertionSuccess = await this.page.evaluate(
+        (sel, text) => {
+          const el = document.querySelector(sel) as HTMLElement;
+          if (!el) return false;
+
+          el.focus();
+          el.innerText = ''; 
+          
+          const success = document.execCommand('insertText', false, text);
+          
+          if (!success) {
+            el.innerText = text;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+          }
+          
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+          return true;
+        },
+        inputSelector,
+        prompt,
+      );
+
+      if (!insertionSuccess) {
+        console.warn('⚠️ Could not find input element via evaluate');
+      }
+
+      await new Promise(r => setTimeout(r, 800));
+
+      await this.page.keyboard.press('End');
+      await this.page.keyboard.press('Space');
+      await this.page.keyboard.press('Backspace');
+
+      const sendBtnSelector = 'button[aria-label="Send message"]';
+      await this.page.waitForSelector(sendBtnSelector);
+      
+      console.log('🚀 Clicking send button on Claude...');
+      
+      try {
+        const isDisabled = await this.page.evaluate((sel) => {
+          const btn = document.querySelector(sel);
+          return btn?.hasAttribute('disabled') || btn?.getAttribute('aria-disabled') === 'true';
+        }, sendBtnSelector);
+
+        if (isDisabled) {
+          console.log('⚠️ Send button disabled, trying to force it...');
+          await this.page.evaluate((sel) => {
+            (document.querySelector(sel) as HTMLElement)?.click();
+          }, sendBtnSelector);
+        } else {
+          await this.page.click(sendBtnSelector);
         }
-        
-        el.dispatchEvent(new Event('change', { bubbles: true }));
-        return true;
-      },
-      inputSelector,
-      prompt,
-    );
-
-    if (!insertionSuccess) {
-      console.warn('⚠️ Could not find input element via evaluate');
-    }
-
-    // Small delay to let UI react
-    await new Promise(r => setTimeout(r, 800));
-
-    // Force some keyboard events to enable the send button
-    await this.page.keyboard.press('End');
-    await this.page.keyboard.press('Space');
-    await this.page.keyboard.press('Backspace');
-
-    const sendBtnSelector = 'button[aria-label="Send message"]';
-    await this.page.waitForSelector(sendBtnSelector);
-    
-    console.log('🚀 Clicking send button on Claude...');
-    
-    // Try both physical click and JS click if one fails
-    try {
-      // Check if button is disabled via DOM
-      const isDisabled = await this.page.evaluate((sel) => {
-        const btn = document.querySelector(sel);
-        return btn?.hasAttribute('disabled') || btn?.getAttribute('aria-disabled') === 'true';
-      }, sendBtnSelector);
-
-      if (isDisabled) {
-        console.log('⚠️ Send button disabled, trying to force it...');
+      } catch (e) {
+        console.warn('⚠️ Standard click failed, using evaluate click');
         await this.page.evaluate((sel) => {
           (document.querySelector(sel) as HTMLElement)?.click();
         }, sendBtnSelector);
-      } else {
-        await this.page.click(sendBtnSelector);
       }
-    } catch (e) {
-      console.warn('⚠️ Standard click failed, using evaluate click');
-      await this.page.evaluate((sel) => {
-        (document.querySelector(sel) as HTMLElement)?.click();
-      }, sendBtnSelector);
-    }
 
-    console.log('⌛ Waiting for Claude response...');
+      console.log('⌛ Waiting for Claude response...');
 
-    try {
-      // Stage 1: Wait for generation to start (Stop button appears)
-      console.log('⏳ Stage 1: Waiting for generation to START (Stop button or markdown appeared)...');
-      await this.page.waitForFunction(
-        () => {
-          const stopBtn = document.querySelector('button[aria-label="Stop response"]');
-          if (stopBtn && (stopBtn as HTMLElement).offsetWidth > 0) return true;
-          
-          const markdowns = document.querySelectorAll('.standard-markdown');
-          return markdowns.length > 0;
-        },
-        { timeout: 20000 },
-      ).catch(() => console.log('⚠️ Could not confirm start within 20s.'));
+      try {
+        console.log('⏳ Stage 1: Waiting for generation to START (Stop button or markdown appeared)...');
+        await this.page.waitForFunction(
+          () => {
+            const stopBtn = document.querySelector('button[aria-label="Stop response"]');
+            if (stopBtn && (stopBtn as HTMLElement).offsetWidth > 0) return true;
+            
+            const markdowns = document.querySelectorAll('.standard-markdown');
+            return markdowns.length > 0;
+          },
+          { timeout: 20000 },
+        ).catch(() => console.log('⚠️ Could not confirm start within 20s.'));
 
-      console.log('✅ Stage 2: Waiting for completion...');
+        console.log('✅ Stage 2: Waiting for completion...');
 
-      // Stage 2: Wait for completion (Stop button disappears OR Copy button appears)
-      await this.page.waitForFunction(
-        () => {
-          // If Stop button exists and is visible, we're still generating
-          const stopBtn = document.querySelector('button[aria-label="Stop response"]');
-          if (stopBtn && (stopBtn as HTMLElement).offsetWidth > 0) return false;
+        await this.page.waitForFunction(
+          () => {
+            const stopBtn = document.querySelector('button[aria-label="Stop response"]');
+            if (stopBtn && (stopBtn as HTMLElement).offsetWidth > 0) return false;
 
-          // If Copy button appeared, we're likely done
-          const copyBtn = document.querySelector('button[aria-label="Copy"]');
-          if (copyBtn && (copyBtn as HTMLElement).offsetWidth > 0) return true;
+            const copyBtn = document.querySelector('button[aria-label="Copy"]');
+            if (copyBtn && (copyBtn as HTMLElement).offsetWidth > 0) return true;
 
-          // If send button is back, we're done
-          const sendBtn = document.querySelector('button[aria-label="Send message"]');
-          if (sendBtn && (sendBtn as HTMLElement).offsetWidth > 0) return true;
+            const sendBtn = document.querySelector('button[aria-label="Send message"]');
+            if (sendBtn && (sendBtn as HTMLElement).offsetWidth > 0) return true;
 
-          return false;
-        },
-        { timeout: 300000, polling: 1000 },
-      );
+            return false;
+          },
+          { timeout: 300000, polling: 1000 },
+        );
 
-      console.log('🏁 Stage 3: Claude finished generation.');
-      // Small delay for UI stability
-      await new Promise((r) => setTimeout(r, 2000));
-    } catch (e) {
-      console.warn('⚠️ Timed out waiting for Claude response. Reading current state.');
-    }
+        console.log('🏁 Stage 3: Claude finished generation.');
+        await new Promise((r) => setTimeout(r, 2000));
+      } catch (e) {
+        console.warn('⚠️ Timed out waiting for Claude response. Reading current state.');
+      }
 
-    const responseText = await this.page.evaluate(() => {
-      const responses = document.querySelectorAll('.standard-markdown');
-      if (responses.length === 0) return '';
-      // Get the last one
-      return (responses[responses.length - 1] as HTMLElement).innerText;
+      const responseText = await this.page.evaluate(() => {
+        const responses = document.querySelectorAll('.standard-markdown');
+        if (responses.length === 0) return '';
+        return (responses[responses.length - 1] as HTMLElement).innerText;
+      });
+
+      if (!responseText || responseText.length < 5) {
+        throw new Error('Empty or too short response from Claude');
+      }
+
+      return responseText;
     });
 
-    if (!responseText || responseText.length < 5) {
-      throw new Error('Empty or too short response from Claude');
-    }
-
-    return responseText;
+    this.lock = currentLock.catch(() => {});
+    return currentLock;
   }
 
   async parseJson<T>(text: string): Promise<T> {
