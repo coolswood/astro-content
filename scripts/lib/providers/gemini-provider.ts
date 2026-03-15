@@ -6,19 +6,32 @@ import { connectToBrowser, interactWithGemini, parseGeminiJson } from '../gemini
 export class GeminiProvider implements AIProvider {
   type: ProviderType = 'gemini';
   private browser!: Browser;
-  private page!: Page;
+  private pages: Map<string, Page> = new Map();
 
   async init() {
     this.browser = await connectToBrowser();
-    this.page = await this.browser.newPage();
-    await this.page.goto('https://gemini.google.com/app', {
+    const page = await this.browser.newPage();
+    await page.goto('https://gemini.google.com/app', {
       waitUntil: 'networkidle2',
     });
+    this.pages.set('default', page);
   }
 
-  async interact(prompt: string, options?: { model?: string; shouldStartNewChat?: boolean }): Promise<string> {
+  async interact(prompt: string, options?: { model?: string; shouldStartNewChat?: boolean; sessionId?: string }): Promise<string> {
+    const sessionId = options?.sessionId || 'default';
+    let page = this.pages.get(sessionId);
+    
+    if (!page) {
+      console.log(`🆕 Creating new session page for: ${sessionId}`);
+      page = await this.browser.newPage();
+      await page.goto('https://gemini.google.com/app', {
+        waitUntil: 'networkidle2',
+      });
+      this.pages.set(sessionId, page);
+    }
+
     return interactWithGemini(
-      this.page,
+      page,
       prompt,
       options?.model || 'Pro',
       options?.shouldStartNewChat || false
@@ -26,11 +39,14 @@ export class GeminiProvider implements AIProvider {
   }
 
   async parseJson<T>(text: string): Promise<T> {
-    return parseGeminiJson<T>(text, this.page, 'Pro');
+    const defaultPage = this.pages.get('default')!;
+    return parseGeminiJson<T>(text, defaultPage, 'Pro');
   }
 
   async close() {
-    if (this.page) await this.page.close();
+    for (const page of this.pages.values()) {
+      await page.close();
+    }
     if (this.browser) await this.browser.disconnect();
   }
 }

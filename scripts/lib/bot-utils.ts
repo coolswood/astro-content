@@ -51,10 +51,14 @@ export async function resolveBotPaths(fileName: string, targetLang: string) {
   
   let ruPath = i18nFilePath;
   try {
-    await fs.access(scriptsFilePath);
-    ruPath = scriptsFilePath;
+    await fs.access(i18nFilePath);
   } catch {
-    // Keep i18nFilePath as default
+    try {
+      await fs.access(scriptsFilePath);
+      ruPath = scriptsFilePath;
+    } catch {
+      // Keep i18nFilePath as default
+    }
   }
 
   let isDirectory = false;

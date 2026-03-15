@@ -7,10 +7,17 @@ export interface StagePrompts {
 }
 
 export interface WorkflowOptions {
-  model?: string;
+  model?: string; // Default for all stages if specific ones not provided
+  models?: {
+    stage1?: string;
+    stage2?: string;
+    stage3?: string;
+  };
   glossaryText?: string;
   isUI?: boolean;
   stage3Provider?: AIProvider;
+  isPersistent?: boolean;
+  firstRun?: boolean;
 }
 
 /**
@@ -50,15 +57,24 @@ export async function runGeminiWorkflow(
   prompts: StagePrompts,
   options: WorkflowOptions = {},
 ) {
-  const { model, glossaryText = '', isUI = false } = options;
+  const { model, models = {}, glossaryText = '', isUI = false, isPersistent = false, firstRun = true } = options;
+  
+  const s1Model = models.stage1 || model || 'Pro';
+  const s2Model = models.stage2 || model || 'Pro';
+  const s3Model = models.stage3 || model || 'Pro';
 
   // ШАГ 1: Перевод (Transcreation / UX Writing)
   console.log('\n🚀 ШАГ 1: Перевод...');
   const currentMainPrompt = prompts.main.replace('{{GLOSSARY}}', glossaryText);
+  const s1FullPrompt = firstRun ? `${currentMainPrompt}\n\nВот текст для обработки:\n${sourceContent}` : sourceContent;
 
   const res1Raw = await provider.interact(
-    `${currentMainPrompt}\n\nВот текст для обработки:\n${sourceContent}`,
-    { model, shouldStartNewChat: false },
+    s1FullPrompt,
+    { 
+      model: s1Model, 
+      shouldStartNewChat: false, 
+      sessionId: isPersistent ? 'stage1' : undefined 
+    },
   );
 
   if (res1Raw.trim().toLowerCase().includes('все хорошо')) {
@@ -87,9 +103,15 @@ export async function runGeminiWorkflow(
     '{{GLOSSARY}}',
     glossaryText,
   );
+  const s2FullPrompt = firstRun ? `${currentEditorPrompt}\n\nВот текст для редактуры:\n${currentHandledJson}` : currentHandledJson;
+
   const res2Raw = await provider.interact(
-    `${currentEditorPrompt}\n\nВот текст для редактуры:\n${currentHandledJson}`,
-    { model, shouldStartNewChat: true },
+    s2FullPrompt,
+    { 
+      model: s2Model, 
+      shouldStartNewChat: firstRun, 
+      sessionId: isPersistent ? 'stage2' : undefined 
+    },
   );
 
   if (
@@ -112,9 +134,15 @@ export async function runGeminiWorkflow(
   console.log('\n🚀 ШАГ 3: Технический аудит...');
   const s3Provider = options.stage3Provider || provider;
   const currentTechPrompt = prompts.tech.replace('{{GLOSSARY}}', glossaryText);
+  const s3FullPrompt = firstRun ? `${currentTechPrompt}\n\nВот исходный текст (для сверки смысла):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}` : `Исходный текст для сверки:\n${sourceContent}\n\nТекст для тех-аудита:\n${currentHandledJson}`;
+
   const res3Raw = await s3Provider.interact(
-    `${currentTechPrompt}\n\nВот исходный текст (для сверки смысла):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}`,
-    { model, shouldStartNewChat: true },
+    s3FullPrompt,
+    { 
+      model: s3Model, 
+      shouldStartNewChat: firstRun, 
+      sessionId: isPersistent ? 'stage3' : undefined 
+    },
   );
 
   if (

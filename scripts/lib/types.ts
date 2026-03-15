@@ -14,7 +14,7 @@ export type ProviderType = 'gemini' | 'chatgpt' | 'claude';
 export interface AIProvider {
   type: ProviderType;
   init(): Promise<void>;
-  interact(prompt: string, options?: { model?: string; shouldStartNewChat?: boolean }): Promise<string>;
+  interact(prompt: string, options?: { model?: string; shouldStartNewChat?: boolean; sessionId?: string }): Promise<string>;
   parseJson<T>(text: string): Promise<T>;
   close(): Promise<void>;
 }
