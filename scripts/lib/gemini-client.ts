@@ -123,9 +123,15 @@ export async function interactWithGemini(
 
       // Если текущая модель - "Быстрая", пробуем переключить ОБЯЗАТЕЛЬНО
       // Или если она не совпадает с запрошенной
-      const isFast = currentModel.includes('быстрая') || currentModel.includes('flash');
+      const requestedModelLower = modelKeyword.toLowerCase();
+      const isRequestedFast = requestedModelLower.includes('быстрая') || requestedModelLower.includes('flash') || requestedModelLower === 'fast';
+      const isCurrentFast = currentModel.includes('быстрая') || currentModel.includes('flash');
 
-      if (isFast || !currentModel.includes(modelKeyword.toLowerCase())) {
+      // Переключаем если текущая модель не совпадает с запрошенной.
+      // Если запрошена "быстрая", а текущая "быстрая" — НЕ переключаем.
+      const needsSwitch = isRequestedFast ? !isCurrentFast : (isCurrentFast || !currentModel.includes(requestedModelLower));
+
+      if (needsSwitch) {
         console.log(`🔄 Переключение на ${modelKeyword}...`);
         await page.click(modelSelectorBtn);
         await page.waitForSelector('.mat-mdc-menu-item, [role="menuitem"]', {
@@ -140,31 +146,44 @@ export async function interactWithGemini(
             document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"]'),
           );
 
-          const findEnabledItem = (k: string) =>
-            items.find((item) => {
-              const el = item as HTMLElement;
-              const text = el.innerText.toLowerCase();
-              // Игнорируем "Быстрая" (Flash) всегда
-              if (text.includes('быстрая')) return false;
+          let target: HTMLElement | undefined;
+          const kLower = keyword.toLowerCase();
+          const isFastRequested = kLower.includes('быстрая') || kLower.includes('flash') || kLower === 'fast';
 
-              const isDisabled =
-                el.hasAttribute('disabled') ||
-                el.getAttribute('aria-disabled') === 'true' ||
-                el.classList.contains('mat-mdc-menu-item-disabled');
-              return text.includes(k.toLowerCase()) && !isDisabled;
-            }) as HTMLElement;
+          // Поиск основной цели
+          for (const item of items) {
+            const el = item as HTMLElement;
+            const text = el.innerText.toLowerCase();
+            if (el.hasAttribute('disabled') || el.getAttribute('aria-disabled') === 'true' || el.classList.contains('mat-mdc-menu-item-disabled')) continue;
 
-          let target = findEnabledItem(keyword);
-
-          // Если запрошенная модель недоступна, пробуем разрешенный фолбек
-          if (!target) {
-            // Если была запрошена Pro, пробуем Думающую
-            if (keyword.toLowerCase() === 'pro') {
-              target = findEnabledItem('Думающая');
+            if (isFastRequested) {
+              if (text.includes('быстрая') || text.includes('flash')) {
+                target = el;
+                break;
+              }
+            } else {
+              if (text.includes('быстрая') || text.includes('flash')) continue;
+              if (text.includes(kLower)) {
+                target = el;
+                break;
+              }
             }
-            // Если была запрошена Думающая, пробуем Pro
-            else if (keyword.toLowerCase().includes('думающ')) {
-              target = findEnabledItem('Pro');
+          }
+
+          // Попробовать фолбеки если не нашли
+          if (!target && !isFastRequested) {
+            const fallback = kLower === 'pro' ? 'думающая' : (kLower.includes('думающ') ? 'pro' : null);
+            if (fallback) {
+              for (const item of items) {
+                const el = item as HTMLElement;
+                const text = el.innerText.toLowerCase();
+                if (el.hasAttribute('disabled') || el.getAttribute('aria-disabled') === 'true' || el.classList.contains('mat-mdc-menu-item-disabled')) continue;
+                if (text.includes('быстрая') || text.includes('flash')) continue;
+                if (text.includes(fallback)) {
+                  target = el;
+                  break;
+                }
+              }
             }
           }
 
@@ -187,14 +206,14 @@ export async function interactWithGemini(
         console.log(`✅ Модель ${modelKeyword} уже выбрана.`);
       }
 
-      // Финальная проверка перед отправкой
+      // Финальная проверка перед отправкой (только если НЕ запрашивали быструю)
       currentModel = await page.evaluate((sel) => {
         return (document.querySelector(sel) as HTMLElement)?.innerText.toLowerCase() || '';
       }, modelSelectorBtn);
 
-      if (currentModel.includes('быстрая') || currentModel.includes('flash')) {
+      if (!isRequestedFast && (currentModel.includes('быстрая') || currentModel.includes('flash'))) {
         throw new TerminalError(
-          `❌ КРИТИЧЕСКАЯ ОШИБКА: Обнаружена модель "Быстрая" непосредственно перед отправкой. Обрыв.`,
+          `❌ КРИТИЧЕСКАЯ ОШИБКА: Обнаружена модель "Быстрая" непосредственно перед отправкой (запрашивалась ${modelKeyword}). Обрыв.`,
         );
       }
 
@@ -246,18 +265,23 @@ export async function interactWithGemini(
       }
 
       console.log('✍️ Чтение ответа...');
+      // page.on('console', msg => console.log(`[Browser]: ${msg.text()}`));
+
       // Ждем, пока исчезнет кнопка "Остановить генерацию" (если она есть) и появится текст
       await page.waitForFunction(
         () => {
           const stopBtns = Array.from(
             document.querySelectorAll('button'),
           ).filter(
-            (b) =>
-              b
-                .getAttribute('aria-label')
-                ?.toLowerCase()
-                .includes('остановить') ||
-              b.getAttribute('aria-label')?.toLowerCase().includes('stop'),
+            (b) => {
+              const label = b.getAttribute('aria-label')?.toLowerCase() || '';
+              const title = b.getAttribute('title')?.toLowerCase() || '';
+              const isStop = label.includes('остановить') || label.includes('stop') || title.includes('остановить') || title.includes('stop');
+              if (isStop) {
+                 console.log(`Найдена стоп-кнопка: Label="${label}", Title="${title}", Text="${(b as HTMLElement).innerText}"`);
+              }
+              return isStop;
+            }
           );
           if (stopBtns.length > 0) return false; // Еще генерирует
 
@@ -274,7 +298,11 @@ export async function interactWithGemini(
       // Дополнительная стабилизация: ждем, пока длина текста перестанет меняться в течение 5 секунд
       let previousLength = 0;
       let stableCount = 0;
-      while (stableCount < 5) {
+      let attempts = 0;
+      const maxAttempts = 30; // 30 секунд максимум
+
+      while (stableCount < 5 && attempts < maxAttempts) {
+        attempts++;
         await new Promise((r) => setTimeout(r, 1000));
 
         const { currentLength, hasCopyButton } = await page.evaluate(() => {
@@ -284,28 +312,46 @@ export async function interactWithGemini(
               ? (responses[responses.length - 1] as HTMLElement)
               : null;
 
-          // Gemini UI injects .copy-button or a button with Copy/Копировать label when done
-          const copyBtns = Array.from(
-            document.querySelectorAll('button'),
-          ).filter((b) => {
-            const label = (b.getAttribute('aria-label') || '').toLowerCase();
-            return label.includes('копировать') || label.includes('copy');
-          });
+          let localHasCopy = false;
+          if (latestResponse) {
+            let parent = latestResponse.parentElement;
+            for (let i = 0; i < 3 && parent; i++) {
+              const btns = Array.from(parent.querySelectorAll('button'));
+              const found = btns.some(b => {
+                const label = (b.getAttribute('aria-label') || '').toLowerCase();
+                const title = (b.getAttribute('title') || '').toLowerCase();
+                return label.includes('копировать') || label.includes('copy') || title.includes('копировать') || title.includes('copy');
+              });
+              if (found) {
+                localHasCopy = true;
+                break;
+              }
+              parent = parent.parentElement;
+            }
+          }
 
           return {
             currentLength: latestResponse ? latestResponse.innerText.length : 0,
-            hasCopyButton: copyBtns.length >= responses.length, // Rough check if the latest one has buttons
+            hasCopyButton: localHasCopy,
           };
         });
 
-        if (currentLength > 0 && currentLength === previousLength) {
+        // console.log(`⏳ Стабилизация (${attempts}/${maxAttempts}): Длина=${currentLength}, Пред=${previousLength}, Счетчик=${stableCount}, Кнопка=${hasCopyButton}`);
+
+        if (currentLength === previousLength) {
           stableCount++;
-          // Если мы уверены, что появились финальные кнопки интерфейса — можно не ждать все 5 секунд
-          if (hasCopyButton && stableCount >= 2) break;
+          if (hasCopyButton && stableCount >= 2) {
+            console.log('✅ Найдена кнопка "Копировать", генерация завершена досрочно.');
+            break;
+          }
         } else {
           stableCount = 0;
           previousLength = currentLength;
         }
+      }
+
+      if (attempts >= maxAttempts) {
+        console.warn('⚠️ Превышено время стабилизации ответа. Будет совершен выход из цикла.');
       }
 
       console.log('✅ Генерация завершена.');
