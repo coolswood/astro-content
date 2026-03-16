@@ -84,6 +84,8 @@ async function run() {
     console.log(`🆕 Начало нового перевода (${paths.targetPath} не найден).`);
   }
 
+  let isFirstChunkProcessed = false;
+
   try {
     for (let i = 0; i < keys.length; i += chunkSize) {
       const chunkKeys = keys.slice(i, i + chunkSize);
@@ -108,6 +110,8 @@ async function run() {
           {
             glossaryText,
             isUI: true,
+            isPersistent: true,
+            firstRun: !isFirstChunkProcessed,
             models: {
               stage1: 'Pro',
               stage2: 'Думающая',
@@ -117,6 +121,7 @@ async function run() {
         );
 
         if (result.status === 'success' && result.localizedJson) {
+          isFirstChunkProcessed = true;
           globalGlossary = mergeGlossary(globalGlossary, result.glossary || []);
 
           Object.assign(finalLocalizedJson, result.localizedJson);
