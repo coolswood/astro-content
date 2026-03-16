@@ -9,6 +9,7 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 import { important, instagramStep, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -43,7 +44,26 @@ export const GET: APIRoute = async ({ params }) => {
       time: 4,
       type: 'theory',
       img: 'distortions_key',
-      screens: [
+
+      screens: hasTaggedStory(story)
+        ? [
+            {
+              __typename: 'ScreenText',
+              steps: [
+                `<h2>${story.title}</h2>`,
+                ...renderTaggedTexts(story.screen_1.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+              ]
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_2.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            },
+            {
+              __typename: 'ScreenText',
+              steps: renderTaggedTexts(story.screen_3.texts, { instagramFallback: typeof storyEn !== 'undefined' ? storyEn.instagram : [] })
+            }
+          ]
+        : [
         // Screen 1
         {
           __typename: 'ScreenText',
@@ -54,7 +74,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<p>${story.screen_1.texts[2]}</p>`,
             `<p>${story.screen_1.texts[3]}</p>`,
             `<p>${story.screen_1.texts[4]}</p>`,
-            q(story.screen_1.quote.text, story.screen_1.quote.author),
+            q(story.screen_1.quote?.text, story.screen_1.quote?.author),
             `<p>${story.screen_1.texts[5]}</p>`,
           ],
         },
@@ -74,7 +94,7 @@ export const GET: APIRoute = async ({ params }) => {
             `<li>${story.screen_2.texts[9]}</li>`,
             `<p>${story.screen_2.texts[10]}</p>`,
             `<p>${story.screen_2.texts[11]}</p>`,
-            q(story.screen_2.quote.text, story.screen_2.quote.author),
+            q(story.screen_2.quote?.text, story.screen_2.quote?.author),
           ],
         },
         // Screen 3

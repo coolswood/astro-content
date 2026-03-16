@@ -35,6 +35,7 @@ const BASE_ALLOWED = [
   '«»„“""\'\'', // Common quotes
   '{}', // Template braces
   '<>', // HTML tags
+  '\\x80-\\x9F', // C1 Control characters (ignored per user request)
 ].join('');
 
 /**
@@ -95,8 +96,9 @@ function getAllJsonFiles(dir: string): string[] {
     for (const item of items) {
       const fullPath = join(currentDir, item);
       const stat = statSync(fullPath);
-      if (stat.isDirectory()) traverse(fullPath);
-      else if (extname(item) === '.json') files.push(fullPath);
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (extname(item) === '.json') files.push(fullPath);
     }
   }
   traverse(dir);

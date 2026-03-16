@@ -7,6 +7,8 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory } from '@/lib/storyTaggedTextsHelper';
+import { buildTaggedStoryScreens } from '@/lib/storyTaggedScreens';
 import { important, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -29,6 +31,10 @@ export const GET: APIRoute = async ({ params }) => {
     );
     story = fullStory.death;
 
+    const taggedScreens = hasTaggedStory(story)
+      ? buildTaggedStoryScreens(story, {})
+      : undefined;
+
     const output = {
       id: 'DEPRESSION_DEATH',
       color: '#37474F',
@@ -39,7 +45,7 @@ export const GET: APIRoute = async ({ params }) => {
       type: 'theory',
       img: 'depression_death',
       isPremium: true,
-      screens: [
+      screens: taggedScreens ?? [
         {
           __typename: 'ScreenText',
           steps: [

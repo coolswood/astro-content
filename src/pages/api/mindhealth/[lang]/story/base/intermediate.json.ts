@@ -7,10 +7,107 @@ import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import { instagramStep, q } from '@/lib/storyHelper';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 
 export const prerender = true;
 
 export const getStaticPaths = getLangStaticPaths;
+
+function legacyBuildScreens(story: any, storyEn: any) {
+  return [
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<h2>${story.title}</h2>`,
+        `<p>${story.screen_1.texts[0]}</p>`,
+        `<p>${story.screen_1.texts[1]}</p>`,
+        `<p>${story.screen_1.texts[2]}</p>`,
+        ...instagramStep(story.instagram, storyEn.instagram),
+        `<p>${story.screen_1.texts[3]}</p>`,
+        `<li>${story.screen_1.texts[4]}</li>`,
+        `<li>${story.screen_1.texts[5]}</li>`,
+        `<li>${story.screen_1.texts[6]}</li>`,
+        `<p>${story.screen_1.texts[7]}</p>`,
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<p>${story.screen_2.texts[0]}</p>`,
+        `<p>${story.screen_2.stepper[0]}</p>`,
+        `<p>${story.screen_2.stepper[1]}</p>`,
+        `<p>${story.screen_2.stepper[2]}</p>`,
+        `<p>${story.screen_2.stepper[3]}</p>`,
+        `<p>${story.screen_2.stepper[4]}</p>`,
+        `<p>${story.screen_2.stepper[5]}</p>`,
+        `<p>${story.screen_2.texts[1]}</p>`,
+      ],
+    },
+    {
+      __typename: 'ScreenTest',
+      question: story.test.question,
+      answers: [
+        story.test.answers[0],
+        story.test.answers[1],
+        story.test.answers[2],
+        story.test.answers[3],
+      ],
+      correctAnswer: 1,
+    },
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<p>${story.screen_3.texts[0]}</p>`,
+        `<p>${story.screen_3.texts[1]}</p>`,
+        `<li>${story.screen_3.texts[2]}</li>`,
+        `<li>${story.screen_3.texts[3]}</li>`,
+        `<p>${story.screen_3.texts[4]}</p>`,
+        `<p>${story.screen_3.texts[5]}</p>`,
+        `<p>${story.screen_3.texts[6]}</p>`,
+        q(story.screen_3.quote.text, story.screen_3.quote.author),
+        `<p>${story.screen_3.texts[7]}</p>`,
+        `<p>${story.screen_3.texts[8]}</p>`,
+      ],
+    },
+  ];
+}
+
+function taggedBuildScreens(story: any, storyEn: any) {
+  return [
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<h2>${story.title}</h2>`,
+        ...renderTaggedTexts(story.screen_1.texts, {
+          instagramFallback: storyEn.instagram,
+        }),
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: renderTaggedTexts(story.screen_2.texts, {
+        instagramFallback: storyEn.instagram,
+      }),
+    },
+    {
+      __typename: 'ScreenTest',
+      question: story.test.question,
+      answers: [
+        story.test.answers[0],
+        story.test.answers[1],
+        story.test.answers[2],
+        story.test.answers[3],
+      ],
+      correctAnswer: 1,
+    },
+    {
+      __typename: 'ScreenText',
+      steps: renderTaggedTexts(story.screen_3.texts, {
+        instagramFallback: storyEn.instagram,
+      }),
+    },
+  ];
+}
 
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
@@ -31,6 +128,10 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const screens = hasTaggedStory(story)
+      ? taggedBuildScreens(story, storyEn)
+      : legacyBuildScreens(story, storyEn);
+
     const output = {
       id: 'INTERMEDIATE',
       color: '#D8ECCE',
@@ -40,62 +141,7 @@ export const GET: APIRoute = async ({ params }) => {
       time: 7,
       type: 'theory',
       img: 'intermediate',
-      screens: [
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<h2>${story.title}</h2>`,
-            `<p>${story.screen_1.texts[0]}</p>`,
-            `<p>${story.screen_1.texts[1]}</p>`,
-            `<p>${story.screen_1.texts[2]}</p>`,
-            ...instagramStep(story.instagram, storyEn.instagram),
-            `<p>${story.screen_1.texts[3]}</p>`,
-            `<li>${story.screen_1.texts[4]}</li>`,
-            `<li>${story.screen_1.texts[5]}</li>`,
-            `<li>${story.screen_1.texts[6]}</li>`,
-            `<p>${story.screen_1.texts[7]}</p>`,
-          ],
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_2.texts[0]}</p>`,
-            `<p>${story.screen_2.stepper[0]}</p>`,
-            `<p>${story.screen_2.stepper[1]}</p>`,
-            `<p>${story.screen_2.stepper[2]}</p>`,
-            `<p>${story.screen_2.stepper[3]}</p>`,
-            `<p>${story.screen_2.stepper[4]}</p>`,
-            `<p>${story.screen_2.stepper[5]}</p>`,
-            `<p>${story.screen_2.texts[1]}</p>`,
-          ],
-        },
-        {
-          __typename: 'ScreenTest',
-          question: story.test.question,
-          answers: [
-            story.test.answers[0],
-            story.test.answers[1],
-            story.test.answers[2],
-            story.test.answers[3],
-          ],
-          correctAnswer: 1,
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_3.texts[0]}</p>`,
-            `<p>${story.screen_3.texts[1]}</p>`,
-            `<li>${story.screen_3.texts[2]}</li>`,
-            `<li>${story.screen_3.texts[3]}</li>`,
-            `<p>${story.screen_3.texts[4]}</p>`,
-            `<p>${story.screen_3.texts[5]}</p>`,
-            `<p>${story.screen_3.texts[6]}</p>`,
-            q(story.screen_3.quote.text, story.screen_3.quote.author),
-            `<p>${story.screen_3.texts[7]}</p>`,
-            `<p>${story.screen_3.texts[8]}</p>`,
-          ],
-        },
-      ],
+      screens,
     };
 
     return new Response(JSON.stringify(output), {

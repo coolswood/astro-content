@@ -6,10 +6,86 @@ import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import { important, q, instagramStep } from '@/lib/storyHelper';
+import { hasTaggedStory, renderTaggedTexts } from '@/lib/storyTaggedTextsHelper';
 
 export const prerender = true;
 
 export const getStaticPaths = getLangStaticPaths;
+
+function legacyBuildScreens(story: any) {
+  return [
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<h2>${story.title}</h2>`,
+        `<p>${story.screen_1.texts[0]}</p>`,
+        `<p>${story.screen_1.texts[1]}</p>`,
+        `<p>${story.screen_1.texts[2]}</p>`,
+        `<p>${story.screen_1.texts[3]}</p>`,
+        important(story.screen_1.texts[4]),
+        `<p>${story.screen_1.texts[5]}</p>`,
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<p>${story.screen_2.texts[0]}</p>`,
+        `<p>${story.screen_2.texts[1]}</p>`,
+        `<p>${story.screen_2.texts[2]}</p>`,
+        `<p>${story.screen_2.texts[3]}</p>`,
+        ...instagramStep(story.instagram),
+        `<p>${story.screen_2.texts[4]}</p>`,
+        `<p>${story.screen_2.texts[5]}</p>`,
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<p>${story.screen_3.texts[0]}</p>`,
+        `<p>${story.screen_3.texts[1]}</p>`,
+        `<p>${story.screen_3.texts[2]}</p>`,
+        `<p>${story.screen_3.texts[3]}</p>`,
+        `<p>${story.screen_3.texts[4]}</p>`,
+        important(story.screen_3.texts[5]),
+        `<p>${story.screen_3.texts[6]}</p>`,
+      ],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: [
+        `<p>${story.screen_4.texts[0]}</p>`,
+        `<p>${story.screen_4.texts[1]}</p>`,
+        `<p>${story.screen_4.texts[2]}</p>`,
+        q(story.screen_4.quote.text, story.screen_4.quote.author),
+        `<p>${story.screen_4.texts[3]}</p>`,
+        `<p>${story.screen_4.texts[4]}</p>`,
+        `<p>${story.screen_4.texts[5]}</p>`,
+        `<p>${story.screen_4.texts[6]}</p>`,
+      ],
+    },
+  ];
+}
+
+function taggedBuildScreens(story: any) {
+  return [
+    {
+      __typename: 'ScreenText',
+      steps: [`<h2>${story.title}</h2>`, ...renderTaggedTexts(story.screen_1.texts, {})],
+    },
+    {
+      __typename: 'ScreenText',
+      steps: renderTaggedTexts(story.screen_2.texts, {}),
+    },
+    {
+      __typename: 'ScreenText',
+      steps: renderTaggedTexts(story.screen_3.texts, {}),
+    },
+    {
+      __typename: 'ScreenText',
+      steps: renderTaggedTexts(story.screen_4.texts, {}),
+    },
+  ];
+}
 
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
@@ -22,6 +98,10 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const screens = hasTaggedStory(story)
+      ? taggedBuildScreens(story)
+      : legacyBuildScreens(story);
+
     const output = {
       id: 'SUICIDE',
       color: '#161614',
@@ -31,57 +111,7 @@ export const GET: APIRoute = async ({ params }) => {
       time: 5,
       type: 'theory',
       img: 'suicide',
-      screens: [
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<h2>${story.title}</h2>`,
-            `<p>${story.screen_1.texts[0]}</p>`,
-            `<p>${story.screen_1.texts[1]}</p>`,
-            `<p>${story.screen_1.texts[2]}</p>`,
-            `<p>${story.screen_1.texts[3]}</p>`,
-            important(story.screen_1.texts[4]),
-            `<p>${story.screen_1.texts[5]}</p>`,
-          ],
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_2.texts[0]}</p>`,
-            `<p>${story.screen_2.texts[1]}</p>`,
-            `<p>${story.screen_2.texts[2]}</p>`,
-            `<p>${story.screen_2.texts[3]}</p>`,
-            ...instagramStep(story.instagram),
-            `<p>${story.screen_2.texts[4]}</p>`,
-            `<p>${story.screen_2.texts[5]}</p>`,
-          ],
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_3.texts[0]}</p>`,
-            `<p>${story.screen_3.texts[1]}</p>`,
-            `<p>${story.screen_3.texts[2]}</p>`,
-            `<p>${story.screen_3.texts[3]}</p>`,
-            `<p>${story.screen_3.texts[4]}</p>`,
-            important(story.screen_3.texts[5]),
-            `<p>${story.screen_3.texts[6]}</p>`,
-          ],
-        },
-        {
-          __typename: 'ScreenText',
-          steps: [
-            `<p>${story.screen_4.texts[0]}</p>`,
-            `<p>${story.screen_4.texts[1]}</p>`,
-            `<p>${story.screen_4.texts[2]}</p>`,
-            q(story.screen_4.quote.text, story.screen_4.quote.author),
-            `<p>${story.screen_4.texts[3]}</p>`,
-            `<p>${story.screen_4.texts[4]}</p>`,
-            `<p>${story.screen_4.texts[5]}</p>`,
-            `<p>${story.screen_4.texts[6]}</p>`,
-          ],
-        },
-      ],
+      screens,
     };
 
     return new Response(JSON.stringify(output), {

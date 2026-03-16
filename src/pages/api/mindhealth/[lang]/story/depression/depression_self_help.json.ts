@@ -7,6 +7,8 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { hasTaggedStory } from '@/lib/storyTaggedTextsHelper';
+import { buildTaggedStoryScreens } from '@/lib/storyTaggedScreens';
 import { important, instagramStep, q } from '@/lib/storyHelper';
 
 export const prerender = true;
@@ -37,6 +39,10 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const taggedScreens = hasTaggedStory(story)
+      ? buildTaggedStoryScreens(story, { instagramFallback: storyEn.instagram })
+      : undefined;
+
     const output = {
       id: 'DEPRESSION_SELF_HELP',
       color: '#BABFF3',
@@ -46,7 +52,7 @@ export const GET: APIRoute = async ({ params }) => {
       time: 7,
       type: 'theory',
       img: 'depression_self_help',
-      screens: [
+      screens: taggedScreens ?? [
         {
           __typename: 'ScreenText',
           steps: [

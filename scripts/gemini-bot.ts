@@ -1,147 +1,119 @@
 import fs from 'fs/promises';
-import path from 'path';
-import { spawnSync } from 'child_process';
-import {
-  connectToBrowser,
-  getGeminiPage,
-  interactWithGemini,
-  parseGeminiJson,
-} from './lib/gemini-client.js';
 import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
+import { parseBotArgs, resolveBotPaths, runBotValidation, listJsonFiles, isUncommitted } from './lib/bot-utils.js';
+import { runGeminiWorkflow } from './lib/gemini-workflow.ts';
+import { GeminiProvider } from './lib/providers/gemini-provider.js';
+import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import { ClaudeProvider } from './lib/providers/claude-provider.js';
+import type { AIProvider } from './lib/types.js';
+import path from 'path';
 
-async function run() {
-  const fileName = process.argv[2] || 'start.json';
-  const targetLang = (process.argv[3] || 'pt_br').toLowerCase().replace('-', '_');
+async function processFile(
+  fileName: string, 
+  targetLang: string, 
+  provider: AIProvider, 
+  stage3Provider: AIProvider | undefined
+) {
+  const paths = await resolveBotPaths(fileName, targetLang);
 
-  const ruPath = path.join(process.cwd(), 'src/i18n/ru', fileName);
-  const targetDir = path.join(process.cwd(), 'src/i18n', targetLang, '');
-  const targetPath = path.join(targetDir, fileName);
-
-  console.log(`📖 Чтение исходного файла: ${ruPath}`);
-  const ruContent = await fs.readFile(ruPath, 'utf-8');
-
-  console.log(`📜 Чтение промптов...`);
-  const glossaryPath = path.join(
-    process.cwd(),
-    'scripts/partial_glossary_app_interface.json',
-  );
-  const glossary = await loadGlossary(glossaryPath);
-  const glossaryText = formatGlossary(glossary);
-
-  const [transPromptBase, editorPromptBase, techPromptBase] = await Promise.all(
-    [
-      loadPrompt('text', 'main', targetLang),
-      loadPrompt('text', 'editor', targetLang),
-      loadPrompt('text', 'tech', targetLang),
-    ],
-  );
-
-  console.log('🔗 Подключение к браузеру...');
-  const browser = await connectToBrowser();
-
+  // Skip logic: if the target file exists and is NOT uncommitted, skip it.
   try {
-    // ШАГ 1: Перевод
-    console.log('\n🚀 ШАГ 1: Перевод (Transcreation)...');
-    const page = await getGeminiPage(browser);
-    const currentTransPrompt = transPromptBase.replace(
-      '{{GLOSSARY}}',
-      glossaryText,
-    );
-    const res1Raw = await interactWithGemini(
-      page,
-      `${currentTransPrompt}\n\nВот текст для перевода:\n${ruContent}`,
-      'Думающая',
-      false,
-    );
-    if (res1Raw.trim().toLowerCase().includes('все хорошо')) {
-      console.log('✨ Stage 1: Все хорошо, перевод не требуется.');
-      await browser.disconnect();
+    await fs.access(paths.targetPath);
+    const uncommitted = isUncommitted(paths.targetPath);
+    if (uncommitted) {
+      console.log(`⏩ Пропуск файла: ${paths.targetPath} (есть незакоммиченные изменения)`);
       return;
     }
-    const translatedJson = JSON.stringify(parseGeminiJson(res1Raw), null, 2);
-    let res2Handled = translatedJson;
-    let finalJson = translatedJson;
+    console.log(`♻️ Файл ${paths.targetPath} закоммичен, переводим заново...`);
+  } catch {
+    // File doesn't exist, proceed with translation
+  }
 
-    // ШАГ 2: Редактура
-    console.log('\n🚀 ШАГ 2: Редактура (Editing)...');
-    const res2Raw = await interactWithGemini(
-      page,
-      `${editorPromptBase}\n\nВот текст для редактуры:\n${translatedJson}`,
-      'Думающая',
-      true,
-    );
-    if (
-      !res2Raw.trim().toLowerCase().includes('all set') &&
-      !res2Raw.trim().toLowerCase().includes('все хорошо')
-    ) {
-      const partialUpdates = parseGeminiJson<Record<string, any>>(res2Raw);
-      const currentData = JSON.parse(translatedJson);
-      const mergedData = { ...currentData, ...partialUpdates };
-      res2Handled = JSON.stringify(mergedData, null, 2);
-      console.log(
-        `✨ Stage 2: Применены правки для ${Object.keys(partialUpdates).length} ключей.`,
-      );
+  console.log(`\n📄 Обработка файла: ${paths.ruPath}`);
+  const ruContent = await fs.readFile(paths.ruPath, 'utf-8');
+
+  console.log(`📜 Чтение промптов...`);
+  let glossary = await loadGlossary(paths.partialGlossaryPath);
+  if (glossary.length === 0) {
+    console.log(`⚠️ Глоссарий не найден в ${paths.partialGlossaryPath}, пробуем ${paths.glossaryPath}`);
+    glossary = await loadGlossary(paths.glossaryPath);
+  }
+  const glossaryText = formatGlossary(glossary);
+
+  const [main, editor, tech] = await Promise.all([
+    loadPrompt('text', 'main', targetLang),
+    loadPrompt('text', 'editor', targetLang),
+    loadPrompt('text', 'tech', targetLang),
+  ]);
+
+  const result = await runGeminiWorkflow(
+    provider,
+    ruContent,
+    { main, editor, tech },
+    { glossaryText, isUI: false, stage3Provider }
+  );
+
+  if (result.status === 'success') {
+    const finalJson = JSON.stringify(result.localizedJson, null, 2);
+    console.log(`💾 Сохранение итогового результата: ${paths.targetPath}`);
+    await fs.mkdir(paths.targetDir, { recursive: true });
+    await fs.writeFile(paths.targetPath, finalJson, 'utf-8');
+  }
+}
+
+async function run() {
+  const { fileName, targetLang, provider: providerType } = parseBotArgs();
+  const paths = await resolveBotPaths(fileName, targetLang);
+
+  let provider: AIProvider;
+  if (providerType === 'chatgpt') {
+    provider = new ChatGPTProvider();
+  } else if (providerType === 'claude') {
+    provider = new ClaudeProvider();
+  } else {
+    provider = new GeminiProvider();
+  }
+
+  let stage3Provider: AIProvider | undefined;
+  const explicitProvider = process.argv[5];
+  
+  if (!explicitProvider) {
+    console.log('🔗 Инициализация дополнительного провайдера для этапа 3 (дефолт): claude...');
+    stage3Provider = new ClaudeProvider();
+    await stage3Provider.init();
+  }
+
+  console.log(`🔗 Инициализация провайдера: ${providerType}...`);
+  await provider.init();
+
+  try {
+    if (paths.isDirectory) {
+      console.log(`📂 Обнаружена директория: ${fileName}. Поиск JSON файлов...`);
+      const files = await listJsonFiles(paths.ruPath);
+      console.log(`🔎 Найдено файлов: ${files.length}`);
+      
+      for (const file of files) {
+        const relativeFile = path.join(fileName, file);
+        try {
+          await processFile(relativeFile, targetLang, provider, stage3Provider);
+        } catch (err) {
+          console.error(`❌ Ошибка при обработке ${file}:`, err);
+        }
+      }
     } else {
-      console.log('✨ Stage 2: Без изменений (Все хорошо)');
+      await processFile(fileName, targetLang, provider, stage3Provider);
     }
 
-    // ШАГ 3: Технический аудит
-    console.log('\n🚀 ШАГ 3: Технический аудит (Tech Review)...');
-    const res3Raw = await interactWithGemini(
-      page,
-      `${techPromptBase}\n\nВот текст для тех-аудита:\n${res2Handled}`,
-      'Думающая',
-      true,
-    );
-    if (
-      !res3Raw.trim().toLowerCase().includes('all set') &&
-      !res3Raw.trim().toLowerCase().includes('все хорошо')
-    ) {
-      const partialUpdates = parseGeminiJson<Record<string, any>>(res3Raw);
-      const currentData = JSON.parse(res2Handled);
-      const mergedData = { ...currentData, ...partialUpdates };
-      finalJson = JSON.stringify(mergedData, null, 2);
-      console.log(
-        `✨ Stage 3: Применены правки для ${Object.keys(partialUpdates).length} ключей.`,
-      );
-    } else {
-      finalJson = res2Handled;
-      console.log('✨ Stage 3: Без изменений (Все хорошо)');
-    }
-
-    console.log(`💾 Сохранение итогового результата: ${targetPath}`);
-    await fs.mkdir(path.dirname(targetPath), { recursive: true });
-    await fs.writeFile(targetPath, finalJson, 'utf-8');
-    console.log('✨ Цикл Gemini завершен.');
-
-    // ВАЛИДАЦИЯ
-    console.log('\n🔍 Запуск финальной валидации...');
-
-    console.log('--- Проверка символов (check-translations.ts) ---');
-    const checkResult = spawnSync('bun', ['check-translations.ts', targetLang], {
-      encoding: 'utf-8',
-    });
-    console.log(checkResult.stdout || checkResult.stderr);
-    if (checkResult.status !== 0) {
-      console.warn('⚠️ Валидация символов не прошла!');
-    }
-
-    console.log('--- Проверка структуры (list-problematic-files.ts) ---');
-    const structResult = spawnSync('bun', ['list-problematic-files.ts', targetLang], {
-      encoding: 'utf-8',
-    });
-    console.log(structResult.stdout || structResult.stderr);
-    if (structResult.status !== 0) {
-      console.warn('⚠️ Валидация структуры JSON не прошла!');
-    }
-
-    console.log('\n🚀 Весь процесс автоматизации завершен успешно!');
+    runBotValidation(targetLang);
   } catch (error) {
     console.error('❌ Скрипт завершился с ошибкой:', error);
   } finally {
-    await browser.disconnect();
-    console.log('👋 Отключено от браузера.');
+    await provider.close();
+    if (stage3Provider) {
+      await stage3Provider.close();
+    }
+    console.log('👋 Сессия провайдера завершена.');
   }
 }
 

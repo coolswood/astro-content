@@ -6,12 +6,17 @@ export const instagramStep = (
   primary?: string[],
   fallback?: string[],
 ): string[] => {
-  if (primary?.length) {
-    return [instagram(primary)];
+  const normalize = (ids?: string[]) =>
+    (ids ?? []).map((id) => id.trim()).filter((id) => id.length > 0);
+
+  const primaryIds = normalize(primary);
+  if (primaryIds.length) {
+    return [instagram(primaryIds)];
   }
 
-  if (fallback?.length) {
-    return [instagram(fallback)];
+  const fallbackIds = normalize(fallback);
+  if (fallbackIds.length) {
+    return [instagram(fallbackIds)];
   }
 
   return [];

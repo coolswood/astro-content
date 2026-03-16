@@ -38,8 +38,50 @@ export async function loadPrompt(
   const targetLang = targetLangMatch?.[1]?.trim() ?? lang;
   const targetMarket = targetMarketMatch?.[1]?.trim() ?? lang;
 
-  return baseTemplate
-    .replace('{{LANG_STYLE}}', styleContent)
+  let content = baseTemplate.replace('{{LANG_STYLE}}', styleContent);
+
+  // Resolve {{INCLUDE:fileName}}
+  const fragmentsDir = path.join(PROMPTS_DIR, 'base', 'fragments');
+  const visited = new Set<string>();
+  visited.add(path.resolve(basePath));
+
+  async function resolveIncludes(text: string, currentVisited: Set<string>): Promise<string> {
+    const includeRegex = /\{\{INCLUDE:\s*(.+?)\s*\}\}/g;
+    let match;
+    let result = text;
+    
+    while ((match = includeRegex.exec(result)) !== null) {
+      const fileName = match[1];
+      const filePath = path.resolve(fragmentsDir, fileName);
+
+      // 1. Проверка Path Traversal
+      if (!filePath.startsWith(fragmentsDir)) {
+        throw new Error(`Insecure include path: ${fileName} in prompt template`);
+      }
+
+      // 2. Проверка зацикливания
+      if (currentVisited.has(filePath)) {
+        throw new Error(`Circular include detected: ${fileName}`);
+      }
+
+      // 3. Чтение файла (ошибка чтения выбросит исключение)
+      const fragmentContent = await fs.readFile(filePath, 'utf-8');
+
+      const nextVisited = new Set(currentVisited);
+      nextVisited.add(filePath);
+
+      // Рекурсивный вызов для вложенных инклюдов
+      const resolvedFragment = await resolveIncludes(fragmentContent, nextVisited);
+
+      result = result.replace(match[0], resolvedFragment);
+      includeRegex.lastIndex = 0;
+    }
+    return result;
+  }
+
+  content = await resolveIncludes(content, visited);
+
+  return content
     .replace(/\{\{TARGET_LANG\}\}/g, targetLang)
     .replace(/\{\{TARGET_MARKET\}\}/g, targetMarket);
 }

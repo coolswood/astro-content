@@ -6,7 +6,7 @@
 
 1.  **`gemini-ui-bot.ts`**: Основной скрипт на Bun + Puppeteer.
     - Разбивает JSON на чанки (по умолчанию 80 ключей).
-    - Прогоняет каждый чанк через 3 окна Gemini (Stage 1 & 3: Flash/Быстрая, Stage 2: Thinking) с разными промптами.
+    - Прогоняет каждый чанк через 3 этапа Gemini (Stage 1: Pro, Stage 2: Thinking, Stage 3: Pro) с разными промптами. Использование "Быстрой" модели теперь запрещено.
     - Собирает и объединяет глоссарий и локализованный JSON.
     - **Важно**: Поддерживает возобновление (Resuming) — если процесс прерван, он подхватит данные из `partial_*.json`.
 
@@ -51,3 +51,6 @@ bun scripts/gemini-ui-bot.ts app_interface.json 80
 ---
 
 _Инструкция создана для обеспечения консистентности при передаче задачи между AI-сессиями._
+
+bun scripts/gemini-bot.ts story/automatic.json de
+bun scripts/gemini-ui-simple-bot.ts app_interface.json de

@@ -1,5 +1,43 @@
 import puppeteer, { Page, Browser } from 'puppeteer-core';
 
+export class TerminalError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'TerminalError';
+  }
+}
+
+async function retryAction<T>(
+  action: () => Promise<T>,
+  retries = 3,
+): Promise<T> {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await action();
+    } catch (e: any) {
+      const msg = e.message.toLowerCase();
+      if (
+        msg.includes('detached frame') ||
+        msg.includes('disposed') ||
+        msg.includes('target closed') ||
+        msg.includes('timed out') ||
+        msg.includes('context destroyed') ||
+        e.name === 'ProtocolError'
+      ) {
+        if (i === retries - 1) throw e;
+        // Silent retry for UI stability
+        console.log(
+          `⚠️ Puppeteer error ignored, retrying (${i + 1}/${retries}): ${e.message}`,
+        );
+        await new Promise((r) => setTimeout(r, 2000));
+        continue;
+      }
+      throw e;
+    }
+  }
+  throw new Error('Retry action failed after all attempts');
+}
+
 /**
  * Connects to a running Chrome/Chromium browser via the DevTools protocol.
  * The browser must be started with --remote-debugging-port=9222.
@@ -10,6 +48,7 @@ export async function connectToBrowser(): Promise<Browser> {
   return puppeteer.connect({
     browserWSEndpoint: versionData.webSocketDebuggerUrl,
     defaultViewport: null,
+    protocolTimeout: 300000, // 5 minutes (default is 30s)
   });
 }
 
@@ -17,20 +56,25 @@ export async function connectToBrowser(): Promise<Browser> {
  * Opens a Gemini page in the browser or returns an existing one.
  */
 export async function getGeminiPage(browser: Browser): Promise<Page> {
-  const pages = await browser.pages();
-  const existing = pages.find((p) => p.url().includes('gemini.google.com'));
-  if (existing) {
-    await existing.bringToFront();
-    return existing;
-  }
-  const page = await browser.newPage();
-  await page.goto('https://gemini.google.com/app', {
-    waitUntil: 'networkidle2',
+  return retryAction(async () => {
+    const pages = await browser.pages();
+    const existing = pages.find((p) => p.url().includes('gemini.google.com'));
+    if (existing) {
+      await existing.bringToFront();
+      return existing;
+    }
+    const page = await browser.newPage();
+    page.setDefaultTimeout(300000);
+    page.setDefaultNavigationTimeout(300000);
+    await page.goto('https://gemini.google.com/app', {
+      waitUntil: 'networkidle2',
+    });
+    return page;
   });
-  return page;
 }
 
-/**
+/*
+
  * Sends a prompt to Gemini and returns the model's text response.
  *
  * @param page - Puppeteer page connected to gemini.google.com
@@ -42,98 +86,142 @@ export async function getGeminiPage(browser: Browser): Promise<Page> {
 export async function interactWithGemini(
   page: Page,
   prompt: string,
-  modelKeyword: string = 'Быстрая',
+  modelKeyword: string = 'Pro',
   shouldStartNewChat: boolean = false,
   retries = 3,
 ): Promise<string> {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       console.log(`🤖 Попытка ${attempt}/${retries}...`);
+      
+      // Обеспечиваем фокус на вкладке
+      await page.bringToFront();
 
       if (shouldStartNewChat) {
-        console.log('🆕 Запуск нового чата...');
-        try {
-          const newChatBtn =
-            'a[data-test-id="new-chat-button"], button[aria-label="Новый чат"]';
-          const btnFound = await page.$(newChatBtn);
-          if (btnFound) {
-            await page.click(newChatBtn);
-          } else {
-            console.log('🔄 Кнопка "Новый чат" не найдена, переход по URL...');
-            await page.goto('https://gemini.google.com/app', {
-              waitUntil: 'networkidle2',
-            });
-          }
-          await new Promise((r) => setTimeout(r, 2000));
-        } catch {
-          console.log(
-            '⚠️ Ошибка при создании нового чата, пробуем продолжить...',
-          );
-        }
-      }
-
-      // Проверка и включение временного чата
-      try {
-        const tempChatBtnSelector = 'button.temp-chat-button';
-        await page.waitForSelector(tempChatBtnSelector, { timeout: 10000 });
-        const isTempChatOn = await page.evaluate((sel) => {
-          const btn = document.querySelector(sel);
-          return btn?.classList.contains('temp-chat-on') || false;
-        }, tempChatBtnSelector);
-
-        if (!isTempChatOn) {
-          console.log('🔘 Включение временного чата...');
-          await page.click(tempChatBtnSelector);
-          await new Promise((r) => setTimeout(r, 2000));
-        }
-      } catch {
-        console.log("⚠️ Кнопка 'Временный чат' не найдена, продолжаем...");
+        console.log('🆕 Запуск нового чата через переход по ссылке...');
+        await page.goto('https://gemini.google.com/app', {
+          waitUntil: 'networkidle2',
+        });
+        await new Promise((r) => setTimeout(r, 2000));
       }
 
       // Выбор модели
-      try {
-        console.log(`🎯 Выбор модели ${modelKeyword}...`);
-        const modelSelectorBtn =
-          'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
-        await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
+      console.log(`🎯 Выбор модели ${modelKeyword}...`);
+      // Небольшая пауза перед первой попыткой выбора модели:
+      // меню режимов иногда появляется раньше, чем список моделей полностью прогрузится.
+      await new Promise((r) => setTimeout(r, 2000));
+      const modelSelectorBtn =
+        'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
+      await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
+
+      // Проверяем текущую выбранную модель
+      let currentModel = await page.evaluate((sel) => {
+        return (document.querySelector(sel) as HTMLElement)?.innerText.toLowerCase() || '';
+      }, modelSelectorBtn);
+
+      console.log(`ℹ️ Текущая модель в интерфейсе: "${currentModel}"`);
+
+      // Если текущая модель - "Быстрая", пробуем переключить ОБЯЗАТЕЛЬНО
+      // Или если она не совпадает с запрошенной
+      const requestedModelLower = modelKeyword.toLowerCase();
+      const isRequestedFast = requestedModelLower.includes('быстрая') || requestedModelLower.includes('flash') || requestedModelLower === 'fast';
+      const isCurrentFast = currentModel.includes('быстрая') || currentModel.includes('flash');
+
+      // Переключаем если текущая модель не совпадает с запрошенной.
+      // Если запрошена "быстрая", а текущая "быстрая" — НЕ переключаем.
+      const needsSwitch = isRequestedFast ? !isCurrentFast : (isCurrentFast || !currentModel.includes(requestedModelLower));
+
+      if (needsSwitch) {
+        console.log(`🔄 Переключение на ${modelKeyword}...`);
         await page.click(modelSelectorBtn);
         await page.waitForSelector('.mat-mdc-menu-item, [role="menuitem"]', {
           timeout: 10000,
         });
-        const selected = await page.evaluate((keyword) => {
+
+        // Ждем 2 секунды, чтобы интерфейс успел обновить доступность моделей (disabled/enabled)
+        await new Promise((r) => setTimeout(r, 2000));
+
+        const selectedResult = await page.evaluate((keyword) => {
           const items = Array.from(
             document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"]'),
           );
-          const target = items.find((item) =>
-            (item as HTMLElement).innerText
-              .toLowerCase()
-              .includes(keyword.toLowerCase()),
-          ) as HTMLElement;
+
+          let target: HTMLElement | undefined;
+          const kLower = keyword.toLowerCase();
+          const isFastRequested = kLower.includes('быстрая') || kLower.includes('flash') || kLower === 'fast';
+
+          // Поиск основной цели
+          for (const item of items) {
+            const el = item as HTMLElement;
+            const text = el.innerText.toLowerCase();
+            if (el.hasAttribute('disabled') || el.getAttribute('aria-disabled') === 'true' || el.classList.contains('mat-mdc-menu-item-disabled')) continue;
+
+            if (isFastRequested) {
+              if (text.includes('быстрая') || text.includes('flash')) {
+                target = el;
+                break;
+              }
+            } else {
+              if (text.includes('быстрая') || text.includes('flash')) continue;
+              if (text.includes(kLower)) {
+                target = el;
+                break;
+              }
+            }
+          }
+
+          // Попробовать фолбеки если не нашли
+          if (!target && !isFastRequested) {
+            const fallback = kLower === 'pro' ? 'думающая' : (kLower.includes('думающ') ? 'pro' : null);
+            if (fallback) {
+              for (const item of items) {
+                const el = item as HTMLElement;
+                const text = el.innerText.toLowerCase();
+                if (el.hasAttribute('disabled') || el.getAttribute('aria-disabled') === 'true' || el.classList.contains('mat-mdc-menu-item-disabled')) continue;
+                if (text.includes('быстрая') || text.includes('flash')) continue;
+                if (text.includes(fallback)) {
+                  target = el;
+                  break;
+                }
+              }
+            }
+          }
+
           if (target) {
             target.click();
-            return true;
+            return { success: true, name: target.innerText };
           }
-          return false;
+          return { success: false };
         }, modelKeyword);
 
-        if (selected) {
-          console.log(`✅ Модель ${modelKeyword} выбрана.`);
+        if (selectedResult.success) {
+          console.log(`✅ Выбрана модель: ${selectedResult.name}`);
           await new Promise((r) => setTimeout(r, 2000));
         } else {
-          console.log(
-            `⚠️ Модель "${modelKeyword}" не найдена, используем текущую.`,
+          throw new TerminalError(
+            `❌ КРИТИЧЕСКАЯ ОШИБКА: Ни Pro, ни Думающая модели не доступны. Использование "Быстрой" модели запрещено.`,
           );
-          await page.keyboard.press('Escape');
         }
-      } catch {
-        console.log('⚠️ Меню выбора модели не найдено, продолжаем...');
+      } else {
+        console.log(`✅ Модель ${modelKeyword} уже выбрана.`);
+      }
+
+      // Финальная проверка перед отправкой (только если НЕ запрашивали быструю)
+      currentModel = await page.evaluate((sel) => {
+        return (document.querySelector(sel) as HTMLElement)?.innerText.toLowerCase() || '';
+      }, modelSelectorBtn);
+
+      if (!isRequestedFast && (currentModel.includes('быстрая') || currentModel.includes('flash'))) {
+        throw new TerminalError(
+          `❌ КРИТИЧЕСКАЯ ОШИБКА: Обнаружена модель "Быстрая" непосредственно перед отправкой (запрашивалась ${modelKeyword}). Обрыв.`,
+        );
       }
 
       // Ввод и отправка промпта
       console.log('⌨️ Отправка сообщения...');
       const inputSelector = '.ql-editor';
-      await page.waitForSelector(inputSelector);
-      await page.click(inputSelector);
+      await retryAction(() => page.waitForSelector(inputSelector));
+      await retryAction(() => page.click(inputSelector));
       await page.evaluate(
         (sel, text) => {
           const el = document.querySelector(sel);
@@ -146,14 +234,16 @@ export async function interactWithGemini(
       await page.keyboard.press('Backspace');
 
       const sendBtnSelector = 'button.send-button';
-      await page.waitForSelector(sendBtnSelector);
-      await page.click(sendBtnSelector);
+      await retryAction(() => page.waitForSelector(sendBtnSelector));
+      await retryAction(() => page.click(sendBtnSelector));
 
       // Ожидание ответа
       console.log('⌛ Ожидание ответа...');
       const thoughtsBtnSelector = 'button.thoughts-header-button';
       try {
-        await page.waitForSelector(thoughtsBtnSelector, { timeout: 20000 });
+        await retryAction(() =>
+          page.waitForSelector(thoughtsBtnSelector, { timeout: 20000 }),
+        );
         console.log('🤔 Идёт процесс рассуждения/генерации...');
         await page.waitForFunction(
           (sel) => {
@@ -175,18 +265,23 @@ export async function interactWithGemini(
       }
 
       console.log('✍️ Чтение ответа...');
+      // page.on('console', msg => console.log(`[Browser]: ${msg.text()}`));
+
       // Ждем, пока исчезнет кнопка "Остановить генерацию" (если она есть) и появится текст
       await page.waitForFunction(
         () => {
           const stopBtns = Array.from(
             document.querySelectorAll('button'),
           ).filter(
-            (b) =>
-              b
-                .getAttribute('aria-label')
-                ?.toLowerCase()
-                .includes('остановить') ||
-              b.getAttribute('aria-label')?.toLowerCase().includes('stop'),
+            (b) => {
+              const label = b.getAttribute('aria-label')?.toLowerCase() || '';
+              const title = b.getAttribute('title')?.toLowerCase() || '';
+              const isStop = label.includes('остановить') || label.includes('stop') || title.includes('остановить') || title.includes('stop');
+              if (isStop) {
+                 console.log(`Найдена стоп-кнопка: Label="${label}", Title="${title}", Text="${(b as HTMLElement).innerText}"`);
+              }
+              return isStop;
+            }
           );
           if (stopBtns.length > 0) return false; // Еще генерирует
 
@@ -203,7 +298,11 @@ export async function interactWithGemini(
       // Дополнительная стабилизация: ждем, пока длина текста перестанет меняться в течение 5 секунд
       let previousLength = 0;
       let stableCount = 0;
-      while (stableCount < 5) {
+      let attempts = 0;
+      const maxAttempts = 30; // 30 секунд максимум
+
+      while (stableCount < 5 && attempts < maxAttempts) {
+        attempts++;
         await new Promise((r) => setTimeout(r, 1000));
 
         const { currentLength, hasCopyButton } = await page.evaluate(() => {
@@ -213,28 +312,46 @@ export async function interactWithGemini(
               ? (responses[responses.length - 1] as HTMLElement)
               : null;
 
-          // Gemini UI injects .copy-button or a button with Copy/Копировать label when done
-          const copyBtns = Array.from(
-            document.querySelectorAll('button'),
-          ).filter((b) => {
-            const label = (b.getAttribute('aria-label') || '').toLowerCase();
-            return label.includes('копировать') || label.includes('copy');
-          });
+          let localHasCopy = false;
+          if (latestResponse) {
+            let parent = latestResponse.parentElement;
+            for (let i = 0; i < 3 && parent; i++) {
+              const btns = Array.from(parent.querySelectorAll('button'));
+              const found = btns.some(b => {
+                const label = (b.getAttribute('aria-label') || '').toLowerCase();
+                const title = (b.getAttribute('title') || '').toLowerCase();
+                return label.includes('копировать') || label.includes('copy') || title.includes('копировать') || title.includes('copy');
+              });
+              if (found) {
+                localHasCopy = true;
+                break;
+              }
+              parent = parent.parentElement;
+            }
+          }
 
           return {
             currentLength: latestResponse ? latestResponse.innerText.length : 0,
-            hasCopyButton: copyBtns.length >= responses.length, // Rough check if the latest one has buttons
+            hasCopyButton: localHasCopy,
           };
         });
 
-        if (currentLength > 0 && currentLength === previousLength) {
+        // console.log(`⏳ Стабилизация (${attempts}/${maxAttempts}): Длина=${currentLength}, Пред=${previousLength}, Счетчик=${stableCount}, Кнопка=${hasCopyButton}`);
+
+        if (currentLength === previousLength) {
           stableCount++;
-          // Если мы уверены, что появились финальные кнопки интерфейса — можно не ждать все 5 секунд
-          if (hasCopyButton && stableCount >= 2) break;
+          if (hasCopyButton && stableCount >= 2) {
+            console.log('✅ Найдена кнопка "Копировать", генерация завершена досрочно.');
+            break;
+          }
         } else {
           stableCount = 0;
           previousLength = currentLength;
         }
+      }
+
+      if (attempts >= maxAttempts) {
+        console.warn('⚠️ Превышено время стабилизации ответа. Будет совершен выход из цикла.');
       }
 
       console.log('✅ Генерация завершена.');
@@ -253,7 +370,23 @@ export async function interactWithGemini(
       console.error(`❌ Ошибка на попытке ${attempt}:`, error);
       if (attempt === retries) throw error;
       console.log('🔄 Перезагрузка страницы для повторной попытки...');
-      await page.reload({ waitUntil: 'networkidle2' });
+      try {
+        await page.reload({ waitUntil: 'networkidle2' });
+      } catch (reloadError: any) {
+        console.error(
+          '❌ Ошибка при перезагрузке страницы:',
+          reloadError.message,
+        );
+        try {
+          console.log('🌐 Попытка прямого перехода на главную Gemini...');
+          await page.goto('https://gemini.google.com/app', {
+            waitUntil: 'networkidle2',
+          });
+        } catch (gotoError: any) {
+          console.error('❌ Критческая ошибка навигации:', gotoError.message);
+          if (attempt === retries) throw reloadError;
+        }
+      }
     }
   }
   return '';
@@ -261,38 +394,79 @@ export async function interactWithGemini(
 
 /**
  * Clean and parse a string that might contain JSON wrapped in markdown or other text.
+ * If parsing fails, it tries to repair it or asks Gemini to fix it.
  */
-export function parseGeminiJson<T>(text: string): T {
-  // Ищем первый подходящий JSON-блок (объект или массив)
-  const match = text.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+export async function parseGeminiJson<T>(
+  text: string,
+  page?: Page,
+  modelKeyword: string = 'Pro',
+): Promise<T> {
+  const tryParse = (rawText: string): T | null => {
+    // Ищем первый подходящий JSON-блок (объект или массив)
+    const match = rawText.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+    const jsonString = match ? match[0] : rawText;
+    const cleanedText = jsonString
+      .replace(/^JSON/i, '')
+      .replace(/^```json/i, '')
+      .replace(/```$/i, '')
+      .trim();
 
-  const jsonString = match ? match[0] : text;
-  const cleanedText = jsonString
-    .replace(/^JSON/i, '')
-    .replace(/^```json/i, '')
-    .replace(/```$/i, '')
-    .trim();
+    // Дополнительная очистка: экранируем кавычки внутри HTML-атрибутов
+    const preprocessedText = cleanedText.replace(
+      /(\s[a-z-]+)="([^"]+)"/gi,
+      '$1=\\"$2\\"',
+    );
 
-  try {
-    return JSON.parse(cleanedText);
-  } catch (e) {
     try {
-      const repaired = repairJson(cleanedText);
-      const parsed = JSON.parse(repaired);
-      console.warn(
-        '⚠️ ПРЕДУПРЕЖДЕНИЕ: JSON был обрезан (вероятно, из-за лимита токенов) и автоматически восстановлен.',
-      );
-      return parsed;
-    } catch (e2) {
-      console.error('❌ ОШИБКА ПАРСИНГА JSON. СЫРОЙ ОТВЕТ ОТ GEMINI:');
-      console.error('-------------------------------------------');
-      console.error(text);
-      console.error('-------------------------------------------');
-      throw new Error(
-        `No valid JSON object found in response. Raw response logged above.`,
-      );
+      return JSON.parse(preprocessedText);
+    } catch (e) {
+      try {
+        const repaired = repairJson(preprocessedText);
+        return JSON.parse(repaired);
+      } catch (e2) {
+        return null;
+      }
+    }
+  };
+
+  const parsed = tryParse(text);
+  if (parsed !== null) return parsed;
+
+  // Если не распарсилось и у нас есть доступ к странице, просим Gemini исправить
+  if (page) {
+    console.log('⚠️ Ошибка парсинга JSON. Просим Gemini исправить...');
+    for (let fixAttempt = 1; fixAttempt <= 2; fixAttempt++) {
+      try {
+        const fixPrompt = `В твоем предыдущем ответе была ошибка в структуре JSON. 
+Пожалуйста, исправь ее и выведи СТРОГО только валидный JSON объект, без лишнего текста и пояснений. 
+Вот твой предыдущий (ошибочный) ответ:
+\n${text}`;
+
+        const fixedRaw = await interactWithGemini(
+          page,
+          fixPrompt,
+          modelKeyword,
+          false, // Продолжаем в том же чате
+        );
+
+        const fixedParsed = tryParse(fixedRaw);
+        if (fixedParsed !== null) {
+          console.log('✅ Gemini исправил JSON ошибку.');
+          return fixedParsed;
+        }
+      } catch (fixError) {
+        console.error(`❌ Попытка исправления ${fixAttempt} не удалась:`, fixError);
+      }
     }
   }
+
+  console.error('❌ ОШИБКА ПАРСИНГА JSON. СЫРОЙ ОТВЕТ ОТ GEMINI:');
+  console.error('-------------------------------------------');
+  console.error(text);
+  console.error('-------------------------------------------');
+  throw new Error(
+    `No valid JSON object found in response after repair attempts. Raw response logged above.`,
+  );
 }
 
 /**

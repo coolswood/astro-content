@@ -1,207 +1,447 @@
 [
   {
-    "ru": "КПТ",
-    "pt_br": "TCC (Terapia Cognitivo-Comportamental)",
-    "context": "Termo técnico fundamental para a metodologia do aplicativo no Brasil."
+    "ru": "Дневник автоматических мыслей",
+    "lang": "Diário de pensamentos automáticos",
+    "context": "Название основного инструмента TCC в приложении; ключевой раздел навигации"
   },
   {
     "ru": "Автоматическая мысль",
-    "pt_br": "Pensamento automático",
-    "context": "Conceito central da TCC para identificar padrões cognitivos."
+    "lang": "Pensamento automático",
+    "context": "Базовый термин TCC, используется как поле дневника"
   },
   {
     "ru": "Когнитивные искажения",
-    "pt_br": "Distorções cognitivas",
-    "context": "Termo técnico usado para descrever erros sistemáticos no pensamento."
+    "lang": "Distorções cognitivas",
+    "context": "Базовый термин TCC, используется как поле дневника"
   },
   {
     "ru": "Адаптивный ответ",
-    "pt_br": "Resposta adaptativa",
-    "context": "A fase de reestruturação cognitiva onde o usuário confronta pensamentos disfuncionais."
+    "lang": "Resposta adaptativa",
+    "context": "Термин TCC для альтернативной мысли; поле дневника"
   },
   {
-    "ru": "Событие/Ситуация",
-    "pt_br": "Situação",
-    "context": "Na prática clínica brasileira de TCC, usa-se 'Situação' para o gatilho do registro de pensamentos."
+    "ru": "Обучение",
+    "lang": "Aprendizado",
+    "context": "Название раздела навигации приложения"
   },
   {
-    "ru": "Дневник автоматических мыслей",
-    "pt_br": "Diário de Pensamentos Automáticos",
-    "context": "Nome da principal ferramenta de registro (RDPD) adaptado para o usuário final."
+    "ru": "Портрет",
+    "lang": "Retrato",
+    "context": "Название раздела навигации приложения"
   },
   {
-    "ru": "Чёрно-белое мышление",
-    "pt_br": "Pensamento tudo ou nada",
-    "context": "Стандартный термин в ТСС для обозначения дихотомического мышления."
+    "ru": "Черновики",
+    "lang": "Rascunhos",
+    "context": "Статус записи в дневнике"
+  },
+  {
+    "ru": "Интенсивность эмоции",
+    "lang": "Intensidade da emoção",
+    "context": "Повторяющийся UI-элемент для оценки силы эмоции"
+  },
+  {
+    "ru": "Обратная связь",
+    "lang": "Fale conosco",
+    "context": "Адаптировано под BR-стандарт вместо дословного перевода; раздел навигации"
+  },
+  {
+    "ru": "Поделиться с психологом",
+    "lang": "Compartilhar com terapeuta",
+    "context": "Гендерно-нейтральный вариант (terapeuta); ключевое действие в приложении"
+  },
+  {
+    "ru": "Синхронизация завершена",
+    "lang": "Sincronização concluída",
+    "context": "Системное уведомление, важно для единообразия алертов"
   },
   {
     "ru": "Катастрофизация",
-    "pt_br": "Catastrofização",
-    "context": "Когнитивное искажение, при котором человек ожидает худшего сценария."
+    "lang": "Catastrofização",
+    "context": "Distorção cognitiva central na TCC"
+  },
+  {
+    "ru": "Чёрно-белое мышление",
+    "lang": "Pensamento tudo ou nada",
+    "context": "Distorção cognitiva — termo técnico consolidado na TCC em PT-BR"
   },
   {
     "ru": "Обесценивание позитивного",
-    "pt_br": "Desqualificação do positivo",
-    "context": "Важный термин ТСС, описывающий механизм игнорирования успехов."
+    "lang": "Desqualificação do positivo",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Эмоциональное обоснование",
+    "lang": "Raciocínio emocional",
+    "context": "Distorção cognitiva da TCC"
   },
   {
     "ru": "Навешивание ярлыков",
-    "pt_br": "Rotulação",
-    "context": "Присвоение фиксированных негативных определений себе или другим."
+    "lang": "Rotulação",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Преувеличение и преуменьшение",
+    "lang": "Maximização e minimização",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Мысленный фильтр",
+    "lang": "Filtro mental",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Чтение мыслей",
+    "lang": "Leitura mental",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Сверхобобщение",
+    "lang": "Supergeneralização",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Персонализация",
+    "lang": "Personalização",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Долженствование",
+    "lang": "Afirmações de “deveria”",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Туннельное мышление",
+    "lang": "Visão em túnel",
+    "context": "Distorção cognitiva da TCC"
+  },
+  {
+    "ru": "Напоминания",
+    "lang": "Lembretes",
+    "context": "Seção de configurações do app — recorrente na UI"
+  },
+  {
+    "ru": "Автосинхронизация",
+    "lang": "Sincronização automática",
+    "context": "Funcionalidade recorrente nas configurações"
+  },
+  {
+    "ru": "Информация о подписке",
+    "lang": "Informações da assinatura",
+    "context": "Seção de gerenciamento de assinatura no app"
+  },
+  {
+    "ru": "Подобрать психолога",
+    "lang": "Encontrar um psicólogo",
+    "context": "Funcionalidade do app para busca profissional"
   },
   {
     "ru": "Карта развития",
-    "pt_br": "Mapa de evolução",
-    "context": "UX-термин для обозначения прогресса пользователя в приложении."
+    "lang": "Mapa de desenvolvimento",
+    "context": "Seção do app com trilha de progresso"
   },
   {
-    "ru": "Навсегда (подписка)",
-    "pt_br": "Vitalício",
-    "context": "Стандартный рыночный термин для пожизненного доступа в приложениях."
+    "ru": "История тестов",
+    "lang": "Histórico de testes",
+    "context": "Seção do app — recorrente na UI"
   },
   {
-    "ru": "Копинг-карточки",
-    "pt_br": "Cartões de enfrentamento",
-    "context": "Termo técnico padrão da TCC (CBT) para ferramentas de enfrentamento de pensamentos."
+    "ru": "«Можно было бы»",
+    "lang": "“E se eu tivesse…”",
+    "context": "Distorção cognitiva da TCC — ruminação sobre o passado"
+  },
+  {
+    "ru": "Депрессия",
+    "lang": "Depressão",
+    "context": "Название раздела/теста BDI в приложении"
   },
   {
     "ru": "Деструктивное убеждение",
-    "pt_br": "Crença disfuncional",
-    "context": "Na TCC brasileira, usa-se 'disfuncional' em vez de 'destrutivo' para descrever crenças que não ajudam o paciente."
+    "lang": "Crença destrutiva",
+    "context": "Ключевой термин КПТ в модуле копинг-карточек"
   },
   {
     "ru": "Конструктивное убеждение",
-    "pt_br": "Crença funcional",
-    "context": "Oposto da crença disfuncional, focada em adaptação e saúde mental."
+    "lang": "Crença construtiva",
+    "context": "Ключевой термин КПТ в модуле копинг-карточек"
+  },
+  {
+    "ru": "Копинг-карточки",
+    "lang": "Cartões de enfrentamento",
+    "context": "Название раздела приложения с техникой КПТ"
   },
   {
     "ru": "Уровень веры",
-    "pt_br": "Nível de convicção",
-    "context": "Termo usado para medir o quanto o paciente acredita em um pensamento ou argumento no momento."
+    "lang": "Nível de crença",
+    "context": "Повторяющийся элемент UI для оценки убеждений и аргументов"
   },
   {
-    "ru": "Запись",
-    "pt_br": "Registro",
-    "context": "Utilizado para entradas no diário ou logs de exercícios dentro do app."
+    "ru": "Аргументы за и против",
+    "lang": "Argumentos a favor e contra",
+    "context": "Название раздела техники КПТ по анализу мыслей"
   },
   {
-    "ru": "Пробный период",
-    "pt_br": "Período de teste",
-    "context": "Важный термин для прозрачности условий оплаты подписки."
+    "ru": "Базовые концепции",
+    "lang": "Conceitos básicos",
+    "context": "Название обучающего раздела приложения"
   },
   {
-    "ru": "Подписка",
-    "pt_br": "Assinatura",
-    "context": "Ключевой термин UI для раздела оплаты."
+    "ru": "Экспорт данных",
+    "lang": "Exportar dados",
+    "context": "Название функции экспорта в настройках"
   },
   {
-    "ru": "Ежедневная оценка",
-    "pt_br": "Avaliação diária",
-    "context": "Название повторяющегося действия/раздела трекинга состояния."
+    "ru": "Статистика",
+    "lang": "Estatísticas",
+    "context": "Название раздела аналитики в приложении"
   },
   {
-    "ru": "Рекомендации AI",
-    "pt_br": "Sugestões de IA",
-    "context": "Тип контента, генерируемого нейросетью."
+    "ru": "Настройки",
+    "lang": "Configurações",
+    "context": "Название раздела настроек приложения"
   },
   {
-    "ru": "Инсайт",
-    "pt_br": "Insight",
-    "context": "Широко используемый термин в бразильской психологии для обозначения внезапного озарения или понимания."
+    "ru": "Ощущения в теле",
+    "lang": "Sensações físicas",
+    "context": "Стандартный термин в КПТ (TCC) для описания соматических реакций. Избегаем буквального перевода 'sensações no corpo'."
   },
   {
-    "ru": "Поведенческие паттерны",
-    "pt_br": "Padrões de comportamento",
-    "context": "Важный термин для КПТ (TCC) при описании привычек и циклов поведения."
+    "ru": "Событие",
+    "lang": "Situação",
+    "context": "Первый элемент когнитивной модели в бразильской КПТ-практике обычно называется 'Situação' (Ситуация), а не 'Evento' (Событие)."
   },
   {
-    "ru": "Благополучие / Здоровье",
-    "pt_br": "Bem-estar",
-    "context": "Ключевое понятие для сферы ментального здоровья, используемое вместо сухих медицинских терминов."
+    "ru": "Поведение",
+    "lang": "Comportamento",
+    "context": "Ключевой элемент когнитивной модели (мысли, эмоции, поведение, физические реакции). Базовый UI-термин для дневников КПТ."
   },
   {
-    "ru": "Вопросы для рассуждений",
-    "pt_br": "Perguntas para reflexão",
-    "context": "Стандартный заголовок для блоков упражнений, побуждающих пользователя к анализу."
-  },
-  {
-    "ru": "Неадаптивные схемы",
-    "pt_br": "Esquemas desadaptativos",
-    "context": "Termo técnico da TCC para padrões de pensamento enraizados que geram sofrimento."
-  },
-  {
-    "ru": "Глубинные убеждения",
-    "pt_br": "Crenças centrais",
-    "context": "Termo padrão em TCC no Brasil para as crenças mais profundas sobre si e o mundo."
-  },
-  {
-    "ru": "Промежуточные убеждения",
-    "pt_br": "Crenças intermediárias",
-    "context": "Regras e pressupostos que ligam pensamentos automáticos às crenças centrais."
-  },
-  {
-    "ru": "Сложн. (Сложность)",
-    "pt_br": "Dific.",
-    "context": "Abreviação comum em interfaces para indicar o nível de dificuldade de um exercício."
-  },
-  {
-    "ru": "Личный кабинет психолога",
-    "pt_br": "Área do psicólogo",
-    "context": "Termo técnico para o dashboard ou espaço restrito onde o profissional visualiza os dados."
+    "ru": "Главная",
+    "lang": "Início",
+    "context": "Стандартный UI-термин для главного экрана приложения. Использование 'Principal' в этом контексте звучит неестественно."
   },
   {
     "ru": "Тревога",
-    "pt_br": "Ansiedade",
-    "context": "Termo central em saúde mental e TCC."
+    "lang": "Ansiedade",
+    "context": "Базовая эмоция. Важно закрепить именно это слово для колеса эмоций и трекеров КПТ."
   },
   {
-    "ru": "РПП (Расстройство приема пищи)",
-    "pt_br": "Transtornos alimentares",
-    "context": "Sigla clínica traduzida para o termo compreensível pelo público leigo brasileiro."
+    "ru": "Беспомощность",
+    "lang": "Desamparo",
+    "context": "Используется в контексте выученной беспомощности (desamparo aprendido) и глубинных убеждений."
   },
   {
-    "ru": "Страх общения",
-    "pt_br": "Fobia social",
-    "context": "Termo comum em psicologia para descrever dificuldades de interação social."
+    "ru": "Обида",
+    "lang": "Mágoa",
+    "context": "В бразильской культуре 'mágoa' точнее и эмоциональнее передает обиду, чем формальные аналоги."
+  },
+  {
+    "ru": "Мучение / Тоска",
+    "lang": "Angústia",
+    "context": "Частотный термин в бразильской психологии для описания тяжелых, давящих душевных терзаний."
+  },
+  {
+    "ru": "Принятие",
+    "lang": "Aceitação",
+    "context": "Эмоция/Состояние: важный термин в контексте психотерапии (особенно в ACT)."
+  },
+  {
+    "ru": "Вдохновение",
+    "lang": "Inspiração",
+    "context": "Эмоция: часто используется в трекерах настроения для позитивного спектра."
+  },
+  {
+    "ru": "Синхронизация",
+    "lang": "Sincronização",
+    "context": "UI: базовый термин для настроек приложения, связанных с данными."
+  },
+  {
+    "ru": "Премиум",
+    "lang": "Premium",
+    "context": "UI: статус платной подписки."
+  },
+  {
+    "ru": "Запись",
+    "lang": "Registro",
+    "context": "Стандартный UI-термин для обозначения элемента дневника. В бразильских интерфейсах предпочтительнее 'registro', а не 'nota' или 'entrada'."
+  },
+  {
+    "ru": "Удалить (аккаунт, запись)",
+    "lang": "Excluir",
+    "context": "Устоявшийся термин для безвозвратного удаления данных в интерфейсах на PT-BR (лучше, чем 'apagar' или 'deletar')."
+  },
+  {
+    "ru": "Оценить (приложение)",
+    "lang": "Avaliar",
+    "context": "Используется для запроса оценки в App Store / Google Play. Звучит нативно и часто используется как призыв к действию."
+  },
+  {
+    "ru": "Убежденность / Степень веры (в контексте КПТ)",
+    "lang": "Convicção",
+    "context": "Помогает избежать тавтологии 'crença na crença' при оценке того, насколько человек верит в деструктивное убеждение."
+  },
+  {
+    "ru": "Уведомления",
+    "lang": "Notificações",
+    "context": "Стандартный элемент интерфейса, требующий единообразия во всех разделах настроек."
+  },
+  {
+    "ru": "AI-помощник",
+    "lang": "Assistente de IA",
+    "context": "Название ключевой функции искусственного интеллекта в приложении, важно для сохранения единого брендинга фичи."
+  },
+  {
+    "ru": "Переоценка",
+    "lang": "Reavaliação",
+    "context": "Клинически значимый термин в КПТ, обозначающий процесс повторного анализа своих убеждений (в связке со степенью веры)."
+  },
+  {
+    "ru": "Ежедневная оценка",
+    "lang": "Avaliação diária",
+    "context": "Ключевой термин для раздела трекинга настроения. Важно для UI."
+  },
+  {
+    "ru": "Эмоциональное состояние",
+    "lang": "Estado emocional",
+    "context": "Часто используемый термин для графиков и аналитики самочувствия."
+  },
+  {
+    "ru": "Качество сна",
+    "lang": "Qualidade do sono",
+    "context": "Важный параметр в трекере состояний. Используется во множестве экранов."
+  },
+  {
+    "ru": "Перфекционизм",
+    "lang": "Perfeccionismo",
+    "context": "Шкала дисфункциональных отношений (DAS). Базовый психологический термин."
+  },
+  {
+    "ru": "Одобрение",
+    "lang": "Aprovação",
+    "context": "Шкала дисфункциональных отношений (DAS)."
+  },
+  {
+    "ru": "«Мне все должны»",
+    "lang": "“Todos me devem”",
+    "context": "Установка из опросника DAS. Использованы корректные типографские кавычки бразильского формата."
+  },
+  {
+    "ru": "Всемогущество",
+    "lang": "Onipotência",
+    "context": "Психологический конструкт (DAS)."
+  },
+  {
+    "ru": "Автономия",
+    "lang": "Autonomia",
+    "context": "Психологический конструкт (DAS)."
+  },
+  {
+    "ru": "Когнитивно-поведенческая терапия (КПТ)",
+    "lang": "Terapia Cognitivo-Comportamental (TCC)",
+    "context": "Ключевая аббревиатура терапевтического подхода. В Бразилии общепринято использовать TCC."
+  },
+  {
+    "ru": "Дневник / Ежедневник",
+    "lang": "Diário",
+    "context": "Базовый термин для раздела записей. Исключает путаницу с расписаниями (agenda)."
+  },
+  {
+    "ru": "Инсайт",
+    "lang": "Descobrir mais sobre você / Insight",
+    "context": "В бразильском португальском слово 'insight' используется в бизнес-среде, но для более теплого и понятного тона в B2C приложении лучше применять описательные действия, например 'descobrir mais sobre você'."
+  },
+  {
+    "ru": "Промежуточные убеждения",
+    "lang": "Crenças intermediárias",
+    "context": "Термин КПТ (Intermediate beliefs), используется для обозначения установок, правил и допущений человека."
+  },
+  {
+    "ru": "Глубинные убеждения",
+    "lang": "Crenças centrais",
+    "context": "Ключевой термин КПТ (Core beliefs), означает самые глубокие, фундаментальные представления человека о себе и мире."
+  },
+  {
+    "ru": "Неадаптивные схемы мышления",
+    "lang": "Padrões de pensamento desadaptativos",
+    "context": "Психологический термин для обозначения негативных поведенческих и мыслительных паттернов."
+  },
+  {
+    "ru": "Дисфункциональные убеждения",
+    "lang": "Crenças disfuncionais",
+    "context": "Важный термин КПТ, обозначающий убеждения, которые мешают нормальной адаптации и вызывают стресс."
+  },
+  {
+    "ru": "Активности",
+    "lang": "Atividades",
+    "context": "Ключевое слово UI приложения, используемое для обозначения практических заданий и психологических упражнений."
+  },
+  {
+    "ru": "Панические атаки",
+    "lang": "Ataques de pânico",
+    "context": "Важный клинический термин, часто встречающийся в симптоматике и онбординге."
   },
   {
     "ru": "Профессиональное выгорание",
-    "pt_br": "Burnout profissional",
-    "context": "Termo amplamente utilizado no Brasil para descrever exaustão no trabalho."
+    "lang": "Esgotamento profissional (Burnout)",
+    "context": "Психологический термин. В Бразилии широко используется слово Burnout вместе с основным определением."
   },
   {
-    "ru": "Сновидение",
-    "pt_br": "Sonho",
-    "context": "Ключевой объект анализа в приложении."
+    "ru": "РПП",
+    "lang": "Transtornos alimentares",
+    "context": "Официальный медицинский и психологический термин (TA) для расстройств пищевого поведения."
+  },
+  {
+    "ru": "Практика благодарности",
+    "lang": "Prática de gratidão",
+    "context": "Ключевая практика в позитивной психологии и КПТ, часто используется как раздел в UI."
+  },
+  {
+    "ru": "Анализ сновидения",
+    "lang": "Análise de sonhos",
+    "context": "Функция в UI приложения, относящаяся к типу дневниковых записей."
+  },
+  {
+    "ru": "Психологическое благополучие",
+    "lang": "Bem-estar emocional",
+    "context": "Важный термин для передачи эмпатичного и заботливого тона (вместо сухих медицинских терминов)."
   },
   {
     "ru": "Настроение",
-    "pt_br": "Humor",
-    "context": "Используется для ежедневного трекинга состояния пользователя."
+    "lang": "Humor",
+    "context": "Базовый термин для раздела статистики и трекинга состояния."
   },
   {
-    "ru": "Термины и условия",
-    "pt_br": "Termos de uso",
-    "context": "Стандартный юридический термин для UX в Бразилии."
+    "ru": "Виджеты",
+    "lang": "Widgets",
+    "context": "Технический термин интерфейса."
   },
   {
-    "ru": "Подобрать",
-    "pt_br": "Encontrar",
-    "context": "В контексте поиска специалиста звучит более естественно, чем буквальный перевод."
+    "ru": "Пароль",
+    "lang": "Senha",
+    "context": "Стандартный UI-термин авторизации."
   },
   {
     "ru": "Навязчивые мысли",
-    "pt_br": "Pensamentos intrusivos",
-    "context": "Важный термин в ТСС для описания нежелательных повторяющихся мыслей."
+    "lang": "Pensamentos intrusivos",
+    "context": "Стандартный термин в ТСС (КПТ) для обозначения повторяющихся нежелательных мыслей."
   },
   {
-    "ru": "Выгрузка мыслей / Дезабафо",
-    "pt_br": "Desabafo",
-    "context": "Культурно значимый термин в Бразилии для процесса эмоционального облегчения через письмо или разговор."
+    "ru": "План действий",
+    "lang": "Plano de ação",
+    "context": "Часть терапевтического процесса, где теория переходит в конкретные шаги."
   },
   {
-    "ru": "Пространство",
-    "pt_br": "Espaço",
-    "context": "Часто используется в UI для обозначения личных разделов (Safe space)."
+    "ru": "Выгружать (эмоции/мысли)",
+    "lang": "Desabafar",
+    "context": "Очень важное слово в бразильской культуре, означающее эмоциональное облегчение через рассказ о проблемах."
+  },
+  {
+    "ru": "Вводный тур",
+    "lang": "Tour de introdução",
+    "context": "Стандартный UX-термин для онбординга или обучения внутри приложения."
+  },
+  {
+    "ru": "Эмоциональное благополучие",
+    "lang": "Bem-estar emocional",
+    "context": "Более естественный и мягкий вариант перевода для «психологического комфорта» или «состояния» в контексте поддержки."
   }
 ]
