@@ -101,12 +101,12 @@ export async function runGeminiWorkflow(
   let currentGlossary: GlossaryItem[] = [];
 
   if (isUI) {
-    const stage1Chunk = await provider.parseJson<GeminiResponse>(res1Raw);
+    const stage1Chunk = await provider.parseJson<GeminiResponse>(res1Raw, { sessionId: isPersistent ? 'stage1' : undefined });
     finalJson = stage1Chunk.localized_json;
     console.log(`📦 Stage 1: Received ${Array.isArray(finalJson) ? 'Array' : 'Object'} structure.`);
     currentGlossary = stage1Chunk.glossary || [];
   } else {
-    finalJson = await provider.parseJson<any>(res1Raw);
+    finalJson = await provider.parseJson<any>(res1Raw, { sessionId: isPersistent ? 'stage1' : undefined });
     console.log(`📦 Stage 1: Received ${Array.isArray(finalJson) ? 'Array' : 'Object'} structure.`);
   }
 
@@ -133,8 +133,7 @@ export async function runGeminiWorkflow(
     !res2Raw.trim().toLowerCase().includes('all set') &&
     !res2Raw.trim().toLowerCase().includes('все хорошо')
   ) {
-    const partialUpdates =
-      await provider.parseJson<any>(res2Raw);
+    const partialUpdates = await provider.parseJson<any>(res2Raw, { sessionId: isPersistent ? 'stage2' : undefined });
     console.log(`📦 Stage 2: Received ${Array.isArray(partialUpdates) ? 'Array' : 'Object'} updates.`);
     finalJson = applyUpdates(finalJson, partialUpdates);
     currentHandledJson = JSON.stringify(finalJson, null, 2);
@@ -164,8 +163,7 @@ export async function runGeminiWorkflow(
     !res3Raw.trim().toLowerCase().includes('all set') &&
     !res3Raw.trim().toLowerCase().includes('все хорошо')
   ) {
-    const partialUpdates =
-      await s3Provider.parseJson<any>(res3Raw);
+    const partialUpdates = await s3Provider.parseJson<any>(res3Raw, { sessionId: isPersistent ? 'stage3' : undefined });
     console.log(`📦 Stage 3: Received ${Array.isArray(partialUpdates) ? 'Array' : 'Object'} updates.`);
     finalJson = applyUpdates(finalJson, partialUpdates);
     console.log(

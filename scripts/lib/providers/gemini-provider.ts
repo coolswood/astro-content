@@ -46,9 +46,10 @@ export class GeminiProvider implements AIProvider {
     return currentLock;
   }
 
-  async parseJson<T>(text: string): Promise<T> {
-    // Не передаем Page, чтобы избежать нарушения изоляции сессий при авто-исправлении JSON
-    return parseGeminiJson<T>(text, undefined, 'Pro');
+  async parseJson<T>(text: string, options?: { sessionId?: string }): Promise<T> {
+    const sessionId = options?.sessionId || 'default';
+    const page = this.pages.get(sessionId);
+    return parseGeminiJson<T>(text, page, 'Pro');
   }
 
   async close() {
