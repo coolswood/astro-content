@@ -52,5 +52,8 @@ bun scripts/gemini-ui-bot.ts app_interface.json 80
 
 _Инструкция создана для обеспечения консистентности при передаче задачи между AI-сессиями._
 
+/Applications/Arc.app/Contents/MacOS/Arc --remote-debugging-port=9222
+
 bun scripts/gemini-bot.ts story/automatic.json de
 bun scripts/gemini-ui-simple-bot.ts app_interface.json de
+bun scripts/gemini-translate-keys.ts '{"greet": "Привет", "farewell": "До свидания"}'
