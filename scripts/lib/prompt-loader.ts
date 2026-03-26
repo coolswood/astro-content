@@ -20,17 +20,18 @@ const PROMPTS_DIR = path.join(process.cwd(), 'scripts/prompts');
  * @param lang      - language code, e.g. 'pt-BR'
  */
 export async function loadPrompt(
-  type: 'text' | 'ui',
+  type: 'text' | 'ui' | 'keys',
   name: string,
   lang: string,
 ): Promise<string> {
   const basePath = path.join(PROMPTS_DIR, 'base', type, `${name}.txt`);
-  const stylePath = path.join(PROMPTS_DIR, lang, 'style.txt');
+  const baseTemplate = await fs.readFile(basePath, 'utf-8');
+  let styleContent = '';
 
-  const [baseTemplate, styleContent] = await Promise.all([
-    fs.readFile(basePath, 'utf-8'),
-    fs.readFile(stylePath, 'utf-8'),
-  ]);
+  if (type !== 'keys') {
+    const stylePath = path.join(PROMPTS_DIR, lang, 'style.txt');
+    styleContent = await fs.readFile(stylePath, 'utf-8');
+  }
 
   // Extract TARGET_LANG and TARGET_MARKET from style file header
   const targetLangMatch = styleContent.match(/^TARGET_LANG:\s*(.+)$/m);
