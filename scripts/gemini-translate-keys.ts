@@ -17,7 +17,9 @@ async function run() {
   const TARGET_PT_BR_PATH = 'src/i18n/pt_br/app_interface.json';
 
   if (!inputArg) {
-    console.log(`🔍 Режим автоматического сравнения: ${SOURCE_PATH} vs ${TARGET_PT_BR_PATH}`);
+    console.log(
+      `🔍 Режим автоматического сравнения: ${SOURCE_PATH} vs ${TARGET_PT_BR_PATH}`,
+    );
     try {
       const sourceContent = await fs.readFile(SOURCE_PATH, 'utf-8');
       const targetContent = await fs.readFile(TARGET_PT_BR_PATH, 'utf-8');
@@ -37,7 +39,9 @@ async function run() {
         process.exit(0);
       }
 
-      console.log(`📦 Найдено новых ключей для перевода: ${Object.keys(missingKeys).length}`);
+      console.log(
+        `📦 Найдено новых ключей для перевода: ${Object.keys(missingKeys).length}`,
+      );
       sourceJson = missingKeys;
       isAutoMode = true;
     } catch (e) {
@@ -82,7 +86,7 @@ async function run() {
         isUI: false,
         isPersistent: false,
         models: {
-          stage1: 'Pro',
+          stage1: 'Думающая',
           stage2: 'Думающая',
           stage3: 'Pro',
         },
@@ -98,25 +102,29 @@ async function run() {
       if (Object.keys(validationErrors).length > 0) {
         console.warn('\n⚠️ ОБНАРУЖЕНЫ ОШИБКИ ВАЛИДАЦИИ ПЕРЕВОДА:');
         for (const lang in validationErrors) {
-          console.warn(`❌ [${lang}]: ${[...new Set(validationErrors[lang])].join(', ')}`);
+          console.warn(
+            `❌ [${lang}]: ${[...new Set(validationErrors[lang])].join(', ')}`,
+          );
         }
       } else {
-        console.log('\n✅ Валидация пройдена: некорректных символов не обнаружено.');
+        console.log(
+          '\n✅ Валидация пройдена: некорректных символов не обнаружено.',
+        );
       }
 
       if (isAutoMode && result.localizedJson.pt_BR) {
         console.log(`\n💾 Обновление ${TARGET_PT_BR_PATH}...`);
         const targetContent = await fs.readFile(TARGET_PT_BR_PATH, 'utf-8');
         const targetFull = JSON.parse(targetContent);
-        
+
         // Добавляем новые переводы в конец объекта (перед закрывающей скобкой)
         // Но проще просто объединить объекты
         const updatedTarget = { ...targetFull, ...result.localizedJson.pt_BR };
-        
+
         await fs.writeFile(
           TARGET_PT_BR_PATH,
           JSON.stringify(updatedTarget, null, 2) + '\n',
-          'utf-8'
+          'utf-8',
         );
         console.log('✅ Файл успешно обновлен.');
       }
