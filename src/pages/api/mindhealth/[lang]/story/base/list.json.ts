@@ -13,6 +13,7 @@ type StoryMeta = {
   type: string;
   img: string;
   isPremium?: boolean;
+  audio?: boolean;
 };
 
 type StoryModule = {
@@ -73,6 +74,7 @@ export const GET: APIRoute = async ({ params }) => {
           time: story.time,
           type: story.type,
           img: story.img,
+          ...(typeof story.audio === 'boolean' ? { audio: story.audio } : {}),
           ...(typeof story.isPremium === 'boolean'
             ? { isPremium: story.isPremium }
             : {}),

@@ -1,6 +1,7 @@
 // src/pages/api/[lang]/[test].json.ts
 import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
+import { existsSync } from 'fs';
 import path from 'path';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import { important, instagramStep, q } from '@/lib/storyHelper';
@@ -121,12 +122,17 @@ export const GET: APIRoute = async ({ params }) => {
       ? taggedBuildScreens(story, storyEn)
       : legacyBuildScreens(story, storyEn);
 
+    const audioExists = existsSync(
+      path.resolve(process.cwd(), `public/audio/story/${lang}/start/text.mp3`),
+    );
+
     const output = {
       id: 'START',
       color: '#FFDBDB',
       url: 'beginning-to-learn-cbt',
       title: story.title,
       description: story.description,
+      audio: audioExists,
       time: 5,
       type: 'theory',
       img: 'start',

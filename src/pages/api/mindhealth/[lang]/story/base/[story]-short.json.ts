@@ -1,6 +1,7 @@
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
 import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
+import { existsSync } from 'fs';
 import path from 'path';
 
 export const prerender = true;
@@ -37,10 +38,15 @@ export const GET: APIRoute = async ({ params }) => {
       ),
     );
 
+    const audioExists = existsSync(
+      path.resolve(process.cwd(), `public/audio/story/${lang}/${story}/text.mp3`),
+    );
+
     const output = {
       title: s.title,
       img: story,
       isPremium: s.isPremium,
+      audio: audioExists,
     };
 
     return new Response(JSON.stringify(output), {
