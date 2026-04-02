@@ -21,9 +21,9 @@ async function main() {
       voiceId: { type: 'string', default: '7G0NvIkWRnU0Dqjgz13p' }, // Екатерина
       out: { type: 'string' },
       speed: { type: 'string', default: '0.75' },
-      stability: { type: 'string', default: '0.6' },
-      similarityBoost: { type: 'string', default: '0.7' },
-      style: { type: 'string', default: '0.1' },
+      stability: { type: 'string', default: '0.4' },
+      similarityBoost: { type: 'string', default: '0.6' },
+      style: { type: 'string', default: '0.45' },
     },
   });
 
@@ -39,7 +39,7 @@ async function main() {
   // 7G0NvIkWRnU0Dqjgz13p
   // TPIitICAZ8CqlGZ81AKm
 
-  const apiKey = 'sk_19e233fe72fe3bd0afb1d2de2b28e490799980bb4f5116e1_111'; // Fallback to provided key if env is not set
+  const apiKey = 'sk_19e233fe72fe3bd0afb1d2de2b28e490799980bb4f5116e1'; // Fallback to provided key if env is not set
   if (!apiKey) {
     console.error(
       '❌ Ошибка: Переменная окружения ELEVEN_LABS_API_KEY не задана.',
