@@ -8,6 +8,14 @@
   "study": "Обучение",
   "portrait": "Портрет",
   "diary_title": "Дневник автоматических мыслей",
+  "story_mode_read": "Читать",
+  "@story_mode_read": {
+    "description": "Текст кнопки режима чтения в уроках"
+  },
+  "story_mode_listen": "Слушать",
+  "@story_mode_listen": {
+    "description": "Текст кнопки режима прослушивания в уроках"
+  },
   "recommendations": "Рекомендации",
   "recommend_update": "Доступно обновление",
   "rate": "Оцените наш труд",
@@ -298,7 +306,6 @@
   "subscription_button_cancel": "Отменить подписку",
   "subscription_button_canceled": "Продление отключено",
   "subscription_button_subscribe_trial": "Активировать бесплатно",
-  "subscription_button_subscribe_rub_trial": "Активировать за 10 ₽",
   "subscription_button_subscribe": "Активировать подписку",
   "subscription_info_cancel_title": "Вы хотите отменить подписку?",
   "subscription_info_cancel_trial_body": "При отмене подписки во время пробного периода вы сразу потеряете доступ к премиум-функциям.",
@@ -315,7 +322,6 @@
   "two_weeks": "2 недели",
   "week": "неделя",
   "subscription_info_trial": "3 дня бесплатно",
-  "subscription_info_rub_trial": "Первые 3 дня за 10 ₽",
   "alert_subscription_canceled": "Подписка деактивирована",
   "subscription_info_condition": "Для подписок на 3 и 12 месяцев действует пробный период — 3 дня. После его окончания автоматически будет списана сумма, соответствующая выбранному периоду. Вы можете в любой момент отменить подписку на этой странице.",
   "gpt_recommendation_emotions_title": "Рекомендации эмоций от AI",
@@ -448,10 +454,7 @@
   "my_results": "Мои выводы",
   "notification_activities_title": "🏃 {activityName}",
   "notification_activities_body": "Время выполнения активности подходит к концу.",
-  "settings_story_title": "Показывать текст статьи:",
-  "settings_story_dynamic": "Порциями по клику на экран",
-  "settings_story_all": "Сразу полностью",
-  "article_settings": "Для облегчения восприятия мы подаем текст маленькими порциями. Но вы можете изменить это в настройках!",
+
   "instruments_in_app": "Доступные инструменты в приложении",
   "article_activity_title": "Эта техника есть в разделе активности. Вы можете взять ее в работу!",
   "dashboard_not_repeat": "Ваши показатели в пределах нормы, вам не нужно проходить тест повторно.",

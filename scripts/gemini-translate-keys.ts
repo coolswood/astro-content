@@ -26,11 +26,15 @@ async function run() {
       const sourceFull = JSON.parse(sourceContent);
       const targetFull = JSON.parse(targetContent);
 
-      const missingKeys: Record<string, string> = {};
+      const missingKeys: Record<string, any> = {};
       for (const key in sourceFull) {
-        if (key.startsWith('@@')) continue; // Пропускаем мета-ключи
+        if (key.startsWith('@')) continue; // Пропускаем мета-ключи при поиске отличий
         if (!(key in targetFull)) {
           missingKeys[key] = sourceFull[key];
+          // Если есть мета-данные для этого ключа (ARB-формат), добавляем их как контекст для AI
+          if (`@${key}` in sourceFull) {
+            missingKeys[`@${key}`] = sourceFull[`@${key}`];
+          }
         }
       }
 

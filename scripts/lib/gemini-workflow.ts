@@ -118,7 +118,7 @@ export async function runGeminiWorkflow(
     '{{GLOSSARY}}',
     glossaryText,
   );
-  const s2FullPrompt = firstRun ? `${currentEditorPrompt}\n\nВот текст для редактуры:\n${currentHandledJson}` : currentHandledJson;
+  const s2FullPrompt = firstRun ? `${currentEditorPrompt}\n\nВот исходный текст (для контекста):\n${sourceContent}\n\nВот текст для редактуры:\n${currentHandledJson}` : `Исходный текст для контекста:\n${sourceContent}\n\nТекст для редактуры:\n${currentHandledJson}`;
 
   const res2Raw = await provider.interact(
     s2FullPrompt,
