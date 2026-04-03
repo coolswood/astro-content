@@ -6,7 +6,8 @@ export function generateSegments(alignment: {
   characterStartTimesSeconds: number[];
   characterEndTimesSeconds: number[];
 }) {
-  const { characters, characterStartTimesSeconds, characterEndTimesSeconds } = alignment;
+  const { characters, characterStartTimesSeconds, characterEndTimesSeconds } =
+    alignment;
 
   let fullText = '';
   const indices: number[] = [];
@@ -104,6 +105,7 @@ export interface TextSegment {
 export function associateStepsWithTimes(
   steps: string[],
   segments: TextSegment[],
+  forceToZero: boolean = false,
 ): (number | null)[] {
   const normSegments = segments.map((s) => ({
     original: s,
@@ -140,9 +142,8 @@ export function associateStepsWithTimes(
   }
 
   // Заполнение пропусков (как в Flutter)
-  // Первый шаг экрана всегда доступен с самого начала (0.0),
-  // особенно если это заголовок, который часто не озвучивается.
-  if (startTimes[0] === null || startTimes[0] > 0) {
+  // Только для САМОГО ПЕРВОГО экрана всей истории мы форсируем 0.0.
+  if (forceToZero && (startTimes[0] === null || startTimes[0] > 0)) {
     startTimes[0] = 0;
   }
 
@@ -172,10 +173,14 @@ export function calculateSync(story: any, segments: TextSegment[]) {
       return numA - numB;
     });
 
-  for (const key of screenKeys) {
+  screenKeys.forEach((key, index) => {
     const screen = story[key];
     if (screen.texts) {
-      const stepStarts = associateStepsWithTimes(screen.texts, segments);
+      const stepStarts = associateStepsWithTimes(
+        screen.texts,
+        segments,
+        index === 0,
+      );
       // Находим первое не-null время как начало экрана
       const firstStart = stepStarts.find((t) => t !== null) ?? null;
 
@@ -187,7 +192,7 @@ export function calculateSync(story: any, segments: TextSegment[]) {
       screens.push({ steps: [] });
       screenStartTimes.push(null);
     }
-  }
+  });
 
   // Заполняем пропуски в экранах (как во Flutter)
   if (screenStartTimes.length > 0 && screenStartTimes[0] === null) {
