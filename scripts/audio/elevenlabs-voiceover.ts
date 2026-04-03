@@ -2,7 +2,7 @@ import { ElevenLabsClient } from '@elevenlabs/elevenlabs-js';
 import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
 import { parseArgs } from 'util';
 import { join, parse, relative } from 'path';
-import { generateSegments } from './utils';
+import { generateSegments, calculateSync } from './utils';
 
 /**
  * Скрипт для автоматизации озвучки статей через ElevenLabs API с использованием официального SDK.
@@ -26,15 +26,6 @@ async function main() {
       style: { type: 'string', default: '0.45' },
     },
   });
-
-  // EDpEYNf6XIeKYRzYcx4I
-  // C3FusDjPequ6qFchqpzu
-  // sNQyZH8Wfcnv7zh3rHxR
-  // WfExDXCt2GBg6MI5KjQk
-
-  // N8lIVPsFkvOoqev5Csxo
-  // foZmP0ldhGob3fHgegm1
-  // dVRDrbP5ULGXB94se4KZ
 
   // 7G0NvIkWRnU0Dqjgz13p
   // TPIitICAZ8CqlGZ81AKm
@@ -120,20 +111,22 @@ async function main() {
 
     if (response.alignment) {
       const segments = generateSegments(response.alignment);
-      const segmentsPath = `${outputName}.segments.json`;
-      writeFileSync(segmentsPath, JSON.stringify(segments, null, 2));
-      console.log(`   - Сегменты по предложениям: ${segmentsPath}`);
+
+      // Ищем файл истории для синхронизации (если он указан через --file)
+      let syncData: any = null;
+      if (filePath && filePath.endsWith('.json')) {
+        const storyData = JSON.parse(readFileSync(filePath, 'utf-8'));
+        syncData = calculateSync(storyData, segments);
+      }
 
       // Копирование в public/audio/story для доступа по GET-запросу
       try {
         const publicDir = join(process.cwd(), 'public', 'audio', 'story');
-        // Получаем путь относительно scripts/audio (или текущей папки, если вне scripts)
         let relativePath = relative(
           join(process.cwd(), 'scripts', 'audio'),
           outputBase,
         );
         if (relativePath.startsWith('..')) {
-          // Если файл не в scripts/audio, берем только имя
           relativePath = parse(outputBase).name;
         }
 
@@ -141,21 +134,26 @@ async function main() {
         mkdirSync(targetDir, { recursive: true });
 
         const publicAudioPath = join(publicDir, `${relativePath}.mp3`);
-        const publicSegmentsPath = join(
-          publicDir,
-          `${relativePath}.segments.json`,
-        );
-
         writeFileSync(publicAudioPath, audioBuffer);
-        writeFileSync(publicSegmentsPath, JSON.stringify(segments, null, 2));
+
+        if (syncData) {
+          const publicSyncPath = join(targetDir, 'text.sync.json');
+          writeFileSync(publicSyncPath, JSON.stringify(syncData, null, 2));
+          console.log(`✅ Создан text.sync.json: ${publicSyncPath}`);
+        }
 
         console.log(`📡 Доступно по GET-запросу:`);
         console.log(
           `   - http://localhost:4321/audio/story/${relativePath}.mp3`,
         );
-        console.log(
-          `   - http://localhost:4321/audio/story/${relativePath}.segments.json`,
-        );
+        if (syncData) {
+          const relativeSyncPath = parse(relativePath).dir
+            ? `${parse(relativePath).dir}/text.sync.json`
+            : 'text.sync.json';
+          console.log(
+            `   - http://localhost:4321/audio/story/${relativeSyncPath}`,
+          );
+        }
       } catch (e) {
         console.log(
           `⚠️ Не удалось скопировать в public (это нормально, если вы вне корня проекта)`,
