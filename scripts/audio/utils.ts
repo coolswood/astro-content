@@ -101,19 +101,20 @@ export interface TextSegment {
 /**
  * Сопоставляет "шаги" (блоки текста из истории) с временными сегментами аудио.
  * Репликация логики из Flutter-приложения (helper.dart).
+ * @returns { times: (number | null)[], lastSegmentIdx: number }
  */
 export function associateStepsWithTimes(
   steps: string[],
   segments: TextSegment[],
-  forceToZero: boolean = false,
-): (number | null)[] {
+  startSegmentIdx: number = 0,
+): { times: (number | null)[]; lastSegmentIdx: number } {
   const normSegments = segments.map((s) => ({
     original: s,
     normalized: normalize(s.text.replace(/\[.*?\]/g, '').trim()),
   }));
 
   const startTimes: (number | null)[] = new Array(steps.length).fill(null);
-  let currentSegment = 0;
+  let currentSegment = startSegmentIdx;
 
   for (let i = 0; i < steps.length; i++) {
     const cleanStep = stripHtml(steps[i]);
@@ -141,21 +142,9 @@ export function associateStepsWithTimes(
     }
   }
 
-  // Заполнение пропусков (как в Flutter)
-  // Только для САМОГО ПЕРВОГО экрана всей истории мы форсируем 0.0.
-  if (forceToZero && (startTimes[0] === null || startTimes[0] > 0)) {
-    startTimes[0] = 0;
-  }
-
-  for (let i = 1; i < startTimes.length; i++) {
-    // Если шаг не найден, он наследует время предыдущего (появляется вместе с ним)
-    if (startTimes[i] === null && startTimes[i - 1] !== null) {
-      startTimes[i] = startTimes[i - 1];
-    }
-  }
-
-  return startTimes;
+  return { times: startTimes, lastSegmentIdx: currentSegment };
 }
+
 
 /**
  * Рассчитывает тайминги для всех экранов и шагов истории.
@@ -163,8 +152,28 @@ export function associateStepsWithTimes(
 export function calculateSync(story: any, segments: TextSegment[]) {
   const screens: any[] = [];
   const screenStartTimes: (number | null)[] = [];
+  let currentSegmentIdx = 0;
 
-  // Собираем все текстовые экраны
+  // 1. Пытаемся "промотать" заголовок и описание, если аудио начинается с них
+  // Это нужно, чтобы следующие шаги не сопоставились с аудио заголовка по ошибке
+  if (story.title) {
+    const { lastSegmentIdx } = associateStepsWithTimes(
+      [story.title],
+      segments,
+      currentSegmentIdx,
+    );
+    currentSegmentIdx = lastSegmentIdx;
+  }
+  if (story.description) {
+    const { lastSegmentIdx } = associateStepsWithTimes(
+      [story.description],
+      segments,
+      currentSegmentIdx,
+    );
+    currentSegmentIdx = lastSegmentIdx;
+  }
+
+  // 2. Собираем все текстовые экраны
   const screenKeys = Object.keys(story)
     .filter((k) => k.startsWith('screen_'))
     .sort((a, b) => {
@@ -176,13 +185,32 @@ export function calculateSync(story: any, segments: TextSegment[]) {
   screenKeys.forEach((key, index) => {
     const screen = story[key];
     if (screen.texts) {
-      const stepStarts = associateStepsWithTimes(
-        screen.texts,
+      // Для первого экрана добавляем заголовок в список для сопоставления
+      const textsToMatch =
+        index === 0 && story.title ? [story.title, ...screen.texts] : screen.texts;
+
+      const { times: stepStarts, lastSegmentIdx } = associateStepsWithTimes(
+        textsToMatch,
         segments,
-        index === 0,
+        currentSegmentIdx,
       );
-      // Находим первое не-null время как начало экрана
-      const firstStart = stepStarts.find((t) => t !== null) ?? null;
+      currentSegmentIdx = lastSegmentIdx;
+
+      // Заполнение пропусков внутри экрана
+      for (let i = 1; i < stepStarts.length; i++) {
+        if (stepStarts[i] === null && stepStarts[i - 1] !== null) {
+          stepStarts[i] = stepStarts[i - 1];
+        }
+      }
+
+      // Находим начало экрана
+      let firstStart = stepStarts.find((t) => t !== null) ?? null;
+
+      // Если это первый экран, начало ВСЕГДА со старта (так как заголовок там)
+      if (index === 0) {
+        firstStart = 0;
+        if (stepStarts.length > 0) stepStarts[0] = 0;
+      }
 
       screens.push({
         steps: stepStarts,
@@ -194,7 +222,7 @@ export function calculateSync(story: any, segments: TextSegment[]) {
     }
   });
 
-  // Заполняем пропуски в экранах (как во Flutter)
+  // 3. Заполняем пропуски в экранах (как во Flutter)
   if (screenStartTimes.length > 0 && screenStartTimes[0] === null) {
     screenStartTimes[0] = 0;
   }

@@ -44,7 +44,26 @@ async function main() {
   const filePath = values.file;
   if (filePath) {
     if (existsSync(filePath)) {
-      text = readFileSync(filePath, 'utf-8');
+      if (filePath.endsWith('.json')) {
+        const data = JSON.parse(readFileSync(filePath, 'utf-8'));
+        const title = data.title || '';
+        const description = data.description || '';
+        const screensText = Object.keys(data)
+          .filter((k) => k.startsWith('screen_'))
+          .sort((a, b) => {
+            const numA = parseInt(a.replace('screen_', ''));
+            const numB = parseInt(b.replace('screen_', ''));
+            return numA - numB;
+          })
+          .map((k) => (data[k].texts as string[]).join('\n\n'))
+          .join('\n\n');
+
+        text = [title, description, screensText]
+          .filter((s) => s.length > 0)
+          .join('\n\n');
+      } else {
+        text = readFileSync(filePath, 'utf-8');
+      }
     } else {
       console.error(`❌ Ошибка: Файл ${filePath} не найден.`);
       process.exit(1);
