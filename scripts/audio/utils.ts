@@ -140,13 +140,14 @@ export function associateStepsWithTimes(
   }
 
   // Заполнение пропусков (как в Flutter)
-  for (let i = steps.length - 2; i >= 0; i--) {
-    if (startTimes[i] === null && startTimes[i + 1] !== null) {
-      startTimes[i] = startTimes[i + 1];
-    }
+  // Первый шаг экрана всегда доступен с самого начала (0.0),
+  // особенно если это заголовок, который часто не озвучивается.
+  if (startTimes[0] === null || startTimes[0] > 0) {
+    startTimes[0] = 0;
   }
 
   for (let i = 1; i < startTimes.length; i++) {
+    // Если шаг не найден, он наследует время предыдущего (появляется вместе с ним)
     if (startTimes[i] === null && startTimes[i - 1] !== null) {
       startTimes[i] = startTimes[i - 1];
     }
