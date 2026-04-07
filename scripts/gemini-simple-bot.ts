@@ -4,7 +4,10 @@ import { loadPrompt } from './lib/prompt-loader.js';
 import { parseBotArgs, resolveBotPaths, runBotValidation, listJsonFiles, isUncommitted } from './lib/bot-utils.js';
 import { runGeminiWorkflow, type WorkflowOptions } from './lib/gemini-workflow.js';
 import { GeminiProvider } from './lib/providers/gemini-provider.js';
-import type { AIProvider } from './lib/types.js';
+import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import { ClaudeProvider } from './lib/providers/claude-provider.js';
+import { MistralProvider } from './lib/providers/mistral-provider.js';
+import type { AIProvider, ProviderType } from './lib/types.js';
 import path from 'path';
 
 async function processFile(
@@ -71,11 +74,27 @@ async function processFile(
 }
 
 async function run() {
-  const { fileName, targetLang } = parseBotArgs();
+  const { fileName, targetLang, provider: providerType } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
 
-  const provider = new GeminiProvider();
-  console.log('🔗 Инициализация провайдера Gemini...');
+  let provider: AIProvider;
+  switch (providerType) {
+    case 'chatgpt':
+      provider = new ChatGPTProvider();
+      break;
+    case 'claude':
+      provider = new ClaudeProvider();
+      break;
+    case 'mistral':
+      provider = new MistralProvider();
+      break;
+    case 'gemini':
+    default:
+      provider = new GeminiProvider();
+      break;
+  }
+
+  console.log(`🔗 Инициализация провайдера ${provider.type}...`);
   await provider.init();
 
   try {
