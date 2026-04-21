@@ -1,4 +1,6 @@
 import puppeteer, { Page, Browser } from 'puppeteer-core';
+import { repairJson, safeParseAIJson } from './bot-utils.js';
+
 
 export class TerminalError extends Error {
   constructor(message: string) {
@@ -453,30 +455,10 @@ export async function parseGeminiJson<T>(
   modelKeyword: string = 'Pro',
 ): Promise<T> {
   const tryParse = (rawText: string): T | null => {
-    // Ищем первый подходящий JSON-блок (объект или массив)
-    const match = rawText.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
-    const jsonString = match ? match[0] : rawText;
-    const cleanedText = jsonString
-      .replace(/^JSON/i, '')
-      .replace(/^```json/i, '')
-      .replace(/```$/i, '')
-      .trim();
-
-    // Дополнительная очистка: экранируем кавычки внутри HTML-атрибутов
-    const preprocessedText = cleanedText.replace(
-      /(\s[a-z-]+)="([^"]+)"/gi,
-      '$1=\\"$2\\"',
-    );
-
     try {
-      return JSON.parse(preprocessedText);
+      return safeParseAIJson<T>(rawText);
     } catch (e) {
-      try {
-        const repaired = repairJson(preprocessedText);
-        return JSON.parse(repaired);
-      } catch (e2) {
-        return null;
-      }
+      return null;
     }
   };
 
@@ -523,49 +505,3 @@ export async function parseGeminiJson<T>(
   );
 }
 
-/**
- * Пытается закрыть открытые фигурные и квадратные скобки (и строки) в обрезанном JSON.
- */
-function repairJson(json: string): string {
-  let text = json.trim();
-  const stack: string[] = [];
-  let inString = false;
-  let escaped = false;
-
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-    if (escaped) {
-      escaped = false;
-      continue;
-    }
-    if (char === '\\') {
-      escaped = true;
-      continue;
-    }
-    if (char === '"') {
-      inString = !inString;
-      continue;
-    }
-    if (!inString) {
-      if (char === '{') stack.push('}');
-      else if (char === '[') stack.push(']');
-      else if (char === '}') {
-        if (stack[stack.length - 1] === '}') stack.pop();
-      } else if (char === ']') {
-        if (stack[stack.length - 1] === ']') stack.pop();
-      }
-    }
-  }
-
-  let result = text;
-  // Если мы остались внутри строки, закрываем её
-  if (inString) {
-    result += '"';
-  }
-
-  // Убираем возможную запятую в конце перед закрытием структур
-  result = result.replace(/,\s*$/, '');
-
-  // Закрываем скобки в обратном порядке
-  return result + stack.reverse().join('');
-}

@@ -18,7 +18,7 @@ export class GeminiProvider implements AIProvider {
     this.pages.set('default', page);
   }
 
-  async interact(prompt: string, options?: { model?: string; shouldStartNewChat?: boolean; sessionId?: string }): Promise<string> {
+  async interact(prompt: string, options?: { model?: string; intelligenceLevel?: 1 | 2 | 3; shouldStartNewChat?: boolean; sessionId?: string }): Promise<string> {
     const sessionId = options?.sessionId || 'default';
     const previousLock = this.locks.get(sessionId) || Promise.resolve();
 
@@ -34,10 +34,20 @@ export class GeminiProvider implements AIProvider {
         this.pages.set(sessionId, page);
       }
 
+      let modelName = options?.model || 'Pro';
+      
+      if (options?.intelligenceLevel) {
+        switch (options.intelligenceLevel) {
+          case 1: modelName = 'Быстрая'; break;
+          case 2: modelName = 'Думающая'; break;
+          case 3: modelName = 'Pro'; break;
+        }
+      }
+
       return interactWithGemini(
         page,
         prompt,
-        options?.model || 'Pro',
+        modelName,
         options?.shouldStartNewChat || false
       );
     });

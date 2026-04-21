@@ -28,9 +28,32 @@ export async function loadPrompt(
   const baseTemplate = await fs.readFile(basePath, 'utf-8');
   let styleContent = '';
 
-  if (type !== 'keys') {
+  if (lang === 'all') {
+    // Агрегируем все доступные стили
+    const dirs = await fs.readdir(PROMPTS_DIR, { withFileTypes: true });
+    const styles: string[] = [];
+    for (const dir of dirs) {
+      if (dir.isDirectory() && dir.name !== 'base' && dir.name !== 'all') {
+        const sPath = path.join(PROMPTS_DIR, dir.name, 'style.txt');
+        try {
+          const sContent = await fs.readFile(sPath, 'utf-8');
+          styles.push(`### ПРАВИЛА ДЛЯ ЯЗЫКА [${dir.name}]:\n${sContent}\n---\n`);
+        } catch (e) {
+          // Skip if no style file
+        }
+      }
+    }
+    if (styles.length > 0) {
+      styleContent = `СПЕЦИФИЧЕСКИЕ ПРАВИЛА ДЛЯ ЦЕЛЕВЫХ ЯЗЫКОВ (ОБЯЗАТЕЛЬНО К ВЫПОЛНЕНИЮ ДЛЯ КАЖДОГО СООТВЕТСТВУЮЩЕГО ЯЗЫКА):\n\n${styles.join('\n')}`;
+    }
+  } else {
     const stylePath = path.join(PROMPTS_DIR, lang, 'style.txt');
-    styleContent = await fs.readFile(stylePath, 'utf-8');
+    try {
+      styleContent = await fs.readFile(stylePath, 'utf-8');
+    } catch (e) {
+      // Ignore error if style file doesn't exist
+      styleContent = '';
+    }
   }
 
   // Extract TARGET_LANG and TARGET_MARKET from style file header

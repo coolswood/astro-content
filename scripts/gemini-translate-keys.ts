@@ -3,20 +3,22 @@ import path from 'path';
 import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
+import { parseBotArgs } from './lib/bot-utils.js';
 import { GeminiProvider } from './lib/providers/gemini-provider.js';
 import { validateLocalizedJson } from './lib/translation-validator.js';
 
 async function run() {
-  let inputArg = process.argv[2];
-  const langArg = process.argv[3] || 'all';
-
+  let { fileName, targetLang: langArg, excludeStages: cliExclude } = parseBotArgs();
+  
   let sourceJson: any;
   let isAutoMode = false;
 
   const SOURCE_PATH = 'scripts/app_interface.json';
   const TARGET_PT_BR_PATH = 'src/i18n/pt_br/app_interface.json';
 
-  if (!inputArg) {
+  // Если имя файла 'start.json' (значение по умолчанию в parseBotArgs), 
+  // значит конкретный вход не был передан — запускаем автоматическое сравнение.
+  if (fileName === 'start.json') {
     console.log(
       `🔍 Режим автоматического сравнения: ${SOURCE_PATH} vs ${TARGET_PT_BR_PATH}`,
     );
@@ -48,6 +50,7 @@ async function run() {
       );
       sourceJson = missingKeys;
       isAutoMode = true;
+      if (langArg === 'all') langArg = 'pt_br';
     } catch (e) {
       console.error('❌ Ошибка при чтении файлов для сравнения:', e);
       process.exit(1);
@@ -55,11 +58,11 @@ async function run() {
   } else {
     try {
       // Попытка распарсить как JSON
-      sourceJson = JSON.parse(inputArg);
+      sourceJson = JSON.parse(fileName);
     } catch {
       try {
         // Попытка прочитать как файл
-        const fileContent = await fs.readFile(inputArg, 'utf-8');
+        const fileContent = await fs.readFile(fileName, 'utf-8');
         sourceJson = JSON.parse(fileContent);
       } catch (e) {
         console.error(
@@ -76,23 +79,20 @@ async function run() {
   await provider.init();
 
   try {
-    const [main, editor, tech] = await Promise.all([
-      loadPrompt('keys', 'main', 'all'),
-      loadPrompt('keys', 'editor', 'all'),
-      loadPrompt('keys', 'tech', 'all'),
+    const [main] = await Promise.all([
+      loadPrompt('keys', 'main', langArg),
     ]);
 
     const result = await runGeminiWorkflow(
       provider,
       JSON.stringify(sourceJson),
-      { main, editor, tech },
+      { main },
       {
         isUI: false,
         isPersistent: false,
+        excludeStages: cliExclude.length > 0 ? cliExclude : [2, 3],
         models: {
           stage1: 'Думающая',
-          stage2: 'Думающая',
-          stage3: 'Pro',
         },
       },
     );

@@ -1,6 +1,8 @@
 import type { Page, Browser } from 'puppeteer-core';
 import type { AIProvider, ProviderType } from '../types.js';
 import { connectToBrowser } from '../gemini-client.js';
+import { safeParseAIJson } from '../bot-utils.js';
+
 
 export class ChatGPTProvider implements AIProvider {
   type: ProviderType = 'chatgpt';
@@ -20,7 +22,7 @@ export class ChatGPTProvider implements AIProvider {
 
   async interact(
     prompt: string,
-    options?: { model?: string; shouldStartNewChat?: boolean },
+    options?: { model?: string; intelligenceLevel?: 1 | 2 | 3; shouldStartNewChat?: boolean },
   ): Promise<string> {
     const previousLock = this.lock;
 
@@ -30,6 +32,30 @@ export class ChatGPTProvider implements AIProvider {
         await this.page.goto('https://chatgpt.com/?temporary-chat=true', {
           waitUntil: 'networkidle2',
         });
+      }
+
+      // Model selection if requested
+      if (options?.intelligenceLevel) {
+        try {
+          console.log(`🎯 Selecting ChatGPT model for intelligence level ${options.intelligenceLevel}...`);
+          await this.page.click('button[data-testid="model-selector-button"]');
+          await this.page.waitForSelector('[role="menuitem"]', { timeout: 5000 });
+          
+          await this.page.evaluate((level) => {
+            const items = Array.from(document.querySelectorAll('[role="menuitem"]'));
+            let targetText = 'GPT-4o'; // Default Level 2
+            if (level === 1) targetText = 'GPT-4o mini';
+            if (level === 3) targetText = 'o1';
+
+            const target = items.find(item => (item as HTMLElement).innerText.includes(targetText));
+            if (target) (target as HTMLElement).click();
+          }, options.intelligenceLevel);
+          
+          // Wait for menu to close
+          await new Promise(r => setTimeout(r, 1000));
+        } catch (e) {
+          console.warn('⚠️ Failed to switch model in ChatGPT UI, continuing with default:', (e as Error).message);
+        }
       }
 
       // Ensure the tab is active
@@ -111,7 +137,25 @@ export class ChatGPTProvider implements AIProvider {
 
             const buttons = Array.from(document.querySelectorAll('button'));
 
-            // 1. If the Stop button is visible, we are DEFINITELY generating.
+            // 1. Check for "Continue generating" button
+            const continueBtn = buttons.find((b) => {
+              const label = (b.getAttribute('aria-label') || '').toLowerCase();
+              const text = (b.innerText || '').toLowerCase();
+              return (
+                label.includes('continue') ||
+                label.includes('продолжить') ||
+                text.includes('continue') ||
+                text.includes('продолжить')
+              );
+            });
+
+            if (continueBtn && (continueBtn as HTMLElement).offsetWidth > 0) {
+              console.log('Detected "Continue" button, clicking...');
+              (continueBtn as HTMLElement).click();
+              return false; // Keep waiting
+            }
+
+            // 2. If the Stop button is visible, we are DEFINITELY generating.
             const stopBtn = buttons.find((b) => {
               const testid = b.getAttribute('data-testid');
               const label = (b.getAttribute('aria-label') || '').toLowerCase();
@@ -129,7 +173,7 @@ export class ChatGPTProvider implements AIProvider {
             const lastMarkdown = markdowns[markdowns.length - 1];
             const lastTurn = lastMarkdown.closest('[data-testid^="conversation-turn-"]') || lastMarkdown.parentElement;
 
-            // 2. Clear "Done" signals:
+            // 3. Clear "Done" signals:
 
             // Signal A: Copy button inside or next to the last response
             if (lastTurn && lastTurn.querySelector('[data-testid="copy-turn-action-button"]')) {
@@ -168,7 +212,7 @@ export class ChatGPTProvider implements AIProvider {
 
             return false;
           },
-          { timeout: 300000, polling: 1000 },
+          { timeout: 600000, polling: 2000 },
           initialTurnCount
         );
 
@@ -199,20 +243,7 @@ export class ChatGPTProvider implements AIProvider {
   }
 
   async parseJson<T>(text: string): Promise<T> {
-    // Basic JSON extraction from markdown
-    const match = text.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
-    const jsonString = match ? match[0] : text;
-    const cleanedText = jsonString
-      .replace(/^```json/i, '')
-      .replace(/```$/i, '')
-      .trim();
-
-    try {
-      return JSON.parse(cleanedText);
-    } catch (e) {
-      console.error('Failed to parse JSON from ChatGPT response:', text);
-      throw new Error('ChatGPT JSON parsing failed');
-    }
+    return safeParseAIJson<T>(text);
   }
 
   async close() {

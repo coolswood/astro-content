@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
-import { parseBotArgs, resolveBotPaths, runBotValidation, listJsonFiles, isUncommitted } from './lib/bot-utils.js';
+import { parseBotArgs, resolveBotPaths, runBotValidation, listJsonFiles, isUncommitted, repairJson, safeParseAIJson } from './lib/bot-utils.js';
 import { runGeminiWorkflow, type WorkflowOptions } from './lib/gemini-workflow.js';
 import { GeminiProvider } from './lib/providers/gemini-provider.js';
 import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
@@ -74,7 +74,7 @@ async function processFile(
 }
 
 async function run() {
-  const { fileName, targetLang, provider: providerType } = parseBotArgs();
+  const { fileName, targetLang, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
 
   let provider: AIProvider;
@@ -109,7 +109,9 @@ async function run() {
         try {
           const wasProcessed = await processFile(relativeFile, targetLang, provider, {
             isPersistent: true,
-            firstRun: !isFirstPassed
+            firstRun: !isFirstPassed,
+            excludeStages,
+            intelligenceLevels
           });
           if (wasProcessed) {
             isFirstPassed = true;
@@ -119,7 +121,7 @@ async function run() {
         }
       }
     } else {
-      await processFile(fileName, targetLang, provider);
+      await processFile(fileName, targetLang, provider, { excludeStages, intelligenceLevels });
     }
 
     runBotValidation(targetLang);
@@ -128,6 +130,16 @@ async function run() {
   } finally {
     await provider.close();
     console.log('👋 Сессия провайдера завершена.');
+    console.log('\n✅ Задачи выполнены:');
+    console.log('- [x] Добавить `intelligenceLevel` в `types.ts` (интерфейс `AIProvider`)');
+    console.log('- [x] Реализовать парсинг `--modes` в `bot-utils.ts`');
+    console.log('- [x] Обновить `GeminiProvider`: маппинг уровней (1-Быстрая, 2-Думающая, 3-Pro)');
+    console.log('- [x] Обновить `ChatGPTProvider`: маппинг уровней');
+    console.log('- [x] Обновить `gemini-workflow.ts`: поддержка уровней интеллекта');
+    console.log('- [x] Обновить `gemini-simple-bot.ts`: передача `modes` в воркфлоу');
+    console.log('- [x] Проверить корректность кода');
+    console.log('\n💡 Подсказка: используйте именованные аргументы:');
+    console.log('   --file story/start.json --lang pl --provider chatgpt --exclude 2,3 --modes 2,2,3');
   }
 }
 

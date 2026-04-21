@@ -2,8 +2,8 @@ import type { AIProvider, GeminiResponse, GlossaryItem } from './types.js';
 
 export interface StagePrompts {
   main: string;
-  editor: string;
-  tech: string;
+  editor?: string;
+  tech?: string;
 }
 
 export interface WorkflowOptions {
@@ -18,6 +18,8 @@ export interface WorkflowOptions {
   stage3Provider?: AIProvider;
   isPersistent?: boolean;
   firstRun?: boolean;
+  excludeStages?: number[];
+  intelligenceLevels?: number[];
 }
 
 /**
@@ -72,11 +74,25 @@ export async function runGeminiWorkflow(
   prompts: StagePrompts,
   options: WorkflowOptions = {},
 ) {
-  const { model, models = {}, glossaryText = '', isUI = false, isPersistent = false, firstRun = true } = options;
+  const { 
+    model, 
+    models = {}, 
+    intelligenceLevels = [],
+    glossaryText = '', 
+    isUI = false, 
+    isPersistent = false, 
+    firstRun = true 
+  } = options;
   
-  const s1Model = models.stage1 || model || 'Pro';
-  const s2Model = models.stage2 || model || 'Pro';
-  const s3Model = models.stage3 || model || 'Pro';
+  const s1Model = models.stage1 || model;
+  const s2Model = models.stage2 || model;
+  const s3Model = models.stage3 || model;
+
+  const getLevel = (idx: number): 1 | 2 | 3 | undefined => {
+    const val = intelligenceLevels[idx];
+    if (val === 1 || val === 2 || val === 3) return val;
+    return undefined;
+  };
 
   // ШАГ 1: Перевод (Transcreation / UX Writing)
   console.log('\n🚀 ШАГ 1: Перевод...');
@@ -87,6 +103,7 @@ export async function runGeminiWorkflow(
     s1FullPrompt,
     { 
       model: s1Model, 
+      intelligenceLevel: getLevel(0),
       shouldStartNewChat: firstRun, 
       sessionId: isPersistent ? 'stage1' : undefined 
     },
@@ -113,64 +130,70 @@ export async function runGeminiWorkflow(
   let currentHandledJson = JSON.stringify(finalJson, null, 2);
 
   // ШАГ 2: Редактура (Editing)
-  console.log('\n🚀 ШАГ 2: Редактура...');
-  const currentEditorPrompt = prompts.editor.replace(
-    '{{GLOSSARY}}',
-    glossaryText,
-  );
-  const s2FullPrompt = firstRun ? `${currentEditorPrompt}\n\nВот исходный текст (для контекста):\n${sourceContent}\n\nВот текст для редактуры:\n${currentHandledJson}` : `Исходный текст для контекста:\n${sourceContent}\n\nТекст для редактуры:\n${currentHandledJson}`;
-
-  const res2Raw = await provider.interact(
-    s2FullPrompt,
-    { 
-      model: s2Model, 
-      shouldStartNewChat: firstRun, 
-      sessionId: isPersistent ? 'stage2' : undefined 
-    },
-  );
-
-  if (
-    !res2Raw.trim().toLowerCase().includes('all set') &&
-    !res2Raw.trim().toLowerCase().includes('все хорошо')
-  ) {
-    const partialUpdates = await provider.parseJson<any>(res2Raw, { sessionId: isPersistent ? 'stage2' : undefined });
-    console.log(`📦 Stage 2: Received ${Array.isArray(partialUpdates) ? 'Array' : 'Object'} updates.`);
-    finalJson = applyUpdates(finalJson, partialUpdates);
-    currentHandledJson = JSON.stringify(finalJson, null, 2);
-    console.log(
-      `✨ Stage 2: Применены правки для ${Array.isArray(partialUpdates) ? partialUpdates.length : Object.keys(partialUpdates).length} ключей/индексов.`,
+  if (!options.excludeStages?.includes(2)) {
+    console.log('\n🚀 ШАГ 2: Редактура...');
+    const currentEditorPrompt = (prompts.editor || '').replace(
+      '{{GLOSSARY}}',
+      glossaryText,
     );
-  } else {
-    console.log('✨ Stage 2: Без изменений (Все хорошо)');
+    const s2FullPrompt = firstRun ? `${currentEditorPrompt}\n\nВот исходный текст (для контекста):\n${sourceContent}\n\nВот текст для редактуры:\n${currentHandledJson}` : `Исходный текст для контекста:\n${sourceContent}\n\nТекст для редактуры:\n${currentHandledJson}`;
+
+    const res2Raw = await provider.interact(
+      s2FullPrompt,
+      { 
+        model: s2Model, 
+        intelligenceLevel: getLevel(1),
+        shouldStartNewChat: firstRun, 
+        sessionId: isPersistent ? 'stage2' : undefined 
+      },
+    );
+
+    if (
+      !res2Raw.trim().toLowerCase().includes('all set') &&
+      !res2Raw.trim().toLowerCase().includes('все хорошо')
+    ) {
+      const partialUpdates = await provider.parseJson<any>(res2Raw, { sessionId: isPersistent ? 'stage2' : undefined });
+      console.log(`📦 Stage 2: Received ${Array.isArray(partialUpdates) ? 'Array' : 'Object'} updates.`);
+      finalJson = applyUpdates(finalJson, partialUpdates);
+      currentHandledJson = JSON.stringify(finalJson, null, 2);
+      console.log(
+        `✨ Stage 2: Применены правки для ${Array.isArray(partialUpdates) ? partialUpdates.length : Object.keys(partialUpdates).length} ключей/индексов.`,
+      );
+    } else {
+      console.log('✨ Stage 2: Без изменений (Все хорошо)');
+    }
   }
 
   // ШАГ 3: Технический аудит (Tech Review)
-  console.log('\n🚀 ШАГ 3: Технический аудит...');
-  const s3Provider = options.stage3Provider || provider;
-  const currentTechPrompt = prompts.tech.replace('{{GLOSSARY}}', glossaryText);
-  const s3FullPrompt = firstRun ? `${currentTechPrompt}\n\nВот исходный текст (для сверки смысла):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}` : `Исходный текст для сверки:\n${sourceContent}\n\nТекст для тех-аудита:\n${currentHandledJson}`;
+  if (!options.excludeStages?.includes(3)) {
+    console.log('\n🚀 ШАГ 3: Технический аудит...');
+    const s3Provider = options.stage3Provider || provider;
+    const currentTechPrompt = (prompts.tech || '').replace('{{GLOSSARY}}', glossaryText);
+    const s3FullPrompt = firstRun ? `${currentTechPrompt}\n\nВот исходный текст (для сверки смысла):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}` : `Исходный текст для сверки:\n${sourceContent}\n\nТекст для тех-аудита:\n${currentHandledJson}`;
 
-  const res3Raw = await s3Provider.interact(
-    s3FullPrompt,
-    { 
-      model: s3Model, 
-      shouldStartNewChat: firstRun, 
-      sessionId: isPersistent ? 'stage3' : undefined 
-    },
-  );
-
-  if (
-    !res3Raw.trim().toLowerCase().includes('all set') &&
-    !res3Raw.trim().toLowerCase().includes('все хорошо')
-  ) {
-    const partialUpdates = await s3Provider.parseJson<any>(res3Raw, { sessionId: isPersistent ? 'stage3' : undefined });
-    console.log(`📦 Stage 3: Received ${Array.isArray(partialUpdates) ? 'Array' : 'Object'} updates.`);
-    finalJson = applyUpdates(finalJson, partialUpdates);
-    console.log(
-      `✨ Stage 3: Применены правки для ${Array.isArray(partialUpdates) ? partialUpdates.length : Object.keys(partialUpdates).length} ключей/индексов.`,
+    const res3Raw = await s3Provider.interact(
+      s3FullPrompt,
+      { 
+        model: s3Model, 
+        intelligenceLevel: getLevel(2),
+        shouldStartNewChat: firstRun, 
+        sessionId: isPersistent ? 'stage3' : undefined 
+      },
     );
-  } else {
-    console.log('✨ Stage 3: Без изменений (Все хорошо)');
+
+    if (
+      !res3Raw.trim().toLowerCase().includes('all set') &&
+      !res3Raw.trim().toLowerCase().includes('все хорошо')
+    ) {
+      const partialUpdates = await s3Provider.parseJson<any>(res3Raw, { sessionId: isPersistent ? 'stage3' : undefined });
+      console.log(`📦 Stage 3: Received ${Array.isArray(partialUpdates) ? 'Array' : 'Object'} updates.`);
+      finalJson = applyUpdates(finalJson, partialUpdates);
+      console.log(
+        `✨ Stage 3: Применены правки для ${Array.isArray(partialUpdates) ? partialUpdates.length : Object.keys(partialUpdates).length} ключей/индексов.`,
+      );
+    } else {
+      console.log('✨ Stage 3: Без изменений (Все хорошо)');
+    }
   }
 
   return {

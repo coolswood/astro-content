@@ -38,16 +38,41 @@ export function isUncommitted(filePath: string): boolean {
 
 /**
  * Parses common CLI arguments for Gemini bots.
+ * Supports both positional and named arguments (--file, --lang, --chunk, --provider, --exclude).
  */
 export function parseBotArgs() {
-  const fileName = process.argv[2] || 'start.json';
-  const targetLang = (process.argv[3] || 'pt_br')
+  const args: Record<string, string> = {};
+  const positional: string[] = [];
+
+  for (let i = 2; i < process.argv.length; i++) {
+    const arg = process.argv[i];
+    if (arg.startsWith('--')) {
+      const nextArg = process.argv[i + 1];
+      if (nextArg && !nextArg.startsWith('--')) {
+        args[arg.slice(2)] = nextArg;
+        i++;
+      } else {
+        args[arg.slice(2)] = 'true';
+      }
+    } else {
+      positional.push(arg);
+    }
+  }
+
+  const fileName = args.file || args.filename || positional[0] || 'start.json';
+  const targetLang = (args.lang || args.language || positional[1] || 'pt_br')
     .toLowerCase()
     .replace('-', '_');
-  const chunkSize = parseInt(process.argv[4] || '80');
-  const provider = (process.argv[5] || 'gemini').toLowerCase() as 'gemini' | 'chatgpt' | 'claude' | 'mistral';
+  const chunkSize = parseInt(args.chunk || args.chunkSize || positional[2] || '80');
+  const provider = (args.provider || args.adapter || positional[3] || 'gemini').toLowerCase() as 'gemini' | 'chatgpt' | 'claude' | 'mistral';
+  
+  const excludeStr = args.exclude || args.skip || positional[4] || '';
+  const excludeStages = excludeStr ? excludeStr.split(',').map(Number) : [];
 
-  return { fileName, targetLang, chunkSize, provider };
+  const modesStr = args.modes || args.levels || '';
+  const intelligenceLevels = modesStr ? modesStr.split(',').map(Number) : [2, 2, 3];
+
+  return { fileName, targetLang, chunkSize, provider, excludeStages, intelligenceLevels };
 }
 
 /**
@@ -125,4 +150,93 @@ export function runBotValidation(targetLang: string) {
   }
 
   console.log('\n🚀 Процесс валидации завершен.');
+}
+
+/**
+ * Пытается максимально корректно распарсить JSON, полученный от ИИ.
+ * Включает экранирование кавычек в HTML-атрибутах и закрытие незакрытых скобок.
+ */
+export function safeParseAIJson<T>(text: string): T {
+  // 1. Извлекаем основной блок JSON (между первой { или [ и последней } или ])
+  const match = text.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+  let cleanedText = match ? match[0] : text;
+
+  // 2. Базовая очистка от лишнего markdown
+  const markdownMatches = cleanedText.match(/^```json\s*[\s\S]*?\s*```$/i);
+  if (markdownMatches) {
+    cleanedText = cleanedText.replace(/^```json\s*/i, '').replace(/\s*```$/i, '');
+  } else {
+    cleanedText = cleanedText.replace(/^```json/i, '').replace(/```$/i, '');
+  }
+  
+  cleanedText = cleanedText.trim();
+
+  // 3. Экранирование кавычек внутри HTML-атрибутов (например, author="Name" -> author=\"Name\")
+  // Это частая ошибка моделей, которая ломает JSON
+  cleanedText = cleanedText.replace(
+    /(\s[a-z-]+)="([^"]+)"/gi,
+    '$1=\\"$2\\"',
+  );
+
+  // 4. Попытка основного парсинга
+  try {
+    return JSON.parse(cleanedText);
+  } catch (e) {
+    // 5. Попытка лечения структуры (repairJson)
+    try {
+      const repaired = repairJson(cleanedText);
+      return JSON.parse(repaired);
+    } catch (e2) {
+      console.error('❌ ОШИБКА ПАРСИНГА AI JSON. Текст после очистки:');
+      console.error(cleanedText);
+      throw new Error(`Failed to parse AI JSON: ${(e as Error).message}`);
+    }
+  }
+}
+
+/**
+ * Пытается закрыть открытые фигурные и квадратные скобки (и строки) в обрезанном JSON.
+ */
+export function repairJson(json: string): string {
+  let text = json.trim();
+  const stack: string[] = [];
+  let inString = false;
+  let escaped = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    if (escaped) {
+      escaped = false;
+      continue;
+    }
+    if (char === '\\') {
+      escaped = true;
+      continue;
+    }
+    if (char === '"') {
+      inString = !inString;
+      continue;
+    }
+    if (!inString) {
+      if (char === '{') stack.push('}');
+      else if (char === '[') stack.push(']');
+      else if (char === '}') {
+        if (stack[stack.length - 1] === '}') stack.pop();
+      } else if (char === ']') {
+        if (stack[stack.length - 1] === ']') stack.pop();
+      }
+    }
+  }
+
+  let result = text;
+  // Если мы остались внутри строки, закрываем её
+  if (inString) {
+    result += '"';
+  }
+
+  // Убираем возможную запятую в конце перед закрытием структур
+  result = result.replace(/,\s*$/, '');
+
+  // Закрываем скобки в обратном порядке
+  return result + stack.reverse().join('');
 }
