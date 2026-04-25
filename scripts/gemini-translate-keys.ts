@@ -1,6 +1,4 @@
 import fs from 'fs/promises';
-import path from 'path';
-import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
 import { parseBotArgs } from './lib/bot-utils.js';
@@ -8,7 +6,8 @@ import { GeminiProvider } from './lib/providers/gemini-provider.js';
 import { validateLocalizedJson } from './lib/translation-validator.js';
 
 async function run() {
-  let { fileName, targetLang: langArg, excludeStages: cliExclude } = parseBotArgs();
+  const { fileName, targetLang: cliLang, excludeStages: cliExclude } = parseBotArgs();
+  const promptLang = 'all';
   
   let sourceJson: any;
   let isAutoMode = false;
@@ -50,7 +49,6 @@ async function run() {
       );
       sourceJson = missingKeys;
       isAutoMode = true;
-      if (langArg === 'all') langArg = 'pt_br';
     } catch (e) {
       console.error('❌ Ошибка при чтении файлов для сравнения:', e);
       process.exit(1);
@@ -74,19 +72,26 @@ async function run() {
   }
 
   console.log(`🌍 Запуск мультиязычного перевода...`);
+  if (cliLang !== 'all') {
+    console.log(
+      `ℹ️ Параметр --lang=${cliLang} проигнорирован: для этого скрипта всегда используется мультиязычный режим (all).`,
+    );
+  }
 
   const provider = new GeminiProvider();
   await provider.init();
 
   try {
-    const [main] = await Promise.all([
-      loadPrompt('keys', 'main', langArg),
+    const [main, editor, tech] = await Promise.all([
+      loadPrompt('keys', 'main', promptLang),
+      loadPrompt('keys', 'editor', promptLang),
+      loadPrompt('keys', 'tech', promptLang),
     ]);
 
     const result = await runGeminiWorkflow(
       provider,
       JSON.stringify(sourceJson),
-      { main },
+      { main, editor, tech },
       {
         isUI: false,
         isPersistent: false,

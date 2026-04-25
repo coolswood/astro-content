@@ -97,7 +97,7 @@ export async function runGeminiWorkflow(
   // ШАГ 1: Перевод (Transcreation / UX Writing)
   console.log('\n🚀 ШАГ 1: Перевод...');
   const currentMainPrompt = prompts.main.replace('{{GLOSSARY}}', glossaryText);
-  const s1FullPrompt = firstRun ? `${currentMainPrompt}\n\nВот текст для обработки:\n${sourceContent}` : sourceContent;
+  const s1FullPrompt = `${currentMainPrompt}\n\nВот текст для обработки:\n${sourceContent}`;
 
   const res1Raw = await provider.interact(
     s1FullPrompt,
@@ -136,7 +136,7 @@ export async function runGeminiWorkflow(
       '{{GLOSSARY}}',
       glossaryText,
     );
-    const s2FullPrompt = firstRun ? `${currentEditorPrompt}\n\nВот исходный текст (для контекста):\n${sourceContent}\n\nВот текст для редактуры:\n${currentHandledJson}` : `Исходный текст для контекста:\n${sourceContent}\n\nТекст для редактуры:\n${currentHandledJson}`;
+    const s2FullPrompt = `${currentEditorPrompt}\n\nВот исходный текст (для контекста):\n${sourceContent}\n\nВот текст для редактуры:\n${currentHandledJson}`;
 
     const res2Raw = await provider.interact(
       s2FullPrompt,
@@ -169,7 +169,7 @@ export async function runGeminiWorkflow(
     console.log('\n🚀 ШАГ 3: Технический аудит...');
     const s3Provider = options.stage3Provider || provider;
     const currentTechPrompt = (prompts.tech || '').replace('{{GLOSSARY}}', glossaryText);
-    const s3FullPrompt = firstRun ? `${currentTechPrompt}\n\nВот исходный текст (для сверки смысла):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}` : `Исходный текст для сверки:\n${sourceContent}\n\nТекст для тех-аудита:\n${currentHandledJson}`;
+    const s3FullPrompt = `${currentTechPrompt}\n\nВот исходный текст (для сверки смысла):\n${sourceContent}\n\nВот текст для тех-аудита:\n${currentHandledJson}`;
 
     const res3Raw = await s3Provider.interact(
       s3FullPrompt,
