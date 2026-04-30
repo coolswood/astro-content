@@ -3,10 +3,20 @@ import { loadPrompt } from './lib/prompt-loader.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
 import { parseBotArgs } from './lib/bot-utils.js';
 import { GeminiProvider } from './lib/providers/gemini-provider.js';
+import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import { ClaudeProvider } from './lib/providers/claude-provider.js';
+import { MistralProvider } from './lib/providers/mistral-provider.js';
 import { validateLocalizedJson } from './lib/translation-validator.js';
+import type { AIProvider } from './lib/types.js';
 
 async function run() {
-  const { fileName, targetLang: cliLang, excludeStages: cliExclude } = parseBotArgs();
+  const { 
+    fileName, 
+    targetLang: cliLang, 
+    excludeStages: cliExclude, 
+    provider: providerType,
+    intelligenceLevels
+  } = parseBotArgs();
   const promptLang = 'all';
   
   let sourceJson: any;
@@ -78,7 +88,24 @@ async function run() {
     );
   }
 
-  const provider = new GeminiProvider();
+  let provider: AIProvider;
+  switch (providerType) {
+    case 'chatgpt':
+      provider = new ChatGPTProvider();
+      break;
+    case 'claude':
+      provider = new ClaudeProvider();
+      break;
+    case 'mistral':
+      provider = new MistralProvider();
+      break;
+    case 'gemini':
+    default:
+      provider = new GeminiProvider();
+      break;
+  }
+
+  console.log(`🔗 Инициализация провайдера ${provider.type}...`);
   await provider.init();
 
   try {
@@ -96,6 +123,7 @@ async function run() {
         isUI: false,
         isPersistent: false,
         excludeStages: cliExclude.length > 0 ? cliExclude : [2, 3],
+        intelligenceLevels,
         models: {
           stage1: 'Думающая',
         },

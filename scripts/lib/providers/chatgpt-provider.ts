@@ -34,29 +34,6 @@ export class ChatGPTProvider implements AIProvider {
         });
       }
 
-      // Model selection if requested
-      if (options?.intelligenceLevel) {
-        try {
-          console.log(`🎯 Selecting ChatGPT model for intelligence level ${options.intelligenceLevel}...`);
-          await this.page.click('button[data-testid="model-selector-button"]');
-          await this.page.waitForSelector('[role="menuitem"]', { timeout: 5000 });
-          
-          await this.page.evaluate((level) => {
-            const items = Array.from(document.querySelectorAll('[role="menuitem"]'));
-            let targetText = 'GPT-4o'; // Default Level 2
-            if (level === 1) targetText = 'GPT-4o mini';
-            if (level === 3) targetText = 'o1';
-
-            const target = items.find(item => (item as HTMLElement).innerText.includes(targetText));
-            if (target) (target as HTMLElement).click();
-          }, options.intelligenceLevel);
-          
-          // Wait for menu to close
-          await new Promise(r => setTimeout(r, 1000));
-        } catch (e) {
-          console.warn('⚠️ Failed to switch model in ChatGPT UI, continuing with default:', (e as Error).message);
-        }
-      }
 
       // Ensure the tab is active
       await this.page.bringToFront();
@@ -90,15 +67,29 @@ export class ChatGPTProvider implements AIProvider {
       await this.page.focus(inputSelector);
       await this.page.keyboard.press('Space');
       await this.page.keyboard.press('Backspace');
+      
+      // Wait a bit for UI to enable the button
+      await new Promise(r => setTimeout(r, 500));
 
-      const sendBtnSelector = 'button[data-testid="send-button"]';
+      const sendBtnSelector = 'button[data-testid="send-button"], button[data-testid="fruitjuice-send-button"], #composer-submit-button';
       await this.page.waitForSelector(sendBtnSelector);
       
       const initialTurnCount = await this.page.evaluate(() => document.querySelectorAll('.markdown').length);
       console.log(`📊 Initial turn count (markdowns): ${initialTurnCount}`);
 
       console.log('🚀 Clicking send button...');
-      await this.page.click(sendBtnSelector);
+      
+      // More robust click: wait for enabled and use evaluate as fallback
+      await this.page.evaluate((selector) => {
+        const btn = document.querySelector(selector) as HTMLButtonElement;
+        if (btn) {
+          // If it's disabled, try to force-enable it or just wait
+          if (btn.disabled) {
+            console.log('Button is disabled, trying to wait or force click...');
+          }
+          btn.click();
+        }
+      }, sendBtnSelector);
 
       console.log('⌛ Waiting for ChatGPT response...');
 
