@@ -36,17 +36,6 @@ const CATEGORIES = [
     sounds: ['train', 'plane', 'metro'],
   },
   {
-    header: 'appliances',
-    sounds: [
-      'conditioner',
-      'fridge',
-      'dishwasher',
-      'vacuum_cleaner',
-      'dryer',
-      'clock',
-    ],
-  },
-  {
     header: 'animals',
     sounds: [
       'crickets',
@@ -60,7 +49,12 @@ const CATEGORIES = [
       'bee',
       'dolphin',
       'seal',
+      'dove',
     ],
+  },
+  {
+    header: 'appliances',
+    sounds: ['conditioner', 'vacuum_cleaner', 'clock'],
   },
 ];
 
@@ -69,7 +63,10 @@ export const GET: APIRoute = async ({ params }) => {
 
   try {
     const relaxModules = import.meta.glob<{
-      default: { headers: Record<string, string>; sounds: Record<string, string> };
+      default: {
+        headers: Record<string, string>;
+        sounds: Record<string, string>;
+      };
     }>('@/i18n/*/relax.json', { eager: true });
     const modulePath = `/src/i18n/${lang}/relax.json`;
     const module = relaxModules[modulePath];
