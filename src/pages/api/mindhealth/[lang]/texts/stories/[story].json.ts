@@ -24,6 +24,7 @@ const ALLOWED = new Set([
 type StoryCard = {
   subtitle: string;
   img: string;
+  video?: string;
 };
 
 export const GET: APIRoute = async ({ params }) => {
