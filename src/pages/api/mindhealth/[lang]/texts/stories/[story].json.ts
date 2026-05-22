@@ -56,7 +56,23 @@ export const GET: APIRoute = async ({ params }) => {
       );
     }
 
-    return new Response(JSON.stringify(cards), {
+    const cardsWithFallback = cards.map((card, index) => {
+      const targetLang = lang === 'ru' ? 'ru' : 'en';
+      const img = `${story}/${targetLang}/s${index + 1}.png`;
+
+      const updatedCard: StoryCard = {
+        ...card,
+        img,
+      };
+
+      if (['activity', 'coping', 'daybook', 'diary'].includes(story)) {
+        updatedCard.video = card.video || `${story}/${targetLang}/v${index + 1}.mp4`;
+      }
+
+      return updatedCard;
+    });
+
+    return new Response(JSON.stringify(cardsWithFallback), {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
