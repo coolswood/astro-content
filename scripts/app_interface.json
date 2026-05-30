@@ -858,5 +858,75 @@
   "profile_premium_paused_retry": "Повторить оплату",
   "@profile_premium_paused_retry": {
     "description": "Текст на кнопке повторной попытки оплаты"
+  },
+  "exercises_therapy_relax_title": "Дыхательные практики",
+  "@exercises_therapy_relax_title": {
+    "description": "Заголовок новой карточки на экране упражнений"
+  },
+  "exercises_therapy_relax_description": "Дыхательные ритмы для фокуса, баланса и снятия стресса",
+  "@exercises_therapy_relax_description": {
+    "description": "Описание новой карточки на экране упражнений"
+  },
+  "breathing_end_session": "Завершить сессию",
+  "@breathing_end_session": {
+    "description": "Кнопка выхода из дыхательного упражнения в самом низу экрана"
+  },
+  "breathing_preparation": "Подготовка",
+  "@breathing_preparation": {
+    "description": "Заголовок трехсекундного обратного отсчета перед стартом дыхательного графика. Используется в верхнем блоке экрана, место ограничено."
+  },
+  "breathing_cycle_number": "Цикл {current} из {total}",
+  "@breathing_cycle_number": {
+    "description": "Счетчик текущего цикла упражнения из общего количества циклов",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "breathing_sec_left": "сек. осталось",
+  "@breathing_sec_left": {
+    "description": "Подпись под большим числом секунд в фазе дыхания (например, под числом 4)"
+  },
+  "breathing_metric_technique": "Техника",
+  "@breathing_metric_technique": {
+    "description": "Заголовок колонки 'Техника' в карточке параметров дыхания"
+  },
+  "breathing_metric_duration": "Время",
+  "@breathing_metric_duration": {
+    "description": "Заголовок колонки 'Время' в карточке параметров дыхания"
+  },
+  "breathing_metric_breaths": "Циклы",
+  "@breathing_metric_breaths": {
+    "description": "Заголовок колонки 'Дыхания' (количество циклов) в карточке параметров дыхания"
+  },
+  "breathing_metric_minutes": "{minutes} мин.",
+  "@breathing_metric_minutes": {
+    "description": "Форматирование минут длительности",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "breathing_metric_seconds": "{seconds} сек.",
+  "@breathing_metric_seconds": {
+    "description": "Форматирование секунд длительности",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "breathing_rate_text": "Оцените ваш опыт",
+  "@breathing_rate_text": {
+    "description": "Текст оценки функционала на экране завершения дыхания"
+  },
+  "breathing_today_affirmation": "Аффирмация дня",
+  "@breathing_today_affirmation": {
+    "description": "Заголовок тега 'Аффирмация дня' на карточке аффирмаций"
   }
 }

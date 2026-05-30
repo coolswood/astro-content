@@ -152,6 +152,55 @@ export function runBotValidation(targetLang: string) {
   console.log('\n🚀 Процесс валидации завершен.');
 }
 
+export function fixUnescapedQuotes(json: string): string {
+  let result = '';
+  const len = json.length;
+  
+  for (let i = 0; i < len; i++) {
+    const char = json[i];
+    
+    if (char === '"') {
+      // Проверяем, не экранирована ли она уже
+      if (i > 0 && json[i - 1] === '\\') {
+        result += char;
+        continue;
+      }
+      
+      // Ищем предыдущий значимый символ (пропуская пробелы)
+      let prevNonWhitespace = '';
+      for (let j = i - 1; j >= 0; j--) {
+        if (!/\s/.test(json[j])) {
+          prevNonWhitespace = json[j];
+          break;
+        }
+      }
+      
+      // Ищем следующий значимый символ (пропуская пробелы)
+      let nextNonWhitespace = '';
+      for (let j = i + 1; j < len; j++) {
+        if (!/\s/.test(json[j])) {
+          nextNonWhitespace = json[j];
+          break;
+        }
+      }
+      
+      const isSyntactic = 
+        ['{', '[', ',', ':'].includes(prevNonWhitespace) ||
+        [':', ',', '}', ']', ''].includes(nextNonWhitespace); // '' если конец строки
+        
+      if (isSyntactic) {
+        result += char;
+      } else {
+        result += '\\"';
+      }
+    } else {
+      result += char;
+    }
+  }
+  
+  return result;
+}
+
 /**
  * Пытается максимально корректно распарсить JSON, полученный от ИИ.
  * Включает экранирование кавычек в HTML-атрибутах и закрытие незакрытых скобок.
@@ -177,6 +226,9 @@ export function safeParseAIJson<T>(text: string): T {
     /(\s[a-z-]+)="([^"]+)"/gi,
     '$1=\\"$2\\"',
   );
+
+  // 3.5. Исправление неэкранированных кавычек в строках JSON
+  cleanedText = fixUnescapedQuotes(cleanedText);
 
   // 4. Попытка основного парсинга
   try {
