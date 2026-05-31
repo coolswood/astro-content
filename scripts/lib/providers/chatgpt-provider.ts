@@ -1,6 +1,6 @@
 import type { Page, Browser } from 'puppeteer-core';
 import type { AIProvider, ProviderType } from '../types.js';
-import { connectToBrowser } from '../gemini-client.js';
+import { connectToBrowser, safeGoto } from '../gemini-client.js';
 import { safeParseAIJson } from '../bot-utils.js';
 
 
@@ -13,9 +13,7 @@ export class ChatGPTProvider implements AIProvider {
     this.browser = await connectToBrowser();
     this.page = await this.browser.newPage();
     // Use temporary chat as requested by the user
-    await this.page.goto('https://chatgpt.com/?temporary-chat=true', {
-      waitUntil: 'networkidle2',
-    });
+    await safeGoto(this.page, 'https://chatgpt.com/?temporary-chat=true');
   }
 
   private lock: Promise<any> = Promise.resolve();
@@ -28,10 +26,14 @@ export class ChatGPTProvider implements AIProvider {
 
     const currentLock = previousLock.then(async () => {
       if (options?.shouldStartNewChat) {
-        console.log('🔄 Starting new chat on ChatGPT...');
-        await this.page.goto('https://chatgpt.com/?temporary-chat=true', {
-          waitUntil: 'networkidle2',
-        });
+        console.log('🔄 Starting new chat on ChatGPT (recreating page)...');
+        try {
+          await this.page.close();
+        } catch (e) {
+          // Ignore if page is already closed or invalid
+        }
+        this.page = await this.browser.newPage();
+        await safeGoto(this.page, 'https://chatgpt.com/?temporary-chat=true');
       }
 
 

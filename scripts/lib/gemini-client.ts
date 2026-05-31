@@ -55,6 +55,32 @@ export async function connectToBrowser(): Promise<Browser> {
 }
 
 /**
+ * Safely navigates to a URL, detecting and resolving Chromium network error pages by clicking "Reload".
+ */
+export async function safeGoto(page: Page, url: string, timeout = 60000): Promise<void> {
+  try {
+    await page.goto(url, {
+      waitUntil: 'networkidle2',
+      timeout,
+    });
+  } catch (error: any) {
+    console.warn(`⚠️ Navigation warning to ${url}: ${error.message}`);
+  }
+
+  // Check for Chromium error page "Reload" button
+  try {
+    const reloadButton = await page.$('#reload-button');
+    if (reloadButton) {
+      console.log('⚠️ Обнаружена страница ошибки Chromium. Кликаем "Перезагрузить"...');
+      await reloadButton.click();
+      await page.waitForNavigation({ waitUntil: 'networkidle2', timeout }).catch(() => {});
+    }
+  } catch (reloadError) {
+    // Silent catch
+  }
+}
+
+/**
  * Opens a Gemini page in the browser or returns an existing one.
  */
 export async function getGeminiPage(browser: Browser): Promise<Page> {
@@ -68,9 +94,7 @@ export async function getGeminiPage(browser: Browser): Promise<Page> {
     const page = await browser.newPage();
     page.setDefaultTimeout(300000);
     page.setDefaultNavigationTimeout(300000);
-    await page.goto('https://gemini.google.com/app', {
-      waitUntil: 'networkidle2',
-    });
+    await safeGoto(page, 'https://gemini.google.com/app');
     return page;
   });
 }
@@ -101,9 +125,7 @@ export async function interactWithGemini(
 
       if (shouldStartNewChat) {
         console.log('🆕 Запуск нового чата через переход по ссылке...');
-        await page.goto('https://gemini.google.com/app', {
-          waitUntil: 'networkidle2',
-        });
+        await safeGoto(page, 'https://gemini.google.com/app');
         await new Promise((r) => setTimeout(r, 2000));
       }
 
@@ -271,7 +293,7 @@ export async function interactWithGemini(
       await page.keyboard.press('Space');
       await page.keyboard.press('Backspace');
 
-      const sendBtnSelector = 'button.send-button';
+      const sendBtnSelector = 'button[aria-label*="Отправить"], button[aria-label*="Send"], button.send-button';
       await retryAction(() => page.waitForSelector(sendBtnSelector));
       await retryAction(() => page.click(sendBtnSelector));
 

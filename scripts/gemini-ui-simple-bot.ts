@@ -12,9 +12,13 @@ import {
 } from './lib/bot-utils.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
 import { GeminiProvider } from './lib/providers/gemini-provider.js';
+import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
+import { ClaudeProvider } from './lib/providers/claude-provider.js';
+import { MistralProvider } from './lib/providers/mistral-provider.js';
+import type { AIProvider } from './lib/types.js';
 
 async function run() {
-  const { fileName, targetLang, chunkSize } = parseBotArgs();
+  const { fileName, targetLang, chunkSize, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
 
   if (paths.isDirectory) {
@@ -24,23 +28,6 @@ async function run() {
     );
     process.exit(1);
   }
-
-  // Skip logic: skip if there are uncommitted changes to avoid overwriting local work.
-  try {
-    await fs.access(paths.targetPath);
-    if (isUncommitted(paths.targetPath)) {
-      console.log(
-        `⏩ Пропуск файла: ${paths.targetPath} (есть незакоммиченные изменения)`,
-      );
-      return;
-    }
-    console.log(
-      `♻️ Файл ${paths.targetPath} закоммичен или изменен, переводим заново...`,
-    );
-  } catch {
-    // File doesn't exist, proceed with translation
-  }
-
   console.log(`📜 Загрузка промптов для UI (${targetLang})...`);
   const [main, editor, tech] = await Promise.all([
     loadPrompt('ui', 'main', targetLang),
@@ -57,8 +44,23 @@ async function run() {
     `📦 Всего ключей: ${keys.length}. Чанков: ${Math.ceil(keys.length / chunkSize)}`,
   );
 
-  const provider = new GeminiProvider();
-  console.log('🔗 Инициализация провайдера Gemini...');
+  let provider: AIProvider;
+  switch (providerType) {
+    case 'chatgpt':
+      provider = new ChatGPTProvider();
+      break;
+    case 'claude':
+      provider = new ClaudeProvider();
+      break;
+    case 'mistral':
+      provider = new MistralProvider();
+      break;
+    case 'gemini':
+    default:
+      provider = new GeminiProvider();
+      break;
+  }
+  console.log(`🔗 Инициализация провайдера ${provider.type}...`);
   await provider.init();
 
   let globalGlossary = await loadGlossary(paths.partialGlossaryPath);
@@ -111,7 +113,9 @@ async function run() {
             glossaryText,
             isUI: true,
             isPersistent: true,
-            firstRun: !isFirstChunkProcessed,
+            firstRun: true,
+            excludeStages,
+            intelligenceLevels,
             models: {
               stage1: 'Pro',
               stage2: 'Думающая',

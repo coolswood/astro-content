@@ -109,7 +109,7 @@ async function run() {
         try {
           const wasProcessed = await processFile(relativeFile, targetLang, provider, {
             isPersistent: true,
-            firstRun: !isFirstPassed,
+            firstRun: true,
             excludeStages,
             intelligenceLevels
           });
