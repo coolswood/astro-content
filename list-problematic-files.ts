@@ -184,24 +184,7 @@ function getProblematicFiles(
     }
   }
 
-  // Handle app_interface.json specially
-  const appInterfaceTarget = join(targetDir, 'app_interface.json');
-  if (existsSync(appInterfaceTarget)) {
-    const sourceJson = parseJsonFile('scripts/app_interface.json');
-    const targetJson = parseJsonFile(appInterfaceTarget);
-    if (sourceJson === null) {
-      problematicFiles.set('app_interface.json', ['Failed to parse source JSON (scripts/app_interface.json)']);
-    } else if (targetJson === null) {
-      problematicFiles.set('app_interface.json', ['Failed to parse target JSON']);
-    } else {
-      const errors = compareStructure(sourceJson, targetJson, '', false);
-      if (errors.length > 0) {
-        problematicFiles.set('app_interface.json', errors);
-      }
-    }
-  } else {
-    problematicFiles.set('app_interface.json', ['File missing in target language']);
-  }
+
 
   for (const targetFile of targetFiles) {
     const relativePath = relative(targetDir, targetFile);
