@@ -95,42 +95,43 @@ export class ChatGPTProvider implements AIProvider {
 
       console.log('⌛ Waiting for ChatGPT response...');
 
-      // Wait for the response to finish.
       try {
-        // First, we must ensure the generation has actually STARTED (Stop button appears)
-        console.log('⏳ Stage 1: Waiting for generation to START (Stop button or text appeared)...');
-
+        console.log('⏳ Stage 1: Waiting for generation to START (.markdown count increased)...');
         await this.page
           .waitForFunction(
             (initialCount) => {
-              const stopBtn = document.querySelector(
-                '[data-testid="stop-button"]',
-              );
-              if (stopBtn && (stopBtn as HTMLElement).offsetWidth > 0)
-                return true;
-
               const markdowns = document.querySelectorAll('.markdown');
               return markdowns.length > initialCount;
             },
-            { timeout: 15000 },
-            initialTurnCount
+            { timeout: 30000 },
+            initialTurnCount,
           )
           .catch(() =>
             console.log(
-              '⚠️ Could not confirm start within 15s, waiting for done state anyway...',
+              '⚠️ Could not confirm start within 30s, proceeding to check response...',
             ),
           );
 
-        console.log('✅ Stage 2: Generation confirmed started. Waiting for completion signals...');
+        console.log('✅ Stage 2: Generation confirmed started. Waiting for text stability...');
 
-        await this.page.waitForFunction(
-          (initialCount) => {
+        let previousLength = 0;
+        let stableSeconds = 0;
+        const maxSeconds = 300; // 5 minutes max per chunk
+
+        for (let sec = 0; sec < maxSeconds; sec++) {
+          await new Promise((r) => setTimeout(r, 1000));
+
+          const state = await this.page.evaluate((initialCount) => {
             const markdowns = document.querySelectorAll('.markdown');
-            if (markdowns.length <= initialCount) return false;
+            const latest =
+              markdowns.length > initialCount
+                ? (markdowns[markdowns.length - 1] as HTMLElement)
+                : null;
+            const length = latest ? latest.innerText.length : 0;
 
             const buttons = Array.from(document.querySelectorAll('button'));
 
-            // 1. Check for "Continue generating" button
+            // 1. Check and click "Continue generating"
             const continueBtn = buttons.find((b) => {
               const label = (b.getAttribute('aria-label') || '').toLowerCase();
               const text = (b.innerText || '').toLowerCase();
@@ -143,78 +144,72 @@ export class ChatGPTProvider implements AIProvider {
             });
 
             if (continueBtn && (continueBtn as HTMLElement).offsetWidth > 0) {
-              console.log('Detected "Continue" button, clicking...');
               (continueBtn as HTMLElement).click();
-              return false; // Keep waiting
+              return { length, isGenerating: true, clickedContinue: true, hasCopyButton: false };
             }
 
-            // 2. If the Stop button is visible, we are DEFINITELY generating.
+            // 2. Check for stop-button or fruitjuice-stop-button
             const stopBtn = buttons.find((b) => {
               const testid = b.getAttribute('data-testid');
               const label = (b.getAttribute('aria-label') || '').toLowerCase();
               return (
                 testid === 'stop-button' ||
+                testid?.includes('stop') ||
                 label.includes('остановить') ||
                 label.includes('stop')
               );
             });
+            const isGenerating = !!(stopBtn && (stopBtn as HTMLElement).offsetWidth > 0);
 
-            if (stopBtn && (stopBtn as HTMLElement).offsetWidth > 0) {
-              return false;
+            // 3. Check for copy-turn-action-button in the last turn
+            let hasCopyButton = false;
+            if (latest) {
+              const lastTurn =
+                latest.closest('[data-testid^="conversation-turn-"]') ||
+                latest.parentElement;
+              if (lastTurn && lastTurn.querySelector('[data-testid="copy-turn-action-button"]')) {
+                hasCopyButton = true;
+              }
             }
 
-            const lastMarkdown = markdowns[markdowns.length - 1];
-            const lastTurn = lastMarkdown.closest('[data-testid^="conversation-turn-"]') || lastMarkdown.parentElement;
+            return { length, isGenerating, clickedContinue: false, hasCopyButton };
+          }, initialTurnCount);
 
-            // 3. Clear "Done" signals:
+          if (state.clickedContinue) {
+            console.log('🔄 Detected and clicked "Continue generating" button.');
+            stableSeconds = 0;
+            previousLength = state.length;
+            continue;
+          }
 
-            // Signal A: Copy button inside or next to the last response
-            if (lastTurn && lastTurn.querySelector('[data-testid="copy-turn-action-button"]')) {
-              return true;
+          if (state.length !== previousLength) {
+            stableSeconds = 0;
+            previousLength = state.length;
+          } else if (state.length > 0) {
+            stableSeconds++;
+          }
+
+          if (state.length > 0) {
+            if (state.hasCopyButton && stableSeconds >= 2) {
+              console.log('🏁 ChatGPT Copy button detected. Generation finished.');
+              break;
             }
-
-            // Signal B: Regenerate button appeared (labels for localization)
-            const regenerateBtn = buttons.find((b) => {
-              const label = (b.getAttribute('aria-label') || '').toLowerCase();
-              return (
-                label.includes('пересказать') ||
-                label.includes('regenerate') ||
-                label.includes('сменить модель')
-              );
-            });
-            if (regenerateBtn && (regenerateBtn as HTMLElement).offsetWidth > 0) {
-              return true;
+            if (!state.isGenerating && stableSeconds >= 4) {
+              console.log(`🏁 ChatGPT text stable for ${stableSeconds}s and no Stop button. Generation finished.`);
+              break;
             }
+          }
 
-            // Signal C: Send button is back and enabled
-            const composerBtn = document.getElementById('composer-submit-button') ||
-                               buttons.find(b => {
-                                 const tid = b.getAttribute('data-testid');
-                                 const label = (b.getAttribute('aria-label') || '').toLowerCase();
-                                 return tid === 'send-button' || 
-                                        label.includes('отправить') || 
-                                        label.includes('голосовой') ||
-                                        label.includes('voice');
-                               });
-            
-            if (composerBtn && (composerBtn as HTMLElement).offsetWidth > 0) {
-               if (!composerBtn.hasAttribute('disabled')) {
-                 return true;
-               }
-            }
+          if (sec % 10 === 0) {
+            console.log(
+              `⏳ ChatGPT generating... text length: ${state.length} chars (stable for ${stableSeconds}s, active generation: ${state.isGenerating})`,
+            );
+          }
+        }
 
-            return false;
-          },
-          { timeout: 600000, polling: 2000 },
-          initialTurnCount
-        );
-
-        console.log('🏁 Stage 3: Completion signals detected. Generation finished.');
         await new Promise((r) => setTimeout(r, 2000));
-      } catch (e) {
-        console.warn(
-          '⚠️ Timed out waiting for ChatGPT response. Reading current state.',
-        );
+      } catch (e: any) {
+        console.warn(`⚠️ Error waiting for ChatGPT response: ${e.message}. Attempting to read current state.`);
       }
 
       const responseText = await this.page.evaluate(() => {
