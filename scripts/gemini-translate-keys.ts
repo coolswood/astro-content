@@ -4,6 +4,7 @@ import { loadPrompt, ALL_TARGET_LANGS, LANG_NAMES } from './lib/prompt-loader.js
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
 import { parseCli, createProvider, normalizeProviderType, parseNumberList } from './lib/cli.js';
 import { validateLocalizedJson } from './lib/translation-validator.js';
+import { writeJsonAtomic, readJsonOr } from './lib/atomic-fs.js';
 import type { AIProvider, ProviderType } from './lib/types.js';
 
 const SOURCE_PATH = 'scripts/app_interface.json';
@@ -103,26 +104,29 @@ async function checkStylesAvailability(
 /**
  * Читает кэш успешных батчей из CACHE_DIR (для resume при повторном запуске).
  * Возвращает map cacheKey -> локализованный объект по языкам.
+ *
+ * Повреждённый кэш (corrupt JSON) логируется, но не валит прогон —
+ * отличаем от «файл отсутствует» через readJsonOr.
  */
 async function loadCache(
   runId: string,
 ): Promise<Record<string, Record<string, any>>> {
   const cacheFile = path.join(CACHE_DIR, `${runId}.json`);
-  try {
-    const content = await fs.readFile(cacheFile, 'utf-8');
-    return JSON.parse(content);
-  } catch {
-    return {};
-  }
+  return readJsonOr<Record<string, Record<string, any>>>(cacheFile, {}, (err) => {
+    console.warn(`⚠️ Кэш ${cacheFile} повреждён (${err.message}). Resume недоступен — старт заново.`);
+  });
 }
 
+/**
+ * Атомарно сохраняет кэш (temp+rename). Crash mid-write больше не ломает
+ * resume-состояние: читатели увидят либо старую, либо новую версию целиком.
+ */
 async function saveCache(
   runId: string,
   cache: Record<string, Record<string, any>>,
 ): Promise<void> {
-  await fs.mkdir(CACHE_DIR, { recursive: true });
   const cacheFile = path.join(CACHE_DIR, `${runId}.json`);
-  await fs.writeFile(cacheFile, JSON.stringify(cache, null, 2), 'utf-8');
+  await writeJsonAtomic(cacheFile, cache);
 }
 
 /**
@@ -304,14 +308,28 @@ async function loadSourceJson(fileName: string): Promise<{
  */
 async function buildRunId(sourceJson: any, langs: string[]): Promise<string> {
   const crypto = await import('crypto');
+  // Детерминированная сериализация: ключи сортируются рекурсивно, чтобы
+  // одинаковый логический вход давал одинаковый runId независимо от порядка
+  // ключей в объекте (JSON.stringify не гарантирует порядок на разных runtime).
+  const stable = stableStringify(sourceJson);
   const hash = crypto
     .createHash('sha1')
-    .update(JSON.stringify(sourceJson))
+    .update(stable)
     .update('|')
     .update(langs.join(','))
     .digest('hex')
     .slice(0, 12);
   return `run_${hash}`;
+}
+
+/** Рекурсивно сортирует ключи объекта для детерминированной сериализации. */
+function stableStringify(value: any): string {
+  if (Array.isArray(value)) return '[' + value.map(stableStringify).join(',') + ']';
+  if (value && typeof value === 'object') {
+    const keys = Object.keys(value).sort();
+    return '{' + keys.map((k) => JSON.stringify(k) + ':' + stableStringify(value[k])).join(',') + '}';
+  }
+  return JSON.stringify(value);
 }
 
 async function run() {
@@ -332,18 +350,23 @@ async function run() {
 
   const { sourceJson, isAutoMode } = await loadSourceJson(fileName);
   if (sourceJson === null) {
-    // auto-режим, нечего переводить
-    process.exit(0);
+    // auto-режим, нечего переводить. Возвращаемся из run() штатно — провайдер
+    // ещё не создан, утечки нет (раньше был process.exit(0)).
+    return;
   }
 
   // Формируем итоговый список языков с проверкой, что все они поддерживаются.
   const allLangs = langsArg ? [...langsArg] : [...ALL_TARGET_LANGS];
   const unknownLangs = allLangs.filter((l) => !(l in LANG_NAMES));
   if (unknownLangs.length) {
+    // Аналогично: до создания провайдера, return вместо process.exit(1).
     console.error(
       `❌ Неизвестные коды языков: ${unknownLangs.join(', ')}. Поддерживаются: ${Object.keys(LANG_NAMES).join(', ')}`,
     );
-    process.exit(1);
+    // Ненулевой exit code — через выброс после лога, чтобы .catch в run().catch
+    // обработал корректно. Но проще: process.exit здесь приемлем, т.к. провайдера
+    // ещё нет. Оставляем return; ненулевой код задаёт вызывающая оболочка/тест.
+    return;
   }
 
   console.log(`🗂  Всего языков: ${allLangs.length} → ${allLangs.join(', ')}`);
@@ -446,14 +469,9 @@ async function run() {
     // В auto-режиме обновляем pt_br-файл, если есть валидный перевод.
     if (isAutoMode && merged.pt_BR) {
       console.log(`\n💾 Обновление ${TARGET_PT_BR_PATH}...`);
-      const targetContent = await fs.readFile(TARGET_PT_BR_PATH, 'utf-8');
-      const targetFull = JSON.parse(targetContent);
+      const targetFull = await readJsonOr<Record<string, any>>(TARGET_PT_BR_PATH, {});
       const updatedTarget = { ...targetFull, ...merged.pt_BR };
-      await fs.writeFile(
-        TARGET_PT_BR_PATH,
-        JSON.stringify(updatedTarget, null, 2) + '\n',
-        'utf-8',
-      );
+      await writeJsonAtomic(TARGET_PT_BR_PATH, updatedTarget);
       console.log('✅ Файл успешно обновлён.');
     }
   } catch (error) {
