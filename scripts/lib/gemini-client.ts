@@ -1,107 +1,22 @@
-import puppeteer, { Page, Browser } from 'puppeteer-core';
-import { repairJson, safeParseAIJson } from './bot-utils.js';
+import { Page } from 'puppeteer-core';
+import {
+  retryAction,
+  safeGoto,
+  sleep,
+  TerminalError,
+} from './puppeteer-core.js';
+import { parseWithRepair } from './json-repair.js';
 
-
-export class TerminalError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = 'TerminalError';
-  }
-}
-
-async function retryAction<T>(
-  action: () => Promise<T>,
-  retries = 3,
-): Promise<T> {
-  for (let i = 0; i < retries; i++) {
-    try {
-      return await action();
-    } catch (e: any) {
-      const msg = e.message.toLowerCase();
-      if (
-        msg.includes('detached frame') ||
-        msg.includes('disposed') ||
-        msg.includes('target closed') ||
-        msg.includes('timed out') ||
-        msg.includes('context destroyed') ||
-        e.name === 'ProtocolError'
-      ) {
-        if (i === retries - 1) throw e;
-        // Silent retry for UI stability
-        console.log(
-          `⚠️ Puppeteer error ignored, retrying (${i + 1}/${retries}): ${e.message}`,
-        );
-        await new Promise((r) => setTimeout(r, 2000));
-        continue;
-      }
-      throw e;
-    }
-  }
-  throw new Error('Retry action failed after all attempts');
-}
+// Реэкспорт для обратной совместимости: существующие импорты
+// `from './gemini-client.js'` продолжат работать.
+export { connectToBrowser, safeGoto, retryAction, TerminalError } from './puppeteer-core.js';
 
 /**
- * Connects to a running Chrome/Chromium browser via the DevTools protocol.
- * The browser must be started with --remote-debugging-port=9222.
- */
-export async function connectToBrowser(): Promise<Browser> {
-  const versionResponse = await fetch('http://127.0.0.1:9222/json/version');
-  const versionData = await versionResponse.json();
-  return puppeteer.connect({
-    browserWSEndpoint: versionData.webSocketDebuggerUrl,
-    defaultViewport: null,
-    protocolTimeout: 300000, // 5 minutes (default is 30s)
-  });
-}
-
-/**
- * Safely navigates to a URL, detecting and resolving Chromium network error pages by clicking "Reload".
- */
-export async function safeGoto(page: Page, url: string, timeout = 60000): Promise<void> {
-  try {
-    await page.goto(url, {
-      waitUntil: 'networkidle2',
-      timeout,
-    });
-  } catch (error: any) {
-    console.warn(`⚠️ Navigation warning to ${url}: ${error.message}`);
-  }
-
-  // Check for Chromium error page "Reload" button
-  try {
-    const reloadButton = await page.$('#reload-button');
-    if (reloadButton) {
-      console.log('⚠️ Обнаружена страница ошибки Chromium. Кликаем "Перезагрузить"...');
-      await reloadButton.click();
-      await page.waitForNavigation({ waitUntil: 'networkidle2', timeout }).catch(() => {});
-    }
-  } catch (reloadError) {
-    // Silent catch
-  }
-}
-
-/**
- * Opens a Gemini page in the browser or returns an existing one.
- */
-export async function getGeminiPage(browser: Browser): Promise<Page> {
-  return retryAction(async () => {
-    const pages = await browser.pages();
-    const existing = pages.find((p) => p.url().includes('gemini.google.com'));
-    if (existing) {
-      await existing.bringToFront();
-      return existing;
-    }
-    const page = await browser.newPage();
-    page.setDefaultTimeout(300000);
-    page.setDefaultNavigationTimeout(300000);
-    await safeGoto(page, 'https://gemini.google.com/app');
-    return page;
-  });
-}
-
-/*
-
  * Sends a prompt to Gemini and returns the model's text response.
+ *
+ * Логика выбора модели и thinking-panel остаются gemini-специфичными.
+ * Общие утилиты (connectToBrowser, safeGoto, retryAction, sleep, парсинг JSON)
+ * импортируются из puppeteer-core/json-repair.
  *
  * @param page - Puppeteer page connected to gemini.google.com
  * @param prompt - The full text prompt to submit
@@ -126,14 +41,14 @@ export async function interactWithGemini(
       if (shouldStartNewChat) {
         console.log('🆕 Запуск нового чата через переход по ссылке...');
         await safeGoto(page, 'https://gemini.google.com/app');
-        await new Promise((r) => setTimeout(r, 2000));
+        await sleep(2000);
       }
 
       // Выбор модели
       console.log(`🎯 Выбор модели ${modelKeyword}...`);
       // Небольшая пауза перед первой попыткой выбора модели:
       // меню режимов иногда появляется раньше, чем список моделей полностью прогрузится.
-      await new Promise((r) => setTimeout(r, 2000));
+      await sleep(2000);
       const modelSelectorBtn =
         'button.input-area-switch, button[aria-label="Открыть меню выбора режима"]';
       await page.waitForSelector(modelSelectorBtn, { timeout: 10000 });
@@ -173,7 +88,7 @@ export async function interactWithGemini(
         });
 
         // Ждем 2 секунды, чтобы интерфейс успел обновить доступность моделей (disabled/enabled)
-        await new Promise((r) => setTimeout(r, 2000));
+        await sleep(2000);
 
         const selectedResult = await page.evaluate((keyword) => {
           const items = Array.from(
@@ -249,7 +164,7 @@ export async function interactWithGemini(
 
         if (selectedResult.success) {
           console.log(`✅ Выбрана модель: ${selectedResult.name}`);
-          await new Promise((r) => setTimeout(r, 2000));
+          await sleep(2000);
         } else {
           throw new TerminalError(
             `❌ КРИТИЧЕСКАЯ ОШИБКА: Ни Pro, ни Думающая модели не доступны. Использование "Быстрой" модели запрещено.`,
@@ -367,7 +282,7 @@ export async function interactWithGemini(
 
       while (stableCount < 5 && attempts < maxAttempts) {
         attempts++;
-        await new Promise((r) => setTimeout(r, 1000));
+        await sleep(1000);
 
         const { currentLength, hasCopyButton } = await page.evaluate(() => {
           const responses = document.querySelectorAll('.model-response-text');
@@ -468,62 +383,40 @@ export async function interactWithGemini(
 }
 
 /**
- * Clean and parse a string that might contain JSON wrapped in markdown or other text.
- * If parsing fails, it tries to repair it or asks Gemini to fix it.
+ * Парсит JSON из ответа Gemini с восстановлением и опциональным self-heal'ом.
+ *
+ * Сначала применяет общий parseWithRepair (extractJsonCandidates + repairJson +
+ * fixUnescapedQuotes). Если не получилось и передана страница — просит модель
+ * исправить JSON в той же сессии (до 2 попыток).
+ *
+ * ВАЖНО: вызов этой функции должен идти под локом сессии (SessionManager),
+ * чтобы self-heal-обращение к interactWithGemini не сталкивалось с параллельным
+ * interact. Gemini-провайдер обеспечивает это через withSession.
  */
 export async function parseGeminiJson<T>(
   text: string,
   page?: Page,
   modelKeyword: string = 'Pro',
 ): Promise<T> {
-  const tryParse = (rawText: string): T | null => {
-    try {
-      return safeParseAIJson<T>(rawText);
-    } catch (e) {
-      return null;
-    }
-  };
-
-  const parsed = tryParse(text);
-  if (parsed !== null) return parsed;
-
-  // Если не распарсилось и у нас есть доступ к странице, просим Gemini исправить
-  if (page) {
-    console.log('⚠️ Ошибка парсинга JSON. Просим Gemini исправить...');
-    for (let fixAttempt = 1; fixAttempt <= 2; fixAttempt++) {
-      try {
-        const fixPrompt = `В твоем предыдущем ответе была ошибка в структуре JSON. 
-Пожалуйста, исправь ее и выведи СТРОГО только валидный JSON объект, без лишнего текста и пояснений. 
+  // Self-heal-хук: просим модель переизлучить валидный JSON.
+  const heal = page
+    ? async (rawText: string, _attempt: number): Promise<string> => {
+        const fixPrompt = `В твоем предыдущем ответе была ошибка в структуре JSON.
+Пожалуйста, исправь ее и выведи СТРОГО только валидный JSON объект, без лишнего текста и пояснений.
 Вот твой предыдущий (ошибочный) ответ:
-\n${text}`;
-
+\n${rawText}`;
+        console.log(`⚠️ Просим Gemini исправить JSON (попытка ${_attempt})...`);
         const fixedRaw = await interactWithGemini(
           page,
           fixPrompt,
           modelKeyword,
           false, // Продолжаем в том же чате
         );
-
-        const fixedParsed = tryParse(fixedRaw);
-        if (fixedParsed !== null) {
-          console.log('✅ Gemini исправил JSON ошибку.');
-          return fixedParsed;
-        }
-      } catch (fixError) {
-        console.error(
-          `❌ Попытка исправления ${fixAttempt} не удалась:`,
-          fixError,
-        );
+        console.log('✅ Gemini переизлучил ответ.');
+        return fixedRaw;
       }
-    }
-  }
+    : undefined;
 
-  console.error('❌ ОШИБКА ПАРСИНГА JSON. СЫРОЙ ОТВЕТ ОТ GEMINI:');
-  console.error('-------------------------------------------');
-  console.error(text);
-  console.error('-------------------------------------------');
-  throw new Error(
-    `No valid JSON object found in response after repair attempts. Raw response logged above.`,
-  );
+  return parseWithRepair<T>(text, { maxAttempts: 2, heal });
 }
 

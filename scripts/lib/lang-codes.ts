@@ -49,7 +49,6 @@ const LANG_ALIASES: Record<string, string> = {
   'pt-br': 'pt_BR',
   'ptbr': 'pt_BR',
   'pt_br': 'pt_BR',
-  'pt_br'.toLowerCase(): 'pt_BR', // 'pt_br'
 };
 
 /** Приводит произвольный языковой код к канонической форме из ALL_TARGET_LANGS. */
