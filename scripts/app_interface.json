@@ -1059,5 +1059,56 @@
   "breathing_today_affirmation": "Аффирмация дня",
   "@breathing_today_affirmation": {
     "description": "Заголовок тега 'Аффирмация дня' на карточке аффирмаций"
+  },
+  "believe_final_steps_done": "{count} {count, plural, one{шаг пройден} few{шага пройдено} many{шагов пройдено} other{шагов пройдено}}",
+  "@believe_final_steps_done": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "believe_final_path_complete": "Вы прошли весь путь 🎉",
+  "believe_final_great_job": "Отличная работа!",
+  "believe_final_done": "Готово",
+  "believe_final_congrats": "Поздравляем!",
+  "believe_final_description": "Вы честно разобрали свою мысль, нашли доказательства и посмотрели на ситуацию по-новому. Это непросто — и вы это сделали.",
+  "believe_final_finish": "Закончить",
+  "believe_final_your_result": "Ваш результат",
+  "believe_final_at_start": "В начале",
+  "believe_final_now": "Сейчас",
+  "believe_final_decrease": "Снижение на {count} {count, plural, one{пункт} few{пункта} many{пунктов} other{пункта}}",
+  "@believe_final_decrease": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "believe_final_increase": "Рост на {count} {count, plural, one{пункт} few{пункта} many{пунктов} other{пункта}}",
+  "@believe_final_increase": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "believe_final_decrease_desc": "Вера в мысль упала с {from} до {to}",
+  "@believe_final_decrease_desc": {
+    "placeholders": {
+      "from": {
+        "type": "int"
+      },
+      "to": {
+        "type": "int"
+      }
+    }
+  },
+  "believe_final_increase_desc": "Вера в мысль выросла с {from} до {to}",
+  "@believe_final_increase_desc": {
+    "placeholders": {
+      "from": {
+        "type": "int"
+      },
+      "to": {
+        "type": "int"
+      }
+    }
   }
 }
