@@ -64,7 +64,7 @@ export function parseBotArgs() {
     .toLowerCase()
     .replace('-', '_');
   const chunkSize = parseInt(args.chunk || args.chunkSize || positional[2] || '80');
-  const provider = (args.provider || args.adapter || positional[3] || 'gemini').toLowerCase() as 'gemini' | 'chatgpt' | 'claude' | 'mistral';
+  const provider = (args.provider || args.adapter || positional[3] || 'chatgpt').toLowerCase() as 'gemini' | 'chatgpt' | 'claude' | 'mistral';
   
   const excludeStr = args.exclude || args.skip || positional[4] || '';
   const excludeStages = excludeStr ? excludeStr.split(',').map(Number) : [];
@@ -152,143 +152,11 @@ export function runBotValidation(targetLang: string) {
   console.log('\n🚀 Процесс валидации завершен.');
 }
 
-export function fixUnescapedQuotes(json: string): string {
-  let result = '';
-  const len = json.length;
-  
-  for (let i = 0; i < len; i++) {
-    const char = json[i];
-    
-    if (char === '"') {
-      // Проверяем, не экранирована ли она уже
-      if (i > 0 && json[i - 1] === '\\') {
-        result += char;
-        continue;
-      }
-      
-      // Ищем предыдущий значимый символ (пропуская пробелы)
-      let prevNonWhitespace = '';
-      for (let j = i - 1; j >= 0; j--) {
-        if (!/\s/.test(json[j])) {
-          prevNonWhitespace = json[j];
-          break;
-        }
-      }
-      
-      // Ищем следующий значимый символ (пропуская пробелы)
-      let nextNonWhitespace = '';
-      for (let j = i + 1; j < len; j++) {
-        if (!/\s/.test(json[j])) {
-          nextNonWhitespace = json[j];
-          break;
-        }
-      }
-      
-      const isSyntactic = 
-        ['{', '[', ',', ':'].includes(prevNonWhitespace) ||
-        [':', ',', '}', ']', ''].includes(nextNonWhitespace); // '' если конец строки
-        
-      if (isSyntactic) {
-        result += char;
-      } else {
-        result += '\\"';
-      }
-    } else {
-      result += char;
-    }
-  }
-  
-  return result;
-}
-
-/**
- * Пытается максимально корректно распарсить JSON, полученный от ИИ.
- * Включает экранирование кавычек в HTML-атрибутах и закрытие незакрытых скобок.
- */
-export function safeParseAIJson<T>(text: string): T {
-  // 1. Извлекаем основной блок JSON (между первой { или [ и последней } или ])
-  const match = text.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
-  let cleanedText = match ? match[0] : text;
-
-  // 2. Базовая очистка от лишнего markdown
-  const markdownMatches = cleanedText.match(/^```json\s*[\s\S]*?\s*```$/i);
-  if (markdownMatches) {
-    cleanedText = cleanedText.replace(/^```json\s*/i, '').replace(/\s*```$/i, '');
-  } else {
-    cleanedText = cleanedText.replace(/^```json/i, '').replace(/```$/i, '');
-  }
-  
-  cleanedText = cleanedText.trim();
-
-  // 3. Экранирование кавычек внутри HTML-атрибутов (например, author="Name" -> author=\"Name\")
-  // Это частая ошибка моделей, которая ломает JSON
-  cleanedText = cleanedText.replace(
-    /(\s[a-z-]+)="([^"]+)"/gi,
-    '$1=\\"$2\\"',
-  );
-
-  // 3.5. Исправление неэкранированных кавычек в строках JSON
-  cleanedText = fixUnescapedQuotes(cleanedText);
-
-  // 4. Попытка основного парсинга
-  try {
-    return JSON.parse(cleanedText);
-  } catch (e) {
-    // 5. Попытка лечения структуры (repairJson)
-    try {
-      const repaired = repairJson(cleanedText);
-      return JSON.parse(repaired);
-    } catch (e2) {
-      console.error('❌ ОШИБКА ПАРСИНГА AI JSON. Текст после очистки:');
-      console.error(cleanedText);
-      throw new Error(`Failed to parse AI JSON: ${(e as Error).message}`);
-    }
-  }
-}
-
-/**
- * Пытается закрыть открытые фигурные и квадратные скобки (и строки) в обрезанном JSON.
- */
-export function repairJson(json: string): string {
-  let text = json.trim();
-  const stack: string[] = [];
-  let inString = false;
-  let escaped = false;
-
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-    if (escaped) {
-      escaped = false;
-      continue;
-    }
-    if (char === '\\') {
-      escaped = true;
-      continue;
-    }
-    if (char === '"') {
-      inString = !inString;
-      continue;
-    }
-    if (!inString) {
-      if (char === '{') stack.push('}');
-      else if (char === '[') stack.push(']');
-      else if (char === '}') {
-        if (stack[stack.length - 1] === '}') stack.pop();
-      } else if (char === ']') {
-        if (stack[stack.length - 1] === ']') stack.pop();
-      }
-    }
-  }
-
-  let result = text;
-  // Если мы остались внутри строки, закрываем её
-  if (inString) {
-    result += '"';
-  }
-
-  // Убираем возможную запятую в конце перед закрытием структур
-  result = result.replace(/,\s*$/, '');
-
-  // Закрываем скобки в обратном порядке
-  return result + stack.reverse().join('');
-}
+// ─────────────────────────────────────────────────────────────────────────────
+// JSON-repair (fixUnescapedQuotes / repairJson) переехал в ./json-repair.ts.
+// Реэкспорт сохранён для обратной совместимости со старыми импортами.
+// Новый код должен импортировать напрямую из json-repair (parseWithRepair).
+// safeParseAIJson удалён — он был синхронным legacy-API; используйте async
+// parseWithRepair из json-repair.
+// ─────────────────────────────────────────────────────────────────────────────
+export { fixUnescapedQuotes, repairJson } from './json-repair.js';

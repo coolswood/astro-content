@@ -229,6 +229,54 @@
   "comparison_for": "Аргумент за",
   "comparison_against": "Аргумент против",
   "comparison_level": "Уровень веры в аргумент",
+  "comparison_balance_title": "Баланс аргументов",
+  "@comparison_balance_title": {
+    "description": "Заголовок карточки баланса за/против в шаге сравнения SMER. Короткий."
+  },
+  "comparison_balance_for": "За мысль",
+  "@comparison_balance_for": {
+    "description": "Подпись легенды баланса — отвечает за красный сегмент полосы (аргументы «за мысль»). Короткая, желательно до 10 символов."
+  },
+  "comparison_balance_against": "Против мысли",
+  "@comparison_balance_against": {
+    "description": "Подпись легенды баланса — отвечает за зелёный сегмент полосы (аргументы «против мысли»). Короткая, желательно до 12 символов."
+  },
+  "comparison_balance_word_for": "за",
+  "@comparison_balance_word_for": {
+    "description": "Одно слово, которое в подсказке баланса выделяется жирным (когда аргументов «за» больше). Переводить только это слово, без точки и пробелов."
+  },
+  "comparison_balance_word_against": "против",
+  "@comparison_balance_word_against": {
+    "description": "Одно слово, которое в подсказке баланса выделяется жирным (когда аргументов «против» больше). Переводить только это слово, без точки и пробелов."
+  },
+  "comparison_balance_hint_for": "Аргументов {word} мысли больше.\nВозможно, мысль подтверждена фактами.",
+  "@comparison_balance_hint_for": {
+    "description": "Плашка-подсказка под полосой баланса: показывается, когда аргументов «за» больше. {word} — подставляемое слово (см. comparison_balance_word_for), оно выделяется жирным и красным цветом. \\n — перенос строки. Черновик, формулировку можно улучшать."
+  },
+  "comparison_balance_hint_against": "Аргументов {word} мысли больше.\nВозможно, она не так точна, как кажется.",
+  "@comparison_balance_hint_against": {
+    "description": "Плашка-подсказка под полосой баланса: показывается, когда аргументов «против» больше. {word} — подставляемое слово (см. comparison_balance_word_against), оно выделяется жирным и зелёным цветом. \\n — перенос строки. Текст из макета Figma."
+  },
+  "comparison_add_argument_for": "Добавить аргумент\nза мысль",
+  "@comparison_add_argument_for": {
+    "description": "Empty-state в шаге сравнения SMER (живой шаг), когда список аргументов «за мысль» пуст. Крупная нажимаемая карточка-кнопка. \\n — перенос строки для компактности в карточке."
+  },
+  "comparison_add_argument_against": "Добавить аргумент\nпротив мысли",
+  "@comparison_add_argument_against": {
+    "description": "Empty-state в шаге сравнения SMER (живой шаг), когда список аргументов «против мысли» пуст. Крупная нажимаемая карточка-кнопка. \\n — перенос строки."
+  },
+  "comparison_no_arguments": "Пока нет аргументов",
+  "@comparison_no_arguments": {
+    "description": "Empty-state в истории/превью записи SMER, когда у выбранной стороны (за/против) нет аргументов. Read-only, без кнопки добавить. Короткий."
+  },
+  "comparison_argument_weight": "Вес аргумента",
+  "@comparison_argument_weight": {
+    "description": "Подпись веса аргумента в карточке аргумента шага сравнения SMER. Слева от значения N/10. Короткая."
+  },
+  "comparison_scroll_hint": "Прокрутите, чтобы увидеть все аргументы →",
+  "@comparison_scroll_hint": {
+    "description": "Подпись под горизонтальной каруселью аргументов в шаге сравнения SMER. Подсказывает, что аргументов больше, чем видно. Стрелка → — часть текста, не заменять. Одной строкой."
+  },
   "add": "Добавить",
   "story_continue_text": "Нажмите на экран для продолжения",
   "story_base_title": "Базовые концепции",
@@ -317,6 +365,22 @@
   "subscription_button_canceled": "Продление отключено",
   "subscription_button_subscribe_trial": "Активировать бесплатно",
   "subscription_button_subscribe": "Активировать подписку",
+  "subscription_change_plan": "Изменить тариф",
+  "@subscription_change_plan": {
+    "description": "Футер-ссылка под кнопкой отмены на странице информации о подписке. При клике открывает страницу смены тарифа. Заменяет прежний вызов чата с поддержкой."
+  },
+  "subscription_select_plan": "Активировать тариф",
+  "@subscription_select_plan": {
+    "description": "Текст нижней кнопки на странице смены тарифа. Кнопка задизейблена, если выбран уже активный план."
+  },
+  "subscription_active_plan_badge": "Активный тариф",
+  "@subscription_active_plan_badge": {
+    "description": "Жёлтый бейдж на карточке тарифа, который сейчас активен у пользователя. Короткий текст, должен влезать в бейдж шириной ~90px."
+  },
+  "subscription_change_plan_success": "Тариф изменён",
+  "@subscription_change_plan_success": {
+    "description": "Flash-сообщение об успешной смене тарифа (для Yookassa, моментальная смена)."
+  },
   "subscription_info_cancel_title": "Вы хотите отменить подписку?",
   "subscription_info_cancel_trial_body": "При отмене подписки во время пробного периода вы сразу потеряете доступ к премиум-функциям.",
   "subscription_info_cancel_body": "На данный момент за вами закреплена льготная ежемесячная плата. При отмене вы не сможете снова воспользоваться этим предложением. Если вы согласны, подписка будет отменена, но вы сможете пользоваться премиумом до конца текущего периода.",
@@ -343,7 +407,7 @@
   "solution": "Рекомендация {number}",
   "gpt_response_title": "Анализ от AI",
   "gpt_error": "Во время анализа произошла ошибка, попробуйте ещё раз.",
-  "daybook_analysis_reconnecting": "Упс, похоже, соединение оборвалось, начну заново!",
+  "daybook_analysis_reconnecting": "Упс, похоже соединение оборвалось, начну заново!",
   "@daybook_analysis_reconnecting": {
     "description": "Всплывающее уведомление в дневнике: AI-стрим оборвался, но мы автоматически повторяем попытку. Показывается 1.5 сек поверх лоадера. Тон — дружелюбный, без слова «ошибка». Ограничений по длине нет, но желательно уложиться в одну строку на узких экранах."
   },
@@ -576,7 +640,7 @@
   "@intro_wow_free_attempt": {
     "description": "Шаг онбординга init_wow: маленькая градиентная подпись-метка над приветствием (14px, жёлто-розовый градиент)."
   },
-  "intro_wow_title": "Поделитесь переживаниями — наш ассистент поддержит и поможет найти выход",
+  "intro_wow_title": "Поделитесь переживаниями - наш ассистент поддержит и поможет найти выход",
   "@intro_wow_title": {
     "description": "Шаг онбординга init_wow: основная строка призыва (26px, белый→фиолетовый градиент). Показывается на отдельной строке сразу после имени пользователя и запятой."
   },
@@ -608,7 +672,7 @@
   "@intro_wow_2_title": {
     "description": "Шаг онбординга init_wow_2: основной заголовок."
   },
-  "intro_wow_2_body_1": "Подобные практики бережно снимают эмоциональный груз и помогают взглянуть на ситуацию под новым углом.",
+  "intro_wow_2_body_1": "Подобные практики бережно снимают эмоциональный груз и помогают взглянуть на ситуацию под новым углом",
   "@intro_wow_2_body_1": {
     "description": "Шаг онбординга init_wow_2: первый абзац."
   },
@@ -616,9 +680,9 @@
   "@intro_wow_2_body_2": {
     "description": "Шаг онбординга init_wow_2: второй абзац."
   },
-  "intro_wow_2_body_3": "Возьмите 3-дневный пробный период. Этого времени хватит, чтобы прислушаться к себе и понять, дает ли наша поддержка нужный результат.",
-  "@intro_wow_2_body_3": {
-    "description": "Шаг онбординга init_wow_2: третий абзац."
+  "intro_wow_3_body_3": "Возьмите 3-дневный пробный период. Этого времени хватит, чтобы прислушаться к себе и понять, дает ли наша поддержка нужный результат.",
+  "@intro_wow_3_body_3": {
+    "description": "Шаг онбординга init_wow_3: третий абзац."
   },
   "intro_wow_2_cta": "Посмотреть предложение",
   "@intro_wow_2_cta": {
@@ -995,5 +1059,56 @@
   "breathing_today_affirmation": "Аффирмация дня",
   "@breathing_today_affirmation": {
     "description": "Заголовок тега 'Аффирмация дня' на карточке аффирмаций"
+  },
+  "believe_final_steps_done": "{count} {count, plural, one{шаг пройден} few{шага пройдено} many{шагов пройдено} other{шагов пройдено}}",
+  "@believe_final_steps_done": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "believe_final_path_complete": "Вы прошли весь путь 🎉",
+  "believe_final_great_job": "Отличная работа!",
+  "believe_final_done": "Готово",
+  "believe_final_congrats": "Поздравляем!",
+  "believe_final_description": "Вы честно разобрали свою мысль, нашли доказательства и посмотрели на ситуацию по-новому. Это непросто — и вы это сделали.",
+  "believe_final_finish": "Закончить",
+  "believe_final_your_result": "Ваш результат",
+  "believe_final_at_start": "В начале",
+  "believe_final_now": "Сейчас",
+  "believe_final_decrease": "Снижение на {count} {count, plural, one{пункт} few{пункта} many{пунктов} other{пункта}}",
+  "@believe_final_decrease": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "believe_final_increase": "Рост на {count} {count, plural, one{пункт} few{пункта} many{пунктов} other{пункта}}",
+  "@believe_final_increase": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "believe_final_decrease_desc": "Вера в мысль упала с {from} до {to}",
+  "@believe_final_decrease_desc": {
+    "placeholders": {
+      "from": {
+        "type": "int"
+      },
+      "to": {
+        "type": "int"
+      }
+    }
+  },
+  "believe_final_increase_desc": "Вера в мысль выросла с {from} до {to}",
+  "@believe_final_increase_desc": {
+    "placeholders": {
+      "from": {
+        "type": "int"
+      },
+      "to": {
+        "type": "int"
+      }
+    }
   }
 }

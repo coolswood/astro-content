@@ -1,241 +1,265 @@
-import type { Page, Browser } from 'puppeteer-core';
-import type { AIProvider, ProviderType } from '../types.js';
-import { connectToBrowser, safeGoto } from '../gemini-client.js';
-import { safeParseAIJson } from '../bot-utils.js';
+import type { Page } from 'puppeteer-core';
+import type { ProviderType } from '../types.js';
+import { BasePuppeteerProvider } from './base-puppeteer-provider.js';
+import { sleep, retryAction } from '../puppeteer-core.js';
 
-
-export class ChatGPTProvider implements AIProvider {
+/**
+ * ChatGPT Provider — https://chatgpt.com/?temporary-chat=true
+ *
+ * Переписан на базовый класс. Селекторы и логика Continue-generating
+ * сохранены 1:1, перенесены в хуки.
+ *
+ * Чинит:
+ *   - drift интерфейса (раньше sessionId/intelligenceLevel молча игнорировались);
+ *   - утекавшие страницы при shouldStartNewChat (close() в try/catch без учёта);
+ *   - дублированную JSON-репеяровку.
+ */
+export class ChatGPTProvider extends BasePuppeteerProvider {
   type: ProviderType = 'chatgpt';
-  private browser!: Browser;
-  private page!: Page;
+  protected startUrl = 'https://chatgpt.com/?temporary-chat=true';
+  protected inputSelector = '#prompt-textarea';
+  protected sendButtonSelector =
+    'button[data-testid="send-button"], button[data-testid="fruitjuice-send-button"], #composer-submit-button';
+  protected responseSelector = '.markdown';
+  protected minResponseLength = 5;
+  protected settleMs = 2000;
 
-  async init() {
-    this.browser = await connectToBrowser();
-    this.page = await this.browser.newPage();
-    // Use temporary chat as requested by the user
-    await safeGoto(this.page, 'https://chatgpt.com/?temporary-chat=true');
+  /**
+   * Новый чат ChatGPT: повторная навигация на temporary-chat URL.
+   *
+   * Ранее прежняя версия закрывала и пересоздавала страницу (page.close() +
+   * browser.newPage()). На базовом классе это сломалось: SessionManager владеет
+   * страницей, и после close() последующий bringToFront падал с TargetCloseError.
+   * Повторное открытие ?temporary-chat=true сбрасывает чат-сессию等效но
+   * пересозданию, но безопасно для SessionManager.
+   */
+  protected async resetForNewChat(page: Page): Promise<void> {
+    await this.navigate(page, this.startUrl);
   }
 
-  private lock: Promise<any> = Promise.resolve();
+  protected async insertPrompt(page: Page, selector: string, text: string): Promise<void> {
+    // ChatGPT composer — это ProseMirror-contenteditable (#prompt-textarea, не
+    // настоящий <textarea>). Дефолтная insertPrompt базового класса делает
+    // execCommand('insertText') с фолбеком — это рабочий путь. Дополнительная
+    // активация send-кнопки (Space+Backspace) выполняется в triggerSendButton
+    // базового runInteraction, поэтому здесь не дублируем.
+    await super.insertPrompt(page, selector, text);
+  }
 
-  async interact(
-    prompt: string,
-    options?: { model?: string; intelligenceLevel?: 1 | 2 | 3; shouldStartNewChat?: boolean },
-  ): Promise<string> {
-    const previousLock = this.lock;
-
-    const currentLock = previousLock.then(async () => {
-      if (options?.shouldStartNewChat) {
-        console.log('🔄 Starting new chat on ChatGPT (recreating page)...');
-        try {
-          await this.page.close();
-        } catch (e) {
-          // Ignore if page is already closed or invalid
+  protected async clickSend(page: Page, selector: string): Promise<void> {
+    // ChatGPT: send-кнопка появляется в DOM только ПОСЛЕ ввода текста, поэтому
+    // ждём её с разумным таймаутом. Клик через evaluate (как в прежней версии).
+    await retryAction(() => page.waitForSelector(selector, { timeout: 15000 }));
+    await page.evaluate((sel) => {
+      const btn = document.querySelector(sel) as HTMLButtonElement | null;
+      if (btn) {
+        if (btn.disabled) {
+          console.log('Send button disabled, force-clicking...');
         }
-        this.page = await this.browser.newPage();
-        await safeGoto(this.page, 'https://chatgpt.com/?temporary-chat=true');
+        btn.click();
       }
+    }, selector);
+  }
 
+  /**
+   * Закрывает прерывающий модал ChatGPT: rate-limit («слишком много запросов»),
+   * onboarding, consent и т.п. Чинит сценарий, когда модал блокирует старт
+   * генерации после отправки промпта.
+   *
+   * Механика: краткий опрос (до 5с) на появление видимого [role="dialog"] или
+   * контейнера с типичным текстом rate-limit. Если нашли — кликаем кнопку
+   * подтверждения по приоритетному списку типичных подписей (Got it / Continue /
+   * OK / Понятно / Продолжить / Try again / Повторить и т.д.). После клика
+   * короткая пауза, чтобы UI пришёл в норму.
+   */
+  protected async dismissInterruptingModal(page: Page): Promise<void> {
+    const RATE_LIMIT_RE = /слишком много|too many|rate limit|сообщений за|messages per hour|в час|try again|повторите|try again later|per hour/i;
+    // Приоритетный список подписей кнопок «принять и продолжить».
+    const CONFIRM_LABELS = [
+      'got it', 'понятно', 'ok', 'ок', 'accept', 'принять', 'i agree', 'continue',
+      'продолжить', 'try again', 'повторить', 'retry', 'dismiss', 'закрыть', 'close',
+      'understood', 'ясно', 'sure', 'конечно',
+    ];
 
-      // Ensure the tab is active
-      await this.page.bringToFront();
+    // Опрос до 5 секунд с шагом 500мс.
+    for (let attempt = 0; attempt < 10; attempt++) {
+      const clicked = await page.evaluate((rateReSrc, confirmLabels) => {
+        const rateRe = new RegExp(rateReSrc, 'i');
+        // Кандидаты: видимые диалоги ИЛИ любой видимый контейнер с rate-limit-текстом.
+        const dialogs = Array.from(
+          document.querySelectorAll('[role="dialog"], [role="alertdialog"]'),
+        ).filter((e) => (e as HTMLElement).offsetWidth > 0);
 
-      const inputSelector = '#prompt-textarea';
-      await this.page.waitForSelector(inputSelector);
+        // Тело страницы — для rate-limit, который может быть не в role=dialog.
+        const bodyText = (document.body.innerText || '').toLowerCase();
+        const isRateLimit = rateRe.test(bodyText);
 
-      // Focus first
-      await this.page.focus(inputSelector);
+        // Если диалога нет и это не rate-limit — ничего не делаем.
+        if (dialogs.length === 0 && !isRateLimit) return null;
 
-      // Type prompt
-      console.log(`⌨️ Inserting prompt to ChatGPT (${prompt.length} chars)...`);
-      
-      // Using execCommand for better compatibility with rich-text editors
-      await this.page.evaluate(
-        (sel, text) => {
-          const el = document.querySelector(sel) as HTMLElement;
-          if (el) {
-            el.focus();
-            // Clear prefix if any
-            el.innerText = '';
-            document.execCommand('insertText', false, text);
-            el.dispatchEvent(new Event('input', { bubbles: true }));
-          }
-        },
-        inputSelector,
-        prompt,
-      );
-
-      // ChatGPT often needs some input events to enable the send button
-      await this.page.focus(inputSelector);
-      await this.page.keyboard.press('Space');
-      await this.page.keyboard.press('Backspace');
-      
-      // Wait a bit for UI to enable the button
-      await new Promise(r => setTimeout(r, 500));
-
-      const sendBtnSelector = 'button[data-testid="send-button"], button[data-testid="fruitjuice-send-button"], #composer-submit-button';
-      await this.page.waitForSelector(sendBtnSelector);
-      
-      const initialTurnCount = await this.page.evaluate(() => document.querySelectorAll('.markdown').length);
-      console.log(`📊 Initial turn count (markdowns): ${initialTurnCount}`);
-
-      console.log('🚀 Clicking send button...');
-      
-      // More robust click: wait for enabled and use evaluate as fallback
-      await this.page.evaluate((selector) => {
-        const btn = document.querySelector(selector) as HTMLButtonElement;
-        if (btn) {
-          // If it's disabled, try to force-enable it or just wait
-          if (btn.disabled) {
-            console.log('Button is disabled, trying to wait or force click...');
-          }
-          btn.click();
-        }
-      }, sendBtnSelector);
-
-      console.log('⌛ Waiting for ChatGPT response...');
-
-      try {
-        console.log('⏳ Stage 1: Waiting for generation to START (.markdown count increased)...');
-        await this.page
-          .waitForFunction(
-            (initialCount) => {
-              const markdowns = document.querySelectorAll('.markdown');
-              return markdowns.length > initialCount;
-            },
-            { timeout: 30000 },
-            initialTurnCount,
-          )
-          .catch(() =>
-            console.log(
-              '⚠️ Could not confirm start within 30s, proceeding to check response...',
-            ),
+        // Сначала ищем кнопку внутри диалогов, затем — любую видимую с нужной подписью.
+        const searchRoots = dialogs.length ? dialogs : [document.body];
+        for (const root of searchRoots) {
+          const buttons = Array.from(root.querySelectorAll('button')).filter(
+            (b) => (b as HTMLElement).offsetWidth > 0,
           );
-
-        console.log('✅ Stage 2: Generation confirmed started. Waiting for text stability...');
-
-        let previousLength = 0;
-        let stableSeconds = 0;
-        const maxSeconds = 300; // 5 minutes max per chunk
-
-        for (let sec = 0; sec < maxSeconds; sec++) {
-          await new Promise((r) => setTimeout(r, 1000));
-
-          const state = await this.page.evaluate((initialCount) => {
-            const markdowns = document.querySelectorAll('.markdown');
-            const latest =
-              markdowns.length > initialCount
-                ? (markdowns[markdowns.length - 1] as HTMLElement)
-                : null;
-            const length = latest ? latest.innerText.length : 0;
-
-            const buttons = Array.from(document.querySelectorAll('button'));
-
-            // 1. Check and click "Continue generating"
-            const continueBtn = buttons.find((b) => {
-              const label = (b.getAttribute('aria-label') || '').toLowerCase();
-              const text = (b.innerText || '').toLowerCase();
-              return (
-                label.includes('continue') ||
-                label.includes('продолжить') ||
-                text.includes('continue') ||
-                text.includes('продолжить')
-              );
+          for (const label of confirmLabels) {
+            const match = buttons.find((b) => {
+              const text = (b.innerText || '').trim().toLowerCase();
+              const aria = (b.getAttribute('aria-label') || '').toLowerCase();
+              return text === label || text.includes(label) || aria.includes(label);
             });
-
-            if (continueBtn && (continueBtn as HTMLElement).offsetWidth > 0) {
-              (continueBtn as HTMLElement).click();
-              return { length, isGenerating: true, clickedContinue: true, hasCopyButton: false };
+            if (match) {
+              const text = (match.innerText || '').trim() || match.getAttribute('aria-label') || 'button';
+              (match as HTMLElement).click();
+              return { clicked: text };
             }
-
-            // 2. Check for stop-button or fruitjuice-stop-button
-            const stopBtn = buttons.find((b) => {
-              const testid = b.getAttribute('data-testid');
-              const label = (b.getAttribute('aria-label') || '').toLowerCase();
-              return (
-                testid === 'stop-button' ||
-                testid?.includes('stop') ||
-                label.includes('остановить') ||
-                label.includes('stop')
-              );
-            });
-            const isGenerating = !!(stopBtn && (stopBtn as HTMLElement).offsetWidth > 0);
-
-            // 3. Check for copy-turn-action-button in the last turn
-            let hasCopyButton = false;
-            if (latest) {
-              const lastTurn =
-                latest.closest('[data-testid^="conversation-turn-"]') ||
-                latest.parentElement;
-              if (lastTurn && lastTurn.querySelector('[data-testid="copy-turn-action-button"]')) {
-                hasCopyButton = true;
-              }
-            }
-
-            return { length, isGenerating, clickedContinue: false, hasCopyButton };
-          }, initialTurnCount);
-
-          if (state.clickedContinue) {
-            console.log('🔄 Detected and clicked "Continue generating" button.');
-            stableSeconds = 0;
-            previousLength = state.length;
-            continue;
-          }
-
-          if (state.length !== previousLength) {
-            stableSeconds = 0;
-            previousLength = state.length;
-          } else if (state.length > 0) {
-            stableSeconds++;
-          }
-
-          if (state.length > 0) {
-            if (state.hasCopyButton && stableSeconds >= 2) {
-              console.log('🏁 ChatGPT Copy button detected. Generation finished.');
-              break;
-            }
-            if (!state.isGenerating && stableSeconds >= 4) {
-              console.log(`🏁 ChatGPT text stable for ${stableSeconds}s and no Stop button. Generation finished.`);
-              break;
-            }
-          }
-
-          if (sec % 10 === 0) {
-            console.log(
-              `⏳ ChatGPT generating... text length: ${state.length} chars (stable for ${stableSeconds}s, active generation: ${state.isGenerating})`,
-            );
           }
         }
+        // Диалог/rate-limit есть, но подходящей кнопки не нашли — вернём флаг,
+        // чтобы продолжить опрос (кнопка может появиться позже).
+        return { waiting: true };
+      }, RATE_LIMIT_RE.source, CONFIRM_LABELS);
 
-        await new Promise((r) => setTimeout(r, 2000));
-      } catch (e: any) {
-        console.warn(`⚠️ Error waiting for ChatGPT response: ${e.message}. Attempting to read current state.`);
+      if (clicked && 'clicked' in clicked && clicked.clicked) {
+        console.log(`🔔 Закрыт прерывающий модал ChatGPT (клик: "${clicked.clicked}").`);
+        await sleep(1500); // дать UI прийти в норму после клика
+        return;
       }
+      if (!clicked) {
+        // Модала нет — выходим сразу.
+        return;
+      }
+      // clicked.waiting === true — кнопка ещё не появилась, продолжаем опрос.
+      await sleep(500);
+    }
+    // Истекли 5с, модал ещё есть, но кнопку не нашли — предупреждаем и идём дальше
+    // (waitForGenerationStart/Complete сообщат о реальном состоянии).
+    console.warn('⚠️ Обнаружен прерывающий модал ChatGPT, но кнопка подтверждения не найдена за 5с.');
+  }
 
-      const responseText = await this.page.evaluate(() => {
-        const responses = document.querySelectorAll('.markdown');
-        if (responses.length === 0) return '';
-        // Get the last one
-        return (responses[responses.length - 1] as HTMLElement).innerText;
+  protected async waitForGenerationStart(page: Page): Promise<void> {
+    // Старт генерации = появилась stop-кнопка (явный сигнал, что модель работает).
+    // Ранее использовалось «markdown count увеличился», но это ненадёжно:
+    // welcome-ассистент уже даёт .markdown, и счётчик захватывается неверно.
+    console.log('⏳ Waiting for ChatGPT stop-button (generation start)...');
+    try {
+      await page.waitForFunction(
+        () => {
+          // Stop-button: data-testid содержит 'stop' или aria-label 'stop/остановить'.
+          const stop = Array.from(document.querySelectorAll('button')).find((b) => {
+            const t = b.getAttribute('data-testid') || '';
+            const a = (b.getAttribute('aria-label') || '').toLowerCase();
+            return t.includes('stop') || a.includes('stop') || a.includes('остановить');
+          });
+          return !!(stop && (stop as HTMLElement).offsetWidth > 0);
+        },
+        { timeout: 30000, polling: 500 },
+      );
+      console.log('✅ Generation started (stop-button visible).');
+    } catch {
+      // Возможно, ответ очень короткий и stop-button не успел появиться —
+      // это ОК, продолжаем к waitForGenerationComplete.
+      console.log('ℹ️ Stop-button не появился за 30с — возможно, очень быстрый ответ.');
+    }
+  }
+
+  protected async waitForGenerationComplete(page: Page): Promise<void> {
+    // Завершение = stop-кнопка ИСЧЕЗЛА (или появилась copy-кнопка/новый turn).
+    // polling с Continue-generating handling.
+    let previousLength = 0;
+    let stableSeconds = 0;
+    const maxSeconds = 300;
+
+    for (let sec = 0; sec < maxSeconds; sec++) {
+      await sleep(1000);
+
+      const state = await page.evaluate(() => {
+        const markdowns = document.querySelectorAll('.markdown');
+        // Берём последний markdown (текущий ответ).
+        const latest =
+          markdowns.length > 0
+            ? (markdowns[markdowns.length - 1] as HTMLElement)
+            : null;
+        const length = latest ? latest.innerText.length : 0;
+
+        const buttons = Array.from(document.querySelectorAll('button'));
+
+        // Continue-generating: кликаем, если видим.
+        const continueBtn = buttons.find((b) => {
+          const label = (b.getAttribute('aria-label') || '').toLowerCase();
+          const text = (b.innerText || '').toLowerCase();
+          return (
+            label.includes('continue') ||
+            label.includes('продолжить') ||
+            text.includes('continue') ||
+            text.includes('продолжить')
+          );
+        });
+        if (continueBtn && (continueBtn as HTMLElement).offsetWidth > 0) {
+          (continueBtn as HTMLElement).click();
+          return { length, isGenerating: true, clickedContinue: true, hasCopyButton: false };
+        }
+
+        // Stop-button — главный признак «ещё генерирует».
+        const stopBtn = buttons.find((b) => {
+          const testid = b.getAttribute('data-testid') || '';
+          const label = (b.getAttribute('aria-label') || '').toLowerCase();
+          return (
+            testid.includes('stop') ||
+            label.includes('stop') ||
+            label.includes('остановить')
+          );
+        });
+        const isGenerating = !!(stopBtn && (stopBtn as HTMLElement).offsetWidth > 0);
+
+        // Copy button в последнем ответе — признак завершённого turn'а.
+        let hasCopyButton = false;
+        if (latest) {
+          const lastTurn =
+            latest.closest('[data-testid^="conversation-turn-"]') || latest.parentElement;
+          if (lastTurn && lastTurn.querySelector('[data-testid^="copy-turn"]')) {
+            hasCopyButton = true;
+          }
+        }
+        return { length, isGenerating, clickedContinue: false, hasCopyButton };
       });
 
-      if (!responseText || responseText.length < 5) {
-        throw new Error('Empty or too short response from ChatGPT');
+      if (state.clickedContinue) {
+        console.log('🔄 Detected and clicked "Continue generating".');
+        stableSeconds = 0;
+        previousLength = state.length;
+        continue;
       }
 
-      return responseText;
-    });
+      if (state.length !== previousLength) {
+        stableSeconds = 0;
+        previousLength = state.length;
+      } else if (state.length > 0) {
+        stableSeconds++;
+      }
 
-    this.lock = currentLock.catch(() => {});
-    return currentLock;
-  }
+      // Завершение: stop-кнопка исчезла И есть содержимое.
+      // Раньше требовалось ещё length>0 + стабильность — но если stop исчез,
+      // генерация точно завершена, читаем что есть.
+      if (state.length > 0 && !state.isGenerating) {
+        console.log(
+          `🏁 ChatGPT finished (length ${state.length}, no stop-button).`,
+        );
+        return;
+      }
+      // Доп. быстрый выход через copy-button при стабильности.
+      if (state.hasCopyButton && stableSeconds >= 2 && state.length > 0) {
+        console.log('🏁 ChatGPT Copy button detected. Generation finished.');
+        return;
+      }
 
-  async parseJson<T>(text: string): Promise<T> {
-    return safeParseAIJson<T>(text);
-  }
-
-  async close() {
-    if (this.page) await this.page.close();
-    if (this.browser) await this.browser.disconnect();
+      if (sec % 10 === 0) {
+        console.log(
+          `⏳ ChatGPT generating... length: ${state.length} (stable ${stableSeconds}s, generating: ${state.isGenerating})`,
+        );
+      }
+    }
+    console.warn('⚠️ ChatGPT stability loop: max time reached.');
   }
 }

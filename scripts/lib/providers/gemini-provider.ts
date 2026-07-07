@@ -1,71 +1,115 @@
+import type { Page } from 'puppeteer-core';
+import type {
+  AIProvider,
+  IntelligenceLevel,
+  InteractOptions,
+  ParseJsonOptions,
+  ProviderType,
+} from '../types.js';
+import { connectToBrowser, safeGoto, sleep } from '../puppeteer-core.js';
+import { SessionManager } from '../async-lock.js';
+import { parseWithRepair } from '../json-repair.js';
+import {
+  interactWithGemini,
+  parseGeminiJson,
+} from '../gemini-client.js';
 
-import type { Page, Browser } from 'puppeteer-core';
-import type { AIProvider, ProviderType } from '../types.js';
-import { connectToBrowser, interactWithGemini, parseGeminiJson } from '../gemini-client.js';
-
+/**
+ * Gemini Provider — https://gemini.google.com/app
+ *
+ * Сохраняет delegation к interactWithGemini/parseGeminiJson (сложная логика
+ * выбора модели, thinking-panel), но оборачивает ВСЕ обращения к странице
+ * в единый SessionManager.
+ *
+ * Чинит CRITICAL-гонку: прежде parseJson вызывал interactWithGemini напрямую,
+ * обходя лок — параллельный interact и self-heal ломали друг друга на одной
+ * странице. Теперь interact и parseJson идут через withSession(sessionId),
+ * который сериализует их одним локом на сессию.
+ *
+ * Также реализует настоящую мульти-сессию (stage1/stage2/...), в отличие от
+ * остальных провайдеров (те используют 'default').
+ */
 export class GeminiProvider implements AIProvider {
   type: ProviderType = 'gemini';
-  private browser!: Browser;
-  private pages: Map<string, Page> = new Map();
-  private locks: Map<string, Promise<any>> = new Map();
+  private browser!: import('puppeteer-core').Browser;
+  private sessions!: SessionManager;
 
-  async init() {
+  async init(): Promise<void> {
     this.browser = await connectToBrowser();
-    const page = await this.browser.newPage();
-    await page.goto('https://gemini.google.com/app', {
-      waitUntil: 'networkidle2',
-    });
-    this.pages.set('default', page);
+    this.sessions = new SessionManager(() => this.createPage());
+    // Предсоздаём default-страницу для единообразия.
+    await this.sessions.withSession('default', async () => {});
   }
 
-  async interact(prompt: string, options?: { model?: string; intelligenceLevel?: 1 | 2 | 3; shouldStartNewChat?: boolean; sessionId?: string }): Promise<string> {
-    const sessionId = options?.sessionId || 'default';
-    const previousLock = this.locks.get(sessionId) || Promise.resolve();
+  private async createPage(): Promise<Page> {
+    const page = await this.browser.newPage();
+    await safeGoto(page, 'https://gemini.google.com/app');
+    return page;
+  }
 
-    const currentLock = previousLock.then(async () => {
-      let page = this.pages.get(sessionId);
-      
-      if (!page) {
-        console.log(`🆕 Creating new session page for: ${sessionId}`);
-        page = await this.browser.newPage();
-        await page.goto('https://gemini.google.com/app', {
-          waitUntil: 'networkidle2',
-        });
-        this.pages.set(sessionId, page);
-      }
+  /** Преобразует уровень интеллекта в ключевое слово модели для interactWithGemini. */
+  private modelKeywordFromLevel(level?: IntelligenceLevel): string {
+    switch (level) {
+      case 1:
+        return 'Быстрая';
+      case 2:
+        return 'Думающая';
+      case 3:
+        return 'Pro';
+      default:
+        return 'Pro';
+    }
+  }
 
-      let modelName = options?.model || 'Pro';
-      
-      if (options?.intelligenceLevel) {
-        switch (options.intelligenceLevel) {
-          case 1: modelName = 'Быстрая'; break;
-          case 2: modelName = 'Думающая'; break;
-          case 3: modelName = 'Pro'; break;
-        }
-      }
+  async interact(
+    prompt: string,
+    options: InteractOptions = {},
+  ): Promise<string> {
+    const sessionId = options.sessionId ?? 'default';
+    const modelName =
+      options.model ||
+      this.modelKeywordFromLevel(options.intelligenceLevel);
 
+    return this.sessions.withSession(sessionId, async ({ page }) => {
+      // interactWithGemini сама управляет shouldStartNewChat и ретраями.
       return interactWithGemini(
         page,
         prompt,
         modelName,
-        options?.shouldStartNewChat || false
+        options.shouldStartNewChat ?? false,
       );
     });
-
-    this.locks.set(sessionId, currentLock.catch(() => {}));
-    return currentLock;
   }
 
-  async parseJson<T>(text: string, options?: { sessionId?: string }): Promise<T> {
-    const sessionId = options?.sessionId || 'default';
-    const page = this.pages.get(sessionId);
-    return parseGeminiJson<T>(text, page, 'Pro');
+  async parseJson<T>(text: string, options?: ParseJsonOptions): Promise<T> {
+    const sessionId = options?.sessionId ?? 'default';
+    // Берём страницу сессии (если есть) под локом — для self-heal'а Gemini.
+    return this.sessions.withSession(sessionId, async ({ page }) => {
+      // Сначала обычный парсинг с восстановлением (без обращения к модели).
+      try {
+        return await parseWithRepair<T>(text);
+      } catch {
+        // Падаем в self-heal: просим модель в той же сессии исправить JSON.
+        // Это идёт ВНУТРИ лока сессии — гонки с interact больше нет.
+        console.log('⚠️ JSON не распарсился. Просим Gemini исправить в той же сессии...');
+        return parseGeminiJson<T>(text, page, 'Pro');
+      }
+    });
   }
 
-  async close() {
-    for (const page of this.pages.values()) {
-      await page.close();
+  async close(): Promise<void> {
+    for (const page of this.sessions.pages()) {
+      try {
+        await page.close();
+      } catch {
+        // страница уже закрыта
+      }
     }
     if (this.browser) await this.browser.disconnect();
+    // sleep нужен для аккуратного освобождения; сохраняем прежнее поведение.
+    await sleep(0);
   }
 }
+
+// Экспортируем AIProvider для обратной совместимости импортов.
+export type { AIProvider };

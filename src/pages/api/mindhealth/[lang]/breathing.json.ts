@@ -15,6 +15,8 @@ interface TranslationPractice {
     inhale?: string;
     exhale?: string;
     hold?: string;
+    /** Подпись для довдоха (вторая фаза вдоха в паттернах вроде «2-1-6»). */
+    inhale_extra?: string;
   };
 }
 
@@ -50,6 +52,17 @@ const PRACTICES_TEMPLATE = [
       { type: 'holdIn', duration: 2 },
       { type: 'exhale', duration: 6, breathingWay: 'mouth' }
     ]
+  },
+  {
+    // Перезагрузка: физиологический вздох «2-1-6» — два вдоха (2с + 1с довдох),
+    // затем длинный выдох 6с. Обе фазы вдоха имеют type 'inhale' (без нового
+    // типа фазы); подпись довдоха берётся из phaseNames.inhale_extra, если задана.
+    id: 'reset',
+    phases: [
+      { type: 'inhale', duration: 2, breathingWay: 'nose' },
+      { type: 'inhale', duration: 1, breathingWay: 'nose' },
+      { type: 'exhale', duration: 6, breathingWay: 'mouth' }
+    ]
   }
 ];
 
@@ -74,7 +87,12 @@ export const GET: APIRoute = async ({ params }) => {
   const responseData = PRACTICES_TEMPLATE.map((practice) => {
     const translation = translations[practice.id] || {} as TranslationPractice;
     const phaseNames = translation.phaseNames || {};
-    
+
+    // Счётчик inhale-фаз, чтобы отличать основной вдох (1-й) от довдоха (2-й)
+    // в паттернах вроде «2-1-6». Для 2-го вдоха берём phaseNames.inhale_extra,
+    // если оно задано; иначе — обычное phaseNames.inhale.
+    let inhaleIndex = 0;
+
     return {
       id: practice.id,
       name: translation.name || '',
@@ -85,13 +103,18 @@ export const GET: APIRoute = async ({ params }) => {
       phases: practice.phases.map((phase) => {
         let name = '';
         if (phase.type === 'inhale') {
-          name = phaseNames.inhale || '';
+          inhaleIndex++;
+          if (inhaleIndex === 2 && phaseNames.inhale_extra) {
+            name = phaseNames.inhale_extra;
+          } else {
+            name = phaseNames.inhale || '';
+          }
         } else if (phase.type === 'exhale') {
           name = phaseNames.exhale || '';
         } else if (phase.type === 'holdIn' || phase.type === 'holdOut') {
           name = phaseNames.hold || '';
         }
-        
+
         return {
           type: phase.type,
           duration: phase.duration,
