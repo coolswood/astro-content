@@ -44,6 +44,9 @@ export abstract class BasePuppeteerProvider implements AIProvider {
   protected minResponseLength = 5;
   /** Пауза после завершения генерации перед чтением (мс). */
   protected settleMs = 2000;
+  /** Пауза после resetForNewChat перед использованием страницы (мс). Дать SPA
+   *  время полностью отрендерить composer. */
+  protected postResetSettleMs = 3000;
 
   protected browser!: Browser;
   /** Менеджер сессий: сериализует interact и parseJson на одной странице. */
@@ -89,6 +92,10 @@ export abstract class BasePuppeteerProvider implements AIProvider {
     if (options.shouldStartNewChat) {
       console.log(`🔄 Starting new chat on ${this.type}...`);
       await this.resetForNewChat(page);
+      // Дать SPA время полностью отрисовать composer после навигации/сброса.
+      // Без этого waitForSelector(input) срабатывает до того, как редактор
+      // станет интерактивным, и ввод «теряется» (особенно актуально для ChatGPT).
+      await sleep(this.postResetSettleMs);
     }
 
     await page.bringToFront();

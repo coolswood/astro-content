@@ -35,7 +35,7 @@ function parseKeysArgs(): ParsedArgs {
   const { flags, positional } = parseCli();
 
   const provider = normalizeProviderType(
-    flags.provider || flags.adapter || positional[0] || 'gemini',
+    flags.provider || flags.adapter || positional[0] || 'chatgpt',
   );
 
   const excludeStages = parseNumberList(flags.exclude || flags.skip);

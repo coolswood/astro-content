@@ -55,16 +55,19 @@ export function parseCli(argv: string[] = process.argv.slice(2)): ParsedCli {
   return { flags, positional };
 }
 
+/** Дефолтный провайдер для всех entry-point ботов. */
+export const DEFAULT_PROVIDER: ProviderType = 'chatgpt';
+
 /**
  * Нормализует код провайдера из произвольного входа.
- * Возвращает канонический ProviderType; некорректный → 'gemini'.
+ * Возвращает канонический ProviderType; некорректный/пустой → DEFAULT_PROVIDER.
  */
 export function normalizeProviderType(raw: string): ProviderType {
   const lower = String(raw ?? '').toLowerCase();
   if (lower === 'chatgpt' || lower === 'claude' || lower === 'mistral' || lower === 'gemini') {
     return lower;
   }
-  return 'gemini';
+  return DEFAULT_PROVIDER;
 }
 
 /**

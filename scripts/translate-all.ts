@@ -18,7 +18,7 @@ import type { AIProvider } from './lib/types.js';
 async function main() {
   const { flags, positional } = parseCli();
   const file = flags.file || positional[0] || 'breathing.json';
-  const providerType = normalizeProviderType(flags.provider || positional[1] || 'gemini');
+  const providerType = normalizeProviderType(flags.provider || positional[1] || 'chatgpt');
 
   // Пробрасываем опциональные флаги в simple-bot (раньше они молча терялись).
   const forwardFlags: string[] = ['--file', file, '--provider', providerType];
