@@ -43,8 +43,8 @@ interface ParsedArgs {
 }
 
 /**
- * Парсит аргументы translate-keys, опираясь на общий parseCli (раньше был
- * собственный цикл — дубликат parseBotArgs/translate-all.parseArgs).
+ * Парсит аргументы translate-arb, опираясь на общий parseCli (раньше был
+ * собственный цикл — дубликат parseBotArgs/translate-file-all.parseArgs).
  */
 function parseKeysArgs(): ParsedArgs {
   const { flags, positional } = parseCli();

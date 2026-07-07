@@ -6,21 +6,21 @@ import type { AIProvider } from './lib/types.js';
 /**
  * Переводит один файл на все языки (src/i18n/*).
  *
- * Раньше порождал subprocess `bun gemini-simple-bot.ts` на каждый язык
- * (spawnSync) — это означало O(languages) холодных переподключений к Chrome,
- * перезагрузку промптов, блокирующий вызов. Теперь: один провайдер на весь
- * прогон, in-process вызов processFile через gemini-simple-bot.
+ * Раньше порождал subprocess на каждый язык (spawnSync) — это означало
+ * O(languages) холодных переподключений к Chrome, перезагрузку промптов,
+ * блокирующий вызов. Теперь: один провайдер на весь прогон, in-process вызов
+ * processFile через translate-file.
  *
  * Использование:
- *   bun scripts/translate-all.ts story/automatic.json --provider chatgpt
- *   bun scripts/translate-all.ts story/automatic.json --exclude 2,3
+ *   bun scripts/translate-file-all.ts story/automatic.json --provider chatgpt
+ *   bun scripts/translate-file-all.ts story/automatic.json --exclude 2,3
  */
 async function main() {
   const { flags, positional } = parseCli();
   const file = flags.file || positional[0] || 'breathing.json';
   const providerType = normalizeProviderType(flags.provider || positional[1] || 'chatgpt');
 
-  // Пробрасываем опциональные флаги в simple-bot (раньше они молча терялись).
+  // Пробрасываем опциональные флаги в translate-file (раньше они молча терялись).
   const forwardFlags: string[] = ['--file', file, '--provider', providerType];
   if (flags.exclude || flags.skip) forwardFlags.push('--exclude', flags.exclude || flags.skip!);
   if (flags.modes || flags.levels) forwardFlags.push('--modes', flags.modes || flags.levels!);
@@ -46,9 +46,9 @@ async function main() {
       const lang = langs[i];
       console.log(`\n⏳ [${i + 1}/${langs.length}] Перевод на язык "${lang}"...`);
       try {
-        // processFile — внутренняя функция gemini-simple-bot; импортируем её,
+        // processFile — экспортируемая функция translate-file; импортируем её,
         // чтобы не плодить subprocess и переиспользовать провайдера.
-        const { processFile } = await import('./gemini-simple-bot.js');
+        const { processFile } = await import('./translate-file.js');
         const processed = await processFile(file, lang, provider);
         if (processed) {
           console.log(`✅ Успешно переведено на "${lang}"`);

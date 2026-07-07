@@ -8,7 +8,7 @@ import { createProvider, normalizeProviderType } from './lib/cli.js';
 import type { AIProvider } from './lib/types.js';
 import path from 'path';
 
-/** Экспортируется для translate-all.ts (in-process вызов вместо subprocess). */
+/** Экспортируется для translate-file-all.ts (in-process вызов вместо subprocess). */
 export async function processFile(
   fileName: string,
   targetLang: string,

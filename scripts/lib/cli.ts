@@ -3,9 +3,9 @@
  *
  * Раньше:
  *   - парсер --flag value дублировался 3 раза (bot-utils.parseBotArgs,
- *     translate-all.parseArgs, gemini-translate-keys.parseKeysArgs);
+ *     translate-file-all.parseArgs, translate-arb.parseKeysArgs);
  *   - switch фабрики провайдеров дублировался 3 раза
- *     (gemini-simple-bot, gemini-ui-simple-bot, gemini-translate-keys).
+ *     (translate-file, translate-ui, translate-arb).
  *
  * Теперь: один parseCli + один createProvider.
  */
