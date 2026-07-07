@@ -1,42 +1,12 @@
 import fs from 'fs/promises';
 import path from 'path';
 
+// Re-export языковых кодов из единого источника истины (lang-codes),
+// чтобы существующие импорты `from './prompt-loader.js'` продолжали работать.
+export { ALL_TARGET_LANGS, LANG_NAMES } from './lang-codes.js';
+import { ALL_TARGET_LANGS, LANG_NAMES } from './lang-codes.js';
+
 const PROMPTS_DIR = path.join(process.cwd(), 'scripts/prompts');
-
-/**
- * Canonical list of target languages for multi-lang (keys) workflows.
- * Order matters: it is the single source of truth for the {{TARGET_LANGS}}
- * placeholder and for batching in gemini-translate-keys.ts.
- */
-export const ALL_TARGET_LANGS: readonly string[] = [
-  'ar', 'cs', 'de', 'en', 'es', 'fr', 'he', 'id', 'it', 'ja',
-  'ko', 'nl', 'pl', 'pt_BR', 'pt', 'sv', 'tr', 'uk',
-];
-
-/**
- * Human-readable (Russian) names for each target language code.
- * Used to render the {{TARGET_LANGS}} bullet list.
- */
-export const LANG_NAMES: Record<string, string> = {
-  ar: 'Арабский',
-  cs: 'Чешский',
-  de: 'Немецкий',
-  en: 'Английский',
-  es: 'Испанский',
-  fr: 'Французский',
-  he: 'Иврит',
-  id: 'Индонезийский',
-  it: 'Итальянский',
-  ja: 'Японский',
-  ko: 'Корейский',
-  nl: 'Нидерландский',
-  pl: 'Польский',
-  pt_BR: 'Бразильский португальский',
-  pt: 'Португальский',
-  sv: 'Шведский',
-  tr: 'Турецкий',
-  uk: 'Украинский',
-};
 
 /**
  * Loads a base prompt template and injects the language style block.
