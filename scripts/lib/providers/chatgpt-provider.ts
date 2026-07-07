@@ -61,6 +61,83 @@ export class ChatGPTProvider extends BasePuppeteerProvider {
     }, selector);
   }
 
+  /**
+   * Закрывает прерывающий модал ChatGPT: rate-limit («слишком много запросов»),
+   * onboarding, consent и т.п. Чинит сценарий, когда модал блокирует старт
+   * генерации после отправки промпта.
+   *
+   * Механика: краткий опрос (до 5с) на появление видимого [role="dialog"] или
+   * контейнера с типичным текстом rate-limit. Если нашли — кликаем кнопку
+   * подтверждения по приоритетному списку типичных подписей (Got it / Continue /
+   * OK / Понятно / Продолжить / Try again / Повторить и т.д.). После клика
+   * короткая пауза, чтобы UI пришёл в норму.
+   */
+  protected async dismissInterruptingModal(page: Page): Promise<void> {
+    const RATE_LIMIT_RE = /слишком много|too many|rate limit|сообщений за|messages per hour|в час|try again|повторите|try again later|per hour/i;
+    // Приоритетный список подписей кнопок «принять и продолжить».
+    const CONFIRM_LABELS = [
+      'got it', 'понятно', 'ok', 'ок', 'accept', 'принять', 'i agree', 'continue',
+      'продолжить', 'try again', 'повторить', 'retry', 'dismiss', 'закрыть', 'close',
+      'understood', 'ясно', 'sure', 'конечно',
+    ];
+
+    // Опрос до 5 секунд с шагом 500мс.
+    for (let attempt = 0; attempt < 10; attempt++) {
+      const clicked = await page.evaluate((rateReSrc, confirmLabels) => {
+        const rateRe = new RegExp(rateReSrc, 'i');
+        // Кандидаты: видимые диалоги ИЛИ любой видимый контейнер с rate-limit-текстом.
+        const dialogs = Array.from(
+          document.querySelectorAll('[role="dialog"], [role="alertdialog"]'),
+        ).filter((e) => (e as HTMLElement).offsetWidth > 0);
+
+        // Тело страницы — для rate-limit, который может быть не в role=dialog.
+        const bodyText = (document.body.innerText || '').toLowerCase();
+        const isRateLimit = rateRe.test(bodyText);
+
+        // Если диалога нет и это не rate-limit — ничего не делаем.
+        if (dialogs.length === 0 && !isRateLimit) return null;
+
+        // Сначала ищем кнопку внутри диалогов, затем — любую видимую с нужной подписью.
+        const searchRoots = dialogs.length ? dialogs : [document.body];
+        for (const root of searchRoots) {
+          const buttons = Array.from(root.querySelectorAll('button')).filter(
+            (b) => (b as HTMLElement).offsetWidth > 0,
+          );
+          for (const label of confirmLabels) {
+            const match = buttons.find((b) => {
+              const text = (b.innerText || '').trim().toLowerCase();
+              const aria = (b.getAttribute('aria-label') || '').toLowerCase();
+              return text === label || text.includes(label) || aria.includes(label);
+            });
+            if (match) {
+              const text = (match.innerText || '').trim() || match.getAttribute('aria-label') || 'button';
+              (match as HTMLElement).click();
+              return { clicked: text };
+            }
+          }
+        }
+        // Диалог/rate-limit есть, но подходящей кнопки не нашли — вернём флаг,
+        // чтобы продолжить опрос (кнопка может появиться позже).
+        return { waiting: true };
+      }, RATE_LIMIT_RE.source, CONFIRM_LABELS);
+
+      if (clicked && 'clicked' in clicked && clicked.clicked) {
+        console.log(`🔔 Закрыт прерывающий модал ChatGPT (клик: "${clicked.clicked}").`);
+        await sleep(1500); // дать UI прийти в норму после клика
+        return;
+      }
+      if (!clicked) {
+        // Модала нет — выходим сразу.
+        return;
+      }
+      // clicked.waiting === true — кнопка ещё не появилась, продолжаем опрос.
+      await sleep(500);
+    }
+    // Истекли 5с, модал ещё есть, но кнопку не нашли — предупреждаем и идём дальше
+    // (waitForGenerationStart/Complete сообщат о реальном состоянии).
+    console.warn('⚠️ Обнаружен прерывающий модал ChatGPT, но кнопка подтверждения не найдена за 5с.');
+  }
+
   protected async waitForGenerationStart(page: Page): Promise<void> {
     // Старт генерации = появилась stop-кнопка (явный сигнал, что модель работает).
     // Ранее использовалось «markdown count увеличился», но это ненадёжно:

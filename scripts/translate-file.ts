@@ -5,32 +5,73 @@ import { resolveBotPaths, runBotValidation, listJsonFiles, isUncommitted } from 
 import { parseBotArgs } from './lib/bot-utils.js';
 import { runGeminiWorkflow, type WorkflowOptions } from './lib/gemini-workflow.js';
 import { createProvider, normalizeProviderType } from './lib/cli.js';
+import { writeJsonAtomic, readJsonOr } from './lib/atomic-fs.js';
+import { extractMissing, deepMerge } from './lib/json-diff.js';
 import type { AIProvider } from './lib/types.js';
 import path from 'path';
 
-/** Экспортируется для translate-file-all.ts (in-process вызов вместо subprocess). */
+export interface ProcessFileOptions extends Partial<WorkflowOptions> {
+  /** Полный перевод всего файла (перезапись target). По умолчанию false — только недостающие ключи. */
+  full?: boolean;
+}
+
+/**
+ * Обрабатывает один файл: переводит ru-источник на targetLang.
+ *
+ * Режимы:
+ *   - incremental (по умолчанию): сравнивает ru-источник с существующим target,
+ *     переводит ТОЛЬКО недостающие ключи и дополняет target (существующие не трогает).
+ *   - full (--full): переводит файл целиком и перезаписывает target.
+ *
+ * Экспортируется для translate-file-all.ts (in-process вызов вместо subprocess).
+ */
 export async function processFile(
   fileName: string,
   targetLang: string,
   provider: AIProvider,
-  workflowOptions: Partial<WorkflowOptions> = {}
-) {
+  workflowOptions: ProcessFileOptions = {},
+): Promise<boolean> {
   const paths = await resolveBotPaths(fileName, targetLang);
+  const full = workflowOptions.full === true;
 
-  // Skip logic: skip if there are uncommitted changes to avoid overwriting local work.
-  try {
-    await fs.access(paths.targetPath);
-    if (isUncommitted(paths.targetPath)) {
-      console.log(`⏩ Пропуск файла: ${paths.targetPath} (есть незакоммиченные изменения)`);
-      return false; // Indicating file was skipped
+  if (full) {
+    // Полный режим: прежняя skip-логика — не перезаписывать незакоммиченное.
+    try {
+      await fs.access(paths.targetPath);
+      if (isUncommitted(paths.targetPath)) {
+        console.log(`⏩ Пропуск файла: ${paths.targetPath} (есть незакоммиченные изменения)`);
+        return false;
+      }
+      console.log(`♻️ Файл ${paths.targetPath} закоммичен, переводим заново (полный режим)...`);
+    } catch {
+      // Файл не существует — переводим с нуля.
     }
-    console.log(`♻️ Файл ${paths.targetPath} закоммичен или изменен, переводим заново...`);
-  } catch {
-    // File doesn't exist, proceed with translation
   }
 
   console.log(`\n📄 Обработка файла: ${paths.ruPath}`);
   const ruContent = await fs.readFile(paths.ruPath, 'utf-8');
+  const ruJson = JSON.parse(ruContent);
+
+  // Инкрементальный режим: извлечь недостающее поддерево.
+  let existingTarget: Record<string, any> = {};
+  let toTranslate: any = ruJson;
+  if (!full) {
+    existingTarget = await readJsonOr<Record<string, any>>(paths.targetPath, {});
+    const missing = extractMissing(ruJson, existingTarget);
+    if (missing === null) {
+      console.log(`✅ Все ключи уже переведены для ${targetLang} (${paths.targetPath}). Пропуск.`);
+      return false;
+    }
+    const missingLeaves = collectLeavesCount(missing);
+    const totalLeaves = collectLeavesCount(ruJson);
+    console.log(
+      `🔍 Инкрементальный режим: недостает ${missingLeaves}/${totalLeaves} ключей. ` +
+        `Переводим только их и дополним ${paths.targetPath}.`,
+    );
+    toTranslate = missing;
+  } else {
+    console.log(`🔍 Полный режим: переводим весь файл (${collectLeavesCount(ruJson)} ключей).`);
+  }
 
   console.log(`📜 Загрузка промптов для текста (${targetLang})...`);
   let glossary = await loadGlossary(paths.partialGlossaryPath);
@@ -48,36 +89,56 @@ export async function processFile(
 
   const result = await runGeminiWorkflow(
     provider,
-    ruContent,
+    JSON.stringify(toTranslate),
     { main, editor, tech },
-    { 
-      glossaryText, 
+    {
+      glossaryText,
       isUI: false,
       models: {
         stage1: 'Думающая',
         stage2: 'Думающая',
-        stage3: 'Pro'
+        stage3: 'Pro',
       },
-      ...workflowOptions
-    }
+      ...workflowOptions,
+    },
   );
 
-  if (result.status === 'success') {
-    const finalJson = JSON.stringify(result.localizedJson, null, 2);
+  if (result.status === 'success' && result.localizedJson) {
+    let finalJson: Record<string, any>;
+    if (full) {
+      // Полный режим: результат целиком.
+      finalJson = result.localizedJson;
+    } else {
+      // Инкрементальный режим: мерджим переведённое в существующий target.
+      finalJson = deepMerge({ ...existingTarget }, result.localizedJson);
+    }
     console.log(`💾 Сохранение итогового результата: ${paths.targetPath}`);
-    await fs.mkdir(paths.targetDir, { recursive: true });
-    await fs.writeFile(paths.targetPath, finalJson, 'utf-8');
-    return true; // Indicating file was processed
+    await writeJsonAtomic(paths.targetPath, finalJson);
+    return true;
   }
   return false;
+}
+
+/** Считает число листовых путей (для логирования прогресса). */
+function collectLeavesCount(obj: any): number {
+  if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) return 1;
+  let n = 0;
+  for (const k of Object.keys(obj)) n += collectLeavesCount(obj[k]);
+  return n || 1;
 }
 
 async function run() {
   const { fileName, targetLang, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
 
-  const provider: AIProvider = createProvider(normalizeProviderType(providerType));
+  // Флаг --full: полный перевод (по умолчанию — инкрементальный, только недостающие ключи).
+  const fullArg = process.argv.includes('--full') || process.argv.includes('--f');
+  const full = fullArg;
+  console.log(
+    `🔧 Режим: ${full ? 'ПОЛНЫЙ (перезапись target)' : 'ИНКРЕМЕНТАЛЬНЫЙ (только недостающие ключи)'}.`,
+  );
 
+  const provider: AIProvider = createProvider(normalizeProviderType(providerType));
   console.log(`🔗 Инициализация провайдера ${provider.type}...`);
   await provider.init();
 
@@ -94,14 +155,15 @@ async function run() {
             isPersistent: true,
             firstRun: true,
             excludeStages,
-            intelligenceLevels
+            intelligenceLevels,
+            full,
           });
         } catch (err) {
           console.error(`❌ Ошибка при обработке ${file}:`, err);
         }
       }
     } else {
-      await processFile(fileName, targetLang, provider, { excludeStages, intelligenceLevels });
+      await processFile(fileName, targetLang, provider, { excludeStages, intelligenceLevels, full });
     }
 
     runBotValidation(targetLang);

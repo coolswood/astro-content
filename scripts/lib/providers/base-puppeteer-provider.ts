@@ -113,6 +113,10 @@ export abstract class BasePuppeteerProvider implements AIProvider {
     console.log(`🚀 Sending message to ${this.type}...`);
     await this.clickSend(page, this.sendButtonSelector);
 
+    // Закрыть прерывающий модал (rate-limit, onboarding и т.п.), если появился.
+    // По умолчанию no-op; провайдеры с такими модалами (ChatGPT) переопределяют.
+    await this.dismissInterruptingModal(page);
+
     // Ожидание генерации.
     console.log(`⌛ Waiting for ${this.type} response...`);
     await this.waitForGenerationStart(page);
@@ -220,6 +224,15 @@ export abstract class BasePuppeteerProvider implements AIProvider {
 
   /** Хук перед отправкой (выбор модели/режима). По умолчанию no-op. */
   protected async onBeforeSend(_page: Page, _options: InteractOptions): Promise<void> {
+    /* no-op */
+  }
+
+  /**
+   * Закрыть прерывающий модал (rate-limit, onboarding, consent), если он
+   * появился после отправки и блокирует генерацию. По умолчанию no-op;
+   * провайдеры с такими модалами переопределяют (см. ChatGPTProvider).
+   */
+  protected async dismissInterruptingModal(_page: Page): Promise<void> {
     /* no-op */
   }
 

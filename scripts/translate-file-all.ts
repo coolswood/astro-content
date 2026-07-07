@@ -19,11 +19,13 @@ async function main() {
   const { flags, positional } = parseCli();
   const file = flags.file || positional[0] || 'breathing.json';
   const providerType = normalizeProviderType(flags.provider || positional[1] || 'chatgpt');
+  // По умолчанию — инкрементальный (только недостающие ключи); --full — полный перевод.
+  const full = flags.full === 'true' || flags.f === 'true';
 
   // Пробрасываем опциональные флаги в translate-file (раньше они молча терялись).
   const forwardFlags: string[] = ['--file', file, '--provider', providerType];
-  if (flags.exclude || flags.skip) forwardFlags.push('--exclude', flags.exclude || flags.skip!);
-  if (flags.modes || flags.levels) forwardFlags.push('--modes', flags.modes || flags.levels!);
+  if (full) forwardFlags.push('--full');
+  void forwardFlags; // сохранено для документации/возможного subprocess-режима
 
   const i18nDir = path.join(process.cwd(), 'src/i18n');
   const items = await fs.readdir(i18nDir, { withFileTypes: true });
@@ -33,6 +35,7 @@ async function main() {
     .map((item) => item.name);
 
   console.log(`🌍 Перевод файла "${file}" на все языки (${langs.length} шт.):`);
+  console.log(`Режим: ${full ? 'ПОЛНЫЙ' : 'ИНКРЕМЕНТАЛЬНЫЙ (только недостающие ключи)'}`);
   console.log(`Языки: ${langs.join(', ')}`);
   console.log(`Провайдер: ${providerType}\n`);
 
@@ -49,7 +52,7 @@ async function main() {
         // processFile — экспортируемая функция translate-file; импортируем её,
         // чтобы не плодить subprocess и переиспользовать провайдера.
         const { processFile } = await import('./translate-file.js');
-        const processed = await processFile(file, lang, provider);
+        const processed = await processFile(file, lang, provider, { full });
         if (processed) {
           console.log(`✅ Успешно переведено на "${lang}"`);
         } else {
