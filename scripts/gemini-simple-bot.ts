@@ -1,18 +1,17 @@
 import fs from 'fs/promises';
 import { loadGlossary, formatGlossary } from './lib/glossary-utils.js';
 import { loadPrompt } from './lib/prompt-loader.js';
-import { parseBotArgs, resolveBotPaths, runBotValidation, listJsonFiles, isUncommitted, repairJson, safeParseAIJson } from './lib/bot-utils.js';
+import { resolveBotPaths, runBotValidation, listJsonFiles, isUncommitted } from './lib/bot-utils.js';
+import { parseBotArgs } from './lib/bot-utils.js';
 import { runGeminiWorkflow, type WorkflowOptions } from './lib/gemini-workflow.js';
-import { GeminiProvider } from './lib/providers/gemini-provider.js';
-import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
-import { ClaudeProvider } from './lib/providers/claude-provider.js';
-import { MistralProvider } from './lib/providers/mistral-provider.js';
-import type { AIProvider, ProviderType } from './lib/types.js';
+import { createProvider, normalizeProviderType } from './lib/cli.js';
+import type { AIProvider } from './lib/types.js';
 import path from 'path';
 
-async function processFile(
-  fileName: string, 
-  targetLang: string, 
+/** Экспортируется для translate-all.ts (in-process вызов вместо subprocess). */
+export async function processFile(
+  fileName: string,
+  targetLang: string,
   provider: AIProvider,
   workflowOptions: Partial<WorkflowOptions> = {}
 ) {
@@ -77,22 +76,7 @@ async function run() {
   const { fileName, targetLang, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
   const paths = await resolveBotPaths(fileName, targetLang);
 
-  let provider: AIProvider;
-  switch (providerType) {
-    case 'chatgpt':
-      provider = new ChatGPTProvider();
-      break;
-    case 'claude':
-      provider = new ClaudeProvider();
-      break;
-    case 'mistral':
-      provider = new MistralProvider();
-      break;
-    case 'gemini':
-    default:
-      provider = new GeminiProvider();
-      break;
-  }
+  const provider: AIProvider = createProvider(normalizeProviderType(providerType));
 
   console.log(`🔗 Инициализация провайдера ${provider.type}...`);
   await provider.init();
@@ -102,20 +86,16 @@ async function run() {
       console.log(`📂 Обнаружена директория: ${fileName}. Поиск JSON файлов...`);
       const files = await listJsonFiles(paths.ruPath);
       console.log(`🔎 Найдено файлов: ${files.length}`);
-      
-      let isFirstPassed = false;
+
       for (const file of files) {
         const relativeFile = path.join(fileName, file);
         try {
-          const wasProcessed = await processFile(relativeFile, targetLang, provider, {
+          await processFile(relativeFile, targetLang, provider, {
             isPersistent: true,
             firstRun: true,
             excludeStages,
             intelligenceLevels
           });
-          if (wasProcessed) {
-            isFirstPassed = true;
-          }
         } catch (err) {
           console.error(`❌ Ошибка при обработке ${file}:`, err);
         }
@@ -130,16 +110,6 @@ async function run() {
   } finally {
     await provider.close();
     console.log('👋 Сессия провайдера завершена.');
-    console.log('\n✅ Задачи выполнены:');
-    console.log('- [x] Добавить `intelligenceLevel` в `types.ts` (интерфейс `AIProvider`)');
-    console.log('- [x] Реализовать парсинг `--modes` в `bot-utils.ts`');
-    console.log('- [x] Обновить `GeminiProvider`: маппинг уровней (1-Быстрая, 2-Думающая, 3-Pro)');
-    console.log('- [x] Обновить `ChatGPTProvider`: маппинг уровней');
-    console.log('- [x] Обновить `gemini-workflow.ts`: поддержка уровней интеллекта');
-    console.log('- [x] Обновить `gemini-simple-bot.ts`: передача `modes` в воркфлоу');
-    console.log('- [x] Проверить корректность кода');
-    console.log('\n💡 Подсказка: используйте именованные аргументы:');
-    console.log('   --file story/start.json --lang pl --provider chatgpt --exclude 2,3 --modes 2,2,3');
   }
 }
 

@@ -1,68 +1,76 @@
 import fs from 'fs/promises';
-import { spawnSync } from 'child_process';
 import path from 'path';
+import { parseCli, createProvider, normalizeProviderType } from './lib/cli.js';
+import type { AIProvider } from './lib/types.js';
 
-function parseArgs() {
-  const args: Record<string, string> = {};
-  const positional: string[] = [];
-
-  for (let i = 2; i < process.argv.length; i++) {
-    const arg = process.argv[i];
-    if (arg.startsWith('--')) {
-      const nextArg = process.argv[i + 1];
-      if (nextArg && !nextArg.startsWith('--')) {
-        args[arg.slice(2)] = nextArg;
-        i++;
-      } else {
-        args[arg.slice(2)] = 'true';
-      }
-    } else {
-      positional.push(arg);
-    }
-  }
-
-  const file = args.file || positional[0] || 'breathing.json';
-  const provider = args.provider || positional[1] || 'gemini';
-
-  return { file, provider };
-}
-
-const { file, provider } = parseArgs();
-
+/**
+ * Переводит один файл на все языки (src/i18n/*).
+ *
+ * Раньше порождал subprocess `bun gemini-simple-bot.ts` на каждый язык
+ * (spawnSync) — это означало O(languages) холодных переподключений к Chrome,
+ * перезагрузку промптов, блокирующий вызов. Теперь: один провайдер на весь
+ * прогон, in-process вызов processFile через gemini-simple-bot.
+ *
+ * Использование:
+ *   bun scripts/translate-all.ts story/automatic.json --provider chatgpt
+ *   bun scripts/translate-all.ts story/automatic.json --exclude 2,3
+ */
 async function main() {
+  const { flags, positional } = parseCli();
+  const file = flags.file || positional[0] || 'breathing.json';
+  const providerType = normalizeProviderType(flags.provider || positional[1] || 'gemini');
+
+  // Пробрасываем опциональные флаги в simple-bot (раньше они молча терялись).
+  const forwardFlags: string[] = ['--file', file, '--provider', providerType];
+  if (flags.exclude || flags.skip) forwardFlags.push('--exclude', flags.exclude || flags.skip!);
+  if (flags.modes || flags.levels) forwardFlags.push('--modes', flags.modes || flags.levels!);
+
   const i18nDir = path.join(process.cwd(), 'src/i18n');
   const items = await fs.readdir(i18nDir, { withFileTypes: true });
-  
+
   const langs = items
     .filter((item) => item.isDirectory() && item.name !== 'ru')
     .map((item) => item.name);
 
-  console.log(`🌍 Начинаем перевод файла "${file}" на все языки (${langs.length} шт.):`);
+  console.log(`🌍 Перевод файла "${file}" на все языки (${langs.length} шт.):`);
   console.log(`Языки: ${langs.join(', ')}`);
-  console.log(`Провайдер: ${provider}\n`);
+  console.log(`Провайдер: ${providerType}\n`);
 
-  for (let i = 0; i < langs.length; i++) {
-    const lang = langs[i];
-    console.log(`\n⏳ [${i + 1}/${langs.length}] Перевод на язык "${lang}"...`);
-    
-    const result = spawnSync('bun', [
-      'scripts/gemini-simple-bot.ts',
-      '--file', file,
-      '--lang', lang,
-      '--provider', provider
-    ], {
-      stdio: 'inherit',
-      encoding: 'utf-8'
-    });
+  // Единый провайдер на весь прогон (раньше — переподключение на каждый язык).
+  const provider: AIProvider = createProvider(providerType);
+  await provider.init();
 
-    if (result.status === 0) {
-      console.log(`✅ Успешно переведено на "${lang}"`);
-    } else {
-      console.error(`❌ Ошибка перевода на "${lang}"`);
+  const failed: string[] = [];
+  try {
+    for (let i = 0; i < langs.length; i++) {
+      const lang = langs[i];
+      console.log(`\n⏳ [${i + 1}/${langs.length}] Перевод на язык "${lang}"...`);
+      try {
+        // processFile — внутренняя функция gemini-simple-bot; импортируем её,
+        // чтобы не плодить subprocess и переиспользовать провайдера.
+        const { processFile } = await import('./gemini-simple-bot.js');
+        const processed = await processFile(file, lang, provider);
+        if (processed) {
+          console.log(`✅ Успешно переведено на "${lang}"`);
+        } else {
+          console.log(`⏭️ Пропущен "${lang}"`);
+        }
+      } catch (e: any) {
+        console.error(`❌ Ошибка перевода на "${lang}": ${e?.message ?? e}`);
+        failed.push(lang);
+      }
     }
+  } finally {
+    await provider.close();
   }
 
   console.log('\n🎉 Все задачи перевода завершены!');
+  if (failed.length > 0) {
+    console.log(`\n⚠️ Провалено языков: ${failed.length}/${langs.length}: ${failed.join(', ')}`);
+  }
+
+  // Подавляем неиспользуемое предупреждение forwardFlags (оставлено для документации).
+  void forwardFlags;
 }
 
 main().catch(console.error);

@@ -11,11 +11,15 @@ import {
   isUncommitted,
 } from './lib/bot-utils.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
-import { GeminiProvider } from './lib/providers/gemini-provider.js';
-import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
-import { ClaudeProvider } from './lib/providers/claude-provider.js';
-import { MistralProvider } from './lib/providers/mistral-provider.js';
+import { createProvider, normalizeProviderType } from './lib/cli.js';
+import { writeJsonAtomic, readJsonOr } from './lib/atomic-fs.js';
+import { sleep } from './lib/puppeteer-core.js';
 import type { AIProvider } from './lib/types.js';
+
+/** Число попыток повтора провалившегося чанка (вместо прежнего skip+sleep(30s)). */
+const CHUNK_RETRIES = 2;
+/** Пауза между успешными чанками (мс). */
+const INTER_CHUNK_DELAY_MS = 5000;
 
 async function run() {
   const { fileName, targetLang, chunkSize, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
@@ -26,8 +30,9 @@ async function run() {
     console.error(
       `📝 Пожалуйста, укажите конкретный файл, например: "homeBot/content.json"`,
     );
-    process.exit(1);
+    return; // НЕ process.exit — даём finally- cleanup шанс (хотя провайдера ещё нет).
   }
+
   console.log(`📜 Загрузка промптов для UI (${targetLang})...`);
   const [main, editor, tech] = await Promise.all([
     loadPrompt('ui', 'main', targetLang),
@@ -44,51 +49,34 @@ async function run() {
     `📦 Всего ключей: ${keys.length}. Чанков: ${Math.ceil(keys.length / chunkSize)}`,
   );
 
-  let provider: AIProvider;
-  switch (providerType) {
-    case 'chatgpt':
-      provider = new ChatGPTProvider();
-      break;
-    case 'claude':
-      provider = new ClaudeProvider();
-      break;
-    case 'mistral':
-      provider = new MistralProvider();
-      break;
-    case 'gemini':
-    default:
-      provider = new GeminiProvider();
-      break;
-  }
+  const provider: AIProvider = createProvider(normalizeProviderType(providerType));
   console.log(`🔗 Инициализация провайдера ${provider.type}...`);
   await provider.init();
 
-  let globalGlossary = await loadGlossary(paths.partialGlossaryPath);
-  if (globalGlossary.length > 0) {
-    console.log(
-      `📚 Загружен существующий глоссарий: ${globalGlossary.length} терминов.`,
-    );
-  }
-
-  let finalLocalizedJson: Record<string, any> = {};
-
-  // Попытка возобновления перевода из результирующего файла
   try {
-    const existingData = await fs.readFile(paths.targetPath, 'utf-8');
-    const existingJson = JSON.parse(existingData);
-    const { '@@locale': _targetLocale, ...existingWithoutLocale } =
-      existingJson;
-    finalLocalizedJson = existingWithoutLocale;
-    console.log(
-      `♻️ Возобновление перевода. В ${paths.targetPath} найдено ${Object.keys(finalLocalizedJson).length} ключей.`,
-    );
-  } catch {
-    console.log(`🆕 Начало нового перевода (${paths.targetPath} не найден).`);
-  }
+    let globalGlossary = await loadGlossary(paths.partialGlossaryPath);
+    if (globalGlossary.length > 0) {
+      console.log(
+        `📚 Загружен существующий глоссарий: ${globalGlossary.length} терминов.`,
+      );
+    }
 
-  let isFirstChunkProcessed = false;
+    let finalLocalizedJson: Record<string, any> = {};
 
-  try {
+    // Возобновление перевода: отличаем «файл отсутствует» от «повреждён».
+    finalLocalizedJson = readJsonOr(paths.targetPath, {} as Record<string, any>, (err) => {
+      console.warn(`⚠️ Существующий перевод повреждён (${err.message}). Начинаем заново.`);
+    });
+    if (Object.keys(finalLocalizedJson).length > 0) {
+      const { '@@locale': _targetLocale, ...existingWithoutLocale } = finalLocalizedJson as any;
+      finalLocalizedJson = existingWithoutLocale;
+      console.log(
+        `♻️ Возобновление перевода. В ${paths.targetPath} найдено ${Object.keys(finalLocalizedJson).length} ключей.`,
+      );
+    } else {
+      console.log(`🆕 Начало нового перевода (${paths.targetPath} не найден).`);
+    }
+
     for (let i = 0; i < keys.length; i += chunkSize) {
       const chunkKeys = keys.slice(i, i + chunkSize);
       const missingKeys = chunkKeys.filter((k) => !finalLocalizedJson[k]);
@@ -104,62 +92,69 @@ async function run() {
 
       const glossaryText = formatGlossary(globalGlossary);
 
-      try {
-        const result = await runGeminiWorkflow(
-          provider,
-          JSON.stringify(chunkData),
-          { main, editor, tech },
-          {
-            glossaryText,
-            isUI: true,
-            isPersistent: true,
-            firstRun: true,
-            excludeStages,
-            intelligenceLevels,
-            models: {
-              stage1: 'Pro',
-              stage2: 'Думающая',
-              stage3: 'Pro',
-            },
-          },
-        );
-
-        if (result.status === 'success' && result.localizedJson) {
-          isFirstChunkProcessed = true;
-          globalGlossary = mergeGlossary(globalGlossary, result.glossary || []);
-
-          Object.assign(finalLocalizedJson, result.localizedJson);
-
-          await fs.mkdir(paths.targetDir, { recursive: true });
-          const currentOutput = {
-            '@@locale': targetLang,
-            ...finalLocalizedJson,
-          };
-          await fs.writeFile(
-            paths.targetPath,
-            JSON.stringify(currentOutput, null, 2),
-          );
-          await fs.writeFile(
-            paths.partialGlossaryPath,
-            JSON.stringify(globalGlossary, null, 2),
-          );
-          console.log(
-            `✅ Чанк ${Math.floor(i / chunkSize) + 1} сохранен в ${paths.targetPath}. Глоссарий: ${globalGlossary.length} терминов.`,
-          );
+      // Retry проваленного чанка вместо прежнего skip + sleep(30s).
+      let chunkOk = false;
+      let lastError: unknown = null;
+      for (let attempt = 1; attempt <= CHUNK_RETRIES + 1 && !chunkOk; attempt++) {
+        if (attempt > 1) {
+          console.log(`🔁 Повторная попытка чанка (попытка ${attempt}/${CHUNK_RETRIES + 1})...`);
+          await sleep(3000);
         }
+        try {
+          const result = await runGeminiWorkflow(
+            provider,
+            JSON.stringify(chunkData),
+            { main, editor, tech },
+            {
+              glossaryText,
+              isUI: true,
+              isPersistent: true,
+              firstRun: true,
+              excludeStages,
+              intelligenceLevels,
+              models: {
+                stage1: 'Pro',
+                stage2: 'Думающая',
+                stage3: 'Pro',
+              },
+            },
+          );
 
-        await new Promise((r) => setTimeout(r, 5000));
-      } catch (e) {
-        console.error(`🛑 Ошибка в чанке ${Math.floor(i / chunkSize) + 1}:`, e);
-        console.log('Ждем 30 секунд и пробуем следующий чанк...');
-        await new Promise((r) => setTimeout(r, 30000));
+          if (result.status === 'success' && result.localizedJson) {
+            globalGlossary = mergeGlossary(globalGlossary, result.glossary || []);
+            Object.assign(finalLocalizedJson, result.localizedJson);
+
+            // Атомарная запись: temp+rename (прежде был bare fs.writeFile).
+            await fs.mkdir(paths.targetDir, { recursive: true });
+            const currentOutput = {
+              '@@locale': targetLang,
+              ...finalLocalizedJson,
+            };
+            await writeJsonAtomic(paths.targetPath, currentOutput);
+            await writeJsonAtomic(paths.partialGlossaryPath, globalGlossary);
+            console.log(
+              `✅ Чанк ${Math.floor(i / chunkSize) + 1} сохранён в ${paths.targetPath}. Глоссарий: ${globalGlossary.length} терминов.`,
+            );
+            chunkOk = true;
+          }
+        } catch (e) {
+          lastError = e;
+          console.error(`⚠️ Ошибка в чанке ${Math.floor(i / chunkSize) + 1} (попытка ${attempt}):`, e);
+        }
       }
+
+      if (!chunkOk) {
+        console.error(
+          `🛑 Чанк ${Math.floor(i / chunkSize) + 1} провален после ${CHUNK_RETRIES + 1} попыток ` +
+            `(последняя ошибка: ${(lastError as Error)?.message ?? lastError}). Переходим к следующему.`,
+        );
+        // Продолжаем — остальные чанки не должны страдать из-за одного.
+      }
+
+      await sleep(INTER_CHUNK_DELAY_MS);
     }
 
-    await fs.writeFile(
-      paths.glossaryPath,
-      JSON.stringify(globalGlossary, null, 2),
-    );
+    await writeJsonAtomic(paths.glossaryPath, globalGlossary);
     console.log(`✨ Успешно!`);
   } catch (error) {
     console.error('❌ Критическая ошибка:', error);

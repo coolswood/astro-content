@@ -2,13 +2,9 @@ import fs from 'fs/promises';
 import path from 'path';
 import { loadPrompt, ALL_TARGET_LANGS, LANG_NAMES } from './lib/prompt-loader.js';
 import { runGeminiWorkflow } from './lib/gemini-workflow.js';
-import { parseBotArgs } from './lib/bot-utils.js';
-import { GeminiProvider } from './lib/providers/gemini-provider.js';
-import { ChatGPTProvider } from './lib/providers/chatgpt-provider.js';
-import { ClaudeProvider } from './lib/providers/claude-provider.js';
-import { MistralProvider } from './lib/providers/mistral-provider.js';
+import { parseCli, createProvider, normalizeProviderType, parseNumberList } from './lib/cli.js';
 import { validateLocalizedJson } from './lib/translation-validator.js';
-import type { AIProvider } from './lib/types.js';
+import type { AIProvider, ProviderType } from './lib/types.js';
 
 const SOURCE_PATH = 'scripts/app_interface.json';
 const TARGET_PT_BR_PATH = 'src/i18n/pt_br/app_interface.json';
@@ -23,54 +19,35 @@ const DEFAULT_RETRIES = 2;
 interface ParsedArgs {
   excludeStages: number[];
   intelligenceLevels: number[];
-  provider: string;
+  provider: ProviderType;
   batchSize: number;
   retries: number;
   langs: string[] | null; // null = все поддерживаемые языки
   force: boolean; // игнорировать кэш и переводить заново
 }
 
+/**
+ * Парсит аргументы translate-keys, опираясь на общий parseCli (раньше был
+ * собственный цикл — дубликат parseBotArgs/translate-all.parseArgs).
+ */
 function parseKeysArgs(): ParsedArgs {
-  const args: Record<string, string> = {};
-  const positional: string[] = [];
+  const { flags, positional } = parseCli();
 
-  for (let i = 2; i < process.argv.length; i++) {
-    const arg = process.argv[i];
-    if (arg.startsWith('--')) {
-      const nextArg = process.argv[i + 1];
-      if (nextArg && !nextArg.startsWith('--')) {
-        args[arg.slice(2)] = nextArg;
-        i++;
-      } else {
-        args[arg.slice(2)] = 'true';
-      }
-    } else {
-      positional.push(arg);
-    }
-  }
+  const provider = normalizeProviderType(
+    flags.provider || flags.adapter || positional[0] || 'gemini',
+  );
 
-  const provider = (
-    args.provider ||
-    args.adapter ||
-    positional[0] ||
-    'gemini'
-  ).toLowerCase() as 'gemini' | 'chatgpt' | 'claude' | 'mistral';
+  const excludeStages = parseNumberList(flags.exclude || flags.skip);
+  const modesStr = flags.modes || flags.levels || '';
+  const intelligenceLevels = modesStr ? parseNumberList(modesStr) : [2, 2, 3];
 
-  const excludeStr = args.exclude || args.skip || '';
-  const excludeStages = excludeStr ? excludeStr.split(',').map(Number) : [];
-
-  const modesStr = args.modes || args.levels || '';
-  const intelligenceLevels = modesStr
-    ? modesStr.split(',').map(Number)
-    : [2, 2, 3];
-
-  const batchSize = parseInt(args['batch-size'] || String(DEFAULT_BATCH_SIZE));
-  const retries = parseInt(args.retries || String(DEFAULT_RETRIES));
-  const force = args.force === 'true' || args.f === 'true';
+  const batchSize = parseInt(flags['batch-size'] || String(DEFAULT_BATCH_SIZE));
+  const retries = parseInt(flags.retries || String(DEFAULT_RETRIES));
+  const force = flags.force === 'true' || flags.f === 'true';
 
   let langs: string[] | null = null;
-  if (args.langs || args.lang) {
-    langs = (args.langs || args.lang)
+  if (flags.langs || flags.lang) {
+    langs = (flags.langs || flags.lang)
       .split(',')
       .map((l) => l.trim().toLowerCase().replace('-', '_'))
       .filter(Boolean);
@@ -85,20 +62,6 @@ function parseKeysArgs(): ParsedArgs {
     langs,
     force,
   };
-}
-
-function createProvider(providerType: string): AIProvider {
-  switch (providerType) {
-    case 'chatgpt':
-      return new ChatGPTProvider();
-    case 'claude':
-      return new ClaudeProvider();
-    case 'mistral':
-      return new MistralProvider();
-    case 'gemini':
-    default:
-      return new GeminiProvider();
-  }
 }
 
 /**
@@ -352,7 +315,9 @@ async function buildRunId(sourceJson: any, langs: string[]): Promise<string> {
 }
 
 async function run() {
-  const { fileName } = parseBotArgs();
+  // fileName: если не передан явно (по умолчанию 'start.json') — auto-режим.
+  const cliForFile = parseCli();
+  const fileName = cliForFile.flags.file || cliForFile.flags.filename || cliForFile.positional[0] || 'start.json';
   const {
     excludeStages,
     intelligenceLevels,
