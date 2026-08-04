@@ -19,8 +19,8 @@ async function main() {
   const { flags, positional } = parseCli();
   const file = flags.file || positional[0] || 'breathing.json';
   const providerType = normalizeProviderType(flags.provider || positional[1] || 'chatgpt');
-  // По умолчанию — инкрементальный (только недостающие ключи); --full — полный перевод.
-  const full = flags.full === 'true' || flags.f === 'true';
+  // Суффикс -all означает полный перевод всего файла по умолчанию.
+  const full = flags.full === 'false' || flags.f === 'false' ? false : true;
 
   // Пробрасываем опциональные флаги в translate-file (раньше они молча терялись).
   const forwardFlags: string[] = ['--file', file, '--provider', providerType];

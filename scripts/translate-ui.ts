@@ -22,7 +22,8 @@ const CHUNK_RETRIES = 2;
 const INTER_CHUNK_DELAY_MS = 5000;
 
 async function run() {
-  const { fileName, targetLang, chunkSize, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
+  const { fileName, targetLang: rawLang, chunkSize, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
+  const targetLang = rawLang || 'pt_br';
   const paths = await resolveBotPaths(fileName, targetLang);
 
   if (paths.isDirectory) {

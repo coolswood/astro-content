@@ -53,17 +53,21 @@ const PRACTICES_TEMPLATE = [
       { type: 'exhale', duration: 6, breathingWay: 'mouth' }
     ]
   },
-  // {
-    // Перезагрузка: физиологический вздох «2-1-6» — два вдоха (2с + 1с довдох),
-    // затем длинный выдох 6с. Обе фазы вдоха имеют type 'inhale' (без нового
-    // типа фазы); подпись довдоха берётся из phaseNames.inhale_extra, если задана.
-  //   id: 'reset',
-  //   phases: [
-  //     { type: 'inhale', duration: 2, breathingWay: 'nose' },
-  //     { type: 'inhale', duration: 1, breathingWay: 'nose' },
-  //     { type: 'exhale', duration: 6, breathingWay: 'mouth' }
-  //   ]
-  // }
+  {
+    id: 'balance',
+    phases: [
+      { type: 'inhale', duration: 5, breathingWay: 'nose' },
+      { type: 'exhale', duration: 5, breathingWay: 'mouth' }
+    ]
+  },
+  {
+    id: 'reset',
+    phases: [
+      { type: 'inhale', duration: 2, breathingWay: 'nose' },
+      { type: 'inhale', duration: 1, breathingWay: 'nose' },
+      { type: 'exhale', duration: 6, breathingWay: 'mouth' }
+    ]
+  }
 ];
 
 export const GET: APIRoute = async ({ params }) => {

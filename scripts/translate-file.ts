@@ -127,51 +127,72 @@ function collectLeavesCount(obj: any): number {
   return n || 1;
 }
 
-async function run() {
-  const { fileName, targetLang, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
-  const paths = await resolveBotPaths(fileName, targetLang);
+async function getTargetLangs(): Promise<string[]> {
+  const i18nDir = path.join(process.cwd(), 'src/i18n');
+  const items = await fs.readdir(i18nDir, { withFileTypes: true });
+  return items
+    .filter((item) => item.isDirectory() && item.name !== 'ru')
+    .map((item) => item.name);
+}
 
-  // Флаг --full: полный перевод (по умолчанию — инкрементальный, только недостающие ключи).
-  const fullArg = process.argv.includes('--full') || process.argv.includes('--f');
-  const full = fullArg;
-  console.log(
-    `🔧 Режим: ${full ? 'ПОЛНЫЙ (перезапись target)' : 'ИНКРЕМЕНТАЛЬНЫЙ (только недостающие ключи)'}.`,
-  );
+async function run() {
+  const { fileName, targetLang: rawTargetLang, provider: providerType, excludeStages, intelligenceLevels } = parseBotArgs();
+
+  const hasFullFlag = process.argv.includes('--full') || process.argv.includes('--f');
+  const isAll = !rawTargetLang || rawTargetLang === 'all';
+  const full = rawTargetLang === 'all' || hasFullFlag;
+
+  const targetLangs = isAll ? await getTargetLangs() : [rawTargetLang!];
+
+  console.log(`🌍 Перевод файла "${fileName}":`);
+  console.log(`Режим: ${full ? 'ПОЛНЫЙ (перезапись target)' : 'ИНКРЕМЕНТАЛЬНЫЙ (только недостающие ключи)'}`);
+  console.log(`Языки (${targetLangs.length} шт.): ${targetLangs.join(', ')}`);
+  console.log(`Провайдер: ${providerType}\n`);
 
   const provider: AIProvider = createProvider(normalizeProviderType(providerType));
   console.log(`🔗 Инициализация провайдера ${provider.type}...`);
   await provider.init();
 
+  const failed: string[] = [];
   try {
-    if (paths.isDirectory) {
-      console.log(`📂 Обнаружена директория: ${fileName}. Поиск JSON файлов...`);
-      const files = await listJsonFiles(paths.ruPath);
-      console.log(`🔎 Найдено файлов: ${files.length}`);
+    for (let i = 0; i < targetLangs.length; i++) {
+      const targetLang = targetLangs[i];
+      console.log(`\n⏳ [${i + 1}/${targetLangs.length}] Перевод на язык "${targetLang}"...`);
+      try {
+        const paths = await resolveBotPaths(fileName, targetLang);
+        if (paths.isDirectory) {
+          console.log(`📂 Обнаружена директория: ${fileName}. Поиск JSON файлов...`);
+          const files = await listJsonFiles(paths.ruPath);
+          console.log(`🔎 Найдено файлов: ${files.length}`);
 
-      for (const file of files) {
-        const relativeFile = path.join(fileName, file);
-        try {
-          await processFile(relativeFile, targetLang, provider, {
-            isPersistent: true,
-            firstRun: true,
-            excludeStages,
-            intelligenceLevels,
-            full,
-          });
-        } catch (err) {
-          console.error(`❌ Ошибка при обработке ${file}:`, err);
+          for (const file of files) {
+            const relativeFile = path.join(fileName, file);
+            await processFile(relativeFile, targetLang, provider, {
+              isPersistent: true,
+              firstRun: true,
+              excludeStages,
+              intelligenceLevels,
+              full,
+            });
+          }
+        } else {
+          await processFile(fileName, targetLang, provider, { excludeStages, intelligenceLevels, full });
         }
+        runBotValidation(targetLang);
+      } catch (err) {
+        console.error(`❌ Ошибка перевода на "${targetLang}":`, err);
+        failed.push(targetLang);
       }
-    } else {
-      await processFile(fileName, targetLang, provider, { excludeStages, intelligenceLevels, full });
     }
-
-    runBotValidation(targetLang);
   } catch (error) {
     console.error('❌ Скрипт завершился с ошибкой:', error);
   } finally {
     await provider.close();
     console.log('👋 Сессия провайдера завершена.');
+  }
+
+  if (failed.length > 0) {
+    console.log(`\n⚠️ Провалено языков: ${failed.length}/${targetLangs.length}: ${failed.join(', ')}`);
   }
 }
 

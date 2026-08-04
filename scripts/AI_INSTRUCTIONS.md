@@ -59,12 +59,14 @@ _Инструкция создана для обеспечения консис�
 # ChatGPT — дефолтный провайдер (можно явно указать через --provider chatgpt,
 # либо переключиться на gemini/claude/mistral).
 
-# translate-file: перевод одного JSON-файла на один язык.
-# По умолчанию — ИНКРЕМЕНТАЛЬНЫЙ режим: сравнивает ru-источник с существующим
-# target, переводит ТОЛЬКО недостающие ключи и дополняет target (существующие
-# не трогает). Флаг --full — полный перевод с перезаписью target.
-bun scripts/translate-file.ts story/automatic.json de
-bun scripts/translate-file.ts breathing.json de --full      # полный перевод
+# translate-file: инкрементальный перевод одного JSON-файла (только недостающие/изменившиеся ключи).
+# Если язык не указан (bun scripts/translate-file.ts breathing.json) — переводит недостающие ключи на ВСЕ языки.
+# Если указан язык (bun scripts/translate-file.ts breathing.json de) — переводит недостающие ключи на один язык.
+# Если указано 'all' (bun scripts/translate-file.ts breathing.json all) или --full — полный перевод всего файла.
+bun scripts/translate-file.ts breathing.json          # инкрементальный перевод на все языки
+bun scripts/translate-file.ts breathing.json de       # инкрементальный перевод на один язык
+bun scripts/translate-file.ts breathing.json all      # полный перевод на все языки
+bun scripts/translate-file.ts breathing.json de --full # полный перевод на один язык
 bun scripts/translate-ui.ts app_interface.json de
 
 # translate-arb: синхронизация переводов интерфейса с cognitive_psy (Flutter ARB).
@@ -84,7 +86,6 @@ bun scripts/translate-arb.ts
 #   --force              игнорировать кэш и переводить заново
 #   --psy-dir <path>     путь к cognitive_psy (по умолчанию ../cognitive_psy)
 
-# translate-file-all: перевод одного файла на все языки (src/i18n/*) в одном
-# прогоне с единым провайдером. По умолчанию инкрементальный (--full — полный).
+# translate-file-all: полный перевод одного файла на все языки (src/i18n/*) в одном
+# прогоне с единым провайдером.
 bun scripts/translate-file-all.ts story/automatic.json --provider chatgpt
-bun scripts/translate-file-all.ts story/automatic.json --full

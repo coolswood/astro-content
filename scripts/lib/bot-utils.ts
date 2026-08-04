@@ -60,9 +60,8 @@ export function parseBotArgs() {
   }
 
   const fileName = args.file || args.filename || positional[0] || 'start.json';
-  const targetLang = (args.lang || args.language || positional[1] || 'pt_br')
-    .toLowerCase()
-    .replace('-', '_');
+  const rawLang = args.lang || args.language || positional[1];
+  const targetLang = rawLang ? rawLang.toLowerCase().replace('-', '_') : undefined;
   const chunkSize = parseInt(args.chunk || args.chunkSize || positional[2] || '80');
   const provider = (args.provider || args.adapter || positional[3] || 'chatgpt').toLowerCase() as 'gemini' | 'chatgpt' | 'claude' | 'mistral';
   
