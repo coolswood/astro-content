@@ -1,132 +1,104 @@
-# Инструкция для AI по локализации (мультиязычная)
+# Локализация: инструкция для AI-агента
 
-Автоматизированная локализация JSON/ARB-файлов с русского на 18 целевых языков.
-Поддерживаются несколько провайдеров (ChatGPT по умолчанию, также Gemini/Claude/Mistral)
-и трёхэтапный конвейер (перевод → редактура → тех-аудит).
+Актуальное описание системы локализации. Скрипты-предшественники
+(`translate-arb.ts`, `translate-file*.ts`, `translate-ui.ts`, `lingo_proxy.py`,
+lingo.dev) удалены — их заменил единый раннер.
 
-## 📂 Структура папки scripts
+## Как устроено
 
-1.  **`gemini-ui-bot.ts`**: Основной скрипт на Bun + Puppeteer.
-    - Разбивает JSON на чанки (по умолчанию 80 ключей).
-    - Прогоняет каждый чанк через 3 этапа Gemini (Stage 1: Pro, Stage 2: Thinking, Stage 3: Pro) с разными промптами. Использование "Быстрой" модели теперь запрещено.
-    - Собирает и объединяет глоссарий и локализованный JSON.
-    - **Важно**: Поддерживает возобновление (Resuming) — если процесс прерван, он подхватит данные из `partial_*.json`.
+- **Контент**: `src/i18n/ru` → `src/i18n/<lang>` — 19 локалей, раздаётся по HTTP.
+- **UI Flutter**: канон `cognitive_psy/lib/l10n/app_ru.arb` → `app_<lang>.arb`
+  (merge-валидатор cognitive_psy жёстко требует отсутствия лишних ключей —
+  purge мёртвых ключей обязателен).
+- **Раннер**: `scripts/translate.ts` (bun). Два режима: контент и `--ui`.
+- **Конвейер**: контент — 4 стадии main → editor → review → fix («критикуй
+  отдельно, правь отдельно»); keys/ui — 3 стадии main → editor → tech. Промпты
+  в `scripts/prompts/` (эти файлы — выверенный актив качества, НЕ менять без
+  явной задачи). Патчи editor/fix/tech применяются с guard'ом: контейнер
+  (массив/объект, ≥4 листьев), покрытый патчем на 100%, отбрасывается —
+  модель вернула переписанный контейнер целиком вместо «только изменённых
+  ключей», и вместе с «полировкой» так въезжают перестановки элементов и
+  эпиграфы-дубли (дефект «крючков» в первых элементах экранов).
+- **Конвенция `<instagram>`**: встраиваемый пост рендерится только для ru и en
+  (там допустимы атрибуты `ids="…"`); во всех остальных локалях тег обязан быть
+  ПУСТЫМ. Промптовое правило модель нарушает, копируя тег дословно, поэтому
+  `runPipeline` срезает атрибуты механически
+  (`stripInstagramAttributes` в `scripts/lib/tag-reconcile.ts`).
+- **Провайдер по умолчанию**: vLLM `google/gemma-4-26B-A4B-it` через SSH-туннель.
+  Старые браузерные провайдеры (ChatGPT/Claude/Gemini/Mistral по CDP :9222)
+  сохранены в `scripts/lib/providers/` с пометкой LEGACY, доступны через
+  `--provider chatgpt|claude|gemini|mistral`, не развиваются.
 
-2.  **`prompts/`**: Папка с системными инструкциями для Gemini:
-    - `pt-BR-ux.txt`: Этап 1. Локализация + Глоссарий. Роль UX-редактора.
-    - `pt-BR-ux-editor.txt`: Этап 2. Редактура (Tom Acolhedor/Leve, обращение Você).
-    - `pt-BR-ux-tech.txt`: Этап 3. Технический аудит (Grammar check + JSON validation).
+## ⚠️ Жёсткое правило
 
-3.  **`partial_*.json`**: Промежуточные файлы (сохраняются после каждого чанка).
-    - `partial_app_interface.json`: Накопленный перевод.
-    - `partial_glossary_app_interface.json`: Накопленный глоссарий терминов.
+**К модели — строго 1 одновременный запрос.** gx10 перегружается от параллельных.
+Раннер соблюдает это сам (мьютекс в `VllmClient` + последовательная обработка).
 
-## 🚀 Как запустить/продолжить перевод
-
-Для запуска скрипта используй команду в корне проекта:
+## Туннель к модели
 
 ```bash
-bun scripts/gemini-ui-bot.ts <имя_файла> <размер_чанка>
+ssh -f -N -L 18000:127.0.0.1:8000 \
+  -i "$HOME/Library/Application Support/NVIDIA/Sync/config/nvsync.key" \
+  coolswood@192.168.31.18
+# проверка: curl -s -m 5 http://127.0.0.1:18000/v1/models
 ```
 
-Пример для `app_interface.json`:
+Endpoint/модель настраиваются в `scripts/translate.config.json`
+(env: `TRANSLATE_ENDPOINT`, `TRANSLATE_MODEL`, `COGNITIVE_PSY_DIR`).
+
+## Команды
 
 ```bash
-bun scripts/gemini-ui-bot.ts app_interface.json 80
+# Посмотреть, что переводится (missing/changed/dead по всем локалям), ничего не меняя
+bun scripts/translate.ts story/start.json --dry-run
+bun scripts/translate.ts --ui --dry-run
+
+# Перевести контент-файл (или каталог) на все языки / на один
+bun scripts/translate.ts story/start.json
+bun scripts/translate.ts story/automatic.json --langs ja,ko
+
+# Доперевести/обновить интерфейс cognitive_psy
+bun scripts/translate.ts --ui
+bun scripts/translate.ts --ui --langs en,de
+
+# Полный переперевод, игнорируя инкрементальность
+bun scripts/translate.ts story/start.json --full
 ```
 
-### Алгоритм работы AI-агента:
+Раннер сам: детектит недостающие/изменившиеся/мёртвые ключи, валидирует
+(ключи, плейсхолдеры `{…}`, теги `<b>/<q>/<important>/<instagram>`, алфавиты,
+дубли — два разных ru-оригинала не должны схлопываться в одинаковый перевод;
+ловит «крючки»-подмены первых элементов), ретраит с
+`response_format: json_object`, пишет файлы атомарно и только после
+успеха (частичной записи нет), ведёт закоммиченный state
+(`scripts/translation-state.json`, per-key sha1 ru-значений; первый прогон
+инициализирует его существующими переводами — изменение ru-ключа после этого
+всегда ловится).
 
-1.  **Проверь запущенный браузер**: Скрипт подключается к Chrome через `9222` порт. Убедись, что Chrome запущен с `--remote-debugging-port=9222`.
-2.  **Мониторинг**: Скрипт будет выводить статус в терминал (`🧩 Обработка чанка X...`, `✅ Чанк готов`).
-3.  **Глоссарий**: Скрипт автоматически передает накопленный глоссарий в Stage 1 каждого нового чанка. Это гарантирует, что "КПТ" всегда будет "TCC", а "Дневник" — "Diário".
-4.  **Ошибки**: Если Gemini возвращает невалидный JSON, скрипт выведет ошибку в лог, но попробует продолжить.
+## Глоссарии
 
-## 🧠 Ключевые правила локализации (уже в промптах)
+`scripts/prompts/<lang>/glossary.json` — ручной актив (НЕ генерировать моделью):
+термины КПТ извлечены из проверенных переводов проекта. Для de, ja, pl, pt_br —
+исторические; для ar cs en es fr he id it ko nl pt sv tr — составлены в сессии
+редактуры 2026-09-10 по образцу ja. Без глоссария модель калькирует термины
+(«глубинные убеждения» вместо принятых core belief / creencias nucleares /
+핵심 신념 и т.д.).
 
-- Никаких калек с английского/русского.
-- Только португальский (PT-BR).
-- Стиль: Поддерживающий, мягкий, терапевтический (психология КПТ).
-- Обращение к пользователю: **Você** (не Tu).
-- Термины КПТ: Строго по глоссарию (например, `Pensamento Automático`, `Distorção Cognitiva`).
+## Валидация отдельно
 
----
+```bash
+bun check-translations.ts <lang>   # чужие алфавиты по всему каталогу локали
+bun test                           # тесты state/диффа/валидации/дерева
+```
 
-_Инструкция создана для обеспечения консистентности при передаче задачи между AI-сессиями._
+## Файлы
 
-/Applications/Arc.app/Contents/MacOS/Arc --remote-debugging-port=9222
-
-# ChatGPT — дефолтный провайдер (можно явно указать через --provider chatgpt,
-# либо переключиться на gemini/claude/mistral).
-
-# translate-file: инкрементальный перевод одного JSON-файла (только недостающие/изменившиеся ключи).
-# Если язык не указан (bun scripts/translate-file.ts breathing.json) — переводит недостающие ключи на ВСЕ языки.
-# Если указан язык (bun scripts/translate-file.ts breathing.json de) — переводит недостающие ключи на один язык.
-# Если указано 'all' (bun scripts/translate-file.ts breathing.json all) или --full — полный перевод всего файла.
-bun scripts/translate-file.ts breathing.json          # инкрементальный перевод на все языки
-bun scripts/translate-file.ts breathing.json de       # инкрементальный перевод на один язык
-bun scripts/translate-file.ts breathing.json all      # полный перевод на все языки
-bun scripts/translate-file.ts breathing.json de --full # полный перевод на один язык
-bun scripts/translate-ui.ts app_interface.json de
-
-# translate-arb: синхронизация переводов интерфейса с cognitive_psy (Flutter ARB).
-#
-# КАНОН КЛЮЧЕЙ: cognitive_psy/lib/l10n/app_ru.arb — сгенерированный артефакт
-# (tool/l10n_merge.dart склеивает фрагменты lib/l10n/src/ru/<группа>.arb).
-# Merge-скрипт cognitive_psy жёстко валидирует переводы: ключ в любом языке,
-# отсутствующий в ru-шаблоне («мёртвый»), — ошибка сборки (exit 1).
-# translate-arb держит переводы в согласии с этой валидацией.
-#
-# ЧТО ДЕЛАЕТ С app_<язык>.arb ПРИ ОБЫЧНОМ ПРОГОНЕ:
-#   1. ДОПИСЫВАЕТ недостающие ключи канона (перевод + @-мета с placeholders).
-#   2. ПЕРЕЗАПИСЫВАЕТ переводы ключей, чьё русское значение изменилось.
-#      Детект — по снимку scripts/.translate-cache/ru_snapshot.json
-#      ({ lang: { key: значение ru на момент последней записи перевода } });
-#      снимок обновляется только после успешной записи в target.
-#      Ключей без записи в снимке (переведены до появления детекта) не трогает.
-#   3. УДАЛЯЕТ «мёртвые» ключи (есть в переводе, нет в ru-каноне) вместе
-#      с их @-мета — с отчётом что удалено. Делается до перевода, даже если
-#      переводить нечего.
-#
-# DRY-RUN (проверка без траты API-токенов): полный анализ без вызова
-# провайдеров и записи файлов — по каждому языку печатает недостающие,
-# изменившиеся и мёртвые ключи (с первыми примерами).
-bun scripts/translate-arb.ts --dry-run
-bun scripts/translate-arb.ts --dry-run --langs en,de   # подмножество языков
-#
-# Реальный перевод (после изменения русских строк в cognitive_psy):
-bun scripts/translate-arb.ts                # все языки
-bun scripts/translate-arb.ts --langs en,de  # только указанные языки
-#
-# Опции:
-#   --provider chatgpt              провайдер (по умолчанию chatgpt)
-#   --langs ja,ko,ar                обработать только подмножество языков
-#   --batch-size 3                  размер батча языков (по умолчанию 3)
-#   --retries 2                     число ретраев проваленного батча (по умолчанию 2)
-#   --exclude 2,3                   пропустить этапы (по умолчанию все этапы включены)
-#   --force                         игнорировать кэш и переводить заново
-#   --psy-dir <path>                путь к cognitive_psy (по умолчанию ../cognitive_psy,
-#                                   переопределяется и через env COGNITIVE_PSY_DIR)
-#   --dry-run                       только анализ и отчёт, без провайдеров/записи
-#   --retranslate-changed=true|false перезаписывать изменившиеся ru-строки
-#                                    (по умолчанию true; false = только дописывать
-#                                    недостающие и удалять мёртвые)
-#
-# ВСПОМОГАТЕЛЬНЫЕ АРТЕФАКТЫ:
-#   - scripts/.translate-cache/run_<hash>.json — кэш успешных батчей (resume);
-#     runId детерминирован от набора ключей к переводу, поэтому изменившиеся
-#     ru-строки автоматически дают свежий запуск без старого кэша.
-#   - scripts/.translate-cache/ru_snapshot.json — снимок значений ru (см. выше).
-#   - scripts/app_interface.json — LEGACY add-only зеркало канона для
-#     translate-ui (bun scripts/translate-ui.ts app_interface.json <lang>);
-#     основным ARB-флоу не читается, только пополняется новыми ключами.
-#
-# ПОРЯДОК РАБОТЫ ПОСЛЕ ПРАВОК РУССКОГО В cognitive_psy:
-#   1. Убедиться, что lib/l10n/app_ru.arb пересобран (tool/l10n_merge.dart).
-#   2. bun scripts/translate-arb.ts --dry-run — посмотреть, что изменится.
-#   3. bun scripts/translate-arb.ts — перевести (дописать/перезаписать/почистить).
-# ICU-placeholder-маркеры ({count}, {count, plural,...}) проверяются при валидации.
-
-# translate-file-all: полный перевод одного файла на все языки (src/i18n/*) в одном
-# прогоне с единым провайдером.
-bun scripts/translate-file-all.ts story/automatic.json --provider chatgpt
+```
+scripts/translate.ts            единый раннер (контент + --ui)
+scripts/translate.config.json   конфиг (локали, endpoint, модель, psy-dir)
+scripts/translation-state.json  закоммиченный state (per-key sha1 ru)
+scripts/prompts/                промпты + глоссарии (актив качества)
+scripts/lib/pipeline.ts         vLLM-клиент + 3 стадии + legacy-адаптер
+scripts/lib/{tree,state,analyze,validation}.ts  инкрементальность и валидация
+backups/                        архивные снимки переводов (не раздаётся)
+```

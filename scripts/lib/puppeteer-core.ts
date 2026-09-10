@@ -1,4 +1,9 @@
 /**
+ * LEGACY-провайдер (puppeteer/CDP :9222).
+ * Основной путь локализации — HTTP к vLLM (scripts/lib/pipeline.ts, VllmClient).
+ * Сохранён по решению о постепенном выводе из эксплуатации; НЕ развивать.
+ */
+/**
  * Общая puppeteer-инфраструктура для всех провайдеров.
  *
  * Раньше connectToBrowser/safeGoto жили в gemini-client.ts, и 3 из 4 провайдеров

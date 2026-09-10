@@ -1,0 +1,11 @@
+{
+  "$comment": "Конфигурация scripts/translate.ts. Всё переопределяется env (TRANSLATE_ENDPOINT, TRANSLATE_MODEL, TRANSLATE_STATE_PATH, COGNITIVE_PSY_DIR) и флагами CLI (--endpoint, --model, --state, --psy-dir). targetLocales: null = все 18 канонических локалей из scripts/lib/lang-codes.ts.",
+  "sourceLocale": "ru",
+  "targetLocales": null,
+  "psyDir": "",
+  "endpoint": "http://127.0.0.1:18000/v1",
+  "model": "google/gemma-4-26B-A4B-it",
+  "statePath": "scripts/translation-state.json",
+  "retries": 2,
+  "requestTimeoutMs": 600000
+}

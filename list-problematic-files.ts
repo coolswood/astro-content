@@ -157,7 +157,6 @@ function getProblematicFiles(
 
   for (const sourceFile of sourceFiles) {
     const relativePath = relative(sourceDir, sourceFile);
-    if (relativePath === 'app_interface.json') continue;
     const targetFile = join(targetDir, relativePath);
 
     if (!existsSync(targetFile)) {
@@ -188,7 +187,6 @@ function getProblematicFiles(
 
   for (const targetFile of targetFiles) {
     const relativePath = relative(targetDir, targetFile);
-    if (relativePath === 'app_interface.json') continue;
     const sourceFile = join(sourceDir, relativePath);
 
     if (!existsSync(sourceFile)) {
