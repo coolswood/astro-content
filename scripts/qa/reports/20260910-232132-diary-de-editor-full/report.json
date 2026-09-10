@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "Дата": "2026-09-10T20:21:32.579Z",
+    "Метка": "diary-de-editor-full",
+    "Сравнение": "NEW = рабочее дерево; OLD = --old-dir backups/main-only-diary",
+    "Файлы": "story/diary.json",
+    "Локали": "de",
+    "Сэмпл/файл": 10,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:18000/v1",
+    "git HEAD": "dfc3438ef3704cb281f71defd66df4e4cefbc132"
+  },
+  "results": {
+    "story/diary.json": {
+      "de": [
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/screen_2/texts",
+          "ru": "<h2>Автоматическая мысль</h2>\n\nЭтот блок посвящён тому, как мы интерпретируем ситуацию.\n\nЧтобы заметить свои мысли, спросите себя: «О чём я сейчас думаю?»\n\nВыделите самую значимую и эмоционально заряженную мысль.\n\nЕсли формулировка слишком общая, уточните её и сделайте конкретной.\n\nОцените, насколько вы верите этой мысли, по шкале от 0 до 10.\n\nНапример, если в разделе «Событие» записано «Я допустил ошибку в отчёте», мысли могут быть такими: «Я никогда не сделаю хорошо», «Я неудачник», «Ошибки — это глупо».\n\nВыберите мысль, которая сильнее всего откликается, запишите её и отметьте уровень убеждённости.\n\n<h2>Эмоции</h2>\n\nПеред этим блоком задайте себе два вопроса:\n\n<li>Какие эмоции я испытывал(а)? (грусть, злость, тревога, вина, страх, стыд и т. д.)</li>\n\n<li>Насколько интенсивны были эти эмоции? (0–10 баллов)</li>\n\nНапример: грусть — 9, отчаяние — 7, уныние — 5.\n\n<h2>Ощущения в теле</h2>\n\nЗдесь мы фиксируем физические реакции во время сложных эмоций — как тело откликнулось на переживания.\n\nБудьте конкретны: это может быть ком в горле, холодный пот, тяжесть в животе и т. п.\n\n<h2>Поведение</h2>\n\nОпишите, что вы сделали после появления мыслей и эмоций.\n\nКакие действия последовали за этим?\n\nПоведение может включать, например, слёзы или крик на коллег.\n\n<h2>Адаптивный ответ</h2>\n\nВ этой колонке проанализируйте исходную мысль и сформулируйте более адаптивный, поддерживающий ответ.\n\nПомогут вопросы:\n\n<li>Насколько эта мысль реалистична?</li>\n\n<li>Какие факты её подтверждают, а какие — опровергают?</li>\n\n<li>Каковы худший, лучший и наиболее вероятный исходы?</li>\n\n<li>Что будет, если продолжать верить этой мысли? И что изменится, если пересмотреть своё мнение?</li>\n\nНапример, вместо «Я никогда не смогу сделать что-то хорошо» можно сказать: «Я исправлю ошибку и извлеку урок. В конце концов, ошибаются все».\n\nВ нашем приложении дневник мыслей также помогает отслеживать когнитивные ошибки.\n\nДавайте коротко разберёмся, что это такое.\n\n<important>Когниция — это процессы восприятия и мышления (мысли, образы, представления), которые происходят в нашем сознании. Когнитивные искажения — это ошибки в обработке информации мозгом.</important>\n\nОни мешают думать логично и рационально, и из-за них реальность воспринимается искажённо.\n\nЕсли вы заметили когнитивную ошибку в своих мыслях, отметьте её.\n\nЕсли нет — не переживайте, просто пропустите этот блок на сейчас.",
+          "oldText": "<h2>Automatischer Gedanke</h2>\n\nDieser Block widmet sich der Frage, wie wir eine Situation interpretieren.\n\nUm Ihre Gedanken zu bemerken, fragen Sie sich: „Worüber denke ich gerade nach?“\n\nIdentifizieren Sie den bedeutendsten und emotionalsten Gedanken.\n\nWenn die Formulierung zu allgemein ist, präzisieren Sie sie und machen Sie sie konkret.\n\nBewerten Sie auf einer Skala von 0 bis 10, wie sehr Sie an diesen Gedanken glauben.\n\nWenn Sie beispielsweise im Bereich „Situation“ notiert haben: „Ich habe einen Fehler im Bericht gemacht“, könnten die Gedanken so lauten: „Ich werde nie etwas richtig machen“, „Ich bin ein Versager“, „Fehler sind dumm“.\n\nWählen Sie den Gedanken aus, der Sie am stärksten beschäftigt, schreiben Sie ihn auf und geben Sie den Grad Ihrer Überzeugung an.\n\n<h2>Emotionen</h2>\n\nStellen Sie sich vor diesem Block zwei Fragen:\n\n<li>Welche Emotionen habe ich empfunden? (Trauer, Wut, Angst, Schuld, Furcht, Scham usw.)</li>\n\n<li>Wie intensiv waren diese Emotionen? (0–10 Punkte)</li>\n\nZum Beispiel: Trauer – 9, Verzweiflung – 7, Niedergeschlagenheit – 5.\n\n<h2>Körperliche Empfindungen</h2>\n\nHier halten wir die körperlichen Reaktionen während intensiver Emotionen fest – wie Ihr Körper auf das Erlebte reagiert hat.\n\nSeien Sie konkret: Das kann ein Kloß im Hals, kalter Schweiß, ein Druck im Bauch usw. sein.\n\n<h2>Verhalten</h2>\n\nBeschreiben Sie, was Sie nach dem Auftreten der Gedanken und Emotionen getan haben.\n\nWelche Handlungen folgten darauf?\n\nDas Verhalten kann zum Beispiel Weinen oder das Anschreien von Kollegen beinhalten.\n\n<h2>Alternative Antwort</h2>\n\nAnalysieren Sie in dieser Spalte den ursprünglichen Gedanken und formulieren Sie eine adaptivere, hilfreichere Antwort.\n\nFolgende Fragen können helfen:\n\n<li>Wie realistisch ist dieser Gedanke?</li>\n\n<li>Welche Fakten bestätigen ihn, und welche widersprechen ihm?</li>\n\n<li>Was wären das schlimmste, das beste und das wahrscheinlichste Ergebnis?</li>\n\n<li>Was passiert, wenn ich weiterhin an diesen Gedanken glaube? Und was würde sich ändern, wenn ich meine Meinung überdenke?</li>\n\nAnstatt „Ich werde nie etwas richtig machen können“, könnten Sie zum Beispiel sagen: „Ich werde den Fehler korrigieren und daraus lernen. Schließlich machen alle Fehler“.\n\nIn unserer App hilft das Gedankentagebuch auch dabei, Denkfehler zu identifizieren.\n\nLassen Sie uns kurz klären, was das eigentlich ist.\n\n<important>Kognition bezeichnet die Prozesse der Wahrnehmung und des Denkens (Gedanken, Bilder, Vorstellungen), die in unserem Bewusstsein ablaufen. Kognitive Verzerrungen sind Fehler bei der Informationsverarbeitung durch das Gehirn.</important>\n\nSie hindern uns daran, logisch und rational zu denken, und führen dazu, dass die Realität verzerrt wahrgenommen wird.\n\nWenn Sie einen Denkfehler in Ihren Gedanken bemerken, markieren Sie ihn.\n\nWenn nicht – machen Sie sich keine Sorgen, Sie können diesen Block für den Moment einfach überspringen.",
+          "newText": "<h2>Automatischer Gedanke</h2>\n\nDieser Block widmet sich der Frage, wie wir eine Situation interpretieren.\n\nUm Ihre Gedanken zu bemerken, fragen Sie sich: „Worüber denke ich gerade nach?“\n\nIdentifizieren Sie den bedeutendsten und emotionalsten Gedanken.\n\nWenn die Formulierung zu allgemein ist, präzisieren Sie sie und machen Sie sie konkret.\n\nBewerten Sie auf einer Skala von 0 bis 10, wie sehr Sie an diesen Gedanken glauben.\n\nWenn Sie beispielsweise unter „Situation“ notiert haben: „Ich habe einen Fehler im Bericht gemacht“, könnten die Gedanken so lauten: „Ich werde nie etwas richtig machen“, „Ich bin ein Versager“, „Fehler sind dumm“.\n\nWählen Sie den Gedanken aus, der Sie am stärksten beschäftigt, schreiben Sie ihn auf und geben Sie den Grad Ihrer Überzeugung an.\n\n<h2>Emotionen</h2>\n\nStellen Sie sich vor diesem Block zwei Fragen:\n\n<li>Welche Emotionen habe ich empfunden? (Trauer, Wut, Angst, Schuld, Furcht, Scham usw.)</li>\n\n<li>Wie intensiv waren diese Emotionen? (0–10 Punkte)</li>\n\nZum Beispiel: Trauer – 9, Verzweiflung – 7, Niedergeschlagenheit – 5.\n\n<h2>Körperempfindungen</h2>\n\nHier halten wir die körperlichen Reaktionen während intensiver Emotionen fest – wie Ihr Körper auf das Erlebte reagiert hat.\n\nSeien Sie konkret: Das kann ein Kloß im Hals, kalter Schweiß, ein Druck im Bauch usw. sein.\n\n<h2>Verhalten</h2>\n\nBeschreiben Sie, was Sie nach dem Auftreten der Gedanken und Emotionen getan haben.\n\nWelche Handlungen folgten darauf?\n\nDas Verhalten kann zum Beispiel Weinen oder das Anschreien von Kollegen beinhalten.\n\n<h2>Alternative Antwort</h2>\n\nAnalysieren Sie in dieser Spalte den ursprünglichen Gedanken und formulieren Sie eine hilfreichere Antwort.\n\nFolgende Fragen können helfen:\n\n<li>Wie realistisch ist dieser Gedanke?</li>\n\n<li>Welche Fakten bestätigen ihn, und welche widersprechen ihm?</li>\n\n<li>Was wäre das schlimmste, das beste und das wahrscheinlichste Ergebnis?</li>\n\n<li>Was passiert, wenn ich weiterhin an diesen Gedanken glaube? Und was würde sich ändern, wenn ich meine Sichtweise überdenke?</li>\n\nAnstatt „Ich werde nie etwas richtig machen können“ könnten Sie zum Beispiel sagen: „Ich werde den Fehler korrigieren und daraus lernen. Schließlich machen alle Fehler.“\n\nIn unserer App hilft das Gedankentagebuch auch dabei, Denkfehler zu identifizieren.\n\nLassen Sie uns kurz klären, was das eigentlich ist.\n\n<important>Kognition bezeichnet die Prozesse der Wahrnehmung und des Denkens (Gedanken, Bilder, Vorstellungen), die in unserem Bewusstsein ablaufen. Kognitive Verzerrungen sind Fehler bei der Informationsverarbeitung durch das Gehirn.</important>\n\nSie hindern uns daran, logisch und rational zu denken, und führen dazu, dass die Realität verzerrt wahrgenommen wird.\n\nWenn Sie einen Denkfehler in Ihren Gedanken bemerken, markieren Sie ihn.\n\nWenn nicht – machen Sie sich keine Sorgen, überspringen Sie diesen Block einfach für den Moment.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Перевод A безупречен с точки зрения терминологии, грамматики и пунктуации. Перевод B содержит мелкую ошибку в использовании сослагательного наклонения (Konjunktiv II) и нарушает правила немецкой типографики (точка после кавычек).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "В предложении 'Was wären das schlimmste...' правильно использовать 'Was wäre...', так как подлежащее 'das schlimmste' стоит в единственном числе."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Нарушена типографика: в немецком языке точка ставится ПОСЛЕ закрывающих кавычек, если цитата является частью предложения, а не самостоятельным высказыванием. В A: '...machen können' könnten Sie... (верно). В B: '...machen können', könnten Sie... (неверно)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 94
+              },
+              "reason": "Both translations are excellent and follow the glossary perfectly. Translation A is slightly better due to a more precise rendering of 'адаптивный' (adaptivere) and a more natural flow in the final sentence.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "In the 'Alternative Antwort' section, it omits 'adaptivere' (more adaptive), simply saying 'hilfreichere' (more helpful). While acceptable, A is closer to the original intent."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The final sentence 'überspringen Sie diesen Block einfach für den Moment' is slightly less elegant than A's version."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/screen_3/texts",
+          "ru": "<h2>Зачем вести дневник автоматических мыслей?</h2>\n\nВедение дневника — ключ к глубокому самопознанию: он помогает лучше понимать свои эмоции, мысли и поведение.\n\nРегулярные записи позволяют видеть повторяющиеся паттерны, влияющие на настроение и поступки.\n\nПроцесс записи развивает осознанность.\n\nВы начинаете замечать, какие мысли приходят в разных ситуациях, и вам легче управлять реакциями.\n\nПоддержка в терапии (и не только): записи — ценный материал для самоанализа.\n\nОни полезны и в работе с психологом, и для самостоятельной практики.\n\nПочему важно делать записи?\n\nТо, что не записано, легко теряется в бескрайних закоулках памяти.\n\nМы часто думаем, что удержим всё в голове, — и ошибаемся.\n\n<important>Рефлексия — умение анализировать свои переживания — развивается, когда мы формулируем мысли и выносим их на внешний носитель.</important>\n\nТак мы не только сохраняем важные идеи, но и глубже понимаем себя.\n\nСекреты эффективной работы с дневником:\n\n<li>Регулярность — ключ к изменениям: дневник не волшебная палочка, нужна ваша практика. Заполняйте его регулярно, чтобы видеть результаты.</li>\n\n<li>Ловите момент: записывайте мысли и эмоции сразу, как они появились. Так легче «поймать» автоматические мысли, пока они не скрылись.</li>\n\n<li>Прогресс, а не перфекционизм: не гонитесь за идеалом. Любая маленькая победа — уже шаг вперёд.</li>\n\nВедение дневника — это навык, которому требуется время.\n\nБудьте терпеливы к себе и дайте время освоиться.",
+          "oldText": "<h2>Warum ein Gedankentagebuch führen?</h2>\n\nDas Führen eines Tagebuchs ist der Schlüssel zu tiefer Selbsterkenntnis: Es hilft Ihnen, Ihre Emotionen, Gedanken und Ihr Verhalten besser zu verstehen.\n\nRegelmäßige Einträge ermöglichen es, wiederkehrende Muster zu erkennen, die Ihre Stimmung und Ihr Handeln beeinflussen.\n\nDer Prozess des Aufschreibens fördert die Achtsamkeit.\n\nSie beginnen zu bemerken, welche Gedanken in verschiedenen Situationen auftauchen, und es fällt Ihnen leichter, Ihre Reaktionen zu steuern.\n\nUnterstützung in der Therapie (und darüber hinaus): Einträge sind wertvolles Material zur Selbstreflexion.\n\nSie sind sowohl bei der Arbeit mit einem Therapeuten als auch für die eigenständige Praxis nützlich.\n\nWarum ist es wichtig, Aufzeichnungen zu machen?\n\nWas nicht aufgeschrieben wird, geht in den Tiefen des Gedächtnisses leicht verloren.\n\nWir denken oft, wir könnten uns an alles erinnern – und wir irren uns.\n\n<important>Reflexion – die Fähigkeit, das eigene Erleben zu analysieren – entwickelt sich, wenn wir Gedanken formulieren und sie nach außen bringen.</important>\n\nSo bewahren wir nicht nur wichtige Erkenntnisse, sondern verstehen uns auch selbst tiefer.\n\nGeheimnisse für eine effektive Arbeit mit dem Tagebuch:\n\n<li>Regelmäßigkeit ist der Schlüssel zur Veränderung: Das Tagebuch ist kein Zauberstab, es erfordert Ihre Übung. Füllen Sie es regelmäßig aus, um Ergebnisse zu sehen.</li>\n\n<li>Den Moment nutzen: Notieren Sie Gedanken und Emotionen sofort, wenn sie auftauchen. So lassen sich automatische Gedanken leichter „einfangen“, bevor sie wieder verschwinden.</li>\n\n<li>Fortschritt statt Perfektionismus: Streben Sie nicht nach dem Ideal. Jeder kleine Schritt ist bereits ein Erfolg.</li>\n\nDas Führen eines Tagebuchs ist eine Fähigkeit, die Zeit benötigt.\n\nSeien Sie geduldig mit sich selbst und geben Sie sich die Zeit, sich einzuarbeiten.",
+          "newText": "<h2>Warum sollte man ein Gedankentagebuch führen?</h2>\n\nDas Führen eines Tagebuchs ist der Schlüssel zu tiefer Selbsterkenntnis: Es hilft Ihnen, Ihre Emotionen, Gedanken und Ihr Verhalten besser zu verstehen.\n\nRegelmäßige Einträge ermöglichen es, wiederkehrende Muster zu erkennen, die Ihre Stimmung und Ihr Handeln beeinflussen.\n\nDer Prozess des Aufschreibens fördert die Achtsamkeit.\n\nSie beginnen zu bemerken, welche Gedanken in verschiedenen Situationen auftauchen, und können Ihre Reaktionen leichter steuern.\n\nUnterstützung in der Therapie (und darüber hinaus): Aufzeichnungen sind wertvolles Material zur Selbstreflexion.\n\nSie sind sowohl bei der Arbeit mit einem Therapeuten als auch für die eigenständige Praxis nützlich.\n\nWarum ist es wichtig, Aufzeichnungen zu machen?\n\nWas nicht aufgeschrieben wird, geht in den Tiefen des Gedächtnisses leicht verloren.\n\nWir denken oft, wir könnten alles im Kopf behalten – doch das täuscht meist.\n\n<important>Reflexion – die Fähigkeit, das eigene Erleben zu analysieren – entwickelt sich, wenn wir Gedanken formulieren und sie nach außen bringen.</important>\n\nSo bewahren wir nicht nur wichtige Erkenntnisse, sondern verstehen uns auch selbst tiefer.\n\nGeheimnisse für eine effektive Arbeit mit dem Tagebuch:\n\n<li>Regelmäßigkeit ist der Schlüssel zur Veränderung: Das Tagebuch ist kein Zauberstab, es erfordert Übung. Füllen Sie es regelmäßig aus, um Fortschritte zu sehen.</li>\n\n<li>Den Moment nutzen: Notieren Sie Gedanken und Emotionen sofort, wenn sie auftauchen. So lassen sich automatische Gedanken leichter „einfangen“, bevor sie wieder verschwinden.</li>\n\n<li>Fortschritt statt Perfektionismus: Streben Sie nicht nach dem Ideal. Jeder kleine Schritt ist bereits ein Erfolg.</li>\n\nDas Führen eines Tagebuchs ist eine Fähigkeit, die Zeit benötigt.\n\nSeien Sie geduldig mit sich selbst und geben Sie sich die Zeit, sich einzuarbeiten.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 96
+              },
+              "reason": "Both translations are excellent and follow the terminology guidelines (Gedankentagebuch, Situation, etc.). Translation A is slightly better due to a more natural flow in the sentence 'und können Ihre Reaktionen leichter steuern' compared to B, and a more elegant rendering of the phrase 'und wir irren uns' (B) vs 'doch das täuscht meist' (A).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'und wir irren uns' is a bit blunt/clunky compared to the more sophisticated 'doch das täuscht meist' in A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 92
+              },
+              "reason": "Перевод A более точен в плане передачи смысла оригинала. В частности, в блоке про память перевод A корректно передает 'ошибаемся' (wir irren uns), в то время как перевод B использует более вольное 'das täuscht meist'. Также перевод A точнее передает нюанс 'видеть результаты' (Ergebnisse zu sehen) против 'видеть прогресс' (Fortschritte zu sehen) в контексте регулярности.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'doch das täuscht meist' звучит чуть более отстраненно, чем прямое 'und wir irren uns', которое лучше передает эмоциональный посыл оригинала."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/description",
+          "ru": "В статье разбирается практика ведения «Дневника автоматических мыслей» как одного из ключевых инструментов когнитивно-поведенческой терапии (КПТ). Мы объясняем, как корректно фиксировать и анализировать автоматические мысли, чтобы снижать уровень психологического дискомфорта и подготовить почву для работы с более глубокими уровнями убеждений.",
+          "oldText": "In diesem Artikel wird das „Gedankentagebuch“ als eines der zentralen Instrumente der Kognitiven Verhaltenstherapie (KVT) erläutert. Wir erklären Ihnen, wie Sie automatische Gedanken korrekt erfassen und analysieren können, um Ihr Befinden zu verbessern und die Grundlage für die Arbeit mit tieferliegenden Überzeugungen zu schaffen.",
+          "newText": "In diesem Artikel wird das „Gedankentagebuch“ als eines der zentralen Instrumente der Kognitiven Verhaltenstherapie (KVT) erläutert. Wir erklären Ihnen, wie Sie automatische Gedanken präzise erfassen und analysieren können, um Ihr psychisches Wohlbefinden zu steigern und die Grundlage für die Arbeit mit tieferliegenden Überzeugungen zu schaffen.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод B точнее передает смысл оригинала. В переводе A допущена смысловая ошибка: вместо 'снижения дискомфорта' (was die psychische Belastung reduziert) написано 'повышение благополучия' (Wohlbefinden steigern), что является позитивной трансформацией, а не прямой передачей цели процесса. Также в B использован более уместный термин 'Befinden' для обозначения состояния.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Оригинал говорит о снижении дискомфорта, а перевод A — о повышении благополучия. Хотя это логически связано, это искажение цели действия в контексте КПТ."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Перевод B точнее передает смысл фразы 'снижать уровень психологического дискомфорта' через 'psychisches Wohlbefinden steigern' (улучшение благополучия), в то время как вариант A слишком упрощает это до 'Befinden verbessern'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Befinden' без уточнения 'psychisch' делает фразу менее точной по сравнению с оригиналом, где акцент именно на психологическом дискомфорте."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/screen_1/texts",
+          "ru": "Одна из ключевых задач КПТ — работа с мыслями.\n\nАвтоматические мысли — это «компактные» версии ваших убеждений; они отражают содержание более глубоких слоёв мышления.\n\nПрежде чем работать с мыслью, её важно заметить и зафиксировать.\n\nВ этой главе вы познакомитесь с мощным инструментом самопознания — дневником автоматических мыслей (его ещё называют ABC-дневником).\n\n<important>Это не просто блокнот для грустных записей, а ваш личный «детектив», который помогает понять причины настроения и учит управлять им.</important>\n\nДневник показывает связь между тем, что происходит (ситуация), тем, что мы думаем (мысли), и тем, как реагируем (эмоции, ощущения, поведение).\n\nПоэтому он состоит из нескольких ключевых блоков:\n\n<li>Событие: краткое описание того, что вызвало эмоциональную реакцию.</li>\n\n<li>Мысль: автоматическая мысль, возникшая в ответ на ситуацию.</li>\n\n<li>Эмоции: чувства, которые вы испытали в этот момент.</li>\n\n<li>Реакция: ваше поведение или действия в ответ на переживаемые эмоции.</li>\n\n<li>Альтернативный ответ: более конструктивная мысль или взгляд на ситуацию, которые помогают изменить эмоциональную реакцию.</li>\n\nДавайте разберём каждый блок отдельно.\n\n<h2>Событие</h2>\n\nЗдесь мы коротко описываем, что именно вызвало неприятные эмоции.\n\nВажно не только обрисовать ситуацию, но и быть максимально конкретными.\n\nНапример, фраза «меня обидела мама» слишком общая — лучше уточнить, что именно она сказала или сделала.\n\n<instagram ids=\"18034696130262886,18104889895577855\">\n\nИ вместо «я плохо работал» лучше указать конкретику: «я допустил ошибку в отчёте».\n\nТриггером может быть не только внешнее событие, но и внутренние ощущения, мысли или воспоминания — главное, чтобы формулировки были чёткими.",
+          "oldText": "Eine der Kernaufgaben der KVT ist die Arbeit mit Gedanken.\n\nAutomatische Gedanken sind quasi „komprimierte“ Versionen Ihrer Überzeugungen; sie spiegeln den Inhalt tieferer Gedankenebenen wider.\n\nBevor Sie an einem Gedanken arbeiten können, ist es wichtig, ihn wahrzunehmen und festzuhalten.\n\nIn diesem Kapitel lernen Sie ein mächtiges Werkzeug zur Selbsterkenntnis kennen: das Gedankentagebuch (oft auch als ABC-Tagebuch bezeichnet).\n\n<important>Dies ist nicht nur ein Notizbuch für traurige Aufzeichnungen, sondern Ihr persönlicher „Detektiv“, der Ihnen hilft, die Ursachen Ihrer Stimmung zu verstehen und zu lernen, diese zu steuern.</important>\n\nDas Tagebuch zeigt die Verbindung zwischen dem, was geschieht (Situation), dem, was wir denken (Gedanken), und dem, wie wir reagieren (Emotionen, körperliche Empfindungen, Verhalten).\n\nDaher besteht es aus mehreren wesentlichen Blöcken:\n\n<li>Situation: Eine kurze Beschreibung dessen, was die emotionale Reaktion ausgelöst hat.</li>\n\n<li>Gedanke: Der automatische Gedanke, der als Reaktion auf die Situation entstanden ist.</li>\n\n<li>Emotionen: Die Gefühle, die Sie in diesem Moment erlebt haben.</li>\n\n<li>Reaktion: Ihr Verhalten oder Ihre Handlungen als Antwort auf die empfundenen Emotionen.</li>\n\n<li>Alternative Antwort: Ein konstruktiverer Gedanke oder eine neue Sichtweise auf die Situation, die hilft, die emotionale Reaktion zu verändern.</li>\n\nLassen Sie uns jeden Block einzeln betrachten.\n\n<h2>Situation</h2>\n\nHier beschreiben wir kurz, was genau die unangenehmen Emotionen ausgelöst hat.\n\nEs ist wichtig, nicht nur die Situation zu schildern, sondern so konkret wie möglich zu sein.\n\nZum Beispiel ist der Satz „Meine Mutter hat mich verletzt“ zu allgemein – es ist besser zu präzisieren, was sie genau gesagt oder getan hat.\n\n<instagram>\n\nUnd statt „Ich habe schlecht gearbeitet“ ist es besser, konkret zu werden: „Ich habe einen Fehler im Bericht gemacht“.\n\nEin Auslöser kann nicht nur ein äußeres Ereignis sein, sondern auch innere Empfindungen, Gedanken oder Erinnerungen – wichtig ist nur, dass die Formulierungen klar sind.",
+          "newText": "Eine der Kernaufgaben der KVT ist die Arbeit mit Gedanken.\n\nAutomatische Gedanken sind quasi „Kurzfassungen“ Ihrer Überzeugungen; sie spiegeln den Inhalt tieferer Gedankenebenen wider.\n\nBevor man an einem Gedanken arbeiten kann, ist es wichtig, ihn wahrzunehmen und festzuhalten.\n\nIn diesem Kapitel lernen Sie ein mächtiges Werkzeug der Selbsterkenntnis kennen: das Gedankentagebuch (oft auch als ABC-Tagebuch bezeichnet).\n\n<important>Dies ist nicht einfach nur ein Notizbuch für traurige Aufzeichnungen, sondern Ihr persönlicher „Detektiv“, der Ihnen hilft, die Ursachen Ihrer Stimmung zu verstehen und zu lernen, diese zu steuern.</important>\n\nDas Tagebuch zeigt die Verbindung zwischen dem, was geschieht (Situation), dem, was wir denken (Gedanken) und dem, wie wir reagieren (Emotionen, Körperempfindungen, Verhalten).\n\nDeshalb besteht es aus mehreren wesentlichen Blöcken:\n\n<li>Situation: Eine kurze Beschreibung dessen, was die emotionale Reaktion ausgelöst hat.</li>\n\n<li>Gedanke: Der automatische Gedanke, der als Reaktion auf die Situation entstanden ist.</li>\n\n<li>Emotionen: Die Gefühle, die Sie in diesem Moment erlebt haben.</li>\n\n<li>Reaktion: Ihr Verhalten oder Ihre Handlungen als Antwort auf die empfundenen Emotionen.</li>\n\n<li>Alternative Antwort: Ein hilfreicherer Gedanke oder eine neue Sichtweise auf die Situation, die hilft, die emotionale Reaktion zu verändern.</li>\n\nLassen Sie uns jeden Block einzeln betrachten.\n\n<h2>Situation</h2>\n\nHier beschreiben wir kurz, was genau die unangenehmen Emotionen ausgelöst hat.\n\nEs ist wichtig, nicht nur die Situation zu schildern, sondern so konkret wie möglich zu sein.\n\nZum Beispiel ist der Satz „Meine Mutter hat mich verletzt“ zu allgemein – es ist besser zu präzisieren, was sie genau gesagt oder getan hat.\n\n<instagram>\n\nUnd statt „Ich habe schlecht gearbeitet“ ist es besser, konkret zu werden: „Ich habe einen Fehler im Bericht gemacht“.\n\nEin Auslöser kann nicht nur ein äußeres Ereignis sein, sondern auch innere Empfindungen, Gedanken oder Erinnerungen – wichtig ist nur, dass die Formulierungen klar sind.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 97
+              },
+              "reason": "Перевод B лучше справляется с адаптацией терминологии и стилистики. В частности, использование 'hilfreicherer Gedanke' вместо 'konstruktiverer Gedanke' в контексте 'Alternative Antwort' более точно соответствует принятой в немецкой КПТ практике, указанной в глоссарии. Также 'Kurzfassungen' звучит более естественно для носителя, чем 'komprimierte Versionen'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Использование 'konstruktiverer Gedanke' допустимо, но 'hilfreicherer Gedanke' является предпочтительным термином в немецкой КПТ-практике для 'Alternative Antwort'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'komprimierte Versionen' звучит немного технически/математически, 'Kurzfassungen' в переводе B звучит более литературно и естественно."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 96
+              },
+              "reason": "Перевод A звучит более естественно и профессионально. Использование 'Kurzfassungen' вместо 'komprimierte Versionen' в контексте мыслей гораздо лучше передает смысл, так как 'komprimiert' звучит слишком технически (как сжатие данных). Также в A лучше соблюдена логика обращения к пользователю.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'komprimierte Versionen' звучит излишне технически/машинно для психологического текста; 'Kurzfassungen' в A — более удачный вариант."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/test/answers",
+          "ru": "Я чувствую себя ужасно\n\nНачальник повысил голос во время совещания, раскритиковав мой отчет\n\nЯ неудачник\n\nУ меня всё валится из рук",
+          "oldText": "Ich fühle mich schrecklich\n\nDer Chef wurde während der Besprechung laut und kritisierte meinen Bericht\n\nIch bin ein Versager\n\nMir fällt alles so schwer",
+          "newText": "Ich fühle mich schrecklich\n\nMein Chef erhob während der Besprechung die Stimme und kritisierte meinen Bericht\n\nIch bin ein Versager\n\nMir fällt alles so schwer",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Перевод B звучит более естественно и литературно. Фраза 'die Stimme erheben' является более точным и стилистически уместным эквивалентом для 'повысить голос', чем просто 'laut werden' в переводе A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'wurde laut' звучит несколько упрощенно и разговорно по сравнению с более элегантным 'erhob die Stimme'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Перевод A более точно передает нюанс оригинала 'повысил голос' (erhob die Stimme), в то время как перевод B использует более разговорное 'wurde laut' (стал громким).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Der Chef' вместо 'Mein Chef' звучит чуть менее лично, хотя в контексте может быть допустимо; 'wurde laut' — менее изящная передача действия 'повысил голос'."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

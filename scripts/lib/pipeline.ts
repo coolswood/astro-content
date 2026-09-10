@@ -1,8 +1,9 @@
 /**
  * Конвейер перевода на промптах из scripts/prompts/ и клиенты провайдеров.
  *
- * Контент (text): main → editor → review → fix — смысловой ревью списком
- * замечаний и точечная правка по ним (паттерн «критикуй отдельно, правь
+ * Контент (text): main → editor → review → fix. Editor/fix возвращают
+ * полный документ (структуру и порядок элементов фиксирует мердж), review —
+ * список замечаний, fix правит по ним («критикуй отдельно, правь
  * отдельно», как в translation-agent/Aphra).
  * UI/keys:        main → editor → tech — однозапросная смысловая сверка.
  *
@@ -287,59 +288,90 @@ function setScalar(root: any, p: string, value: any): void {
   else cur[last] = value;
 }
 
-/** Контейнер с ≥4 листьями, покрытый патчем на 100%, — «полный перезапис». */
-const FULL_CONTAINER_MIN_LEAVES = 4;
-
 /**
- * editor/fix/tech возвращают только изменённые ключи. Применяем патч поверх
- * base: только строковые непустые значения по существующим путям (порт
- * merge_subset).
- *
- * Guard от «полного документа»: если патч покрывает ВСЕ листья контейнера
- * (массива/объекта, включая корень) с ≥4 листьями, модель нарушила контракт
- * и вернула переписанный контейнер целиком. Правки такого контейнера
- * отбрасываются: полный перезапис тянет незаявленные «улучшения» —
- * перестановку элементов, эпиграфы-дубли в первых элементах массивов
- * (дефект «крючков»: реальный текст подменялся дублем цитаты из этого же
- * файла). Точечные правки остальных контейнеров применяются как обычно.
+ * EDITOR/FIX/TECH по контракту возвращают ПОЛНЫЙ документ (свободное
+ * переписывание текста без выбора «какие правки главные»), но мердж умеет
+ * и дифф-патч. Ответ применяется поверх base только по СУЩЕСТВУЮЩИМ путям
+ * и только строковыми непустыми значениями: структура и длины массивов
+ * фиксируются базой — элементы не могут добавиться или переставиться.
+ * Содержательные подмены текста внутри позиций (дефект «крючков») ловит
+ * валидация дублей в раннере с ретраем языка; финальный контроль — QA-судья.
  */
 export function mergeSubset<T>(base: T, subset: unknown, stage = 'patch'): T {
-  if (!subset || typeof subset !== 'object' || Array.isArray(subset)) return base;
+  if (!subset || typeof subset !== 'object' || Array.isArray(subset)) {
+    console.warn(`⚠️ [${stage}] ответ не является JSON-объектом — применено 0 правок`);
+    return base;
+  }
   const flatBase = flattenAll(base);
-  const patch = flattenAll(subset);
-
-  const baseByParent = new Map<string, string[]>();
-  for (const k of Object.keys(flatBase)) {
-    const parent = k.slice(0, k.lastIndexOf('/'));
-    const list = baseByParent.get(parent) ?? [];
-    list.push(k);
-    baseByParent.set(parent, list);
+  let patch = flattenAll(subset);
+  // Эхо-обёртка {data: …} (как у MAIN): пути /data/** в базе не существуют.
+  if ('data' in subset && !('/data' in flatBase)) {
+    patch = flattenAll((subset as { data: unknown }).data);
   }
+
+  const total = Object.keys(flatBase).length;
   const patchSet = new Set(Object.keys(patch));
-  const droppedContainers: string[] = [];
-  for (const [parent, keys] of baseByParent) {
-    if (keys.length < FULL_CONTAINER_MIN_LEAVES) continue;
-    if (keys.every((k) => patchSet.has(k))) droppedContainers.push(parent);
-  }
-  const dropped = new Set<string>();
-  for (const parent of droppedContainers) {
-    for (const k of baseByParent.get(parent)!) dropped.add(k);
-  }
-  if (dropped.size > 0) {
-    console.warn(
-      `⚠️ [${stage}] патч переписывает контейнеры целиком (нарушение контракта «только изменённые ключи»), ` +
-        `правки по ним отброшены: ${droppedContainers.map((c) => c || '(корень)').join(', ')}`,
-    );
-  }
-
+  let changed = 0;
   for (const k of Object.keys(patch)) {
-    if (dropped.has(k)) continue;
     const v = patch[k];
-    if (k in flatBase && typeof v === 'string' && v.trim()) {
+    if (!(k in flatBase) || typeof v !== 'string' || !v.trim()) continue;
+    if (flatBase[k] !== v) {
+      changed++;
       setScalar(base, k, v);
     }
   }
+  if (changed === 0) {
+    console.warn(`⚠️ [${stage}] применено 0 правок (ответ не пересёкся с документом или правок нет)`);
+  } else {
+    const full = Object.keys(flatBase).every((k) => patchSet.has(k))
+      ? ' (ответ — полный документ)'
+      : '';
+    console.log(`📝 [${stage}] изменено листьев: ${changed}/${total}${full}`);
+  }
   return base;
+}
+
+/** Число попыток текстовой стадии по умолчанию: запрос + один ретрай. */
+const DEFAULT_STAGE_ATTEMPTS = 2;
+
+/**
+ * Ретраящая обёртка текстовой стадии: запрос + разбор/валидация ответа —
+ * единое целое. Стадии не пропускаются: после исчерпания попыток бросается
+ * исключение, попытка языка падает целиком (раннер ретраит язык, запись
+ * файла — только после полного успеха конвейера). На ретрае включается
+ * jsonMode: битый JSON — самая частая причина сбоя стадии.
+ */
+async function runStage<T>(
+  client: StageClient,
+  stage: string,
+  attempts: number,
+  buildReq: (attempt: number) => StageRequest,
+  processOut: (text: string) => Promise<T> | T,
+): Promise<T> {
+  let lastError: unknown = null;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await processOut(await client.complete(buildReq(attempt)));
+    } catch (e: any) {
+      lastError = e;
+      if (attempt < attempts) {
+        console.warn(`⚠️ [${stage}] попытка ${attempt}/${attempts} не удалась: ${e?.message ?? e} — повторяю.`);
+      }
+    }
+  }
+  throw new Error(
+    `[${stage}] стадия не выполнена за ${attempts} попыток: ${(lastError as any)?.message ?? lastError}`,
+  );
+}
+
+/** Ответ текстовой стадии: маркер «правок нет» → null, иначе строго объект. */
+async function parseStageObject(stage: string, raw: string): Promise<any> {
+  if (isNoChangesMarker(raw)) return null;
+  const parsed = await parseWithRepair<any>(raw);
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    throw new Error(`неожиданный формат ответа: ${raw.slice(0, 120)}`);
+  }
+  return parsed;
 }
 
 export interface PipelineResult {
@@ -357,9 +389,11 @@ export interface PipelineResult {
 }
 
 /**
- * Прогоняет payload через стадии. Бросает исключение, если MAIN не дал
- * распарсиваемый JSON или потеряны ключи; остальные стадии некритичны
- * (сбой/пустой результат — логируем и идём дальше).
+ * Прогоняет payload через стадии. Каждая стадия ретраится (opts.stageAttempts,
+ * по умолчанию 2 попытки; на ретрае включается jsonMode — битый JSON — самая
+ * частая причина сбоя). Стадии НЕ пропускаются: после исчерпания попыток
+ * бросается исключение, попытка языка падает целиком и ретраится раннером
+ * (файл пишется атомарно и только после полного успеха).
  *
  * text: main → editor → review (список замечаний) → fix (правка по замечаниям);
  * keys: main → editor → tech (однозапросная сверка с правкой).
@@ -372,9 +406,10 @@ export async function runPipeline(
   prompts: StagePrompts,
   payload: any,
   targetLocale: string,
-  opts: { sourceLocale?: string; jsonModeMain?: boolean } = {},
+  opts: { sourceLocale?: string; jsonModeMain?: boolean; stageAttempts?: number } = {},
 ): Promise<PipelineResult> {
   const sourceLocale = opts.sourceLocale ?? 'ru';
+  const stageAttempts = opts.stageAttempts ?? DEFAULT_STAGE_ATTEMPTS;
   const wrapped = { sourceLocale, targetLocale, data: payload };
   const payloadText = JSON.stringify(wrapped);
   const timings: PipelineResult['timings'] = { main: 0, editor: 0 };
@@ -398,103 +433,95 @@ export async function runPipeline(
     throw new Error(`MAIN: не удалось распарсить JSON: ${draftText.slice(0, 200)}`);
   }
 
-  // Стадия 2: EDITOR — полировка носителем (без оригинала, только изменённые ключи).
-  // Отправляем канонический draft (обёртка {data} снята, JSON нормализован):
-  // пути патча тогда совпадают с базой мерджа; сырой draftText с обёрткой-эхом
-  // от MAIN ломал пути патча (/data/...) и молча превращал стадию в no-op.
+  // Стадия 2: EDITOR — полировка носителем без оригинала. Ответ — полный
+  // отредактированный документ (или дифф-патч): мердж применяет значения
+  // только по существующим путям, структура фиксируется базой. Отправляем
+  // канонический draft (обёртка {data} снята, JSON нормализован): пути
+  // ответа тогда совпадают с базой мерджа; сырой draftText с обёрткой-эхом
+  // от MAIN ломал пути и молча превращал стадию в no-op.
   t = Date.now();
-  try {
-    const editorOut = await client.complete({
+  const editorPatch = await runStage(
+    client,
+    'editor',
+    stageAttempts,
+    (attempt) => ({
       system: prompts.editor,
       user: JSON.stringify(draft),
       temperature: 0.2,
-      maxTokens: 8_192,
-    });
-    if (!isNoChangesMarker(editorOut)) {
-      const patch = await parseWithRepair<any>(editorOut);
-      draft = mergeSubset(draft, patch, 'editor');
-    }
-  } catch (e: any) {
-    console.warn(`⚠️ [editor] стадия пропущена: ${e?.message ?? e}`);
-  }
+      maxTokens: 16_384,
+      jsonMode: attempt > 1,
+    }),
+    (text) => parseStageObject('editor', text),
+  );
   timings.editor = Date.now() - t;
+  if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor');
 
   // Стадии 3–4 (text): REVIEW — смысловая сверка с оригиналом, ответ списком
-  // замечаний {"issues":[...]} без правок; FIX — точечная правка строго по
-  // замечаниям (дифф-патч). Паттерн «критикуй отдельно, правь отдельно»:
-  // ревьюер не обременён формированием патча, правщик получает явный список.
+  // замечаний {"issues":[...]} без правок; FIX — правка по замечаниям, ответ
+  // полный документ или дифф-патч. Паттерн «критикуй отдельно, правь
+  // отдельно»: ревьюер не обременён формированием правок, правщик получает
+  // явный список.
   if (prompts.review && prompts.fix) {
     t = Date.now();
-    let reviewOut: string | null = null;
-    try {
-      reviewOut = await client.complete({
-        system: prompts.review,
+    const review = await runStage(
+      client,
+      'review',
+      stageAttempts,
+      () => ({
+        system: prompts.review!,
         user: `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}`,
         temperature: 0.2,
         maxTokens: 8_192,
         jsonMode: true, // маленький структурированный ответ — json_object надёжнее
-      });
-    } catch (e: any) {
-      console.warn(`⚠️ [review] стадия пропущена: ${e?.message ?? e}`);
-    }
+      }),
+      async (text) => {
+        const parsed = await parseWithRepair<any>(text);
+        if (!parsed || typeof parsed !== 'object' || !Array.isArray(parsed.issues)) {
+          throw new Error(`неожиданный формат ответа: ${text.slice(0, 120)}`);
+        }
+        return { raw: text, issues: parsed.issues as unknown[] };
+      },
+    );
     timings.review = Date.now() - t;
 
-    let issues: unknown[] = [];
-    if (reviewOut != null) {
-      try {
-        const parsed = await parseWithRepair<any>(reviewOut);
-        if (parsed && typeof parsed === 'object' && Array.isArray(parsed.issues)) {
-          issues = parsed.issues;
-        } else {
-          console.warn(
-            `⚠️ [review] неожиданный формат ответа — правка пропущена: ${reviewOut.slice(0, 120)}`,
-          );
-        }
-      } catch {
-        console.warn(
-          `⚠️ [review] список замечаний не распарсился — правка пропущена: ${reviewOut.slice(0, 120)}`,
-        );
-      }
-    }
-
-    if (issues.length > 0) {
+    if (review.issues.length > 0) {
       t = Date.now();
-      try {
-        const fixOut = await client.complete({
-          system: prompts.fix,
+      const fixPatch = await runStage(
+        client,
+        'fix',
+        stageAttempts,
+        (attempt) => ({
+          system: prompts.fix!,
           user:
             `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}\n\n` +
-            `ЗАМЕЧАНИЯ РЕВЬЮЕРА (исправь каждое):\n${reviewOut}`,
+            `ЗАМЕЧАНИЯ РЕВЬЮЕРА (исправь каждое):\n${review.raw}`,
           temperature: 0.2,
-          maxTokens: 8_192,
-        });
-        timings.fix = Date.now() - t;
-        if (!isNoChangesMarker(fixOut)) {
-          const patch = await parseWithRepair<any>(fixOut);
-          draft = mergeSubset(draft, patch, 'fix');
-        }
-      } catch (e: any) {
-        console.warn(`⚠️ [fix] стадия пропущена: ${e?.message ?? e}`);
-      }
+          maxTokens: 16_384,
+          jsonMode: attempt > 1,
+        }),
+        (text) => parseStageObject('fix', text),
+      );
+      timings.fix = Date.now() - t;
+      if (fixPatch) draft = mergeSubset(draft, fixPatch, 'fix');
     }
   } else if (prompts.tech) {
     // Legacy-путь (keys/ui): однозапросная смысловая сверка с правкой.
     t = Date.now();
-    try {
-      const techOut = await client.complete({
-        system: prompts.tech,
+    const techPatch = await runStage(
+      client,
+      'tech',
+      stageAttempts,
+      (attempt) => ({
+        system: prompts.tech!,
         user: `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}`,
         temperature: 0.2,
         maxTokens: 8_192,
-      });
-      if (!isNoChangesMarker(techOut)) {
-        const patch = await parseWithRepair<any>(techOut);
-        draft = mergeSubset(draft, patch, 'tech');
-      }
-    } catch (e: any) {
-      console.warn(`⚠️ [tech] стадия пропущена: ${e?.message ?? e}`);
-    }
+        jsonMode: attempt > 1,
+      }),
+      (text) => parseStageObject('tech', text),
+    );
     timings.tech = Date.now() - t;
+    if (techPatch) draft = mergeSubset(draft, techPatch, 'tech');
   }
 
   // Контроль тегов: пул тегов перевода не должен превышать пул оригинала.

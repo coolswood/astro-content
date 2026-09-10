@@ -1,0 +1,522 @@
+{
+  "meta": {
+    "Дата": "2026-09-10T19:59:02.231Z",
+    "Метка": "diary-de-old-vs-new",
+    "Сравнение": "NEW = рабочее дерево; OLD = --old-dir backups/pre-retranslate-20260910-diary",
+    "Файлы": "story/diary.json",
+    "Локали": "de",
+    "Сэмпл/файл": 10,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:18000/v1",
+    "git HEAD": "dfc3438ef3704cb281f71defd66df4e4cefbc132"
+  },
+  "results": {
+    "story/diary.json": {
+      "de": [
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/screen_2/texts",
+          "ru": "<h2>Автоматическая мысль</h2>\n\nЭтот блок посвящён тому, как мы интерпретируем ситуацию.\n\nЧтобы заметить свои мысли, спросите себя: «О чём я сейчас думаю?»\n\nВыделите самую значимую и эмоционально заряженную мысль.\n\nЕсли формулировка слишком общая, уточните её и сделайте конкретной.\n\nОцените, насколько вы верите этой мысли, по шкале от 0 до 10.\n\nНапример, если в разделе «Событие» записано «Я допустил ошибку в отчёте», мысли могут быть такими: «Я никогда не сделаю хорошо», «Я неудачник», «Ошибки — это глупо».\n\nВыберите мысль, которая сильнее всего откликается, запишите её и отметьте уровень убеждённости.\n\n<h2>Эмоции</h2>\n\nПеред этим блоком задайте себе два вопроса:\n\n<li>Какие эмоции я испытывал(а)? (грусть, злость, тревога, вина, страх, стыд и т. д.)</li>\n\n<li>Насколько интенсивны были эти эмоции? (0–10 баллов)</li>\n\nНапример: грусть — 9, отчаяние — 7, уныние — 5.\n\n<h2>Ощущения в теле</h2>\n\nЗдесь мы фиксируем физические реакции во время сложных эмоций — как тело откликнулось на переживания.\n\nБудьте конкретны: это может быть ком в горле, холодный пот, тяжесть в животе и т. п.\n\n<h2>Поведение</h2>\n\nОпишите, что вы сделали после появления мыслей и эмоций.\n\nКакие действия последовали за этим?\n\nПоведение может включать, например, слёзы или крик на коллег.\n\n<h2>Адаптивный ответ</h2>\n\nВ этой колонке проанализируйте исходную мысль и сформулируйте более адаптивный, поддерживающий ответ.\n\nПомогут вопросы:\n\n<li>Насколько эта мысль реалистична?</li>\n\n<li>Какие факты её подтверждают, а какие — опровергают?</li>\n\n<li>Каковы худший, лучший и наиболее вероятный исходы?</li>\n\n<li>Что будет, если продолжать верить этой мысли? И что изменится, если пересмотреть своё мнение?</li>\n\nНапример, вместо «Я никогда не смогу сделать что-то хорошо» можно сказать: «Я исправлю ошибку и извлеку урок. В конце концов, ошибаются все».\n\nВ нашем приложении дневник мыслей также помогает отслеживать когнитивные ошибки.\n\nДавайте коротко разберёмся, что это такое.\n\n<important>Когниция — это процессы восприятия и мышления (мысли, образы, представления), которые происходят в нашем сознании. Когнитивные искажения — это ошибки в обработке информации мозгом.</important>\n\nОни мешают думать логично и рационально, и из-за них реальность воспринимается искажённо.\n\nЕсли вы заметили когнитивную ошибку в своих мыслях, отметьте её.\n\nЕсли нет — не переживайте, просто пропустите этот блок на сейчас.",
+          "oldText": "Automatischer Gedanke\n\nDieser Block betrifft unsere Interpretation der Situation.\n\nUm Ihre Gedanken zu bemerken, fragen Sie sich: „Woran denke ich gerade?“\n\nHeben Sie den am stärksten emotional aufgeladenen Gedanken hervor.\n\nWenn die Formulierung zu vage ist, präzisieren Sie sie.\n\nBewerten Sie, wie stark Sie an diesen Gedanken glauben – auf einer Skala von 0 bis 10.\n\nSteht im Abschnitt „Ereignis“ etwa „Ich habe im Bericht einen Fehler gemacht“, könnten die Gedanken so lauten: „Ich bekomme nie etwas gut hin“, „Ich bin ein Versager“, „Fehler sind dumm.“\n\nWählen Sie den Gedanken, der Sie am stärksten anspricht, schreiben Sie ihn auf und markieren Sie den Überzeugungsgrad.\n\nEmotionen\n\nStellen Sie sich vorher zwei Fragen:\n\nWelche Emotionen habe ich erlebt? (Traurigkeit, Wut, Angst, Schuld, Furcht, Scham usw.)\n\nWie intensiv waren diese Emotionen? (0–10 Punkte)\n\nBeispiel: Traurigkeit – 9, Verzweiflung – 7, Niedergeschlagenheit – 5.\n\nKörperempfindungen\n\nHier halten wir die körperlichen Reaktionen während der starken Gefühle fest – wie der Körper geantwortet hat.\n\nSeien Sie konkret: etwa Kloß im Hals, kalter Schweiß, Schwere im Bauch usw.\n\nVerhalten\n\nBeschreiben Sie, was Sie nach den Gedanken und Gefühlen getan haben.\n\nWelche Handlungen folgten?\n\nZum Verhalten können z. B. Weinen oder ein Wutausbruch gegenüber Kolleginnen und Kollegen gehören.\n\nAdaptiver Antwortsatz\n\nAnalysieren Sie die Ausgangsidee und formulieren Sie eine hilfreichere, realistischere Antwort.\n\nHilfreiche Fragen:\n\nWie realistisch ist dieser Gedanke?\n\nWelche Fakten stützen ihn, welche sprechen dagegen?\n\nWas sind der schlechteste, beste und wahrscheinlichste Ausgang?\n\nWas geschieht, wenn ich an dem Gedanken festhalte? Und was ändert sich, wenn ich meine Sicht überdenke?\n\nStatt „Ich werde nie etwas gut können“ könnte es heißen: „Ich korrigiere den Fehler und lerne daraus. Schließlich machen alle Fehler.“\n\nIn unserer App hilft das Gedankentagebuch auch dabei, kognitive Verzerrungen zu verfolgen.\n\nKurz dazu:\n\nKognition bezeichnet die Prozesse der Wahrnehmung und des Denkens (Gedanken, Bilder, Vorstellungen) in unserem Bewusstsein. Kognitive Verzerrungen sind Fehler in der Informationsverarbeitung des Gehirns.\n\nSie behindern logisches, rationales Denken – dadurch erscheint die Realität verzerrt.\n\nWenn Sie eine kognitive Verzerrung in Ihren Gedanken bemerken, markieren Sie sie.\n\nWenn nicht – kein Problem, lassen Sie diesen Block fürs Erste aus.",
+          "newText": "<h2>Automatischer Gedanke</h2>\n\nDieser Block widmet sich der Frage, wie wir eine Situation interpretieren.\n\nUm Ihre Gedanken zu bemerken, fragen Sie sich: „Worüber denke ich gerade nach?“\n\nIdentifizieren Sie den bedeutendsten und emotionalsten Gedanken.\n\nWenn die Formulierung zu allgemein ist, präzisieren Sie sie und machen Sie sie konkret.\n\nBewerten Sie auf einer Skala von 0 bis 10, wie sehr Sie an diesen Gedanken glauben.\n\nWenn Sie beispielsweise im Bereich „Situation“ notiert haben: „Ich habe einen Fehler im Bericht gemacht“, könnten die Gedanken so lauten: „Ich werde nie etwas richtig machen“, „Ich bin ein Versager“, „Fehler sind dumm“.\n\nWählen Sie den Gedanken aus, der Sie am stärksten beschäftigt, schreiben Sie ihn auf und geben Sie den Grad Ihrer Überzeugung an.\n\n<h2>Emotionen</h2>\n\nStellen Sie sich vor diesem Block zwei Fragen:\n\n<li>Welche Emotionen habe ich empfunden? (Trauer, Wut, Angst, Schuld, Furcht, Scham usw.)</li>\n\n<li>Wie intensiv waren diese Emotionen? (0–10 Punkte)</li>\n\nZum Beispiel: Trauer – 9, Verzweiflung – 7, Niedergeschlagenheit – 5.\n\n<h2>Körperliche Empfindungen</h2>\n\nHier halten wir die körperlichen Reaktionen während intensiver Emotionen fest – wie Ihr Körper auf das Erlebte reagiert hat.\n\nSeien Sie konkret: Das kann ein Kloß im Hals, kalter Schweiß, ein Druck im Bauch usw. sein.\n\n<h2>Verhalten</h2>\n\nBeschreiben Sie, was Sie nach dem Auftreten der Gedanken und Emotionen getan haben.\n\nWelche Handlungen folgten darauf?\n\nDas Verhalten kann zum Beispiel Weinen oder das Anschreien von Kollegen beinhalten.\n\n<h2>Alternative Antwort</h2>\n\nAnalysieren Sie in dieser Spalte den ursprünglichen Gedanken und formulieren Sie eine adaptivere, hilfreichere Antwort.\n\nFolgende Fragen können helfen:\n\n<li>Wie realistisch ist dieser Gedanke?</li>\n\n<li>Welche Fakten bestätigen ihn, und welche widersprechen ihm?</li>\n\n<li>Was wären das schlimmste, das beste und das wahrscheinlichste Ergebnis?</li>\n\n<li>Was passiert, wenn ich weiterhin an diesen Gedanken glaube? Und was würde sich ändern, wenn ich meine Meinung überdenke?</li>\n\nAnstatt „Ich werde nie etwas richtig machen können“, könnten Sie zum Beispiel sagen: „Ich werde den Fehler korrigieren und daraus lernen. Schließlich machen alle Fehler“.\n\nIn unserer App hilft das Gedankentagebuch auch dabei, Denkfehler zu identifizieren.\n\nLassen Sie uns kurz klären, was das eigentlich ist.\n\n<important>Kognition bezeichnet die Prozesse der Wahrnehmung und des Denkens (Gedanken, Bilder, Vorstellungen), die in unserem Bewusstsein ablaufen. Kognitive Verzerrungen sind Fehler bei der Informationsverarbeitung durch das Gehirn.</important>\n\nSie hindern uns daran, logisch und rational zu denken, und führen dazu, dass die Realität verzerrt wahrgenommen wird.\n\nWenn Sie einen Denkfehler in Ihren Gedanken bemerken, markieren Sie ihn.\n\nWenn nicht – machen Sie sich keine Sorgen, Sie können diesen Block für den Moment einfach überspringen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is professional, follows all glossary requirements, and maintains the correct HTML structure. Translation B fails significantly by omitting HTML tags, using incorrect terminology ('Ereignis' instead of 'Situation'), and providing a non-standard translation for 'Adaptive Antwort'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "All HTML tags (h2, li, important) were removed, which breaks the UI structure."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'Ereignis' instead of the required 'Situation'."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'Adaptiver Antwortsatz' instead of the required 'Alternative Antwort'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'Ich bekomme nie etwas gut hin' is a bit too colloquial compared to the professional tone of A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Перевод B значительно лучше, так как он строго следует глоссарию (использует 'Situation' вместо 'Ereignis' и 'Alternative Antwort' вместо 'Adaptiver Antwortsatz') и сохраняет HTML-разметку. Перевод A содержит грубые ошибки в терминологии и теряет теги.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Полностью потеряны все HTML-теги (h2, li, important), что критично для структуры документа."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использовано 'Ereignis' вместо требуемого 'Situation'; 'Adaptiver Antwortsatz' — это неверная калька, в то время как в глоссарии указано 'Alternative Antwort'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'Adaptiver Antwortsatz' звучит неестественно для немецкого пользователя."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "В разделе 'Körperliche Empfindungen' можно было бы использовать 'Druck im Bauch' вместо 'Schwere', но это допустимо."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/title",
+          "ru": "Дневник автоматических мыслей",
+          "oldText": "Tagebuch automatischer Gedanken",
+          "newText": "Gedankentagebuch",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "Перевод A использует устоявшийся термин 'Gedankentagebuch', который является стандартным названием инструмента СМЭР в немецкой КПТ согласно глоссарию. Перевод B грамматически верен, но звучит избыточно и менее естественно для интерфейса приложения.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Звучит как дословный перевод, в то время как в немецкой психологической практике используется компактное словосочетание 'Gedankentagebuch'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "Перевод B использует устоявшийся в немецкой КПТ термин 'Gedankentagebuch', который звучит естественно и профессионально. Перевод A является грамматически верным, но звучит как тяжеловесная калька с русского.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Звучит избыточно и менее естественно для носителя, чем общепринятый термин 'Gedankentagebuch'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/screen_3/texts",
+          "ru": "<h2>Зачем вести дневник автоматических мыслей?</h2>\n\nВедение дневника — ключ к глубокому самопознанию: он помогает лучше понимать свои эмоции, мысли и поведение.\n\nРегулярные записи позволяют видеть повторяющиеся паттерны, влияющие на настроение и поступки.\n\nПроцесс записи развивает осознанность.\n\nВы начинаете замечать, какие мысли приходят в разных ситуациях, и вам легче управлять реакциями.\n\nПоддержка в терапии (и не только): записи — ценный материал для самоанализа.\n\nОни полезны и в работе с психологом, и для самостоятельной практики.\n\nПочему важно делать записи?\n\nТо, что не записано, легко теряется в бескрайних закоулках памяти.\n\nМы часто думаем, что удержим всё в голове, — и ошибаемся.\n\n<important>Рефлексия — умение анализировать свои переживания — развивается, когда мы формулируем мысли и выносим их на внешний носитель.</important>\n\nТак мы не только сохраняем важные идеи, но и глубже понимаем себя.\n\nСекреты эффективной работы с дневником:\n\n<li>Регулярность — ключ к изменениям: дневник не волшебная палочка, нужна ваша практика. Заполняйте его регулярно, чтобы видеть результаты.</li>\n\n<li>Ловите момент: записывайте мысли и эмоции сразу, как они появились. Так легче «поймать» автоматические мысли, пока они не скрылись.</li>\n\n<li>Прогресс, а не перфекционизм: не гонитесь за идеалом. Любая маленькая победа — уже шаг вперёд.</li>\n\nВедение дневника — это навык, которому требуется время.\n\nБудьте терпеливы к себе и дайте время освоиться.",
+          "oldText": "Warum ein Tagebuch automatischer Gedanken führen?\n\nDas Tagebuch ist ein Schlüssel zu tieferem Verständnis: Es hilft, eigene Emotionen, Gedanken und Verhaltensweisen besser nachzuvollziehen.\n\nRegelmäßige Einträge machen wiederkehrende Muster sichtbar, die Stimmung und Handlungen prägen.\n\nDer Schreibprozess fördert Achtsamkeit.\n\nSie bemerken eher, welche Gedanken in bestimmten Situationen auftauchen – und können Ihre Reaktionen leichter steuern.\n\nUnterstützung in der Therapie (und darüber hinaus): Die Einträge sind wertvolles Material für die Selbstreflexion.\n\nSie sind nützlich in der Zusammenarbeit mit einer Psychologin oder einem Psychologen – und für die eigenständige Praxis.\n\nWarum aufschreiben?\n\nUngelesen verschwinden Eindrücke schnell in den Tiefen des Gedächtnisses.\n\nWir glauben oft, alles im Kopf zu behalten – und irren uns.\n\nReflexion – also das Analysieren der eigenen Erlebnisse – wächst, wenn wir Gedanken formulieren und nach außen bringen.\n\nSo bewahren wir nicht nur Wichtiges, sondern verstehen uns selbst tiefer.\n\nTipps für wirksames Arbeiten mit dem Tagebuch:\n\nRegelmäßigkeit ist der Motor der Veränderung: Das Tagebuch ist kein Zauberstab – Ihre Übung macht den Unterschied. Füllen Sie es regelmäßig aus, um Fortschritte zu sehen.\n\nDen Moment einfangen: Notieren Sie Gedanken und Gefühle direkt, wenn sie auftauchen. So lassen sich automatische Gedanken leichter „einfangen“.\n\nFortschritt statt Perfektion: Jagen Sie nicht dem Ideal hinterher. Jeder kleine Schritt ist bereits ein Gewinn.\n\nDas Führen des Tagebuchs ist eine Fähigkeit, die Zeit braucht.\n\nSeien Sie geduldig mit sich und geben Sie sich Raum, hineinzuwachsen.",
+          "newText": "<h2>Warum ein Gedankentagebuch führen?</h2>\n\nDas Führen eines Tagebuchs ist der Schlüssel zu tiefer Selbsterkenntnis: Es hilft Ihnen, Ihre Emotionen, Gedanken und Ihr Verhalten besser zu verstehen.\n\nRegelmäßige Einträge ermöglichen es, wiederkehrende Muster zu erkennen, die Ihre Stimmung und Ihr Handeln beeinflussen.\n\nDer Prozess des Aufschreibens fördert die Achtsamkeit.\n\nSie beginnen zu bemerken, welche Gedanken in verschiedenen Situationen auftauchen, und es fällt Ihnen leichter, Ihre Reaktionen zu steuern.\n\nUnterstützung in der Therapie (und darüber hinaus): Einträge sind wertvolles Material zur Selbstreflexion.\n\nSie sind sowohl bei der Arbeit mit einem Therapeuten als auch für die eigenständige Praxis nützlich.\n\nWarum ist es wichtig, Aufzeichnungen zu machen?\n\nWas nicht aufgeschrieben wird, geht in den Tiefen des Gedächtnisses leicht verloren.\n\nWir denken oft, wir könnten uns an alles erinnern – und wir irren uns.\n\n<important>Reflexion – die Fähigkeit, das eigene Erleben zu analysieren – entwickelt sich, wenn wir Gedanken formulieren und sie nach außen bringen.</important>\n\nSo bewahren wir nicht nur wichtige Erkenntnisse, sondern verstehen uns auch selbst tiefer.\n\nGeheimnisse für eine effektive Arbeit mit dem Tagebuch:\n\n<li>Regelmäßigkeit ist der Schlüssel zur Veränderung: Das Tagebuch ist kein Zauberstab, es erfordert Ihre Übung. Füllen Sie es regelmäßig aus, um Ergebnisse zu sehen.</li>\n\n<li>Den Moment nutzen: Notieren Sie Gedanken und Emotionen sofort, wenn sie auftauchen. So lassen sich automatische Gedanken leichter „einfangen“, bevor sie wieder verschwinden.</li>\n\n<li>Fortschritt statt Perfektionismus: Streben Sie nicht nach dem Ideal. Jeder kleine Schritt ist bereits ein Erfolg.</li>\n\nDas Führen eines Tagebuchs ist eine Fähigkeit, die Zeit benötigt.\n\nSeien Sie geduldig mit sich selbst und geben Sie sich die Zeit, sich einzuarbeiten.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Translation A is much more professional, follows all HTML formatting requirements, and uses correct terminology. Translation B fails to preserve the HTML tags, uses a clumsy title, and contains a mistranslation ('Ungelesen' instead of 'not written down').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "All HTML tags (h2, important, li) were lost."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Used 'Ungelesen' (unread) instead of 'Was nicht aufgeschrieben wird' (what is not written down)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The title 'Warum ein Tagebuch automatischer Gedanken führen?' is grammatically awkward compared to the standard 'Gedankentagebuch'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is slightly less polished/expert than A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B is superior because it correctly uses the mandatory terminology 'Gedankentagebuch' and maintains the HTML structure, which was lost in A. B also sounds more natural and professional for a therapeutic context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost all HTML tags (h2, important, li), which is critical for the UI/JSON structure."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'Tagebuch automatischer Gedanken' instead of the standard 'Gedankentagebuch'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Ungelesen verschwinden Eindrücke' (Unread impressions disappear) is a mistranslation of the original meaning; it should be about things not being written down."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/description",
+          "ru": "В статье разбирается практика ведения «Дневника автоматических мыслей» как одного из ключевых инструментов когнитивно-поведенческой терапии (КПТ). Мы объясняем, как корректно фиксировать и анализировать автоматические мысли, чтобы снижать уровень психологического дискомфорта и подготовить почву для работы с более глубокими уровнями убеждений.",
+          "oldText": "Der Beitrag erläutert die Praxis des „Tagebuchs automatischer Gedanken“ als eines der zentralen Werkzeuge der Kognitiven Verhaltenstherapie (KVT). Wir zeigen, wie automatische Gedanken korrekt erfasst und ausgewertet werden, um psychische Belastung zu verringern und die Grundlage für die Arbeit an tieferen Ebenen Ihrer Überzeugungen zu legen.",
+          "newText": "In diesem Artikel wird das „Gedankentagebuch“ als eines der zentralen Instrumente der Kognitiven Verhaltenstherapie (KVT) erläutert. Wir erklären Ihnen, wie Sie automatische Gedanken korrekt erfassen und analysieren können, um Ihr Befinden zu verbessern und die Grundlage für die Arbeit mit tieferliegenden Überzeugungen zu schaffen.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Перевод A идеально следует глоссарию (Gedankentagebuch, KVT, Befinden) и звучит максимально естественно для носителя. Перевод B содержит терминологическую ошибку в названии инструмента и звучит более тяжеловесно.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использовано 'Tagebuch automatischer Gedanken' вместо утвержденного термина 'Gedankentagebuch'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'Arbeit an tieferen Ebenen Ihrer Überzeugungen' звучит избыточно и менее гладко, чем в варианте A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Перевод A идеально следует глоссарию (использует 'Tagebuch automatischer Gedanken' и 'KVT') и звучит более профессионально и гладко. Перевод B допускает терминологическую неточность, заменяя 'автоматические мысли' на просто 'Gedankentagebuch' в первом предложении, и использует менее точный термин 'Befinden' там, где речь идет о снижении дискомфорта.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "В первом предложении пропущено уточнение 'автоматических мыслей', хотя в оригинале это ключевой термин."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'um Ihr Befinden zu verbessern' (улучшить самочувствие) — это вольная интерпретация 'снижения психологического дискомфорта', которая звучит чуть более обыденно, чем в оригинале."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/screen_1/texts",
+          "ru": "Одна из ключевых задач КПТ — работа с мыслями.\n\nАвтоматические мысли — это «компактные» версии ваших убеждений; они отражают содержание более глубоких слоёв мышления.\n\nПрежде чем работать с мыслью, её важно заметить и зафиксировать.\n\nВ этой главе вы познакомитесь с мощным инструментом самопознания — дневником автоматических мыслей (его ещё называют ABC-дневником).\n\n<important>Это не просто блокнот для грустных записей, а ваш личный «детектив», который помогает понять причины настроения и учит управлять им.</important>\n\nДневник показывает связь между тем, что происходит (ситуация), тем, что мы думаем (мысли), и тем, как реагируем (эмоции, ощущения, поведение).\n\nПоэтому он состоит из нескольких ключевых блоков:\n\n<li>Событие: краткое описание того, что вызвало эмоциональную реакцию.</li>\n\n<li>Мысль: автоматическая мысль, возникшая в ответ на ситуацию.</li>\n\n<li>Эмоции: чувства, которые вы испытали в этот момент.</li>\n\n<li>Реакция: ваше поведение или действия в ответ на переживаемые эмоции.</li>\n\n<li>Альтернативный ответ: более конструктивная мысль или взгляд на ситуацию, которые помогают изменить эмоциональную реакцию.</li>\n\nДавайте разберём каждый блок отдельно.\n\n<h2>Событие</h2>\n\nЗдесь мы коротко описываем, что именно вызвало неприятные эмоции.\n\nВажно не только обрисовать ситуацию, но и быть максимально конкретными.\n\nНапример, фраза «меня обидела мама» слишком общая — лучше уточнить, что именно она сказала или сделала.\n\n<instagram ids=\"18034696130262886,18104889895577855\">\n\nИ вместо «я плохо работал» лучше указать конкретику: «я допустил ошибку в отчёте».\n\nТриггером может быть не только внешнее событие, но и внутренние ощущения, мысли или воспоминания — главное, чтобы формулировки были чёткими.",
+          "oldText": "Eine der Kernaufgaben der KVT ist die Arbeit mit Gedanken.\n\nAutomatische Gedanken sind „komprimierte“ Versionen Ihrer Überzeugungen; sie spiegeln Inhalte tieferer Denkschichten wider.\n\nBevor Sie mit einem Gedanken arbeiten, ist es wichtig, ihn wahrzunehmen und festzuhalten.\n\nIn diesem Kapitel lernen Sie ein wirkungsvolles Instrument der Selbsterkenntnis kennen – das Tagebuch automatischer Gedanken (auch ABC-Tagebuch genannt).\n\nEs ist nicht einfach nur ein Notizbuch für trübe Einträge, sondern Ihr persönlicher „Detektiv“, der die Ursachen Ihrer Stimmung aufzeigt und hilft, sie zu steuern.\n\nDas Tagebuch veranschaulicht den Zusammenhang zwischen dem, was geschieht (Situation), dem, was wir denken (Gedanken), und dem, wie wir reagieren (Emotionen, Empfindungen, Verhalten).\n\nDeshalb besteht es aus mehreren Kernelementen:\n\nEreignis: kurze Beschreibung dessen, was die emotionale Reaktion ausgelöst hat.\n\nGedanke: der automatische Gedanke als Antwort auf die Situation.\n\nEmotionen: die Gefühle, die Sie in diesem Moment erlebt haben.\n\nReaktion: Ihr Verhalten oder Ihre Handlungen als Folge der Gefühle.\n\nAlternativer Antwortsatz: eine konstruktivere Sicht oder Formulierung, die die emotionale Reaktion verändert.\n\nSchauen wir uns jeden Block einzeln an.\n\nEreignis\n\nHier beschreiben Sie kurz, was genau die unangenehmen Gefühle ausgelöst hat.\n\nWichtig ist, nicht nur die Situation zu skizzieren, sondern möglichst konkret zu werden.\n\nDie Aussage „Meine Mutter hat mich verletzt“ ist zu allgemein – besser ist es, zu präzisieren, was sie gesagt oder getan hat.\n\nStatt „Ich habe schlecht gearbeitet“ lieber konkret: „Ich habe im Bericht einen Fehler gemacht.“\n\nEin Auslöser kann nicht nur ein äußeres Ereignis sein, sondern auch innere Empfindungen, Gedanken oder Erinnerungen – entscheidend ist eine klare Formulierung.",
+          "newText": "Eine der Kernaufgaben der KVT ist die Arbeit mit Gedanken.\n\nAutomatische Gedanken sind quasi „komprimierte“ Versionen Ihrer Überzeugungen; sie spiegeln den Inhalt tieferer Gedankenebenen wider.\n\nBevor Sie an einem Gedanken arbeiten können, ist es wichtig, ihn wahrzunehmen und festzuhalten.\n\nIn diesem Kapitel lernen Sie ein mächtiges Werkzeug zur Selbsterkenntnis kennen: das Gedankentagebuch (oft auch als ABC-Tagebuch bezeichnet).\n\n<important>Dies ist nicht nur ein Notizbuch für traurige Aufzeichnungen, sondern Ihr persönlicher „Detektiv“, der Ihnen hilft, die Ursachen Ihrer Stimmung zu verstehen und zu lernen, diese zu steuern.</important>\n\nDas Tagebuch zeigt die Verbindung zwischen dem, was geschieht (Situation), dem, was wir denken (Gedanken), und dem, wie wir reagieren (Emotionen, körperliche Empfindungen, Verhalten).\n\nDaher besteht es aus mehreren wesentlichen Blöcken:\n\n<li>Situation: Eine kurze Beschreibung dessen, was die emotionale Reaktion ausgelöst hat.</li>\n\n<li>Gedanke: Der automatische Gedanke, der als Reaktion auf die Situation entstanden ist.</li>\n\n<li>Emotionen: Die Gefühle, die Sie in diesem Moment erlebt haben.</li>\n\n<li>Reaktion: Ihr Verhalten oder Ihre Handlungen als Antwort auf die empfundenen Emotionen.</li>\n\n<li>Alternative Antwort: Ein konstruktiverer Gedanke oder eine neue Sichtweise auf die Situation, die hilft, die emotionale Reaktion zu verändern.</li>\n\nLassen Sie uns jeden Block einzeln betrachten.\n\n<h2>Situation</h2>\n\nHier beschreiben wir kurz, was genau die unangenehmen Emotionen ausgelöst hat.\n\nEs ist wichtig, nicht nur die Situation zu schildern, sondern so konkret wie möglich zu sein.\n\nZum Beispiel ist der Satz „Meine Mutter hat mich verletzt“ zu allgemein – es ist besser zu präzisieren, was sie genau gesagt oder getan hat.\n\n<instagram>\n\nUnd statt „Ich habe schlecht gearbeitet“ ist es besser, konkret zu werden: „Ich habe einen Fehler im Bericht gemacht“.\n\nEin Auslöser kann nicht nur ein äußeres Ereignis sein, sondern auch innere Empfindungen, Gedanken oder Erinnerungen – wichtig ist nur, dass die Formulierungen klar sind.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Перевод B значительно лучше соблюдает терминологию глоссария и правила оформления. Перевод A допускает критические ошибки в ключевых терминах (использует 'Ereignis' вместо 'Situation' и 'Alternativer Antwortsatz' вместо 'Alternative Antwort'), что недопустимо для КПТ-приложения.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использовано 'Ereignis' вместо требуемого 'Situation' для описания события."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использовано 'Alternativer Antwortsatz' вместо 'Alternative Antwort' (нарушение консистентности терминологии)."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Пропущены HTML-теги <important>, <li> и <h2>, что критично для структуры документа."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "В одном месте использовано 'unangenehmen Emotionen', хотя 'Gefühle' звучало бы чуть естественнее, но это не ошибка."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 98
+              },
+              "reason": "Перевод A безупречен: он строго следует глоссарию (Situation вместо Ereignis, Gedankentagebuch), использует правильные немецкие кавычки „“ и сохраняет структуру HTML-тегов. Перевод B содержит терминологические ошибки и нарушает структуру оригинала.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использует 'Ereignis' вместо предписанного 'Situation' для описания события в КПТ."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Потеряны HTML-теги <li> и <important>, что критично для верстки."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Использует 'Alternativer Antwortsatz' вместо принятого 'Alternative Antwort'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Тон чуть менее эмпатичен, чем в A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/test/question",
+          "ru": "Какой из следующих примеров наиболее точно описывает запись в разделе \"Ситуация\"?",
+          "oldText": "Welche der folgenden Aussagen beschreibt eine Eintragung im Abschnitt „Situation“ am treffendsten?",
+          "newText": "Welches der folgenden Beispiele beschreibt einen Eintrag im Bereich „Situation“ am genauesten?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Перевод A безупречен: он использует правильный термин 'Eintrag' согласно глоссарию и звучит абсолютно естественно. Перевод B содержит грамматическую ошибку ('eine Eintragung' вместо 'einen Eintrag') и использует менее подходящее слово 'Eintragung'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использовано 'Eintragung' вместо рекомендованного 'Eintrag'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Грамматическая ошибка: 'eine Eintragung' (женский род) вместо 'einen Eintrag' (мужской род)"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слово 'Aussagen' (утверждения) меняет смысл оригинала 'примеры' (Beispiele)"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Перевод B идеально следует глоссарию и звучит естественно. Перевод A содержит грамматическую ошибку в роде существительного и использует неверный термин для записи.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использовано 'Eintragung' вместо принятого в глоссарии 'Eintrag'."
+                },
+                {
+                  "side": "old",
+                  "type": "other",
+                  "severity": "major",
+                  "note": "Ошибка в роде: должно быть 'ein Eintrag' (мужской род), а не 'eine Eintragung' (женский род, если бы слово было выбрано)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слово 'Aussagen' (утверждения) меняет смысл оригинала 'примеров' (Beispiele)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/diary.json",
+          "lang": "de",
+          "key": "/test/answers",
+          "ru": "Я чувствую себя ужасно\n\nНачальник повысил голос во время совещания, раскритиковав мой отчет\n\nЯ неудачник\n\nУ меня всё валится из рук",
+          "oldText": "Ich fühle mich furchtbar\n\nDie Chefin oder der Chef hat in der Besprechung die Stimme erhoben und meinen Bericht kritisiert\n\nIch bin ein Versager\n\nMir fällt alles aus den Händen",
+          "newText": "Ich fühle mich schrecklich\n\nDer Chef wurde während der Besprechung laut und kritisierte meinen Bericht\n\nIch bin ein Versager\n\nMir fällt alles so schwer",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Перевод B звучит гораздо естественнее и точнее передает эмоциональное состояние. Фраза 'Mir fällt alles so schwer' — это идиоматичный способ выразить состояние 'у меня всё валится из рук' в контексте психологического состояния, в то время как перевод A слишком буквален.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'die Stimme erhoben' звучит излишне официально/литературно для описания ситуации на совещании; 'wurde laut' в варианте B звучит естественнее. Также 'Mir fällt alles aus den Händen' — это слишком буквальный перевод, который в немецком чаще означает физическую неуклюжесть, а не эмоциональный упадок."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Перевод A звучит естественно и передает эмоциональное состояние через идиому 'Mir fällt alles schwer' (мне всё дается с трудом), что соответствует контексту самокритики. Перевод B содержит грубую ошибку: фраза 'Mir fällt alles aus den Händen' является калькой и не используется в немецком языке в значении 'у меня всё валится из рук' (в значении потери контроля или неуклюжести).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Неестественная калька 'Mir fällt alles aus den Händen' вместо идиоматичного 'Mir fällt alles schwer' или 'Ich habe alles nicht im Griff'."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Добавлено 'Die Chefin oder der Chef', что избыточно и нарушает лаконичность оригинала."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
