@@ -1,0 +1,940 @@
+{
+  "meta": {
+    "Дата": "2026-09-11T03:37:55.211Z",
+    "Метка": "stage-run-breathing",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref b1fb55f",
+    "Файлы": "breathing.json",
+    "Локали": "de, ja, ar",
+    "Сэмпл/файл": 10,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "d8f4c1588559f8722da532a864fc8334eb2d38c9"
+  },
+  "results": {
+    "breathing.json": {
+      "de": [
+        {
+          "file": "breathing.json",
+          "lang": "de",
+          "key": "/balance/final_text",
+          "ru": "Вы выровняли дыхание и подарили себе несколько минут устойчивости. Пусть это спокойное чувство баланса останется с вами и поможет мягко продолжить день.",
+          "oldText": "Sie haben Ihre Atmung ausgeglichen und sich einige Minuten der Stabilität geschenkt. Möge dieses ruhige Gefühl der Balance Sie begleiten und Ihnen helfen, Ihren Tag gelassen fortzusetzen.",
+          "newText": "Sie haben Ihren Atem harmonisiert und sich selbst einige Minuten der Stabilität geschenkt. Möge dieses Gefühl der Balance Sie begleiten und Ihnen helfen, gelassen in den restlichen Tag zu starten.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Перевод A наиболее точно передает смысл оригинала, сохраняя структуру 'продолжить день' (fortzusetzen), в то время как перевод B меняет смысл на 'начать остаток дня' (in den restlichen Tag zu starten). Также 'Atmung ausgleichen' звучит более естественно в контексте дыхательных практик, чем 'Atem harmonisieren'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Вместо 'продолжить день' (продолжить текущее состояние) предлагается 'начать остаток дня', что немного меняет акцент."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Atem harmonisieren' звучит несколько искусственно по сравнению с 'Atmung ausgleichen'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод B точнее передает смысл оригинала, особенно в части 'продолжить день' (fortsetzen vs starten) и 'спокойное чувство' (ruhige Gefühl).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Использование 'in den Tag zu starten' (начать день) вместо 'продолжить день' (den Tag fortzusetzen) меняет смысл контекста."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Atem harmonisiert' звучит несколько неестественно/медицински, 'Atmung ausgeglichen' в B звучит более органично для практики дыхания."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "de",
+          "key": "/balance/phaseNames/inhale",
+          "ru": "Ровный вдох",
+          "oldText": "Gleichmäßig einatmen",
+          "newText": "Gleichmäßiges Einatmen",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Перевод B является грамматически верным существительным, что идеально подходит для заголовка или названия упражнения. Перевод A звучит как глагол в повелительном наклонении или инфинитиве, что менее естественно для лаконичного названия техники.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Звучит скорее как инструкция (команда), чем как название процесса/упражнения."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 75
+              },
+              "reason": "Перевод B использует инфинитив, что является стандартным и естественным форматом для инструкций или названий упражнений в немецком языке. Перевод A представляет собой существительное, что звучит как сухой заголовок или описание процесса, а не как призыв к действию или название техники.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Звучит слишком номинативно (как название процесса), в то время как в контексте упражнений/медитаций предпочтителен инфинитив."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "de",
+          "key": "/balance/subtitle",
+          "ru": "Ровное дыхание «5-5»",
+          "oldText": "Gleichmäßige „5-5“-Atmung",
+          "newText": "Gleichmäßiges „5-5“-Atmen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "В немецком языке для обозначения процесса или техники дыхания (как названия упражнения) существительное 'Atmung' звучит гораздо естественнее и профессиональнее, чем герундий 'Atmen'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Atmen' делает фразу похожей на описание действия, а не на название конкретной техники или упражнения."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Перевод A использует существительное 'Atmung', которое является стандартным медицинским и техническим термином для обозначения процесса дыхания в контексте упражнений. Перевод B использует герундий 'Atmen', что звучит более разговорно и менее профессионально для заголовка техники.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Atmen' вместо 'Atmung' делает заголовок менее формальным и менее подходящим для терапевтического контекста."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "de",
+          "key": "/balance/phaseNames/exhale",
+          "ru": "Ровный выдох",
+          "oldText": "Gleichmäßig ausatmen",
+          "newText": "Gleichmäßiges Ausatmen",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "В контексте упражнений на дыхание (инструкций) в немецком языке предпочтительнее использовать инфинитив (ausatmen), так как это звучит как действие, к которому призывают, а не как описание процесса. Вариант A звучит скорее как существительное (название процесса), что менее естественно для UI-подсказки.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование существительного вместо глагола делает фразу более статичной и менее подходящей для инструкции к действию."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод B является грамматически верным существительным, что идеально подходит для заголовка или названия упражнения. Перевод A звучит как глагол (инструкция), что менее естественно для лаконичного названия техники.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование инфинитива вместо существительного делает текст похожим на команду, а не на название процесса/состояния."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "de",
+          "key": "/balance/description",
+          "ru": "Иногда нам не нужно срочно успокаиваться или глубоко расслабляться — достаточно просто выровнять внутренний ритм. Эта практика помогает мягко замедлиться, вернуть ощущение устойчивости и снова почувствовать связь с собой. Равные вдохи и выдохи создают спокойный, предсказуемый темп, за которым легко следовать.",
+          "oldText": "Manchmal müssen Sie sich nicht sofort beruhigen oder tief entspannen – oft genügt es, den eigenen inneren Rhythmus wieder ins Gleichgewicht zu bringen. Diese Übung hilft Ihnen, sanft langsamer zu werden, wieder mehr Stabilität zu spüren und erneut mit sich selbst in Verbindung zu kommen. Gleich lange Ein- und Ausatmungen schaffen einen ruhigen, vorhersehbaren Rhythmus, dem Sie leicht folgen können.",
+          "newText": "Manchmal müssen wir nicht sofort völlig ruhig oder tief entspannt sein – es reicht oft schon aus, den inneren Rhythmus wieder zu harmonisieren. Diese Übung hilft Ihnen, sanft zu entschleunigen, ein Gefühl der Stabilität zurückzugewinnen und wieder mehr bei sich selbst anzukommen. Gleichmäßige Atemzüge schaffen ein ruhiges, vorhersehbares Tempo, dem Sie mühelos folgen können.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Перевод A звучит гораздо более естественно и профессионально для терапевтического контекста. Использование глагола 'entschleunigen' вместо тяжеловесного 'langsamer zu werden' и фразы 'bei sich selbst anzukommen' вместо кальки 'mit sich selbst in Verbindung zu kommen' делает текст живым и качественным.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "фраза 'sanft langsamer zu werden' звучит немного неуклюже и по-детски по сравнению с 'entschleunigen'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "использование 'mit sich selbst in Verbindung zu kommen' является прямой калькой с русского, в то время как 'bei sich selbst ankommen' — более идиоматичный немецкий вариант для описания состояния осознанности"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод A звучит более естественно и профессионально для терапевтического контекста. Использование 'Ein- und Ausatmungen' (вдохи и выдохи) в контексте дыхательных практик гораздо точнее и лучше, чем абстрактное 'Atemzüge' в варианте B.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'wir' (мы) в первом предложении вместо 'Sie' (Вы) создает легкий стилистический диссонанс с последующим обращением 'Ihnen' (Вам)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'wieder mehr bei sich selbst anzukommen' звучит немного разговорно по сравнению с более элегантным 'mit sich selbst in Verbindung zu kommen'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "de",
+          "key": "/balance/fullDescription",
+          "ru": "Паттерн дыхания «5-5» использует десятисекундные циклы без задержек. 5-секундный вдох плавно сменяется таким же 5-секундным выдохом. Равный ритм помогает стабилизировать дыхание, снизить внутреннюю суету и вернуть ощущение спокойного контроля без лишнего напряжения.",
+          "oldText": "Das Atemmuster „5-5“ besteht aus zehnsekündigen Atemzyklen ohne Pausen. Auf ein sanftes Einatmen von 5 Sekunden folgt ein ebenso langes Ausatmen von 5 Sekunden. Der gleichmäßige Rhythmus kann dabei helfen, die Atmung zu stabilisieren, innere Unruhe zu reduzieren und ein Gefühl ruhiger Kontrolle zurückzugewinnen – ganz ohne zusätzlichen Druck.",
+          "newText": "Das „5-5“-Atmungsmuster nutzt Zehn-Sekunden-Zyklen ohne Atempausen. Eine 5-sekündige Einatmung geht sanft in eine ebenso lange, 5-sekündige Ausatmung über. Dieser gleichmäßige Rhythmus hilft dabei, die Atmung zu stabilisieren, innere Unruhe zu lindern und ein Gefühl der Kontrolle zurückzugewinnen, ohne dabei neue Anspannung aufzubauen.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 98
+              },
+              "reason": "Перевод A звучит более профессионально и естественно для терапевтического контекста. Перевод B содержит стилистическую шероховатость в конструкции 'Auf ein sanftes Einatmen... folgt ein... Ausatmen' и менее удачно передает финал предложения.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'Auf ein... folgt ein...' звучит немного тяжеловесно и менее плавно, чем в варианте A."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'ganz ohne zusätzlichen Druck' (совсем без лишнего давления) звучит менее точно по отношению к оригиналу 'без лишнего напряжения' (Anspannung), чем вариант A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод A звучит более естественно и элегантно для носителя языка. Перевод B содержит небольшую стилистическую тяжеловесность в конструкции 'eine ebenso lange, 5-sekündige Ausatmung' и менее удачно передает финальную часть предложения.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'eine ebenso lange, 5-sekündige Ausatmung' избыточна и звучит немного тяжеловесно по сравнению с изящным вариантом в A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'ohne dabei neue Anspannung aufzubauen' (без создания нового напряжения) — это неплохая адаптация, но вариант в A 'ganz ohne zusätzlichen Druck' или просто более плавный ритм в A лучше передает дух оригинала."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ja": [
+        {
+          "file": "breathing.json",
+          "lang": "ja",
+          "key": "/balance/final_text",
+          "ru": "Вы выровняли дыхание и подарили себе несколько минут устойчивости. Пусть это спокойное чувство баланса останется с вами и поможет мягко продолжить день.",
+          "oldText": "呼吸のリズムが整い、穏やかに自分を支える時間を持つことができました。この落ち着いたバランスがこれからも続き、自分のペースで一日を過ごす助けとなりますように。",
+          "newText": "呼吸が整い、心に穏やかな安定が訪れました。この感覚を大切に、どうぞそのまま、ご自身のペースで一日を過ごしてください。",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Перевод A звучит гораздо более естественно и поэтично для японского пользователя, передавая дух оригинала через качественную адаптацию. Перевод B слишком перегружен конструкциями, которые делают предложение тяжеловесным и напоминают дословный перевод.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Конструкция '助けとなりますように' в конце звучит как излишне формальное или книжное пожелание, что нарушает плавность текста. Также фраза '自分を支える時間を持つことができました' звучит как сухой отчет о действии, а не как эмпатичное описание состояния."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 96
+              },
+              "reason": "Перевод B звучит гораздо более естественно и эмпатично для японского пользователя, соблюдая принцип 'Omotenashi' (заботы). Перевод A слишком тяжеловесен и звучит как описание процесса со стороны, в то время как B мягко предлагает пользователю сохранить состояние.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция '自分を支える時間を持つことができました' звучит немного неестественно и тяжеловесно (как отчет о достижении), что снижает эмоциональный эффект."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ja",
+          "key": "/balance/phaseNames/inhale",
+          "ru": "Ровный вдох",
+          "oldText": "一定のリズムで吸う",
+          "newText": "穏やかに吸う",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Перевод B лучше передает атмосферу спокойствия и мягкости, соответствующую контексту ментального здоровья. Перевод A звучит слишком технически и сухо, как инструкция к метроному.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком механистический тон ('вдох в определенном ритме'), что лишает фразу медитативного настроя."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Перевод A лучше передает атмосферу и эмоциональный посыл оригинала, создавая ощущение спокойствия. Перевод B звучит слишком технически и сухо, как инструкция к механизму, что нарушает принцип 'Омоияри' (эмпатии).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком формальный и механический тон ('вдох в определенном ритме'), который звучит неестественно для медитативной практики."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ja",
+          "key": "/balance/subtitle",
+          "ru": "Ровное дыхание «5-5»",
+          "oldText": "リズムを整える「5・5」呼吸",
+          "newText": "「5-5」リズム呼吸法",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Перевод A звучит естественно и передает суть (выравнивание ритма), используя подходящую пунктуацию. Перевод B звучит как сухой технический термин и содержит странное словосочетание 'リズム呼吸法'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Конструкция 'リズム呼吸法' звучит неестественно для японского языка; это калька, которая не используется в контексте дыхательных практик."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование дефиса в '5-5' допустимо, но в японском контексте точка '・' (как в варианте A) для разделения цифр в названиях техник выглядит более органично."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Перевод A звучит как профессиональный термин или название техники, что идеально подходит для интерфейса. Перевод B грамматически менее устойчив и звучит скорее как описание процесса, чем как название упражнения.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'リズムを整える「5・5」呼吸' звучит немного тяжеловесно для заголовка; использование точки '・' вместо дефиса допустимо, но вариант A более лаконичен для UI."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ja",
+          "key": "/balance/phaseNames/exhale",
+          "ru": "Ровный выдох",
+          "oldText": "一定のリズムで吐く",
+          "newText": "穏やかに吐く",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 90
+              },
+              "reason": "Перевод A лучше передает эмоциональное состояние и атмосферу спокойствия, соответствующую контексту дыхательных практик. Перевод B слишком техничен и звучит как инструкция по поддержанию темпа, что не соответствует духу ментального здоровья.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Перевод звучит как сухая техническая инструкция ('выдыхать в определенном ритме'), теряя мягкость и медитативный тон оригинала."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Перевод B лучше передает эмоциональный тон и атмосферу спокойствия, характерную для практик осознанности. Перевод A звучит слишком технически и сухо, как инструкция к метроному.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком механистический перевод («выдох с постоянным ритмом»), который звучит как техническая инструкция, а не как элемент медитации или дыхательной практики."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ja",
+          "key": "/balance/description",
+          "ru": "Иногда нам не нужно срочно успокаиваться или глубоко расслабляться — достаточно просто выровнять внутренний ритм. Эта практика помогает мягко замедлиться, вернуть ощущение устойчивости и снова почувствовать связь с собой. Равные вдохи и выдохи создают спокойный, предсказуемый темп, за которым легко следовать.",
+          "oldText": "すぐに気持ちを落ち着かせたり、深くリラックスしたりしなくてもよいときがあります。そんなときは、内側のリズムをゆっくり整えるだけでも十分です。この練習は、無理なくペースを緩め、安定した感覚を取り戻し、自分とのつながりをもう一度感じる助けになります。同じ長さで息を吸い、吐くことで、穏やかで一定のリズムが生まれ、自然に呼吸へ意識を向けやすくなります。",
+          "newText": "無理に落ち着こうとしたり、深くリラックスしようとしたりする必要はありません。ただ、内側のリズムを整えるだけで十分です。このワークは、穏やかにペースを落とし、心の安定を取り戻して、自分自身とのつながりを感じるお手伝いをします。吸う息と吐く息の長さを揃えることで、自然なリズムが生まれ、無理なく呼吸を導くことができます。",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Перевод A звучит более профессионально и естественно для японского приложения по ментальному здоровью. Он лучше передает нюанс 'не нужно срочно' через '無理に...する必要はありません' (не нужно заставлять себя), в то время как перевод B звучит чуть более тяжеловесно из-за конструкций 'しなくてもよいときがあります'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'しなくてもよいときがあります' звучит немного как объяснение из учебника, а не как мягкое наставление. Перевод A более эмпатичен."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод A звучит более естественно и литературно, лучше передавая мягкий, поддерживающий тон оригинала. Перевод B содержит небольшую стилистическую шероховатость в последнем предложении.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза '無理なく呼吸を導くことができます' (можно без усилий вести дыхание) звучит немного неестественно в данном контексте; вариант A с '意識を向けやすくなります' (легче сосредоточить внимание) гораздо лучше передает суть практики."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ja",
+          "key": "/balance/fullDescription",
+          "ru": "Паттерн дыхания «5-5» использует десятисекундные циклы без задержек. 5-секундный вдох плавно сменяется таким же 5-секундным выдохом. Равный ритм помогает стабилизировать дыхание, снизить внутреннюю суету и вернуть ощущение спокойного контроля без лишнего напряжения.",
+          "oldText": "「5・5」呼吸は、息を止めずに 10 秒のサイクルを繰り返す呼吸法です。5 秒かけてゆっくり息を吸い、続けて同じく 5 秒かけて穏やかに吐きます。一定のリズムで呼吸することで、呼吸が整い、心の慌ただしさが和らぎます。余計な力を入れることなく、落ち着いて自分を保てる感覚も取り戻しやすくなります。",
+          "newText": "「5-5」呼吸法は、息を止めることなく10秒のサイクルで行う方法です。5秒かけて穏やかに吸い、同じく5秒かけてゆっくりと吐き出します。この一定のリズムが呼吸を安定させ、内面のざわつきを抑え、余計な力みを入れずに穏やかなコントロール感を取り戻す助けとなります。",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Перевод A звучит более цельно, профессионально и литературно. Перевод B разбит на слишком короткие предложения, что создает рваный ритм, не подходящий для медитативной техники.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Излишнее дробление предложений нарушает плавность текста, которая важна для описания дыхательных упражнений."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Перевод A звучит гораздо естественнее для японского пользователя: он использует мягкие, плавные конструкции, характерные для приложений по ментальному здоровью. Перевод B перегружен тяжелыми существительными и калькой с русского (например, 'コントロール感'), что делает его сухим и академичным.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'コントロール感' (feeling of control) — это прямая калька, которая звучит неестественно в японском языке; в A это передано через '自分を保てる感覚' (чувство способности сохранять себя), что гораздо лучше."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза '内面のざわつきを抑え' звучит немного тяжеловесно по сравнению с более мягким '心の慌ただしさが和らぎます' в варианте A."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ar": [
+        {
+          "file": "breathing.json",
+          "lang": "ar",
+          "key": "/balance/name",
+          "ru": "Баланс",
+          "oldText": "التوازن",
+          "newText": "توازن",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 85
+              },
+              "reason": "В контексте заголовка или названия раздела использование определенного артикля (التوازن) является более естественным и грамматически завершенным для арабского языка. Вариант B звучит как незавершенное слово или глагол.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Отсутствие определенного артикля делает заголовок менее естественным для данного контекста."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "В арабском языке заголовки и абстрактные понятия чаще всего требуют использования определенного артикля (ال), чтобы звучать естественно и завершенно. Вариант B — стандарт для заголовка.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Отсутствие определенного артикля делает слово похожим на корень или неопределенное существительное, что менее характерно для лаконичного заголовка."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ar",
+          "key": "/balance/final_text",
+          "ru": "Вы выровняли дыхание и подарили себе несколько минут устойчивости. Пусть это спокойное чувство баланса останется с вами и поможет мягко продолжить день.",
+          "oldText": "أعدتَ إلى تنفّسك إيقاعه المتوازن، ومنحتَ نفسك بضع دقائق من الثبات. ليبقى معك هذا الشعور الهادئ بالتوازن، وليساعدك على مواصلة يومك برويّة.",
+          "newText": "لقد نجحت في ضبط إيقاع تنفسك ومنحت نفسك بضع دقائق من الثبات. نتمنى أن يرافقك هذا الشعور بالهدوء والتوازن ويساعدك على مواصلة يومك بلطف.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Перевод A звучит более естественно и тепло, используя стандартную конструкцию пожелания (نتمنى أن...), в то время как перевод B звучит излишне формально и тяжеловесно из-за использования сослагательного наклонения (ليبقى... وليساعدك).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция с 'li-' (ليبقى) звучит как грамматическое наставление, а не как мягкое пожелание, что нарушает поддерживающий тон оригинала."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод A звучит более литературно и элегантно, точно передавая дух оригинала. Перевод B использует более тяжеловесную конструкцию 'لقد نجحت' (вы преуспели), что звучит излишне формально для такого интимного момента.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'لقد نجحت' (вы преуспели/удалось) создает ненужный акцент на достижении, вместо описания процесса, как в оригинале."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ar",
+          "key": "/balance/subtitle",
+          "ru": "Ровное дыхание «5-5»",
+          "oldText": "تنفّس منتظم بنمط 5-5",
+          "newText": "تنفس \"5-5\" المنتظم",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Перевод B звучит более естественно и профессионально для инструкции или названия упражнения. Перевод A является калькой, где прилагательное 'منتظم' стоит после существительного, что допустимо, но конструкция 'بنمط' (в стиле/по паттерну) в варианте B делает фразу более законченной и понятной для носителя.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Звучит немного сухо, как прямой перевод заголовка, а не как название техники."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Перевод A звучит естественно и грамматически правильно для заголовка инструкции. Перевод B содержит стилистическую ошибку: использование определенного артикля (ال) перед «منتظم» делает конструкцию тяжеловесной и неестественной для названия упражнения.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Неестественный порядок слов и использование артикля ال, что делает фразу похожей на описание объекта, а не на название техники."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ar",
+          "key": "/balance/description",
+          "ru": "Иногда нам не нужно срочно успокаиваться или глубоко расслабляться — достаточно просто выровнять внутренний ритм. Эта практика помогает мягко замедлиться, вернуть ощущение устойчивости и снова почувствовать связь с собой. Равные вдохи и выдохи создают спокойный, предсказуемый темп, за которым легко следовать.",
+          "oldText": "أحيانًا، لا نحتاج إلى تهدئة أنفسنا بسرعة أو الوصول إلى استرخاء عميق؛ يكفي أن نستعيد إيقاعنا الداخلي المتوازن. تساعد هذه الممارسة على التمهّل بلطف، واستعادة الشعور بالثبات، وتعزيز التواصل مع الذات. كما يخلق تساوي الشهيق والزفير إيقاعًا هادئًا ومتوقعًا يسهل اتباعه.",
+          "newText": "أحيانًا، لا نحتاج إلى تهدئة أنفسنا بشكل عاجل أو الاسترخاء بعمق، بل يكفي فقط ضبط إيقاعنا الداخلي. يساعد هذا التمرين على التباطؤ بلطف، واستعادة الشعور بالثبات، وإعادة الاتصال بأنفسنا. إن تساوي الشهيق والزفير يخلق وتيرة هادئة ومنتظمة يسهل اتباعها.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод B звучит более естественно и литературно для арабского языка. Использование 'التمهّل' вместо 'التباطؤ' и 'التواصل مع الذات' вместо 'الاتصال بأنفسنا' делает текст более глубоким и подходящим для психологического контекста.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "التباطؤ звучит немного технически/физически, в то время как التمهّل лучше передает процесс осознанного замедления. الاتصال بأنفسنا — допустимо, но менее изысканно, чем التواصل مع الذات."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод A звучит более литературно и естественно для арабского языка. Использование 'استعادة إيقاعنا الداخلي المتوازن' (восстановление сбалансированного ритма) вместо простого 'ضبط' (настройка) лучше передает смысл 'выровнять ритм' в контексте психологического состояния.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'الاسترخاء بعمق' звучит чуть менее изящно, чем 'الوصول إلى استرخاء عميق' в данном контексте."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "breathing.json",
+          "lang": "ar",
+          "key": "/balance/fullDescription",
+          "ru": "Паттерн дыхания «5-5» использует десятисекундные циклы без задержек. 5-секундный вдох плавно сменяется таким же 5-секундным выдохом. Равный ритм помогает стабилизировать дыхание, снизить внутреннюю суету и вернуть ощущение спокойного контроля без лишнего напряжения.",
+          "oldText": "يعتمد نمط التنفّس «5-5» على دورات تستغرق عشر ثوانٍ من دون حبس النفس. يتدفق الشهيق على مدى خمس ثوانٍ، ثم ينتقل بسلاسة إلى زفير يستمر خمس ثوانٍ أيضًا. يساعد هذا الإيقاع المتوازن على استقرار التنفّس، وتهدئة الاضطراب الداخلي، واستعادة الشعور بالسيطرة الهادئة من دون إجهاد زائد.",
+          "newText": "يعتمد نمط تنفس \"5-5\" على دورات مدتها عشر ثوانٍ دون حبس للأنفاس؛ حيث يتبادل الشهيق والزفير لمدة 5 ثوانٍ لكل منهما بسلاسة. يساعد هذا الإيقاع المتساوي على استقرار التنفس، وتقليل الاضطراب الداخلي، واستعادة الشعور بالسيطرة الهادئة دون أي مجهود إضافي.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод A звучит более литературно и естественно для носителя, используя красивые обороты вроде 'يتدفق الشهيق' (вдох плавно течет), в то время как перевод B более сухой и техничный.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'حيث يتبادل الشهيق والزفير' звучит немного тяжеловесно по сравнению с плавным описанием в варианте A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Перевод B звучит более естественно и литературно. Использование глагола 'يتدفق' (течет/плавно переходит) и более точная передача ритма делают текст живым, в то время как вариант A звучит чуть более сухо и технично.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'حيث يتبادل الشهيق والزفير' (где вдох и выдох обмениваются) звучит немного тяжеловесно по сравнению с описательным подходом в B."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
