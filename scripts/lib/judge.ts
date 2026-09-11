@@ -31,6 +31,8 @@ export interface JudgeItem {
   path: string;
   ru: string;
   tr: string;
+  /** Контекст (@-мета ARB для ui-режима): описание ключа, placeholders. */
+  meta?: string;
 }
 
 /** Выравненный список листьев для судейства. Отсутствующий перевод = '' (collegia увидит omission). */
@@ -82,19 +84,24 @@ export interface JudgeVerdict {
   timings: { issues: number; deliberate: number; recommend: number };
 }
 
-/** Один проход коллегии по одному языку (3 запроса). */
+/** Один проход коллегии по одному языку (3 запроса). kind выбирает семейство промптов. */
 export async function judgeOnce(
   client: StageClient,
   lang: string,
   items: JudgeItem[],
   glossaryPath?: string,
+  kind: 'text' | 'ui' = 'text',
 ): Promise<JudgeVerdict> {
   const lc = lang.toLowerCase();
   const glossaryText = glossaryPath
     ? formatGlossaryDetailed(await loadGlossary(glossaryPath))
     : '';
+  const names =
+    kind === 'ui'
+      ? ['audit_ui_issues', 'audit_ui_deliberate', 'audit_ui_recommend']
+      : ['audit_issues', 'audit_deliberate', 'audit_recommend'];
 
-  const sysIssues = (await loadPrompt('qa', 'audit_issues', lc)).replace('{{GLOSSARY}}', glossaryText);
+  const sysIssues = (await loadPrompt('qa', names[0], lc)).replace('{{GLOSSARY}}', glossaryText);
   const payload = JSON.stringify({ sourceLocale: 'ru', targetLocale: lang, items });
   const s1 = await stage(client, sysIssues, payload, 8192, (data) => {
     if (!Array.isArray(data.issues)) throw new Error('нет массива issues');
@@ -103,7 +110,7 @@ export async function judgeOnce(
   const issues = asArray(s1.data.issues);
   console.log(`   🔍 issues: ${issues.length} замечаний (${(s1.ms / 1000).toFixed(0)}с)`);
 
-  const sysDelib = (await loadPrompt('qa', 'audit_deliberate', lc)).replace('{{GLOSSARY}}', glossaryText);
+  const sysDelib = (await loadPrompt('qa', names[1], lc)).replace('{{GLOSSARY}}', glossaryText);
   const s2 = await stage(
     client,
     sysDelib,
@@ -120,7 +127,7 @@ export async function judgeOnce(
       `, отклонено ${reviewed.filter((r) => r.verdict === 'rejected').length} (${(s2.ms / 1000).toFixed(0)}с)`,
   );
 
-  const sysReco = (await loadPrompt('qa', 'audit_recommend', lc)).replace('{{GLOSSARY}}', glossaryText);
+  const sysReco = (await loadPrompt('qa', names[2], lc)).replace('{{GLOSSARY}}', glossaryText);
   const s3 = await stage(
     client,
     sysReco,
@@ -298,6 +305,12 @@ export interface JudgeFileOptions {
   glossaryDir?: string;
   /** Корень репо (для тестов; по умолчанию — реальный репозиторий). */
   rootOverride?: string;
+  /** Семейство промптов коллегии: text (статьи) | ui (ключи ARB). */
+  kind?: 'text' | 'ui';
+  /** @-мета ARB (ui): контекст ключей для судьи, по «сырым» ключам без слэша. */
+  ruMeta?: Record<string, any>;
+  /** Где лежит перевод локали (по умолчанию src/i18n/<lc>/<relFile>). */
+  getFileForLang?: (lang: string) => string;
 }
 
 /**
@@ -324,10 +337,18 @@ export async function judgeFile(opts: JudgeFileOptions): Promise<JudgeLangResult
     const stillActive: string[] = [];
     for (const lang of current) {
       const lc = lang.toLowerCase();
-      const targetPath = path.join(root, 'src', 'i18n', lc, opts.relFile);
+      const targetPath = opts.getFileForLang
+        ? opts.getFileForLang(lang)
+        : path.join(root, 'src', 'i18n', lc, opts.relFile);
       const target = await readJsonOr<any>(targetPath, {});
       const trLeaves = flattenLeaves(target ?? {});
       const items = buildAlignedItems(ruLeaves, trLeaves, opts.perLang[lang]);
+      if (opts.ruMeta) {
+        for (const item of items) {
+          const meta = opts.ruMeta[item.path.replace(/^\//, '')];
+          if (meta !== undefined) item.meta = JSON.stringify(meta);
+        }
+      }
       console.log(`\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): листьев ${items.length}`);
       // Память значений листа (текущее + все применённые): судья, предлагающий
       // вернуть лист к уже бывшему у него значению, крутит осцилляцию — не даём.
@@ -347,6 +368,7 @@ export async function judgeFile(opts: JudgeFileOptions): Promise<JudgeLangResult
           opts.glossaryDir
             ? path.join(opts.glossaryDir, lc, 'glossary.json')
             : path.join(ROOT, 'scripts', 'prompts', lc, 'glossary.json'),
+          opts.kind ?? 'text',
         );
         let applied: AppliedEdit[] = [];
         let skipped: SkippedEdit[] = [];

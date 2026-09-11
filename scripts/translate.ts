@@ -22,6 +22,7 @@
  *   --no-judge                отключить коллегию после перевода (по умолчанию включена:
  *                             audit --apply циклом до раунда без правок, не более --judge-rounds)
  *   --judge-rounds N          максимум раундов коллегии (по умолчанию 3)
+ *   --ui-batch N              ключей ARB в одной партии перевода UI (по умолчанию 5)
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *
  * Требует поднятого туннеля к vLLM (для провайдера vllm):
@@ -121,6 +122,8 @@ interface Args {
   priority?: number;
   judge: boolean;
   judgeRounds: number;
+  /** Ключей ARB в одной партии перевода (ui-режим). */
+  uiBatch: number;
 }
 
 function parseBoolFlag(raw: string | undefined, defaultValue: boolean): boolean {
@@ -183,6 +186,7 @@ function parseArgs(): Args {
     priority: parseIntFlag(flags.priority),
     judge: !parseBoolFlag(flags['no-judge'], false),
     judgeRounds: parseIntFlag(flags['judge-rounds']) ?? 3,
+    uiBatch: parseIntFlag(flags['ui-batch']) ?? 5,
   };
 }
 
@@ -617,53 +621,95 @@ async function runUi(ctx: RunCtx): Promise<number> {
     uiTasks.push({ lang, todo });
   }
 
+  /** Переведённые ключи по локалям (для коллегии; пути со слэшем). */
+  const judgeTargets: Record<string, string[]> = {};
   let cursor = 0;
   const worker = async (): Promise<void> => {
     while (cursor < uiTasks.length) {
       const { lang, todo } = uiTasks[cursor++]!;
-      console.log(`\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): ключей к переводу ${todo.length}`);
-
-      // Источник: ключи + @-мета как контекст (как в translate-arb).
-      const todoSet = new Set(todo);
-      const payload: Record<string, any> = {};
-      for (const key of todo) {
-        payload[key] = canon.values[key];
-        const meta = canon.meta[`@${key}`];
-        if (meta !== undefined) payload[`@${key}`] = meta;
+      const batches: string[][] = [];
+      for (let i = 0; i < todo.length; i += ctx.args.uiBatch) {
+        batches.push(todo.slice(i, i + ctx.args.uiBatch));
       }
-      const sentLeaves: Leaves = {};
-      for (const key of todo) sentLeaves[key] = canon.values[key];
+      console.log(
+        `\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): ключей к переводу ${todo.length}` +
+          (batches.length > 1 ? ` (${batches.length} партий по ≤${ctx.args.uiBatch})` : ''),
+      );
 
-      const translated = await translateWithRetries(ctx, lang, 'keys', payload, sentLeaves);
-      if (!translated) {
-        failures++;
-        continue;
-      }
-
-      // Запись в ARB: канонический порядок, @@locale сохраняем/создаём,
-      // @-мета переносится только с placeholders (конвенция cognitive_psy).
-      const targetPath = arbFilePath(psyDir, lang);
-      const target = await readArbTarget(psyDir, lang);
-      if (!('@@locale' in target)) target['@@locale'] = lang;
+      const sentAll: Leaves = {};
       let written = 0;
-      for (const key of canon.realKeys) {
-        if (!todoSet.has(key)) continue;
-        const value = translated[key];
-        if (typeof value !== 'string') continue;
-        target[key] = value;
-        written++;
-        const meta = canon.meta[`@${key}`];
-        if (meta && meta.placeholders) {
-          target[`@${key}`] = { placeholders: meta.placeholders };
+      let batchNo = 0;
+      for (const batch of batches) {
+        batchNo++;
+        if (batches.length > 1) console.log(`   📦 партия ${batchNo}/${batches.length}: ${batch.length} ключей`);
+
+        // Источник: ключи партии + @-мета как контекст (как в translate-arb).
+        const payload: Record<string, any> = {};
+        for (const key of batch) {
+          payload[key] = canon.values[key];
+          const meta = canon.meta[`@${key}`];
+          if (meta !== undefined) payload[`@${key}`] = meta;
         }
+        const sentLeaves: Leaves = {};
+        for (const key of batch) sentLeaves[key] = canon.values[key];
+
+        const translated = await translateWithRetries(ctx, lang, 'keys', payload, sentLeaves);
+        if (!translated) {
+          failures++;
+          continue;
+        }
+
+        // Запись в ARB: канонический порядок, @@locale сохраняем/создаём,
+        // @-мета переносится только с placeholders (конвенция cognitive_psy).
+        const target = await readArbTarget(psyDir, lang);
+        if (!('@@locale' in target)) target['@@locale'] = lang;
+        for (const key of batch) {
+          const value = translated[key];
+          if (typeof value !== 'string') continue;
+          target[key] = value;
+          written++;
+          const meta = canon.meta[`@${key}`];
+          if (meta && meta.placeholders) {
+            target[`@${key}`] = { placeholders: meta.placeholders };
+          }
+        }
+        await writeJsonAtomic(arbFilePath(psyDir, lang), target);
+        Object.assign(sentAll, sentLeaves);
       }
-      await writeJsonAtomic(targetPath, target);
-      ctx.state.markTranslated(scope, sentLeaves);
-      await ctx.state.save();
-      console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, targetPath)}`);
+
+      if (Object.keys(sentAll).length > 0) {
+        ctx.state.markTranslated(scope, sentAll);
+        await ctx.state.save();
+        console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, arbFilePath(psyDir, lang))}`);
+        judgeTargets[lang] = Object.keys(sentAll).map((k) => `/${k}`);
+      }
     }
   };
   await Promise.all(Array.from({ length: Math.min(ctx.concurrency, uiTasks.length) }, worker));
+
+  // Коллегия для ключей: судит переведённые ключи (партии не нужны — строки
+  // короткие), правки вписываются по-ключу, цикл до раунда без правок.
+  if (ctx.args.judge && Object.keys(judgeTargets).length > 0) {
+    const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+    const results = await judgeFile({
+      client: ctx.client,
+      relFile: 'ui/cognitive_psy app_*.arb',
+      ruJson: canon.values,
+      perLang: judgeTargets,
+      apply: true,
+      maxRounds: ctx.args.judgeRounds,
+      kind: 'ui',
+      ruMeta: canon.meta,
+      getFileForLang: (l) => arbFilePath(psyDir, l),
+      reportDir: path.join('scripts', 'qa', 'reports', `${stamp}-judge-ui`),
+    });
+    const fixed = results.reduce((n, r) => n + r.totalApplied, 0);
+    const notConverged = results.filter((r) => !r.converged).map((r) => r.lang);
+    console.log(
+      `\n⚖️ Коллегия по UI: правок ${fixed}` +
+        (notConverged.length > 0 ? `; НЕ сошлись локали: ${notConverged.join(', ')}` : '; сошлось'),
+    );
+  }
   return failures;
 }
 
