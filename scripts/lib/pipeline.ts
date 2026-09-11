@@ -417,6 +417,50 @@ export function stageEditRejections(draft: string, patch: string): string[] {
 }
 
 /**
+ * Аддендум формата ответа main для path-map режима (эксперимент
+ * --main-path-map): вместо дерева документа модель возвращает плоскую карту
+ * «путь → перевод» по явному списку. Сдвиг содержимого между соседними
+ * листьями становится невозможен структурно, полнота проверяется по путям.
+ */
+const MAIN_PATHS_ADDENDUM = `
+
+ФОРМАТ ОТВЕТА (обязателен): верни ровно один JSON-объект вида {"paths": {"<путь>": "<перевод>", ...}}.
+Ключи — ТОЧНО все пути из списка "paths" во входе: ни один не пропускай и не придумывай новых.
+Значение каждого пути — готовый перевод соответствующей русской строки.
+Не рисуй дерево документа и не группируй по секциям — только плоская карта «путь → перевод».`;
+
+/** Плоская карта «/a/b/0 → значение» → дерево (объекты с числовыми ключами → массивы). */
+function buildTreeFromPaths(map: Record<string, string>): any {
+  const root: any = {};
+  for (const [p, v] of Object.entries(map)) {
+    const parts = p.split('/').filter(Boolean);
+    let cur = root;
+    for (let i = 0; i < parts.length - 1; i++) {
+      const k = parts[i];
+      if (!(k in cur) || typeof cur[k] !== 'object' || cur[k] === null) cur[k] = {};
+      cur = cur[k];
+    }
+    cur[parts[parts.length - 1]] = v;
+  }
+  const arrify = (n: any): any => {
+    if (Array.isArray(n)) return n.map(arrify);
+    if (n && typeof n === 'object') {
+      const keys = Object.keys(n);
+      if (keys.length > 0 && keys.every((k) => /^\d+$/.test(k))) {
+        const arr: any[] = [];
+        for (const k of keys) arr[Number(k)] = arrify(n[k]);
+        return arr;
+      }
+      const out: any = {};
+      for (const k of keys) out[k] = arrify(n[k]);
+      return out;
+    }
+    return n;
+  };
+  return arrify(root);
+}
+
+/**
  * Мердж ответа стадии поверх базы. Ответ может быть как полным документом
  * («полировка»), так и дифф-патчем («только изменённые ключи»), но мердж умеет
  * и дифф-патч. Ответ применяется поверх base только по СУЩЕСТВУЮЩИМ путям
@@ -638,6 +682,8 @@ async function runStagesOnce(
     sourceLocale: string;
     jsonModeMain?: boolean;
     stageAttempts: number;
+    /** MAIN отвечает плоской картой «путь → перевод» вместо дерева документа. */
+    mainPathMap?: boolean;
     capture?: (stage: CaptureStage, snapshot: any) => void;
     context?: Record<string, string>;
   },
@@ -649,21 +695,63 @@ async function runStagesOnce(
 
   // Стадия 1: MAIN — трансекреация (полный JSON в ответе).
   let t = Date.now();
-  const draftText = await client.complete({
-    system: prompts.main,
-    user: payloadText,
-    temperature: 0.3,
-    maxTokens: 16_384,
-    jsonMode: o.jsonModeMain ?? false,
-  });
+  const draftText = await client.complete(
+    o.mainPathMap
+      ? {
+          system: prompts.main + MAIN_PATHS_ADDENDUM,
+          user: JSON.stringify({
+            sourceLocale: o.sourceLocale,
+            targetLocale,
+            paths: flattenAll(payload),
+            ...(o.context && Object.keys(o.context).length > 0 ? { context: o.context } : {}),
+          }),
+          temperature: 0.3,
+          maxTokens: 16_384,
+          jsonMode: true,
+        }
+      : {
+          system: prompts.main,
+          user: payloadText,
+          temperature: 0.3,
+          maxTokens: 16_384,
+          jsonMode: o.jsonModeMain ?? false,
+        },
+  );
   timings.main = Date.now() - t;
 
-  let draft = await parseWithRepair<any>(draftText);
-  if (draft && typeof draft === 'object' && !Array.isArray(draft) && 'data' in draft) {
-    draft = draft.data; // модель эхом возвращает обёртку {sourceLocale, targetLocale, data}
-  }
-  if (!draft || typeof draft !== 'object') {
-    throw new Error(`MAIN: не удалось распарсить JSON: ${draftText.slice(0, 200)}`);
+  let draft: any;
+  if (o.mainPathMap) {
+    const parsed = await parseWithRepair<any>(draftText);
+    const map =
+      parsed && typeof parsed === 'object' && !Array.isArray(parsed)
+        ? ((parsed.paths && typeof parsed.paths === 'object' ? parsed.paths : parsed.data?.paths) ??
+          (typeof Object.values(parsed)[0] === 'string' ? parsed : null))
+        : null;
+    if (!map || typeof map !== 'object') {
+      throw new Error(`MAIN(paths): не удалось распарсить карту путей: ${draftText.slice(0, 200)}`);
+    }
+    const expected = flattenAll(payload);
+    const clean: Record<string, string> = {};
+    const missing: string[] = [];
+    for (const [p, ru] of Object.entries(expected)) {
+      const v = (map as Record<string, unknown>)[p];
+      if (typeof v === 'string' && v.trim()) clean[p] = v;
+      else missing.push(p);
+    }
+    if (missing.length > 0) {
+      console.warn(
+        `⚠️ [main:paths] без перевода ${missing.length}/${Object.keys(expected).length} путей: ${missing.slice(0, 5).join(', ')}`,
+      );
+    }
+    draft = buildTreeFromPaths(clean);
+  } else {
+    draft = await parseWithRepair<any>(draftText);
+    if (draft && typeof draft === 'object' && !Array.isArray(draft) && 'data' in draft) {
+      draft = draft.data; // модель эхом возвращает обёртку {sourceLocale, targetLocale, data}
+    }
+    if (!draft || typeof draft !== 'object') {
+      throw new Error(`MAIN: не удалось распарсить JSON: ${draftText.slice(0, 200)}`);
+    }
   }
   o.capture?.('main', structuredClone(draft));
 
@@ -770,6 +858,8 @@ export async function runPipeline(
     stageAttempts?: number;
     /** Размер чанка в листьях (по умолчанию TRANSLATE_CHUNK_LEAVES). */
     chunkLeaves?: number;
+    /** MAIN отвечает плоской картой «путь → перевод» (эксперимент --main-path-map). */
+    mainPathMap?: boolean;
     /** Наблюдатель стадий: draft после main/editor/fix, {issues, raw} после review. Не влияет на конвейер. */
     capture?: (stage: CaptureStage, snapshot: any) => void;
     /** Принятые переводы соседних ключей (keys/ui): образец стиля и запрет дублей. */
@@ -812,6 +902,7 @@ export async function runPipeline(
         sourceLocale,
         jsonModeMain: opts.jsonModeMain,
         stageAttempts,
+        mainPathMap: opts.mainPathMap,
         capture: opts.capture,
         context,
       },

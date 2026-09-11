@@ -23,6 +23,8 @@
  *                             audit --apply циклом до раунда без правок, не более --judge-rounds)
  *   --judge-rounds N          максимум раундов коллегии (по умолчанию 3)
  *   --chunk-leaves N          размер чанка перевода в листьях (по умолчанию 40)
+ *   --main-path-map           MAIN отвечает плоской картой «путь → перевод»
+ *                             вместо дерева (эксперимент против дефекта-сдвига)
  *   --ui-batch N              ключей ARB в одной партии перевода UI (по умолчанию 5)
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *
@@ -125,6 +127,8 @@ interface Args {
   judgeRounds: number;
   /** Размер чанка перевода в листьях (по умолчанию из pipeline). */
   chunkLeaves?: number;
+  /** MAIN отвечает плоской картой «путь → перевод» (экспериментальный формат). */
+  mainPathMap: boolean;
   /** Ключей ARB в одной партии перевода (ui-режим). */
   uiBatch: number;
 }
@@ -190,6 +194,7 @@ function parseArgs(): Args {
     judge: !parseBoolFlag(flags['no-judge'], false),
     judgeRounds: parseIntFlag(flags['judge-rounds']) ?? 3,
     chunkLeaves: parseIntFlag(flags['chunk-leaves']),
+    mainPathMap: parseBoolFlag(flags['main-path-map'], false),
     uiBatch: parseIntFlag(flags['ui-batch']) ?? 5,
   };
 }
@@ -270,6 +275,7 @@ async function translateWithRetries(
         jsonModeMain: attempt > 1, // битый JSON → пробуем json_object
         context,
         chunkLeaves: ctx.args.chunkLeaves,
+        mainPathMap: ctx.args.mainPathMap,
       });
 
       // keys-режим: ответ {lang: {key: val}} — снимаем обёртку.

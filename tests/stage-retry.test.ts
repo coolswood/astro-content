@@ -132,3 +132,39 @@ describe('runPipeline — capture: снимки стадий независим�
     expect(seen.review.issues).toHaveLength(1);
   });
 });
+
+describe('runPipeline — mainPathMap: плоская карта «путь → перевод»', () => {
+  test('main отвечает картой путей, дерево собирается с массивами; сдвиг невозможен', async () => {
+    let sawPaths = false;
+    let sawAddendum = false;
+    const client = fakeClient({
+      'PROMPT:MAIN': (req) => {
+        sawPaths = req.user.includes('"paths"');
+        sawAddendum = req.system.includes('ФОРМАТ ОТВЕТА');
+        return JSON.stringify({ paths: { '/title': 'Hi', '/items/0': 'a', '/items/1': 'b' } });
+      },
+      'PROMPT:EDITOR': () => 'Все хорошо',
+      'PROMPT:REVIEW': () => '{"issues":[]}',
+      'PROMPT:FIX': () => 'Все хорошо',
+    });
+    const { data } = await runPipeline(client, PROMPTS, PAYLOAD, 'de', { mainPathMap: true });
+    expect(sawPaths).toBe(true);
+    expect(sawAddendum).toBe(true);
+    expect(data.title).toBe('Hi');
+    expect(Array.isArray(data.items)).toBe(true); // числовые ключи стали массивом
+    expect(data.items).toEqual(['a', 'b']);
+  });
+
+  test('массовая потеря путей роняет прогон (контроль полноты), выдуманные пути не проходят', async () => {
+    const client = fakeClient({
+      'PROMPT:MAIN': () => JSON.stringify({ paths: { '/title': 'Hi', '/ghost': 'boo' } }),
+      'PROMPT:EDITOR': () => 'Все хорошо',
+      'PROMPT:REVIEW': () => '{"issues":[]}',
+      'PROMPT:FIX': () => 'Все хорошо',
+    });
+    // 2 из 3 листьев без перевода — ratio > 0.3: recovery не спасает, падение целиком.
+    await expect(runPipeline(client, PROMPTS, PAYLOAD, 'de', { mainPathMap: true })).rejects.toThrow(
+      /потеряны ключи/,
+    );
+  });
+});
