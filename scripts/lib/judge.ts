@@ -21,7 +21,8 @@ import { loadPrompt } from './prompt-loader.js';
 import { loadGlossary } from './glossary-utils.js';
 import { parseWithRepair } from './json-repair.js';
 import { flattenLeaves, type Leaves } from './tree.js';
-import { validateTranslation } from './validation.js';
+import { validateTranslation, type ValidationIssue } from './validation.js';
+import { stripInstagramAttributes } from './tag-reconcile.js';
 import { writeJsonAtomic, writeTextAtomic, readJsonOr } from './atomic-fs.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -170,6 +171,8 @@ export async function applyJudgeRecommendations(
   sentLeaves: Leaves,
   recommendations: any[],
   reviewed: any[],
+  /** Значения листа, которые уже были (текущее + все применённые): защита от осцилляций. */
+  seenValuesByPath?: Map<string, Set<string>>,
 ): Promise<{ applied: AppliedEdit[]; skipped: SkippedEdit[] }> {
   const applied: AppliedEdit[] = [];
   const skipped: SkippedEdit[] = [];
@@ -213,6 +216,10 @@ export async function applyJudgeRecommendations(
       skipped.push({ id, path: p, reason: 'правка уже применена' });
       continue;
     }
+    if (seenValuesByPath?.get(p)?.has(proposed)) {
+      skipped.push({ id, path: p, reason: 'осцилляция: это значение у листа уже было' });
+      continue;
+    }
     patch[p] = proposed;
     from[p] = flat[p];
     idsByPath[p] = id;
@@ -227,7 +234,24 @@ export async function applyJudgeRecommendations(
   for (const p of Object.keys(patch)) barePatch[p.replace(/^\//, '')] = patch[p]!;
   mergeSubset(target, barePatch, 'judge-apply');
 
-  const issues = validateTranslation(lang, sentLeaves, target);
+  // Конвенция <instagram>: вне ru/en тег обязан быть пустым — судья копирует
+  // атрибуты из оригинала так же, как переводная модель, срезаем механически.
+  const stripped = stripInstagramAttributes(target, lang);
+  if (stripped > 0) {
+    console.warn(`   ⚠️ [judge-apply] срезаны атрибуты <instagram> в ${stripped} листах (${lang})`);
+  }
+
+  // Валидируем ТОЛЬКО исправляемые листья: файл в целом содержит и старые
+  // переводы, которых нет в sentLeaves (частичный доперевод), — сверка целого
+  // файла с подмножеством давала бы ложные «лишние ключи» и отменяла правки.
+  // Ключи без ведущего слэша: flattenLeaves добавит свой, norm() снимет.
+  const issues: ValidationIssue[] = [];
+  for (const p of Object.keys(patch)) {
+    const bare = p.replace(/^\//, '');
+    issues.push(
+      ...validateTranslation(lang, { [bare]: sentLeaves[p] }, { [bare]: patch[p]! }),
+    );
+  }
   if (issues.length > 0) {
     for (const issue of issues) {
       skipped.push({ id: '-', path: issue.path, reason: `валидация: ${issue.message}` });
@@ -289,6 +313,7 @@ export async function judgeFile(opts: JudgeFileOptions): Promise<JudgeLangResult
 
   let current = Object.keys(opts.perLang).filter((l) => opts.perLang[l].length > 0);
   const pending: Record<string, JudgeRound[]> = {};
+  const seenByLang: Record<string, Map<string, Set<string>>> = {};
   for (const lang of current) pending[lang] = [];
 
   let round = 1;
@@ -304,6 +329,16 @@ export async function judgeFile(opts: JudgeFileOptions): Promise<JudgeLangResult
       const trLeaves = flattenLeaves(target ?? {});
       const items = buildAlignedItems(ruLeaves, trLeaves, opts.perLang[lang]);
       console.log(`\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): листьев ${items.length}`);
+      // Память значений листа (текущее + все применённые): судья, предлагающий
+      // вернуть лист к уже бывшему у него значению, крутит осцилляцию — не даём.
+      const seenValuesByPath = (seenByLang[lang] ??= new Map());
+      for (const p of opts.perLang[lang]) {
+        const v = trLeaves[p];
+        if (typeof v === 'string') {
+          if (!seenValuesByPath.has(p)) seenValuesByPath.set(p, new Set());
+          seenValuesByPath.get(p)!.add(v);
+        }
+      }
       try {
         const verdict = await judgeOnce(
           opts.client,
@@ -324,6 +359,7 @@ export async function judgeFile(opts: JudgeFileOptions): Promise<JudgeLangResult
             sentLeaves,
             verdict.recommendations,
             verdict.reviewed,
+            seenValuesByPath,
           ));
           console.log(`   🛠 apply: вписано ${applied.length}, пропущено ${skipped.length}`);
         }

@@ -91,3 +91,42 @@ describe('коллегия — цикл до раунда без правок', 
     ]);
   });
 });
+
+describe('коллегия — защита от осцилляций', () => {
+  test('повторное предложение уже бывшего значения отклоняется, локаль сходится', async () => {
+    tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'judge-osc-'));
+    const relFile = 'o.json';
+    const targetPath = path.join(tmp, 'src', 'i18n', 'de', relFile);
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.writeFile(targetPath, JSON.stringify({ title: 'A' }));
+
+    const issue = JSON.stringify({
+      scan: [{ path: '/title', verdict: 'issue', note: 'хм' }],
+      issues: [{ id: 'I1', path: '/title', fragment: 'x', type: 'style', severity: 'minor', problem: 'стиль', why: 'w' }],
+    });
+    const confirm = JSON.stringify({ reviewed: [{ id: 'I1', verdict: 'confirmed', rank: 1, note: 'ok' }], notes: '' });
+    const recTo = (current: string, v: string) =>
+      JSON.stringify({
+        recommendations: [{ id: 'I1', priority: 1, path: '/title', current, proposed: v, alternatives: [], rationale: 'r' }],
+        overall: { score: 90, verdict: 'minor_edits', summary: 's' },
+      });
+
+    // Раунд 1: A → B. Раунд 2: судья хочет вернуть A (осцилляция) — отклоняется.
+    const client = fakeJudgeClient([issue, confirm, recTo('A', 'B'), issue, confirm, recTo('B', 'A')]);
+    const results = await judgeFile({
+      client,
+      relFile,
+      ruJson: { title: 'Оригинал' },
+      perLang: { de: ['/title'] },
+      apply: true,
+      maxRounds: 4,
+      rootOverride: tmp,
+    });
+
+    expect(results[0].rounds).toHaveLength(2);
+    expect(results[0].converged).toBe(true);
+    const written = await readJsonOr<any>(targetPath, {});
+    expect(written.title).toBe('B');
+    expect(results[0].rounds[1].skipped[0].reason).toContain('осцилляция');
+  });
+});
