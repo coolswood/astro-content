@@ -22,6 +22,7 @@ import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
 import { reconcileTags, stripInstagramAttributes } from './tag-reconcile.js';
+import { buildSubtree } from './tree.js';
 import type { AIProvider, ProviderType } from './types.js';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -438,6 +439,214 @@ export interface PipelineResult {
  */
 export type CaptureStage = 'main' | 'editor' | 'review' | 'fix';
 
+/** Листьев в одном чанке перевода: модели стабильно срезают хвосты длинных
+ *  документов («потеряны ключи: /x/screen_3/texts/11»), на ≤40 листьях ответ
+ *  устойчив. Чанки режутся по контейнерам; предыдущие чанки уходят в context
+ *  как история и референс стиля (как uiContextWindow в ui-режиме). */
+const TRANSLATE_CHUNK_LEAVES = 40;
+
+function countLeaves(node: any): number {
+  return Object.keys(flattenAll(node)).length;
+}
+
+interface PayloadChunk {
+  /** Путь от корня payload (сегменты); [] — весь payload. */
+  prefix: string[];
+  subtree: any;
+}
+
+/** Режет payload на поддеревья ≤ max листьев. Переполненный ребёнок режется
+ *  рекурсивно со своим префиксом; массив бинируется подряд идущими
+ *  элементами, чанк — разреженный клон массива (позиции оригинала
+ *  сохраняются, как в инкрементальном payload). */
+function chunkPayload(node: any, max: number, prefix: string[] = []): PayloadChunk[] {
+  if (countLeaves(node) <= max) return [{ prefix, subtree: node }];
+  const isArray = Array.isArray(node);
+  const entries: [string, any][] = isArray
+    ? node.map((v, i) => [String(i), v] as [string, any])
+    : Object.entries(node);
+  if (entries.length <= 1) return [{ prefix, subtree: node }];
+  const chunks: PayloadChunk[] = [];
+  let bin: Record<string, any> = {};
+  let binLeaves = 0;
+  const flush = () => {
+    if (binLeaves === 0) return;
+    if (isArray) {
+      const sparse: any[] = [];
+      const top = Math.max(...Object.keys(bin).map(Number));
+      for (let i = 0; i <= top; i++) sparse.push(i in bin ? bin[i] : null);
+      chunks.push({ prefix, subtree: sparse });
+    } else {
+      chunks.push({ prefix, subtree: bin });
+    }
+    bin = {};
+    binLeaves = 0;
+  };
+  for (const [k, v] of entries) {
+    const lv = countLeaves(v);
+    if (lv > max) {
+      flush();
+      chunks.push(...chunkPayload(v, max, [...prefix, k]));
+      continue;
+    }
+    if (binLeaves > 0 && binLeaves + lv > max) flush();
+    bin[k] = v;
+    binLeaves += lv;
+  }
+  flush();
+  return chunks;
+}
+
+/** Клон payload со строковыми листьями → '' (@-мета сохраняется как есть):
+ *  все пути чанков существуют в скелете, сборка — мердж по абсолютным путям. */
+function makeSkeleton(node: any): any {
+  const walk = (n: any, key: string): any => {
+    if (Array.isArray(n)) return n.map((v) => walk(v, key));
+    if (n && typeof n === 'object') {
+      const out: any = {};
+      for (const [k, v] of Object.entries(n)) out[k] = k.startsWith('@') ? v : walk(v, k);
+      return out;
+    }
+    return typeof n === 'string' ? '' : n;
+  };
+  return walk(node, '');
+}
+
+/**
+ * Один прогон стадий (main → editor → review → fix / tech) по одному
+ * payload. Из runPipeline вынесен для чанкового режима: каждый чанк проходит
+ * полный конвейер, результат собирается в скелет документа.
+ */
+async function runStagesOnce(
+  client: StageClient,
+  prompts: StagePrompts,
+  payload: any,
+  targetLocale: string,
+  o: {
+    sourceLocale: string;
+    jsonModeMain?: boolean;
+    stageAttempts: number;
+    capture?: (stage: CaptureStage, snapshot: any) => void;
+    context?: Record<string, string>;
+  },
+): Promise<{ draft: any; timings: PipelineResult['timings'] }> {
+  const wrapped: Record<string, unknown> = { sourceLocale: o.sourceLocale, targetLocale, data: payload };
+  if (o.context && Object.keys(o.context).length > 0) wrapped.context = o.context;
+  const payloadText = JSON.stringify(wrapped);
+  const timings: PipelineResult['timings'] = { main: 0, editor: 0 };
+
+  // Стадия 1: MAIN — трансекреация (полный JSON в ответе).
+  let t = Date.now();
+  const draftText = await client.complete({
+    system: prompts.main,
+    user: payloadText,
+    temperature: 0.3,
+    maxTokens: 16_384,
+    jsonMode: o.jsonModeMain ?? false,
+  });
+  timings.main = Date.now() - t;
+
+  let draft = await parseWithRepair<any>(draftText);
+  if (draft && typeof draft === 'object' && !Array.isArray(draft) && 'data' in draft) {
+    draft = draft.data; // модель эхом возвращает обёртку {sourceLocale, targetLocale, data}
+  }
+  if (!draft || typeof draft !== 'object') {
+    throw new Error(`MAIN: не удалось распарсить JSON: ${draftText.slice(0, 200)}`);
+  }
+  o.capture?.('main', structuredClone(draft));
+
+  // Стадия 2: EDITOR — полировка носителем без оригинала. Ответ — полный
+  // отредактированный документ (или дифф-патч): мердж применяет значения
+  // только по существующим путям, структура фиксируется базой.
+  t = Date.now();
+  const editorPatch = await runStage(
+    client,
+    'editor',
+    o.stageAttempts,
+    (attempt) => ({
+      system: prompts.editor,
+      user: JSON.stringify(draft),
+      temperature: 0.2,
+      maxTokens: 16_384,
+      jsonMode: attempt > 1,
+    }),
+    (text) => parseStageObject('editor', text),
+  );
+  timings.editor = Date.now() - t;
+  if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor');
+  o.capture?.('editor', structuredClone(draft));
+
+  // Стадии 3–4 (text): REVIEW — смысловая сверка с оригиналом; FIX — правка
+  // по замечаниям («критикуй отдельно, правь отдельно»).
+  if (prompts.review && prompts.fix) {
+    t = Date.now();
+    const review = await runStage(
+      client,
+      'review',
+      o.stageAttempts,
+      () => ({
+        system: prompts.review!,
+        user: `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}`,
+        temperature: 0.2,
+        maxTokens: 8_192,
+        jsonMode: true,
+      }),
+      async (text) => {
+        const parsed = await parseWithRepair<any>(text);
+        if (!parsed || typeof parsed !== 'object' || !Array.isArray(parsed.issues)) {
+          throw new Error(`неожиданный формат ответа: ${text.slice(0, 120)}`);
+        }
+        return { raw: text, issues: parsed.issues as unknown[] };
+      },
+    );
+    timings.review = Date.now() - t;
+    o.capture?.('review', { issues: review.issues, raw: review.raw });
+
+    if (review.issues.length > 0) {
+      t = Date.now();
+      const fixPatch = await runStage(
+        client,
+        'fix',
+        o.stageAttempts,
+        (attempt) => ({
+          system: prompts.fix!,
+          user:
+            `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}\n\n` +
+            `ЗАМЕЧАНИЯ РЕВЬЮЕРА (исправь каждое):\n${review.raw}`,
+          temperature: 0.2,
+          maxTokens: 16_384,
+          jsonMode: attempt > 1,
+        }),
+        (text) => parseStageObject('fix', text),
+      );
+      timings.fix = Date.now() - t;
+      if (fixPatch) draft = mergeSubset(draft, fixPatch, 'fix');
+      o.capture?.('fix', structuredClone(draft));
+    }
+  } else if (prompts.tech) {
+    // Legacy-путь (keys/ui): однозапросная смысловая сверка с правкой.
+    t = Date.now();
+    const techPatch = await runStage(
+      client,
+      'tech',
+      o.stageAttempts,
+      (attempt) => ({
+        system: prompts.tech!,
+        user: `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}`,
+        temperature: 0.2,
+        maxTokens: 8_192,
+        jsonMode: attempt > 1,
+      }),
+      (text) => parseStageObject('tech', text),
+    );
+    timings.tech = Date.now() - t;
+    if (techPatch) draft = mergeSubset(draft, techPatch, 'tech');
+  }
+
+  return { draft, timings };
+}
+
+
 export async function runPipeline(
   client: StageClient,
   prompts: StagePrompts,
@@ -455,124 +664,74 @@ export async function runPipeline(
 ): Promise<PipelineResult> {
   const sourceLocale = opts.sourceLocale ?? 'ru';
   const stageAttempts = opts.stageAttempts ?? DEFAULT_STAGE_ATTEMPTS;
-  const wrapped: Record<string, unknown> = { sourceLocale, targetLocale, data: payload };
-  if (opts.context && Object.keys(opts.context).length > 0) wrapped.context = opts.context;
-  const payloadText = JSON.stringify(wrapped);
+  const ruFlat = flattenAll(payload);
+  const chunks = chunkPayload(payload, TRANSLATE_CHUNK_LEAVES);
+  if (chunks.length > 1) {
+    console.log(`📦 [chunks] payload → ${chunks.length} чанков ≤${TRANSLATE_CHUNK_LEAVES} листьев`);
+  }
+  // Скелет: все пути payload со строками-заглушками; чанки собираются
+  // мерджем по абсолютным путям. История для context: ru-оригинал → принятый
+  // перевод, последние 50 пар — референс стиля и запрет повторов-«крючков».
+  const skeleton = makeSkeleton(payload);
+  const flatSkeleton = flattenAll(skeleton);
+  const flatSkeletonTotal = Object.keys(flatSkeleton).length;
+  const accepted: Record<string, string> = {};
   const timings: PipelineResult['timings'] = { main: 0, editor: 0 };
 
-  // Стадия 1: MAIN — трансекреация (полный JSON в ответе).
-  let t = Date.now();
-  const draftText = await client.complete({
-    system: prompts.main,
-    user: payloadText,
-    temperature: 0.3,
-    maxTokens: 16_384,
-    jsonMode: opts.jsonModeMain ?? false,
-  });
-  timings.main = Date.now() - t;
-
-  let draft = await parseWithRepair<any>(draftText);
-  if (draft && typeof draft === 'object' && !Array.isArray(draft) && 'data' in draft) {
-    draft = draft.data; // модель эхом возвращает обёртку {sourceLocale, targetLocale, data}
-  }
-  if (!draft || typeof draft !== 'object') {
-    throw new Error(`MAIN: не удалось распарсить JSON: ${draftText.slice(0, 200)}`);
-  }
-  opts.capture?.('main', structuredClone(draft));
-
-  // Стадия 2: EDITOR — полировка носителем без оригинала. Ответ — полный
-  // отредактированный документ (или дифф-патч): мердж применяет значения
-  // только по существующим путям, структура фиксируется базой. Отправляем
-  // канонический draft (обёртка {data} снята, JSON нормализован): пути
-  // ответа тогда совпадают с базой мерджа; сырой draftText с обёрткой-эхом
-  // от MAIN ломал пути и молча превращал стадию в no-op.
-  t = Date.now();
-  const editorPatch = await runStage(
-    client,
-    'editor',
-    stageAttempts,
-    (attempt) => ({
-      system: prompts.editor,
-      user: JSON.stringify(draft),
-      temperature: 0.2,
-      maxTokens: 16_384,
-      jsonMode: attempt > 1,
-    }),
-    (text) => parseStageObject('editor', text),
-  );
-  timings.editor = Date.now() - t;
-  if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor');
-  opts.capture?.('editor', structuredClone(draft));
-
-  // Стадии 3–4 (text): REVIEW — смысловая сверка с оригиналом, ответ списком
-  // замечаний {"issues":[...]} без правок; FIX — правка по замечаниям, ответ
-  // полный документ или дифф-патч. Паттерн «критикуй отдельно, правь
-  // отдельно»: ревьюер не обременён формированием правок, правщик получает
-  // явный список.
-  if (prompts.review && prompts.fix) {
-    t = Date.now();
-    const review = await runStage(
+  for (let ci = 0; ci < chunks.length; ci++) {
+    const chunk = chunks[ci]!;
+    const pairs = Object.entries(accepted);
+    const history = pairs.length > 0 ? Object.fromEntries(pairs.slice(-50)) : undefined;
+    // context вызывающего (ui: окно принятых ключей) + история чанков —
+    // вместе; история позже, её записи приоритетнее при коллизии ключей.
+    const context =
+      opts.context || history
+        ? { ...(opts.context ?? {}), ...(history ?? {}) }
+        : undefined;
+    const t0 = Date.now();
+    const { draft: chunkDraft, timings: tChunk } = await runStagesOnce(
       client,
-      'review',
-      stageAttempts,
-      () => ({
-        system: prompts.review!,
-        user: `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}`,
-        temperature: 0.2,
-        maxTokens: 8_192,
-        jsonMode: true, // маленький структурированный ответ — json_object надёжнее
-      }),
-      async (text) => {
-        const parsed = await parseWithRepair<any>(text);
-        if (!parsed || typeof parsed !== 'object' || !Array.isArray(parsed.issues)) {
-          throw new Error(`неожиданный формат ответа: ${text.slice(0, 120)}`);
-        }
-        return { raw: text, issues: parsed.issues as unknown[] };
+      prompts,
+      chunk.subtree,
+      targetLocale,
+      {
+        sourceLocale,
+        jsonModeMain: opts.jsonModeMain,
+        stageAttempts,
+        capture: opts.capture,
+        context,
       },
     );
-    timings.review = Date.now() - t;
-    opts.capture?.('review', { issues: review.issues, raw: review.raw });
+    timings.main += tChunk.main;
+    timings.editor += tChunk.editor;
+    if (tChunk.review) timings.review = (timings.review ?? 0) + tChunk.review;
+    if (tChunk.fix) timings.fix = (timings.fix ?? 0) + tChunk.fix;
+    if (tChunk.tech) timings.tech = (timings.tech ?? 0) + tChunk.tech;
+    // re-root под префикс чанка: пути draft'а относительны чанка, скелет —
+    // полный документ. mergeSubset применяет только существующие пути скелета
+    // и непустые строки — эхо context («перевод справочных пар») отсеивается
+    // само, не раздувая документ.
+    let rooted: any = chunkDraft;
+    for (const seg of [...chunk.prefix].reverse()) rooted = { [seg]: rooted };
+    mergeSubset(skeleton, rooted, `chunk${ci + 1}`);
 
-    if (review.issues.length > 0) {
-      t = Date.now();
-      const fixPatch = await runStage(
-        client,
-        'fix',
-        stageAttempts,
-        (attempt) => ({
-          system: prompts.fix!,
-          user:
-            `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}\n\n` +
-            `ЗАМЕЧАНИЯ РЕВЬЮЕРА (исправь каждое):\n${review.raw}`,
-          temperature: 0.2,
-          maxTokens: 16_384,
-          jsonMode: attempt > 1,
-        }),
-        (text) => parseStageObject('fix', text),
-      );
-      timings.fix = Date.now() - t;
-      if (fixPatch) draft = mergeSubset(draft, fixPatch, 'fix');
-      opts.capture?.('fix', structuredClone(draft));
+    // История: переводы листьев скелета (эхо context в историю не попадает).
+    const flatDraft = flattenAll(rooted);
+    for (const [ap, rv] of Object.entries(flatDraft)) {
+      if (typeof rv !== 'string' || !rv.trim() || !(ap in flatSkeleton)) continue;
+      const ru = ruFlat[ap];
+      if (typeof ru === 'string' && ru.trim()) accepted[ru] = rv;
     }
-  } else if (prompts.tech) {
-    // Legacy-путь (keys/ui): однозапросная смысловая сверка с правкой.
-    t = Date.now();
-    const techPatch = await runStage(
-      client,
-      'tech',
-      stageAttempts,
-      (attempt) => ({
-        system: prompts.tech!,
-        user: `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}`,
-        temperature: 0.2,
-        maxTokens: 8_192,
-        jsonMode: attempt > 1,
-      }),
-      (text) => parseStageObject('tech', text),
-    );
-    timings.tech = Date.now() - t;
-    if (techPatch) draft = mergeSubset(draft, techPatch, 'tech');
+    if (chunks.length > 1) {
+      const done = Object.keys(flattenAll(skeleton)).filter(
+        (k) => typeof flatSkeleton[k] === 'string' && String(flattenAll(skeleton)[k]).trim() !== '',
+      ).length;
+      console.log(
+        `   📦 [chunks] чанк ${ci + 1}/${chunks.length}: переведено ${done}/${flatSkeletonTotal} (${Math.round((Date.now() - t0) / 1000)}с)`,
+      );
+    }
   }
+  let draft: any = skeleton;
 
   // Контроль тегов: пул тегов перевода не должен превышать пул оригинала.
   // Смещение тега в другой элемент — норма транскреации (не трогается);
@@ -613,10 +772,79 @@ export async function runPipeline(
   // из сверки полноты такие пути исключаются.
   const isMetaPath = (p: string) => p.split('/').some((seg) => seg.startsWith('@'));
   const srcKeys = Object.keys(flattenAll(payload)).filter((k) => !isMetaPath(k));
-  const outKeys = new Set(Object.keys(flattenAll(checkTarget)));
-  const lost = srcKeys.filter((k) => !outKeys.has(k));
+  // Пустая строка — тоже потеря: модель вернула заглушку, валидация раннера
+  // такое отклоняет, значит лист надо допереводить (recovery ниже).
+  const isLostIn = (flat: Record<string, any>) => (k: string) => {
+    const v = flat[k];
+    return v == null || (typeof v === 'string' && !v.trim());
+  };
+  const lost = srcKeys.filter(isLostIn(flattenAll(checkTarget)));
   if (lost.length > 0) {
-    throw new Error(`потеряны ключи: ${lost.slice(0, 5).join(', ')}`);
+    // Recovery: точечный доперевод потерянных листьев одним запросом.
+    // Модель периодически срезает хвост длинного массива (классический
+    // детерминированный промах: «потеряны ключи: /x/screen_3/texts/11»),
+    // и полный ретрай конвейера из-за 1–2 листьев — это 4 запроса по всему
+    // документу с тем же исходом. Допереводим только потерянное и доклеиваем.
+    const ratio = lost.length / Math.max(srcKeys.length, 1);
+    if (ratio > 0.3) {
+      throw new Error(
+        `потеряны ключи: ${lost.slice(0, 5).join(', ')} (${lost.length}/${srcKeys.length} — слишком много для recovery)`,
+      );
+    }
+    console.warn(
+      `⚠️ [recovery] потеряны ключи (${lost.length}/${srcKeys.length}): ${lost.slice(0, 3).join(', ')} — доперевод точечно`,
+    );
+    const lostSubtree = buildSubtree(payload, lost);
+    const recText = await client.complete({
+      system: prompts.main,
+      user: JSON.stringify({ sourceLocale, targetLocale, data: lostSubtree }),
+      temperature: 0.2,
+      maxTokens: 8_192,
+      jsonMode: true,
+    });
+    let recovered = await parseWithRepair<any>(recText);
+    if (recovered && typeof recovered === 'object' && !Array.isArray(recovered) && 'data' in recovered) {
+      recovered = recovered.data;
+    }
+    if (!recovered || typeof recovered !== 'object') {
+      throw new Error(`потеряны ключи: ${lost.slice(0, 5).join(', ')} (recovery не распарсился)`);
+    }
+    // Контейнер в draft КОРОЧЕ потерянного индекса (модель срезала хвост
+    // массива), а mergeSubset по дизайну не растит массивы («длины массивов
+    // фиксируются базой») — дорастаем контейнеры до путей восстановления.
+    for (const [rp, rv] of Object.entries(flattenAll(recovered))) {
+      if (typeof rv !== 'string' || !rv.trim()) continue;
+      const parts = rp.split('/').filter(Boolean);
+      let cur: any = checkTarget;
+      for (let i = 0; i < parts.length; i++) {
+        const seg = parts[i]!;
+        const isIndex = /^\d+$/.test(seg);
+        if (i < parts.length - 1) {
+          const nextIsIndex = /^\d+$/.test(parts[i + 1]!);
+          if (Array.isArray(cur)) {
+            const idx = Number(seg);
+            while (cur.length <= idx) cur.push(null);
+            if (cur[idx] == null) cur[idx] = nextIsIndex ? [] : {};
+            cur = cur[idx];
+          } else {
+            if (cur[seg] == null || typeof cur[seg] !== 'object') cur[seg] = nextIsIndex ? [] : {};
+            cur = cur[seg];
+          }
+        } else if (Array.isArray(cur)) {
+          const idx = Number(seg);
+          while (cur.length <= idx) cur.push(null);
+        }
+      }
+    }
+    mergeSubset(checkTarget, recovered, 'recovery');
+    // Восстановленные листья могли прийти с атрибутами <instagram> из
+    // оригинала — конвенция та же, что и для основного draft.
+    stripInstagramAttributes(draft, targetLocale);
+    const stillLost = srcKeys.filter(isLostIn(flattenAll(checkTarget)));
+    if (stillLost.length > 0) {
+      throw new Error(`потеряны ключи после recovery: ${stillLost.slice(0, 5).join(', ')}`);
+    }
+    console.warn(`⚠️ [recovery] вписано ${lost.length} листьев`);
   }
 
   return { data: draft, timings };
