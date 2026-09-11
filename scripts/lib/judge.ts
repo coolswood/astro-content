@@ -180,18 +180,50 @@ export async function judgeOnce(
   );
 
   const sysReco = (await loadPrompt('qa', names[2], lc)).replace('{{GLOSSARY}}', glossaryText);
+  // Guard перебора: рекомендаций не может быть кратно больше подтверждённых
+  // замечаний — модель превращает «внеси N правок» в «отполируй всё», и именно
+  // через это в файл проезжали мусорные правки. Превышение = один переспрос;
+  // если и переспрос ушёл в перебор — оставляем топ по приоритету.
+  const confirmedCount = reviewed.filter((r) => r.verdict === 'confirmed').length;
+  const recLimit = Math.max(confirmedCount * 2, confirmedCount + 4);
+  const recoValidate = (data: any) => {
+    if (!Array.isArray(data.recommendations)) throw new Error('нет массива recommendations');
+    if (!data.overall || typeof data.overall !== 'object') throw new Error('нет overall');
+  };
   const s3 = await stage(
     client,
     sysReco,
     JSON.stringify({ targetLocale: lang, items, issues, reviewed }),
     16_384,
-    (data) => {
-      if (!Array.isArray(data.recommendations)) throw new Error('нет массива recommendations');
-      if (!data.overall || typeof data.overall !== 'object') throw new Error('нет overall');
-    },
+    recoValidate,
   );
+  let recommendations = asArray(s3.data.recommendations);
+  if (recommendations.length > recLimit) {
+    console.warn(
+      `   ⚠️ recommend: ${recommendations.length} рекомендаций > лимита ${recLimit}` +
+        ` (${confirmedCount} подтверждённых) — переспрашиваю`,
+    );
+    const s3b = await stage(
+      client,
+      sysReco,
+      JSON.stringify({ targetLocale: lang, items, issues, reviewed }),
+      16_384,
+      recoValidate,
+    );
+    const retryRecs = asArray(s3b.data.recommendations);
+    if (retryRecs.length <= recLimit) {
+      recommendations = retryRecs;
+    } else {
+      console.warn(
+        `   ⚠️ recommend: переспрос тоже ${retryRecs.length} — оставляю топ-${confirmedCount} по приоритету`,
+      );
+      recommendations = [...retryRecs]
+        .sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99))
+        .slice(0, Math.max(confirmedCount, 1));
+    }
+  }
   console.log(
-    `   📋 recommend: ${asArray(s3.data.recommendations).length} рекомендаций` +
+    `   📋 recommend: ${recommendations.length} рекомендаций` +
       `, verdict=${s3.data.overall?.verdict}, score=${s3.data.overall?.score} (${(s3.ms / 1000).toFixed(0)}с)`,
   );
 
@@ -200,7 +232,7 @@ export async function judgeOnce(
     issues,
     reviewed,
     notes: String(s2.data.notes ?? ''),
-    recommendations: asArray(s3.data.recommendations),
+    recommendations,
     overall: s3.data.overall,
     timings: { issues: issuesMs, deliberate: s2.ms, recommend: s3.ms },
   };
@@ -498,7 +530,17 @@ export async function judgeFile(opts: JudgeFileOptions): Promise<JudgeLangResult
           console.log(`   🛠 apply: вписано ${applied.length}, пропущено ${skipped.length}`);
         }
         pending[lang].push({ round, verdict, applied, skipped });
-        if (applied.length > 0) stillActive.push(lang);
+        // Ранний стоп: судья сам даёт вердикт «публиковать» с высоким баллом.
+        // Полный пересмотр текста в КАЖДОМ раунде сохранён — новые находки в
+        // нетронутых листьях по-прежнему возможны; стоп означает лишь, что
+        // судья не считает остаточные замечания блокирующими.
+        const overallVerdict = String(verdict.overall?.verdict ?? '');
+        const overallScore = Number(verdict.overall?.score ?? 0);
+        if (overallVerdict === 'publish' && overallScore >= 95) {
+          console.log(`   ⏹ ${lang}: verdict=publish, score=${overallScore} — досрочная сходимость`);
+        } else if (applied.length > 0) {
+          stillActive.push(lang);
+        }
       } catch (e: any) {
         console.error(`   🛑 ${lang}: коллегия не состоялась: ${e?.message ?? e}`);
       }

@@ -130,3 +130,103 @@ describe('коллегия — защита от осцилляций', () => {
     expect(results[0].rounds[1].skipped[0].reason).toContain('осцилляция');
   });
 });
+
+describe('коллегия — guard перебора recommend', () => {
+  test('перебор рекомендаций: переспрос, вписана правка из нормального ответа', async () => {
+    tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'judge-rec-'));
+    const relFile = 'r.json';
+    const targetPath = path.join(tmp, 'src', 'i18n', 'de', relFile);
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.writeFile(targetPath, JSON.stringify({ title: 'Hello' }));
+
+    const recOvershoot = JSON.stringify({
+      recommendations: Array.from({ length: 9 }, (_, i) => ({
+        id: `I1`, priority: i + 1, path: '/title', current: 'Hello', proposed: `V${i}`, alternatives: [], rationale: 'r',
+      })),
+      overall: { score: 90, verdict: 'minor_edits', summary: 'ушёл в полировку' },
+    });
+
+    const client = fakeJudgeClient([
+      ISSUES_ROUND1, REVIEW_CONFIRM, recOvershoot, // раунд 1: перебор → переспрос
+      REC_FIX,                                     // переспрос в пределах лимита
+      ISSUES_CLEAN, REVIEW_EMPTY, REC_NONE,        // раунд 2: чистый
+    ]);
+    const results = await judgeFile({
+      client,
+      relFile,
+      ruJson: { title: 'Привет' },
+      perLang: { de: ['/title'] },
+      apply: true,
+      maxRounds: 3,
+      rootOverride: tmp,
+    });
+
+    expect(results[0].totalApplied).toBe(1);
+    expect(results[0].converged).toBe(true);
+    const written = await readJsonOr<any>(targetPath, {});
+    expect(written.title).toBe('Hello, judge!');
+  });
+
+  test('переспрос тоже в переборе — остаётся топ-1 по приоритету, локаль не теряет раунд', async () => {
+    tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'judge-rec2-'));
+    const relFile = 'r2.json';
+    const targetPath = path.join(tmp, 'src', 'i18n', 'de', relFile);
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.writeFile(targetPath, JSON.stringify({ title: 'Hello' }));
+
+    const recs = (n: number) =>
+      JSON.stringify({
+        recommendations: Array.from({ length: n }, (_, i) => ({
+          id: 'I1', priority: i + 1, path: '/title',
+          current: 'Hello', proposed: i === 0 ? 'Hello, judge!' : `V${i}`, alternatives: [], rationale: 'r',
+        })),
+        overall: { score: 90, verdict: 'minor_edits', summary: 's' },
+      });
+
+    const client = fakeJudgeClient([ISSUES_ROUND1, REVIEW_CONFIRM, recs(9), recs(7)]);
+    const results = await judgeFile({
+      client,
+      relFile,
+      ruJson: { title: 'Привет' },
+      perLang: { de: ['/title'] },
+      apply: true,
+      maxRounds: 1,
+      rootOverride: tmp,
+    });
+
+    // топ-1 по приоритету = proposed 'Hello, judge!' — вписан
+    expect(results[0].totalApplied).toBe(1);
+    const written = await readJsonOr<any>(targetPath, {});
+    expect(written.title).toBe('Hello, judge!');
+  });
+});
+
+describe('коллегия — ранний стоп по вердикту publish', () => {
+  test('verdict=publish, score≥95 с применённой правкой — локаль сошлась за один раунд', async () => {
+    tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'judge-stop-'));
+    const relFile = 's.json';
+    const targetPath = path.join(tmp, 'src', 'i18n', 'de', relFile);
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.writeFile(targetPath, JSON.stringify({ title: 'Hello' }));
+
+    const recPublish = JSON.stringify({
+      recommendations: [{ id: 'I1', priority: 1, path: '/title', current: 'Hello', proposed: 'Hello!', alternatives: [], rationale: 'r' }],
+      overall: { score: 96, verdict: 'publish', summary: 'после правки готово' },
+    });
+
+    const client = fakeJudgeClient([ISSUES_ROUND1, REVIEW_CONFIRM, recPublish]);
+    const results = await judgeFile({
+      client,
+      relFile,
+      ruJson: { title: 'Привет' },
+      perLang: { de: ['/title'] },
+      apply: true,
+      maxRounds: 3,
+      rootOverride: tmp,
+    });
+
+    expect(results[0].rounds).toHaveLength(1);
+    expect(results[0].converged).toBe(true);
+    expect(results[0].totalApplied).toBe(1);
+  });
+});
