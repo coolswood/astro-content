@@ -1,0 +1,685 @@
+{
+  "file": "story/depression/real_rebuff_self_help.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/real/title",
+                "verdict": "ok",
+                "note": "Переведено точно и естественно."
+              },
+              {
+                "path": "/real/description",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, терминология соблюдена."
+              },
+              {
+                "path": "/real/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно, кавычки правильные."
+              },
+              {
+                "path": "/real/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл сохранен, тон эмпатичный."
+              },
+              {
+                "path": "/real/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/real/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/real/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод цитаты выполнен хорошо."
+              },
+              {
+                "path": "/real/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/3",
+                "verdict": "issue",
+                "note": "Mistranslation: смысл 'добавляют смысла' заменен на 'помогают переработать опыт'."
+              },
+              {
+                "path": "/real/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/real/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/real/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/title",
+                "verdict": "ok",
+                "note": "Хорошая адаптация заголовка."
+              },
+              {
+                "path": "/rebuff/description",
+                "verdict": "ok",
+                "note": "Терминология (Gedankentagebuch, Denkfehler) соблюдена."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Тег сохранен."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Термин Denkfehler использован верно."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/10",
+                "verdict": "issue",
+                "note": "Стилистическая ошибка: повтор глагола 'entwickeln' (разработать... чтобы создать/развить)."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Термин Denkfehler использован верно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Термин Denkfehler использован верно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/11",
+                "verdict": "issue",
+                "note": "Смешение терминологии: в одном предложении используются и 'Verzerrungen', и 'Denkfehler' (в контексте искажений)."
+              },
+              {
+                "path": "/rebuff/screen_2/texts_12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, 'Schwarz-Weiß-Denken' — отличная адаптация дихотомии."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Термин 'destruktiven Überzeugungen' использован верно."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный тон сохранен."
+              },
+              {
+                "path": "/self_help/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие."
+              },
+              {
+                "path": "/self_help/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный, аббревиатура KVT верна."
+              },
+              {
+                "path": "/self_help/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/self_help/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, теги сохранены"
+              },
+              {
+                "path": "/self_help/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/7",
+                "verdict": "issue",
+                "note": "Стилистическая ошибка: 'Depressionsforscher' звучит неестественно для контекста исследователей в области депрессии"
+              },
+              {
+                "path": "/self_help/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Omission: потерян ID в теге instagram"
+              },
+              {
+                "path": "/self_help/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/self_help/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/real/screen_2/texts/3",
+                "fragment": "da sie uns helfen, das Erlebte zu verarbeiten und unserem Leben Sinn zu verleihen",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла: в оригинале сказано, что чувства 'делают нас более глубокими и добавляют смысла', а в переводе — 'помогают переработать опыт и придавать смысл'.",
+                "why": "Переводчик добавил психологическую интерпретацию ('das Erlebte zu verarbeiten'), которой нет в оригинале, и изменил субъект действия. Это меняет философский посыл фразы."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/rebuff/screen_1/texts/10",
+                "fragment": "Entwickeln Sie rationale Antworten, um eine realistischere und gesündere Einstellung zu sich selbst zu entwickeln",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Тавтология (лексический повтор)",
+                "why": "Использование глагола 'entwickeln' дважды в одном предложении (разработать... чтобы развить) звучит тяжеловесно и не по-немецки. Лучше заменить второе на 'schaffen' или 'aufbauen'."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/rebuff/screen_2/texts/11",
+                "fragment": "lassen sich mehrere Verzerrungen finden",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Несоответствие терминологии",
+                "why": "В предыдущих пунктах (текст 9, 10) для 'когнитивных искажений' использовался термин 'Denkfehler'. Здесь внезапно появляется 'Verzerrungen'. Хотя это синонимы, для интерфейса и обучающего материала важна единообразная терминология (consistency). Рекомендуется придерживаться 'Denkfehler' или 'kognitive Verzerrungen', но не смешивать их в рамках одного блока."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/self_help/screen_2/texts/7",
+                "fragment": "geschulten Depressionsforschern",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное словосочетание",
+                "why": "В немецком языке 'Depressionsforscher' (исследователь депрессии) звучит как узкая специализация на изучении самого феномена, в то время как в контексте клинического исследования речь идет о 'Forschern im Bereich der Depressionsforschung' или 'klinischen Forschern'. Текущий вариант звучит тяжеловесно."
+              },
+              {
+                "id": "c3-I2",
+                "path": "/self_help/screen_2/texts/8",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Потерян атрибут ID",
+                "why": "В оригинале содержится важный технический идентификатор <instagram ids=\"...\">, который необходим для корректной работы приложения. В переводе он удален."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Переводчик действительно добавил интерпретацию 'verarbeiten', которой нет в оригинале, что меняет оттенок фразы с экзистенциального на терапевтический."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Лексический повтор 'entwickeln... zu entwickeln' — типичная стилистическая ошибка."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Нарушение единообразия терминологии (Denkfehler vs Verzerrungen) критично для обучающего контента."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "rejected",
+                "note": "Это осознанная трансекреация. 'Depressionsforscher' — допустимое и лаконичное составное существительное в немецком, не являющееся ошибкой."
+              },
+              {
+                "id": "c3-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Техническая ошибка: потеря ID в теге может привести к поломке функционала приложения."
+              }
+            ],
+            "notes": "Перевод в целом качественный, но содержит критическую техническую ошибку (потеря ID) и ряд стилистических/терминологических недочетов, снижающих профессионализм текста.",
+            "recommendations": [
+              {
+                "id": "c3-I2",
+                "priority": 1,
+                "path": "/self_help/screen_2/texts/8",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18213594730288189\">",
+                "alternatives": [],
+                "rationale": "Критическая техническая ошибка: удаление атрибута ID в теге приведет к поломке функционала отображения контента в приложении."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/real/screen_2/texts/3",
+                "current": "Diese Gefühle sind natürlich, gerechtfertigt und sogar wertvoll, da sie uns helfen, das Erlebte zu verarbeiten und unserem Leben Sinn zu verleihen.",
+                "proposed": "Diese Gefühle sind natürlich, gerechtfertigt und sogar wertvoll, da sie uns tiefer werden lassen und unserem Leben Sinn verleihen.",
+                "alternatives": [
+                  "Diese Gefühle sind natürlich, gerechtfertigt und sogar wertvoll, da sie uns mehr Tiefe verleihen und unserem Leben Sinn geben."
+                ],
+                "rationale": "В оригинале акцент на экзистенциальном аспекте («делают нас более глубокими»), а не на терапевтическом процессе («помогают переработать опыт»). Нужно убрать лишнюю интерпретацию 'verarbeiten', чтобы сохранить авторский стиль."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 3,
+                "path": "/rebuff/screen_2/texts/11",
+                "current": "Und in dem Gedanken „Ich bin zu nichts fähig, deshalb werde ich exmatrikuliert und werde niemals Erfolg haben“ lassen sich mehrere Verzerrungen finden, wie etwa Übergeneralisierung und Katastrophisieren.",
+                "proposed": "Und in dem Gedanken „Ich bin zu nichts fähig, deshalb werde ich exmatrikuliert und werde niemals Erfolg haben“ lassen sich mehrere Denkfehler finden, wie etwa Übergeneralisierung und Katastrophisieren.",
+                "alternatives": [],
+                "rationale": "Для обеспечения консистентности терминологии в рамках одного раздела (где ранее использовался 'Denkfehler') следует использовать именно этот термин вместо 'Verzerrungen'."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 4,
+                "path": "/rebuff/screen_1/texts/10",
+                "current": "Entwickeln Sie rationale Antworten, um eine realistischere und gesündere Einstellung zu sich selbst zu entwickeln – und tun Sie dies regelmäßig.",
+                "proposed": "Entwickeln Sie rationale Antworten, um eine realistischere und gesündere Einstellung zu sich selbst zu schaffen – und tun Sie dies regelmäßig.",
+                "alternatives": [
+                  "Erarbeiten Sie rationale Antworten, um eine realistischere und gesündere Einstellung zu sich selbst aufzubauen – und tun Sie dies regelmäßig."
+                ],
+                "rationale": "Устранение тавтологии 'entwickeln... zu entwickeln'. Замена второго глагола на 'schaffen' или 'aufbauen' делает предложение естественным и приятным для чтения."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружена критическая техническая ошибка (потеря ID в теге Instagram), которая требует немедленного исправления. Также присутствуют смысловые искажения (добавление лишних терапевтических смыслов) и стилистические огрехи (тавтология и нарушение единообразия терминов). Требуется правка технических данных и корректировка текста для соответствия оригиналу и стандартам немецкого языка."
+            },
+            "timings": {
+              "issues": 128228,
+              "deliberate": 18599,
+              "recommend": 30219
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "-",
+              "path": "(файл)",
+              "reason": "валидация: теги — потеряны: <li> </li> (нет в: rebuff/screen_1/texts/10)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

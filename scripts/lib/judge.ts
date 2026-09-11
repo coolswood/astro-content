@@ -103,18 +103,64 @@ export async function judgeOnce(
       : ['audit_issues', 'audit_deliberate', 'audit_recommend'];
 
   const sysIssues = (await loadPrompt('qa', names[0], lc)).replace('{{GLOSSARY}}', glossaryText);
-  const payload = JSON.stringify({
-    sourceLocale: 'ru',
-    targetLocale: lang,
-    items,
-    ...(context && Object.keys(context).length > 0 ? { context } : {}),
-  });
-  const s1 = await stage(client, sysIssues, payload, 8192, (data) => {
+  const issuesValidate = (data: any) => {
     if (!Array.isArray(data.issues)) throw new Error('нет массива issues');
     if (!Array.isArray(data.scan)) throw new Error('нет массива scan (построчный разбор)');
-  });
-  const issues = asArray(s1.data.issues);
-  console.log(`   🔍 issues: ${issues.length} замечаний (${(s1.ms / 1000).toFixed(0)}с)`);
+  };
+
+  // Большие списки режем на чанки: на полном файле (100+ листьев) судья
+  // возвращает битый JSON («нет массива issues»), на ~40 листьях ответ
+  // стабилен. issues склеиваются, id получают префикс чанка (c2-I3), чтобы
+  // deliberate/recommend/apply ссылались на замечание однозначно. Провал
+  // части чанков не валит коллегию — покрытие станет частичным (с warning),
+  // полный провал — исключение, как раньше.
+  const ISSUES_CHUNK = 40;
+  const chunks: JudgeItem[][] = [];
+  for (let i = 0; i < items.length; i += ISSUES_CHUNK) chunks.push(items.slice(i, i + ISSUES_CHUNK));
+  const issues: any[] = [];
+  const scan: any[] = [];
+  let issuesMs = 0;
+  let failedChunks = 0;
+  for (let ci = 0; ci < chunks.length; ci++) {
+    const chunk = chunks[ci]!;
+    const prefix = chunks.length > 1 ? `c${ci + 1}-` : '';
+    try {
+      const s1 = await stage(
+        client,
+        sysIssues,
+        JSON.stringify({
+          sourceLocale: 'ru',
+          targetLocale: lang,
+          items: chunk,
+          ...(context && Object.keys(context).length > 0 ? { context } : {}),
+        }),
+        8192,
+        issuesValidate,
+      );
+      issuesMs += s1.ms;
+      issues.push(
+        ...asArray(s1.data.issues).map((iss, k) => ({
+          ...iss,
+          id: `${prefix}${String(iss?.id ?? `I${k + 1}`)}`,
+        })),
+      );
+      scan.push(...asArray(s1.data.scan));
+    } catch (e: any) {
+      failedChunks++;
+      console.warn(`   ⚠️ issues чанк ${ci + 1}/${chunks.length} не выполнен: ${e?.message ?? e}`);
+    }
+  }
+  if (failedChunks === chunks.length) {
+    throw new Error('стадия не выполнена: все чанки issues провалились');
+  }
+  if (failedChunks > 0) {
+    console.warn(
+      `   ⚠️ issues: судились не все чанки (${chunks.length - failedChunks}/${chunks.length}) — покрытие частичное`,
+    );
+  }
+  console.log(
+    `   🔍 issues: ${issues.length} замечаний (${(issuesMs / 1000).toFixed(0)}с, чанков ${chunks.length})`,
+  );
 
   const sysDelib = (await loadPrompt('qa', names[1], lc)).replace('{{GLOSSARY}}', glossaryText);
   const s2 = await stage(
@@ -150,13 +196,13 @@ export async function judgeOnce(
   );
 
   return {
-    scan: asArray(s1.data.scan),
+    scan,
     issues,
     reviewed,
     notes: String(s2.data.notes ?? ''),
     recommendations: asArray(s3.data.recommendations),
     overall: s3.data.overall,
-    timings: { issues: s1.ms, deliberate: s2.ms, recommend: s3.ms },
+    timings: { issues: issuesMs, deliberate: s2.ms, recommend: s3.ms },
   };
 }
 
@@ -175,9 +221,42 @@ export interface SkippedEdit {
 
 /**
  * Шаг корректировки: вписывает вердикт судьи в файл механически, без модели.
- * Защиты: отклонённые коллегией не применяются; путь обязан существовать;
- * текст в файле обязан совпадать с current; после применения — валидация.
+ * Адрес правки — путь листа (судья возвращает path из выровненного списка),
+ * цитата current/fragment — только диагностическая подсказка и сверяется
+ * НОРМАЛИЗОВАННО (кавычки/тире/пробелы) с порогом сходства: точное
+ * цитирование моделью не предполагается. Защиты: отклонённые коллегией
+ * не применяются; путь обязан существовать; цитата, не похожая на лист,
+ * откатывается (судья перепутал лист); после применения — валидация.
  */
+
+/** Нормализация цитаты: кавычки всех видов, тире, пробелы. */
+function normQuote(s: string): string {
+  return s
+    .replace(/[«»„“”"']/g, '"')
+    .replace(/[–—−]/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Сходство 0..1 по Левенштейну (листья короткие, O(n*m) приемлем). */
+function similarity(a: string, b: string): number {
+  if (a === b) return 1;
+  if (!a.length || !b.length) return 0;
+  let prev = new Array<number>(b.length + 1).fill(0).map((_, i) => i);
+  let cur = new Array<number>(b.length + 1).fill(0);
+  for (let i = 1; i <= a.length; i++) {
+    cur[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(
+        prev[j] + 1,
+        cur[j - 1] + 1,
+        prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1),
+      );
+    }
+    [prev, cur] = [cur, prev];
+  }
+  return 1 - prev[b.length] / Math.max(a.length, b.length);
+}
 export async function applyJudgeRecommendations(
   targetPath: string,
   lang: string,
@@ -221,10 +300,6 @@ export async function applyJudgeRecommendations(
       skipped.push({ id, path: p, reason: 'путь отсутствует в файле' });
       continue;
     }
-    if (rec.current != null && rec.current !== flat[p]) {
-      skipped.push({ id, path: p, reason: 'текст в файле не совпал с current из отчёта' });
-      continue;
-    }
     if (flat[p] === proposed) {
       skipped.push({ id, path: p, reason: 'правка уже применена' });
       continue;
@@ -232,6 +307,29 @@ export async function applyJudgeRecommendations(
     if (seenValuesByPath?.get(p)?.has(proposed)) {
       skipped.push({ id, path: p, reason: 'осцилляция: это значение у листа уже было' });
       continue;
+    }
+    const actual = String(flat[p]);
+    const quoted =
+      typeof rec.current === 'string'
+        ? rec.current
+        : typeof rec.fragment === 'string'
+          ? rec.fragment
+          : '';
+    if (quoted) {
+      const sim = similarity(normQuote(quoted), normQuote(actual));
+      if (sim < 0.5) {
+        skipped.push({
+          id,
+          path: p,
+          reason: `цитата судьи не похожа на лист (сходство ${Math.round(sim * 100)}%)`,
+        });
+        continue;
+      }
+      if (sim < 0.85) {
+        console.warn(
+          `   ⚠️ [apply] ${id} @ ${p}: цитата неточна (сходство ${Math.round(sim * 100)}%) — вписываю по пути`,
+        );
+      }
     }
     patch[p] = proposed;
     from[p] = flat[p];
@@ -241,10 +339,34 @@ export async function applyJudgeRecommendations(
 
   if (Object.keys(patch).length === 0) return { applied, skipped };
 
+  // Валидация ПЕР-ЛИСТОВАЯ, до слияния: провал одной правки (обычно судья
+  // потерял теги) скипает только её, остальные применяются. Раньше падение
+  // одного листа отменяло весь батч — 3 хорошие правки гибли из-за одной.
+  // Валидируем только исправляемые листья: файл в целом содержит и старые
+  // переводы, которых нет в sentLeaves (частичный доперевод), — сверка целого
+  // файла с подмножеством давала бы ложные «лишние ключи».
+  const goodPatch: Record<string, string> = {};
+  for (const p of Object.keys(patch)) {
+    const bare = p.replace(/^\//, '');
+    const leafIssues = validateTranslation(lang, { [bare]: sentLeaves[p] }, { [bare]: patch[p]! });
+    if (leafIssues.length > 0) {
+      for (const issue of leafIssues) {
+        skipped.push({
+          id: idsByPath[p] ?? '-',
+          path: p,
+          reason: `валидация листа: ${issue.message}`,
+        });
+      }
+      continue;
+    }
+    goodPatch[p] = patch[p]!;
+  }
+  if (Object.keys(goodPatch).length === 0) return { applied, skipped };
+
   // Пути у flattenLeaves с ведущим слэшем; mergeSubset принимает пути модели
   // (без него) — снимаем, иначе получится '//path' и патч промахнётся.
   const barePatch: Record<string, string> = {};
-  for (const p of Object.keys(patch)) barePatch[p.replace(/^\//, '')] = patch[p]!;
+  for (const p of Object.keys(goodPatch)) barePatch[p.replace(/^\//, '')] = goodPatch[p]!;
   mergeSubset(target, barePatch, 'judge-apply');
 
   // Конвенция <instagram>: вне ru/en тег обязан быть пустым — судья копирует
@@ -254,28 +376,9 @@ export async function applyJudgeRecommendations(
     console.warn(`   ⚠️ [judge-apply] срезаны атрибуты <instagram> в ${stripped} листах (${lang})`);
   }
 
-  // Валидируем ТОЛЬКО исправляемые листья: файл в целом содержит и старые
-  // переводы, которых нет в sentLeaves (частичный доперевод), — сверка целого
-  // файла с подмножеством давала бы ложные «лишние ключи» и отменяла правки.
-  // Ключи без ведущего слэша: flattenLeaves добавит свой, norm() снимет.
-  const issues: ValidationIssue[] = [];
-  for (const p of Object.keys(patch)) {
-    const bare = p.replace(/^\//, '');
-    issues.push(
-      ...validateTranslation(lang, { [bare]: sentLeaves[p] }, { [bare]: patch[p]! }),
-    );
-  }
-  if (issues.length > 0) {
-    for (const issue of issues) {
-      skipped.push({ id: '-', path: issue.path, reason: `валидация: ${issue.message}` });
-    }
-    console.warn(`   ❌ Корректировка отменена: валидация не прошла (${issues.length})`);
-    return { applied, skipped };
-  }
-
   await writeJsonAtomic(targetPath, target);
-  for (const p of Object.keys(patch)) {
-    applied.push({ id: idsByPath[p] ?? '', path: p, from: from[p]!, to: patch[p]! });
+  for (const p of Object.keys(goodPatch)) {
+    applied.push({ id: idsByPath[p] ?? '', path: p, from: from[p]!, to: goodPatch[p]! });
   }
   return { applied, skipped };
 }
