@@ -38,6 +38,12 @@ export interface StageRequest {
   jsonMode?: boolean;
   /** Перекрывает requestPriority клиента для этого запроса (0 = поле не слать). */
   priority?: number;
+  /**
+   * vLLM: рассуждающий режим модели (chat_template_kwargs.enable_thinking).
+   * Размышления приходят в message.reasoning, content остаётся чистым;
+   * maxTokens увеличивается, т.к. reasoning расходует токены генерации.
+   */
+  thinking?: boolean;
 }
 
 export interface StageClient {
@@ -133,9 +139,10 @@ export class VllmClient implements StageClient {
         { role: 'user', content: req.user },
       ],
       temperature: req.temperature ?? 0.3,
-      max_tokens: req.maxTokens ?? 16_384,
+      max_tokens: req.thinking ? (req.maxTokens ?? 16_384) + 8_192 : (req.maxTokens ?? 16_384),
     };
     if (req.jsonMode) body.response_format = { type: 'json_object' };
+    if (req.thinking) body.chat_template_kwargs = { enable_thinking: true };
     const priority = req.priority ?? this.requestPriority;
     if (priority !== 0) body.priority = priority;
 
