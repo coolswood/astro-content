@@ -23,8 +23,8 @@
  *                             audit --apply циклом до раунда без правок, не более --judge-rounds)
  *   --judge-rounds N          максимум раундов коллегии (по умолчанию 3)
  *   --chunk-leaves N          размер чанка перевода в листьях (по умолчанию 40)
- *   --main-path-map           MAIN отвечает плоской картой «путь → перевод»
- *                             вместо дерева (эксперимент против дефекта-сдвига)
+ *   --no-main-path-map        вернуть документный формат ответа MAIN
+ *                             (по умолчанию — плоская карта «путь → перевод»)
  *   --ui-batch N              ключей ARB в одной партии перевода UI (по умолчанию 5)
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *
@@ -194,7 +194,11 @@ function parseArgs(): Args {
     judge: !parseBoolFlag(flags['no-judge'], false),
     judgeRounds: parseIntFlag(flags['judge-rounds']) ?? 3,
     chunkLeaves: parseIntFlag(flags['chunk-leaves']),
-    mainPathMap: parseBoolFlag(flags['main-path-map'], false),
+    // Path-map — формат main по умолчанию (de-батч: 14:2 стабильных побед
+    // слепого судьи, ноль потерь листьев). --no-main-path-map возвращает
+    // документный формат; see AI_INSTRUCTIONS — известное ограничение:
+    // монотонно-повторяющиеся секции могут зациклить генерацию.
+    mainPathMap: parseBoolFlag(flags['main-path-map'], !parseBoolFlag(flags['no-main-path-map'], false)),
     uiBatch: parseIntFlag(flags['ui-batch']) ?? 5,
   };
 }
