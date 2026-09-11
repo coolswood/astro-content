@@ -19,6 +19,9 @@
  *   --provider vllm|chatgpt|claude|gemini|mistral   (по умолчанию vllm; остальные — legacy CDP)
  *   --concurrency N           одновременных запросов к модели (по умолчанию 3)
  *   --priority N              приоритет в очереди vLLM: больше = позже (по умолчанию 10)
+ *   --no-judge                отключить коллегию после перевода (по умолчанию включена:
+ *                             audit --apply циклом до раунда без правок, не более --judge-rounds)
+ *   --judge-rounds N          максимум раундов коллегии (по умолчанию 3)
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *
  * Требует поднятого туннеля к vLLM (для провайдера vllm):
@@ -43,6 +46,7 @@ import {
 import { TranslationState, type ScopeState } from './lib/state.js';
 import { analyzeTree, keysToTranslate, type Analysis } from './lib/analyze.js';
 import { validateTranslation, type ValidationIssue } from './lib/validation.js';
+import { judgeFile } from './lib/judge.js';
 import {
   flattenLeaves,
   buildSubtree,
@@ -115,6 +119,8 @@ interface Args {
   psyDir?: string;
   concurrency?: number;
   priority?: number;
+  judge: boolean;
+  judgeRounds: number;
 }
 
 function parseBoolFlag(raw: string | undefined, defaultValue: boolean): boolean {
@@ -175,6 +181,8 @@ function parseArgs(): Args {
     psyDir: flags['psy-dir'],
     concurrency: parseIntFlag(flags.concurrency),
     priority: parseIntFlag(flags.priority),
+    judge: !parseBoolFlag(flags['no-judge'], false),
+    judgeRounds: parseIntFlag(flags['judge-rounds']) ?? 3,
   };
 }
 
@@ -432,6 +440,8 @@ async function runContent(ctx: RunCtx): Promise<number> {
 
   let failures = 0;
   let cursor = 0;
+  /** Переведённые листья по файлам и локалям — для коллегии после перевода. */
+  const judgeTargets: Record<string, Record<string, string[]>> = {};
   const worker = async (): Promise<void> => {
     while (cursor < tasks.length) {
       const { item, lang, todo } = tasks[cursor++]!;
@@ -457,9 +467,35 @@ async function runContent(ctx: RunCtx): Promise<number> {
       ctx.state.markTranslated(item.scope, sentLeaves);
       await ctx.state.save();
       console.log(`   💾 Записано ${Object.keys(translated).length} ключей → ${path.relative(ROOT, targetPath)}`);
+      (judgeTargets[item.relPath] ??= {})[lang] = todo;
     }
   };
   await Promise.all(Array.from({ length: Math.min(ctx.concurrency, tasks.length) }, worker));
+
+  // Коллегия: судим только что переведённые листья, правки вписываются циклом
+  // до раунда без правок («критикуй отдельно, правь отдельно» поверх конвейера).
+  if (ctx.args.judge) {
+    for (const [relPath, perLang] of Object.entries(judgeTargets)) {
+      const ruJson = items.find((i) => i.relPath === relPath)?.ruJson;
+      if (!ruJson) continue;
+      const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+      const results = await judgeFile({
+        client: ctx.client,
+        relFile: relPath,
+        ruJson,
+        perLang,
+        apply: true,
+        maxRounds: ctx.args.judgeRounds,
+        reportDir: path.join('scripts', 'qa', 'reports', `${stamp}-judge-${relPath.replace(/[/.]/g, '-').replace(/^-|-$/g, '')}`),
+      });
+      const fixed = results.reduce((n, r) => n + r.totalApplied, 0);
+      const notConverged = results.filter((r) => !r.converged).map((r) => r.lang);
+      console.log(
+        `\n⚖️ Коллегия по ${relPath}: правок ${fixed}` +
+          (notConverged.length > 0 ? `; НЕ сошлись локали: ${notConverged.join(', ')}` : '; сошлось'),
+      );
+    }
+  }
   return failures;
 }
 
