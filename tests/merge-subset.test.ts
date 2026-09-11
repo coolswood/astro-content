@@ -71,3 +71,69 @@ describe('mergeSubset — полный документ/дифф поверх ф
     expect(mergeSubset(base, ['x'], 'test')).toEqual({ a: '1' });
   });
 });
+
+/**
+ * Пер-листовой guard правок стадий (editor/fix/tech): ломкая правка одного
+ * листа отбрасывается по одной — остальной патч применяется как есть.
+ */
+import { stageEditRejections } from '../scripts/lib/pipeline.js';
+
+describe('stageEditRejections — причины отбраковки правки листа', () => {
+  test('потеря тега — отбраковка', () => {
+    const r = stageEditRejections('<important>Будьте внимательны к себе.</important>', 'Будьте внимательны к себе.');
+    expect(r.some((x) => x.includes('тег'))).toBe(true);
+  });
+
+  test('потеря плейсхолдера — отбраковка', () => {
+    const r = stageEditRejections('Привет, {name}! Как дела?', 'Привет! Как дела?');
+    expect(r.some((x) => x.includes('плейсхолдер'))).toBe(true);
+  });
+
+  test('схлопывание текста — отбраковка', () => {
+    const draft = 'Длинное предложение о том, как важно заботиться о себе каждый день и не забывать отдыхать.';
+    const r = stageEditRejections(draft, 'Заботьтесь.');
+    expect(r.some((x) => x.includes('схлопнулся'))).toBe(true);
+  });
+
+  test('тотальная подмена — отбраковка', () => {
+    const draft = 'Perfektionismus ist die Angst in eleganten Schuhen, die vorgibt, stilvoll zu sein.';
+    const r = stageEditRejections(draft, '完全に異なる内容がここに入ってしまいました。');
+    expect(r.some((x) => x.includes('подмена'))).toBe(true);
+  });
+
+  test('задвоение слова/слогов — отбраковка', () => {
+    expect(stageEditRejections('Das gilt weiterhin.', 'Das gilt gilt weiterhin.').some((x) => x.includes('задвоение'))).toBe(true);
+    expect(stageEditRejections('思考や心を覆い尽くすような', '思考や心を覆い覆い尽くすような').some((x) => x.includes('задвоение'))).toBe(true);
+  });
+
+  test('легитимная полировка проходит', () => {
+    expect(stageEditRejections('Betrachten wir als Beispiel Eugen.', 'Nehmen wir Eugen als Beispiel.')).toEqual([]);
+  });
+
+  test('ударное удвоение без запятой («ganz ganz») отвергается — осознанный компромисс: guard консервативен, теряется правка, а не портится текст', () => {
+    expect(stageEditRejections('ganz, ganz wichtig', 'ganz ganz wichtig').some((x) => x.includes('задвоение'))).toBe(true);
+  });
+
+  test('правка без изменений и короткие листы без признаков — null', () => {
+    expect(stageEditRejections('gleich', 'gleich')).toEqual([]);
+    expect(stageEditRejections('ok', 'Gut')).toEqual([]);
+  });
+});
+
+describe('mergeSubset с reject — сломанная правка не отменяет остальные', () => {
+  const rejectTagLoss = (draft: string, patch: string) =>
+    (draft.match(/<li>/g) ?? []).length > (patch.match(/<li>/g) ?? []).length ? ['потерян тег <li>'] : null;
+
+  test('ломкий лист остаётся на значении базы, соседние применяются', () => {
+    const base = { texts: ['<li>eins</li>', '<li>zwei</li>', '<li>drei</li>'] };
+    const out = mergeSubset(
+      base,
+      { texts: ['<li>EINS</li>', 'zwei ohne tag', '<li>DREI</li>'] } as any,
+      'test',
+      rejectTagLoss,
+    );
+    expect(out.texts[0]).toBe('<li>EINS</li>');
+    expect(out.texts[1]).toBe('<li>zwei</li>');
+    expect(out.texts[2]).toBe('<li>DREI</li>');
+  });
+});

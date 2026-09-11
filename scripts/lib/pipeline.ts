@@ -333,14 +333,106 @@ function setScalar(root: any, p: string, value: any): void {
 
 /**
  * EDITOR/FIX/TECH по контракту возвращают ПОЛНЫЙ документ (свободное
- * переписывание текста без выбора «какие правки главные»), но мердж умеет
+/** Сходство 0..1 по Левенштейну (копия judge.ts; локально — чтобы не творить цикл импортов). */
+function similarity(a: string, b: string): number {
+  if (a === b) return 1;
+  if (!a.length || !b.length) return 0;
+  let prev = new Array<number>(b.length + 1).fill(0).map((_, i) => i);
+  let cur = new Array<number>(b.length + 1).fill(0);
+  for (let i = 1; i <= a.length; i++) {
+    cur[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(
+        prev[j] + 1,
+        cur[j - 1] + 1,
+        prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1),
+      );
+    }
+    [prev, cur] = [cur, prev];
+  }
+  return 1 - prev[b.length] / Math.max(a.length, b.length);
+}
+
+/** Пул тегов листа: имя тега → количество. */
+function tagMultiset(s: string): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const tag of s.match(/<\/?([a-z][a-z0-9_]*)[^>]*>/g) ?? []) {
+    const name = (tag.match(/^<\/?([a-z][a-z0-9_]*)/) ?? [])[1] ?? tag;
+    m.set(name, (m.get(name) ?? 0) + 1);
+  }
+  return m;
+}
+
+/** Пул плейсхолдеров {…} листа: подстановка → количество. */
+function placeholderMultiset(s: string): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const ph of s.match(/\{[^{}]+\}/g) ?? []) {
+    m.set(ph, (m.get(ph) ?? 0) + 1);
+  }
+  return m;
+}
+
+/** Соседний повтор слова («als als») или двух иероглифов CJK («覆い覆い»).
+ *  CJK-повторы в японском бывают легитимны (しばしば、ますます) — правило
+ *  сознательно консервативно: теряется правка, вводящая повтор, а не текст. */
+function hasAdjacentDoubling(s: string): boolean {
+  if (/([\u3040-\u30ff\u4e00-\u9fff]{2})\1/u.test(s)) return true;
+  return /\b(\p{L}+)\s+\1\b/iu.test(s);
+}
+
+/** Порог схлопывания правки: короче 35% базы при базе ≥60 символов. */
+const COLLAPSE_RATIO = 0.35;
+/** Порог тотальной подмены: сходство с базой ниже 30% — не полировка, а замена. */
+const SUBSTITUTION_SIMILARITY = 0.3;
+
+/**
+ * Пер-листовая проверка правки стадии: причина отбраковки или null, если
+ * правка допустима. Ломкая правка бракуется по одной — остальной патч
+ * применяется как есть (тот же принцип, что у judge-apply).
+ */
+export function stageEditRejections(draft: string, patch: string): string[] {
+  const reasons: string[] = [];
+  const dt = tagMultiset(draft);
+  const pt = tagMultiset(patch);
+  for (const [tag, n] of dt) {
+    if ((pt.get(tag) ?? 0) < n) reasons.push(`потерян тег <${tag}>`);
+  }
+  const dp = placeholderMultiset(draft);
+  const pp = placeholderMultiset(patch);
+  for (const [ph, n] of dp) {
+    if ((pp.get(ph) ?? 0) < n) reasons.push(`потерян плейсхолдер ${ph}`);
+  }
+  if (draft.length >= 60) {
+    if (patch.length < draft.length * COLLAPSE_RATIO) {
+      reasons.push(`текст схлопнулся (${patch.length}/${draft.length} симв.)`);
+    }
+    if (similarity(draft, patch) < SUBSTITUTION_SIMILARITY) {
+      reasons.push(`тотальная подмена (сходство ${Math.round(similarity(draft, patch) * 100)}%)`);
+    }
+  }
+  if (!hasAdjacentDoubling(draft) && hasAdjacentDoubling(patch)) {
+    reasons.push('задвоение слова/слогов');
+  }
+  return reasons;
+}
+
+/**
+ * Мердж ответа стадии поверх базы. Ответ может быть как полным документом
+ * («полировка»), так и дифф-патчем («только изменённые ключи»), но мердж умеет
  * и дифф-патч. Ответ применяется поверх base только по СУЩЕСТВУЮЩИМ путям
  * и только строковыми непустыми значениями: структура и длины массивов
  * фиксируются базой — элементы не могут добавиться или переставиться.
  * Содержательные подмены текста внутри позиций (дефект «крючков») ловит
  * валидация дублей в раннере с ретраем языка; финальный контроль — QA-судья.
+ * Опциональный reject — пер-листовой guard правок: непустая строка причин —
+ * правка листа отбрасывается (остаётся значение базы), остальные применяются.
  */
-export function mergeSubset<T>(base: T, subset: unknown, stage = 'patch'): T {
+export function mergeSubset<T>(
+  base: T,
+  subset: unknown,
+  stage = 'patch',
+  reject?: (draft: string, patch: string) => string[] | null,
+): T {
   if (!subset || typeof subset !== 'object' || Array.isArray(subset)) {
     console.warn(`⚠️ [${stage}] ответ не является JSON-объектом — применено 0 правок`);
     return base;
@@ -355,13 +447,26 @@ export function mergeSubset<T>(base: T, subset: unknown, stage = 'patch'): T {
   const total = Object.keys(flatBase).length;
   const patchSet = new Set(Object.keys(patch));
   let changed = 0;
+  let rejectedCount = 0;
   for (const k of Object.keys(patch)) {
     const v = patch[k];
     if (!(k in flatBase) || typeof v !== 'string' || !v.trim()) continue;
-    if (flatBase[k] !== v) {
+    const draftValue = flatBase[k];
+    if (draftValue !== v) {
+      if (reject && typeof draftValue === 'string') {
+        const reasons = reject(draftValue, v);
+        if (reasons && reasons.length > 0) {
+          rejectedCount++;
+          console.warn(`⚠️ [${stage}] правка отброшена: ${k} (${reasons.join('; ')})`);
+          continue;
+        }
+      }
       changed++;
       setScalar(base, k, v);
     }
+  }
+  if (rejectedCount > 0) {
+    console.warn(`⚠️ [${stage}] guard: отброшено правок ${rejectedCount}/${changed + rejectedCount}`);
   }
   if (changed === 0) {
     console.warn(`⚠️ [${stage}] применено 0 правок (ответ не пересёкся с документом или правок нет)`);
@@ -580,7 +685,7 @@ async function runStagesOnce(
     (text) => parseStageObject('editor', text),
   );
   timings.editor = Date.now() - t;
-  if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor');
+  if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor', stageEditRejections);
   o.capture?.('editor', structuredClone(draft));
 
   // Стадии 3–4 (text): REVIEW — смысловая сверка с оригиналом; FIX — правка
@@ -627,7 +732,7 @@ async function runStagesOnce(
         (text) => parseStageObject('fix', text),
       );
       timings.fix = Date.now() - t;
-      if (fixPatch) draft = mergeSubset(draft, fixPatch, 'fix');
+      if (fixPatch) draft = mergeSubset(draft, fixPatch, 'fix', stageEditRejections);
       o.capture?.('fix', structuredClone(draft));
     }
   } else if (prompts.tech) {
@@ -647,7 +752,7 @@ async function runStagesOnce(
       (text) => parseStageObject('tech', text),
     );
     timings.tech = Date.now() - t;
-    if (techPatch) draft = mergeSubset(draft, techPatch, 'tech');
+    if (techPatch) draft = mergeSubset(draft, techPatch, 'tech', stageEditRejections);
   }
 
   return { draft, timings };
@@ -663,6 +768,8 @@ export async function runPipeline(
     sourceLocale?: string;
     jsonModeMain?: boolean;
     stageAttempts?: number;
+    /** Размер чанка в листьях (по умолчанию TRANSLATE_CHUNK_LEAVES). */
+    chunkLeaves?: number;
     /** Наблюдатель стадий: draft после main/editor/fix, {issues, raw} после review. Не влияет на конвейер. */
     capture?: (stage: CaptureStage, snapshot: any) => void;
     /** Принятые переводы соседних ключей (keys/ui): образец стиля и запрет дублей. */
@@ -672,7 +779,7 @@ export async function runPipeline(
   const sourceLocale = opts.sourceLocale ?? 'ru';
   const stageAttempts = opts.stageAttempts ?? DEFAULT_STAGE_ATTEMPTS;
   const ruFlat = flattenAll(payload);
-  const chunks = chunkPayload(payload, TRANSLATE_CHUNK_LEAVES);
+  const chunks = chunkPayload(payload, opts.chunkLeaves ?? TRANSLATE_CHUNK_LEAVES);
   if (chunks.length > 1) {
     console.log(`📦 [chunks] payload → ${chunks.length} чанков ≤${TRANSLATE_CHUNK_LEAVES} листьев`);
   }
