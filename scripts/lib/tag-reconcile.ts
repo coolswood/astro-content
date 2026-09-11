@@ -159,7 +159,7 @@ export function normalizeTagQuotes(data: any): number {
   let changed = 0;
   const walk = (node: any): any => {
     if (typeof node === 'string') {
-      const next = node.replace(/(<[a-zA-Z][^\s<>]*\s+[\w-]+=)'([^']*)'/g, '$1="$2"');
+      const next = node.replace(/(<[a-zA-Z][^\s<>]*\s+[\w-]+=)'([^']*)'/g, '$1"$2"');
       if (next !== node) changed++;
       return next;
     }
