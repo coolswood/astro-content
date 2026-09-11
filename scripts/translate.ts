@@ -248,6 +248,7 @@ async function translateWithRetries(
   kind: 'text' | 'keys',
   payload: any,
   sentLeaves: Leaves,
+  context?: Record<string, string>,
 ): Promise<Leaves | null> {
   const prompts = await buildStagePrompts(kind, lang.toLowerCase(), {
     glossaryPath: path.join(ROOT, 'scripts', 'prompts', lang.toLowerCase(), 'glossary.json'),
@@ -263,6 +264,7 @@ async function translateWithRetries(
       const { data, timings } = await runPipeline(ctx.client, prompts, payload, lang, {
         sourceLocale: ctx.cfg.sourceLocale,
         jsonModeMain: attempt > 1, // битый JSON → пробуем json_object
+        context,
       });
 
       // keys-режим: ответ {lang: {key: val}} — снимаем обёртку.
@@ -517,6 +519,34 @@ function arbFilePath(psyDir: string, lang: string): string {
   return path.join(psyDir, 'lib', 'l10n', `app_${lang}.arb`);
 }
 
+/**
+ * Окно принятых переводов для контекста: до limit ключей, ближайших к партии
+ * в каноническом порядке (соседние эмоции/категории попадают в окно).
+ */
+function uiContextWindow(
+  realKeys: string[],
+  batch: string[],
+  target: Record<string, any>,
+  limit = 50,
+): Record<string, string> {
+  const context: Record<string, string> = {};
+  const batchSet = new Set(batch);
+  const idxs = batch.map((k) => realKeys.indexOf(k)).filter((i) => i >= 0);
+  if (idxs.length === 0) return context;
+  const lo = Math.min(...idxs);
+  const hi = Math.max(...idxs);
+  for (let d = 0; Object.keys(context).length < limit && (lo - d >= 0 || hi + d < realKeys.length); d++) {
+    for (const i of [lo - d, hi + d]) {
+      if (i < 0 || i >= realKeys.length) continue;
+      const k = realKeys[i];
+      if (batchSet.has(k) || k in context) continue;
+      const v = target[k];
+      if (typeof v === 'string' && v.trim()) context[k] = v;
+    }
+  }
+  return context;
+}
+
 interface ArbCanon {
   realKeys: string[];
   values: Record<string, string>;
@@ -636,12 +666,22 @@ async function runUi(ctx: RunCtx): Promise<number> {
           (batches.length > 1 ? ` (${batches.length} партий по ≤${ctx.args.uiBatch})` : ''),
       );
 
+      // Целевой ARB читается один раз на язык: по нему строится контекст
+      // принятых переводов и в него вписываются партии.
+      const targetPath = arbFilePath(psyDir, lang);
+      const target = await readArbTarget(psyDir, lang);
+      if (!('@@locale' in target)) target['@@locale'] = lang;
+
       const sentAll: Leaves = {};
       let written = 0;
       let batchNo = 0;
       for (const batch of batches) {
         batchNo++;
         if (batches.length > 1) console.log(`   📦 партия ${batchNo}/${batches.length}: ${batch.length} ключей`);
+
+        // Контекст принятых переводов: до 50 ключей, ближайших к партии в
+        // каноническом порядке (соседние эмоции/категории попадают в окно).
+        const context = uiContextWindow(canon.realKeys, batch, target);
 
         // Источник: ключи партии + @-мета как контекст (как в translate-arb).
         const payload: Record<string, any> = {};
@@ -653,16 +693,13 @@ async function runUi(ctx: RunCtx): Promise<number> {
         const sentLeaves: Leaves = {};
         for (const key of batch) sentLeaves[key] = canon.values[key];
 
-        const translated = await translateWithRetries(ctx, lang, 'keys', payload, sentLeaves);
+        const translated = await translateWithRetries(ctx, lang, 'keys', payload, sentLeaves, context);
         if (!translated) {
           failures++;
           continue;
         }
 
-        // Запись в ARB: канонический порядок, @@locale сохраняем/создаём,
-        // @-мета переносится только с placeholders (конвенция cognitive_psy).
-        const target = await readArbTarget(psyDir, lang);
-        if (!('@@locale' in target)) target['@@locale'] = lang;
+        // Запись в ARB: @-мета переносится только с placeholders (конвенция cognitive_psy).
         for (const key of batch) {
           const value = translated[key];
           if (typeof value !== 'string') continue;
@@ -673,14 +710,14 @@ async function runUi(ctx: RunCtx): Promise<number> {
             target[`@${key}`] = { placeholders: meta.placeholders };
           }
         }
-        await writeJsonAtomic(arbFilePath(psyDir, lang), target);
+        await writeJsonAtomic(targetPath, target);
         Object.assign(sentAll, sentLeaves);
       }
 
       if (Object.keys(sentAll).length > 0) {
         ctx.state.markTranslated(scope, sentAll);
         await ctx.state.save();
-        console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, arbFilePath(psyDir, lang))}`);
+        console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, targetPath)}`);
         judgeTargets[lang] = Object.keys(sentAll).map((k) => `/${k}`);
       }
     }
@@ -689,8 +726,18 @@ async function runUi(ctx: RunCtx): Promise<number> {
 
   // Коллегия для ключей: судит переведённые ключи (партии не нужны — строки
   // короткие), правки вписываются по-ключу, цикл до раунда без правок.
+  // Контекст принятых переводов — судья проверяет уникальность и стиль.
   if (ctx.args.judge && Object.keys(judgeTargets).length > 0) {
     const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+    const contextByLang: Record<string, Record<string, string>> = {};
+    for (const [lang, keys] of Object.entries(judgeTargets)) {
+      const target = await readArbTarget(psyDir, lang);
+      contextByLang[lang] = uiContextWindow(
+        canon.realKeys,
+        keys.map((k) => k.replace(/^\//, '')),
+        target,
+      );
+    }
     const results = await judgeFile({
       client: ctx.client,
       relFile: 'ui/cognitive_psy app_*.arb',
@@ -701,6 +748,7 @@ async function runUi(ctx: RunCtx): Promise<number> {
       kind: 'ui',
       ruMeta: canon.meta,
       getFileForLang: (l) => arbFilePath(psyDir, l),
+      contextByLang,
       reportDir: path.join('scripts', 'qa', 'reports', `${stamp}-judge-ui`),
     });
     const fixed = results.reduce((n, r) => n + r.totalApplied, 0);

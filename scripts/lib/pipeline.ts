@@ -449,11 +449,14 @@ export async function runPipeline(
     stageAttempts?: number;
     /** Наблюдатель стадий: draft после main/editor/fix, {issues, raw} после review. Не влияет на конвейер. */
     capture?: (stage: CaptureStage, snapshot: any) => void;
+    /** Принятые переводы соседних ключей (keys/ui): образец стиля и запрет дублей. */
+    context?: Record<string, string>;
   } = {},
 ): Promise<PipelineResult> {
   const sourceLocale = opts.sourceLocale ?? 'ru';
   const stageAttempts = opts.stageAttempts ?? DEFAULT_STAGE_ATTEMPTS;
-  const wrapped = { sourceLocale, targetLocale, data: payload };
+  const wrapped: Record<string, unknown> = { sourceLocale, targetLocale, data: payload };
+  if (opts.context && Object.keys(opts.context).length > 0) wrapped.context = opts.context;
   const payloadText = JSON.stringify(wrapped);
   const timings: PipelineResult['timings'] = { main: 0, editor: 0 };
 

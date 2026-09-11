@@ -91,6 +91,7 @@ export async function judgeOnce(
   items: JudgeItem[],
   glossaryPath?: string,
   kind: 'text' | 'ui' = 'text',
+  context?: Record<string, string>,
 ): Promise<JudgeVerdict> {
   const lc = lang.toLowerCase();
   const glossaryText = glossaryPath
@@ -102,7 +103,12 @@ export async function judgeOnce(
       : ['audit_issues', 'audit_deliberate', 'audit_recommend'];
 
   const sysIssues = (await loadPrompt('qa', names[0], lc)).replace('{{GLOSSARY}}', glossaryText);
-  const payload = JSON.stringify({ sourceLocale: 'ru', targetLocale: lang, items });
+  const payload = JSON.stringify({
+    sourceLocale: 'ru',
+    targetLocale: lang,
+    items,
+    ...(context && Object.keys(context).length > 0 ? { context } : {}),
+  });
   const s1 = await stage(client, sysIssues, payload, 8192, (data) => {
     if (!Array.isArray(data.issues)) throw new Error('нет массива issues');
     if (!Array.isArray(data.scan)) throw new Error('нет массива scan (построчный разбор)');
@@ -311,6 +317,8 @@ export interface JudgeFileOptions {
   ruMeta?: Record<string, any>;
   /** Где лежит перевод локали (по умолчанию src/i18n/<lc>/<relFile>). */
   getFileForLang?: (lang: string) => string;
+  /** Принятые переводы соседних ключей по локалям: судья проверяет уникальность и стиль. */
+  contextByLang?: Record<string, Record<string, string>>;
 }
 
 /**
@@ -369,6 +377,7 @@ export async function judgeFile(opts: JudgeFileOptions): Promise<JudgeLangResult
             ? path.join(opts.glossaryDir, lc, 'glossary.json')
             : path.join(ROOT, 'scripts', 'prompts', lc, 'glossary.json'),
           opts.kind ?? 'text',
+          opts.contextByLang?.[lang],
         );
         let applied: AppliedEdit[] = [];
         let skipped: SkippedEdit[] = [];
