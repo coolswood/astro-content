@@ -30,7 +30,7 @@
 **Психологические термины**:
 - `Автоматическая мысль` → `Automatischer Gedanke` (корректно)
 - `Промежуточное убеждение` → `Zwischenüberzeugung` (добавлять "(правило)" как в русском)
-- `Глубинное убеждение` → `Tief verwurzelte Überzeugung` (корректно)
+- `Глубинное убеждение` → `Grundüberzeugung` (по глоссарию; разговорное `tief verwurzelte Überzeugung` не использовать)
 - `Когнитивное искажение` → `Kognitive Verzerrung` (корректно)
 - `Катастрофизация` → `Katastrophisieren` (корректно)
 
@@ -48,6 +48,52 @@
 **Неестественные конструкции**:
 - Вместо `"Das ist sinnlos"`
 - Использовать `"Das macht keinen Sinn"` или `"Das ist zwecklos"`
+
+#### 2.4. Анти-кальки: конструкции, которые выдают перевод (ОБЯЗАТЕЛЬНО)
+
+Главный критерий: **«так написал бы носитель?»** Конструкция может быть
+грамматически безупречной и всё равно калькой. Если предложение дословно
+переводится обратно в русский синтаксис — перестроить. Ниже — типовые
+классы для пары русский → немецкий:
+
+**1. Номинализации → глагольные конструкции.**
+Русское «попытка/возможность/необходимость/желание + инфинитив» не переносить
+в немецкую номинальную цепочку:
+- ❌ `Den Versuch, einen Menschen zu beschreiben, kann man mit dem Versuch vergleichen, einen Film zu erklären`
+- ✅ `Einen Menschen auf ein Etikett zu reduzieren, ist, als wollte man einen Film mit einem Standbild beschreiben`
+- ❌ `Die Möglichkeit, X zu tun, fehlt` → ✅ `Man kann X nicht tun` / `Es bleibt kein Raum, X zu tun`
+
+**2. Безличный es-падеж вместо «бывает сложно/легко/важно».**
+- ❌ `Es kann besonders schwierig sein, überhaupt etwas zu beginnen`
+- ✅ `Während einer Depression fällt es besonders schwer, überhaupt etwas zu beginnen`
+
+**3. Метафора «рождения» желания/мысли → процесс или состояние.**
+- ❌ `und der Wunsch entsteht, einfach nichts zu tun`
+- ✅ `und der Wunsch, einfach nichts zu tun, wächst` / `man will nur noch nichts tun`
+- Мотивация/желание в разговорном контексте: `Lust haben / keine Lust haben`
+  естественнее книжного `der Wunsch fehlt`.
+
+**4. Артикль при названиях болезней в прозе.**
+- ❌ `Bei Depression passiert etwas Ähnliches`
+- ✅ `Bei einer Depression passiert etwas Ähnliches` / `Bei Depressionen geschieht etwas Ähnliches`
+  (голый `Bei Depression` допустим только в собственно медицинской терминологии).
+
+**5. Гендерные пары через «bzw.» в прозе статей — избегать.**
+`Psychologin bzw. Psychologe`, `Verteidigerin bzw. Verteidiger` утяжеляют ритм.
+Перестраивать фразу без пары:
+- ❌ `Eine Psychologin bzw. ein Psychologe schlägt eine Übung vor`
+- ✅ `In der Therapie könnte die folgende Übung so aussehen:`
+
+**6. Семантические кальки устойчивых глаголов.**
+Не подменять немецкий идиомой с другим значением ради красивого звучания:
+- ❌ `Zu den Fakten zu stehen` (= «признавать свою вину/стоять за факты»)
+  для русского «замечать факты» → ✅ `Fakten wahrnehmen`
+
+**7. Порядок «тема → рема» и ритм.**
+Русское «Каждая задача кажется слишком сложной» не требует зеркального
+`Jede Aufgabe scheint zu komplex`; часто естественнее обобщение:
+`Alles wirkt zu schwierig`. Читать фразу вслух: если ритм «спотыкается» —
+перестроить.
 
 ### 3. Специфические правила перевода для разных типов контента
 
@@ -92,7 +138,7 @@
 |---|---|---|
 | Автоматическая мысль | Automatischer Gedanke | |
 | Промежуточное убеждение | Zwischenüberzeugung (Regel) | Добавлять "(Regel)" |
-| Глубинное убеждение | Tief verwurzelte Überzeugung | |
+| Глубинное убеждение | Grundüberzeugung | По глоссарию; не "tief verwurzelte Überzeugung" |
 | Когнитивная терапия | Kognitive Therapie | |
 | Поведенческая терапия | Verhaltenstherapie | |
 | КПТ (когнитивно-поведенческая терапия) | KVT (Kognitive Verhaltenstherapie) | Использовать аббревиатуру |
