@@ -1,8 +1,9 @@
 #!/usr/bin/env bun
 /**
- * Аудит перевода: 3-стадийный судейский конвейер.
+ * Аудит перевода: 3-стадийный судейский конвейер + шаг корректировки.
  *
  *   bun scripts/qa/audit.ts breathing.json --key balance --langs de,ar
+ *   bun scripts/qa/audit.ts breathing.json --key balance --langs de,ar --apply
  *   bun scripts/qa/audit.ts story/start.json --langs de --label после-правок
  *
  * Стадии (каждая — отдельный запрос с json-ответом):
@@ -11,6 +12,12 @@
  *                   confirmed / merged (дубли) / rejected (ложные) + ранжирование;
  *   3. recommend  — по каждому подтверждённому замечанию сравнить варианты
  *                   решений и выбрать лучший; общий вердикт по статье.
+ *
+ * Шаг 4 (--apply): механически вписать рекомендации судьи в файлы локалей —
+ * БЕЗ модельного прохода (судья уже решил, каким должен быть текст). Защиты:
+ * отклонённые коллегией замечания не применяются; путь должен существовать;
+ * текст в файле должен совпадать с current из отчёта; после применения —
+ * валидация (теги/плейсхолдеры/ключи), при провале файл не пишется.
  *
  * Отчёт: scripts/qa/reports/<ts>-audit-<label>/{report.json,report.md}.
  * Промпты: scripts/prompts/base/qa/audit_{issues,deliberate,recommend}.txt
@@ -21,11 +28,12 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { parseCli } from '../lib/cli.js';
 import { LANG_NAMES, normalizeLangCode } from '../lib/lang-codes.js';
-import { VllmClient, formatGlossaryDetailed } from '../lib/pipeline.js';
+import { VllmClient, formatGlossaryDetailed, mergeSubset } from '../lib/pipeline.js';
 import { loadPrompt } from '../lib/prompt-loader.js';
 import { loadGlossary } from '../lib/glossary-utils.js';
 import { parseWithRepair } from '../lib/json-repair.js';
-import { flattenLeaves } from '../lib/tree.js';
+import { flattenLeaves, type Leaves } from '../lib/tree.js';
+import { validateTranslation } from '../lib/validation.js';
 import { writeJsonAtomic, writeTextAtomic, readJsonOr } from '../lib/atomic-fs.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -37,6 +45,8 @@ interface Args {
   label: string;
   endpoint: string;
   model: string;
+  /** Вписать подтверждённые рекомендации судьи в файлы локалей. */
+  apply: boolean;
 }
 
 async function loadArgs(): Promise<Args> {
@@ -60,6 +70,7 @@ async function loadArgs(): Promise<Args> {
     label: (flags.label as string) ?? 'manual',
     endpoint: (flags.endpoint as string) ?? process.env.TRANSLATE_ENDPOINT ?? cfg.endpoint ?? 'http://127.0.0.1:8000/v1',
     model: (flags.model as string) ?? process.env.TRANSLATE_MODEL ?? cfg.model ?? 'google/gemma-4-26B-A4B-it',
+    apply: (flags.apply ?? 'false') === 'true',
   };
 }
 
@@ -123,6 +134,19 @@ async function stage(
 
 const asArray = (v: any): any[] => (Array.isArray(v) ? v : []);
 
+interface AppliedEdit {
+  id: string;
+  path: string;
+  from: string;
+  to: string;
+}
+
+interface SkippedEdit {
+  id: string;
+  path: string;
+  reason: string;
+}
+
 interface LangResult {
   lang: string;
   items: AlignedItem[];
@@ -132,7 +156,97 @@ interface LangResult {
   notes: string;
   recommendations: any[];
   overall: any;
+  applied: AppliedEdit[];
+  skipped: SkippedEdit[];
   timings: { issues: number; deliberate: number; recommend: number };
+}
+
+/**
+ * Шаг корректировки: вписывает вердикт судьи в файл локали механически,
+ * без модели. Приоритет судьи определяет порядок; при нескольких
+ * рекомендациях на один путь применяется первая (важнейшая).
+ */
+async function applyRecommendations(
+  args: Args,
+  lang: string,
+  items: AlignedItem[],
+  recommendations: any[],
+  reviewed: any[],
+): Promise<{ applied: AppliedEdit[]; skipped: SkippedEdit[] }> {
+  const applied: AppliedEdit[] = [];
+  const skipped: SkippedEdit[] = [];
+  if (recommendations.length === 0) return { applied, skipped };
+
+  const rejectedIds = new Set(reviewed.filter((r) => r.verdict === 'rejected').map((r) => r.id));
+  const targetPath = path.join(ROOT, 'src', 'i18n', lang.toLowerCase(), args.relFile);
+  const target = await readJsonOr<any>(targetPath, null);
+  if (target == null) throw new Error(`не читается ${targetPath}`);
+  const subtree = args.key ? target[args.key] : target;
+  if (subtree == null || typeof subtree !== 'object') throw new Error(`нет поддерева «${args.key}» в ${targetPath}`);
+
+  const flat = flattenLeaves(subtree);
+  const patch: Record<string, string> = {};
+  const from: Record<string, string> = {};
+  const idsByPath: Record<string, string> = {};
+  const donePaths = new Set<string>();
+
+  const sorted = [...recommendations].sort(
+    (a, b) => (Number(a.priority) || 99) - (Number(b.priority) || 99),
+  );
+  for (const rec of sorted) {
+    const p = String(rec.path ?? '');
+    const id = String(rec.id ?? '?');
+    if (!p || donePaths.has(p)) continue;
+    if (rejectedIds.has(id)) {
+      skipped.push({ id, path: p, reason: 'замечание отклонено коллегией' });
+      continue;
+    }
+    const proposed = typeof rec.proposed === 'string' ? rec.proposed.trim() : '';
+    if (!proposed) {
+      skipped.push({ id, path: p, reason: 'пустая рекомендация' });
+      continue;
+    }
+    if (!(p in flat) || typeof flat[p] !== 'string') {
+      skipped.push({ id, path: p, reason: 'путь отсутствует в файле' });
+      continue;
+    }
+    if (rec.current != null && rec.current !== flat[p]) {
+      skipped.push({ id, path: p, reason: 'текст в файле не совпал с current из отчёта' });
+      continue;
+    }
+    if (flat[p] === proposed) {
+      skipped.push({ id, path: p, reason: 'правка уже применена' });
+      continue;
+    }
+    patch[p] = proposed;
+    from[p] = flat[p];
+    idsByPath[p] = id;
+    donePaths.add(p);
+  }
+
+  if (Object.keys(patch).length === 0) return { applied, skipped };
+
+  // Пути у flattenLeaves с ведущим слэшем; mergeSubset принимает пути модели
+  // (без него) — снимаем, иначе получится '//path' и патч промахнётся.
+  const barePatch: Record<string, string> = {};
+  for (const p of Object.keys(patch)) barePatch[p.replace(/^\//, '')] = patch[p]!;
+  mergeSubset(subtree, barePatch, 'judge-apply');
+  const sentLeaves: Leaves = {};
+  for (const item of items) sentLeaves[item.path] = item.ru;
+  const issues = validateTranslation(lang, sentLeaves, subtree);
+  if (issues.length > 0) {
+    for (const issue of issues) {
+      skipped.push({ id: '-', path: issue.path, reason: `валидация: ${issue.message}` });
+    }
+    console.warn(`   ❌ Корректировка отменена: валидация не прошла (${issues.length})`);
+    return { applied, skipped };
+  }
+
+  await writeJsonAtomic(targetPath, target);
+  for (const p of Object.keys(patch)) {
+    applied.push({ id: idsByPath[p] ?? '', path: p, from: from[p]!, to: patch[p]! });
+  }
+  return { applied, skipped };
 }
 
 async function auditLang(args: Args, client: VllmClient, lang: string): Promise<LangResult> {
@@ -176,6 +290,13 @@ async function auditLang(args: Args, client: VllmClient, lang: string): Promise<
     `   📋 recommend: ${recommendations.length} рекомендаций, verdict=${s3.data.overall?.verdict}, score=${s3.data.overall?.score} (${(s3.ms / 1000).toFixed(0)}с)`,
   );
 
+  let applied: AppliedEdit[] = [];
+  let skipped: SkippedEdit[] = [];
+  if (args.apply) {
+    ({ applied, skipped } = await applyRecommendations(args, lang, items, recommendations, reviewed));
+    console.log(`   🛠 apply: вписано ${applied.length}, пропущено ${skipped.length}`);
+  }
+
   return {
     lang,
     items,
@@ -185,6 +306,8 @@ async function auditLang(args: Args, client: VllmClient, lang: string): Promise<
     notes: String(s2.data.notes ?? ''),
     recommendations,
     overall: s3.data.overall,
+    applied,
+    skipped,
     timings: { issues: s1.ms, deliberate: s2.ms, recommend: s3.ms },
   };
 }
@@ -230,6 +353,16 @@ function renderMd(args: Args, results: LangResult[]): string {
     }
     const t = r.timings;
     lines.push('');
+    if (r.applied.length > 0 || r.skipped.length > 0) {
+      lines.push(`**Корректировка (--apply): вписано ${r.applied.length}, пропущено ${r.skipped.length}**`);
+      for (const edit of r.applied) {
+        lines.push(`- \`${edit.path}\`: ${String(edit.from).slice(0, 70)} → **${String(edit.to).slice(0, 90)}**`);
+      }
+      for (const skip of r.skipped) {
+        lines.push(`- ⏭ \`${skip.path}\` (${skip.id}): ${skip.reason}`);
+      }
+      lines.push('');
+    }
     lines.push(
       `_Время: issues ${(t.issues / 1000).toFixed(0)}с · deliberate ${(t.deliberate / 1000).toFixed(0)}с · recommend ${(t.recommend / 1000).toFixed(0)}с_`,
     );
@@ -240,7 +373,9 @@ function renderMd(args: Args, results: LangResult[]): string {
 
 async function main(): Promise<number> {
   const args = await loadArgs();
-  console.log(`🕵️ Аудит: src/i18n/ru/${args.relFile}${args.key ? `#${args.key}` : ''} · локали: ${args.langs.join(', ')}`);
+  console.log(
+    `🕵️ Аудит: src/i18n/ru/${args.relFile}${args.key ? `#${args.key}` : ''} · локали: ${args.langs.join(', ')}${args.apply ? ' · С КОРРЕКТИРОВКОЙ (--apply)' : ''}`,
+  );
   console.log(`🔧 ${args.endpoint} (${args.model})`);
 
   const client = new VllmClient(args.endpoint, args.model, 600_000, 10);

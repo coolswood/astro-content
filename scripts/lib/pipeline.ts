@@ -216,7 +216,7 @@ const MAIN_EXTRA_TEXT =
   'все значения переведены. Без комментариев до и после.';
 
 /** Формат глоссария как в lingo_proxy.py (проверенная версия). */
-function formatGlossaryDetailed(items: GlossaryItem[]): string {
+export function formatGlossaryDetailed(items: GlossaryItem[]): string {
   if (items.length === 0) return '';
   return items.map((e) => `- «${e.ru}» → «${e.lang}» (${e.context})`).join('\n');
 }
