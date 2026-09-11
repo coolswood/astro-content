@@ -401,12 +401,20 @@ export interface PipelineResult {
  * @param payload       исходный объект для перевода (структура сохраняется)
  * @param targetLocale  канонический код языка (напр. pt_BR)
  */
+export type CaptureStage = 'main' | 'editor' | 'review' | 'fix';
+
 export async function runPipeline(
   client: StageClient,
   prompts: StagePrompts,
   payload: any,
   targetLocale: string,
-  opts: { sourceLocale?: string; jsonModeMain?: boolean; stageAttempts?: number } = {},
+  opts: {
+    sourceLocale?: string;
+    jsonModeMain?: boolean;
+    stageAttempts?: number;
+    /** Наблюдатель стадий: draft после main/editor/fix, {issues, raw} после review. Не влияет на конвейер. */
+    capture?: (stage: CaptureStage, snapshot: any) => void;
+  } = {},
 ): Promise<PipelineResult> {
   const sourceLocale = opts.sourceLocale ?? 'ru';
   const stageAttempts = opts.stageAttempts ?? DEFAULT_STAGE_ATTEMPTS;
@@ -432,6 +440,7 @@ export async function runPipeline(
   if (!draft || typeof draft !== 'object') {
     throw new Error(`MAIN: не удалось распарсить JSON: ${draftText.slice(0, 200)}`);
   }
+  opts.capture?.('main', draft);
 
   // Стадия 2: EDITOR — полировка носителем без оригинала. Ответ — полный
   // отредактированный документ (или дифф-патч): мердж применяет значения
@@ -455,6 +464,7 @@ export async function runPipeline(
   );
   timings.editor = Date.now() - t;
   if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor');
+  opts.capture?.('editor', draft);
 
   // Стадии 3–4 (text): REVIEW — смысловая сверка с оригиналом, ответ списком
   // замечаний {"issues":[...]} без правок; FIX — правка по замечаниям, ответ
@@ -483,6 +493,7 @@ export async function runPipeline(
       },
     );
     timings.review = Date.now() - t;
+    opts.capture?.('review', { issues: review.issues, raw: review.raw });
 
     if (review.issues.length > 0) {
       t = Date.now();
@@ -503,6 +514,7 @@ export async function runPipeline(
       );
       timings.fix = Date.now() - t;
       if (fixPatch) draft = mergeSubset(draft, fixPatch, 'fix');
+      opts.capture?.('fix', draft);
     }
   } else if (prompts.tech) {
     // Legacy-путь (keys/ui): однозапросная смысловая сверка с правкой.
