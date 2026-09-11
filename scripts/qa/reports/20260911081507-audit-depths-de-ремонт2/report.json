@@ -1,0 +1,1193 @@
+{
+  "file": "story/depths.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 13,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "issue",
+                "note": "terminology: не использован стандартный термин 'Grundüberzeugungen'"
+              },
+              {
+                "path": "/description",
+                "verdict": "issue",
+                "note": "terminology: 'tief verwurzelte Überzeugungen' вместо 'Grundüberzeugungen'"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "issue",
+                "note": "terminology: не использован термин 'Grundüberzeugungen'"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "перевод естественный"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "метафора сохранена"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "кавычки и теги соблюдены"
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "issue",
+                "note": "terminology: 'Glaubensmuster' вместо 'Grundüberzeugung'"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "issue",
+                "note": "terminology: не использован термин 'Grundüberzeugungen'"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "терминология KVT соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "теги сохранены"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "issue",
+                "note": "terminology: не использован термин 'Grundüberzeugungen'"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "issue",
+                "note": "terminology: не использован термин 'Grundüberzeugungen'"
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "issue",
+                "note": "terminology: не использован термин 'Grundüberzeugungen'"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "issue",
+                "note": "terminology: 'Glaubensmustern' вместо 'Grundüberzeugungen'"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/title",
+                "fragment": "Tief verwurzelte Überzeugungen",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование описательного перевода вместо установленного термина",
+                "why": "В глоссарии указано, что 'Глубинные убеждения' — это 'Grundüberzeugungen'. 'Tief verwurzelte Überzeugungen' звучит красиво, но нарушает единообразие терминологии КПТ."
+              },
+              {
+                "id": "I2",
+                "path": "/description",
+                "fragment": "tief verwurzelte Überzeugungen",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование описательного перевода вместо установленного термина",
+                "why": "Необходимо использовать 'Grundüberzeugungen' для соответствия глоссарию."
+              },
+              {
+                "id": "I3",
+                "path": "/screen_1/texts/0",
+                "fragment": "den tief verwurzelten Überzeugungen",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование описательного перевода вместо установленного термина",
+                "why": "Необходимо использовать 'Grundüberzeugungen'."
+              },
+              {
+                "id": "I4",
+                "path": "/screen_1/texts/9",
+                "fragment": "Glaubensmuster",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование неверного термина",
+                "why": "В контексте глубинных убеждений (Grundüberzeugungen) использование 'Glaubensmuster' (паттерны убеждений) является отступлением от строгого термина, хотя и близко по смыслу."
+              },
+              {
+                "id": "I5",
+                "path": "/screen_2/texts/0",
+                "fragment": "tief verwurzelter Überzeugungen",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование описательного перевода вместо установленного термина",
+                "why": "Необходимо использовать 'Grundüberzeugungen'."
+              },
+              {
+                "id": "I6",
+                "path": "/screen_2/texts/6",
+                "fragment": "tief verwurzelter Überzeugungen",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование описательного перевода вместо установленного термина",
+                "why": "Необходимо использовать 'Grundüberzeugungen'."
+              },
+              {
+                "id": "I7",
+                "path": "/screen_2/texts/11",
+                "fragment": "tief verwurzelter Überzeugungen",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование описательного перевода вместо установленного термина",
+                "why": "Необходимо использовать 'Grundüberzeugungen'."
+              },
+              {
+                "id": "I8",
+                "path": "/screen_3/texts/0",
+                "fragment": "tief verwurzelter Überzeugungen",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование описательного перевода вместо установленного термина",
+                "why": "Необходимо использовать 'Grundüberzeugungen'."
+              },
+              {
+                "id": "I9",
+                "path": "/screen_3/texts/8",
+                "fragment": "Glaubensmustern",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование неверного термина",
+                "why": "Вместо 'Grundüberzeugungen' использовано 'Glaubensmustern'. Для консистентности обучающего материала важно придерживаться глоссария."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Terminology issue: 'tief verwurzelte Überzeugungen' is used instead of the glossary term 'Grundüberzeugungen'."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "mergedInto": "I1",
+                "rank": 2,
+                "note": "Same terminology issue as I1."
+              },
+              {
+                "id": "I3",
+                "verdict": "confirmed",
+                "mergedInto": "I1",
+                "rank": 2,
+                "note": "Same terminology issue as I1."
+              },
+              {
+                "id": "I4",
+                "verdict": "confirmed",
+                "mergedInto": "I9",
+                "rank": 3,
+                "note": "Both address the use of 'Glaubensmuster' instead of the core term."
+              },
+              {
+                "id": "I5",
+                "verdict": "confirmed",
+                "mergedInto": "I1",
+                "rank": 2,
+                "note": "Same terminology issue as I1."
+              },
+              {
+                "id": "I6",
+                "verdict": "confirmed",
+                "mergedInto": "I1",
+                "rank": 2,
+                "note": "Same terminology issue as I1."
+              },
+              {
+                "id": "I7",
+                "verdict": "confirmed",
+                "mergedInto": "I1",
+                "rank": 2,
+                "note": "Same terminology issue as I1."
+              },
+              {
+                "id": "I8",
+                "verdict": "confirmed",
+                "mergedInto": "I1",
+                "rank": 2,
+                "note": "Same terminology issue as I1."
+              },
+              {
+                "id": "I9",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Terminology issue: 'Glaubensmustern' used instead of 'Grundüberzeugungen'."
+              }
+            ],
+            "notes": "The translation is high quality and natural, but suffers from a systematic failure to use the required glossary term 'Grundüberzeugungen', opting instead for a descriptive phrase that appears throughout the text.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/title",
+                "current": "Tief verwurzelte Überzeugungen",
+                "proposed": "Grundüberzeugungen",
+                "alternatives": [],
+                "rationale": "Согласно глоссарию и стандартам КПТ, термин 'Глубинные убеждения' должен переводиться как 'Grundüberzeugungen'. Вариант 'tief verwurzelte Überzeugungen' является описательным и нарушает терминологическую консистентность."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/description",
+                "current": "In diesem Artikel sprechen wir über tief verwurzelte Überzeugungen – grundlegende Annahmen über sich selbst, andere Menschen und die Welt, die unseren Reaktionen zugrunde liegen und unsere Zwischenüberzeugungen (Regeln) sowie automatischen Gedanken formen. Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Außerdem erklären wir, warum es wichtig ist, schrittweise durch alle Ebenen des Denkens zu arbeiten – beginnend mit den automatischen Gedanken –, um nachhaltige emotionale Veränderungen zu erreichen.",
+                "proposed": "In diesem Artikel sprechen wir über Grundüberzeugungen – grundlegende Annahmen über sich selbst, andere Menschen und die Welt, die unseren Reaktionen zugrunde liegen und unsere Zwischenüberzeugungen sowie automatischen Gedanken formen. Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Außerdem erklären wir, warum es wichtig ist, schrittweise durch alle Ebenen des Denkens zu arbeiten – beginnend mit den automatischen Gedanken –, um nachhaltige emotionale Veränderungen zu erreichen.",
+                "alternatives": [],
+                "rationale": "Замена описательного выражения на утвержденный термин 'Grundüberzeugungen' для соблюдения профессионального стандарта."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/screen_1/texts/0",
+                "current": "Wir nähern uns nun der tiefsten Ebene – den tief verwurzelten Überzeugungen.",
+                "proposed": "Wir nähern uns nun der tiefsten Ebene – den Grundüberzeugungen.",
+                "alternatives": [],
+                "rationale": "Приведение к единообразию с использованием термина 'Grundüberzeugungen'."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/screen_1/texts/9",
+                "current": "Am Ende stößt er seine Partnerin unbewusst von sich weg – und bestätigt damit sein eigenes Glaubensmuster, nicht liebenswert zu sein und niemandem vertrauen zu können.",
+                "proposed": "Am Ende stößt er seine Partnerin unbewusst von sich weg – und bestätigt damit seine Grundüberzeugung, nicht liebenswert zu sein und niemandem vertrauen zu können.",
+                "alternatives": [
+                  "...bestätigt damit seine tief sitzenden Überzeugungen..."
+                ],
+                "rationale": "Термин 'Glaubensmuster' (паттерн убеждений) слишком размыт. В контексте статьи, где речь идет о конкретном уровне иерархии мыслей, следует использовать 'Grundüberzeugung', чтобы подчеркнуть глубину процесса."
+              },
+              {
+                "id": "I5",
+                "priority": 5,
+                "path": "/screen_2/texts/0",
+                "current": "<h2>Drei Kategorien tief verwurzelter Überzeugungen</h2>",
+                "proposed": "<h2>Drei Kategorien von Grundüberzeugungen</h2>",
+                "alternatives": [
+                  "<h2>Drei Kategorien der Grundüberzeugungen</h2>"
+                ],
+                "rationale": "Исправление терминологии в заголовке. Вариант 'Drei Kategorien von Grundüberzeugungen' звучит естественно для заголовка."
+              },
+              {
+                "id": "I6",
+                "priority": 6,
+                "path": "/screen_2/texts/6",
+                "current": "<h2>Überzeugungen der Kategorie Hilflosigkeit</h2>",
+                "proposed": "<h2>Grundüberzeugungen der Kategorie Hilflosigkeit</h2>",
+                "alternatives": [],
+                "rationale": "В оригинале 'Глубинные убеждения категории...', в переводе потеряно слово 'Grundüberzeugungen'. Необходимо вернуть термин для точности."
+              },
+              {
+                "id": "I7",
+                "priority": 7,
+                "path": "/screen_2/texts/11",
+                "current": "<h2>Überzeugungen der Kategorie Ablehnung</h2>",
+                "proposed": "<h2>Grundüberzeugungen der Kategorie Ablehnung</h2>",
+                "alternatives": [],
+                "rationale": "Аналогично предыдущему: возвращаем ключевой термин 'Grundüberzeugungen' для соответствия структуре оригинала и глоссарию."
+              },
+              {
+                "id": "I8",
+                "priority": 8,
+                "path": "/screen_3/texts/0",
+                "current": "<h2>Überzeugungen der Kategorie Wertlosigkeit</h2>",
+                "proposed": "<h2>Grundüberzeugungen der Kategorie Wertlosigkeit</h2>",
+                "alternatives": [],
+                "rationale": "Восстановление терминологической точности в заголовке."
+              },
+              {
+                "id": "I9",
+                "priority": 9,
+                "path": "/screen_3/texts/8",
+                "current": "Wenn wir lernen, automatische Gedanken zu erkennen und realistische Alternativen zu finden, schaffen wir eine stabile Grundlage für die Arbeit an Zwischenüberzeugungen und tief verwurzelten Glaubensmustern.",
+                "proposed": "Wenn wir lernen, automatische Gedanken zu erkennen und realistische Alternativen zu finden, schaffen wir eine stabile Grundlage für die Arbeit an Zwischenüberzeugungen und Grundüberzeugungen.",
+                "alternatives": [],
+                "rationale": "Замена 'tief verwurzelten Glaubensmustern' на 'Grundüberzeugungen' для строгого соблюдения терминологии КПТ, используемой в остальном тексте."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "Основная проблема статьи — систематическое использование описательного перевода 'tief verwurzelte Überzeugungen' вместо закрепленного в глоссарии термина 'Grundüberzeugungen'. Это создает ощущение 'литературного', а не профессионального психологического текста. Необходимо заменить все вхождения этого выражения на 'Grundüberzeugungen' и исправить 'Glaubensmuster' на соответствующий термин, чтобы обеспечить экспертный тон и консистентность."
+            },
+            "timings": {
+              "issues": 57490,
+              "deliberate": 12760,
+              "recommend": 43031
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/title",
+              "from": "Tief verwurzelte Überzeugungen",
+              "to": "Grundüberzeugungen"
+            },
+            {
+              "id": "I2",
+              "path": "/description",
+              "from": "In diesem Artikel sprechen wir über tief verwurzelte Überzeugungen – grundlegende Annahmen über sich selbst, andere Menschen und die Welt, die unseren Reaktionen zugrunde liegen und unsere Zwischenüberzeugungen (Regeln) sowie automatischen Gedanken formen. Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Außerdem erklären wir, warum es wichtig ist, schrittweise durch alle Ebenen des Denkens zu arbeiten – beginnend mit den automatischen Gedanken –, um nachhaltige emotionale Veränderungen zu erreichen.",
+              "to": "In diesem Artikel sprechen wir über Grundüberzeugungen – grundlegende Annahmen über sich selbst, andere Menschen und die Welt, die unseren Reaktionen zugrunde liegen und unsere Zwischenüberzeugungen sowie automatischen Gedanken formen. Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Außerdem erklären wir, warum es wichtig ist, schrittweise durch alle Ebenen des Denkens zu arbeiten – beginnend mit den automatischen Gedanken –, um nachhaltige emotionale Veränderungen zu erreichen."
+            },
+            {
+              "id": "I3",
+              "path": "/screen_1/texts/0",
+              "from": "Wir nähern uns nun der tiefsten Ebene – den tief verwurzelten Überzeugungen.",
+              "to": "Wir nähern uns nun der tiefsten Ebene – den Grundüberzeugungen."
+            },
+            {
+              "id": "I4",
+              "path": "/screen_1/texts/9",
+              "from": "Am Ende stößt er seine Partnerin unbewusst von sich weg – und bestätigt damit sein eigenes Glaubensmuster, nicht liebenswert zu sein und niemandem vertrauen zu können.",
+              "to": "Am Ende stößt er seine Partnerin unbewusst von sich weg – und bestätigt damit seine Grundüberzeugung, nicht liebenswert zu sein und niemandem vertrauen zu können."
+            },
+            {
+              "id": "I5",
+              "path": "/screen_2/texts/0",
+              "from": "<h2>Drei Kategorien tief verwurzelter Überzeugungen</h2>",
+              "to": "<h2>Drei Kategorien von Grundüberzeugungen</h2>"
+            },
+            {
+              "id": "I6",
+              "path": "/screen_2/texts/6",
+              "from": "<h2>Überzeugungen der Kategorie Hilflosigkeit</h2>",
+              "to": "<h2>Grundüberzeugungen der Kategorie Hilflosigkeit</h2>"
+            },
+            {
+              "id": "I7",
+              "path": "/screen_2/texts/11",
+              "from": "<h2>Überzeugungen der Kategorie Ablehnung</h2>",
+              "to": "<h2>Grundüberzeugungen der Kategorie Ablehnung</h2>"
+            },
+            {
+              "id": "I8",
+              "path": "/screen_3/texts/0",
+              "from": "<h2>Überzeugungen der Kategorie Wertlosigkeit</h2>",
+              "to": "<h2>Grundüberzeugungen der Kategorie Wertlosigkeit</h2>"
+            },
+            {
+              "id": "I9",
+              "path": "/screen_3/texts/8",
+              "from": "Wenn wir lernen, automatische Gedanken zu erkennen und realistische Alternativen zu finden, schaffen wir eine stabile Grundlage für die Arbeit an Zwischenüberzeugungen und tief verwurzelten Glaubensmustern.",
+              "to": "Wenn wir lernen, automatische Gedanken zu erkennen und realistische Alternativen zu finden, schaffen wir eine stabile Grundlage für die Arbeit an Zwischenüberzeugungen und Grundüberzeugungen."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Термин Grundüberzeugungen использован верно."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Метафора сохранена, звучит хорошо."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "issue",
+                "note": "Проблема с кавычками в атрибутах JSON-подобной структуры."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "issue",
+                "note": "Утерян ID в Instagram теге (ошибка в структуре)."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод лаконичный и верный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Вопрос сформулирован верно."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "issue",
+                "note": "Mistranslation: 'Я никому не нужен' переведено как 'Ich bin niemandem wichtig' (Я не важен никому), что меняет оттенок."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/7",
+                "fragment": "depth='„Ich bin nicht liebenswert“ ...'",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование одинарных кавычек для атрибутов в сочетании с немецкими типографскими кавычками внутри может привести к ошибкам парсинга, если это часть кода. Однако, согласно правилам, внутри текста должны быть „“, но в структуре тега лучше использовать стандартные программные кавычки для атрибутов, чтобы не путать систему. Главное: проверка на соответствие правилам типографики пройдена, но стоит быть осторожным с вложенностью."
+              },
+              {
+                "id": "I2",
+                "path": "/screen_2/texts/4",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Утеряны идентификаторы (ids) из оригинального тега.",
+                "why": "Это технический параметр, необходимый для отображения контента. Его отсутствие сделает функцию нерабочей."
+              },
+              {
+                "id": "I3",
+                "path": "/test/answers/1",
+                "fragment": "„Ich bin niemandem wichtig“",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Искажение эмоционального оттенка.",
+                "why": "Оригинал «Я никому не нужен» (I am needed by no one) более экзистенциален и тяжел, чем «Ich bin niemandem wichtig» (I am not important to anyone). В контексте глубинных убеждений лучше использовать 'Ich werde von niemandem gebraucht'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "Это техническое замечание по поводу синтаксиса разметки, а не качества перевода. Переводчик корректно использовал немецкие кавычки внутри атрибутов; риск парсинга — вопрос к разработчикам, а не к лингвисту."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: потеря технических данных (ID) делает функционал нерабочим."
+              },
+              {
+                "id": "I3",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Смысловое искажение: 'wichtig' (важный) слишком мягкое слово для экзистенциального 'нужен' в контексте психологии."
+              },
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "Замечание касается структуры кода/разметки, а не текста. Перевод соответствует правилам типографики."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, однако допущена критическая техническая ошибка (потеря ID в теге) и одна смысловая неточность в тестовом вопросе.",
+            "recommendations": [
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/screen_2/texts/4",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18040595774017860,18072414772851393\">",
+                "alternatives": [],
+                "rationale": "Критическая техническая ошибка. В оригинале содержатся ID, необходимые для рендеринга контента. Без них функционал Instagram-виджета в приложении не будет работать."
+              },
+              {
+                "id": "I3",
+                "priority": 2,
+                "path": "/test/answers/1",
+                "current": "„Ich bin niemandem wichtig“, „Ich bin wertlos“, „Ich bin nicht liebenswert“",
+                "proposed": "„Ich werde von niemandem gebraucht“, „Ich bin wertlos“, „Ich bin nicht liebenswert“",
+                "alternatives": [
+                  "„Ich bin für niemanden von Bedeutung“",
+                  "„Ich bin nutzlos für andere“"
+                ],
+                "rationale": "Оригинал «Я никому не нужен» несет экзистенциальный, тяжелый оттенок. Вариант 'wichtig' (важный) звучит слишком поверхностно и мягко для глубинных убеждений. 'Gebraucht werden' точнее передает смысл 'быть нужным/востребованным' в психологическом контексте."
+              },
+              {
+                "id": "I1",
+                "priority": 3,
+                "path": "/screen_1/texts/7",
+                "current": "<stepper depth='„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“' intermediate='„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“' automatic='„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“'>",
+                "proposed": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“\">",
+                "alternatives": [],
+                "rationale": "Хотя редактор отклонил замечание, я рекомендую использовать двойные кавычки для атрибутов (стандарт JSON/HTML), чтобы избежать конфликтов с вложенными типографскими кавычками. Это делает код чище и безопаснее для парсинга."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружена критическая техническая ошибка (потеря ID в теге Instagram), которая приведет к поломке интерфейса. Также есть смысловое искажение в одном из тестовых вопросов, снижающее терапевтическую точность. Требуется исправить ID и заменить 'wichtig' на более глубокое выражение."
+            },
+            "timings": {
+              "issues": 50667,
+              "deliberate": 10720,
+              "recommend": 23540
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/4",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18040595774017860,18072414772851393\">"
+            },
+            {
+              "id": "I3",
+              "path": "/test/answers/1",
+              "from": "„Ich bin niemandem wichtig“, „Ich bin wertlos“, „Ich bin nicht liebenswert“",
+              "to": "„Ich werde von niemandem gebraucht“, „Ich bin wertlos“, „Ich bin nicht liebenswert“"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/7",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Термин Grundüberzeugungen использован верно."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Метафора сохранена, звучит естественно."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "issue",
+                "note": "Проблема с кавычками в атрибутах JSON/XML."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "issue",
+                "note": "Утерян ID в Instagram теге."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "issue",
+                "note": "Omission: пропущена часть фразы 'и примеры, как они проявляются'."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/7",
+                "fragment": "depth='„Ich bin nicht liebenswert“ ...'",
+                "type": "other",
+                "severity": "major",
+                "problem": "Использование одинарных кавычек для атрибутов вместо двойных в сочетании с немецкими кавычками внутри.",
+                "why": "В структуре тега используются одинарные кавычки, что может быть допустимо в некоторых форматах, но в контексте задачи по типографике и JSON-подобных структур, использование '„' внутри ' ' выглядит грязным. Однако главная проблема — нарушение визуальной чистоты и потенциальный конфликт парсеров, если это часть XML/HTML."
+              },
+              {
+                "id": "I2",
+                "path": "/screen_2/texts/4",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Утеряны ID инстаграм-постов.",
+                "why": "В оригинале указаны конкретные ID, которые необходимы для отображения контента. Без них функционал сломан."
+              },
+              {
+                "id": "I3",
+                "path": "/screen_2/texts/5",
+                "fragment": "Schauen wir uns die drei Kategorien im Detail an.",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "Пропущено упоминание примеров.",
+                "why": "Оригинал: 'Рассмотрим три категории... и примеры, как они проявляются'. Перевод: 'Давайте рассмотрим три категории в деталях'. Смысл понятен, но часть фразы потеряна."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "Это техническая особенность разметки (XML-атрибуты), а не ошибка перевода или типографики. Использование одинарных кавычек для атрибутов — стандарт для XML/HTML, чтобы избежать конфликта с двойными кавычками внутри текста."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: удаление технических идентификаторов делает невозможным рендеринг контента."
+              },
+              {
+                "id": "I3",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Незначительная потеря смысла: перевод стал более лаконичным, но потерял акцент на примерах, который есть в оригинале."
+              }
+            ],
+            "notes": "Перевод в целом качественный и точный, однако допущена критическая ошибка в технической разметке (удаление ID) и небольшое упрощение смысла в одном из предложений.",
+            "recommendations": [
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/screen_2/texts/4",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18040595774017860,18072414772851393\">",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: удаление технических ID делает невозможным отображение контента. Необходимо вернуть оригинальные атрибуты."
+              },
+              {
+                "id": "I3",
+                "priority": 2,
+                "path": "/screen_2/texts/5",
+                "current": "Schauen wir uns die drei Kategorien im Detail an.",
+                "proposed": "Schauen wir uns die drei Kategorien und Beispiele für ihre Ausprägung im Detail an.",
+                "alternatives": [
+                  "Schauen wir uns die drei Kategorien und Beispiele für ihr Auftreten im Detail an."
+                ],
+                "rationale": "В оригинале есть акцент на примерах. Текущий перевод слишком лаконичен и теряет часть смысла. Предложенный вариант точнее передает структуру предложения оригинала, сохраняя естественность немецкого языка."
+              },
+              {
+                "id": "I1",
+                "priority": 3,
+                "path": "/screen_1/texts/7",
+                "current": "<stepper depth='„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“' intermediate='„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“' automatic='„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“'>",
+                "proposed": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“\">",
+                "alternatives": [],
+                "rationale": "Хотя использование одинарных кавычек для атрибутов допустимо в XML, для единообразия с остальным текстом и во избежание путаницы при парсинге (так как внутри используются немецкие кавычки), лучше использовать двойные кавычки для атрибутов, если это позволяет структура. Однако, учитывая вердикт ревьюера о том, что это технический стандарт, я предлагаю оставить как есть, если это не ломает код, но в рамках задачи на 'чистоту' — двойные кавычки предпочтительнее."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружена критическая ошибка: потеряны технические ID для Instagram, что приведет к поломке функционала. Также есть небольшие смысловые потери в описании примеров. Требуется немедленное восстановление атрибутов в разметке."
+            },
+            "timings": {
+              "issues": 51629,
+              "deliberate": 8414,
+              "recommend": 25626
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/4",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18040595774017860,18072414772851393\">"
+            },
+            {
+              "id": "I3",
+              "path": "/screen_2/texts/5",
+              "from": "Schauen wir uns die drei Kategorien im Detail an.",
+              "to": "Schauen wir uns die drei Kategorien und Beispiele für ihre Ausprägung im Detail an."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/7",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

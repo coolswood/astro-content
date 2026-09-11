@@ -1,0 +1,448 @@
+{
+  "file": "story/depression_story.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "issue",
+                "note": "Потеряны ID в теге instagram"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: в оригинале 'не способен', в переводе 'способен' (из-за отрицания)"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/6",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Удалены атрибуты ids в теге",
+                "why": "В оригинале содержатся важные идентификаторы, которые необходимы для работы кода/интеграции. Их удаление сломает функционал."
+              },
+              {
+                "id": "I2",
+                "path": "/screen_2/texts/8",
+                "fragment": "der zu nichts Ernsthaftem fähig ist",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Перевернут смысл (утверждение вместо отрицания)",
+                "why": "В оригинале: 'не способен ни на что серьёзное'. В переводе: 'который способен на что-то серьёзное' (в контексте фразы 'Ein Versager, der...'). Это полностью меняет характеристику персонажа."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Техническая ошибка: удаление атрибутов в теге ломает функциональность интеграции."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Грубая смысловая ошибка: перевод утверждает обратное оригиналу, что искажает психологический контекст диалога."
+              }
+            ],
+            "notes": "Перевод содержит критические ошибки: техническую потерю данных в разметке и смысловую инверсию в ключевой фразе персонажа.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/6",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18137395111391092,18032186723695485\">",
+                "alternatives": [],
+                "rationale": "Это критическая техническая ошибка. Необходимо восстановить атрибуты ids, чтобы сохранить функциональность интеграции с Instagram, как в оригинале."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_2/texts/8",
+                "current": "Ein Versager, der zu nichts Ernsthaftem fähig ist.",
+                "proposed": "Ein Versager, der zu nichts Ernsthaftem fähig ist.",
+                "alternatives": [
+                  "Ein Versager, der nichts Ernsthaftes leisten kann."
+                ],
+                "rationale": "В замечании указано, что смысл перевернут, однако в немецком варианте 'zu nichts Ernsthaftem fähig sein' означает 'не быть способным ни на что серьезное' (отрицание через 'nichts'). Смысл оригинала передан верно. Поскольку текущий вариант грамматически и семантически корректен и соответствует оригиналу, я оставляю его без изменений, но фиксирую, что ошибка в оценке редакции была ложной (false positive)."
+              }
+            ],
+            "overall": {
+              "score": 90,
+              "verdict": "minor_edits",
+              "summary": "В тексте обнаружена одна критическая техническая ошибка (удаление ID в теге), которую необходимо исправить немедленно. Вторая ошибка (смысловая) была ошибочно классифицирована коллегами: немецкая фраза 'zu nichts fähig sein' как раз означает отсутствие способностей, что соответствует оригиналу. После исправления тега текст готов к публикации."
+            },
+            "timings": {
+              "issues": 16698,
+              "deliberate": 4454,
+              "recommend": 14079
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/6",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18137395111391092,18032186723695485\">"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/8",
+              "reason": "текст в файле не совпал с current из отчёта"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "issue",
+                "note": "Потеряны ID в теге instagram"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: в оригинале 'не способен', в переводе 'способен' (из-за отрицания)"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/6",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Удалены атрибуты ids из тега",
+                "why": "В оригинале содержатся важные идентификаторы, которые необходимы для работы кода/интерфейса. Их удаление приведет к поломке функционала."
+              },
+              {
+                "id": "I2",
+                "path": "/screen_2/texts/8",
+                "fragment": "der zu nichts Ernsthaftem fähig ist",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Перевернут смысл (утверждение вместо отрицания)",
+                "why": "В оригинале: 'не способен ни на что серьёзное'. В переводе: 'который способен на что-то серьёзное' (в контексте фразы 'Ein Versager, der...'). Это полностью меняет характеристику персонажа."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Technical error: loss of critical metadata (ids) in the tag."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Semantic error: the translation implies the person is capable of something serious, whereas the original states they are incapable."
+              }
+            ],
+            "notes": "The translation contains a critical technical omission in the markup and a significant semantic reversal in the dialogue, which alters the character's meaning.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/6",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18137395111391092,18032186723695485\">",
+                "alternatives": [],
+                "rationale": "Это критическая техническая ошибка. Удаление атрибутов ids из тега приведет к поломке функционала отображения контента в приложении."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_2/texts/8",
+                "current": "Ein Versager, der zu nichts Ernsthaftem fähig ist.",
+                "proposed": "Ein Versager, der zu nichts Ernsthaftem fähig ist.",
+                "alternatives": [
+                  "Ein Versager, der zu nichts Wichtigem fähig ist.",
+                  "Ein Versager, der nichts Ernsthaftes zustande bringt."
+                ],
+                "rationale": "В данном случае замечание редакции ошибочно интерпретировало грамматику. Фраза 'zu nichts fähig sein' означает 'не быть способным ни к чему'. В немецком языке 'nichts' (ничто) в сочетании с 'zu ... fähig' уже несет отрицание. Однако, чтобы избежать двусмысленности и сделать фразу более естественной для носителя, можно использовать предложенные альтернативы, но текущий вариант грамматически верен и передает смысл 'не способен ни на что серьезное'."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая техническая ошибка (потеря ID в теге), которая требует немедленного исправления. Также выявлена смысловая ошибка в диалоге, хотя при детальном разборе выяснилось, что переводчик верно передал отрицание через конструкцию 'zu nichts fähig', но это звучит тяжеловесно. В первую очередь нужно восстановить метаданные в тегах."
+            },
+            "timings": {
+              "issues": 16114,
+              "deliberate": 3976,
+              "recommend": 14676
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/6",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18137395111391092,18032186723695485\">"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/8",
+              "reason": "текст в файле не совпал с current из отчёта"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "issue",
+                "note": "Потеряны ID в теге instagram"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: в оригинале 'не способен', в переводе 'способен' (из-за отрицания)"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/6",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Удалены атрибуты ids из тега",
+                "why": "Это технический параметр, необходимый для корректной работы функции отображения Instagram-поста. Его удаление сломает функционал."
+              },
+              {
+                "id": "I2",
+                "path": "/screen_2/texts/8",
+                "fragment": "der zu nichts Ernsthaftem fähig ist",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Перевернут смысл (утверждение вместо отрицания)",
+                "why": "В оригинале: 'не способен ни на что серьёзное'. В переводе: 'который способен на что-то серьёзное'. Это полностью меняет характеристику персонажа."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Technical attributes in tags are essential for functionality; their removal is a critical error."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translation conveys the exact opposite of the source meaning (affirmative instead of negative)."
+              }
+            ],
+            "notes": "The translation contains one critical technical omission and one critical semantic error that reverses the meaning of the sentence.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/6",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18137395111391092,18032186723695485\">",
+                "alternatives": [],
+                "rationale": "Это критическая техническая ошибка. Атрибуты внутри тегов не являются текстом для перевода, они должны сохраняться в исходном виде для корректной работы кода."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_2/texts/8",
+                "current": "Ein Versager, der zu nichts Ernsthaftem fähig ist.",
+                "proposed": "Ein Versager, der zu nichts Ernsthaftem fähig ist.",
+                "alternatives": [
+                  "Ein Versager, der zu nichts Wichtigem fähig ist.",
+                  "Ein Versager, der nichts Ernsthaftes leisten kann."
+                ],
+                "rationale": "В текущем переводе допущена логическая ошибка: фраза 'der zu nichts Ernsthaftem fähig ist' в немецком языке грамматически означает 'который не способен ни на что серьезное' (благодаря отрицательному значению 'nichts'), однако из-за двусмысленности конструкции в контексте диалога она может восприниматься неверно. Однако, если присмотреться к оригиналу, текущий вариант 'zu nichts ... fähig' — это и есть 'не способен ни на что'. Но чтобы избежать риска неверного прочтения и сделать фразу более естественной и экспрессивной для персонажа, лучше использовать вариант с отрицанием способности. Стоп, перепроверка: 'nichts fähig sein' — это 'быть неспособным ни к чему'. Ошибка в замечании редакционной коллегии была в интерпретации, но перевод действительно звучит тяжеловесно. Я предлагаю оставить вариант, максимально близкий к оригиналу, но грамматически безупречный. На самом деле, текущий вариант 'der zu nichts Ernsthaftem fähig ist' переводится как 'который не способен ни на что серьезное'. Если коллегия считает, что смысл перевернут, значит, они видят в этом утверждение. Чтобы исключить любые сомнения, используем 'der zu nichts Ernsthaftem fähig ist' (что технически верно) или 'der nichts Ernsthaftes leisten kann'. Выбираю вариант, который точно передает 'не способен ни на что'."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая техническая ошибка (удаление ID в теге Instagram), которая приведет к поломке функционала. Также выявлена смысловая ошибка в диалоге, меняющая характеристику персонажа. Требуется немедленное исправление тегов и пересмотр фразы в screen_2/texts/8."
+            },
+            "timings": {
+              "issues": 14380,
+              "deliberate": 3192,
+              "recommend": 21336
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/6",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18137395111391092,18032186723695485\">"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/8",
+              "reason": "текст в файле не совпал с current из отчёта"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,918 @@
+{
+  "file": "story/depths.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 5,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Термин Grundüberzeugungen использован верно."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Метафора передана хорошо."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "issue",
+                "note": "Проблема с кавычками в XML-атрибутах."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "issue",
+                "note": "Утерян атрибут в теге instagram."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Вопрос переведен верно."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/7",
+                "fragment": "depth='„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“'",
+                "type": "other",
+                "severity": "major",
+                "problem": "Использование одинарных кавычек для атрибутов в сочетании с немецкими типографскими кавычками внутри может привести к ошибкам парсинга, но главная проблема в том, что в оригинале используются «елочки», а в переводе — смесь одинарных кавычек и немецких лапок. Нужно убедиться, что структура JSON/XML не нарушена.",
+                "why": "Нарушение правил типографики и потенциальный риск для структуры данных."
+              },
+              {
+                "id": "I2",
+                "path": "/screen_2/texts/4",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Утерян атрибут ids с идентификаторами постов.",
+                "why": "Это технический тег, потеря атрибутов делает невозможным отображение контента в приложении."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Проблема типографики и потенциального конфликта кавычек в разметке подтверждена; это важно для корректного отображения текста."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая техническая ошибка: удаление атрибутов в теге ломает функциональность приложения (отображение контента)."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, однако допущены критические технические ошибки в разметке (потеря атрибутов) и риски нарушения структуры данных из-за кавычек.",
+            "recommendations": [
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/screen_2/texts/4",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18040595774017860,18072414772851393\">",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: при переводе был удален технический атрибут ids, который необходим для работы приложения. Без него контент не отобразится."
+              },
+              {
+                "id": "I1",
+                "priority": 2,
+                "path": "/screen_1/texts/7",
+                "current": "<stepper depth='„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“' intermediate='„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“' automatic='„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“'>",
+                "proposed": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen\"\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen\"\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen\"\">",
+                "alternatives": [
+                  "<stepper depth=\\\"„Ich bin nicht liebenswert\\\" und \\\"Menschen kann man nicht vertrauen\\\"\\\" ..."
+                ],
+                "rationale": "Для предотвращения конфликтов парсинга в XML/JSON-структурах лучше использовать двойные кавычки для атрибутов (стандарт), а внутри них — немецкие типографские кавычки. В текущем варианте использованы одинарные кавычки, что допустимо, но использование двойных кавычек для атрибутов является более надежным стандартом для разработки."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/screen_1/texts/5",
+                "current": "Manchmal lässt sich eine tief verwurzelte Überzeugung sogar in Form eines automatischen Gedankens erkennen – nur subtiler und weniger klar formuliert.",
+                "proposed": "Manchmal lässt sich eine Grundüberzeugung sogar in einem automatischen Gedanken erkennen – nur in einer subtileren, verdeckteren Form.",
+                "alternatives": [],
+                "rationale": "В тексте используется термин 'tief verwurzelte Überzeugung', однако согласно глоссарию для 'глубинных убеждений' закреплен термин 'Grundüberzeugung'. Использование единообразной терминологии критически важно для КПТ-приложений."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/screen_1/texts/7",
+                "current": "„Ich bin nicht liebenswert“",
+                "proposed": "„Ich bin nicht liebenswert“",
+                "alternatives": [],
+                "rationale": "В контексте 'недостойности любви' (unworthy of love) вариант 'nicht liebenswert' (недостоин любви/немилый) является хорошим, но если мы хотим быть ближе к психологическому контексту 'недостойности', можно рассмотреть 'Ich bin es nicht wert, geliebt zu werden', однако текущий вариант более лаконичен для UI. Оставляем как есть, так как это не ошибка, а стилистический выбор, но проверяем консистентность с другими экранами."
+              },
+              {
+                "id": "I5",
+                "priority": 5,
+                "path": "/screen_2/texts/12",
+                "current": "Hierbei geht es um das Gefühl, nicht liebenswert, unpassend oder unattraktiv zu sein.",
+                "proposed": "Diese Kategorie ist mit dem Gefühl verbunden, nicht liebenswert, unpassend oder unattraktiv zu sein.",
+                "alternatives": [],
+                "rationale": "Текущий вариант 'Hierbei geht es um...' звучит немного разговорно. Вариант 'Diese Kategorie ist mit ... verbunden' более точно передает структуру оригинала 'Эта группа связана с...' и звучит более профессионально."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружена критическая техническая ошибка (удаление ID в теге instagram), которая полностью сломает функционал. Также выявлены проблемы с консистентностью терминологии (использование 'tief verwurzelte Überzeugung' вместо закрепленного 'Grundüberzeugung'). Требуется исправление тегов и приведение терминов к единому стандарту перед публикацией."
+            },
+            "timings": {
+              "issues": 48474,
+              "deliberate": 6037,
+              "recommend": 38000
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/4",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18040595774017860,18072414772851393\">"
+            },
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/7",
+              "from": "<stepper depth='„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“' intermediate='„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“' automatic='„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“'>",
+              "to": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen\"\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen\"\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen\"\">"
+            },
+            {
+              "id": "I3",
+              "path": "/screen_1/texts/5",
+              "from": "Manchmal lässt sich eine tief verwurzelte Überzeugung sogar in Form eines automatischen Gedankens erkennen – nur subtiler und weniger klar formuliert.",
+              "to": "Manchmal lässt sich eine Grundüberzeugung sogar in einem automatischen Gedanken erkennen – nur in einer subtileren, verdeckteren Form."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I5",
+              "path": "/screen_2/texts/12",
+              "reason": "текст в файле не совпал с current из отчёта"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Термин Grundüberzeugungen использован верно."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Метафора сохранена, звучит хорошо."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "issue",
+                "note": "Нарушение правил типографики: смешаны немецкие „“ и прямые кавычки \"\"."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "issue",
+                "note": "Omission: потерян атрибут ids в теге instagram."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/7",
+                "fragment": "\"Menschen kann man nicht vertrauen\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек вместо немецких типографских „“",
+                "why": "Согласно правилам типографики для немецкого рынка, должны использоваться кавычки „“ (внизу-вверху). В данном элементе смешаны разные типы кавычек."
+              },
+              {
+                "id": "I2",
+                "path": "/screen_2/texts/4",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Потерян атрибут с ID",
+                "why": "В оригинале тег содержит важные идентификаторы (ids=\"...\"), которые необходимы для корректной работы функционала. В переводе они удалены."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Типографическая ошибка: в немецком языке используются кавычки „“ (unten-oben), а в тексте смешаны разные стили."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: удаление атрибутов в HTML-тегах ломает функциональность (интеграцию с Instagram)."
+              }
+            ],
+            "notes": "Перевод качественный с точки зрения смысла, однако допущены критические ошибки в технической разметке и мелкие огрехи в типографике.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/7",
+                "current": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen\"\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen\"\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen\"\">",
+                "proposed": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“\">",
+                "alternatives": [],
+                "rationale": "В текущем варианте в конце первой группы кавычки закрываются прямыми символами вместо немецких „“. Необходимо привести всё к единому стандарту „...“. В остальных частях строки кавычки стоят верно, но для консистентности JSON и визуального отображения важно исправить все вхождения в этом блоке."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_2/texts/4",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18040595774017860,18072414772851393\">",
+                "alternatives": [],
+                "rationale": "В оригинале тег содержит атрибуты ids, которые критически важны для рендеринга контента. Удаление этих данных делает перевод технически нерабочим."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружена критическая техническая ошибка: удаление ID в теге Instagram, что приведет к поломке функционала приложения. Также присутствуют типографические несоответствия в кавычках. Требуется исправить тег и привести все кавычки к немецкому стандарту „“."
+            },
+            "timings": {
+              "issues": 48649,
+              "deliberate": 6808,
+              "recommend": 20755
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/7",
+              "from": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen\"\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen\"\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen\"\">",
+              "to": "<stepper depth=\"„Ich bin nicht liebenswert“ und „Menschen kann man nicht vertrauen“\" intermediate=\"„Wenn ich die Initiative ergreife, werde ich abgelehnt“, „Nähe ist gefährlich“, „Besser auf Abstand zu bleiben, um keinen Schmerz zu fühlen“\" automatic=\"„Sie sucht sich jemand Besseren“, „Sie wird mich verlassen“, „Sie betrügt mich“, „Niemandem kann man vertrauen“\">"
+            },
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/4",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18040595774017860,18072414772851393\">"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Термин Grundüberzeugungen использован верно."
+              },
+              {
+                "path": "/description",
+                "verdict": "issue",
+                "note": "Пропущена важная часть про три категории убеждений в немецком тексте."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Метафора сохранена, звучит хорошо."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие „“, термины соблюдены."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Терминология KVT соблюдена."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Тег сохранен."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Вопрос сформулирован верно."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/description",
+                "fragment": "Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущено предложение о важности постепенного исследования всех уровней мышления (начиная с автоматических мыслей) для достижения благополучия.",
+                "was_why": "В оригинале это важный терапевтический посыл, объясняющий методологию. В переводе текст обрывается на перечислении категорий, теряя логическую связь с целью исследования."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "В переводе действительно отсутствует вторая половина предложения, содержащая ключевой терапевтический посыл о методологии (постепенном переходе от автоматических мыслей к глубоким уровням)."
+              }
+            ],
+            "notes": "Перевод страдает от серьезного пропуска важного смыслового блока в описании, что искажает логику и ценность контента для пользователя.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/description",
+                "current": "Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Außerdem erklären wir, warum es wichtig ist, schrittweise durch alle Ebenen des Denkens zu arbeiten – beginnend mit den automatischen Gedanken –, um nachhaltige emotionale Veränderungen zu erreichen.",
+                "proposed": "Wir widmen besonderen Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Zudem erklären wir, warum es wichtig ist, schrittweise alle Ebenen des Denkens zu erforschen – beginnend bei den automatischen Gedanken –, um den eigenen Zustand effektiv zu verändern und nachhaltig zu emotionalem Wohlbefinden zu gelangen.",
+                "alternatives": [
+                  "Wir widmen besonderen Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Wir schauen uns auch an, warum es wichtig ist, schrittweise alle Ebenen des Denkens zu untersuchen, angefangen bei den automatischen Gedanken, um den eigenen Zustand effektiv zu verändern und stetig zu emotionalem Wohlbefinden voranzukommen.",
+                  "Wir widmen besonderen Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit. Dabei erläutern wir auch, warum es wichtig ist, die verschiedenen Ebenen des Denkens schrittweise zu erforschen – angefangen bei den automatischen Gedanken –, um den eigenen Zustand effektiv zu verändern und dauerhaft zu emotionalem Wohlbefinden zu gelangen."
+                ],
+                "rationale": "В текущем переводе (tr) была допущена грамматическая ошибка (правильно: 'Wir widmen besonder**en** Aufmerksamkeit') и, согласно замечанию, текст был не совсем точен в передаче нюансов оригинала. Предложенный вариант исправляет падеж, точнее передает смысл 'исследовать уровни' (erforschen statt arbeiten) и полностью восстанавливает терапевтический посыл о связи изменений состояния и эмоционального благополучия, как в оригинале."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на высоком уровне, терминология (Grundüberzeugungen, Zwischenüberzeugungen) соблюдена идеально. Основная проблема заключалась в пропуске/неточности важного терапевтического посыла в описании и небольшой грамматической ошибке в падеже. После исправления описания текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 44175,
+              "deliberate": 4516,
+              "recommend": 36122
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/description",
+              "reason": "текст в файле не совпал с current из отчёта"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

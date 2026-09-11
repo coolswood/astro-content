@@ -19,7 +19,8 @@
       "Das Auto geht kaputt – wir ärgern uns.",
       "Die Geldbörse geht verloren – wir sind traurig.",
       "Die KVT betont jedoch: Zwischen Ereignis und Gefühl steht ein Vermittler – unsere Gedanken über das, was passiert ist.",
-      "Nicht das Ereignis an sich, sondern dessen Deutung formt unsere Gefühle."
+      "Nicht das Ereignis an sich, sondern dessen Deutung formt unsere Gefühle.",
+      "Nicht die Situation selbst bestimmt unsere Gefühle, sondern die Art und Weise, wie wir sie interpretieren."
     ]
   },
   "screen_2": {
@@ -58,23 +59,21 @@
   "screen_3": {
     "texts": [
       "Es gibt einen Ausweg – und genau darum geht es in der KVT.",
-      "Schauen wir uns einen Dialog zwischen Klient*in und Psycholog*in an, um genauer zu sehen, wie diese Triade wirkt:"
-    ],
-    "dialog": [
-      "Ich fühle mich ständig ängstlich. Ich habe das Gefühl, alles falsch zu machen, und denke, dass die anderen mich verurteilen.",
-      "Lassen Sie uns eine konkrete Situation betrachten. Was ist beim letzten Mal passiert, als Sie Angst gespürt haben?",
-      "Ich habe im Job präsentiert. Ich habe gezittert, die Stimme hat versagt. Es kam mir vor, als würden alle missbilligend schauen.",
-      "Welcher Gedanke kam Ihnen, bevor die Angst stärker wurde?",
-      "Vermutlich dachte ich: „Ich mache alles kaputt“, „Sie halten mich für dumm.“",
-      "Gut. Also: Gedanke – „Ich mache alles kaputt“. Gefühle: Angst, Sorge. Verhalten: Zittern, stockende Stimme.",
-      "Prüfen wir nun, wie stichhaltig dieser Gedanke ist.",
-      "Gab es konkrete Hinweise darauf, dass Sie wirklich alles ruiniert haben?",
-      "Nun … Die Präsentation war nicht perfekt, aber auch kein Reinfall. Kollegen haben sogar Fragen gestellt.",
-      "Also war der Gedanke „Ich mache alles kaputt“ übertrieben. Realistischer wäre: „Ich bin nervös, aber ich kann das schaffen.“",
-      "Und selbst wenn ich einen Fehler mache, heißt das nicht, dass ich dumm bin. Es heißt, ich bin ein Mensch und aufgeregt; außerdem habe ich noch wenig Erfahrung mit öffentlichen Auftritten.",
-      "Wenn Sie einen solchen unterstützenden Gedanken hätten – wie würden Sie sich fühlen und wie würden Sie sich verhalten?",
-      "Wahrscheinlich wäre ich ruhiger und würde selbstsicherer auftreten.",
-      "Genau!"
+      "Schauen wir uns einen Dialog zwischen Klient*in und Psycholog*in an, um genauer zu sehen, wie diese Triade wirkt:",
+      "<dialog>Ich fühle mich ständig ängstlich. Es kommt mir so vor, als würde ich alles falsch machen und als würden mich die Menschen um mich herum verurteilen.</dialog>",
+      "<dialog psy=\"true\">Lassen Sie uns eine konkrete Situation betrachten. Was ist das Letzte, was passiert ist, als Sie diese Angst gespürt haben?</dialog>",
+      "<dialog>Ich musste bei der Arbeit eine Präsentation halten. Ich habe gezittert und meine Stimme ist gebrochen. Es fühlte sich an, als würden alle mit verurteilenden Blicken auf mich schauen.</dialog>",
+      "<dialog psy=\"true\">Welcher Gedanke kam Ihnen in den Sinn, kurz bevor die Angst stärker wurde?</dialog>",
+      "<dialog>Wahrscheinlich habe ich gedacht: „Ich werde alles vermasseln“, „Die werden denken, dass ich dumm bin“.</dialog>",
+      "<dialog psy=\"true\">Gut. Also der Gedanke: „Ich werde alles vermasseln“. Die Emotionen: Angst, Furcht. Das Verhalten: Zittern, brüchige Stimme.</dialog>",
+      "<dialog psy=\"true\">Lassen Sie uns nun prüfen, wie zutreffend dieser Gedanke wirklich ist.</dialog>",
+      "<dialog psy=\"true\">Gab es tatsächliche Beweise dafür, dass Sie alles vermasselt haben?</dialog>",
+      "<dialog>Nun… Die Präsentation lief nicht perfekt, aber auch nicht katastrophal. Die Kollegen haben sogar Fragen gestellt.</dialog>",
+      "<dialog psy=\"true\">Das bedeutet, der Gedanke „Ich werde alles vermasseln“ war übertrieben. Realistischer wäre: „Ich bin nervös, aber ich kann das schaffen“.</dialog>",
+      "<dialog psy=\"true\">Und selbst wenn mir in der Präsentation ein Fehler unterläuft, bedeutet das nicht, dass ich dumm bin. Es bedeutet nur, dass ich ein Mensch bin und unter Stress stehe; zudem habe ich noch nicht viel Erfahrung mit öffentlichen Auftritten.</dialog>",
+      "<dialog psy=\"true\">Wenn Sie einen so hilfreichen Gedanken hätten, wie würden Sie sich dann fühlen und wie würden Sie sich verhalten?</dialog>",
+      "<dialog>Wahrscheinlich würde ich mich ruhiger fühlen und mich selbstbewusster verhalten.</dialog>",
+      "<dialog psy=\"true\">Genau so ist es!</dialog>"
     ]
   },
   "screen_4": {
