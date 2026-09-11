@@ -10,9 +10,11 @@
  * Порт логики scripts/lingo_proxy.py (качество которого подтверждено слепым
  * MQM-сравнением) + legacy-адаптер для старых браузерных провайдеров.
  *
- * ⚠️ ЖЁСТКОЕ ПРАВИЛО: к модели — строго один одновременный запрос.
- *    VllmClient держит глобальный мьютекс; раннер дополнительно обрабатывает
- *    языки строго последовательно.
+ * ⚠️ ЛИМИТ МОДЕЛИ: не более modelConcurrency (раннер ставит 3) одновременных
+ *    запросов — общий семафор всех VllmClient процесса; задачи (файл×язык)
+ *    раннер гонит пулом. Запросы уходят с пониженным приоритетом vLLM
+ *    (--scheduling-policy priority: больше = позже) — перевод не отбивает
+ *    канал у интерактивных потребителей модели.
  */
 import { loadPrompt } from './prompt-loader.js';
 import { loadGlossary } from './glossary-utils.js';
@@ -33,6 +35,8 @@ export interface StageRequest {
   maxTokens?: number;
   /** vLLM: response_format json_object (на ретраях битого JSON). */
   jsonMode?: boolean;
+  /** Перекрывает requestPriority клиента для этого запроса (0 = поле не слать). */
+  priority?: number;
 }
 
 export interface StageClient {
@@ -45,21 +49,46 @@ export interface StageClient {
 // vLLM (основной провайдер)
 // ─────────────────────────────────────────────────────────────────────────────
 
-/** Глобальный мьютекс: один запрос к модели единовременно, остальные ждут. */
-let modelChain: Promise<unknown> = Promise.resolve();
-function enqueueModelCall<T>(fn: () => Promise<T>): Promise<T> {
-  const run = modelChain.then(fn, fn);
-  modelChain = run.catch(() => {});
-  return run;
+/**
+ * Глобальный шлюз к модели: не более modelConcurrency одновременных запросов.
+ * Общий для всех VllmClient процесса. Дефолт 1 (судья и QA-инструменты ходят
+ * по одному); раннер поднимает лимит через setModelConcurrency.
+ */
+let modelConcurrency = 1;
+let inFlight = 0;
+const waiters: (() => void)[] = [];
+
+export function setModelConcurrency(n: number): void {
+  modelConcurrency = Math.max(1, Math.floor(n));
+}
+
+async function acquireModelSlot(): Promise<void> {
+  while (inFlight >= modelConcurrency) {
+    await new Promise<void>((resolve) => waiters.push(resolve));
+  }
+  inFlight++;
+}
+
+function releaseModelSlot(): void {
+  inFlight = Math.max(0, inFlight - 1);
+  waiters.shift()?.();
 }
 
 export class VllmClient implements StageClient {
   name = 'vllm';
 
+  /**
+   * @param requestPriority приоритет запросов в очереди vLLM. Сервер запущен
+   * с --scheduling-policy priority, семантика из его protocol.py: «lower means
+   * earlier handling». Перевод — фоновая работа: ходит с приоритетом >0
+   * (позже), чтобы интерактивные потребители модели обгоняли его. 0 — поле
+   * не отправляется (совместимо с серверами без priority-scheduling).
+   */
   constructor(
     private endpoint: string,
     private model: string,
     private timeoutMs = 600_000,
+    private requestPriority = 0,
   ) {}
 
   /** Быстрая проверка доступности модели до начала любых изменений файлов. */
@@ -106,12 +135,16 @@ export class VllmClient implements StageClient {
       max_tokens: req.maxTokens ?? 16_384,
     };
     if (req.jsonMode) body.response_format = { type: 'json_object' };
+    const priority = req.priority ?? this.requestPriority;
+    if (priority !== 0) body.priority = priority;
 
-    // Транспортные ретраи (5xx/сеть) — с паузой; логика конвейера ретраит выше.
+    // Транспортные ретраи (5xx/сеть) — с паузой; слот шлюза на время паузы
+    // не держится (освобождается между попытками).
     let lastError: unknown = null;
     for (let attempt = 1; attempt <= 3; attempt++) {
       try {
-        return await enqueueModelCall(async () => {
+        await acquireModelSlot();
+        try {
           const resp = await fetch(`${this.endpoint}/chat/completions`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -128,7 +161,9 @@ export class VllmClient implements StageClient {
             throw new Error(`Пустой ответ модели: ${text.slice(0, 300)}`);
           }
           return content;
-        });
+        } finally {
+          releaseModelSlot();
+        }
       } catch (e: any) {
         lastError = e;
         if (attempt < 3) {

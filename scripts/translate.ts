@@ -17,6 +17,8 @@
  *   --retries N               ретраев на язык (по умолчанию 2; со 2-й попытки json_mode)
  *   --retranslate-changed=X   перезаписывать переводы изменившихся ru-строк (по умолчанию true)
  *   --provider vllm|chatgpt|claude|gemini|mistral   (по умолчанию vllm; остальные — legacy CDP)
+ *   --concurrency N           одновременных запросов к модели (по умолчанию 3)
+ *   --priority N              приоритет в очереди vLLM: больше = позже (по умолчанию 10)
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *
  * Требует поднятого туннеля к vLLM (для провайдера vllm):
@@ -35,6 +37,7 @@ import {
   createLegacyClient,
   buildStagePrompts,
   runPipeline,
+  setModelConcurrency,
   type StageClient,
 } from './lib/pipeline.js';
 import { TranslationState, type ScopeState } from './lib/state.js';
@@ -67,6 +70,10 @@ interface Config {
   statePath: string;
   retries: number;
   requestTimeoutMs: number;
+  /** Одновременных запросов к модели (общий семафор VllmClient). */
+  concurrency: number;
+  /** Приоритет запросов в очереди vLLM: больше = позже (перевод — фон). */
+  requestPriority: number;
 }
 
 async function loadConfig(): Promise<Config> {
@@ -80,6 +87,8 @@ async function loadConfig(): Promise<Config> {
     statePath: file.statePath ?? 'scripts/translation-state.json',
     retries: file.retries ?? 2,
     requestTimeoutMs: file.requestTimeoutMs ?? 600_000,
+    concurrency: file.concurrency ?? 3,
+    requestPriority: file.requestPriority ?? 10,
   };
   if (process.env.TRANSLATE_ENDPOINT) cfg.endpoint = process.env.TRANSLATE_ENDPOINT;
   if (process.env.TRANSLATE_MODEL) cfg.model = process.env.TRANSLATE_MODEL;
@@ -104,6 +113,8 @@ interface Args {
   model?: string;
   statePath?: string;
   psyDir?: string;
+  concurrency?: number;
+  priority?: number;
 }
 
 function parseBoolFlag(raw: string | undefined, defaultValue: boolean): boolean {
@@ -120,6 +131,12 @@ function parseRetries(raw: string | undefined): number {
   if (raw === undefined) return Number.NaN;
   const n = parseInt(raw, 10);
   return Number.isNaN(n) ? Number.NaN : n;
+}
+
+function parseIntFlag(raw: string | undefined): number | undefined {
+  if (raw === undefined) return undefined;
+  const n = parseInt(raw, 10);
+  return Number.isNaN(n) ? undefined : n;
 }
 
 function parseArgs(): Args {
@@ -156,6 +173,8 @@ function parseArgs(): Args {
     model: flags.model,
     statePath: flags.state,
     psyDir: flags['psy-dir'],
+    concurrency: parseIntFlag(flags.concurrency),
+    priority: parseIntFlag(flags.priority),
   };
 }
 
@@ -198,6 +217,8 @@ interface RunCtx {
   args: Args;
   retries: number;
   langs: string[];
+  /** Воркеров пула (и одновременных запросов к модели). */
+  concurrency: number;
 }
 
 /** Проблемы валидации в читаемый лог. */
@@ -395,8 +416,9 @@ async function runContent(ctx: RunCtx): Promise<number> {
   }
   await ctx.state.save();
 
-  // 4. Перевод: последовательно файл → язык (к модели — один запрос).
-  let failures = 0;
+  // 4. Перевод: пул воркеров по задачам файл×язык; лимит одновременных
+  // запросов к модели держит семафор VllmClient, воркеров — не больше concurrency.
+  const tasks: Array<{ item: ContentItem; lang: string; todo: string[] }> = [];
   for (const item of items) {
     for (const lang of ctx.langs) {
       const todo = keysToTranslate(item.perLang[lang], args.full, Object.keys(item.ruLeaves));
@@ -404,7 +426,18 @@ async function runContent(ctx: RunCtx): Promise<number> {
         console.log(`⏭  ${lang} ${item.relPath}: актуально`);
         continue;
       }
-      console.log(`\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}) ${item.relPath}: ключей к переводу ${todo.length}`);
+      tasks.push({ item, lang, todo });
+    }
+  }
+
+  let failures = 0;
+  let cursor = 0;
+  const worker = async (): Promise<void> => {
+    while (cursor < tasks.length) {
+      const { item, lang, todo } = tasks[cursor++]!;
+      console.log(
+        `\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}) ${item.relPath}: ключей к переводу ${todo.length}`,
+      );
 
       const payload = buildSubtree(item.ruJson, todo);
       const sentLeaves: Leaves = {};
@@ -425,7 +458,8 @@ async function runContent(ctx: RunCtx): Promise<number> {
       await ctx.state.save();
       console.log(`   💾 Записано ${Object.keys(translated).length} ключей → ${path.relative(ROOT, targetPath)}`);
     }
-  }
+  };
+  await Promise.all(Array.from({ length: Math.min(ctx.concurrency, tasks.length) }, worker));
   return failures;
 }
 
@@ -537,53 +571,63 @@ async function runUi(ctx: RunCtx): Promise<number> {
   await ctx.state.save();
 
   let failures = 0;
+  const uiTasks: Array<{ lang: string; todo: string[] }> = [];
   for (const lang of ctx.langs) {
     const todo = keysToTranslate(perLang[lang], args.full, canon.realKeys);
     if (todo.length === 0) {
       console.log(`⏭  ${lang}: актуально`);
       continue;
     }
-    console.log(`\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): ключей к переводу ${todo.length}`);
-
-    // Источник: ключи + @-мета как контекст (как в translate-arb).
-    const todoSet = new Set(todo);
-    const payload: Record<string, any> = {};
-    for (const key of todo) {
-      payload[key] = canon.values[key];
-      const meta = canon.meta[`@${key}`];
-      if (meta !== undefined) payload[`@${key}`] = meta;
-    }
-    const sentLeaves: Leaves = {};
-    for (const key of todo) sentLeaves[key] = canon.values[key];
-
-    const translated = await translateWithRetries(ctx, lang, 'keys', payload, sentLeaves);
-    if (!translated) {
-      failures++;
-      continue;
-    }
-
-    // Запись в ARB: канонический порядок, @@locale сохраняем/создаём,
-    // @-мета переносится только с placeholders (конвенция cognitive_psy).
-    const targetPath = arbFilePath(psyDir, lang);
-    const target = await readArbTarget(psyDir, lang);
-    if (!('@@locale' in target)) target['@@locale'] = lang;
-    let written = 0;
-    for (const key of canon.realKeys) {
-      if (!todoSet.has(key)) continue;
-      const value = translated[key];
-      if (typeof value !== 'string') continue;
-      target[key] = value;
-      written++;
-      const meta = canon.meta[`@${key}`];
-      if (meta && meta.placeholders) {
-        target[`@${key}`] = { placeholders: meta.placeholders };
-      }
-    }
-    await writeJsonAtomic(targetPath, target);
-    ctx.state.markTranslated(scope, sentLeaves);
-    await ctx.state.save();
-    console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, targetPath)}`);
+    uiTasks.push({ lang, todo });
   }
+
+  let cursor = 0;
+  const worker = async (): Promise<void> => {
+    while (cursor < uiTasks.length) {
+      const { lang, todo } = uiTasks[cursor++]!;
+      console.log(`\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): ключей к переводу ${todo.length}`);
+
+      // Источник: ключи + @-мета как контекст (как в translate-arb).
+      const todoSet = new Set(todo);
+      const payload: Record<string, any> = {};
+      for (const key of todo) {
+        payload[key] = canon.values[key];
+        const meta = canon.meta[`@${key}`];
+        if (meta !== undefined) payload[`@${key}`] = meta;
+      }
+      const sentLeaves: Leaves = {};
+      for (const key of todo) sentLeaves[key] = canon.values[key];
+
+      const translated = await translateWithRetries(ctx, lang, 'keys', payload, sentLeaves);
+      if (!translated) {
+        failures++;
+        continue;
+      }
+
+      // Запись в ARB: канонический порядок, @@locale сохраняем/создаём,
+      // @-мета переносится только с placeholders (конвенция cognitive_psy).
+      const targetPath = arbFilePath(psyDir, lang);
+      const target = await readArbTarget(psyDir, lang);
+      if (!('@@locale' in target)) target['@@locale'] = lang;
+      let written = 0;
+      for (const key of canon.realKeys) {
+        if (!todoSet.has(key)) continue;
+        const value = translated[key];
+        if (typeof value !== 'string') continue;
+        target[key] = value;
+        written++;
+        const meta = canon.meta[`@${key}`];
+        if (meta && meta.placeholders) {
+          target[`@${key}`] = { placeholders: meta.placeholders };
+        }
+      }
+      await writeJsonAtomic(targetPath, target);
+      ctx.state.markTranslated(scope, sentLeaves);
+      await ctx.state.save();
+      console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, targetPath)}`);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(ctx.concurrency, uiTasks.length) }, worker));
   return failures;
 }
 
@@ -595,6 +639,8 @@ async function main(): Promise<number> {
   const cfg = await loadConfig();
   const args = parseArgs();
   const retries = Number.isNaN(args.retries) ? cfg.retries : args.retries;
+  const concurrency = Math.max(1, args.concurrency ?? cfg.concurrency);
+  const requestPriority = args.priority ?? cfg.requestPriority;
 
   // Локали: канонический список, порядок детерминирован.
   const requested = args.langs ?? cfg.targetLocales ?? [...ALL_TARGET_LANGS];
@@ -606,7 +652,9 @@ async function main(): Promise<number> {
   const langs = [...requested];
 
   console.log(`🌍 Режим: ${args.ui ? 'UI (cognitive_psy ARB)' : `контент src/i18n/ru/${args.fileArg}`}`);
-  console.log(`🔧 Провайдер: ${args.provider}${args.provider === 'vllm' ? ` (${cfg.endpoint}, модель ${args.model ?? cfg.model})` : ' (LEGACY CDP)'}`);
+  console.log(
+    `🔧 Провайдер: ${args.provider}${args.provider === 'vllm' ? ` (${cfg.endpoint}, модель ${args.model ?? cfg.model}, потоков ${concurrency}, приоритет ${requestPriority})` : ' (LEGACY CDP)'}`,
+  );
   console.log(`🗣 Локали (${langs.length}): ${langs.join(', ')}`);
   if (args.dryRun) console.log('🔍 DRY-RUN: только анализ — модель не вызывается, файлы не меняются.');
   if (args.full) console.log('♻️ Режим --full: переводим всё заново, игнорируя инкрементальность.');
@@ -615,7 +663,8 @@ async function main(): Promise<number> {
 
   let client: StageClient;
   if (args.provider === 'vllm') {
-    const vllm = new VllmClient(args.endpoint ?? cfg.endpoint, args.model ?? cfg.model, cfg.requestTimeoutMs);
+    setModelConcurrency(concurrency);
+    const vllm = new VllmClient(args.endpoint ?? cfg.endpoint, args.model ?? cfg.model, cfg.requestTimeoutMs, requestPriority);
     if (!args.dryRun) {
       await vllm.preflight(); // fail-fast до любых изменений файлов
       console.log('✅ Модель доступна.');
@@ -633,7 +682,7 @@ async function main(): Promise<number> {
     return 2;
   }
 
-  const ctx: RunCtx = { client, state, cfg, args, retries, langs };
+  const ctx: RunCtx = { client, state, cfg, args, retries, langs, concurrency };
   const failures = args.ui ? await runUi(ctx) : await runContent(ctx);
 
   await client.close?.();

@@ -1,5 +1,5 @@
 {
-  "$comment": "Конфигурация scripts/translate.ts. Всё переопределяется env (TRANSLATE_ENDPOINT, TRANSLATE_MODEL, TRANSLATE_STATE_PATH, COGNITIVE_PSY_DIR) и флагами CLI (--endpoint, --model, --state, --psy-dir). targetLocales: null = все 18 канонических локалей из scripts/lib/lang-codes.ts.",
+  "$comment": "Конфигурация scripts/translate.ts. Всё переопределяется env (TRANSLATE_ENDPOINT, TRANSLATE_MODEL, TRANSLATE_STATE_PATH, COGNITIVE_PSY_DIR) и флагами CLI (--endpoint, --model, --state, --psy-dir, --concurrency, --priority). targetLocales: null = все 18 канонических локалей из scripts/lib/lang-codes.ts. concurrency — одновременных запросов к модели (общий семафор VllmClient; сервер vLLM держит --max-num-seqs 8). requestPriority — приоритет в очереди vLLM (--scheduling-policy priority: МЕНЬШЕ = раньше), перевод ходит с >0, чтобы не отбивать канал у интерактивных потребителей.",
   "sourceLocale": "ru",
   "targetLocales": null,
   "psyDir": "",
@@ -7,5 +7,7 @@
   "model": "google/gemma-4-26B-A4B-it",
   "statePath": "scripts/translation-state.json",
   "retries": 2,
-  "requestTimeoutMs": 600000
+  "requestTimeoutMs": 600000,
+  "concurrency": 3,
+  "requestPriority": 10
 }

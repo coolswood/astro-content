@@ -29,10 +29,14 @@ lingo.dev) удалены — их заменил единый раннер.
   сохранены в `scripts/lib/providers/` с пометкой LEGACY, доступны через
   `--provider chatgpt|claude|gemini|mistral`, не развиваются.
 
-## ⚠️ Жёсткое правило
+## ⚠️ Лимит модели
 
-**К модели — строго 1 одновременный запрос.** gx10 перегружается от параллельных.
-Раннер соблюдает это сам (мьютекс в `VllmClient` + последовательная обработка).
+**К модели — не более `concurrency` (по умолчанию 3) одновременных запросов.**
+Раннер держит общий семафор в `VllmClient` (по умолчанию жёсткий 1 — судья и
+QA-инструменты ходят по одному) и гонит задачи файл×язык пулом воркеров.
+Запросы уходят с **пониженным приоритетом** (`requestPriority`, по умолчанию 10):
+vLLM запущен с `--scheduling-policy priority`, где *меньше = раньше*, поэтому
+интерактивные потребители модели обгоняют перевод, а каналом перевод не владеет.
 
 ## Туннель к модели
 
@@ -56,6 +60,9 @@ bun scripts/translate.ts --ui --dry-run
 # Перевести контент-файл (или каталог) на все языки / на один
 bun scripts/translate.ts story/start.json
 bun scripts/translate.ts story/automatic.json --langs ja,ko
+bun scripts/translate.ts story --concurrency 3        # 3 параллельных запроса (по умолчанию)
+bun scripts/translate.ts story --concurrency 1        # осторожно, как раньше — по одному
+bun scripts/translate.ts story --priority 0           # приоритет как у всех (по умолчанию 10, фон)
 
 # Доперевести/обновить интерфейс cognitive_psy
 bun scripts/translate.ts --ui

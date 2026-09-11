@@ -27,6 +27,9 @@ export function hashLeaf(value: string): string {
 }
 
 export class TranslationState {
+  /** Цепочка последовательных записей: save() из параллельных воркеров не перемежается. */
+  private saveChain: Promise<void> = Promise.resolve();
+
   private constructor(
     private filePath: string,
     private data: StateFile,
@@ -95,11 +98,15 @@ export class TranslationState {
     return removed;
   }
 
-  /** Атомарно пишет state на диск (только если были изменения). */
+  /** Атомарно пишет state на диск (только если были изменения); вызовы выстраиваются в очередь. */
   async save(): Promise<void> {
-    if (!this.dirty) return;
-    await fs.mkdir(path.dirname(path.resolve(this.filePath)), { recursive: true });
-    await writeJsonAtomic(this.filePath, this.data);
-    this.dirty = false;
+    const run = this.saveChain.then(async () => {
+      if (!this.dirty) return;
+      await fs.mkdir(path.dirname(path.resolve(this.filePath)), { recursive: true });
+      await writeJsonAtomic(this.filePath, this.data);
+      this.dirty = false;
+    });
+    this.saveChain = run.catch(() => {}); // цепочка не рвётся на ошибке одной записи
+    return run;
   }
 }
