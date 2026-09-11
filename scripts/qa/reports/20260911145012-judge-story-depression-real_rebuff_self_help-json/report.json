@@ -1,0 +1,3219 @@
+{
+  "file": "story/depression/real_rebuff_self_help.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ja",
+      "converged": false,
+      "totalApplied": 17,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/real/title",
+                "verdict": "ok",
+                "note": "Переведено хорошо, сохранена интрига"
+              },
+              {
+                "path": "/real/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология соблюдена"
+              },
+              {
+                "path": "/real/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный тон"
+              },
+              {
+                "path": "/real/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/real/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смягчение тона выполнено правильно"
+              },
+              {
+                "path": "/real/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/real/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Красивая литературная адаптация цитаты"
+              },
+              {
+                "path": "/real/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/real/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Терминология и смысл верны"
+              },
+              {
+                "path": "/real/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/real/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'оправданы' через '理にかなった'"
+              },
+              {
+                "path": "/real/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/real/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Хороший ритм и тон"
+              },
+              {
+                "path": "/real/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Кратко и верно"
+              },
+              {
+                "path": "/real/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/real/screen_2/texts/9",
+                "verdict": "issue",
+                "note": "Обнаружен фрагмент английского текста в японском переводе"
+              },
+              {
+                "path": "/real/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология верна"
+              },
+              {
+                "path": "/real/test/question",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/real/test/answers/0",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/test/answers/1",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/test/answers/2",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/test/answers/3",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/real/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/real/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Соблюдена терминология и мягкий тон"
+              },
+              {
+                "path": "/real/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/real/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/real/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Отличная адаптация технической метафоры"
+              },
+              {
+                "path": "/real/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/rebuff/title",
+                "verdict": "ok",
+                "note": "Хороший заголовок"
+              },
+              {
+                "path": "/rebuff/description",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тон соответствует"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Тег без изменений, это норма"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод естественный, тон наставника соблюден."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Терминология (認知の歪み) верна."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл и терминология соблюдены."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод понятный и вежливый."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Цитата адаптирована корректно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Инструкция звучит естественно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, соответствует правилам."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Пример переведен адекватно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Сложное предложение переведено с сохранением логики."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Терминология (過度の一般化, 破局視) верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Цитата звучит глубоко и естественно."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод эмоционально точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/7",
+                "verdict": "issue",
+                "note": "Огромное добавление (addition): перевод содержит целую часть текста, которой нет в оригинале."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/8",
+                "verdict": "mistranslation",
+                "note": "Смысл полностью искажен: в оригинале пример ответа, в переводе — общие слова о пользе инструмента."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/9",
+                "verdict": "mistranslation",
+                "note": "Смысл искажен: оригинал про вероятность поверить в ответ, перевод — про использование инструмента."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/10",
+                "verdict": "mistranslation",
+                "note": "Смысл искажен: оригинал — призыв использовать инструмент, перевод — описание процесса привыкания."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/11",
+                "verdict": "mistranslation",
+                "note": "Смысл искажен: оригинал — про легкость нахождения ответа, перевод — про привыкание к инструменту."
+              },
+              {
+                "path": "/self_help/title",
+                "verdict": "ok",
+                "note": "Хорошая адаптация заголовка."
+              },
+              {
+                "path": "/self_help/description",
+                "verdict": "ok",
+                "note": "Стиль соответствует описанию статьи."
+              },
+              {
+                "path": "/self_help/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод передает атмосферу оригинала."
+              },
+              {
+                "path": "/self_help/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Терминология и стиль верны."
+              },
+              {
+                "path": "/self_help/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Тон профессиональный и поддерживающий."
+              },
+              {
+                "path": "/self_help/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон вежливый (Desu/Masu), терминология соблюдена."
+              },
+              {
+                "path": "/self_help/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Библиотерапия адаптирована хорошо, смысл передан верно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Название книги адаптировано под существующий японский перевод, что является хорошим тоном."
+              },
+              {
+                "path": "/self_help/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный."
+              },
+              {
+                "path": "/self_help/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Термины и группы переведены корректно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Хорошая адаптация: вместо тяжелой конструкции «играли роль контрольной группы» использовано естественное «対照群としての役割を果たしました»."
+              },
+              {
+                "path": "/self_help/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Профессиональная терминология (BDI, HAM-D) использована верно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Согласно конвенции, атрибуты Instagram удалены, это норма."
+              },
+              {
+                "path": "/self_help/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл и цифры сохранены."
+              },
+              {
+                "path": "/self_help/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный окрас сохранен."
+              },
+              {
+                "path": "/self_help/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Логика исследования передана верно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Стиль соответствует контексту."
+              },
+              {
+                "path": "/self_help/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Стиль естественный, смысл передан."
+              },
+              {
+                "path": "/self_help/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/self_help/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Терминология КПТ соблюдена."
+              },
+              {
+                "path": "/self_help/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Использование '気づき' вместо 'インサイト' — отличная адаптация согласно гайдлайнам."
+              },
+              {
+                "path": "/self_help/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Тон вежливый, использование кавычек 「 」 корректно."
+              },
+              {
+                "path": "/self_help/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод естественный, без канцелярита."
+              },
+              {
+                "path": "/self_help/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Метафора '泥沼' (трясина/болото) для 'тупика' звучит очень по-японски и уместно."
+              },
+              {
+                "path": "/self_help/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Очень качественная литературная адаптация, сохраняющая эмпатию."
+              },
+              {
+                "path": "/self_help/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Тон поддерживающий и деликатный, соответствует ToV."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/real/screen_2/texts/9",
+                "fragment": "And, it is always associated with a loss of self-esteem.",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Вставка английского текста в японский перевод",
+                "why": "Это технический мусор/ошибка копирования, который ломает погружение пользователя и выглядит как незавершенный перевод."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/rebuff/screen_3/texts/7",
+                "fragment": "それに、試験に向けて準備もしているし、これまでの経験から考えても、少なくとも合格点は取れるはずだ。もし一度でダメでも、再試験に向けてしっかり準備して、次は合格すればいいだけだ。",
+                "type": "addition",
+                "severity": "major",
+                "problem": "В перевод добавлено много текста, которого нет в оригинале (про подготовку к экзамену и пересдачу).",
+                "why": "Это нарушает соответствие между источником и переводом, создавая избыточность."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/rebuff/screen_3/texts/8",
+                "fragment": "このような適応的な思考は、より現実味があり、あなた自身が受け入れられる可能性がずっと高いものです。",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Текст перевода не соответствует смыслу оригинала.",
+                "why": "Оригинал — это продолжение примера («Тем более, я готовлюсь...»), а перевод — это обобщающее утверждение о пользе адаптивных мыслей. Смысловая связь потеряна."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/rebuff/screen_3/texts/9",
+                "fragment": "このツールを日常的に使い、ネガティブな思い込みに対抗しながら、自分の思考を定期的に記録していきましょう。",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Смысл полностью подменен.",
+                "why": "Оригинал говорит о том, что рациональный ответ правдоподобен и в него легче поверить. Перевод же превратился в призыв к регулярному использованию инструмента. Это критическая ошибка, меняющая суть сообщения."
+              },
+              {
+                "id": "c2-I4",
+                "path": "/rebuff/screen_3/texts/10",
+                "fragment": "続けていくうちに、適応的な思考を見つけることがどんどん楽になっていくことに気づくはずです。そして何より、気分や自分自身への向き合い方が変わっていくのを実感できるでしょう。",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Смысл подменен.",
+                "why": "Оригинал — это инструкция («Используйте этот инструмент...»), а перевод — это описание ожидаемого эффекта от долгосрочного использования. Это разные по интенции предложения."
+              },
+              {
+                "id": "c2-I5",
+                "path": "/rebuff/screen_3/texts/11",
+                "fragment": "時間をかけていくうちに、適応的な思考を見つけることが、少しずつ楽になっていくことに気づくはずです。しかし、何よりも大切なのは、ご自身の気分や、自分自身に対する向き合い方に変化が現れてくることです。",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Смысл подменен.",
+                "why": "Оригинал говорит о том, что находить ответы станет легче и изменится настроение. Перевод же смещает акцент на процесс привыкания к инструменту, хотя в оригинале акцент на результате (изменении состояния). Хотя здесь ошибка менее выражена, чем в предыдущих, она идет в рамках системного искажения смысла в этом блоке."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Technical error: English text left in the Japanese translation."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The translator hallucinated extra content in the example to make it sound more natural, but it deviates from the source."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c2-I1"
+                ],
+                "note": "The translator failed to maintain the link between the example and the conclusion. I1 and I2 are part of the same broken logic chain."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c2-I2",
+                  "c2-I4",
+                  "c2-I5"
+                ],
+                "note": "Systemic mistranslation: the translator replaced the actual meaning (plausibility of the answer) with a generic call to action/description of benefits across several segments."
+              },
+              {
+                "id": "c2-I4",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c2-I3",
+                  "c2-I5"
+                ],
+                "note": "Systemic mistranslation: intent changed from instruction to description of effect."
+              },
+              {
+                "id": "c2-I5",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c2-I3",
+                  "c2-I4"
+                ],
+                "note": "Systemic mistranslation: part of the same block where the core message was replaced by a generic summary."
+              }
+            ],
+            "notes": "The translation suffers from a severe systemic issue in the '/rebuff/screen_3/' section, where the translator abandoned the source meaning in favor of writing a generic concluding summary. Additionally, a critical technical error (English text) was found.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/real/screen_2/texts/9",
+                "current": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。And, it is always associated with a loss of self-esteem. そして、それは常に「自分には価値がない」という感覚を伴います。",
+                "proposed": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。そして、それは常に「自分には価値がない」という感覚を伴います。",
+                "alternatives": [],
+                "rationale": "Удаление английского фрагмента, который является техническим мусором и нарушает целостность текста."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 2,
+                "path": "/rebuff/screen_3/texts/8",
+                "current": "このような適応的な思考は、より現実味があり、あなた自身が受け入れられる可能性がずっと高いものです。",
+                "proposed": "それに、私は試験に向けて準備もしていますし、おそらく少なくとも合格点は取れるはずです。もし一度でダメでも、再試験に向けてしっかり準備して、次は合格すればいいだけですから。",
+                "alternatives": [],
+                "rationale": "В оригинале это продолжение примера (фрагмент мысли), а не обобщение. Нужно вернуть текст к формату прямой речи/мысли, чтобы сохранить логику примера, даже если в предыдущем сегменте (c2-I1) переводчик добавил лишнего. Мы исправляем логическую цепочку."
+              },
+              {
+                "id": "c2-I3",
+                "priority": 3,
+                "path": "/rebuff/screen_3/texts/9",
+                "current": "このツールを日常的に使い、ネガティブな思い込みに対抗しながら、自分の思考を定期的に記録していきましょう。",
+                "proposed": "このような合理的な回答はより説得力があり、それを信じられる可能性もずっと高いものです。",
+                "alternatives": [],
+                "rationale": "Оригинал говорит о правдоподобности ответа, а не призывает к использованию инструмента. Исправляем подмену смысла."
+              },
+              {
+                "id": "c2-I4",
+                "priority": 4,
+                "path": "/rebuff/screen_3/texts/10",
+                "current": "続けていくうちに、適応的な思考を見つけることがどんどん楽になっていくことに気づくはずです。そして何より、気分や自分自身への向き合い方が変わっていくのを実感できるでしょう。",
+                "proposed": "日々の生活の中でこのツールを活用し、定期的に自分の思考を記録しながら、ネガティブな思い込みに対抗していきましょう。",
+                "alternatives": [],
+                "rationale": "Оригинал — это инструкция (CTA), а не описание эффекта. Возвращаем императивный/призывающий тон."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 5,
+                "path": "/rebuff/screen_3/texts/7",
+                "current": "例えば、次のように書くことができます。「実際、私はバカではない。これまでの実績もあるし、大学にも自力で入学し、成績もそれなりに取れている。もちろん、うまくいかないこともあるけれど、人間なのだから間違いを犯すこともある。それは私がバカだということではない。それに、試験に向けて準備もしているし、これまでの経験から考えても、少なくとも合格点は取れるはずだ。もし一度でダメでも、再試験に向けてしっかり準備して、次は合格すればいいだけだ。」",
+                "proposed": "例えば、次のように書くことができます。「実際、私はバカではない。これまでの実績もあるし、大学にも自力で入学し、成績もそれなりに取れている。もちろん、うまくいかないこともあるけれど、人間なのだから間違いを犯すこともある。それは私がバカだということではない。」",
+                "alternatives": [],
+                "rationale": "Удаление галлюцинаций переводчика. Текст стал слишком длинным и уходит в сторону от оригинала, хотя сам пример в русске был короче."
+              },
+              {
+                "id": "c2-I5",
+                "priority": 6,
+                "path": "/rebuff/screen_3/texts/11",
+                "current": "時間をかけていくうちに、適応的な思考を見つけることが、少しずつ楽になっていくことに気づくはずです。しかし、何よりも大切なのは、ご自身の気分や、自分自身に対する向き合い方に変化が現れてくることです。",
+                "proposed": "時間が経つにつれて、合理的な回答を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。",
+                "alternatives": [],
+                "rationale": "Хотя смысл здесь ближе к оригиналу, чем в других ошибках, текст нужно подтянуть под общий стиль исправленного блока, чтобы избежать избыточной 'литературности' там, где оригинал более прямой."
+              }
+            ],
+            "overall": {
+              "score": 65,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружены критические ошибки: наличие английского текста в японском поле, серьезные смысловые подмены (замена инструкций описанием эффектов) и 'галлюцинации' (добавление лишнего текста в примеры). Требуется полная переработка финального блока статьи (rebuff/screen_3), так как логическая цепочка полностью разрушена."
+            },
+            "timings": {
+              "issues": 135170,
+              "deliberate": 12450,
+              "recommend": 39251
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_2/texts/9",
+              "from": "対してうつ状態はより長く続き、症状が強まることもあります。一日の大半を占め、少なくとも2週間以上は続きます。暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。And, it is always associated with a loss of self-esteem. そして、それは常に「自分には価値がない」という感覚を伴います。",
+              "to": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。そして、それは常に「自分には価値がない」という感覚を伴います。"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/rebuff/screen_3/texts/8",
+              "from": "このような適応的な思考は、より現実味があり、あなた自身が受け入れられる可能性がずっと高いものです。",
+              "to": "それに、私は試験に向けて準備もしていますし、おそらく少なくとも合格点は取れるはずです。もし一度でダメでも、再試験に向けてしっかり準備して、次は合格すればいいだけですから。"
+            },
+            {
+              "id": "c2-I3",
+              "path": "/rebuff/screen_3/texts/9",
+              "from": "このツールを日常的に使い、ネガティブな思い込みに対抗しながら、自分の思考を定期的に記録していきましょう。",
+              "to": "このような合理的な回答はより説得力があり、それを信じられる可能性もずっと高いものです。"
+            },
+            {
+              "id": "c2-I4",
+              "path": "/rebuff/screen_3/texts/10",
+              "from": "続けていくうちに、適応的な思考を見つけることがどんどん楽になっていくことに気づくはずです。そして何より、気分や自分自身への向き合い方が変わっていくのを実感できるでしょう。",
+              "to": "日々の生活の中でこのツールを活用し、定期的に自分の思考を記録しながら、ネガティブな思い込みに対抗していきましょう。"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/rebuff/screen_3/texts/7",
+              "from": "例えば、次のように書くことができます。「実際、私はバカではない。これまでの実績もあるし、大学にも自力で入学し、成績もそれなりに取れている。もちろん、うまくいかないこともあるけれど、人間なのだから間違いを犯すこともある。それは私がバカだということではない。それに、試験に向けて準備もしているし、これまでの経験から考えても、少なくとも合格点は取れるはずだ。もし一度でダメでも、再試験に向けてしっかり準備して、次は合格すればいいだけだ。」",
+              "to": "例えば、次のように書くことができます。「実際、私はバカではない。これまでの実績もあるし、大学にも自力で入学し、成績もそれなりに取れている。もちろん、うまくいかないこともあるけれど、人間なのだから間違いを犯すこともある。それは私がバカだということではない。」"
+            },
+            {
+              "id": "c2-I5",
+              "path": "/rebuff/screen_3/texts/11",
+              "from": "時間をかけていくうちに、適応的な思考を見つけることが、少しずつ楽になっていくことに気づくはずです。しかし、何よりも大切なのは、ご自身の気分や、自分自身に対する向き合い方に変化が現れてくることです。",
+              "to": "時間が経つにつれて、合理的な回答を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/real/title",
+                "verdict": "ok",
+                "note": "Передано смысл и тон"
+              },
+              {
+                "path": "/real/description",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, терминология соблюдена"
+              },
+              {
+                "path": "/real/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный стиль"
+              },
+              {
+                "path": "/real/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/real/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тон деликатный, смысл сохранен"
+              },
+              {
+                "path": "/real/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/real/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан"
+              },
+              {
+                "path": "/real/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Красивая литературная адаптация цитаты"
+              },
+              {
+                "path": "/real/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/real/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/real/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/real/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология верная"
+              },
+              {
+                "path": "/real/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Стиль соответствует"
+              },
+              {
+                "path": "/real/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан"
+              },
+              {
+                "path": "/real/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_2/texts/9",
+                "verdict": "issue",
+                "note": "Пропущено важное предложение об отсутствии радости и потере цвета жизни (хотя в середине есть намек, структура нарушена)"
+              },
+              {
+                "path": "/real/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология верная"
+              },
+              {
+                "path": "/real/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Соблюдены правила адаптации (анти-калька)"
+              },
+              {
+                "path": "/real/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Хорошая адаптация метафоры"
+              },
+              {
+                "path": "/real/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/rebuff/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/rebuff/description",
+                "verdict": "ok",
+                "note": "Терминология и стиль в норме"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Терминология верная"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено естественно, тон наставника соблюден."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Терминология (認知の歪み) верна."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Терминология (適応的な思考) верна, синтаксис естественный."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Цитата адаптирована хорошо."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Тон вежливый и эмпатичный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Очень хорошая смысловая адаптация, объясняющая нюанс разницы между мыслями и чувствами."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология (ラベル貼り) уместна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Терминология (過度の一般化, 破局視) верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод глубокий и точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Терминология (ネガティブな思い込み) верна."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/title",
+                "verdict": "ok",
+                "note": "Хорошая адаптация заголовка."
+              },
+              {
+                "path": "/self_help/description",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует."
+              },
+              {
+                "path": "/self_help/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, передает атмосферу."
+              },
+              {
+                "path": "/self_help/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Переведено естественно, соблюден вежливый стиль."
+              },
+              {
+                "path": "/self_help/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Терминология и смысл переданы верно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Название книги адаптировано под существующий японский перевод, что хорошо."
+              },
+              {
+                "path": "/self_help/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_2/texts/6",
+                "verdict": "issue",
+                "note": "Присутствует калька с английского/русского 'играть роль' (役割を果たす), что звучит суховато для книги по самопомощи."
+              },
+              {
+                "path": "/self_help/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Терминология (BDI, HAM-D) верная."
+              },
+              {
+                "path": "/self_help/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Атрибуты Instagram удалены согласно конвенции для не-en/ru локалей."
+              },
+              {
+                "path": "/self_help/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод хороший, эмоциональный тон выдержан."
+              },
+              {
+                "path": "/self_help/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Использование '気づき' вместо 'инсайт' — отличная адаптация."
+              },
+              {
+                "path": "/self_help/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Тон вежливый и поддерживающий."
+              },
+              {
+                "path": "/self_help/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/self_help/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Метафора '泥沼' (трясина/болото) хорошо передает 'тупик болезненных эмоций'."
+              },
+              {
+                "path": "/self_help/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Очень хороший литературный перевод, звучит естественно."
+              },
+              {
+                "path": "/self_help/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Соблюден баланс между профессионализмом и эмпатией."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/real/screen_2/texts/9",
+                "fragment": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。そして、それは常に「自分には価値がない」という感覚を伴います。",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущено предложение о том, что симптомы сохраняются минимум две недели подряд.",
+                "why": "В оригинале указан важный диагностический критерий (продолжительность симптомов), который необходим для понимания разницы между грустью и депрессией. В переводе этот фрагмент отсутствует."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/self_help/screen_2/texts/6",
+                "fragment": "対照群としての役割を果たしました",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Канцелярский оборот",
+                "why": "Конструкция '役割を果たす' (играть роль) является прямой калькой и звучит как выдержка из научного отчета. В контексте книги по самопомощи лучше использовать более естественное описание функции группы, например, '対照群として機能しました' или перефразировать, чтобы избежать номинативного стиля."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критически важная информация для медицинского контекста (диагностический критерий) полностью утеряна в переводе."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Стилистическая правка: в тексте по самопомощи действительно лучше избегать излишне формальных конструкций, хотя это не искажает смысл."
+              }
+            ],
+            "notes": "Перевод в целом качественный и эмоционально точный, однако допущена серьезная фактическая ошибка (пропуск важного критерия длительности симптомов), что снижает ценность контента.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/real/screen_2/texts/9",
+                "current": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。そして、それは常に「自分には価値がない」という感覚を伴います。",
+                "proposed": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。こうした状態は、少なくとも2週間ほど毎日続くものです。そして、それは常に「自分には価値がない」という感覚を伴います。",
+                "alternatives": [
+                  "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。この状態は少なくとも2週間以上、一日中続くのが特徴です。そして、それは常に「自分には価値がない」という感覚を伴います。"
+                ],
+                "rationale": "В оригинале указан критически важный диагностический критерий (продолжительность симптомов — минимум две недели), который был полностью упущен в текущем переводе. Это серьезная ошибка для статьи о ментальном здоровье. Предложенный вариант возвращает смысл, сохраняя ритм текста."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 2,
+                "path": "/self_help/screen_2/texts/6",
+                "current": "この「待機グループ」は対照群としての役割を果たしました。",
+                "proposed": "この「待機グループ」は対照群として機能しました。",
+                "alternatives": [
+                  "この「待機グループ」は対照群として扱われました。"
+                ],
+                "rationale": "Текущая фраза «役割を果たしました» звучит как тяжеловесная калька с русского/английского. Для научно-популярного стиля (self-help) вариант «機能しました» (функционировала) или «扱われました» (рассматривалась) звучит более естественно и менее формально."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "Главная проблема — пропуск важного диагностического критерия (длительность симптомов 2 недели) в разделе про депрессию, что является критической ошибкой для медицинского контента. Также присутствуют мелкие стилистические огрехи (канцеляризмы). Необходимо восстановить пропущенный фрагмент и слегка смягчить тон в описании исследования."
+            },
+            "timings": {
+              "issues": 105444,
+              "deliberate": 8497,
+              "recommend": 22481
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_2/texts/9",
+              "from": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。そして、それは常に「自分には価値がない」という感覚を伴います。",
+              "to": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。こうした状態は、少なくとも2週間ほど毎日続くものです。そして、それは常に「自分には価値がない」という感覚を伴います。"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c3-I1",
+              "path": "/self_help/screen_2/texts/6",
+              "reason": "цитата судьи не похожа на лист (сходство 29%)"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/real/title",
+                "verdict": "ok",
+                "note": "Передано смысл и тон"
+              },
+              {
+                "path": "/real/description",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, терминология соблюдена"
+              },
+              {
+                "path": "/real/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный стиль"
+              },
+              {
+                "path": "/real/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/real/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тон деликатный, смысл верный"
+              },
+              {
+                "path": "/real/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/real/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Красивая литературная адаптация цитаты"
+              },
+              {
+                "path": "/real/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/real/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Терминология и смысл в норме"
+              },
+              {
+                "path": "/real/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'оправданы' через '理にかなった'"
+              },
+              {
+                "path": "/real/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/real/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Естественный японский синтаксис"
+              },
+              {
+                "path": "/real/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Кратко и верно"
+              },
+              {
+                "path": "/real/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/real/screen_2/texts/9",
+                "verdict": "issue",
+                "note": "Пропущено важное условие про потерю чувства собственного достоинства в контексте связи с депрессией"
+              },
+              {
+                "path": "/real/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология верная"
+              },
+              {
+                "path": "/real/test/question",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/real/test/answers/0",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/test/answers/1",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/test/answers/2",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/test/answers/3",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/real/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Терминология верная"
+              },
+              {
+                "path": "/real/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/real/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Соблюден стиль и терминология"
+              },
+              {
+                "path": "/real/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/real/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/real/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Отличная адаптация метафоры 'запустить механизм'"
+              },
+              {
+                "path": "/real/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/rebuff/title",
+                "verdict": "ok",
+                "note": "Хороший заголовок"
+              },
+              {
+                "path": "/rebuff/description",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тон поддерживающий"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Верно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Терминология 'негативные убеждения' -> 'ネガティブな思い込み' соблюдена"
+              },
+              {
+                "path": "/rebuff/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено естественно, тон наставника соблюден."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Терминология (認知の歪み) верна."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл и терминология (適応的な思考) соблюдены."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод естественный, адаптирован под контекст."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'для большей простоты'."
+              },
+              {
+                "path": "/rebuff/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Цитата переведена корректно, кавычки кагикакко."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Стиль вежливый, инструкции понятны."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, вежливый."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Пример переведен адекватно."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/7",
+                "verdict": "issue",
+                "note": "Слишком длинное и тяжелое предложение, напоминающее русскую конструкцию с пояснением 'потому что'."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология (ラベル貼り) верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Терминология (過度の一般化, 破局視) верна."
+              },
+              {
+                "path": "/rebuff/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Цитата звучит естественно."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Пример адаптирован хорошо."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Терминология (ネガティブな思い込み) верна."
+              },
+              {
+                "path": "/rebuff/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/self_help/title",
+                "verdict": "ok",
+                "note": "Заголовок адаптирован хорошо."
+              },
+              {
+                "path": "/self_help/description",
+                "verdict": "ok",
+                "note": "Тон профессиональный и мягкий."
+              },
+              {
+                "path": "/self_help/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/self_help/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Метафора 'простуды' передана верно."
+              },
+              {
+                "path": "/self_help/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/self_help/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Смысл и терминология верны."
+              },
+              {
+                "path": "/self_help/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/self_help/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, профессиональный."
+              },
+              {
+                "path": "/self_help/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон вежливый (Desu/Masu), терминология соблюдена."
+              },
+              {
+                "path": "/self_help/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Библиотерапия адаптирована хорошо, кавычки кагикакко использованы верно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Название книги адаптировано под существующий японский перевод, что является хорошим тоном."
+              },
+              {
+                "path": "/self_help/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/self_help/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Термины и группы переведены корректно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_2/texts/6",
+                "verdict": "issue",
+                "note": "Присутствует калька с русского синтаксиса (номинативная цепочка), что делает предложение тяжеловесным."
+              },
+              {
+                "path": "/self_help/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Терминология шкал (BDI, HAM-D) верная."
+              },
+              {
+                "path": "/self_help/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Атрибуты instagram удалены согласно конвенции для не-ru/en локалей — это норма."
+              },
+              {
+                "path": "/self_help/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл и цифры переданы верно."
+              },
+              {
+                "path": "/self_help/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный тон выдержан."
+              },
+              {
+                "path": "/self_help/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Логика и смысл сохранены."
+              },
+              {
+                "path": "/self_help/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/self_help/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/self_help/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Стиль соответствует контексту."
+              },
+              {
+                "path": "/self_help/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/self_help/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Стиль и термины в порядке."
+              },
+              {
+                "path": "/self_help/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/self_help/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Терминология КПТ соблюдена."
+              },
+              {
+                "path": "/self_help/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Использование '気づき' вместо 'инсайт' — отличная адаптация."
+              },
+              {
+                "path": "/self_help/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Тон вежливый, метафора сохранена."
+              },
+              {
+                "path": "/self_help/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/self_help/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Метафора 'muddy swamp' (泥沼) передана очень удачно для японского языка."
+              },
+              {
+                "path": "/self_help/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Очень хороший, эмпатичный перевод."
+              },
+              {
+                "path": "/self_help/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Тон поддерживающий и профессиональный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/real/screen_2/texts/9",
+                "fragment": "こうした状態は、少なくとも2週間ほど毎日続くものです。そして、それは常に「自分には価値がない」という感覚を伴います。",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Потеряна часть смысла про 'потерю чувства собственного достоинства' (loss of self-esteem/dignity) в контексте сравнения с грустью.",
+                "why": "В оригинале акцент на том, что депрессия *всегда связана* с потерей чувства собственного достоинства, что является ключевым отличием от грусти. В переводе фраза '自分には価値がない' (у меня нет ценности) — это уже конкретная мысль, но потерян сам процесс/связь с потерей достоинства как характеристики состояния."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/rebuff/screen_2/texts/7",
+                "fragment": "「ひどい気分だ」と書いてしまうと、それは単なる感情の吐露になり、思考としての反論（適応的な思考への書き換え）が難しくなってしまうからです。",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Синтаксическая калька и тяжеловесность",
+                "why": "Предложение перегружено пояснениями в скобках и концом на '...からです' (потому что), что делает его похожим на объяснительную записку, а не на естественный текст книги по самопомощи. В японском языке лучше разделить это на два предложения или перестроить структуру, чтобы избежать прямого перевода причинно-следственной связи 'Потому что...'"
+              },
+              {
+                "id": "c3-I1",
+                "path": "/self_help/screen_2/texts/6",
+                "fragment": "この「待機グループ」は対照群としての役割を果たしました。これにより、第1グループで見られた改善が、単に時間の経過によるものなのか、それとも読書によるものなのかを検証することが可能になったのです。",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Канцелярский синтаксис (калька)",
+                "why": "Конструкция 「〜を検証することが可能になったのです」 (стало возможным верифицировать) является тяжеловесной и характерна для прямого перевода русского/английского синтаксиса. Носитель скорее использовал бы более прямой глагол, например, 「〜を検証できました」 или перестроил бы предложение, чтобы избежать нагромождения существительных."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator replaced the concept of 'loss of dignity/self-esteem' with a specific thought 'I have no value', which weakens the distinction between the state of depression and the content of thoughts described in the original."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The use of parenthetical explanations and the '...kara desu' ending creates a heavy, explanatory tone unsuited for a self-help book."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The phrasing is overly formal and follows a translationese pattern (nominalization), which sounds unnatural in Japanese prose."
+              }
+            ],
+            "notes": "The translation is accurate in meaning but suffers from 'translationese' (heavy syntax and explanatory structures) and a slight loss of nuance in a key psychological distinction.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/real/screen_2/texts/9",
+                "current": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。こうした状態は、少なくとも2週間ほど毎日続くものです。そして、それは常に「自分には価値がない」という感覚を伴います。",
+                "proposed": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。こうした状態は、少なくとも2週間ほど毎日続くものです。そして、そこには常に、自分自身の尊厳を失ってしまうような感覚が伴います。",
+                "alternatives": [
+                  "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。こうした状態は、少なくとも2週間ほど毎日続くものです。そして、それは常に、自己肯定感の喪失を伴います。"
+                ],
+                "rationale": "В оригинале важно подчеркнуть не просто конкретную мысль («я никчемный»), а само состояние потери достоинства/самоуважения как отличительный признак депрессии. Вариант с 「尊厳を失ってしまうような感覚」 точнее передает смысл 'loss of dignity/self-esteem' и сохраняет глубину текста."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 2,
+                "path": "/self_help/screen_2/texts/6",
+                "current": "この「待機グループ」は対照群としての役割を果たしました。これにより、第1グループで見られた改善が、単に時間の経過によるものなのか、それとも読書によるものなのかを検証することが可能になったのです。",
+                "proposed": "この「待機グループ」は対照群としての役割を果たしました。これにより、第1グループで見られた改善が、単なる時間の経過によるものか、それとも読書によるものなのかを検証できました。",
+                "alternatives": [
+                  "この「待機グループ」を対照群とすることで、第1グループの改善が時間の経過によるものか、読書によるものかを明らかにできました。"
+                ],
+                "rationale": "Убираем тяжеловесную конструкцию 「〜を検証することが可能になったのです」 (стало возможным верифицировать), которая звучит как отчет. Замена на прямой глагол 「検証できました」 делает текст более живым и естественным для научно-популярного стиля."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/rebuff/screen_2/texts/7",
+                "current": "この列に書くのは、あくまで「思考」であって「感情」ではありません。「ひどい気分だ」と書いてしまうと、それは単なる感情の吐露になり、思考としての反論（適応的な思考への書き換え）が難しくなってしまうからです。",
+                "proposed": "この列に書くのは、あくまで「思考」であって「感情」ではありません。「ひどい気分だ」と書いてしまうと、それは単なる感情の吐露になってしまいます。そうなると、思考として反論したり、適応的な思考へ書き換えたりすることが難しくなるからです。",
+                "alternatives": [
+                  "この列には「感情」ではなく「思考」を書きましょう。「ひどい気分だ」といった感情を書いてしまうと、思考としての反論が難しくなってしまうためです。"
+                ],
+                "rationale": "Разделение на два предложения избавляет от перегруженности и делает текст менее «лекционным». Мы убираем скобки, которые в японском тексте выглядят как техническая вставка, и интегрируем пояснение в естественный поток речи."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 4,
+                "path": "/real/screen_1/texts/2",
+                "current": "決して、こうした困難を軽視しているわけではありません。しかし、どのような困難であっても、それが直接「現実的な原因によるうつ」の原因になることはありません。実のところ、「現実的な原因によるうつ」というものは存在しないのです。",
+                "proposed": "決して、こうした困難を軽視しているわけではありません。しかし、どのような困難であっても、それが直接「現実的な原因によるうつ」を引き起こすわけではありません。実のところ、「現実的な原因によるうつ」というものは存在しないのです。",
+                "alternatives": [],
+                "rationale": "Минимальная правка для улучшения ритма: замена повтора 「原因...の原因」 на более естественное 「引き起こす」 (вызывать/приводить к)."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 5,
+                "path": "/real/screen_1/texts/5",
+                "current": "<q author='ダン・レイノルズ'>うつを経験したことがない人は、うつを単なる悲しみや気分の落ち込みだと思っています。でも、私にとってそれは単なる悲しみではありません。世界から色が消え、すべてが麻痺してしまうような状態なのです。</q>",
+                "proposed": "<q author=\"ダン・レイノルズ\">うつを経験したことがない人は、うつを単なる悲しみや気分の落ち込みだと思っています。でも、私にとってそれは単なる悲しみではありません。世界から色が消え、すべてが麻痺してしまうような状態なのです。</q>",
+                "alternatives": [],
+                "rationale": "Исправление типографики: использование японских кавычек 「 」 внутри тега <q> (если это предусмотрено структурой) или просто приведение к единообразию. В данном случае замена одинарных кавычек на двойные для соответствия стандартам оформления цитат в JSON, если это не ломает парсер, но в контексте задачи — это вопрос чистоты текста. (Примечание: в оригинале были разные типы кавычек, приводим к стандарту)."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 6,
+                "path": "/real/screen_1/texts/13",
+                "current": "<q author=\"エレノア・ルーズベルト\">「あなたの同意なしに、あなたに無価値だと感じさせることなど、誰にもできません。」</q>",
+                "proposed": "<q author=\"エレノア・ルーズベルト\">「あなたの同意なしに、あなたを無価値だと感じさせることなど、誰にもできません。」</q>",
+                "alternatives": [],
+                "rationale": "Убираем лишнее «あなたに» (вам), так как в японском языке избыточное использование местоимений делает фразу тяжелой. «Заставить вас чувствовать себя...» лучше передать через прямое дополнение."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 7,
+                "path": "/real/screen_2/texts/3",
+                "current": "こうした感情は自然で、理にかなったものであり、むしろ人間としての深みを与え、人生に意味をもたらしてくれる大切なものです。喪失は、私たちに多くの気づきを与えてくれることもあります。",
+                "proposed": "こうした感情は自然で、理にかなったものです。むしろ人間としての深みを与え、人生に意味をもたらしてくれる大切なものでもあります。喪失は、私たちに多くの気づきを与えてくれることもあります。",
+                "alternatives": [],
+                "rationale": "Разбивка слишком длинного предложения для улучшения читаемости (ритма)."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 8,
+                "path": "/real/screen_3/texts/11",
+                "current": "時間が経つにつれて、合理的な回答を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。",
+                "proposed": "時間が経つにつれて、適応的な思考を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。",
+                "alternatives": [],
+                "rationale": "Использование принятого термина 「適応的な思考」 вместо 「合理的な回答」 (rational answer) для поддержания терминологического единства в рамках КПТ-контекста приложения."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 9,
+                "path": "/self_help/screen_1/texts/1",
+                "current": "もし、これらの言葉が心に深く刺さるのなら、ご自身、あるいは身近な方がすでにうつを経験しているのかもしれません。うつは決して珍しいものではなく、精神疾患の中でも「心の風邪」に例えられることがあります。現代における大きな課題の一つであり、人生の喜びや意味を奪い、時には生きる力そのものにまで影響を及ぼすこともあります。",
+                "proposed": "もし、これらの言葉が心に深く刺さるのなら、ご自身、あるいは身近な方がすでにうつを経験しているのかもしれません。うつは決して珍しいものではなく、精神疾患の中でも「心の風邪」に例えられることがあります。それは現代における大きな課題の一つであり、人生の喜びや意味を奪い、時には生きる力そのものにまで影響を及ぼすこともあります。",
+                "alternatives": [],
+                "rationale": "Добавление связующего местоимения 「それは」 для плавности перехода между предложениями."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 10,
+                "path": "/self_help/screen_1/texts/3",
+                "current": "まずは定義から確認しましょう。うつ（ラテン語の depressio — 抑圧、低下に由来）とは、世界保健機関（WHO）によって、意欲の低下、興味の喪失、喜びを感じられない状態、罪悪感や自尊心の低下、睡眠や食欲の乱れ、疲労感、集中力の低下を伴う精神的な状態として定義されています。",
+                "proposed": "まずは定義から確認しましょう。うつ（ラテン語の depressio — 抑圧、低下に由来）とは、世界保健機関（WHO）によって、意欲の低下、興味の喪失、喜びを感じられない状態、罪悪感や自尊心の低下、睡眠や食欲の乱れ、疲労感、集中力の低下を伴う精神的な状態として定義されています。",
+                "alternatives": [],
+                "rationale": "Текст корректен, оставляем без изменений (проверка терминологии пройдена)."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 11,
+                "path": "/self_help/screen_2/texts/2",
+                "current": "彼らの実験において、デビッド・バーンズの著書『いやな気分をコントロールする』を読んだ参加者は、本格的な心理療法や抗うつ薬の服用による効果に匹敵する、顕著な改善を示しました。",
+                "proposed": "彼らの実験において、デビッド・バーンズの著書『いやな気分をコントロールする』を読んだ参加者は、本格的な心理療法や抗うつ薬の服用による効果に匹敵する、顕著な改善を示しました。",
+                "alternatives": [],
+                "rationale": "Текст корректен, название книги адаптировано верно (стандартный перевод для этой книги в Японии)."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 12,
+                "path": "/self_help/screen_3/texts/10",
+                "current": "嵐のあとには必ず静けさが訪れ、空は晴れ渡り、太陽が再び昇って周囲を照らすことを忘れないでください。そのとき、喜びや安らぎ、そして何物にも代えがたい「生きたい」という前向きな気持ちが、再び心に灯ります。",
+                "proposed": "嵐のあとには必ず静けさが訪れ、空は晴れ渡り、太陽が再び昇って周囲を照らすことを忘れないでください。そのとき、喜びや安らぎ、そして何物にも代えがたい「生きたい」という前向きな気持ちが、再び心に灯ります。",
+                "alternatives": [],
+                "rationale": "Текст очень поэтичен и соответствует Tone of Voice (эмпатия и надежда). Оставляем как есть."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 13,
+                "path": "/self_help/screen_3/texts/11",
+                "current": "もし今、うつと闘っているのなら、どうか覚えておいてください。正しいアプローチさえあれば、変化は可能です。たとえ現在の状況がどれほど困難で、出口がないように感じられたとしても、変化は必ず訪れます。",
+                "proposed": "もし今、うつと闘っているのなら、どうか覚えておいてください。正しいアプローチさえあれば、変化は可能です。たとえ現在の状況がどれほど困難で、出口がないように感じられたとしても、変化は必ず訪れます。",
+                "alternatives": [],
+                "rationale": "Текст эмоционально сильный и грамматически верный. Оставляем."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 14,
+                "path": "/self_help/screen_3/texts/0",
+                "current": "これは、うつの治療におけるセルフケアの有効性を裏付けた初期の研究の一つですが、決して唯一のものではありません。",
+                "proposed": "これは、うつの治療におけるセルフケアの有効性を裏付けた初期の研究の一つですが、決して唯一のものではありません。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 15,
+                "path": "/self_help/screen_3/texts/1",
+                "current": "また、うつの治療に関する理解を大きく進展させたスコットランドの研究者たちの成果も注目に値します。彼らは、セルフヘルプ本がうつの克服において、予想以上に効果的であることを明らかにしました。",
+                "proposed": "また、うつの治療に関する理解を大きく進展させたスコットランドの研究者たちの成果も注目に値します。彼らは、セルフヘルプ本がうつの克服において、予想以上に効果的であることを明らかにしました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 16,
+                "path": "/self_help/screen_3/texts/2",
+                "current": "これらの結論は、軽度から中等度のうつを抱える200人以上の参加者を対象とした、緻密に計画された実験に基づいています。",
+                "proposed": "これらの結論は、軽度から中等度のうつを抱える200人以上の参加者を対象とした、緻密に計画された実験に基づいています。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 17,
+                "path": "/self_help/screen_3/texts/3",
+                "current": "研究では参加者を2つのグループに分け、数ヶ月間にわたり異なる方法でアプローチしました。第1グループは抗うつ薬のみによる治療を行い、第2グループはビブリオセラピーを取り入れました。",
+                "proposed": "研究では参加者を2つのグループに分け、数ヶ月間にわたり異なる方法でアプローチしました。第1グループは抗うつ薬のみによる治療を行い、第2グループはビブリオセラピーを取り入れました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 18,
+                "path": "/self_help/screen_3/texts/4",
+                "current": "その結果、専門書を読み進めたグループは、抗うつ薬のみに頼ったグループよりも、はるかに素晴らしい回復の成果を示したのです。",
+                "proposed": "その結果、専門書を読み進めたグループは、抗うつ薬のみに頼ったグループよりも、はるかに素晴らしい回復の成果を示したのです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 19,
+                "path": "/self_help/screen_3/texts/5",
+                "current": "科学者たちが治療の基盤としたこれらの励みとなる研究は、認知行動療法（CBT）の基本原則に基づいています。",
+                "proposed": "科学者たちが治療の基盤としたこれらの励みとなる研究は、認知行動療法（CBT）の基本原則に基づいています。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 20,
+                "path": "/self_help/screen_3/texts/6",
+                "current": "<important>このセルフケアというプロセスこそが、うつから解放されるための鍵となります。この気づきが、このセクションを設けるきっかけとなりました。</important>",
+                "proposed": "<important>このセルフケアというプロセスこそが、うつから解放されるための鍵となります。この気づきが、このセクションを設けるきっかけとなりました。</important>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 21,
+                "path": "/self_help/screen_3/texts/7",
+                "current": "私たちは、皆様がご自身の身に起きていることを理解するための「鍵」を渡し、自力で対処するための「ツール」を提供したいと考えています。",
+                "proposed": "私たちは、皆様がご自身の身に起きていることを理解するための「鍵」を渡し、自力で対処するための「ツール」を提供したいと考えています。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 22,
+                "path": "/self_help/screen_3/texts/8",
+                "current": "うつに関する重要な情報をステップ・バイ・ステップでお伝えしていきます。提供する強力なツールやテクニックを通じて、ご自身で活用できるスキルを身につけていただけるようサポートします。",
+                "proposed": "うつに関する重要な情報をステップ・バイ・ステップでお伝えしていきます。提供する強力なツールやテクニックを通じて、ご自身で活用できるスキルを身につけていただけるようサポートします。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 23,
+                "path": "/self_help/screen_3/texts/9",
+                "current": "これらを実践することで、苦痛な感情の泥沼から抜け出すための力が湧いてくるはずです。",
+                "proposed": "これらを実践することで、苦痛な感情の泥沼から抜け出すための力が湧いてくるはずです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 24,
+                "path": "/self_help/screen_3/texts/11",
+                "current": "もし今、うつと闘っているのなら、どうか覚えておいてください。正しいアプローチさえあれば、変化は可能です。たとえ現在の状況がどれほど困難で、出口がないように感じられたとしても、変化は必ず訪れます。",
+                "proposed": "もし今、うつと闘っているのなら、どうか覚えておいてください。正しいアプローチさえあれば、変化は可能です。たとえ現在の状況がどれほど困難で、出口がないように感じられたとしても、変化は必ず訪れます。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 25,
+                "path": "/rebuff/screen_1/texts/0",
+                "current": "自己肯定感を高めるために、シンプルながらも効果的なステップを用意しました。これらはご自身で取り組めるワークですので、心の回復を進める上での助けとなるはずです。",
+                "proposed": "自己肯定感を高めるために、シンプルながらも効果的なステップを用意しました。これらはご自身で取り組めるワークですので、心の回復を進める上での助けとなるはずです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 26,
+                "path": "/rebuff/screen_1/texts/1",
+                "current": "まず、大切なことをお伝えします。自己肯定感を高めるには、知識として知っているだけでは不十分です。",
+                "proposed": "まず、大切なことをお伝えします。自己肯定感を高めるには、知識として知っているだけでは不十分です。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 27,
+                "path": "/rebuff/screen_1/texts/2",
+                "current": "エクササイズを継続することで、初めて心に安定した変化が生まれます。まずは習慣になるまで、毎日少しずつ時間を割いてみることをお勧めします。",
+                "proposed": "エクササイズを継続することで、初めて心に安定した変化が生まれます。まずは習慣になるまで、毎日少しずつ時間を割いてみることをお勧めします。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 28,
+                "path": "/rebuff/screen_1/texts/3",
+                "current": "最初にご紹介するテクニックは、自分の中の「批判者」に対抗する力を養うためのものです。",
+                "proposed": "最初にご紹介するテクニックは、自分の中の「批判者」に対抗する力を養うためのものです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 29,
+                "path": "/rebuff/screen_1/texts/5",
+                "current": "自分には価値がないと感じたり、自分を嫌いになったりするのは、多くの場合、常に自己肯定感を削り取ろうとする「内なる批判者」の存在によるものです。",
+                "proposed": "自分には価値がないと感じたり、自分を嫌いになったりするのは、多くの場合、常に自己肯定感を削り取ろうとする「内なる批判者」の存在によるものです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 30,
+                "path": "/rebuff/screen_1/texts/6",
+                "current": "「自分には何の価値もない」「他人より劣っている」「どうせうまくいかない」「すべては自分のせいだ」「自分はダメな人間だ」といったネガティブな思い込みは、自分を苦しめ、うつ状態につながる恐れもあります。",
+                "proposed": "「自分には何の価値もない」「他人より劣っている」「どうせうまくいかない」「すべては自分のせいだ」「自分はダメな人間だ」といったネガティブな思い込みは、自分を苦しめ、うつ状態につながる恐れもあります。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 31,
+                "path": "/rebuff/screen_1/texts/7",
+                "current": "こうした思考の癖を克服するために、以下のステップを試してみましょう。",
+                "proposed": "こうした思考の癖を克服するために、以下のステップを試してみましょう。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 32,
+                "path": "/rebuff/screen_1/texts/8",
+                "current": "<li>自分を批判する思考に気づき、記録すること。</li>",
+                "proposed": "<li>自分を批判する思考に気づき、記録すること。</li>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 33,
+                "path": "/rebuff/screen_1/texts/9",
+                "current": "<li>その思考に含まれる「認知の歪み」を見つけること。</li>",
+                "proposed": "<li>その思考に含まれる「認知の歪み」を見つけること。</li>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 34,
+                "path": "/rebuff/screen_1/texts/10",
+                "current": "<li>自分に対してより現実的で健康的な向き合い方ができるよう、「適応的な思考」を導き出し、繰り返し練習すること。</li>",
+                "proposed": "<li>自分に対してより現実的で健康的な向き合い方ができるよう、「適応的な思考」を導き出し、繰り返し練習すること。</li>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 35,
+                "path": "/rebuff/screen_1/texts/11",
+                "current": "これらを実践するために、アプリ内の「記録」を活用することもできますし、ノートを使って3つの列（カラム）を作る方法でも構いません。",
+                "proposed": "これらを実践するために、アプリ内の「記録」を活用することもできますし、ノートを使って3つの列（カラム）を作る方法でも構いません。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 36,
+                "path": "/rebuff/screen_1/texts/12",
+                "current": "ここでは、よりイメージしやすいように、3つの列を使った方法で説明を進めていきます。",
+                "proposed": "ここでは、よりイメージしやすいように、3つの列を使った方法で説明を進めていきます。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 37,
+                "path": "/rebuff/screen_2/texts/0",
+                "current": "ノートやスマートフォンのメモなど、使いやすい形式で3つの列を持つ表を作成してください。列の名前は以下の通りです。",
+                "proposed": "ノートやスマートフォンのメモなど、使いやすい形式で3つの列を持つ表を作成してください。列の名前は以下の通りです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 38,
+                "path": "/rebuff/screen_2/texts/1",
+                "current": "<li>批判的な思考</li>",
+                "proposed": "<li>批判的な思考</li>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 39,
+                "path": "/rebuff/screen_2/texts/2",
+                "current": "<li>認知の歪み</li>",
+                "proposed": "<li>認知の歪み</li>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 40,
+                "path": "/rebuff/screen_2/texts/3",
+                "current": "<li>適応的な思考</li>",
+                "proposed": "<li>適応的な思考</li>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 41,
+                "path": "/rebuff/screen_2/texts/4",
+                "current": "最初の列には、頭に浮かんだ自分を批判する思考をすべて書き留めます。",
+                "proposed": "最初の列には、頭に浮かんだ自分を批判する思考をすべて書き留めます。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 42,
+                "path": "/rebuff/screen_2/texts/5",
+                "current": "<important>自分を責めたり、無価値だと感じたり、自分に不満を感じたりしたときは、その都度「今、自分自身について何を考えているだろう？」と問いかけ、それを書き留めてください。</important>",
+                "proposed": "<important>自分を責めたり、無価値だと感じたり、自分に不満を感じたりしたときは、その都度「今、自分自身について何を考えているだろう？」と問いかけ、それを書き留めてください。</important>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 43,
+                "path": "/rebuff/screen_2/texts/6",
+                "current": "例えば、試験前に不安を感じて「自分はなんてバカなんだ、絶対に合格できない」と思ったなら、それが記録すべき思考です。",
+                "proposed": "例えば、試験前に不安を感じて「自分はなんてバカなんだ、絶対に合格できない」と思ったなら、それが記録すべき思考です。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 44,
+                "path": "/rebuff/screen_2/texts/8",
+                "current": "2番目の列では、その思考にどのような「認知の歪み」が含まれているかを特定します。",
+                "proposed": "2番目の列では、その思考にどのような「認知の歪み」が含まれているかを特定します。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 45,
+                "path": "/rebuff/screen_2/texts/9",
+                "current": "見つけた思考の誤りを2番目の列に記入してください。誤りは1つとは限りません。2つ、あるいは3つ見つかることもあります。",
+                "proposed": "見つけた思考の誤りを2番目の列に記入してください。誤りは1つとは限りません。2つ、あるいは3つ見つかることもあります。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 46,
+                "path": "/rebuff/screen_2/texts/10",
+                "current": "例えば、「自分はなんてバカなんだ、絶対に合格できない」という言葉には、「ラベル貼り」という歪みが含まれています。",
+                "proposed": "例えば、「自分はなんてバカなんだ、絶対に合格できない」という言葉には、「ラベル貼り」という歪みが含まれています。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 47,
+                "path": "/rebuff/screen_2/texts/11",
+                "current": "また、「自分は何をやってもダメだ。だから退学させられて、一生成功することはない」という思考には、「過度の一般化」や「破局視」といった複数の歪みが含まれている可能性があります。",
+                "proposed": "また、「自分は何をやってもダメだ。だから退学させられて、一生成功することはない」という思考には、「過度の一般化」や「破局視」といった複数の歪みが含まれている可能性があります。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 48,
+                "path": "/rebuff/screen_2/texts/12",
+                "current": "<q author=\"カール・ロジャーズ\">「自分自身や、自分の感情的なニーズを理解すればするほど、現実を捉える力は強まり、恐怖や誤解に人生を蝕まれることも少なくなっていきます。」</q>",
+                "proposed": "<q author=\"カール・ロジャーズ\">「自分自身や、自分の感情的なニーズを理解すればするほど、現実を捉える力は強まり、恐怖や誤解に人生を蝕まれることも少なくなっていきます。」</q>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 49,
+                "path": "/rebuff/screen_3/texts/0",
+                "current": "そして、この表の中で最も重要なのが、最後の列である「適応的な思考」です。これこそが、内なる批判者に対する真の反撃となります。",
+                "proposed": "そして、この表の中で最も重要なのが、最後の列である「適応的な思考」です。これこそが、内なる批判者に対する真の反撃となります。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 50,
+                "path": "/rebuff/screen_3/texts/1",
+                "current": "大切なのは、自分を批判する思考を、単に「無理やりポジティブな言葉」に置き換えるのではなく、より「現実的で論理的なもの」に置き換えることです。",
+                "proposed": "大切なのは、自分を批判する思考を、単に「無理やりポジティブな言葉」に置き換えるのではなく、より「現実的で論理的なもの」に置き換えることです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 51,
+                "path": "/rebuff/screen_3/texts/2",
+                "current": "批判的な思考を、より現実的なものに書き換えていきましょう。ここで極端な二分法に陥って、現実離れしたポジティブすぎる思考にしてはいけません。",
+                "proposed": "批判的な思考を、より現実的なものに書き換えていきましょう。ここで極端な二分法に陥って、現実離れしたポジティブすぎる思考にしてはいけません。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 52,
+                "path": "/rebuff/screen_3/texts/3",
+                "current": "<important>例えば、「自分は最高に賢いから、すべて満点で合格できる」といった極端な考え方です。もちろん、その通りになる可能性はありますが、元の思考とは正反対すぎて、すぐに信じることは難しいでしょう。それでは意味がありません。</important>",
+                "proposed": "<important>例えば、「自分は最高に賢いから、すべて満点で合格できる」といった極端な考え方です。もちろん、その通りになる可能性はありますが、元の思考とは正反対すぎて、すぐに信じることは難しいでしょう。それでは意味がありません。</important>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 53,
+                "path": "/rebuff/screen_3/texts/4",
+                "current": "そうではなく、実際にはどうなのか、という「真実」を見つけ出そうとしてみてください。",
+                "proposed": "そうではなく、実際にはどうなのか、という「真実」を見つけ出そうとしてみてください。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 54,
+                "path": "/rebuff/screen_3/texts/5",
+                "current": "もし、書き留めた「適応的な思考」が、あなたにとって説得力のない、現実味のないものになってしまったら、それは役に立ちません。",
+                "proposed": "もし、書き留めた「適応的な思考」が、あなたにとって説得力のない、現実味のないものになってしまったら、それは役に立ちません。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 55,
+                "path": "/rebuff/screen_3/texts/6",
+                "current": "自分自身が納得できるような、信じられる言葉で書いてみてください。",
+                "proposed": "自分自身が納得できるような、信じられる言葉で書いてみてください。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 56,
+                "path": "/rebuff/screen_3/texts/7",
+                "current": "例えば、次のように書くことができます。「実際、私はバカではない。これまでの実績もあるし、大学にも自力で入学し、成績もそれなりに取れている。もちろん、うまくいかないこともあるけれど、人間なのだから間違いを犯すこともある。それは私がバカだということではない。」",
+                "proposed": "例えば、次のように書くことができます。「実際、私はバカではない。これまでの実績もあるし、大学にも自力で入学し、成績もそれなりに取れている。もちろん、うまくいかないこともあるけれど、人間なのだから間違いを犯すこともある。それは私がバカだということではない。」",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 57,
+                "path": "/rebuff/screen_3/texts/8",
+                "current": "それに、私は試験に向けて準備もしていますし、おそらく少なくとも合格点は取れるはずです。もし一度でダメでも、再試験に向けてしっかり準備して、次は合格すればいいだけですから。",
+                "proposed": "それに、私は試験に向けて準備もしていますし、おそらく少なくとも合格点は取れるはずです。もし一度でダメでも、再試験に向けてしっかり準備して、次は合格すればいいだけですから。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 58,
+                "path": "/rebuff/screen_3/texts/9",
+                "current": "このような合理的な回答はより説得力があり、それを信じられる可能性もずっと高いものです。",
+                "proposed": "このような合理的な回答はより説得力があり、それを信じられる可能性もずっと高いものです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 59,
+                "path": "/rebuff/screen_3/texts/10",
+                "current": "日々の生活の中でこのツールを活用し、定期的に自分の思考を記録しながら、ネガティブな思い込みに対抗していきましょう。",
+                "proposed": "日々の生活の中でこのツールを活用し、定期的に自分の思考を記録しながら、ネガティブな思い込みに対抗していきましょう。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 60,
+                "path": "/rebuff/screen_3/texts/11",
+                "current": "時間が経つにつれて、合理的な回答を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。",
+                "proposed": "時間が経つにつれて、適応的な思考を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。",
+                "alternatives": [],
+                "rationale": "Использование термина 「適応的な思考」 вместо 「合理的な回答」 для единообразия."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 61,
+                "path": "/self_help/title",
+                "current": "暗い日々を乗り越える：うつ状態と向き合うためのセルフケア",
+                "proposed": "暗い日々を乗り越える：うつ状態と向き合うためのセルフケア",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 62,
+                "path": "/self_help/description",
+                "current": "この記事では、思考や心を覆い尽くすような「うつ」の多面的な側面について深く掘り下げます。研究に基づき、認知行動療法（CBT）やビブリオセラピー（読書療法）など、さまざまなアプローチを詳しく解説します。困難な状況にあっても、回復への希望を持ち、ご自身で心のケアを行うための知識とツールをお届けします。",
+                "proposed": "この記事では、思考や心を覆い覆い尽くすような「うつ」の多面的な側面について深く掘り下げます。研究に基づき、認知行動療法（CBT）やビブリオセラピー（読書療法）など、さまざまなアプローチを詳しく解説します。困難な状況にあっても、回復への希望を持ち、ご自身で心のケアを行うための知識とツールをお届けします。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 63,
+                "path": "/self_help/screen_1/texts/0",
+                "current": "うつ状態とは、まるで暗いベールが心や思考を覆い尽くしてしまうような感覚です。この状態は、活力の喪失、興味の減退、悲観的な思考、孤独感、過去への後悔、そして未来への不安といった影を落とし、まるで喜びや光のない世界へと引きずり込まれるかのように、人々の生活に静かに浸透していきます。",
+                "proposed": "うつ状態とは、まるで暗いベールが心や思考を覆い尽くしてしまうような感覚です。この状態は、活力の喪失、興味の減退、悲観的な思考、孤独感、過去への後悔、そして未来への不安といった影を落とし、まるで喜びや光のない世界へと引きずり込まれるかのように、人々の生活に静かに浸透していきます。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 64,
+                "path": "/self_help/screen_1/texts/1",
+                "current": "もし、これらの言葉が心に深く刺さるのなら、ご自身、あるいは身近な方がすでにうつを経験しているのかもしれません。うつは決して珍しいものではなく、精神疾患の中でも「心の風邪」に例えられることがあります。現代における大きな課題の一つであり、人生の喜びや意味を奪い、時には生きる力そのものにまで影響を及ぼすこともあります。",
+                "proposed": "もし、これらの言葉が心に深く刺さるのなら、ご自身、あるいは身近な方がすでにうつを経験しているのかもしれません。うつは決して珍しいものではなく、精神疾患の中でも「心の風邪」に例えられることがあります。それは現代における大きな課題の一つであり、人生の喜びや意味を奪い、時には生きる力そのものにまで影響を及ぼすこともあります。",
+                "alternatives": [],
+                "rationale": "Добавление связующего местоимения 「それは」 для плавности перехода между предложениями."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 65,
+                "path": "/self_help/screen_1/texts/2",
+                "current": "しかし、単に「悲しい状態」であるからといって、すべてがうつであるとは限りません。次の章では、その微妙な違いをどのように見極めるかについてお話ししていきます。",
+                "proposed": "しかし、単に「悲しい状態」であるからといって、すべてがうつであるとは限りません。次の章では、その微妙な違いをどのように見極めるかについてお話ししていきます。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 66,
+                "path": "/self_help/screen_1/texts/4",
+                "current": "<q author='アーロン・ベック'>うつは「多面的な」疾患です。それは「微笑みのうつ」として現れることもあれば、身体的な疾患を装うこともあります。逆に、身体的な疾患がうつの姿を借りて現れることもあるのです。</q>",
+                "proposed": "<q author=\"アーロン・ベック\">うつは「多面的な」疾患です。それは「微笑みのうつ」として現れることもあれば、身体的な疾患を装うこともあります。逆に、身体的な疾患がうつの姿を借りて現れることもあるのです。</q>",
+                "alternatives": [],
+                "rationale": "Исправление кавычек в атрибуте author для единообразия."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 67,
+                "path": "/self_help/screen_1/texts/5",
+                "current": "少し重い話に聞こえるかもしれませんが、希望はあります。うつは適切なケアによって改善が期待できる状態です。認知行動療法（CBT）は、この状態をコントロールするための、信頼性が高く効果的なアプローチです。この手法を身につけることで、ご自身の気分を整え、症状に対処する力を養うことができます。",
+                "proposed": "少し重い話に聞こえるかもしれませんが、希望はあります。うつは適切なケアによって改善が期待できる状態です。認知行動療法（CBT）は、この状態をコントロールするための、信頼性が高く効果的なアプローチです。この手法を身につけることで、ご自身の気分を整え、症状に対処する力を養うことができます。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 68,
+                "path": "/self_help/screen_2/texts/0",
+                "current": "数多くの研究が、認知行動療法（CBT）の有効性を裏付けています。しかし同時に、専門家による治療を受けているかどうかにかかわらず、回復のプロセスにおいてセルフケアが極めて重要な役割を果たすことも強調しておきたいと思います。",
+                "proposed": "数多くの研究が、認知行動療法（CBT）の有効性を裏付けています。しかし同時に、専門家による治療を受けているかどうかにかかわらず、回復のプロセスにおいてセルフケアが極めて重要な役割を果たすことも強調しておきたいと思います。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 69,
+                "path": "/self_help/screen_2/texts/1",
+                "current": "<important>例えば、アラバマ大学のフォレスト・スキギン博士らの研究では、良質なセルフヘルプ本を読む「ビブリオセラピー（読書療法）」が、従来の治療法と同等の効果を持つ可能性があることが示されています。</important>",
+                "proposed": "<important>例えば、アラバマ大学のフォレスト・スキギン博士らの研究では、良質なセルフヘルプ本を読む「ビブリオセラピー（読書療法）」が、従来の治療法と同等の効果を持つ可能性があることが示されています。</important>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 70,
+                "path": "/self_help/screen_2/texts/3",
+                "current": "このユニークな研究を通じて、フォレスト・スキギン博士と共同研究者のクリスティン・ジェイミソン博士は、うつの治療における新たな知見をもたらしました。",
+                "proposed": "このユニークな研究を通じて、フォレスト・スキギン博士と共同研究者のクリスティン・ジェイミソン博士は、うつの治療における新たな知見をもたらしました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 71,
+                "path": "/self_help/screen_2/texts/4",
+                "current": "研究チームは、重度のうつ症状がある参加者を2つのグループに分けました。第1グループは「即時ビブリオセラピー群」と呼ばれ、デビッド・バーンズの『いやな気分をコントロールする』を4週間にわたって読むよう指示されました。",
+                "proposed": "研究チームは、重度のうつ症状がある参加者を2つのグループに分けました。第1グループは「即時ビブリオセラピー群」と呼ばれ、デビッド・バーンズの『いやな気分をコントロールする』を4週間にわたって読むよう指示されました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 72,
+                "path": "/self_help/screen_2/texts/5",
+                "current": "一方、第2グループは「待機ビブリオセラピー群」と呼ばれ、実験の最初の1ヶ月間は治療を待機する形をとりました。",
+                "proposed": "一方、第2グループは「待機ビブリオセラピー群」と呼ばれ、実験の最初の1ヶ月間は治療を待機する形をとりました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 73,
+                "path": "/self_help/screen_2/texts/7",
+                "current": "研究開始前、すべての参加者は2つのテストを受けました。1つ目は、本人が自力で回答する、信頼性の高い「ベック抑うつ質問票（BDI）」です。2つ目は、専門の調査員が立ち会いながら実施する「ハミルトンうつ病評価尺度（HAM-D）」です。",
+                "proposed": "研究開始前、すべての参加者は2つのテストを受けました。1つ目は、本人が自力で回答する、信頼性の高い「ベック抑うつ質問票（BDI）」です。2つ目は、専門の調査員が立ち会いながら実施する「ハミルトンうつ病評価尺度（HAM-D）」です。",
+                "alternatives": [],
+                "rationinale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 74,
+                "path": "/self_help/screen_2/texts/9",
+                "current": "4週間後、両グループの結果を再評価しました。その結果、「即時ビブリオセラピー群」には顕著な改善が見られました。ベックおよびハミルトンのスコアは平均して10以下に低下し、状態が正常化に向かっていることが示されました。",
+                "proposed": "4週間後、両グループの結果を再評価しました。その結果、「即時ビブリオセラピー群」には顕著な改善が見られました。ベックおよびハミルトンのスコアは平均して10以下に低下し、状態が正常化に向かっていることが示されました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 75,
+                "path": "/self_help/screen_2/texts/10",
+                "current": "データによれば、状態の劇的な改善だけでなく、実験終了後3ヶ月間も再発が見られず、その後さらに改善が進んだことも明らかになりました。",
+                "proposed": "データによれば、状態の劇的な改善だけでなく、実験終了後3ヶ月間も再発が見られず、その後さらに改善が進んだことも明らかになりました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 76,
+                "path": "/self_help/screen_2/texts/11",
+                "current": "対照的に、「待機グループ」の数値は変化せず、第1グループの改善が単なる時間の経過によるものではないことが証明されました。なお、待機期間が終わった後に第2グループにも本を提供したところ、彼らも同様に状態が改善しました。",
+                "proposed": "対照的に、「待機グループ」の数値は変化せず、第1グループの改善が単なる時間の経過によるものではないことが証明されました。なお、待機期間が終わった後に第2グループにも本を提供したところ、彼らも同様に状態が改善しました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 77,
+                "path": "/self_help/screen_2/texts/12",
+                "current": "このように、この研究はうつとの闘いにおけるセルフケアの大きな可能性を示しています。改善の度合いは非常に高く、多くの参加者が、その後の追加治療を必要としないほどでした。",
+                "proposed": "このように、この研究はうつとの闘いにおけるセルフケアの大きな可能性を示しています。改善の度合いは非常に高く、多くの参加者が、その後の追加治療を必要としないほどでした。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 78,
+                "path": "/self_help/screen_3/texts/1",
+                "current": "また、うつの治療に関する理解を大きく進展させたスコットランドの研究者たちの成果も注目に値します。彼らは、セルフヘルプ本がうつの克服において、予想以上に効果的であることを明らかにしました。",
+                "proposed": "また、うつの治療に関する理解を大きく進展させたスコットランドの研究者たちの成果も注目に値します。彼らは、セルフヘルプ本がうつの克服において、予想以上に効果的であることを明らかにしました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 79,
+                "path": "/self_help/screen_3/texts/2",
+                "current": "これらの結論は、軽度から中等度のうつを抱える200人以上の参加者を対象とした、緻密に計画された実験に基づいています。",
+                "proposed": "これらの結論は、軽度から中等度のうつを抱える200人以上の参加者を対象とした、緻密に計画された実験に基づいています。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 80,
+                "path": "/self_help/screen_3/texts/3",
+                "current": "研究では参加者を2つのグループに分け、数ヶ月間にわたり異なる方法でアプローチしました。第1グループは抗うつ薬のみによる治療を行い、第2グループはビブリオセラピーを取り入れました。",
+                "proposed": "研究では参加者を2つのグループに分け、数ヶ月間にわたり異なる方法でアプローチしました。第1グループは抗うつ薬のみによる治療を行い、第2グループはビブリオセラピーを取り入れました。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 81,
+                "path": "/self_help/screen_3/texts/4",
+                "current": "その結果、専門書を読み進めたグループは、抗うつ薬のみに頼ったグループよりも、はるかに素晴らしい回復の成果を示したのです。",
+                "proposed": "その結果、専門書を読み進めたグループは、抗うつ薬のみに頼ったグループよりも、はるかに素晴らしい回復の成果を示したのです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 82,
+                "path": "/self_help/screen_3/texts/5",
+                "current": "科学者たちが治療の基盤としたこれらの励みとなる研究は、認知行動療法（CBT）の基本原則に基づいています。",
+                "proposed": "科学者たちが治療の基盤としたこれらの励みとなる研究は、認知行動療法（CBT）の基本原則に基づいています。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 83,
+                "path": "/self_help/screen_3/texts/6",
+                "current": "<important>このセルフケアというプロセスこそが、うつから解放されるための鍵となります。この気づきが、このセクションを設けるきっかけとなりました。</important>",
+                "proposed": "<important>このセルフケアというプロセスこそが、うつから解放されるための鍵となります。この気づきが、このセクションを設けるきっかけとなりました。</important>",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 84,
+                "path": "/self_help/screen_3/texts/7",
+                "current": "私たちは、皆様がご自身の身に起きていることを理解するための「鍵」を渡し、自力で対処するための「ツール」を提供したいと考えています。",
+                "proposed": "私たちは、皆様がご自身の身に起きていることを理解するための「鍵」を渡し、自力で対処するための「ツール」を提供したいと考えています。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 85,
+                "path": "/self_help/screen_3/texts/8",
+                "current": "うつに関する重要な情報をステップ・バイ・ステップでお伝えしていきます。提供する強力なツールやテクニックを通じて、ご自身で活用できるスキルを身につけていただけるようサポートします。",
+                "proposed": "うつに関する重要な情報をステップ・バイ・ステップでお伝えしていきます。提供する強力なツールやテクニックを通じて、ご自身で活用できるスキルを身につけていただけるようサポートします。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 86,
+                "path": "/self_help/screen_3/texts/9",
+                "current": "これらを実践することで、苦痛な感情の泥沼から抜け出すための力が湧いてくるはずです。",
+                "proposed": "これらを実践することで、苦痛な感情の泥沼から抜け出すための力が湧いてくるはずです。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 87,
+                "path": "/self_help/screen_3/texts/10",
+                "current": "嵐のあとには必ず静けさが訪れ、空は晴れ渡り、太陽が再び昇って周囲を照らすことを忘れないでください。そのとき、喜びや安らぎ、そして何物にも代えがたい「生きたい」という前向きな気持ちが、再び心に灯ります。",
+                "proposed": "嵐のあとには必ず静けさが訪れ、空は晴れ渡り、太陽が再び昇って周囲を照らすことを忘れないでください。そのとき、喜びや安らぎ、そして何物にも代えがたい「生きたい」という前向きな気持ちが、再び心に灯ります。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 88,
+                "path": "/self_help/screen_3/texts/11",
+                "current": "もし今、うつと闘っているのなら、どうか覚えておいてください。正しいアプローチさえあれば、変化は可能です。たとえ現在の状況がどれほど困難で、出口がないように感じられたとしても、変化は必ず訪れます。",
+                "proposed": "もし今、うつと闘っているのなら、どうか覚えておいてください。正しいアプローチさえあれば、変化は可能です。たとえ現在の状況がどれほど困難で、出口がないように感じられたとしても、変化は必ず訪れます。",
+                "alternatives": [],
+                "rationale": "Текст корректен."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден профессиональный тон, терминология КПТ (認知の歪み, 適応的な思考) использована верно, а стиль соответствует жанру self-help. Основные риски связаны с несколькими случаями тяжеловесного синтаксиса (канцеляризмов) и потерей важного смыслового нюанса в описании отличий депрессии от грусти. Рекомендуется внести правки в указанные фрагменты для придания тексту большей естественности и точности."
+            },
+            "timings": {
+              "issues": 76570,
+              "deliberate": 6933,
+              "recommend": 272262
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_2/texts/9",
+              "from": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。こうした状態は、少なくとも2週間ほど毎日続くものです。そして、それは常に「自分には価値がない」という感覚を伴います。",
+              "to": "暗い思考から逃れることができず、何を見ても楽しめず、人生から色が失われたように感じられます。こうした状態は、少なくとも2週間ほど毎日続くものです。そして、そこには常に、自分自身の尊厳を失ってしまうような感覚が伴います。"
+            },
+            {
+              "id": "c3-I1",
+              "path": "/self_help/screen_2/texts/6",
+              "from": "この「待機グループ」は対照群としての役割を果たしました。これにより、第1グループで見られた改善が、単に時間の経過によるものなのか、それとも読書によるものなのかを検証することが可能になったのです。",
+              "to": "この「待機グループ」は対照群としての役割を果たしました。これにより、第1グループで見られた改善が、単なる時間の経過によるものか、それとも読書によるものなのかを検証できました。"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/rebuff/screen_2/texts/7",
+              "from": "この列に書くのは、あくまで「思考」であって「感情」ではありません。「ひどい気分だ」と書いてしまうと、それは単なる感情の吐露になり、思考としての反論（適応的な思考への書き換え）が難しくなってしまうからです。",
+              "to": "この列に書くのは、あくまで「思考」であって「感情」ではありません。「ひどい気分だ」と書いてしまうと、それは単なる感情の吐露になってしまいます。そうなると、思考として反論したり、適応的な思考へ書き換えたりすることが難しくなるからです。"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_1/texts/2",
+              "from": "決して、こうした困難を軽視しているわけではありません。しかし、どのような困難であっても、それが直接「現実的な原因によるうつ」の原因になることはありません。実のところ、「現実的な原因によるうつ」というものは存在しないのです。",
+              "to": "決して、こうした困難を軽視しているわけではありません。しかし、どのような困難であっても、それが直接「現実的な原因によるうつ」を引き起こすわけではありません。実のところ、「現実的な原因によるうつ」というものは存在しないのです。"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_1/texts/5",
+              "from": "<q author='ダン・レイノルズ'>うつを経験したことがない人は、うつを単なる悲しみや気分の落ち込みだと思っています。でも、私にとってそれは単なる悲しみではありません。世界から色が消え、すべてが麻痺してしまうような状態なのです。</q>",
+              "to": "<q author=\"ダン・レイノルズ\">うつを経験したことがない人は、うつを単なる悲しみや気分の落ち込みだと思っています。でも、私にとってそれは単なる悲しみではありません。世界から色が消え、すべてが麻痺してしまうような状態なのです。</q>"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_2/texts/3",
+              "from": "こうした感情は自然で、理にかなったものであり、むしろ人間としての深みを与え、人生に意味をもたらしてくれる大切なものです。喪失は、私たちに多くの気づきを与えてくれることもあります。",
+              "to": "こうした感情は自然で、理にかなったものです。むしろ人間としての深みを与え、人生に意味をもたらしてくれる大切なものでもあります。喪失は、私たちに多くの気づきを与えてくれることもあります。"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_1/texts/1",
+              "from": "もし、これらの言葉が心に深く刺さるのなら、ご自身、あるいは身近な方がすでにうつを経験しているのかもしれません。うつは決して珍しいものではなく、精神疾患の中でも「心の風邪」に例えられることがあります。現代における大きな課題の一つであり、人生の喜びや意味を奪い、時には生きる力そのものにまで影響を及ぼすこともあります。",
+              "to": "もし、これらの言葉が心に深く刺さるのなら、ご自身、あるいは身近な方がすでにうつを経験しているのかもしれません。うつは決して珍しいものではなく、精神疾患の中でも「心の風邪」に例えられることがあります。それは現代における大きな課題の一つであり、人生の喜びや意味を奪い、時には生きる力そのものにまで影響を及ぼすこともあります。"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/11",
+              "from": "時間が経つにつれて、合理的な回答を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。",
+              "to": "時間が経つにつれて、適応的な思考を見つけることがどんどん容易になっていくでしょう。しかし最も重要なのは、気分や自分自身への向き合い方に変化が現れることです。"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/description",
+              "from": "この記事では、思考や心を覆い尽くすような「うつ」の多面的な側面について深く掘り下げます。研究に基づき、認知行動療法（CBT）やビブリオセラピー（読書療法）など、さまざまなアプローチを詳しく解説します。困難な状況にあっても、回復への希望を持ち、ご自身で心のケアを行うための知識とツールをお届けします。",
+              "to": "この記事では、思考や心を覆い覆い尽くすような「うつ」の多面的な側面について深く掘り下げます。研究に基づき、認知行動療法（CBT）やビブリオセラピー（読書療法）など、さまざまなアプローチを詳しく解説します。困難な状況にあっても、回復への希望を持ち、ご自身で心のケアを行うための知識とツールをお届けします。"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_1/texts/4",
+              "from": "<q author='アーロン・ベック'>うつは「多面的な」疾患です。それは「微笑みのうつ」として現れることもあれば、身体的な疾患を装うこともあります。逆に、身体的な疾患がうつの姿を借りて現れることもあるのです。</q>",
+              "to": "<q author=\"アーロン・ベック\">うつは「多面的な」疾患です。それは「微笑みのうつ」として現れることもあれば、身体的な疾患を装うこともあります。逆に、身体的な疾患がうつの姿を借りて現れることもあるのです。</q>"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_1/texts/13",
+              "reason": "путь отсутствует в файле"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/real/screen_3/texts/11",
+              "reason": "путь отсутствует в файле"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_1/texts/3",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/2",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/10",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/11",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/0",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/1",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/2",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/3",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/4",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/5",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/6",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/7",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/8",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/9",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/11",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/0",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/1",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/2",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/3",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/5",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/6",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/7",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/8",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/9",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/10",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/11",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_1/texts/12",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/0",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/1",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/2",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/3",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/4",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/5",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/6",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/8",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/9",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/10",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/11",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_2/texts/12",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/0",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/1",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/2",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/3",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/4",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/5",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/6",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/7",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/8",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/9",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/rebuff/screen_3/texts/10",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/title",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_1/texts/0",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_1/texts/2",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_1/texts/5",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/0",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/1",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/3",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/4",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/5",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/7",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/9",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/10",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/11",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_2/texts/12",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/1",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/2",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/3",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/4",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/5",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/6",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/7",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/8",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/9",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/10",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/self_help/screen_3/texts/11",
+              "reason": "правка уже применена"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
