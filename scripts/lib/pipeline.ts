@@ -440,7 +440,7 @@ export async function runPipeline(
   if (!draft || typeof draft !== 'object') {
     throw new Error(`MAIN: не удалось распарсить JSON: ${draftText.slice(0, 200)}`);
   }
-  opts.capture?.('main', draft);
+  opts.capture?.('main', structuredClone(draft));
 
   // Стадия 2: EDITOR — полировка носителем без оригинала. Ответ — полный
   // отредактированный документ (или дифф-патч): мердж применяет значения
@@ -464,7 +464,7 @@ export async function runPipeline(
   );
   timings.editor = Date.now() - t;
   if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor');
-  opts.capture?.('editor', draft);
+  opts.capture?.('editor', structuredClone(draft));
 
   // Стадии 3–4 (text): REVIEW — смысловая сверка с оригиналом, ответ списком
   // замечаний {"issues":[...]} без правок; FIX — правка по замечаниям, ответ
@@ -514,7 +514,7 @@ export async function runPipeline(
       );
       timings.fix = Date.now() - t;
       if (fixPatch) draft = mergeSubset(draft, fixPatch, 'fix');
-      opts.capture?.('fix', draft);
+      opts.capture?.('fix', structuredClone(draft));
     }
   } else if (prompts.tech) {
     // Legacy-путь (keys/ui): однозапросная смысловая сверка с правкой.

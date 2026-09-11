@@ -111,3 +111,24 @@ describe('runPipeline — ретраи стадий без пропусков', 
     expect(data.title).toBe('Hi');
   });
 });
+
+describe('runPipeline — capture: снимки стадий независимы от дальнейших мутаций', () => {
+  test('draft в capture(main) не меняется после editor/fix', async () => {
+    const seen: Record<string, any> = {};
+    const client = fakeClient({
+      ...baseHandlers(),
+      'PROMPT:EDITOR': () => JSON.stringify({ title: 'Hi (polished)', items: ['a', 'b'] }),
+      'PROMPT:REVIEW': () => '{"issues":[{"fragment":"Hi","problem":"сухо","suggestion":"живее"}]}',
+      'PROMPT:FIX': () => JSON.stringify({ title: 'Hi there!', items: ['a', 'b'] }),
+    });
+    await runPipeline(client, PROMPTS, PAYLOAD, 'de', {
+      capture: (stage, snap) => {
+        seen[stage] = snap;
+      },
+    });
+    expect(seen.main.title).toBe('Hi'); // не «Hi there!» — snapshot сделан до мутаций
+    expect(seen.editor.title).toBe('Hi (polished)');
+    expect(seen.fix.title).toBe('Hi there!');
+    expect(seen.review.issues).toHaveLength(1);
+  });
+});
