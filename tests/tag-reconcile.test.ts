@@ -3,6 +3,7 @@ import {
   reconcileTags,
   stripSurplusTags,
   stripInstagramAttributes,
+  normalizeTagQuotes,
   tagSignatures,
   diffTagMultiset,
 } from '../scripts/lib/tag-reconcile.js';
@@ -131,5 +132,22 @@ describe('stripInstagramAttributes — пустой тег вне ru/en', () => 
   test('уже пустой тег не считается изменением', () => {
     const data = { s: 'текст <instagram> конец' };
     expect(stripInstagramAttributes(data, 'fr')).toBe(0);
+  });
+});
+
+describe('normalizeTagQuotes — кавычки атрибутов к двойным', () => {
+  test('одинарные кавычки заменяются, двойные и текст не трогаются', () => {
+    const data: any = {
+      a: "<q author='Элизабет Гилберт'>текст</q>",
+      b: '<q author="Карл Роджерс">текст</q>',
+      c: "Он сказал: 'привет' — и ушёл.",
+      d: ['<activitylink id=\'DzseWuFv2t\'>'],
+    };
+    const changed = normalizeTagQuotes(data);
+    expect(changed).toBe(2);
+    expect(data.a).toBe('<q author="Элизабет Гилберт">текст</q>');
+    expect(data.b).toBe('<q author="Карл Роджерс">текст</q>');
+    expect(data.c).toBe("Он сказал: 'привет' — и ушёл.");
+    expect(data.d[0]).toBe('<activitylink id="DzseWuFv2t">');
   });
 });

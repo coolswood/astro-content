@@ -151,6 +151,33 @@ function decrement2(map: Map<string, number>, key: string, n: number): void {
 const INSTAGRAM_ATTR_LOCALES = new Set(['ru', 'en']);
 
 /**
+ * Нормализует кавычки значений атрибутов тегов: модель даёт вперемешку
+ * author='…' и author="…" (конвенция проекта — двойные). Мутирует data,
+ * возвращает число исправленных листьев.
+ */
+export function normalizeTagQuotes(data: any): number {
+  let changed = 0;
+  const walk = (node: any): any => {
+    if (typeof node === 'string') {
+      const next = node.replace(/(<[a-zA-Z][^\s<>]*\s+[\w-]+=)'([^']*)'/g, '$1="$2"');
+      if (next !== node) changed++;
+      return next;
+    }
+    if (Array.isArray(node)) {
+      for (let i = 0; i < node.length; i++) node[i] = walk(node[i]);
+      return node;
+    }
+    if (node && typeof node === 'object') {
+      for (const k of Object.keys(node)) node[k] = walk(node[k]);
+      return node;
+    }
+    return node;
+  };
+  walk(data);
+  return changed;
+}
+
+/**
  * Конвенция платформы: встраиваемый пост Instagram рендерится только для
  * ru и en; в остальных локалях <instagram> обязан быть ПУСТЫМ тегом.
  * Промптовое правило модель регулярно нарушает, копируя тег из оригинала

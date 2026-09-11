@@ -21,7 +21,7 @@ import { loadGlossary } from './glossary-utils.js';
 import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
-import { reconcileTags, stripInstagramAttributes } from './tag-reconcile.js';
+import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes } from './tag-reconcile.js';
 import { buildSubtree } from './tree.js';
 import type { AIProvider, ProviderType } from './types.js';
 
@@ -864,6 +864,25 @@ export async function runPipeline(
     console.warn(
       `⚠️ [tags] срезаны атрибуты <instagram> в ${strippedAttrs} листах (локаль ${targetLocale} рендерит только пустой тег)`,
     );
+  }
+
+  // Кавычки атрибутов — к двойным (модель mixing author='…' / author="…").
+  const normalizedQuotes = normalizeTagQuotes(draft);
+  if (normalizedQuotes > 0) {
+    console.warn(`⚠️ [tags] кавычки атрибутов нормализованы в ${normalizedQuotes} листах`);
+  }
+
+  // Финальный скан задвоений: последняя сетка независимо от того, через какую
+  // стадию просочился дефект («als als», 覆い覆い). Только warning — решение
+  // о блокировке принимает валидация/коллегия, а не эвристика.
+  {
+    const doubledPaths: string[] = [];
+    for (const [p, v] of Object.entries(flattenAll(draft))) {
+      if (typeof v === 'string' && hasAdjacentDoubling(v)) doubledPaths.push(p);
+    }
+    if (doubledPaths.length > 0) {
+      console.warn(`⚠️ [qa] возможные задвоения в ${doubledPaths.length} листах: ${doubledPaths.slice(0, 5).join(', ')}`);
+    }
   }
 
   // Контроль полноты: все ключи источника на месте.
