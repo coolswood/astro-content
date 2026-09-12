@@ -758,6 +758,13 @@ async function runStagesOnce(
   // Стадия 2: EDITOR — полировка носителем без оригинала. Ответ — полный
   // отредактированный документ (или дифф-патч): мердж применяет значения
   // только по существующим путям, структура фиксируется базой.
+  // Контекст принятых переводов соседних чанков — образец стиля и
+  // терминологии за пределами одного чанка (в ответ его не просят: мердж
+  // в любом случае применяет только пути документа).
+  const contextBlock =
+    o.context && Object.keys(o.context).length > 0
+      ? `\n\nКОНТЕКСТ — уже принятые переводы соседних фрагментов этого документа (образец стиля и терминологии: держись в одном ряду с ними; в ответ НЕ включать):\n${JSON.stringify(o.context)}`
+      : '';
   t = Date.now();
   const editorPatch = await runStage(
     client,
@@ -765,7 +772,7 @@ async function runStagesOnce(
     o.stageAttempts,
     (attempt) => ({
       system: prompts.editor,
-      user: JSON.stringify(draft),
+      user: JSON.stringify(draft) + contextBlock,
       temperature: 0.2,
       maxTokens: 16_384,
       jsonMode: attempt > 1,

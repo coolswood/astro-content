@@ -201,3 +201,26 @@ describe('runPipeline — фолбэк: клин path-map не теряет фа
     );
   });
 });
+
+describe('runPipeline — editor с контекстом соседних чанков', () => {
+  test('контекст передаётся в editor образцом стиля, без контекста — чистый документ', async () => {
+    const seen: string[] = [];
+    const client = fakeClient({
+      'PROMPT:MAIN': () => MAIN_DRAFT,
+      'PROMPT:EDITOR': (req) => {
+        seen.push(req.user);
+        return 'Все хорошо';
+      },
+      'PROMPT:REVIEW': () => '{"issues":[]}',
+      'PROMPT:FIX': () => 'Все хорошо',
+    });
+    await runPipeline(client, PROMPTS, PAYLOAD, 'de', { context: { 'Привет': 'Hi aus Kontext' } });
+    await runPipeline(client, PROMPTS, PAYLOAD, 'de');
+    expect(seen).toHaveLength(2);
+    expect(seen[0]).toContain('КОНТЕКСТ');
+    expect(seen[0]).toContain('Hi aus Kontext');
+    expect(seen[0]).toContain('"title":"Hi"'); // документ по-прежнему первый в payload
+    expect(seen[1]).not.toContain('КОНТЕКСТ'); // без контекста — чистый документ
+    expect(seen[1]).toBe(JSON.stringify({ title: 'Hi', items: ['a', 'b'] }));
+  });
+});
