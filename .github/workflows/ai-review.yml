@@ -1,0 +1,53 @@
+# AI-ревью PR локальной Gemma (pr-agent-lab на GX10, см. ~/pr-agent-lab/README.md).
+#
+# Триггер: каждый PR владельца (opened/synchronize/reopened). На новый пуш в PR
+# прошлый прогон отменяется и запускается свежий (concurrency по номеру PR).
+# Комментарий в PR один — «липкий»: создаётся со статусом «ревью запущено» и
+# обновляется на месте результатами (review + verify) или ошибкой — по одному
+# комментарию на PR вместо кучи на каждый пуш.
+#
+# Требования к раннеру: инстанс github-runner на GX10 (пользователь coolswood).
+# Из-под него доступны ~/pr-agent-lab (обёртка bin/pr-review-ci, лимитер :8102,
+# локальная Gemma через llm-router — ревью идёт фоновым приоритетом и не душит
+# боевую модель) и Infisical: LOCAL_LLM_TOKEN берётся обёрткой из ~/local-llm-box,
+# на диск и в секреты GitHub не пишется. Профиль фреймворка (исключения
+# генератов/l10n/доков) включается авто-детектом по чекауту репо.
+
+name: ai-review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ai-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    # Только свои PR: self-hosted раннер не должен исполнять диффы чужих форков.
+    if: github.event.pull_request.user.login == 'coolswood'
+    runs-on: [self-hosted, gx10]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # Полный чекаут не нужен: дифф берётся через `gh pr diff`, а чекаут —
+          # чтобы детектор профиля фреймворка видел pubspec.yaml/go.mod/package.json.
+          fetch-depth: 1
+
+      - name: AI-ревью (pr-agent-lab)
+        env:
+          # PATH юнита раннера не содержит ~/.local/bin, где живут gh и uv —
+          # добавляем его сами (infisical/curl/git доступны в /usr/bin).
+          PATH: /home/coolswood/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: ~/pr-agent-lab/bin/pr-review-ci
