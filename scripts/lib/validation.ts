@@ -49,6 +49,10 @@ export function extractIcuConstructs(value: string): string[] {
 
 const TAG_RE = /<(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:\s+[^<>]*)?)>/g;
 
+/** Порог «почти-повтора источника»: парафразы оригинала с большим сходством
+ *  легитимно унифицируются в переводе (не «крючок»). */
+const SOURCE_SIMILARITY = 0.85;
+
 /** Теги листа: массив вида ["<b", "</b", "<q", ...] (открывающие/закрывающие отдельно). */
 export function extractTagSignatures(value: string): string[] {
   const sigs: string[] = [];
@@ -201,7 +205,9 @@ export function validateTranslation(
   // в одинаковый текст. Ловит «крючки» — подмену элемента (обычно первого в
   // массиве) дублем фразы из другого места того же файла. Легитимные повторы
   // (оригинал и так повторяет одну фразу) не флагуются: сравниваются пары
-  // путей, а не тексты разных языков между собой.
+  // путей, а не тексты разных языков между собой. Почти-повторы источника
+  // (парафразы ≥SOURCE_SIMILARITY) — тоже легитимная унификация: их
+  // совпадение в переводе не отличить от правильного перевода каждого.
   const normText = (s: string): string =>
     s
       .replace(TAG_RE, '')
@@ -217,10 +223,42 @@ export function validateTranslation(
     list.push(p);
     byNormText.set(n, list);
   }
+  /** Сходство нормализованных текстов 0..1 (Левенштейн; локальная копия — как в pipeline/judge). */
+  const similarity = (a: string, b: string): number => {
+    if (a === b) return 1;
+    if (!a.length || !b.length) return 0;
+    let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+    let cur = new Array<number>(b.length + 1).fill(0);
+    for (let i = 1; i <= a.length; i++) {
+      cur[0] = i;
+      for (let j = 1; j <= b.length; j++) {
+        cur[j] = Math.min(
+          prev[j]! + 1,
+          cur[j - 1]! + 1,
+          prev[j - 1]! + (a[i - 1] === b[j - 1] ? 0 : 1),
+        );
+      }
+      [prev, cur] = [cur, prev];
+    }
+    return 1 - prev[b.length]! / Math.max(a.length, b.length);
+  };
   for (const [n, paths] of byNormText) {
     if (paths.length < 2) continue;
-    const ruNorms = new Set(paths.map((p) => normText(ru[p] ?? '')));
-    if (ruNorms.size > 1) {
+    const norms = paths.map((p) => normText(ru[p] ?? ''));
+    const ruNorms = new Set(norms);
+    if (ruNorms.size <= 1) continue; // оригинал и так повторяется
+    // Группа флагуется, только если в ней есть пара ПО-НАСТОЯЩЕМУ разных
+    // оригиналов: все пары почти-идентичны → легитимная унификация.
+    let hasDifferentPair = false;
+    for (let i = 0; i < norms.length && !hasDifferentPair; i++) {
+      for (let j = i + 1; j < norms.length; j++) {
+        if (similarity(norms[i]!, norms[j]!) < SOURCE_SIMILARITY) {
+          hasDifferentPair = true;
+          break;
+        }
+      }
+    }
+    if (hasDifferentPair) {
       issues.push({
         path: '(файл)',
         message: `дубль перевода при разных оригиналах (${paths.slice(0, 3).join(', ')}): «${n.slice(0, 40)}…»`,
