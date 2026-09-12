@@ -168,3 +168,36 @@ describe('runPipeline — mainPathMap: плоская карта «путь → 
     );
   });
 });
+
+describe('runPipeline — фолбэк: клин path-map не теряет файл', () => {
+  test('path-map main падает → чанк проходит документным форматом', async () => {
+    let documentMainCalled = false;
+    const client = fakeClient({
+      'PROMPT:MAIN': (req) => {
+        // path-map запрос отличается аддендумом формата
+        if (req.system.includes('ФОРМАТ ОТВЕТА')) throw new Error('The operation timed out');
+        documentMainCalled = true;
+        return MAIN_DRAFT;
+      },
+      'PROMPT:EDITOR': () => 'Все хорошо',
+      'PROMPT:REVIEW': () => '{"issues":[]}',
+      'PROMPT:FIX': () => 'Все хорошо',
+    });
+    const { data } = await runPipeline(client, PROMPTS, PAYLOAD, 'de', { mainPathMap: true });
+    expect(documentMainCalled).toBe(true); // фолбэк реально ушёл в документный формат
+    expect(data.title).toBe('Hi');
+    expect(data.items).toEqual(['a', 'b']);
+  });
+
+  test('без mainPathMap фолбэка нет — падение прогона как раньше', async () => {
+    const client = fakeClient({
+      'PROMPT:MAIN': () => 'мусор {{{',
+      'PROMPT:EDITOR': () => 'Все хорошо',
+      'PROMPT:REVIEW': () => '{"issues":[]}',
+      'PROMPT:FIX': () => 'Все хорошо',
+    });
+    await expect(runPipeline(client, PROMPTS, PAYLOAD, 'de', { stageAttempts: 2 })).rejects.toThrow(
+      /Failed to parse AI JSON|потеряны ключи/,
+    );
+  });
+});

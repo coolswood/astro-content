@@ -893,20 +893,47 @@ export async function runPipeline(
         ? { ...(opts.context ?? {}), ...(history ?? {}) }
         : undefined;
     const t0 = Date.now();
-    const { draft: chunkDraft, timings: tChunk } = await runStagesOnce(
-      client,
-      prompts,
-      chunk.subtree,
-      targetLocale,
-      {
-        sourceLocale,
-        jsonModeMain: opts.jsonModeMain,
-        stageAttempts,
-        mainPathMap: opts.mainPathMap,
-        capture: opts.capture,
-        context,
-      },
-    );
+    // Path-map — формат по умолчанию, но на редком контенте модель зацикливает
+    // генерацию карты (до капа токенов: транспорт обрывает по таймауту, ретрай
+    // может клинить снова — story/distortions/love.json). Фолбэк: провалившийся
+    // чанк целиком проходит заново документным форматом — файл не теряется.
+    let chunkDraft: any;
+    let tChunk: PipelineResult['timings'];
+    try {
+      ({ draft: chunkDraft, timings: tChunk } = await runStagesOnce(
+        client,
+        prompts,
+        chunk.subtree,
+        targetLocale,
+        {
+          sourceLocale,
+          jsonModeMain: opts.jsonModeMain,
+          stageAttempts,
+          mainPathMap: opts.mainPathMap,
+          capture: opts.capture,
+          context,
+        },
+      ));
+    } catch (e) {
+      if (!opts.mainPathMap) throw e;
+      console.warn(
+        `⚠️ [chunks] чанк ${ci + 1}/${chunks.length}: path-map не удался` +
+          ` (${(e as Error)?.message ?? e}) — повторяю чанк документным форматом`,
+      );
+      ({ draft: chunkDraft, timings: tChunk } = await runStagesOnce(
+        client,
+        prompts,
+        chunk.subtree,
+        targetLocale,
+        {
+          sourceLocale,
+          jsonModeMain: true, // документный формат после битых path-map ответов — сразу строгий JSON
+          stageAttempts,
+          capture: opts.capture,
+          context,
+        },
+      ));
+    }
     timings.main += tChunk.main;
     timings.editor += tChunk.editor;
     if (tChunk.review) timings.review = (timings.review ?? 0) + tChunk.review;
