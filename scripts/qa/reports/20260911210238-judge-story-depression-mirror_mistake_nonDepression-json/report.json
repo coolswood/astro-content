@@ -1,0 +1,1542 @@
+{
+  "file": "story/depression/mirror_mistake_nonDepression.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 6,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Стиль в норме"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "issue",
+                "note": "Имя персонажа изменено с Дмитрия на Лукаса"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Стиль естественный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Смысловое искажение в конце фразы"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Имя персонажа изменено с Дмитрия на Лукаса"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Использованы правильные немецкие кавычки"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "ok",
+                "note": "Транскреация допустима"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод цитаты точный, кавычки немецкие."
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Тег пустой, как и положено для не-en/ru локалей."
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Естественный немецкий язык."
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, без тяжелых номинализаций."
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Стиль эмпатичный, грамматика верна."
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Термин 'Schwarz-Weiß-Wahrnehmung' уместен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Кавычки немецкие, смысл передан."
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Лаконично и правильно."
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Термин 'kognitive Verzerrungen' использован верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Кавычки немецкие."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Тег пустой, это норма."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Использование 'Bei einer Depression' верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/mirror/screen_1/texts/4",
+                "fragment": "Lukas, Sie sagten",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Имя персонажа заменено с Дмитрия на Лукаса",
+                "why": "Это нарушает консистентность персонажа, если в оригинале указан Дмитрий"
+              },
+              {
+                "id": "c1-I2",
+                "path": "/mirror/screen_2/texts/1",
+                "fragment": "Sonst wäre man dich nicht losgeworden",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажен смысл фразы",
+                "why": "Оригинал: «Иначе бы не уволили» (пассивный залог, акцент на событии). Перевод: «Иначе от тебя бы не избавились» (активный залог, звучит агрессивно и меняет подтекст на 'избавление от человека')"
+              },
+              {
+                "id": "c1-I3",
+                "path": "/mirror/screen_2/texts/8",
+                "fragment": "sagte Lukas",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Имя персонажа заменено с Дмитрия на Лукаса",
+                "why": "Нарушение консистентности имени персонажа"
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Имя персонажа изменено с Дмитрия на Лукаса, что нарушает консистентность."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Смысл искажен: вместо нейтрального 'не уволили' (пассив) получилось агрессивное 'от тебя избавились' (актив)."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "rank": 1,
+                "note": "Дублирует замечание о замене имени персонажа."
+              }
+            ],
+            "notes": "Перевод содержит критические ошибки в именах персонажей и серьезное искажение подтекста в диалоге, что меняет эмоциональный окрас сцены.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/mirror/screen_1/texts/4",
+                "current": "Lukas, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich kriege nichts hin“ hervorrief.",
+                "proposed": "Dmitri, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich kriege nichts hin“ hervorrief.",
+                "alternatives": [],
+                "rationale": "Имя персонажа должно соответствовать оригиналу (Дмитрий) для обеспечения консистентности текста. Замена на Лукаса — ошибка локализации."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/mirror/screen_2/texts/1",
+                "current": "Wahrscheinlich… hast du etwas falsch gemacht. Sonst wäre man dich nicht losgeworden.",
+                "proposed": "Wahrscheinlich… hast du etwas falsch gemacht. Sonst wärst du nicht entlassen worden.",
+                "alternatives": [
+                  "Sonst hättest du nicht deinen Job verloren.",
+                  "Sonst wäre man dir nicht gekündigt worden."
+                ],
+                "rationale": "Текущий вариант «man dich nicht losgeworden» переводится как «от тебя бы не избавились», что несет негативный и агрессивный оттенок, не соответствующий нейтральному «не уволили». Предложенный вариант использует пассивный залог, максимально точно передающий смысл оригинала."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 3,
+                "path": "/mirror/screen_2/texts/8",
+                "current": "Nach diesem Rollenspiel sagte Lukas, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen.",
+                "proposed": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen.",
+                "alternatives": [],
+                "rationale": "Исправление имени персонажа на Dmitri для соблюдения консистентности с оригиналом и предыдущими правками."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружены критические ошибки в именах персонажей (замена Дмитрия на Лукаса) и серьезное искажение смысла в диалоге (агрессивная интерпретация увольнения). Необходимо исправить имена и перефразировать предложения с увольнением, чтобы избежать нежелательного подтекста 'избавления от человека'. После этих правок текст будет соответствовать стандартам качества."
+            },
+            "timings": {
+              "issues": 105678,
+              "deliberate": 13097,
+              "recommend": 26074
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I3",
+              "path": "/mirror/screen_2/texts/8",
+              "from": "Nach diesem Rollenspiel sagte Lukas, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – mit sich selbst jedoch tat er es ständig.",
+              "to": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/mirror/screen_1/texts/4",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: mirror/screen_1/texts/4)"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/mirror/screen_2/texts/1",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: mirror/screen_2/texts/1)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег сохранен без изменений"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Стиль соответствует"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "issue",
+                "note": "Имя персонажа изменено с Дмитрия на Лукаса"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Смысловая ошибка в переводе фразы 'иначе бы не уволили'"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Потеряна вторая часть предложения (про то, как он поступал с собой)"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Кавычки и цитата оформлены верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "ok",
+                "note": "Транскреация уместна"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод цитаты точный, кавычки немецкие."
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Тег пустой, как и положено для не-en/ru локалей."
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Естественный немецкий язык."
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, без тяжелых номинализаций."
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Стиль соответствует Tone of Voice."
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл сохранен, текст звучит естественно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Термин 'Schwarz-Weiß-Wahrnehmung' уместен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Синтаксис перестроен под немецкий, звучит хорошо."
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "issue",
+                "note": "Использование прямых кавычек вместо немецких типографских."
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Лаконично и верно."
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Термин 'kognitive Verzerrungen' использован верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод цитаты точный."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "issue",
+                "note": "Использование дефиса вместо тире в немецкой типографике."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Кратко и верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Эмоциональный тон соблюден."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Тег пустой, это норма."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Использование 'Bei einer Depression' верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Метафора передана верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод цитаты точный."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "issue",
+                "note": "Использование прямых кавычек вместо немецких типографских."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/mirror/screen_1/texts/4",
+                "fragment": "Lukas, Sie sagten",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Имя персонажа заменено с Дмитрия на Лукаса",
+                "why": "Это нарушает консистентность персонажа, который упоминается в конце упражнения как Дмитрий"
+              },
+              {
+                "id": "c1-I2",
+                "path": "/mirror/screen_2/texts/1",
+                "fragment": "Sonst wäre man dich nicht losgeworden.",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Искажен смысл фразы 'иначе бы не уволили'",
+                "why": "Оригинал: 'иначе бы не уволили' (if you hadn't done something wrong, you wouldn't have been fired). Перевод: 'иначе от тебя бы не избавились' (implies the employer wanted to get rid of him). Это меняет тон обвинения с 'ты виноват' на 'тебя намеренно выживали'"
+              },
+              {
+                "id": "c1-I3",
+                "path": "/mirror/screen_2/texts/8",
+                "fragment": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Потеряно второе предложение оригинала",
+                "why": "В оригинале важно противопоставление: 'Он понял, что в реальности никогда бы так не поступил — а с собой поступал постоянно'. Это ключевой вывод упражнения, который потерян в переводе"
+              },
+              {
+                "id": "c2-I1",
+                "path": "/mistake/screen_2/texts/10",
+                "fragment": "„idealen“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек",
+                "why": "В немецком языке должны использоваться типографские кавычки „ “ (внизу-вверху), а не прямые \" \"."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/nonDepression/screen_1/texts/3",
+                "fragment": "„gesunde Traurigkeit“ – also",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование дефиса вместо тире",
+                "why": "В немецкой типографике для выделения пояснений или пауз используется длинное тире (Gedankenstrich —), а не короткий дефис (-)."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/nonDepression/screen_2/texts/4",
+                "fragment": "„Kaltwasserhahn“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек",
+                "why": "В немецком языке должны использоваться типографские кавычки „ “ (внизу-вверху), а не прямые \" \"."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Имя персонажа изменено, что ломает логику повествования (в конце текста он Дмитрий)."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Смысловое искажение: вместо констатации факта увольнения из-за ошибки, перевод подразумевает намеренное избавление от сотрудника."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Критическая потеря смысла: упущено противопоставление поведения с другими и с самим собой, которое является сутью упражнения."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "rejected",
+                "note": "В предоставленном JSON-переводе уже используются правильные немецкие кавычки „ “, претензия ложна."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Типографическая ошибка: вместо длинного тире (Gedankenstrich) использован дефис."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "rejected",
+                "note": "В предоставленном JSON-переводе уже используются правильные немецкие кавычки „ “, претензия ложна."
+              }
+            ],
+            "notes": "Перевод содержит серьезные смысловые ошибки (имена, искажение подтекста, пропуски), которые критически влияют на понимание психологической практики. Также требуется исправление типографики.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/mirror/screen_1/texts/4",
+                "current": "<dialog psy=\"true\">Lukas, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich kriege nichts hin“ hervorrief.</dialog>",
+                "proposed": "<dialog psy=\"true\">Dmitri, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich kriege nichts hin“ hervorrief.</dialog>",
+                "alternatives": [],
+                "rationale": "Имя персонажа должно быть консистентным. В конце упражнения он упоминается как Дмитрий, поэтому замена на Лукаса — грубая ошибка локализации."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/mirror/screen_2/texts/1",
+                "current": "<dialog man=\"true\">Wahrscheinlich… hast du etwas falsch gemacht. Sonst wäre man dich nicht losgeworden.</dialog>",
+                "proposed": "<dialog man=\"true\">Wahrscheinlich… hast du etwas falsch gemacht. Sonst wärst du nicht entlassen worden.</dialog>",
+                "alternatives": [
+                  "Sonst wäre man dir nicht gekündigt worden.",
+                  "Sonst hätte man dich nicht entlassen."
+                ],
+                "rationale": "Текущий вариант «man dich nicht losgeworden» означает «от тебя бы не избавились», что меняет смысл с «ты совершил ошибку» на «тебя намеренно выживали». Вариант с «entlassen worden» точно передает смысл оригинала «иначе бы не уволили»."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 3,
+                "path": "/mirror/screen_2/texts/8",
+                "current": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen.",
+                "proposed": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen. Er erkannte, dass er in der Realität niemals so handeln würde – mit sich selbst jedoch tat er es ständig.",
+                "alternatives": [],
+                "rationale": "В оригинале содержится ключевой терапевтический вывод: противопоставление отношения к другим и к себе. Без этого предложения упражнение теряет свою смысловую завершенность."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 4,
+                "path": "/nonDepression/screen_1/texts/3",
+                "current": "Es stellt sich die Frage: Gibt es eine „gesunde Traurigkeit“ – also eine, die nicht mit einer Depression zusammenhängt?",
+                "proposed": "Es stellt sich die Frage: Gibt es eine „gesunde Traurigkeit“ — also eine, die nicht mit einer Depression zusammenhängt?",
+                "alternatives": [],
+                "rationale": "Согласно правилам немецкой типографики, для выделения пояснительных конструкций следует использовать длинное тире (Gedankenstrich), а не дефис."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружены критические ошибки: нарушение консистентности имени персонажа, искажение смысла ключевой фразы в диалоге и, что самое важное, потеря ключевого терапевтического вывода в конце упражнения. Также требуется исправить типографику (тире). Необходимо внести правки, прежде чем выпускать текст в работу."
+            },
+            "timings": {
+              "issues": 144317,
+              "deliberate": 22853,
+              "recommend": 30816
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/mirror/screen_1/texts/4",
+              "from": "<dialog psy=\"true\">Lukas, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich kriege nichts hin“ hervorrief.</dialog>",
+              "to": "<dialog psy=\"true\">Dmitri, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich kriege nichts hin“ hervorrief.</dialog>"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/mirror/screen_2/texts/1",
+              "from": "<dialog man=\"true\">Wahrscheinlich… hast du etwas falsch gemacht. Sonst wäre man dich nicht losgeworden.</dialog>",
+              "to": "<dialog man=\"true\">Wahrscheinlich… hast du etwas falsch gemacht. Sonst wärst du nicht entlassen worden.</dialog>"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/mirror/screen_2/texts/8",
+              "from": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen.",
+              "to": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwerfiel, solche Worte zu einem geliebten Menschen zu sagen. Er erkannte, dass er in der Realität niemals so handeln würde – mit sich selbst jedoch tat er es ständig."
+            },
+            {
+              "id": "c2-I2",
+              "path": "/nonDepression/screen_1/texts/3",
+              "from": "Es stellt sich die Frage: Gibt es eine „gesunde Traurigkeit“ – also eine, die nicht mit einer Depression zusammenhängt?",
+              "to": "Es stellt sich die Frage: Gibt es eine „gesunde Traurigkeit“ — also eine, die nicht mit einer Depression zusammenhängt?"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль соответствует"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег сохранен без изменений"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод хороший, без кальки"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие, смысл передан"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Кавычки и имя адаптированы"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "issue",
+                "note": "Mistranslation: смысл заголовка изменен с 'избавления от страха' на 'освоение обращения'"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки „“ использованы верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Тег пустой, как и положено для не-en/ru локалей."
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Естественный немецкий язык."
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, без тяжелых номинализаций."
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Стиль соответствует Tone of Voice."
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Термин 'Schwarz-Weiß-Wahrnehmung' уместен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Синтаксис перестроен естественно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Кавычки „“ на месте."
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Кратко и точно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод адекватен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод хороший."
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Лаконично."
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Термин 'kognitive Verzerrungen' использован верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод цитаты точный."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Кавычки „“ использованы верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Тег пустой, это норма."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Использование 'Bei einer Depression' верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/mistake/title",
+                "fragment": "Technik: Den Umgang mit Fehlern meistern",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Смысловое искажение заголовка",
+                "weight": "В оригинале «Избавление от страха ошибки» (фокус на страхе), в переводе «Освоение обращения с ошибками» (фокус на навыке). Это меняет эмоциональный посыл упражнения."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation shifts the focus from emotional relief (fear) to skill acquisition (handling), which alters the psychological intent of the section."
+              }
+            ],
+            "notes": "The translation is generally high-quality and natural, but the single identified issue represents a significant shift in the emotional tone of the heading.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/mistake/title",
+                "current": "Technik: Den Umgang mit Fehlern meistern",
+                "proposed": "Technik: Die Angst vor Fehlern überwinden",
+                "alternatives": [
+                  "Technik: Angst vor Fehlern loswerden",
+                  "Technik: Den Umgang mit der Angst vor Fehlern meistern"
+                ],
+                "rationale": "Оригинал фокусируется на избавлении от страха (эмоциональный аспект), а текущий перевод — на навыке управления ошибками (когнитивный аспект). Вариант 'Die Angst vor Fehlern überwinden' наиболее точно передает смысл 'избавления от страха' и звучит естественно для немецкого пользователя."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдены правила обращения (Sie), терминология КПТ и тон экспертного друга. Единственная серьезная проблема — смещение акцента в заголовке одной из техник, что меняет психологический посыл. После исправления заголовка текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 89874,
+              "deliberate": 5136,
+              "recommend": 13890
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/mistake/title",
+              "from": "Technik: Den Umgang mit Fehlern meistern",
+              "to": "Technik: Die Angst vor Fehlern überwinden"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
