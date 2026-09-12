@@ -1,27 +1,27 @@
 {
   "steps": [
-    "Ich fühle mich emotional ausgebrannt.",
-    "Nach der Arbeit fühle ich mich wie ausgewrungen.",
-    "Ich gehe morgens ungern zur Arbeit.",
-    "Ich verstehe gut, wie sich meine Mitarbeitenden und Kolleg:innen fühlen, und berücksichtige das sachgerecht.",
-    "Ich habe das Gefühl, manche Mitarbeitenden und Kolleg:innen wie Gegenstände zu behandeln – ohne Wärme und Zuwendung.",
-    "Ich fühle mich energiegeladen und emotional beflügelt.",
-    "In Konflikten mit Kolleg:innen finde ich tragfähige Lösungen.",
-    "Ich fühle mich niedergedrückt und apathisch.",
-    "Ich bin überzeugt, dass meine Arbeit Menschen nützt.",
-    "Ich merke bei mir eine gewisse Härte gegenüber den Personen, mit denen ich arbeite.",
-    "Ich bemerke, dass mich die Arbeit abstumpft.",
-    "Ich habe viele Pläne für die Zukunft und glaube, dass ich sie umsetzen kann.",
+    "Ich fühle mich emotional ausgelaugt.",
+    "Nach der Arbeit fühle ich mich wie eine ausgepresste Zitrone.",
+    "Morgens fühle ich mich müde und habe keine Lust, zur Arbeit zu gehen.",
+    "Ich habe ein gutes Gespür dafür, wie sich meine Mitarbeiter und Kollegen fühlen, und versuche, dies im Sinne der gemeinsamen Ziele zu berücksichtigen.",
+    "Ich habe das Gefühl, dass ich mit einigen Mitarbeitern und Kollegen wie mit Objekten umgehe (ohne Wärme oder Sympathie).",
+    "Ich fühle mich energiegeladen und emotional mit meiner Arbeit verbunden.",
+    "Ich verstehe es, in Konflikten mit Kollegen die richtige Lösung zu finden.",
+    "Ich fühle mich niedergeschlagen und apathisch.",
+    "Ich bin davon überzeugt, dass meine Arbeit wirklich wichtig ist.",
+    "Ich bemerke eine gewisse Kälte gegenüber den Menschen, mit denen ich zusammenarbeite.",
+    "Ich habe das Gefühl, dass ich durch die Arbeit härter werde.",
+    "Ich habe viele Pläne für die Zukunft und glaube fest daran, dass ich sie verwirklichen kann.",
     "Meine Arbeit enttäuscht mich.",
-    "Ich habe den Eindruck, zu viel zu arbeiten.",
-    "Manchmal ist mir wirklich gleichgültig, was mit einigen Mitarbeitenden und Kolleg:innen passiert.",
-    "Ich möchte mich zurückziehen und mich von allem und allen erholen.",
-    "Es fällt mir leicht, im Team eine Atmosphäre von Freundlichkeit und Zusammenarbeit zu schaffen.",
-    "Bei der Arbeit spüre ich ein angenehmes Aufleben.",
-    "Ich habe das Gefühl, mit meiner Arbeit viel wirklich Sinnvolles zu bewirken.",
-    "Ich spüre Gleichgültigkeit und verliere das Interesse an vielem, das mir an meiner Arbeit früher Freude bereitet hat.",
-    "Am Arbeitsplatz gehe ich gelassen mit emotionalen Belastungen um.",
-    "Ich habe das Gefühl, Kolleg:innen und Mitarbeitende laden mir ihre Probleme und Aufgaben auf."
+    "Ich habe das Gefühl, zu viel zu arbeiten.",
+    "Es kommt vor, dass es mir tatsächlich gleichgültig ist, was mit einigen meiner Mitarbeiter und Kollegen passiert.",
+    "Ich möchte am liebsten allein sein und einfach mal meine Ruhe vor allen haben.",
+    "Es fällt mir leicht, im Team eine herzliche und produktive Atmosphäre zu schaffen.",
+    "Während der Arbeit spüre ich einen Energieschub und echtes Interesse.",
+    "Ich habe das Gefühl, durch meine Arbeit zu etwas wirklich Wertvollem beizutragen.",
+    "Ich bemerke, dass ich das Interesse an Dingen verliere, die mir früher bei der Arbeit Freude bereitet haben.",
+    "Bei der Arbeit gehe ich ruhig mit emotional schwierigen Situationen um.",
+    "Ich habe das Gefühl, dass Kollegen und Mitarbeiter viel zu oft ihre Probleme und Aufgaben auf mich übertragen."
   ],
   "variants": {
     "always": "Immer",
@@ -31,118 +31,130 @@
   },
   "steps_description": {
     "0": {
-      "text": "Emotionales Ausgebranntsein ist oft die Folge anhaltenden Stresses bei fehlender Regeneration. Regelmäßige Pausen, erfüllende Freizeitaktivitäten und soziale Unterstützung wirken nachweislich entlastend.",
-      "fact": "Laut Gallup berichten 23 % der Beschäftigten von dauerhaftem oder sehr häufigem Burnout, weitere 44 % zumindest gelegentlich."
+      "text": "Emotionale Erschöpfung ist oft die Folge von lang anhaltendem Stress und einem Mangel an Erholungsmöglichkeiten. Regelmäßige Pausen, Hobbys sowie die Unterstützung durch Familie und Freunde können dabei helfen, diesen Zustand zu bewältigen.",
+      "fact": "Eine Umfrage von Gallup unter Arbeitnehmern ergab, dass 23 % der Befragten ständig oder sehr häufig unter Burnout leiden, während weitere 44 % dies gelegentlich erleben."
     },
     "1": {
-      "text": "Ausreichender Schlaf, Bewegung und ausgewogene Ernährung stabilisieren das Energieniveau und beugen Erschöpfung vor.",
-      "fact": "Führungskräfte betonen immer wieder die Bedeutung von erholsamem Schlaf für Leistungsfähigkeit und Belastbarkeit."
+      "text": "Körperliche Aktivität und eine ausgewogene Ernährung spielen eine entscheidende Rolle dabei, das Energieniveau aufrechtzuerhalten und Müdigkeit vorzubeugen.",
+      "fact": "Jeff Bezos, der Gründer von Amazon, hat mehrfach die Bedeutung von ausreichend Erholung und Schlaf betont, um die Produktivität zu fördern und Erschöpfung zu vermeiden. Er gibt an, dass mindestens acht Stunden Schlaf pro Tag ihm helfen, energiegeladen und effektiv zu bleiben."
     },
     "2": {
-      "text": "Strukturierte Morgenroutinen (z. B. kurze Bewegung, Atemübungen, ruhige Planung) reduzieren Stress und erhöhen die Antriebskraft für den Tag.",
-      "fact": "Frühe, aber gut vorbereitete Tagesstarts funktionieren besonders dann, wenn die Nachtruhe qualitativ gut war."
+      "text": "Eine strukturierte Morgenroutine kann helfen, Stress zu reduzieren und die Motivation zu steigern. Rituale wie Sport, Meditation oder Lesen können den Start in den Tag angenehmer gestalten.",
+      "fact": "Tim Cook, der CEO von Apple, ist für sein frühes Aufstehen (gegen 4:30 Uhr) bekannt. Dennoch betont er, wie wichtig guter Schlaf in der Nacht und regelmäßige körperliche Betätigung sind, um Energie und Motivation zu bewahren."
     },
     "3": {
-      "text": "Trainings zu Emotionswahrnehmung, aktivem Zuhören und Konfliktkompetenz erhöhen die Teamwirksamkeit und erleichtern Führung.",
-      "fact": "Ein hoher emotionaler Intelligenzgrad (EQ) korreliert stark mit Leistung und Führungsqualität."
+      "text": "Trainings zur Förderung der emotionalen Intelligenz können Führungskräften und Mitarbeitern helfen, ein besseres Verständnis füreinander zu entwickeln und effektiver zusammenzuarbeiten. Dies kann Kurse zu aktivem Zuhören, Konfliktmanagement und Empathieentwicklung umfassen.",
+      "fact": "Emotionale Intelligenz (EQ) spielt eine Schlüsselrolle bei der Teamführung und beim beruflichen Erfolg. Laut Daten von TalentSmart zeigen Studien, dass 90 % der leistungsstärksten Mitarbeiter über ein hohes Maß an emotionaler Intelligenz verfügen."
     },
     "4": {
-      "text": "Empathie und persönliche Zuwendung senken Fluktuation und stärken Bindung.",
-      "fact": "Studien zeigen: Wer sich von Führung gesehen fühlt, bleibt häufiger im Unternehmen und ist engagierter."
+      "text": "Empathie und persönliche Wertschätzung durch die Führungsebene können die Fluktuation erheblich senken. Eine im Harvard Business Review veröffentlichte Studie zeigte, dass Mitarbeiter, die Unterstützung und Aufmerksamkeit von ihren Vorgesetzten erfahren, zu viermal seltener das Unternehmen verlassen.",
+      "fact": "Elon Musk, der Gründer von Tesla und SpaceX, ist für seinen hohen Anspruch und seine Intensität bekannt. Einige Mitarbeiter berichteten, dass sein Führungsstil hart und wenig persönlich sein kann, was bei den Teams zu Stress und Burnout führte."
     },
     "5": {
-      "text": "Achtsamkeit, Meditation oder Yoga unterstützen emotionale Balance und steigern die Energiereserven.",
-      "fact": "Regelmäßige Praxis geht mit weniger Stresserleben und besserer Selbstregulation einher."
+      "text": "Psychologische Praktiken wie Meditation, Yoga und Achtsamkeitstechniken können dazu beitragen, das emotionale Gleichgewicht zu halten und das Energieniveau zu steigern.",
+      "fact": "Richard Branson, der Gründer der Virgin Group, ist für seinen Enthusiasmus und seine Energie bekannt. Er betont häufig, wie wichtig eine positive Einstellung und Energie sind, um sowohl im Geschäft als auch im Privatleben erfolgreich zu sein. Branson sagt, dass seine positive Einstellung ihm hilft, Schwierigkeiten zu überwinden und sein Team zu inspirieren."
     },
     "6": {
-      "text": "Konfliktlösungen gelingen besser mit klaren Regeln, Perspektivwechsel und fairen Kompromissen.",
-      "fact": "Teams mit etablierten Konfliktprozessen arbeiten messbar produktiver."
+      "text": "Das Erlernen von Konfliktmanagement kann die Entwicklung von Fähigkeiten wie aktivem Zuhören, Empathie und Kompromissbereitschaft beinhalten. Kurse und Trainings zu diesen Themen können für alle Mitarbeiterebenen sehr nützlich sein.",
+      "fact": "Eine effektive Konfliktlösung kann die Produktivität eines Teams erheblich steigern. Eine Studie des Harvard Business Review zeigte, dass Unternehmen, die Konflikte erfolgreich managen, eine um 30 % höhere Produktivität aufweisen."
     },
     "7": {
-      "text": "Therapeutische Gespräche (z. B. KVT) helfen bei Niedergeschlagenheit und Antriebsmangel und beugen chronischem Ausbrennen vor."
+      "text": "Psychotherapie und Beratungsgespräche bei Psychologen können für Menschen, die sich niedergeschlagen oder apathisch fühlen, sehr hilfreich sein. Die Kognitive Verhaltenstherapie (KVT) wird häufig zur Behandlung von Depressionen und Burnout eingesetzt."
     },
     "8": {
-      "text": "Regelmäßige Anerkennung und konstruktives Feedback erhöhen Sinnempfinden und Motivation.",
-      "fact": "Wer den Nutzen der eigenen Arbeit sieht, ist in Studien produktiver und zufriedener."
+      "text": "Feedback und Anerkennung von Kollegen und Vorgesetzten können das Vertrauen in die eigene Bedeutung stärken. Regelmäßige Anerkennung der Leistungen fördert die Motivation und die Arbeitszufriedenheit.",
+      "fact": "Arbeitszufriedenheit ist mit einer gesteigerten Produktivität verbunden. Laut Harvard Business Review sind Mitarbeiter, die den Wert ihrer Arbeit erkennen, um 21 % produktiver und bringen dem Unternehmen einen um 22 % höheren Gewinn."
     },
     "9": {
-      "text": "Empathie aktiviert im Gehirn Areale, die auch bei körperlichem Schmerz aktiv sind – sie ist neurobiologisch spürbar.",
-      "fact": "Transparente Kommunikation verbessert Klima und Zusammenarbeit nachhaltig."
+      "text": "Neurowissenschaftliche Studien haben gezeigt, dass das Gehirn bei Empathie dieselben Areale aktiviert wie bei körperlichem Schmerz. Das bedeutet, dass emotionale Bindungen tatsächlich tiefgreifend und bedeutsam sein können.",
+      "fact": "Ray Dalio, der Gründer von Bridgewater Associates, ist bekannt für seine Philosophie der „radikalen Transparenz“ und Ehrlichkeit am Arbeitsplatz. Er ist der Überzeugung, dass das offene Ansprechen von Problemen und Fehlern die Beziehungen im Team verbessert und die Effizienz steigert."
     },
     "10": {
-      "text": "Work-Life-Balance und realistische Arbeitszeiten beugen Verhärtung und Zynismus vor.",
-      "fact": "Dankbarkeits- und Optimismusübungen reduzieren emotionale Erschöpfung."
+      "text": "Studien zeigen, dass eine ausgewogene Work-Life-Balance das Stresslevel deutlich senken und Zynismus verhindern kann. Unternehmen wie Basecamp setzen sich aktiv für kürzere Arbeitswochen und die Minimierung von Überstunden ein, um das Wohlbefinden der Mitarbeiter zu fördern.",
+      "fact": "Die Arbeit von Martin Seligman im Bereich der Positiven Psychologie zeigt, dass die Entwicklung von Eigenschaften wie Dankbarkeit und Optimismus den emotionalen Zustand erheblich verbessern und Zynismus verringern kann."
     },
     "11": {
-      "text": "Zuversicht und Zukunftsglaube sind Schutzfaktoren für Wohlbefinden und Zielerreichung.",
-      "fact": "Kurze soziale Pausen im Arbeitsalltag senken Stress und fördern Teamzusammenhalt."
+      "text": "Untersuchungen im Bereich der Positiven Psychologie, wie die Arbeiten von Martin Seligman, zeigen, dass Optimismus und der Glaube an die Zukunft die Lebensqualität maßgeblich verbessern und zur Erreichung von Zielen beitragen können.",
+      "fact": "In einigen Ländern, wie etwa in Schweden, gibt es das Konzept des „fika“ – eine obligatorische Kaffeepause für den Austausch, die hilft, Stress abzubauen und Burnout vorzubeugen."
     },
     "12": {
-      "text": "Hobbys und persönliche Projekte wirken als Ressourcentankstellen und gleichen Arbeitsbelastung aus."
+      "text": "Das Eintauchen in Hobbys oder persönliche Projekte kann ein Gefühl der Zufriedenheit vermitteln und negative, arbeitsbezogene Emotionen ausgleichen. Erfolgreiche Unternehmer wie Richard Branson widmen sich aktiv verschiedenen persönlichen Projekten, die ihnen Freude und Inspiration bereiten."
     },
     "13": {
-      "text": "Dauerhaft überlange Arbeitszeiten erhöhen das Risiko für gesundheitliche Schäden und Leistungseinbrüche."
+      "text": "Jack Ma, der Gründer eines großen Internetunternehmens, war einst ein Befürworter des „996“-Arbeitsmodells (von 9 Uhr morgens bis 9 Uhr abends, 6 Tage die Woche). Später räumte er jedoch ein, dass ein solches Arbeitsregime schädlich für die Gesundheit der Mitarbeiter und der Organisation als Ganzes sein kann."
     },
     "14": {
-      "text": "Burnout kann sich im Team „übertragen“ – Vorbilder für gesunde Grenzen wirken vorbeugend."
+      "text": "Studien belegen, dass Burnout in Teams „ansteckend“ wirken kann, indem es sich von einem Mitarbeiter auf den nächsten überträgt."
     },
     "15": {
-      "text": "Gezielte Digitalpausen schützen vor Informationsüberlastung und helfen, sich zu erholen.",
-      "fact": "Längere, wirklich unterbrechungsfreie Erholungsphasen steigern Kreativität und Motivation."
+      "text": "Das Konzept des „Digital Detox“ – eine Phase der vollständigen Abkehr von elektronischen Geräten – gewinnt als Methode zur Bekämpfung von Informationsüberflutung und Burnout immer mehr an Bedeutung.",
+      "fact": "Mark Zuckerberg, der Gründer von Facebook, ist bekannt für seine langen Urlaubsphasen und die bewusste Auszeit von sozialen Netzwerken. Er ist der Meinung, dass solche Pausen ihm helfen, seine Energie und Inspiration für die Arbeit zu bewahren."
     },
     "16": {
-      "text": "Psychologische Sicherheit – also angstfreie Meinungsäußerung – ist ein Schlüssel für effektive Teams.",
-      "fact": "Vertrauen zwischen Mitarbeitenden und Führung wird von der Mehrheit als zentral für Zufriedenheit bewertet."
+      "text": "Das Konzept der „psychologischen Sicherheit“ in Teams wurde von der Professorin der Harvard Business School, Amy Edmondson, entwickelt. Sie vertritt die Ansicht, dass dies ein entscheidender Faktor für die Effektivität eines Teams ist.",
+      "fact": "Laut der Society for Human Resource Management halten 61 % der Mitarbeiter Vertrauen zwischen Mitarbeitern und Führungskräften für sehr wichtig für die Arbeitszufriedenheit."
     },
     "17": {
-      "text": "Der Flow-Zustand (M. Csikszentmihalyi) beschreibt vertieftes, müheloses Arbeiten mit hoher Freude und Energie.",
-      "fact": "Zeitfenster für selbstbestimmte Projekte erhöhen Kreativität und Bindung."
+      "text": "Das von dem Psychologen Mihaly Csikszentmihalyi beschriebene Konzept des „Flows“ erklärt den Zustand des völligen Aufgehens in einer Tätigkeit, der von einem Gefühl der Energie und Freude begleitet wird.",
+      "fact": "Google nutzt die „20 %-Regel“, die es Mitarbeitern ermöglicht, ein Fünftel ihrer Arbeitszeit für Projekte ihrer eigenen Wahl aufzuwenden, was die Kreativität und das Engagement fördert."
     },
     "18": {
-      "text": "Sinnerleben („Wofür mache ich das?“) stärkt Ausdauer und Engagement.",
-      "fact": "Unternehmen mit sozialem Nutzenprofil berichten häufiger von starker Identifikation der Belegschaft."
+      "text": "Laut dem Pew Research Center betrachten 30 % der Amerikaner ihre Arbeit als Berufung, 44 % als Karriere und 24 % lediglich als Mittel zum Lebensunterhalt.",
+      "fact": "Das Unternehmen TOMS Shoes nutzt das „One for One“-Modell, bei dem für jedes verkaufte Paar Schuhe ein Paar an Bedürftige gespendet wird, was den Mitarbeitern das Gefühl gibt, dass ihre Arbeit einen echten Nutzen stiftet."
     },
     "19": {
-      "text": "Das japanische „Ikigai“ verbindet Können, Leidenschaft, Bedarf und Bezahlung – eine Orientierung für erfüllende Arbeit.",
-      "fact": "Sozialunternehmertum zeigt, wie Sinn und Wirtschaftlichkeit zusammengehen können."
+      "text": "Das japanische Konzept des „Ikigai“ beschreibt die Schnittmenge aus dem, was man liebt, worin man gut ist, was die Welt braucht und wofür man bezahlt werden kann. Dies gilt als Schlüssel zur Arbeitszufriedenheit.",
+      "fact": "Muhammad Yunus, Friedensnobelpreisträger, gründete die Grameen Bank, um einkommensschwachen Menschen Mikrokredite zu gewähren. Er spricht häufig über die Bedeutung der Schaffung von „Social Business“, um globale Probleme zu lösen."
     },
     "20": {
-      "text": "Kürzere Arbeitszeiten bei gleicher Effizienz können Energie und Motivation steigern.",
-      "fact": "Erfahrungsberichte zeigen weniger Krankenstand und höhere Zufriedenheit."
+      "text": "In Schweden experimentieren einige Unternehmen mit einem 6-Stunden-Arbeitstag, um die Produktivität zu steigern und Burnout vorzubeugen.",
+      "fact": "Oprah Winfrey gab 2008 zu, unter Burnout und einem Verlust des Interesses an ihrer Show gelitten zu haben, was letztlich dazu führte, dass sie beschloss, diese einige Jahre später zu beenden."
     },
     "21": {
-      "text": "Programme zu Achtsamkeit und emotionaler Kompetenz reduzieren Stress und verbessern Kollaboration.",
-      "fact": "Laut WHO kosten Depression und Angst die Weltwirtschaft enorme Summen durch Produktivitätsausfall."
+      "text": "Google bietet seinen Mitarbeitern den Kurs „Search Inside Yourself“ an, der Achtsamkeit und emotionale Intelligenz schult, um Stress und Emotionen am Arbeitsplatz besser bewältigen zu können.",
+      "fact": "Nach Angaben der Weltgesundheitsorganisation kostet die Weltwirtschaft jährlich etwa 1 Billion US-Dollar durch Produktivitätsverluste infolge von Depressionen und Angstzuständen."
     },
     "22": {
-      "text": "„Emotionale Vampir:innen“ binden viel Aufmerksamkeit und Energie – klare Grenzen schützen Ressourcen.",
-      "fact": "Selbstorganisierte Strukturen können Verantwortung breiter verteilen und Führung entlasten."
+      "text": "Der Begriff „emotionaler Vampirismus“ beschreibt in der Psychologie Menschen, die die Energie ihres Umfelds aussaugen, indem sie oft ihre eigenen Probleme auf andere übertragen.",
+      "fact": "In einigen Unternehmen, wie etwa Zappos, wird das System der „Holakratie“ eingeführt – ein Managementmodell, bei dem die Verantwortung auf selbstorganisierende Teams verteilt wird, anstatt sich auf Manager zu konzentrieren."
     }
   },
   "range": {
     "low": "Hohe Produktivität",
-    "middle": "Nachlassende Produktivität",
-    "high": "Nähe zum Burnout"
+    "middle": "Verminderte Produktivität",
+    "high": "Gefahr eines Burnouts"
   },
   "result": {
     "low": {
       "title": "Hohe Produktivität",
-      "text": "Ihr Produktivitätsniveau ist stabil und bewegt sich in einem gesunden Bereich. Phasen der Müdigkeit kommen vor, insgesamt halten Sie jedoch einen guten Rhythmus zwischen Arbeit und Erholung. Das erhält Energie, Motivation und emotionales Wohlbefinden – pflegen Sie diesen Balancepunkt."
+      "text": "Ihr Produktivitätsniveau ist derzeit stabil und befindet sich in einem gesunden Bereich. Gelegentlich mögen Sie sich müde fühlen, aber insgesamt gelingt es Ihnen, einen guten Rhythmus und eine ausgewogene Balance zwischen Arbeit und Erholung zu halten. Dies hilft Ihnen dabei, Ihre Energie, Motivation und Ihr emotionales Wohlbefinden zu bewahren. Achten Sie weiterhin achtsam auf sich selbst und halten Sie dieses Gleichgewicht aufrecht."
     },
     "middle": {
-      "title": "Nachlassende Produktivität",
-      "text": "Ihre Produktivität ist etwas gesunken – möglicherweise durch höhere Belastung oder zu wenig Regeneration. Noch ist das nicht kritisch, aber es lohnt sich, Pausen, Schlaf und Grenzen bewusster zu schützen, um Energie und Stabilität nachhaltig zu sichern."
+      "title": "Verminderte Produktivität",
+      "text": "Ihr Produktivitätsniveau ist etwas gesunken, was möglicherweise auf eine erhöhte Belastung oder mangelnde Erholung zurückzuführen ist. Dies ist noch nicht kritisch, und Sie sind weiterhin in der Lage, Ihre Aufgaben zu bewältigen und Zufriedenheit daraus zu ziehen. Es könnte jedoch hilfreich sein, sich jetzt verstärkt auf die Balance zwischen Arbeit und Ruhephasen zu konzentrieren, um Ihre Energie und emotionale Stabilität langfristig zu sichern."
     },
     "high": {
-      "title": "Nähe zum Burnout",
-      "text": "Ihre Ressourcen wirken deutlich beansprucht. Anhaltende Überlastung oder wenig erfüllende Aufgaben können Motivation, Stimmung und Sinngefühl beeinträchtigen. Jetzt ist es besonders wichtig, Tempo zu reduzieren, gezielt zu regenerieren und Unterstützung zu nutzen, um Energie und Widerstandskraft zurückzugewinnen."
+      "title": "Gefahr eines Burnouts",
+      "text": "Ihre Ressourcen könnten erheblich erschöpft sein. Möglicherweise stehen Sie schon seit längerer Zeit unter hoher Belastung oder erledigen Aufgaben, die Ihnen keine Freude mehr bereiten. Dieser Zustand kann sich negativ auf Ihre Motivation, Ihre Stimmung und Ihr Gefühl für die Sinnhaftigkeit Ihrer Arbeit auswirken. Es ist jetzt besonders wichtig, einen Gang zurückzuschalten, neue Kraft zu schöpfen und auf Ihr Wohlbefinden zu achten. Unterstützung, Erholung und eine Anpassung der Belastung können Ihnen helfen, Ihre Energie und Widerstandsfähigkeit zurückzugewinnen."
     }
   },
   "description": {
     "text": [
-      "Fühlen Sie sich häufig erschöpft, verlieren Sie die Freude an der Arbeit oder fällt Erholung schwer?",
-      "Dieser Test hilft einzuschätzen, ob Anzeichen emotionaler Erschöpfung vorliegen und wie ausgewogen Belastung und Regeneration aktuell sind.",
-      "Die Antworten zeigen, wie es Ihren Ressourcen geht und ob Anpassungen sinnvoll wären, um Produktivität und Wohlbefinden zu stärken."
+      "Fühlen Sie sich oft müde, verlieren das Interesse an Ihrer Arbeit oder haben Schwierigkeiten, neue Energie zu tanken?",
+      "Dieser Test hilft Ihnen festzustellen, ob Anzeichen einer emotionalen Erschöpfung vorliegen und wie ausgewogen das Verhältnis zwischen Belastung und Erholung ist.",
+      "Die Ergebnisse zeigen Ihnen, wie es um Ihre Ressourcen aktuell steht und ob Anpassungen sinnvoll sind, um Ihre Produktivität und Ihr Wohlbefinden zu unterstützen."
     ]
-  }
+  },
+  "instagram": [
+    "18035271944388619",
+    "18481071250010619",
+    "18339662377154099",
+    "18062987551913114",
+    "18259833634286379",
+    "18074617231661593",
+    "18020760458429456",
+    "18031908248565934",
+    "18056025920495152",
+    "17858367309539081"
+  ]
 }
