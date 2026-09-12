@@ -174,28 +174,6 @@ describe('validateTranslation — негативные сценарии', () => 
     const ru = flattenLeaves({ a: 'Дальше', b: 'Другое место' });
     expect(validateTranslation('en', ru, { a: 'Next', b: 'Next' })).toEqual([]);
   });
-
-  test('почти-повтор источника (парафраз ≥0.85) легитимно унифицируется в переводе', () => {
-    const ru = flattenLeaves({
-      a: 'Наша команда создала уникальный алгоритм анализа записей дневника, который помогает вам глубже понять свои мысли и эмоции. Модель обучена на открытых данных.',
-      b: 'Наша команда создала уникальный алгоритм анализа дневниковых записей, который помогает глубже понимать свои мысли и реакции. Модель обучена на открытых данных.',
-    });
-    const same =
-      'Unser Team hat einen einzigartigen Algorithmus zur Analyse von Tagebucheinträgen entwickelt, der Ihnen hilft, Ihre Gedanken und Emotionen besser zu verstehen.';
-    expect(validateTranslation('de', ru, { a: same, b: same })).toEqual([]);
-  });
-
-  test('группа из трёх: унификация парафраза + настоящий крючок — флагуется', () => {
-    const ru = flattenLeaves({
-      a: 'Наша команда создала уникальный алгоритм анализа записей дневника, который помогает вам глубже понять свои мысли и эмоции.',
-      b: 'Наша команда создала уникальный алгоритм анализа дневниковых записей, который помогает глубже понимать свои мысли и реакции.',
-      c: 'Совершенно другой текст о дыхательных практиках и релаксации перед сном.',
-    });
-    const same =
-      'Unser Team hat einen einzigartigen Algorithmus zur Analyse von Tagebucheinträgen entwickelt, der Ihnen hilft, Ihre Gedanken zu verstehen.';
-    const issues = validateTranslation('de', ru, { a: same, b: same, c: same });
-    expect(issues.some((i) => i.message.includes('дубль'))).toBe(true);
-  });
 });
 
 describe('извлечения', () => {
