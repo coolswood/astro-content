@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "Дата": "2026-09-12T22:48:22.479Z",
+    "Метка": "de-newsystem",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "common.json",
+    "Локали": "de",
+    "Сэмпл/файл": 3,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "30b56bc18b00a3d1f474cb07c30edcd508b703d1"
+  },
+  "results": {
+    "common.json": {
+      "de": [
+        {
+          "file": "common.json",
+          "lang": "de",
+          "key": "/response",
+          "ru": "Альтернативный ответ",
+          "oldText": "Alternative Antwort",
+          "newText": "Alternative Sichtweise",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 70,
+                "new": 100
+              },
+              "reason": "Перевод B строго соответствует утвержденному глоссарию для термина 'Адаптивный ответ' (Alternative Sichtweise), в то время как перевод A является дословным и не является принятым термином в контексте КПТ.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использован дословный перевод 'Alternative Antwort', который не соответствует терминологическому стандарту 'Alternative Sichtweise' для данного контекста."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 100
+              },
+              "reason": "Перевод A использует строго закрепленный в глоссарии термин 'Alternative Sichtweise' для обозначения рационального ответа в КПТ, в то время как перевод B является калькой с русского.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Использовано 'Antwort' вместо принятого в контексте КПТ термина 'Sichtweise'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "common.json",
+          "lang": "de",
+          "key": "/emails.call-back.unsubscribe.2",
+          "ru": "отписаться",
+          "oldText": "Abmelden",
+          "newText": "Abbestellen",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 40
+              },
+              "reason": "В контексте цифровых сервисов и приложений 'отписаться' (от рассылки или подписки) переводится как 'Abbestellen' (редко) или 'Abmelden' (чаще для уведомлений/аккаунтов), но 'Abmelden' здесь гораздо естественнее для UX. Однако, если речь идет именно о подписке (Subscription), идеальным был бы 'Abonnement kündigen'. Тем не менее, 'Abbestellen' звучит как заказ товара по почте, а не цифровое действие.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Abbestellen обычно используется для физических товаров (заказов), в цифровом интерфейсе это звучит неестественно."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 95
+              },
+              "reason": "В контексте подписок (newsletter, subscription) 'Abbestellen' — это правильный термин для отписки, в то время как 'Abmelden' означает выход из аккаунта (logout).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Abmelden означает 'выйти из системы' (logout), а не 'отписаться' от рассылки или сервиса."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "common.json",
+          "lang": "de",
+          "key": "/emails.call-back.study",
+          "ru": "Материалы по психологии",
+          "oldText": "Psychologische Inhalte",
+          "newText": "Psychologie-Materialien",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 75
+              },
+              "reason": "Перевод B звучит естественно и профессионально для заголовка раздела. Перевод A является калькой и звучит как технический термин или набор разрозненных файлов, а не как тематический раздел.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Неестественная конструкция; 'Materialien' в данном контексте звучит слишком сухо и по-канцелярски, как учебные пособия или физические материалы."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 70
+              },
+              "reason": "Перевод A звучит естественно и профессионально, в то время как перевод B является тяжеловесной калькой с русского, которая не характерна для немецкого языка.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Неестественное составное существительное (Kompositum), звучащее как технический термин или калька; 'Psychologische Inhalte' или 'Materialien zur Psychologie' звучат гораздо лучше."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
