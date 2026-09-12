@@ -174,6 +174,15 @@ describe('validateTranslation — негативные сценарии', () => 
     const ru = flattenLeaves({ a: 'Дальше', b: 'Другое место' });
     expect(validateTranslation('en', ru, { a: 'Next', b: 'Next' })).toEqual([]);
   });
+
+  test('ё/е — одна буква: орфографические варианты оригинала дают легитимный дубль', () => {
+    const ru = flattenLeaves({
+      a: 'Обостренное депрессивное состояние', // bdi range/exacerbated
+      b: 'Обострённое депрессивное состояние', // bdi result/exacerbated/title
+    });
+    const same = 'Verschlimmerte depressive Symptomatik mit erheblicher Beeinträchtigung des Alltags.';
+    expect(validateTranslation('de', ru, { a: same, b: same })).toEqual([]);
+  });
 });
 
 describe('извлечения', () => {

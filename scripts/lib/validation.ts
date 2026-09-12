@@ -206,6 +206,9 @@ export function validateTranslation(
     s
       .replace(TAG_RE, '')
       .toLowerCase()
+      // ё/е — орфографический вариант одной буквы: ru-оригиналы непоследовательны
+      // («Обостренное» и «Обострённое» в bdi — один и тот же текст), сворачиваем.
+      .replace(/ё/g, 'е')
       .replace(/[^\p{L}\p{N}]/gu, '');
   const byNormText = new Map<string, string[]>();
   for (const p of ruPaths) {
