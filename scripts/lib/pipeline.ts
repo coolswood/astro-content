@@ -477,7 +477,9 @@ export function mergeSubset<T>(
   stage = 'patch',
   reject?: (draft: string, patch: string) => string[] | null,
 ): T {
-  if (!subset || typeof subset !== 'object' || Array.isArray(subset)) {
+  // Массив-ответ легитимен для документов-массивов: пути листьев «/0…»
+  // совпадают с объектной формой {«0»: …}, flattenAll сравняет их.
+  if (!subset || typeof subset !== 'object') {
     console.warn(`⚠️ [${stage}] ответ не является JSON-объектом — применено 0 правок`);
     return base;
   }
@@ -875,15 +877,41 @@ export async function runPipeline(
 ): Promise<PipelineResult> {
   const sourceLocale = opts.sourceLocale ?? 'ru';
   const stageAttempts = opts.stageAttempts ?? DEFAULT_STAGE_ATTEMPTS;
-  const ruFlat = flattenAll(payload);
-  const chunks = chunkPayload(payload, opts.chunkLeaves ?? TRANSLATE_CHUNK_LEAVES);
+  // Документ-массив в корне (articles/affirmation/quotes-стиль) приходит из
+  // buildSubtree и как настоящий массив (полный перевод), и как объект с
+  // числовыми ключами 0..n-1 (инкрементальное подмножество без пропусков).
+  // Оба случая заворачиваются в объект: parseStageObject и mergeSubset
+  // работают только с объектами — на «голом» массиве editor отвечает
+  // массивом-эхом (бракуется), а черновик main не мерджится в скелет, и файл
+  // теряет все листья. Обёртка снимается перед возвратом (пути листьев
+  // «/0…» не зависят от формы корня). Объект с числовыми ключами С ПРОПУСКАМИ
+  // — частичный перевод; его форма не трогается.
+  const numericKeys = (n: any): number[] | null => {
+    if (!n || typeof n !== 'object' || Array.isArray(n)) return null;
+    const keys = Object.keys(n);
+    return keys.length > 0 && keys.every((k) => /^\d+$/.test(k))
+      ? keys.map(Number).sort((a, b) => a - b)
+      : null;
+  };
+  const rootNumKeys = numericKeys(payload);
+  const contiguous =
+    rootNumKeys !== null && rootNumKeys[rootNumKeys.length - 1] === rootNumKeys.length - 1;
+  const arrayRoot = Array.isArray(payload) || contiguous;
+  const asArray = (n: any): any => {
+    if (Array.isArray(n)) return n;
+    const keys = numericKeys(n);
+    return keys && keys[keys.length - 1] === keys.length - 1 ? keys.map((i) => n[i]) : n;
+  };
+  const doc: any = arrayRoot ? { content: asArray(payload) } : payload;
+  const ruFlat = flattenAll(doc);
+  const chunks = chunkPayload(doc, opts.chunkLeaves ?? TRANSLATE_CHUNK_LEAVES);
   if (chunks.length > 1) {
     console.log(`📦 [chunks] payload → ${chunks.length} чанков ≤${TRANSLATE_CHUNK_LEAVES} листьев`);
   }
   // Скелет: все пути payload со строками-заглушками; чанки собираются
   // мерджем по абсолютным путям. История для context: ru-оригинал → принятый
   // перевод, последние 50 пар — референс стиля и запрет повторов-«крючков».
-  const skeleton = makeSkeleton(payload);
+  const skeleton = makeSkeleton(doc);
   const flatSkeleton = flattenAll(skeleton);
   const flatSkeletonTotal = Object.keys(flatSkeleton).length;
   const accepted: Record<string, string> = {};
@@ -975,7 +1003,7 @@ export async function runPipeline(
   // Контроль тегов: пул тегов перевода не должен превышать пул оригинала.
   // Смещение тега в другой элемент — норма транскреации (не трогается);
   // выдуманные моделью теги срезаются механически с сохранением текста.
-  const tagCheck = reconcileTags(payload, draft);
+  const tagCheck = reconcileTags(doc, draft);
   if (tagCheck.stripped.length > 0) {
     const summary = tagCheck.stripped.map((s) => `${s.tag}×${s.count} @ ${s.path}`).join(', ');
     console.warn(`⚠️ [tags] срезаны лишние теги: ${summary}`);
@@ -1029,7 +1057,7 @@ export async function runPipeline(
   // @-мета — контекст для модели, по промпту в ответ она не возвращается:
   // из сверки полноты такие пути исключаются.
   const isMetaPath = (p: string) => p.split('/').some((seg) => seg.startsWith('@'));
-  const srcKeys = Object.keys(flattenAll(payload)).filter((k) => !isMetaPath(k));
+  const srcKeys = Object.keys(flattenAll(doc)).filter((k) => !isMetaPath(k));
   // Пустая строка — тоже потеря: модель вернула заглушку, валидация раннера
   // такое отклоняет, значит лист надо допереводить (recovery ниже).
   const isLostIn = (flat: Record<string, any>) => (k: string) => {
@@ -1052,7 +1080,7 @@ export async function runPipeline(
     console.warn(
       `⚠️ [recovery] потеряны ключи (${lost.length}/${srcKeys.length}): ${lost.slice(0, 3).join(', ')} — доперевод точечно`,
     );
-    const lostSubtree = buildSubtree(payload, lost);
+    const lostSubtree = buildSubtree(doc, lost);
     const recText = await client.complete({
       system: prompts.main,
       user: JSON.stringify({ sourceLocale, targetLocale, data: lostSubtree }),
@@ -1105,5 +1133,11 @@ export async function runPipeline(
     console.warn(`⚠️ [recovery] вписано ${lost.length} листьев`);
   }
 
+  if (arrayRoot) {
+    if (numericKeys(draft.content) === null && !Array.isArray(draft.content)) {
+      throw new Error('массив-в-корне: обёртка content потеряла форму массива');
+    }
+    draft = asArray(draft.content);
+  }
   return { data: draft, timings };
 }

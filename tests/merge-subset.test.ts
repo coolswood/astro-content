@@ -64,7 +64,7 @@ describe('mergeSubset — полный документ/дифф поверх ф
     expect(out.screen_2.texts[3]).toBe('B4-fix');
   });
 
-  test('не-объект (маркер/мусор) не трогает базу', () => {
+  test('маркер/мусор не трогает базу; массив с чужими путями — тоже (для документа-массива массив легитимен, см. pipeline-array-root)', () => {
     const base = { a: '1' };
     expect(mergeSubset(base, 'Все хорошо', 'test')).toEqual({ a: '1' });
     expect(mergeSubset(base, null, 'test')).toEqual({ a: '1' });
