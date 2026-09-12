@@ -741,6 +741,16 @@ async function runStagesOnce(
       else missing.push(p);
     }
     if (missing.length > 0) {
+      // Клин path-map (монотонно-повторяющиеся секции: trap/love) — модель
+      // молча возвращает ЧАСТЬ карты, исключения нет, и пер-чанковый
+      // документный фолбэк не срабатывает. Большая потеря путей — бросаем:
+      // чанк уйдёт на документный формат; малую (хвост) добьёт recovery.
+      const ratio = missing.length / Math.max(Object.keys(expected).length, 1);
+      if (ratio > 0.3) {
+        throw new Error(
+          `MAIN(paths): карта неполная — без перевода ${missing.length}/${Object.keys(expected).length} путей: ${missing.slice(0, 5).join(', ')}`,
+        );
+      }
       console.warn(
         `⚠️ [main:paths] без перевода ${missing.length}/${Object.keys(expected).length} путей: ${missing.slice(0, 5).join(', ')}`,
       );
