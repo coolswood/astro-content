@@ -1,0 +1,1934 @@
+{
+  "file": "homeBot/quotes.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стилистически выдержан."
+              },
+              {
+                "path": "/0/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/1/text",
+                "verdict": "ok",
+                "note": "Смысл передан, обращение Sie уместно."
+              },
+              {
+                "path": "/1/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/2/text",
+                "verdict": "ok",
+                "note": "Классический перевод Ницше."
+              },
+              {
+                "path": "/2/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/3/text",
+                "verdict": "ok",
+                "note": "Красивая литературная адаптация."
+              },
+              {
+                "path": "/3/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/4/text",
+                "verdict": "ok",
+                "note": "Поэтично, смысл сохранен."
+              },
+              {
+                "path": "/4/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/5/text",
+                "verdict": "ok",
+                "note": "Хорошая анти-калька через глагольную конструкцию."
+              },
+              {
+                "path": "/5/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/6/text",
+                "verdict": "ok",
+                "note": "Смысл передан, 'Gedanke' вместо 'Geist' здесь уместно."
+              },
+              {
+                "path": "/6/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/7/text",
+                "verdict": "ok",
+                "note": "Сложная конструкция передана верно."
+              },
+              {
+                "path": "/7/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/8/text",
+                "verdict": "ok",
+                "note": "Метафора 'быть светом' передана корректно."
+              },
+              {
+                "path": "/8/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/9/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/10/text",
+                "verdict": "ok",
+                "note": "Смысл передан, тон поддерживающий."
+              },
+              {
+                "path": "/10/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/11/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/12/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/13/text",
+                "verdict": "issue",
+                "note": "Использование разговорного 'hineinfressen' вместо более мягкого тона."
+              },
+              {
+                "path": "/13/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/14/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный тон соблюден."
+              },
+              {
+                "path": "/15/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/16/text",
+                "verdict": "ok",
+                "note": "Вариант перевода Дикинсон, отличается от /4/ по смыслу оригинала, но в рамках допустимого."
+              },
+              {
+                "path": "/16/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/17/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/18/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация идиомы 'klein reden'."
+              },
+              {
+                "path": "/18/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/19/text",
+                "verdict": "ok",
+                "note": "Терминология (Depression) и тон соблюдены."
+              },
+              {
+                "path": "/19/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный и естественный"
+              },
+              {
+                "path": "/20/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/21/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен, стиль корректен"
+              },
+              {
+                "path": "/21/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/22/text",
+                "verdict": "ok",
+                "note": "Смысл передан, переход на Sie уместен"
+              },
+              {
+                "path": "/22/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/23/text",
+                "verdict": "ok",
+                "note": "Красивый, литературный перевод"
+              },
+              {
+                "path": "/23/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/24/text",
+                "verdict": "ok",
+                "note": "Использование 'man' вместо 'du' — хорошая адаптация для цитаты"
+              },
+              {
+                "path": "/24/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/25/text",
+                "verdict": "ok",
+                "note": "Смысл и тон сохранены"
+              },
+              {
+                "path": "/25/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/26/text",
+                "verdict": "ok",
+                "note": "Естественная немецкая конструкция"
+              },
+              {
+                "path": "/26/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/27/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/27/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/28/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/28/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/29/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/29/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/30/text",
+                "verdict": "ok",
+                "note": "Литературно и точно"
+              },
+              {
+                "path": "/30/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/31/text",
+                "verdict": "ok",
+                "note": "Терминология и стиль в норме"
+              },
+              {
+                "path": "/31/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/32/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/33/text",
+                "verdict": "ok",
+                "note": "Использована отличная анти-калька 'Offen dazu zu stehen'"
+              },
+              {
+                "path": "/33/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/34/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/34/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/35/text",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/35/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/36/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/36/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/37/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/37/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/38/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл соблюдены"
+              },
+              {
+                "path": "/38/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/39/text",
+                "verdict": "ok",
+                "note": "Перевод точный и возвышенный"
+              },
+              {
+                "path": "/39/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/40/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный."
+              },
+              {
+                "path": "/40/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/41/text",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, звучит по-немецки естественно."
+              },
+              {
+                "path": "/41/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/42/text",
+                "verdict": "ok",
+                "note": "Смысл и ритм соблюдены."
+              },
+              {
+                "path": "/42/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/43/text",
+                "verdict": "ok",
+                "note": "Перевод точный, пунктуация верная."
+              },
+              {
+                "path": "/43/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/44/text",
+                "verdict": "ok",
+                "note": "Смысл передан, стиль естественный."
+              },
+              {
+                "path": "/44/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/45/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/45/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/46/text",
+                "verdict": "ok",
+                "note": "Перевод точный, грамматика верна."
+              },
+              {
+                "path": "/46/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/47/text",
+                "verdict": "ok",
+                "note": "Смысл передан, звучит глубоко и естественно."
+              },
+              {
+                "path": "/47/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/48/text",
+                "verdict": "ok",
+                "note": "Смысл передан, несмотря на сложность оригинала."
+              },
+              {
+                "path": "/48/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/49/text",
+                "verdict": "ok",
+                "note": "Перевод точный, философский тон соблюден."
+              },
+              {
+                "path": "/49/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/50/text",
+                "verdict": "ok",
+                "note": "Перевод точный, без лишнего канцелярита."
+              },
+              {
+                "path": "/50/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/51/text",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный тон сохранен."
+              },
+              {
+                "path": "/51/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/52/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/52/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/53/text",
+                "verdict": "ok",
+                "note": "Перевод точный, 'Besinnung' — отличный выбор для 'медитации' в данном контексте."
+              },
+              {
+                "path": "/53/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/54/text",
+                "verdict": "issue",
+                "note": "Стилистическая ошибка: калька с русского синтаксиса 'ins Gesicht zu sehen' (в лицо смотреть)."
+              },
+              {
+                "path": "/54/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/55/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/55/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/56/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/56/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/13/text",
+                "fragment": "anstatt sie in sich hineinzufressen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком грубое выражение",
+                "why": "Выражение 'in sich hineinfressen' (заглатывать/пожирать в себе) звучит довольно резко и разговорно. Для терапевтического приложения, где важен поддерживающий и эмпатичный тон, лучше использовать более мягкие формулировки, например, 'anstatt sie zu unterdrücken' (подавлять) или 'anstatt sie für sich zu behalten'."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/54/text",
+                "fragment": "der Realität mit offenen Augen ins Gesicht zu sehen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественная конструкция (калька)",
+                "why": "В немецком языке выражение 'jemandem ins Gesicht sehen' звучит тяжеловесно и является зеркальным отражением русского 'смотреть в лицо'. Более естественно было бы использовать 'der Realität mit offenen Augen begegnen' (встречать реальность) или 'der Realität ins Auge blicken'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Согласен, 'hineinfressen' слишком разговорно и агрессивно для контекста психологической поддержки. Рекомендуется замена на 'unterdrücken' или 'verdrängen'."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Конструкция 'ins Gesicht sehen' является калькой. 'Der Realität ins Auge blicken' — гораздо более идиоматичный и естественный вариант для немецкого языка."
+              }
+            ],
+            "notes": "Перевод в целом качественный, однако выявлены стилистические несоответствия: избыточная разговорность в одном случае и калька с русского в другом. Эти моменты требуют правки для достижения естественного и эмпатичного звучания.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/13/text",
+                "current": "Es ist wichtig, über seine Gefühle zu sprechen, anstatt sie in sich hineinzufressen.",
+                "proposed": "Es ist wichtig, über seine Gefühle zu sprechen, anstatt sie zu unterdrücken.",
+                "alternatives": [
+                  "Es ist wichtig, über seine Gefühle zu sprechen, anstatt sie zu verdrängen."
+                ],
+                "rationale": "Вариант 'unterdrücken' (подавлять) идеально подходит под критерии Tone of Voice: он точен по смыслу, но звучит профессионально и мягко, в отличие от грубого 'hineinfressen'. 'Verdrängen' (вытеснять) — тоже хороший вариант, но 'unterdrücken' ближе к процессу удержания эмоций внутри."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 2,
+                "path": "/54/text",
+                "current": "Wahrer Optimismus ist keine reine Freude, sondern eine Kraft. Und diese Kraft hilft dabei, der Realität mit offenen Augen ins Gesicht zu sehen.",
+                "proposed": "Wahrer Optimismus ist keine reine Freude, sondern eine Kraft. Und diese Kraft hilft dabei, der Realität mit offenen Augen ins Auge zu blicken.",
+                "alternatives": [
+                  "Wahrer Optimismus ist keine reine Freude, sondern eine Kraft. Und diese Kraft hilft dabei, der Realität mit offenen Augen zu begegnen."
+                ],
+                "rationale": "Использование 'ins Auge blicken' — это классическая немецкая идиома, которая устраняет калька 'ins Gesicht sehen'. Это звучит естественно и сохраняет поэтичность оригинала."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне, с соблюдением всех правил обращения (Sie) и терминологии. Основные замечания касались стилистической резкости в одном месте и идиоматической точности в другом. После внесения этих правок текст будет полностью соответствовать стандартам качественного терапевтического приложения."
+            },
+            "timings": {
+              "issues": 61560,
+              "deliberate": 4920,
+              "recommend": 10330
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/13/text",
+              "from": "Es ist wichtig, über seine Gefühle zu sprechen, anstatt sie in sich hineinzufressen.",
+              "to": "Es ist wichtig, über seine Gefühle zu sprechen, anstatt sie zu unterdrücken."
+            },
+            {
+              "id": "c3-I1",
+              "path": "/54/text",
+              "from": "Wahrer Optimismus ist keine reine Freude, sondern eine Kraft. Und diese Kraft hilft dabei, der Realität mit offenen Augen ins Gesicht zu sehen.",
+              "to": "Wahrer Optimismus ist keine reine Freude, sondern eine Kraft. Und diese Kraft hilft dabei, der Realität mit offenen Augen ins Auge zu blicken."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стилистика хорошая."
+              },
+              {
+                "path": "/0/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/1/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен, обращение Sie уместно."
+              },
+              {
+                "path": "/1/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/2/text",
+                "verdict": "ok",
+                "note": "Классический перевод."
+              },
+              {
+                "path": "/2/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/3/text",
+                "verdict": "ok",
+                "note": "Смысл передан, грамматика верна."
+              },
+              {
+                "path": "/3/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/4/text",
+                "verdict": "ok",
+                "note": "Красивая трансекреация, смысл на месте."
+              },
+              {
+                "path": "/4/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/5/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация без номинализаций."
+              },
+              {
+                "path": "/5/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/6/text",
+                "verdict": "ok",
+                "note": "Смысл передан, 'Gedanke' вместо 'Geist' здесь уместно."
+              },
+              {
+                "path": "/6/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/7/text",
+                "verdict": "ok",
+                "note": "Смысл передан, синтаксис естественный."
+              },
+              {
+                "path": "/7/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/8/text",
+                "verdict": "ok",
+                "note": "Смысл передан, метафора сохранена."
+              },
+              {
+                "path": "/8/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/9/text",
+                "verdict": "ok",
+                "note": "Смысл передан, вежливое обращение Sie."
+              },
+              {
+                "path": "/9/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/10/text",
+                "verdict": "ok",
+                "note": "Смысл передан, грамматика верна."
+              },
+              {
+                "path": "/10/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/11/text",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/11/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/12/text",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/12/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/13/text",
+                "verdict": "ok",
+                "note": "Смысл передан, 'unterdrücken' — хороший выбор для 'скрывать в себе'."
+              },
+              {
+                "path": "/13/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/14/text",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/14/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/15/text",
+                "verdict": "ok",
+                "note": "Смысл передан, хороший ритм."
+              },
+              {
+                "path": "/15/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/16/text",
+                "verdict": "ok",
+                "note": "Смысл передан, 'verstummt' — удачная адаптация."
+              },
+              {
+                "path": "/16/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/17/text",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/17/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/18/text",
+                "verdict": "ok",
+                "note": "Смысл передан, 'klein zu reden' — отличная идиома."
+              },
+              {
+                "path": "/18/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/19/text",
+                "verdict": "ok",
+                "note": "Смысл передан, 'bei einer Depression' (в контексте 'Eine Depression ist...') соблюдено."
+              },
+              {
+                "path": "/19/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный и естественный"
+              },
+              {
+                "path": "/20/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/21/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен, стиль корректен"
+              },
+              {
+                "path": "/21/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/22/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен, переход на Sie уместен"
+              },
+              {
+                "path": "/22/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/23/text",
+                "verdict": "ok",
+                "note": "Красивый, литературный перевод"
+              },
+              {
+                "path": "/23/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/24/text",
+                "verdict": "ok",
+                "note": "Использование 'man' вместо 'du' делает фразу более глубокой и универсальной, это хорошая адаптация"
+              },
+              {
+                "path": "/24/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/25/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/25/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/26/text",
+                "verdict": "ok",
+                "note": "Перевод точный, идиома 'am Boden liegen' уместна"
+              },
+              {
+                "path": "/26/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/27/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/27/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/28/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/28/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/29/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/29/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/30/text",
+                "verdict": "ok",
+                "note": "Перевод точный, сохраняет поэтичность"
+              },
+              {
+                "path": "/30/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/31/text",
+                "verdict": "ok",
+                "note": "Терминология и стиль соблюдены"
+              },
+              {
+                "path": "/31/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/32/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/33/text",
+                "verdict": "ok",
+                "note": "Отличная адаптация согласно правилам (offen dazu stehen...)"
+              },
+              {
+                "path": "/33/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/34/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/34/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/35/text",
+                "verdict": "ok",
+                "note": "Перевод точный, звучит естественно"
+              },
+              {
+                "path": "/35/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/36/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/36/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/37/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/37/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/38/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/38/author",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/39/text",
+                "verdict": "ok",
+                "note": "Перевод точный, хороший выбор глаголов"
+              },
+              {
+                "path": "/39/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/40/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, звучит естественно."
+              },
+              {
+                "path": "/40/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/41/text",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, звучит по-немецки естественно."
+              },
+              {
+                "path": "/41/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/42/text",
+                "verdict": "ok",
+                "note": "Смысл и тон соблюдены."
+              },
+              {
+                "path": "/42/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/43/text",
+                "verdict": "ok",
+                "note": "Естественная немецкая конструкция."
+              },
+              {
+                "path": "/43/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/44/text",
+                "verdict": "ok",
+                "note": "Смысл передан, стиль соответствует."
+              },
+              {
+                "path": "/44/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/45/text",
+                "verdict": "ok",
+                "note": "Перевод точный и плавный."
+              },
+              {
+                "path": "/45/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/46/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл сохранены."
+              },
+              {
+                "path": "/46/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/47/text",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный тон выдержан."
+              },
+              {
+                "path": "/47/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/48/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, несмотря на сложность оригинала."
+              },
+              {
+                "path": "/48/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/49/text",
+                "verdict": "ok",
+                "note": "Перевод точный, звучит как афоризм."
+              },
+              {
+                "path": "/49/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/50/text",
+                "verdict": "issue",
+                "note": "Стилистическая калька: 'von einem Misserfolg zum nächsten zu gehen' звучит тяжеловесно и не совсем точно передает суть 'перехода от опыта к опыту'."
+              },
+              {
+                "path": "/50/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/51/text",
+                "verdict": "ok",
+                "note": "Перевод точный, вдохновляющий тон соблюден."
+              },
+              {
+                "path": "/51/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/52/text",
+                "verdict": "ok",
+                "note": "Смысл передан хорошо."
+              },
+              {
+                "path": "/52/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/53/text",
+                "verdict": "ok",
+                "note": "Перевод точный, 'Besinnung' — отличный выбор для 'медитации' в данном контексте."
+              },
+              {
+                "path": "/53/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/54/text",
+                "verdict": "ok",
+                "note": "Перевод точный, метафора сохранена."
+              },
+              {
+                "path": "/54/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/55/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/55/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/56/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/56/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c3-I1",
+                "path": "/50/text",
+                "fragment": "von einem Misserfolg zum nächsten zu gehen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "неудачная формулировка",
+                "why": "Это калька с русского «переходить от одного к другому». В немецком языке в контек контексте жизненного опыта лучше использовать конструкции вроде «mit Misserfolgen umzugehen» или «trotz Misserfolgen voranzukommen». Текущий вариант звучит механистично."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Согласен, фраза звучит как буквальный перевод (Kalto) и не передает естественную динамику немецкого языка в контексте преодоления трудностей."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, однако в одном месте прослеживается избыточная калькированность структуры предложения, что снижает естественность звучания.",
+            "recommendations": [
+              {
+                "id": "c3-I1",
+                "priority": 1,
+                "path": "/50/text",
+                "current": "Erfolg ist die Fähigkeit, von einem Misserfolg zum nächsten zu gehen, ohne den Enthusiasmus zu verlieren.",
+                "proposed": "Erfolg ist die Fähigkeit, trotz Misserfolgen den Enthusiasmus nicht zu verlieren und immer wieder neu anzufangen.",
+                "alternatives": [
+                  "Erfolg bedeutet, nach jedem Misserfolg mit derselben Begeisterung weiterzumachen.",
+                  "Erfolg ist die Fähigkeit, auch nach Rückschlägen den Mut und die Begeisterung nicht zu verlieren."
+                ],
+                "rationale": "Текущий вариант «von einem Misserfolg zum nächsten zu gehen» — это калька, которая в немецком звучит так, будто человек намеренно идет по неудачам. Предложенный вариант передает смысл оригинала (сохранение энтузиазма при столкновении с трудностями) через естественные для немецкого языка конструкции «trotz Misserfolgen» или «nach Rückschlägen»."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден тон, терминология и правила обращения. Единственная заметная проблема — механическая калька в цитате Черчилля, которая звучит неестественно для носителя. После исправления этого момента текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 56501,
+              "deliberate": 2824,
+              "recommend": 7579
+            }
+          },
+          "applied": [
+            {
+              "id": "c3-I1",
+              "path": "/50/text",
+              "from": "Erfolg ist die Fähigkeit, von einem Misserfolg zum nächsten zu gehen, ohne den Enthusiasmus zu verlieren.",
+              "to": "Erfolg ist die Fähigkeit, trotz Misserfolgen den Enthusiasmus nicht zu verlieren und immer wieder neu anzufangen."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стилистика хорошая."
+              },
+              {
+                "path": "/0/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный, соблюдено вежливое обращение."
+              },
+              {
+                "path": "/1/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/2/text",
+                "verdict": "ok",
+                "note": "Классический перевод Ницше."
+              },
+              {
+                "path": "/2/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/3/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен, звучит естественно."
+              },
+              {
+                "path": "/3/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/4/text",
+                "verdict": "ok",
+                "note": "Красивая трансекреация Дикинсон."
+              },
+              {
+                "path": "/4/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/5/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация без номинализации."
+              },
+              {
+                "path": "/5/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/6/text",
+                "verdict": "ok",
+                "note": "Смысл передан, вежливое обращение уместно."
+              },
+              {
+                "path": "/6/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/7/text",
+                "verdict": "ok",
+                "note": "Сложная конструкция передана верно."
+              },
+              {
+                "path": "/7/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/8/text",
+                "verdict": "ok",
+                "note": "Смысл и метафора сохранены."
+              },
+              {
+                "path": "/8/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный, вежливое обращение."
+              },
+              {
+                "path": "/9/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/10/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/10/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/11/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/12/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/12/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/13/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/13/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/14/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/15/text",
+                "verdict": "ok",
+                "note": "Хорошая передача настроения."
+              },
+              {
+                "path": "/15/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/16/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен, вариация Дикинсон корректна."
+              },
+              {
+                "path": "/16/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/17/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/18/text",
+                "verdict": "ok",
+                "note": "Стиль выдержан, смысл передан."
+              },
+              {
+                "path": "/18/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/19/text",
+                "verdict": "ok",
+                "note": "Терминология (Depression) и тон соблюдены."
+              },
+              {
+                "path": "/19/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный и естественный"
+              },
+              {
+                "path": "/20/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/21/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен, стиль корректный"
+              },
+              {
+                "path": "/21/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/22/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, соблюдено вежливое обращение"
+              },
+              {
+                "path": "/22/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/23/text",
+                "verdict": "ok",
+                "note": "Красивый, литературный перевод"
+              },
+              {
+                "path": "/23/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/24/text",
+                "verdict": "ok",
+                "note": "Использование 'man' уместно для цитаты"
+              },
+              {
+                "path": "/24/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/25/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/25/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/26/text",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/26/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/27/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/27/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/28/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/28/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/29/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/29/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/30/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует оригиналу"
+              },
+              {
+                "path": "/30/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/31/text",
+                "verdict": "ok",
+                "note": "Терминология (psychische Gesundheit) верна"
+              },
+              {
+                "path": "/31/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/32/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/33/text",
+                "verdict": "ok",
+                "note": "Использована отличная адаптация 'offen dazu stehen' согласно гайдлайнам"
+              },
+              {
+                "path": "/33/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/34/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/34/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/35/text",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/35/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/36/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/36/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/37/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/37/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/38/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/38/author",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/39/text",
+                "verdict": "ok",
+                "note": "Перевод точный, высокий стиль сохранен"
+              },
+              {
+                "path": "/39/author",
+                "verdict": "ok",
+                "note": "Имя передано верно"
+              },
+              {
+                "path": "/40/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, звучит естественно."
+              },
+              {
+                "path": "/40/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/41/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит по-немецки."
+              },
+              {
+                "path": "/41/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/42/text",
+                "verdict": "ok",
+                "note": "Смысл и тон соблюдены."
+              },
+              {
+                "path": "/42/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/43/text",
+                "verdict": "ok",
+                "note": "Красивая и естественная формулировка."
+              },
+              {
+                "path": "/43/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/44/text",
+                "verdict": "ok",
+                "note": "Естественный немецкий синтаксис."
+              },
+              {
+                "path": "/44/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/45/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/45/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/46/text",
+                "verdict": "ok",
+                "note": "Перевод точный, ритм сохранен."
+              },
+              {
+                "path": "/46/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/47/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/47/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/48/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/48/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/49/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/49/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/50/text",
+                "verdict": "issue",
+                "note": "Добавлена информация, которой нет в оригинале (про 'начинать заново')."
+              },
+              {
+                "path": "/50/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/51/text",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              },
+              {
+                "path": "/51/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/52/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/52/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              },
+              {
+                "path": "/53/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'медитации' как 'Besinnung'."
+              },
+              {
+                "path": "/53/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/54/text",
+                "verdict": "ok",
+                "note": "Перевод точный, идиома 'ins Auge blicken' уместна."
+              },
+              {
+                "path": "/54/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/55/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/55/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/56/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/56/author",
+                "verdict": "ok",
+                "note": "Имя передано верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c3-I1",
+                "path": "/50/text",
+                "fragment": "und immer wieder neu anzufangen",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "добавлена фраза «и снова начинать заново»",
+                "why": "в оригинале только «без потери энтузиазма», добавление лишнего смысла, хоть и не меняет общий посыл, нарушает точность цитаты"
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator added 'and starting over again', which is not present in the Russian source. While it fits the spirit of Churchill's quote, it is an unauthorized addition to a direct quote."
+              }
+            ],
+            "notes": "The translation is of high quality and captures the poetic essence of the quotes, but there is a minor issue with semantic addition in one of the famous quotes.",
+            "recommendations": [
+              {
+                "id": "c3-I1",
+                "priority": 1,
+                "path": "/50/text",
+                "current": "Erfolg ist die Fähigkeit, trotz Misserfolgen den Enthusiasmus nicht zu verlieren und immer wieder neu anzufangen.",
+                "proposed": "Erfolg ist die Fähigkeit, von einem Misserfolg zum nächsten zu gehen, ohne den Enthusiasmus zu verlieren.",
+                "alternatives": [
+                  "Erfolg ist die Fähigkeit, trotz Misserfolgen den Enthusiasmus nicht zu verlieren.",
+                  "Erfolg bedeutet, von einem Misserfolg zum nächsten zu wandern, ohne den Enthusiasmus zu verlieren."
+                ],
+                "rationale": "В оригинале нет фразы «и снова начинать заново». Предложенный вариант точнее передает смысл «переходить от одного неудачного опыта к другому» (von einem Misserfolg zum nächsten gehen) и строго следует тексту оригинала, не добавляя лишних смысловых конструкций."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден правильный тон, терминология и грамматика. Единственная заметная проблема — избыточность в цитате Черчилля, где переводчик добавил смысл, отсутствующий в оригинале. После исправления этой фразы текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 52756,
+              "deliberate": 2703,
+              "recommend": 6508
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c3-I1",
+              "path": "/50/text",
+              "reason": "осцилляция: это значение у листа уже было"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

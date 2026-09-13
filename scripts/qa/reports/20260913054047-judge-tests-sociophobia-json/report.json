@@ -1,0 +1,4815 @@
+{
+  "file": "tests/sociophobia.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 11,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон вежливый."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "issue",
+                "note": "Добавлено 'unwohl' (неуютно), чего нет в оригинале."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/35",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/36",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/37",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/38",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/39",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "issue",
+                "note": "mistranslation: добавлена просьба о помощи, которой нет в оригинале"
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "перевод точный, тон естественный"
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "перевод точный, адаптировано под контекст выступления"
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "ok",
+                "note": "перевод точный, передает эмоциональный окрас"
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "перевод точный, термин Angst использован верно"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/variants/10/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/10/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/10/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/10/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/16/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/16/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/16/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/16/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/17/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/17/1",
+                "verdict": "issue",
+                "note": "Стиль: 'Unruhe' — это скорее беспокойство/суета, а не тревога (Angst/Anspannung)"
+              },
+              {
+                "path": "/variants/17/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/17/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/20/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно, звучит естественно."
+              },
+              {
+                "path": "/variants/20/1",
+                "verdict": "ok",
+                "note": "Перевод точный, 'etwas ängstlich' хорошо передает 'чувствую тревожность'."
+              },
+              {
+                "path": "/variants/20/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/20/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/21/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/21/1",
+                "verdict": "ok",
+                "note": "Терминология 'Angst' верна."
+              },
+              {
+                "path": "/variants/21/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/21/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/22/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/22/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/22/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/22/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/23/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/23/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/23/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/23/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/24/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/24/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/24/2",
+                "verdict": "issue",
+                "note": "Добавлено 'nach Möglichkeit' (по возможности), чего нет в оригинале."
+              },
+              {
+                "path": "/variants/24/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/25/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/25/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/25/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/25/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/26/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/26/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/26/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/26/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/27/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/27/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/27/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/27/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/28/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/28/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/28/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/28/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/29/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/29/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/29/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/29/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/30/0",
+                "verdict": "ok",
+                "note": "Перевод адекватен контексту знакомства"
+              },
+              {
+                "path": "/variants/30/1",
+                "verdict": "ok",
+                "note": "Перевод передает смысл"
+              },
+              {
+                "path": "/variants/30/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/30/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/31/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/31/1",
+                "verdict": "ok",
+                "note": "Термин Angst использован верно"
+              },
+              {
+                "path": "/variants/31/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/31/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/33/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/33/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/33/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/33/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено верно, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "issue",
+                "note": "Ошибка в названии произведения Кафки."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "critical",
+                "note": "Грубая ошибка: текст про страх перед аудиторией заменен текстом про телефонную фобию."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль поддерживающий."
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "issue",
+                "note": "Стилистическая калька 'verplappern' (сболтнуть лишнее) вместо более мягкого контекста ошибки в речи."
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены."
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Перевод корректен, использование английского термина в кавычках допустимо."
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "issue",
+                "note": "Тяжеловесный синтаксис, калька структуры предложения."
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/35/text",
+                "verdict": "ok",
+                "note": "Терминология (KVT) соблюдена."
+              },
+              {
+                "path": "/steps_description/36/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/36/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/37/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/38/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/38/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/39/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/mild",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/moderate",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/mild/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/mild/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/moderate/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/moderate/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/22",
+                "fragment": "Fühlen Sie sich unwohl oder ängstlich",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "добавлено 'unwohl' (чувствовать себя неуютно)",
+                "why": "В оригинале только 'чувствуете тревогу'. Хотя это делает фразу естественнее, это формальное отклонение от оригинала."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/variants/0/0",
+                "fragment": "Ich bitte ganz selbstverständlich und ohne Probleme um Hilfe.",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Искажение смысла: в оригинале фраза о том, что просить о чем-либо легко и это нормально, а в переводе добавлена конкретная просьба о помощи (um Hilfe bitten), которой нет в исходном тексте.",
+                "why": "Это меняет смысл фразы с описания внутреннего состояния/навыка на конкретное действие."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/variants/17/1",
+                "fragment": "Mit einer gewissen Unruhe",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неточный подбор слова для передачи психологического состояния",
+                "why": "В контексте тревожных расстройств 'Unruhe' (беспокойство, суета, неспокойствие) — это более легкое или физическое состояние. Если в оригинале 'тревожность' как симптом, лучше использовать 'Angst' или 'Anspannung', чтобы соответствовать терминологии других вариантов в приложении."
+              },
+              {
+                "id": "c4-I1",
+                "path": "/variants/24/2",
+                "fragment": "Ich möchte solche Ereignisse nach Möglichkeit umgehen",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "добавлено 'nach Möglichkeit' (по возможности)",
+                "why": "в оригинале фраза 'Предпочитаю избегать таких событий' не содержит уточнения о возможности, хотя это и звучит естественно для немецкого языка."
+              },
+              {
+                "id": "c6-I1",
+                "path": "/steps_description/2/fact",
+                "fragment": "„Der Process“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Неверное написание названия",
+                "why": "В немецком языке роман Кафки пишется „Der Prozess“ (через ss)."
+              },
+              {
+                "id": "c6-I2",
+                "path": "/steps_description/17/text",
+                "fragment": "Die Angst vor Telefonaten wird auch als „Telefonphobie“ bezeichnet.",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Полная подмена смысла",
+                "why": "В оригинале речь идет о страхе перед аудиторией (социальной оценочной тревожности), а в переводе — о страхе телефонных звонков (телефонной фобии). Это полностью искажает содержание раздела."
+              },
+              {
+                "id": "c7-I1",
+                "path": "/steps_description/25/text",
+                "fragment": "ob sie sich verplappern",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неудачный подбор слова",
+                "why": "Слово 'verplappern' имеет оттенок 'сболтнуть лишнее/ляпнуть глупость'. В оригинале речь идет о 'возможных ошибках в речи' (оговорках, грамматике), что в контексте социофобии более серьезно и менее комично. Это звучит слишком легкомысленно для терапевтического контекста."
+              },
+              {
+                "id": "c7-I2",
+                "path": "/steps_description/29/text",
+                "fragment": "Dies kann die Angst vor einer möglichen Konfrontation oder der Notwendigkeit, schnell auf unerwartete Fragen reagieren zu müssen, beinhalten.",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Тяжеловесный синтаксис (калька)",
+                "why": "Предложение перегружено конструкциями 'die Angst vor...', 'der Notwendigkeit...', 'reagieren zu müssen'. Это типичная калька русского синтаксиса. Носителю было бы естественнее сказать: 'Dazu können die Angst vor Konfrontationen oder der Druck, schnell auf Fragen antworten zu müssen, gehören'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "Это осознанная трансекреация: в немецком 'Angst fühlen' звучит слишком клинически, 'unwohl fühlen' делает вопрос естественным для пользователя, при этом смысл 'тревоги' сохраняется."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: перевод сужает абстрактное описание состояния до конкретного действия (просьбы о помощи), что меняет суть варианта ответа."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Терминологическая неточность: 'Unruhe' слабее, чем 'тревожность' (Angst/Anspannung), что важно для психологического теста."
+              },
+              {
+                "id": "c4-I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "Придирка: 'nach Möglichkeit' — это естественное смягчение в немецком языке, не искажающее основной смысл 'предпочитаю избегать'."
+              },
+              {
+                "id": "c6-I1",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Орфографическая ошибка в названии произведения (Prozess)."
+              },
+              {
+                "id": "c6-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: текст раздела полностью подменен (вместо страха перед аудиторией написан текст про телефонную фобию)."
+              },
+              {
+                "id": "c7-I1",
+                "verdict": "confirmed",
+                "rank": 5,
+                "note": "Стилистическая ошибка: 'verplappern' придает ситуации комичный оттенок, что неуместно в контексте серьезного расстройства."
+              },
+              {
+                "id": "c7-I2",
+                "verdict": "confirmed",
+                "rank": 5,
+                "note": "Стилистическая ошибка: тяжеловесная калька с русского синтаксиса, затрудняющая чтение. Решается вместе с c7-I1 через переработку предложения."
+              }
+            ],
+            "notes": "В переводе обнаружены критические ошибки (подмена смысла в описании и в вариантах ответа), которые требуют немедленного исправления. Также присутствуют стилистические огрехи и орфографическая ошибка в имени собственном.",
+            "recommendations": [
+              {
+                "id": "c6-I2",
+                "priority": 1,
+                "path": "/steps_description/17/text",
+                "current": "Die Angst vor Telefonaten wird auch als „Telefonphobie“ bezeichnet. Dieses Phänomen wird im Zeitalter der digitalen Kommunikation immer häufiger, da Menschen sich zunehmend an die schriftliche Kommunikation gewöhnen.",
+                "proposed": "Die Angst vor dem Sprechen vor einer Gruppe wird auch als „soziale Bewertungsangst“ bezeichnet. Dies ist eine Kombination aus der Angst vor negativer Bewertung und der Furcht vor neuen Situationen.",
+                "alternatives": [
+                  "Die Angst vor einer Gruppe wird oft als „soziale Bewertungsangst“ bezeichnet. Dabei handelt es sich um die Mischung aus der Angst vor negativer Beurteilung und der Scheu vor neuen Situationen."
+                ],
+                "rationale": "Критическая ошибка: перевод полностью подменил тему раздела (вместо страха перед аудиторией написан текст про телефонную фобию). Необходимо вернуть смысл оригинала."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/variants/0/0",
+                "current": "Ich bitte ganz selbstverständlich und ohne Probleme um Hilfe.",
+                "proposed": "Ich mache das ganz selbstverständlich und ohne Probleme.",
+                "alternatives": [
+                  "Das fällt mir ganz leicht und ganz natürlich."
+                ],
+                "rationale": "Критическая ошибка: в оригинале описывается состояние/способность («С легкостью прошу»), а в переводе добавлено конкретное действие («прошу о помощи»), что сужает смысл. Предложенный вариант сохраняет абстрактность оригинала."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 3,
+                "path": "/variants/17/1",
+                "current": "Mit einer gewissen Unruhe",
+                "proposed": "Mit einer gewissen Angst",
+                "alternatives": [
+                  "Mit etwas Anspannung"
+                ],
+                "rationale": "Терминологическая неточность: 'Unruhe' — это скорее беспокойство или суета, в то время как в контексте теста и оригинала требуется передать именно 'тревожность' (Angst/Anspannung)."
+              },
+              {
+                "id": "c6-I1",
+                "priority": 4,
+                "path": "/steps_description/2/fact",
+                "current": "„Der Process“",
+                "proposed": "„Der Prozess“",
+                "alternatives": [],
+                "rationale": "Орфографическая ошибка: в немецком языке название романа Кафки пишется через 'ss'."
+              },
+              {
+                "id": "c7-I1",
+                "priority": 5,
+                "path": "/steps_description/25/text",
+                "current": "Sie könnten sich Sorgen darüber machen, wie ihre Stimme klingt, ob sie sich verplappern oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst.",
+                "proposed": "Sie könnten sich Sorgen darüber machen, wie ihre Stimme klingt, ob sie Fehler machen oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst.",
+                "alternatives": [
+                  "...ob sie sich verhaspeln oder..."
+                ],
+                "rationale": "Стилистическая ошибка: 'verplappern' звучит слишком легкомысленно (ляпнуть лишнее), что неуместно для описания симптомов социофобии. 'Fehler machen' или 'sich verhaspeln' лучше передают суть."
+              },
+              {
+                "id": "c7-I2",
+                "priority": 5,
+                "path": "/steps_description/29/text",
+                "current": "Dies kann die Angst vor einer möglichen Konfrontation oder der Notwendigkeit, schnell auf unerwartete Fragen reagieren zu müssen, beinhalten.",
+                "proposed": "Dazu können die Angst vor Konfrontationen oder der Druck, schnell auf unerwartete Fragen antworten zu müssen, gehören.",
+                "alternatives": [
+                  "Das kann die Angst vor Konfrontationen oder den Zwang, sofort auf Fragen reagieren zu müssen, einschließen."
+                ],
+                "rationale": "Стилистическая ошибка: текущий вариант — тяжеловесная калька с русского синтаксиса. Предложенный вариант звучит более естественно для носителя немецкого языка."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружены две критические ошибки: подмена темы целого раздела (17/text) и искажение смысла варианта ответа (0/0). Также присутствуют орфографические ошибки в именах собственных и стилистические огрехи (неудачный подбор слов и тяжеловесный синтаксис). Требуется исправление смысловых блоков перед публикацией."
+            },
+            "timings": {
+              "issues": 153519,
+              "deliberate": 19115,
+              "recommend": 27334
+            }
+          },
+          "applied": [
+            {
+              "id": "c6-I2",
+              "path": "/steps_description/17/text",
+              "from": "Die Angst vor Telefonaten wird auch als „Telefonphobie“ bezeichnet. Dieses Phänomen wird im Zeitalter der digitalen Kommunikation immer häufiger, da Menschen sich zunehmend an die schriftliche Kommunikation gewöhnen.",
+              "to": "Die Angst vor dem Sprechen vor einer Gruppe wird auch als „soziale Bewertungsangst“ bezeichnet. Dies ist eine Kombination aus der Angst vor negativer Bewertung und der Furcht vor neuen Situationen."
+            },
+            {
+              "id": "c2-I1",
+              "path": "/variants/0/0",
+              "from": "Ich bitte ganz selbstverständlich und ohne Probleme um Hilfe.",
+              "to": "Ich mache das ganz selbstverständlich und ohne Probleme."
+            },
+            {
+              "id": "c3-I1",
+              "path": "/variants/17/1",
+              "from": "Mit einer gewissen Unruhe",
+              "to": "Mit einer gewissen Angst"
+            },
+            {
+              "id": "c7-I1",
+              "path": "/steps_description/25/text",
+              "from": "Menschen mit sozialer Phobie vermeiden oft Telefonate in Anwesenheit anderer, aus Angst, gehört und bewertet zu werden. Sie könnten sich Sorgen darüber machen, wie ihre Stimme klingt, ob sie sich verplappern oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst.",
+              "to": "Sie könnten sich Sorgen darüber machen, wie ihre Stimme klingt, ob sie Fehler machen oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c6-I1",
+              "path": "/steps_description/2/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 6%)"
+            },
+            {
+              "id": "c7-I2",
+              "path": "/steps_description/29/text",
+              "reason": "цитата судьи не похожа на лист (сходство 42%)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон вежливый."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "issue",
+                "note": "Добавлено слово 'unwohl', которого нет в оригинале; в оригинале только тревога."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/35",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/36",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/37",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/38",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/39",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "issue",
+                "note": "Смысловое искажение: вместо «прошу с легкостью» получилось «делаю это само собой разумеющимся»"
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "Перевод точный, тон эмпатичный"
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "Перевод точный, адаптирован контекст выступления"
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "ok",
+                "note": "Перевод точный, передает эмоциональный окрас"
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "Перевод точный, термин Angst использован верно"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена"
+              },
+              {
+                "path": "/variants/10/0",
+                "verdict": "ok",
+                "note": "Перевод 'Никогда' -> 'Nie' корректен"
+              },
+              {
+                "path": "/variants/10/1",
+                "verdict": "ok",
+                "note": "Перевод 'Иногда' -> 'Manchmal' корректен"
+              },
+              {
+                "path": "/variants/10/2",
+                "verdict": "ok",
+                "note": "Перевод 'Часто' -> 'Oft' корректен"
+              },
+              {
+                "path": "/variants/10/3",
+                "verdict": "ok",
+                "note": "Перевод 'Постоянно' -> 'Ständig' корректен"
+              },
+              {
+                "path": "/variants/11/0",
+                "verdict": "ok",
+                "note": "Перевод 'Никогда' -> 'Nie' корректен"
+              },
+              {
+                "path": "/variants/11/1",
+                "verdict": "ok",
+                "note": "Перевод 'Иногда' -> 'Manchmal' корректен"
+              },
+              {
+                "path": "/variants/11/2",
+                "verdict": "ok",
+                "note": "Перевод 'Часто' -> 'Oft' корректен"
+              },
+              {
+                "path": "/variants/11/3",
+                "verdict": "ok",
+                "note": "Перевод 'Постоянно' -> 'Ständig' корректен"
+              },
+              {
+                "path": "/variants/12/0",
+                "verdict": "ok",
+                "note": "Перевод 'Нет' -> 'Nein' корректен"
+              },
+              {
+                "path": "/variants/12/1",
+                "verdict": "ok",
+                "note": "Перевод 'Легкая тревога' -> 'Leichte Angst' корректен"
+              },
+              {
+                "path": "/variants/12/2",
+                "verdict": "ok",
+                "note": "Перевод 'Умеренная тревога' -> 'Moderate Angst' корректен"
+              },
+              {
+                "path": "/variants/12/3",
+                "verdict": "ok",
+                "note": "Перевод 'Интенсивная тревога' -> 'Starke Angst' корректен"
+              },
+              {
+                "path": "/variants/13/0",
+                "verdict": "ok",
+                "note": "Перевод 'Никогда' -> 'Nie' корректен"
+              },
+              {
+                "path": "/variants/13/1",
+                "verdict": "ok",
+                "note": "Перевод 'Иногда' -> 'Manchmal' корректен"
+              },
+              {
+                "path": "/variants/13/2",
+                "verdict": "ok",
+                "note": "Перевод 'Часто' -> 'Oft' корректен"
+              },
+              {
+                "path": "/variants/13/3",
+                "verdict": "ok",
+                "note": "Перевод 'Постоянно' -> 'Ständig' корректен"
+              },
+              {
+                "path": "/variants/14/0",
+                "verdict": "ok",
+                "note": "Перевод 'Нет' -> 'Nein' корректен"
+              },
+              {
+                "path": "/variants/14/1",
+                "verdict": "ok",
+                "note": "Перевод 'Легкая тревога' -> 'Leichte Angst' корректен"
+              },
+              {
+                "path": "/variants/14/2",
+                "verdict": "ok",
+                "note": "Перевод 'Умеренная тревога' -> 'Moderate Angst' корректен"
+              },
+              {
+                "path": "/variants/14/3",
+                "verdict": "ok",
+                "note": "Перевод 'Интенсивная тревога' -> 'Starke Angst' корректен"
+              },
+              {
+                "path": "/variants/15/0",
+                "verdict": "ok",
+                "note": "Перевод 'Никогда' -> 'Nie' корректен"
+              },
+              {
+                "path": "/variants/15/1",
+                "verdict": "ok",
+                "note": "Перевод 'Иногда' -> 'Manchmal' корректен"
+              },
+              {
+                "path": "/variants/15/2",
+                "verdict": "ok",
+                "note": "Перевод 'Часто' -> 'Oft' корректен"
+              },
+              {
+                "path": "/variants/15/3",
+                "verdict": "ok",
+                "note": "Перевод 'Постоянно' -> 'Ständig' корректен"
+              },
+              {
+                "path": "/variants/16/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно, звучит естественно"
+              },
+              {
+                "path": "/variants/16/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, звучит естественно"
+              },
+              {
+                "path": "/variants/16/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/variants/16/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/variants/17/0",
+                "verdict": "ok",
+                "note": "Перевод 'Действую уверенно' -> 'Ich handle selbstbewusst' корректен"
+              },
+              {
+                "path": "/variants/17/1",
+                "verdict": "minor",
+                "note": "Стилистическая шероховатость: 'Mit einer gewissen Angst' звучит как обрывок фразы, хотя в контексте вариантов ответа это допустимо, но можно сделать изящнее"
+              },
+              {
+                "path": "/variants/17/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/variants/17/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/variants/18/0",
+                "verdict": "ok",
+                "note": "Перевод 'Никогда' -> 'Nie' корректен"
+              },
+              {
+                "path": "/variants/18/1",
+                "verdict": "ok",
+                "note": "Перевод 'Иногда' -> 'Manchmal' корректен"
+              },
+              {
+                "path": "/variants/18/2",
+                "verdict": "ok",
+                "note": "Перевод 'Часто' -> 'Oft' корректен"
+              },
+              {
+                "path": "/variants/18/3",
+                "verdict": "ok",
+                "note": "Перевод 'Постоянно' -> 'Ständig' корректен"
+              },
+              {
+                "path": "/variants/19/0",
+                "verdict": "ok",
+                "note": "Перевод 'Нет' -> 'Nein' корректен"
+              },
+              {
+                "path": "/variants/19/1",
+                "verdict": "ok",
+                "note": "Перевод 'Легкая тревога' -> 'Leichte Angst' корректен"
+              },
+              {
+                "path": "/variants/19/2",
+                "verdict": "ok",
+                "note": "Перевод 'Умеренная тревога' -> 'Moderate Angst' корректен"
+              },
+              {
+                "path": "/variants/19/3",
+                "verdict": "ok",
+                "note": "Перевод 'Интенсивная тревога' -> 'Starke Angst' корректен"
+              },
+              {
+                "path": "/variants/20/0",
+                "verdict": "ok",
+                "note": "Перевод точный, смысл передан хорошо"
+              },
+              {
+                "path": "/variants/20/1",
+                "verdict": "ok",
+                "note": "Перевод точный, 'etwas ängstlich' хорошо передает 'тревожность' в контексте"
+              },
+              {
+                "path": "/variants/20/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/20/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/21/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/21/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/21/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/21/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/24/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/24/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/24/2",
+                "verdict": "ok",
+                "note": "Перевод точный, 'nach Möglichkeit' — хорошая адаптация"
+              },
+              {
+                "path": "/variants/24/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/25/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/25/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/25/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/25/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/28/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/28/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/28/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/28/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/29/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/29/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/29/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/29/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/30/0",
+                "verdict": "ok",
+                "note": "Перевод адекватен контексту знакомства"
+              },
+              {
+                "path": "/variants/30/1",
+                "verdict": "ok",
+                "note": "Перевод передает смысл"
+              },
+              {
+                "path": "/variants/30/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/30/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/31/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/31/1",
+                "verdict": "ok",
+                "note": "Термин Angst использован верно"
+              },
+              {
+                "path": "/variants/31/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/31/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/32/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/33/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/33/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/33/2",
+                "verdict": "issue",
+                "note": "Стиль: избыточность (addition) и калька"
+              },
+              {
+                "path": "/variants/33/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/34/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/35/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/36/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/37/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/38/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/39/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено верно, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл верны."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл в норме."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "issue",
+                "note": "Ошибка в написании названия произведения (typo)."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Естественно и точно."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "issue",
+                "note": "Опечатка в термине (Telephonophobie -> Telefonophobie)."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "issue",
+                "note": "Пропущено первое предложение оригинала"
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Терминология верная"
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/35/text",
+                "verdict": "ok",
+                "note": "Терминология (KVT) верная"
+              },
+              {
+                "path": "/steps_description/36/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/36/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/37/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/38/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/38/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/39/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/mild",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/moderate",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/mild/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/mild/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/moderate/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/moderate/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/22",
+                "fragment": "Fühlen Sie sich unwohl oder ängstlich",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено 'unwohl' (неуютно)",
+                "why": "В оригинале только 'чувствуете тревогу'. Хотя это смягчает тон, это является избыточным добавлением по отношению к исходному тексту."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/variants/0/0",
+                "fragment": "Ich mache das ganz selbstverständlich und ohne Probleme.",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла",
+                "why": "Оригинал «С легкостью прошу» подразумевает процесс просьбы (просить о чем-то). Перевод «Ich mache das ganz selbstverständlich» означает «Я делаю это как нечто само собой разумеющееся», что полностью меняет контекст действия."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/variants/17/1",
+                "fragment": "Mit einer gewissen Angst",
+                "type": "style",
+                "severity": "minor",
+                "problem": "недостаточно естественный синтаксис для варианта ответа",
+                "why": "Хотя грамматически это верно, в немецком языке для ответов на вопрос о состоянии чаще используются конструкции с глаголом или более полные фразы, чтобы избежать ощущения 'оборванного' предложения, хотя в рамках UI это допустимо."
+              },
+              {
+                "id": "c5-I1",
+                "path": "/variants/33/2",
+                "fragment": "Ich versuche eher, es zu vermeiden",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Избыточность и слабая конструкция",
+                "why": "В оригинале лаконичное «Предпочитаю избегать». Немецкий вариант «Ich versuche eher, es zu vermeiden» (Я скорее пытаюсь этого избегать) звучит как тяжеловесная калька и добавляет лишние слова («пытаюсь»), что не соответствует духу кратких вариантов ответов в UI."
+              },
+              {
+                "id": "c6-I1",
+                "path": "/steps_description/2/fact",
+                "fragment": "„Der Process“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Опечатка в названии",
+                "why": "В немецком языке роман Кафки пишется как „Der Prozess“ (через ss)."
+              },
+              {
+                "id": "c6-I2",
+                "path": "/steps_description/18/text",
+                "fragment": "„Telephonophobie“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Устаревшее написание",
+                "why": "В современном немецком языке пишется „Telefonophobie“. Вариант с 'ph' допустим в очень старых текстах, но в современном приложении выглядит как ошибка."
+              },
+              {
+                "id": "c7-I1",
+                "path": "/steps_description/25/text",
+                "fragment": "Sie könnten sich Sorgen darüber machen, wie ihre Stimme klingt, ob sie Fehler machen oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst.",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Пропущено первое предложение оригинала",
+                "why": "В оригинале сказано: «Люди с социофобией часто избегают телефонных разговоров в присутствии других людей из-за страха быть услышанными и оцененными». В переводе сразу начинается с «Они могут беспокоиться...», что теряет контекст избегания и причины (страх быть услышанным)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Добавление 'unwohl' действительно расширяет семантику оригинала 'тревога', хотя в контексте психологических тестов это допустимая экспликация."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: перевод описывает отношение к действию, а не само действие (просьбу), что искажает смысл вопроса."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "rejected",
+                "note": "Для UI-вариантов ответа краткие фразы без глагола являются стандартом, это не ошибка, а лаконичность."
+              },
+              {
+                "id": "c5-I1",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Стилистическая избыточность, нарушающая лаконичность интерфейса."
+              },
+              {
+                "id": "c6-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Орфографическая ошибка в названии произведения (Prozess)."
+              },
+              {
+                "id": "c6-I2",
+                "verdict": "confirmed",
+                "rank": 5,
+                "note": "Связано с c6-I1 (ошибки в текстах), но касается орфографии/стиля современного языка."
+              },
+              {
+                "id": "c7-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c2-I1"
+                ],
+                "note": "Критическая потеря смысла: пропущено ключевое утверждение о поведении (избегании), что делает текст логически неполным."
+              }
+            ],
+            "notes": "Перевод содержит критические смысловые потери и искажения (omission и mistranslation), которые существенно влияют на точность психологического теста, а также орфографические ошибки в именах собственных.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/variants/0/0",
+                "current": "Ich mache das ganz selbstverständlich und ohne Probleme.",
+                "proposed": "Ich bitte ganz selbstverständlich und ohne Probleme darum.",
+                "alternatives": [
+                  "Ich bitte ganz leicht und ohne Probleme.",
+                  "Das fällt mir ganz leicht und ohne Probleme."
+                ],
+                "rationale": "Оригинал «С легкостью прошу» содержит глагол действия. Текущий перевод «Ich mache das...» (Я делаю это...) теряет объект просьбы и звучит как описание привычки, а не процесса обращения за помощью."
+              },
+              {
+                "id": "c7-I1",
+                "priority": 1,
+                "path": "/steps_description/25/text",
+                "current": "Sie könnten sich Sorgen darüber machen, wie ihre Stimme klingt, ob sie Fehler machen oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst.",
+                "proposed": "Menschen mit sozialer Phobie vermeiden oft Telefonate in Anwesenheit anderer, weil sie befürchten, gehört und bewertet zu werden. Sie machen sich Sorgen darüber, wie ihre Stimme klingt, ob sie Fehler machen oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst.",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: пропущено первое предложение оригинала, которое задает контекст (избегание звонков из-за страха быть услышанным). Без него текст теряет логическую связь с вопросом теста."
+              },
+              {
+                "id": "c6-I1",
+                "priority": 2,
+                "path": "/steps_description/2/fact",
+                "current": "„Der Process“",
+                "proposed": "„Der Prozess“",
+                "alternatives": [],
+                "rationale": "Орфографическая ошибка. В немецком языке название романа Кафки пишется через 'ss' (Prozess)."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/steps/22",
+                "current": "Fühlen Sie sich unwohl oder ängstlich, wenn Sie einem aufdringlichen Verkäufer eine Absage erteilen?",
+                "proposed": "Spüren Sie Angst, wenn Sie einem aufdringlichen Verkäufer eine Absage erteilen?",
+                "alternatives": [
+                  "Fühlen Sie Angst, wenn Sie einem aufdringlichen Verkäufer eine Absage erteilen?"
+                ],
+                "rationale": "В оригинале только «чувствуете тревогу». Добавление «unwohl» (неуютно) — это избыточная экспликация, которая меняет точность вопроса."
+              },
+              {
+                "id": "c5-I1",
+                "priority": 4,
+                "path": "/variants/33/2",
+                "current": "Ich versuche eher, es zu vermeiden",
+                "proposed": "Ich vermeide es eher",
+                "alternatives": [
+                  "Eher vermeiden"
+                ],
+                "rationale": "Текущий вариант слишком громоздкий для UI («Я скорее пытаюсь этого избегать»). Предложенный вариант короче, естественнее и лучше соответствует ритму других ответов."
+              },
+              {
+                "id": "c6-I2",
+                "priority": 5,
+                "path": "/steps_description/18/text",
+                "current": "„Telephonophobie“",
+                "proposed": "„Telefonophobie“",
+                "alternatives": [],
+                "rationale": "Использование 'ph' в слове Telefonophobie является устаревшим. Для современного приложения необходимо стандартное написание через 'f'."
+              }
+            ],
+            "overall": {
+              "score": 78,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружены критические ошибки: пропуск целого предложения в описании (потеря смысла) и искажение смысла ключевого варианта ответа. Также присутствуют орфографические ошибки в именах собственных и устаревшие формы написания. Требуется исправление логических связей и приведение терминологии к современным стандартам перед публикацией."
+            },
+            "timings": {
+              "issues": 150773,
+              "deliberate": 13640,
+              "recommend": 30616
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/variants/0/0",
+              "from": "Ich mache das ganz selbstverständlich und ohne Probleme.",
+              "to": "Ich bitte ganz selbstverständlich und ohne Probleme darum."
+            },
+            {
+              "id": "c7-I1",
+              "path": "/steps_description/25/text",
+              "from": "Sie könnten sich Sorgen darüber machen, wie ihre Stimme klingt, ob sie Fehler machen oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst.",
+              "to": "Menschen mit sozialer Phobie vermeiden oft Telefonate in Anwesenheit anderer, weil sie befürchten, gehört und bewertet zu werden. Sie machen sich Sorgen darüber, wie ihre Stimme klingt, ob sie Fehler machen oder ob ihr Gespräch eine negative Reaktion in ihrer Umgebung auslöst."
+            },
+            {
+              "id": "c1-I1",
+              "path": "/steps/22",
+              "from": "Fühlen Sie sich unwohl oder ängstlich, wenn Sie einem aufdringlichen Verkäufer eine Absage erteilen?",
+              "to": "Spüren Sie Angst, wenn Sie einem aufdringlichen Verkäufer eine Absage erteilen?"
+            },
+            {
+              "id": "c5-I1",
+              "path": "/variants/33/2",
+              "from": "Ich versuche eher, es zu vermeiden",
+              "to": "Ich vermeide es eher"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c6-I1",
+              "path": "/steps_description/2/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 6%)"
+            },
+            {
+              "id": "c6-I2",
+              "path": "/steps_description/18/text",
+              "reason": "цитата судьи не похожа на лист (сходство 8%)"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон вежливый."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "issue",
+                "note": "Слишком много вариантов перевода для одного слова 'беспокойство' (unruhig oder besorgt), что делает фразу тяжелой."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/35",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/36",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/37",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/38",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/39",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "ok",
+                "note": "Передано смысл и тон"
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'выступать'"
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "ok",
+                "note": "Хорошая передача экспрессии"
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "Термин Angst использован верно"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/10/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/10/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/10/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/10/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/11/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/12/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/13/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/14/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/15/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/16/0",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/variants/16/1",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/variants/16/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/16/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/17/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/17/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/17/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/17/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/18/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/19/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/variants/20/0",
+                "verdict": "ok",
+                "note": "Перевод точный, смысл передан хорошо"
+              },
+              {
+                "path": "/variants/20/1",
+                "verdict": "ok",
+                "note": "Перевод точный, соответствует контексту"
+              },
+              {
+                "path": "/variants/20/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/20/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/21/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/21/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/21/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/21/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/22/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/23/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/24/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/24/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/24/2",
+                "verdict": "ok",
+                "note": "Перевод точный, добавлена естественная для немецкого фраза 'nach Möglichkeit'"
+              },
+              {
+                "path": "/variants/24/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/25/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/25/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/25/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/25/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/26/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/27/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/28/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/28/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/28/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/28/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/29/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/29/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/29/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/29/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/30/0",
+                "verdict": "ok",
+                "note": "Перевод адекватен, передает смысл общения"
+              },
+              {
+                "path": "/variants/30/1",
+                "verdict": "ok",
+                "note": "Перевод точный, передает противопоставление"
+              },
+              {
+                "path": "/variants/30/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/30/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/31/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/31/1",
+                "verdict": "ok",
+                "note": "Терминология 'Angst' верна"
+              },
+              {
+                "path": "/variants/31/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/31/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/32/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/32/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/32/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/32/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/33/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/33/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/33/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/33/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/34/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/34/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/34/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/34/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/35/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/35/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/35/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/35/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/36/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/36/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/36/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/36/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/37/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/37/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/37/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/37/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/38/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/38/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/38/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/38/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/39/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/39/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/39/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/39/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено верно, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "issue",
+                "note": "Ошибка в написании названия произведения."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "issue",
+                "note": "Опечатка в термине (Telephonophobie)."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "issue",
+                "note": "Термин Assertophobie не является общепринятым в немецком, хотя в оригинале указано, что это не официальный термин. Но есть нюанс в написании."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Переведено корректно."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Переведено верно, стиль поддерживающий."
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Хороший перевод, естественный синтаксис."
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Термин Schutzverhalten уместен."
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "issue",
+                "note": "Использование английского термина в кавычках вместо немецкого аналога."
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "issue",
+                "note": "Тяжеловесная конструкция в конце предложения (канцелярит/калька)."
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/35/text",
+                "verdict": "ok",
+                "note": "Терминология KVT соблюдена."
+              },
+              {
+                "path": "/steps_description/36/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/36/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/37/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/38/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/38/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/39/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/mild",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/moderate",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод корректен, тон эмпатичный."
+              },
+              {
+                "path": "/result/mild/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/mild/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/moderate/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/moderate/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/14",
+                "fragment": "Fühlen Sie sich unruhig oder besorgt im Gespräch mit Vorgesetzten?",
+                "type": "style",
+                "severity": "minor",
+                "problem": "избыточность",
+                "why": "В оригинале одно слово «беспокойство». Перевод «unruhig oder besorgt» (неспокойно или обеспокоенно) создает излишнюю тяжеловесность и дублирование смыслов, характерное для калькирования попыток охватить все оттенки, что не свойственно естественному немецкому языку в UX-текстах."
+              },
+              {
+                "id": "c6-I1",
+                "path": "/steps_description/2/fact",
+                "fragment": "„Der Process“",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неверное написание названия",
+                "why": "В немецком языке роман Кафки называется „Der Process“ (с 'c' в середине), но в современном немецком чаще используется „Der Prozess“. Однако, если следовать историческому написанию, это допустимо, но в контексте приложения лучше использовать стандартное написание „Der Prozess“."
+              },
+              {
+                "id": "c6-I2",
+                "path": "/steps_description/18/text",
+                "fragment": "„Telephonophobie“",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Устаревшее написание",
+                "why": "В современном немецком языке используется написание „Telefonophobie“. Написание через 'ph' (Telephon-) является архаичным."
+              },
+              {
+                "id": "c6-I3",
+                "path": "/steps_description/19/fact",
+                "fragment": "„Assertophobie“",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Калька термина",
+                "why": "Термин 'Assertophobie' является прямой калькой с английского. В немецком языке для описания страха отстаивать свои права чаще используются описательные конструкции, но так как в оригинале подчеркнуто, что это не официальный термин, это можно оставить, однако звучит крайне неестественно для носителя."
+              },
+              {
+                "id": "c7-I1",
+                "path": "/steps_description/27/text",
+                "fragment": "„shy bladder syndrome“",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование английского термина в немецком тексте",
+                "why": "Хотя термин понятен, в немецком языке для этого состояния принято использовать либо медицинское название, либо описание. Использование английского в кавычках выглядит как калька, если нет явной необходимости в англицизме."
+              },
+              {
+                "id": "c7-I2",
+                "path": "/steps_description/29/text",
+                "fragment": "Dies kann die Angst vor einer möglichen Konfrontation oder der Notwendigkeit, schnell auf unerwartete Fragen reagieren zu müssen, beinhalten.",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Тяжеловесная конструкция с инфинитивом в конце",
+                "why": "Фраза перегружена конструкциями «der Notwendigkeit... zu müssen, beinhalten». Это типичный пример тяжелого синтаксиса, который звучит неестественно для поддерживающего текста. Лучше перестроить предложение, чтобы избежать нагромождения существительных и инфинитивных оборотов."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The translation adds an extra adjective 'unruhig' not present in the source, creating redundancy."
+              },
+              {
+                "id": "c6-I1",
+                "verdict": "rejected",
+                "note": "The user is correct that 'Prozess' is standard, but 'Der Process' is the specific historical title of Kafka's work. It is not an error, but a stylistic choice for accuracy."
+              },
+              {
+                "id": "c6-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Archaic spelling in a modern UX context."
+              },
+              {
+                "id": "c6-I3",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Terminology issue: it is a literal calque that sounds unnatural in German."
+              },
+              {
+                "id": "c7-I1",
+                "verdict": "confirmed",
+                "rank": 5,
+                "note": "Style: English term used where a German equivalent or description is expected."
+              },
+              {
+                "id": "c7-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical syntax issue: the sentence structure is extremely heavy and unidiomatic for a mobile/web interface."
+              }
+            ],
+            "notes": "The translation is generally accurate in meaning but suffers from 'translationese'—heavy syntax and literal calques of psychological terms that make the text feel unnatural for a native German speaker.",
+            "recommendations": [
+              {
+                "id": "c7-I2",
+                "priority": 1,
+                "path": "/steps_description/29/text",
+                "current": "Dies kann die Angst vor einer möglichen Konfrontation oder der Notwendigkeit, schnell auf unerwartete Fragen reagieren zu müssen, beinhalten.",
+                "proposed": "Dazu können die Angst vor einer möglichen Konfrontation oder die Notwendigkeit gehören, schnell auf unerwartete Fragen zu reagieren.",
+                "alternatives": [
+                  "Dies kann die Angst vor einer Konfrontation oder den Druck beinhalten, schnell auf unerwartete Fragen antworten zu müssen.",
+                  "Dazu zählen auch die Angst vor einer Konfrontation oder die Sorge, schnell auf unerwartete Fragen reagieren zu müssen."
+                ],
+                "rationale": "Текущая конструкция с нагромождением инфинитивов (zu müssen, beinhalten) в конце предложения — типичная ошибка тяжелого синтаксиса. Предложенный вариант делает фразу более динамичной и естественной для чтения."
+              },
+              {
+                "id": "c6-I3",
+                "priority": 2,
+                "path": "/steps_description/19/fact",
+                "current": "Angst beim Umtausch von Waren ist oft mit einem breiteren Phänomen verbunden, das als „Assertophobie“ bekannt ist – die Angst davor, die eigenen Rechte einzufordern oder die eigenen Bedürfnisse auszudrücken.",
+                "proposed": "Die Angst beim Umtausch von Waren ist oft mit einem breiteren Phänomen verbunden, das als „Assertophobie“ bezeichnet wird – die Angst, die eigenen Rechte einzufordern oder die eigenen Bedürfnisse auszudrücken.",
+                "alternatives": [
+                  "...das als „Angst vor Selbstbehauptung“ bekannt ist...",
+                  "...das man als „Assertophobie“ bezeichnet..."
+                ],
+                "rationale": "Хотя термин является калькой, редактор подтвердил, что его можно оставить, так как в оригинале указано, что это не официальный термин. Я лишь слегка подправил стилистику (bekannt ist -> bezeichnet wird), чтобы фраза звучала более профессионально, сохранив термин для точности перевода."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/steps/14",
+                "current": "Fühlen Sie sich unruhig oder besorgt im Gespräch mit Vorgesetzten?",
+                "proposed": "Fühlen Sie sich besorgt im Gespräch mit Vorgesetzten?",
+                "alternatives": [
+                  "Fühlen Sie sich unwohl im Gespräch mit Vorgesetzten?"
+                ],
+                "rationale": "В оригинале только «беспокойство». Добавление «unruhig» создает избыточность (плеоназм), характерную для плохих переводов. Оставляем только один точный эквивалент."
+              },
+              {
+                "id": "c6-I2",
+                "priority": 4,
+                "path": "/steps_description/18/text",
+                "current": "Die Angst vor Telefonaten wird auch als „Telephonophobie“ bezeichnet.",
+                "proposed": "Die Angst vor Telefonaten wird auch als „Telefonophobie“ bezeichnet.",
+                "alternatives": [],
+                "rationale": "Исправление архаичного написания 'ph' на современное 'f' для соответствия стандартам немецкого языка в UX."
+              },
+              {
+                "id": "c7-I1",
+                "priority": 5,
+                "path": "/steps_description/27/text",
+                "current": "Studien zufolge leiden etwa 7–9 % der Menschen an Paruresis, auch bekannt als „shy bladder syndrome“, was dazu führt, dass sie die Nutzung öffentlicher Toiletten vermeiden.",
+                "proposed": "Studien zufolge leiden etwa 7–9 % der Menschen an Paruresis, auch bekannt als „Schamurinus-Syndrom“, was dazu führt, dass sie die Nutzung öffentlicher Toiletten vermeiden.",
+                "alternatives": [
+                  "...auch bekannt als „Reizblase durch soziale Angst“...",
+                  "...auch bekannt als das „Scham-Syndrom beim Wasserlassen“..."
+                ],
+                "rationale": "Использование английского термина в немецком тексте без пояснения выглядит как калька. Замена на немецкое описание или принятый термин делает текст более солидным и понятным для целевой аудитории."
+              },
+              {
+                "id": "c6-I1",
+                "priority": 6,
+                "path": "/steps_description/2/fact",
+                "current": "Seine Werke, wie „Der Process“ oder „Das Schloss“, spiegeln seine tiefen Ängste und Unruhen wider.",
+                "proposed": "Seine Werke, wie „Der Process“ oder „Das Schloss“, spiegeln seine tiefen Ängste und Unruhen wider.",
+                "alternatives": [],
+                "rationale": "Замечание отклонено. „Der Process“ — это исторически верное название произведения Кафки, и в контексте литературы это допустимо и даже уместно."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология соблюдена. Основные правки касаются устранения тяжеловесного синтаксиса в длинных предложениях и замены архаичных/английских конструкций на более естественные для немецкого языка. После внесения этих правок текст будет звучать профессионально и поддерживающе."
+            },
+            "timings": {
+              "issues": 139097,
+              "deliberate": 10777,
+              "recommend": 29594
+            }
+          },
+          "applied": [
+            {
+              "id": "c6-I3",
+              "path": "/steps_description/19/fact",
+              "from": "Angst beim Umtausch von Waren ist oft mit einem breiteren Phänomen verbunden, das als „Assertophobie“ bekannt ist – die Angst davor, die eigenen Rechte einzufordern oder die eigenen Bedürfnisse auszudrücken.",
+              "to": "Die Angst beim Umtausch von Waren ist oft mit einem breiteren Phänomen verbunden, das als „Assertophobie“ bezeichnet wird – die Angst, die eigenen Rechte einzufordern oder die eigenen Bedürfnisse auszudrücken."
+            },
+            {
+              "id": "c1-I1",
+              "path": "/steps/14",
+              "from": "Fühlen Sie sich unruhig oder besorgt im Gespräch mit Vorgesetzten?",
+              "to": "Fühlen Sie sich besorgt im Gespräch mit Vorgesetzten?"
+            },
+            {
+              "id": "c7-I1",
+              "path": "/steps_description/27/text",
+              "from": "Studien zufolge leiden etwa 7–9 % der Menschen an Paruresis, auch bekannt als „shy bladder syndrome“, was dazu führt, dass sie die Nutzung öffentlicher Toiletten vermeiden.",
+              "to": "Studien zufolge leiden etwa 7–9 % der Menschen an Paruresis, auch bekannt als „Schamurinus-Syndrom“, was dazu führt, dass sie die Nutzung öffentlicher Toiletten vermeiden."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c7-I2",
+              "path": "/steps_description/29/text",
+              "reason": "цитата судьи не похожа на лист (сходство 42%)"
+            },
+            {
+              "id": "c6-I2",
+              "path": "/steps_description/18/text",
+              "reason": "цитата судьи не похожа на лист (сходство 32%)"
+            },
+            {
+              "id": "c6-I1",
+              "path": "/steps_description/2/fact",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
