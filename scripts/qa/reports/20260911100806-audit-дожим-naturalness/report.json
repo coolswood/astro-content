@@ -1,0 +1,1450 @@
+{
+  "file": "story/depression/mirror_mistake_nonDepression.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 8,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль соответствует"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Стилистическая калька: 'zu einem geliebten Menschen' звучит слишком поэтично/драматично для контекста упражнения, лучше 'nahestehenden Person'"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/",
+                "verdict": "ok",
+                "note": "Путь неполный, но текст ок"
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "issue",
+                "note": "Omission: потерян ID инстаграма в переводе"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/mirror/screen_2/texts/8",
+                "fragment": "zu einem geliebten Menschen zu sagen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком эмоционально/поэтично",
+                "why": "В контексте упражнения 'близкий человек' лучше переводить как 'nahestehende Person'. 'Geliebter Mensch' звучит как 'возлюбленный' или 'очень дорогой сердцу человек' в литературном смысле, что избыточно для описания ролевой игры."
+              },
+              {
+                "id": "I2",
+                "path": "/nonDepression/screen_1/texts/9",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Потерян атрибут ID",
+                "why": "В оригинале указан конкретный ID инстаграма, который необходим для корректной работы функции/виджета. В переводе тег пустой."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Согласен, 'geliebter Mensch' звучит слишком возвышенно для психологического упражнения; 'nahestehende Person' точнее передает нейтральный смысл 'близкого человека'."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: потеря технического атрибута ID в теге приведет к поломке виджета."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, однако допущены две ошибки: одна техническая (потеря ID), другая стилистическая (избыточная эмоциональность).",
+            "recommendations": [
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/nonDepression/screen_1/texts/9",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18015134789663690\">",
+                "alternatives": [],
+                "rationale": "Критическая техническая ошибка: в переводе потерян атрибут ID, который необходим для корректного отображения виджета. Нужно вернуть значение из оригинала."
+              },
+              {
+                "id": "I1",
+                "priority": 2,
+                "path": "/mirror/screen_2/texts/8",
+                "current": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einem geliebten Menschen zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so handelte.",
+                "proposed": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einer nahestehenden Person zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so handelte.",
+                "alternatives": [
+                  "zu einer nahestehenden Person zu sagen"
+                ],
+                "rationale": "Выбор 'nahestehende Person' вместо 'geliebter Mensch' делает тон текста более профессиональным и менее поэтичным, что соответствует стандартам психологической практики (Tone of Voice). 'Geliebter Mensch' звучит слишком интимно/литературно для описания ролевой игры."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/mirror/screen_1/texts/1",
+                "current": "Versuchen Sie eine Methode: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz aufrichtig.",
+                "proposed": "Probieren Sie eine Methode aus: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz ehrlich.",
+                "alternatives": [],
+                "rationale": "В оригинале 'Делайте это честно'. 'Aufrichtig' — это скорее 'искренне', а 'ehrlich' лучше передает смысл 'честно/без прикрас' в контексте выполнения упражнения. Также 'Probieren Sie ... aus' звучит более естественно для предложения попробовать технику."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/mirror/screen_1/texts/4",
+                "current": "<dialog psy=\"true\">Dmitri, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich bringe nichts zustande“ hervorrief.</dialog>",
+                "proposed": "<dialog psy=\"true\">Dmitri, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens und Gedanken wie: „Ich bin ein Versager, ich bringe nichts zustande“ ausgelöst hat.</dialog>",
+                "alternatives": [],
+                "rationale": "Устранение стилистической тяжести. В текущем варианте глагол 'hervorrief' стоит слишком далеко от дополнения, создавая громоздкую конструкцию. Перенос 'ausgelöst hat' в конец делает предложение более динамичным и естественным для речи психолога."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на высоком уровне, терминология соблюдена. Однако обнаружена критическая техническая ошибка (потеря ID в теге Instagram), которую нужно исправить в первую очередь. Также требуется точечная стилистическая правка в описании упражнения 'Зеркало самокритики', чтобы уйти от излишне поэтичного тона к профессиональному."
+            },
+            "timings": {
+              "issues": 52129,
+              "deliberate": 5400,
+              "recommend": 19712
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/nonDepression/screen_1/texts/9",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18015134789663690\">"
+            },
+            {
+              "id": "I1",
+              "path": "/mirror/screen_2/texts/8",
+              "from": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einem geliebten Menschen zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so handelte.",
+              "to": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einer nahestehenden Person zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so handelte."
+            },
+            {
+              "id": "I3",
+              "path": "/mirror/screen_1/texts/1",
+              "from": "Versuchen Sie eine Methode: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz aufrichtig.",
+              "to": "Probieren Sie eine Methode aus: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz ehrlich."
+            },
+            {
+              "id": "I4",
+              "path": "/mirror/screen_1/texts/4",
+              "from": "<dialog psy=\"true\">Dmitri, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens ausgelöst hat und Gedanken wie: „Ich bin ein Versager, ich bringe nichts zustande“ hervorrief.</dialog>",
+              "to": "<dialog psy=\"true\">Dmitri, Sie sagten, dass die Kündigung bei Ihnen ein Gefühl des Versagens und Gedanken wie: „Ich bin ein Versager, ich bringe nichts zustande“ ausgelöst hat.</dialog>"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль эмпатичный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие, смысл передан"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/",
+                "verdict": "ok",
+                "note": "Путь в списке неполный, но текст (activitylink) сохранен"
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Тег Instagram сохранен"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mirror/screen_1/texts/1",
+                "current": "Probieren Sie eine Methode aus: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz ehrlich.",
+                "proposed": "Probieren Sie eine Methode aus: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz aufrichtig.",
+                "alternatives": [
+                  "Tun Sie dies ganz ehrlich."
+                ],
+                "rationale": "В контексте психологической практики и саморефлексии 'aufrichtig' (искренне/честно перед собой) звучит более глубоко и естественно, чем 'ehrlich', которое может восприниматься как простое отсутствие лжи."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/mirror/screen_2/texts/8",
+                "current": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einer nahestehenden Person zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so handelte.",
+                "proposed": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einer nahestehenden Person zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so ist.",
+                "alternatives": [
+                  "...sich selbst gegenüber jedoch ständig so verhält."
+                ],
+                "rationale": "Текущая конструкция 'sich selbst gegenüber jedoch ständig so handelte' грамматически тяжеловесна из-за повтора прошедшего времени. Вариант 'ist' или 'verhält' делает акцент на устойчивом паттерне поведения, что лучше передает смысл оригинала."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/mistake/screen_1/texts/11",
+                "current": "Diese Übung wird Ihnen helfen zu erkennen, dass man nicht perfekt sein muss, um Freude am Tun zu haben.",
+                "proposed": "Diese Übung wird Ihnen helfen zu erkennen, dass Perfektion keine Voraussetzung sein muss, um Freude am Prozess zu haben.",
+                "alternatives": [
+                  "...dass man nicht perfekt sein muss, um Freude am Tun zu haben."
+                ],
+                "rationale": "Вариант 'Freude am Tun' звучит немного простовато. 'Freude am Prozess' лучше передает психологический смысл (удовольствие от процесса, а не только от результата), как в оригинале."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/nonDepression/screen_2/texts/4",
+                "current": "Bei einer Depression scheint quasi nur der „kalte Hahn“ offen zu sein – Traurigkeit, Angst, ein Gefühl der Hoffnungslosigkeit. Und das ist meist nicht die Folge der Situation selbst, sondern das Ergebnis einer verzerrten Wahrnehmung, die Fürsorge und Korrektur erfordert.",
+                "proposed": "Bei einer Depression scheint quasi nur der „kalte Hahn“ offen zu sein – Traurigkeit, Angst, ein Gefühl der Hoffnungslosigkeit. Und das ist meist nicht die Folge der Situation selbst, sondern das Ergebnis einer verzerrten Wahrnehmung, die Aufmerksamkeit und Korrektur erfordert.",
+                "alternatives": [
+                  "...die Unterstützung und Korrektur erfordert."
+                ],
+                "rationale": "Слово 'Fürsorge' (забота/уход) в немецком языке чаще относится к уходу за больными или детьми. В контексте когнитивной коррекции восприятия лучше использовать 'Aufmerksamkeit' (внимание к процессу) или 'Unterstützung'."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, выдержан эмпатичный тон и правильная типографика. Основные правки касаются тонких стилистических нюансов (выбор более точных синонимов для психологического контекста), чтобы избежать легкой «сухости» в некоторых местах. Текст готов к публикации после внесения мелких правок."
+            },
+            "timings": {
+              "issues": 47758,
+              "deliberate": 1644,
+              "recommend": 28019
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/mirror/screen_1/texts/1",
+              "from": "Probieren Sie eine Methode aus: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz ehrlich.",
+              "to": "Probieren Sie eine Methode aus: Stellen Sie einer nahestehenden Person dieselben Anforderungen, die Sie normalerweise an sich selbst stellen. Tun Sie dies ganz aufrichtig."
+            },
+            {
+              "id": "I2",
+              "path": "/mirror/screen_2/texts/8",
+              "from": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einer nahestehenden Person zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so handelte.",
+              "to": "Nach diesem Rollenspiel sagte Dmitri, dass es ihm sehr schwergefallen sei, solche Worte zu einer nahestehenden Person zu sagen. Er begriff, dass er in der Realität niemals so handeln würde – sich selbst gegenüber jedoch ständig so ist."
+            },
+            {
+              "id": "I3",
+              "path": "/mistake/screen_1/texts/11",
+              "from": "Diese Übung wird Ihnen helfen zu erkennen, dass man nicht perfekt sein muss, um Freude am Tun zu haben.",
+              "to": "Diese Übung wird Ihnen helfen zu erkennen, dass Perfektion keine Voraussetzung sein muss, um Freude am Prozess zu haben."
+            },
+            {
+              "id": "I4",
+              "path": "/nonDepression/screen_2/texts/4",
+              "from": "Bei einer Depression scheint quasi nur der „kalte Hahn“ offen zu sein – Traurigkeit, Angst, ein Gefühl der Hoffnungslosigkeit. Und das ist meist nicht die Folge der Situation selbst, sondern das Ergebnis einer verzerrten Wahrnehmung, die Fürsorge und Korrektur erfordert.",
+              "to": "Bei einer Depression scheint quasi nur der „kalte Hahn“ offen zu sein – Traurigkeit, Angst, ein Gefühl der Hoffnungslosigkeit. Und das ist meist nicht die Folge der Situation selbst, sondern das Ergebnis einer verzerrten Wahrnehmung, die Aufmerksamkeit und Korrektur erfordert."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль эмпатичный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Кавычки немецкие, смысл передан"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "issue",
+                "note": "Стилистическая калька в конце предложения"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "ok",
+                "note": "Переведено хорошо"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Тег сохранен"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/mirror/screen_2/texts/8",
+                "fragment": "sich selbst gegenüber jedoch ständig so ist",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное завершение фразы",
+                "why": "Конструкция 'ständig so ist' в конце предложения звучит как калька с русского 'постоянно так поступал'. В немецком языке лучше использовать глагол действия или перестроить фразу, чтобы избежать обрывистого 'так является'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The German phrase 'sich selbst gegenüber jedoch ständig so ist' is indeed an elliptical construction that feels slightly truncated compared to the Russian 'постоянно так поступал'. While grammatically possible in spoken language, in a written psychological text, a more complete verb (e.g., 'handelt') would sound more professional."
+              }
+            ],
+            "notes": "The translation is of high quality, maintaining the psychological nuance and tone. Only one minor stylistic issue regarding sentence closure was identified.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mirror/screen_2/texts/8",
+                "current": "sich selbst gegenüber jedoch ständig so ist",
+                "proposed": "sich selbst gegenüber jedoch ständig so handelte",
+                "alternatives": [
+                  "sich selbst gegenüber jedoch ständig so agierte",
+                  "sich selbst gegenüber jedoch ständig so war"
+                ],
+                "rationale": "Текущий вариант звучит обрывисто. Использование глагола 'handelte' (поступал) делает фразу завершенной и профессиональной, при этом сохраняя ритм и смысл оригинала, избегая кальки 'so ist'."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Соблюдены все правила терминологии КПТ, тон общения (Sie) и культурные особенности. Единственная мелкая стилистическая шероховатость в одном предложении была устранена. Текст готов к публикации."
+            },
+            "timings": {
+              "issues": 59781,
+              "deliberate": 5916,
+              "recommend": 7206
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/mirror/screen_2/texts/8",
+              "reason": "текст в файле не совпал с current из отчёта"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

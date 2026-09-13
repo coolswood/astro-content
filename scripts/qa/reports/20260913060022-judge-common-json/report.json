@@ -1,0 +1,189 @@
+{
+  "file": "common.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/depth",
+                "verdict": "ok",
+                "note": "Термин Grundüberzeugung соответствует глоссарию."
+              },
+              {
+                "path": "/intermediate",
+                "verdict": "ok",
+                "note": "Термин Intermediäre Annahme соответствует глоссарию."
+              },
+              {
+                "path": "/automatic",
+                "verdict": "ok",
+                "note": "Термин Automatischer Gedanke соответствует глоссарию."
+              },
+              {
+                "path": "/emotions",
+                "verdict": "ok",
+                "note": "Термин Gefühle соответствует глоссарию для лейблов."
+              },
+              {
+                "path": "/behavior",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/response",
+                "verdict": "ok",
+                "note": "Термин Alternative Sichtweise соответствует глоссарию для адаптивного ответа."
+              },
+              {
+                "path": "/email.code.title",
+                "verdict": "ok",
+                "note": "Перевод естественный, вежливая форма соблюдена."
+              },
+              {
+                "path": "/email.code.text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/event",
+                "verdict": "ok",
+                "note": "Термин Situation соответствует глоссарию."
+              },
+              {
+                "path": "/body",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/conclusion",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.title",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/emails.call-back.h2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.subtitle",
+                "verdict": "ok",
+                "note": "Перевод хороший, соблюден тон и терминология (KVT, KI)."
+              },
+              {
+                "path": "/emails.call-back.dream",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.ai",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.tests",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.study",
+                "verdict": "issue",
+                "note": "Стилистическая калька, 'Psychologie-Materialien' звучит неестественно."
+              },
+              {
+                "path": "/emails.call-back.relax",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.app.title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.app.subtitle",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.unsubscribe.1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/emails.call-back.unsubscribe.2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/emails.call-back.study",
+                "fragment": "Psychologie-Materialien",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное словообразование",
+                "why": "В немецком языке для обозначения материалов по теме чаще используются конструкции вроде 'Materialien zur Psychologie' или просто 'Psychologie-Wissen/Inhalte'. Соединение 'Psychologie-Materialien' звучит как технический термин или калька."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Словообразование действительно звучит тяжеловесно и по-канцелярски; вариант 'Materialien zur Psychologie' или 'Psychologie-Inhalte' был бы более естественным для маркетингового текста."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, единственное замечание касается стилистической естественности одного из заголовков.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/emails.call-back.study",
+                "current": "Psychologie-Materialien",
+                "proposed": "Psychologie-Wissen",
+                "alternatives": [
+                  "Materialien zur Psychologie",
+                  "Psychologische Inhalte"
+                ],
+                "rationale": "Вариант 'Psychologie-Wissen' звучит наиболее естественно и вдохновляюще для маркетингового письма, в то время как 'Psychologie-Materialien' — это тяжеловесная калька. 'Materialien zur Psychologie' слишком академично, а 'Psychologische Inhalte' звучит суховато."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне, терминология (KVT, Situation, Grundüberzeugung) полностью соответствует стандартам немецкой психотерапии. Единственная мелкая стилистическая правка касается маркетингового заголовка, чтобы избежать канцелярита."
+            },
+            "timings": {
+              "issues": 13074,
+              "deliberate": 1922,
+              "recommend": 3983
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/emails.call-back.study",
+              "from": "Psychologie-Materialien",
+              "to": "Psychologie-Wissen"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "file": "breathing.json",
+  "key": "balance",
+  "endpoint": "http://127.0.0.1:8000/v1",
+  "model": "google/gemma-4-26B-A4B-it",
+  "langs": [
+    {
+      "lang": "ar",
+      "timings": {
+        "main": 8103,
+        "editor": 8229,
+        "review": 675
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "cs",
+      "timings": {
+        "main": 12466,
+        "editor": 8902,
+        "review": 5772,
+        "fix": 6476
+      },
+      "reviewIssues": 2,
+      "fixRan": true,
+      "attempts": 1
+    },
+    {
+      "lang": "de",
+      "timings": {
+        "main": 9466,
+        "editor": 10432,
+        "review": 782
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "en",
+      "timings": {
+        "main": 8981,
+        "editor": 6330,
+        "review": 604
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "es",
+      "timings": {
+        "main": 8215,
+        "editor": 8059,
+        "review": 646
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "fr",
+      "timings": {
+        "main": 8669,
+        "editor": 742,
+        "review": 737
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "he",
+      "timings": {
+        "main": 12696,
+        "editor": 8900,
+        "review": 5230,
+        "fix": 7422
+      },
+      "reviewIssues": 3,
+      "fixRan": true,
+      "attempts": 1
+    },
+    {
+      "lang": "id",
+      "timings": {
+        "main": 8561,
+        "editor": 7131,
+        "review": 3287,
+        "fix": 5898
+      },
+      "reviewIssues": 1,
+      "fixRan": true,
+      "attempts": 1
+    },
+    {
+      "lang": "it",
+      "timings": {
+        "main": 9619,
+        "editor": 8049,
+        "review": 5130,
+        "fix": 5801
+      },
+      "reviewIssues": 3,
+      "fixRan": true,
+      "attempts": 1
+    },
+    {
+      "lang": "ja",
+      "timings": {
+        "main": 8931,
+        "editor": 7272,
+        "review": 718
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "ko",
+      "timings": {
+        "main": 9537,
+        "editor": 9330,
+        "review": 657
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "nl",
+      "timings": {
+        "main": 10737,
+        "editor": 8277,
+        "review": 620
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "pl",
+      "timings": {
+        "main": 9414,
+        "editor": 8515,
+        "review": 871
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "pt_BR",
+      "timings": {
+        "main": 8437,
+        "editor": 7185,
+        "review": 1097
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "pt",
+      "timings": {
+        "main": 9209,
+        "editor": 7514,
+        "review": 802
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "sv",
+      "timings": {
+        "main": 9617,
+        "editor": 10345,
+        "review": 607
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "tr",
+      "timings": {
+        "main": 10366,
+        "editor": 8571,
+        "review": 982
+      },
+      "reviewIssues": 0,
+      "fixRan": false,
+      "attempts": 1
+    },
+    {
+      "lang": "uk",
+      "timings": {
+        "main": 9343,
+        "editor": 7673,
+        "review": 1896,
+        "fix": 7159
+      },
+      "reviewIssues": 1,
+      "fixRan": true,
+      "attempts": 1
+    }
+  ]
+}

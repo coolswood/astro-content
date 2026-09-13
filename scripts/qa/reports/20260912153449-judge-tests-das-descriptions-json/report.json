@@ -1,0 +1,610 @@
+{
+  "file": "tests/das/descriptions.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/approval/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена, кавычки верные."
+              },
+              {
+                "path": "/approval/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль соответствует."
+              },
+              {
+                "path": "/love/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/0",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrung) соблюдена."
+              },
+              {
+                "path": "/power/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/alone/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/alone/1",
+                "verdict": "issue",
+                "note": "Смена лица: в оригинале 'Он', в переводе 'Sie' (они/Вы), что создает путаницу в контексте описания типа личности."
+              },
+              {
+                "path": "/alone/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/alone/1",
+                "fragment": "Sie müssen sich nicht einsam fühlen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Несогласованность местоимений",
+                "why": "В предыдущих пунктах (например, /approval/1, /love/1) используется обращение на 'Sie' (Вы) к пользователю, либо описание третьего лица. В данном блоке 'Sie' переведено как множественное число 'они', что выбивается из общего ритма повествования, где описывается конкретный тип личности (он/она)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "В тексте наблюдается смешение стилей: в одних местах используется вежливое обращение к пользователю (Sie = You), а здесь 'Sie' ошибочно интерпретировано как 'они' (they), что нарушает логику описания психологического профиля."
+              }
+            ],
+            "notes": "Перевод в целом качественный, однако выявлена серьезная стилистическая ошибка в согласовании местоимений, нарушающая единообразие повествования.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/alone/1",
+                "current": "Sie müssen sich nicht einsam fühlen, da alle ihre Empfindungen aus ihrem eigenen Inneren kommen.",
+                "proposed": "Man muss sich nicht einsam fühlen, da alle Empfindungen aus dem eigenen Inneren kommen.",
+                "alternatives": [
+                  "Man fühlt sich nicht einsam, da alle Empfindungen aus dem eigenen Inneren kommen.",
+                  "Man muss sich nicht einsam fühlen, da alle Empfindungen aus dem eigenen Kopf entspringen."
+                ],
+                "rationale": "В текущем варианте 'Sie' ошибочно переведено как 'они' (they), что создает путаницу с вежливым обращением 'Sie' (You). Поскольку в контексте описывается тип личности (третье лицо), использование безличного 'man' (человек/кто-то) — самый естественный и стилистически верный способ в немецком языке для описания общих психологических закономерностей, избегая при этом путаницы между 'Вы' и 'Они'."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология (Kognitive Verzerrung, etc.) соблюдена. Основная проблема — грамматическая двусмысленность местоимения 'Sie' в блоке /alone/1, где оно было воспринято как 'они' вместо описания состояния человека. После исправления на безличное 'man' текст станет логически связным."
+            },
+            "timings": {
+              "issues": 19632,
+              "deliberate": 3775,
+              "recommend": 9198
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/alone/1",
+              "from": "Sie müssen sich nicht einsam fühlen, da alle ihre Empfindungen aus ihrem eigenen Inneren kommen. Dies ermöglicht es ihnen, ihre wunderbare und schöne Innenwelt zu erforschen und zu entdecken.",
+              "to": "Man muss sich nicht einsam fühlen, da alle Empfindungen aus dem eigenen Inneren kommen."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/approval/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена, кавычки верные."
+              },
+              {
+                "path": "/approval/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль соответствует."
+              },
+              {
+                "path": "/love/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/1",
+                "verdict": "ok",
+                "note": "Перевод корректен, переход на Sie уместен."
+              },
+              {
+                "path": "/love/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/3",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/love/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/3",
+                "verdict": "ok",
+                "note": "Перевод корректен, метафора сохранена."
+              },
+              {
+                "path": "/label/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/0",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrung) соблюдена, смысл передан верно."
+              },
+              {
+                "path": "/power/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/alone/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/alone/1",
+                "verdict": "issue",
+                "note": "Сильное упрощение (omission), потерян важный смысл про исследование внутреннего мира."
+              },
+              {
+                "path": "/alone/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/alone/1",
+                "fragment": "Man muss sich nicht einsam fühlen, da alle Empfindungen aus dem eigenen Inneren kommen.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Потерян фрагмент про исследование и познание внутреннего мира.",
+                "why": "В оригинале: «Это позволяет ему исследовать и познавать удивительный и прекрасный внутренний мир». В переводе эта часть полностью отсутствует, что обедняет терапевтический смысл фразы."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator omitted the entire second sentence of the original fragment, which describes the positive aspect of exploring the inner world. This is a significant loss of meaning."
+              }
+            ],
+            "notes": "The translation is generally high quality and accurate, but there is a critical omission in the '/alone/1' path that significantly weakens the intended message.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/alone/1",
+                "current": "Man muss sich nicht einsam fühlen, da alle Empfindungen aus dem eigenen Inneren kommen.",
+                "proposed": "Man muss sich nicht einsam fühlen, denn alle Empfindungen entspringen dem eigenen Inneren. Dies ermöglicht es, die wunderbare und prächtige Innenwelt zu erforschen und zu entdecken.",
+                "alternatives": [
+                  "Man muss sich nicht einsam fühlen, da alle Empfindungen aus dem eigenen Inneren kommen. Dies erlaubt es, die wunderbare Innenwelt zu erkunden."
+                ],
+                "rationale": "В текущем переводе полностью отсутствует вторая часть предложения оригинала («Это позволяет ему исследовать и познавать удивительный и прекрасный внутренний мир»), что критично для передачи терапевтического смысла. Предложенный вариант восстанавливает полноту смысла, используя естественные для немецкого языка конструкции (entspringen, ermöglichen)."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена серьезная ошибка: в одном из ключевых разделов (Автономия) полностью пропущено предложение, несущее важный смысловой и эмоциональный заряд. В остальном перевод выполнен на высоком уровне, терминология (Kognitive Verzerrung, KVT-контекст) соблюдена, стиль соответствует заданному (эмпатичный эксперт). Необходимо восстановить пропущенный фрагмент перед публикацией."
+            },
+            "timings": {
+              "issues": 16824,
+              "deliberate": 2993,
+              "recommend": 8580
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/alone/1",
+              "from": "Man muss sich nicht einsam fühlen, da alle Empfindungen aus dem eigenen Inneren kommen.",
+              "to": "Man muss sich nicht einsam fühlen, denn alle Empfindungen entspringen dem eigenen Inneren. Dies ermöglicht es, die wunderbare und prächtige Innenwelt zu erforschen und zu entdecken."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/approval/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена, кавычки верные."
+              },
+              {
+                "path": "/approval/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль соответствует."
+              },
+              {
+                "path": "/love/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/1",
+                "verdict": "ok",
+                "note": "Перевод корректен, переход на Sie уместен."
+              },
+              {
+                "path": "/love/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/love/3",
+                "verdict": "ok",
+                "note": "Перевод корректен, стиль естественный."
+              },
+              {
+                "path": "/love/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/achievements/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/impeccability/3",
+                "verdict": "issue",
+                "note": "Использование кавычек-лапок вместо немецких типографских."
+              },
+              {
+                "path": "/label/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/label/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/0",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrung) соблюдена."
+              },
+              {
+                "path": "/power/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/power/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/alone/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/alone/1",
+                "verdict": "issue",
+                "note": "Смена лица (с 'он' на безличное 'man') и потеря точности."
+              },
+              {
+                "path": "/alone/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/impeccability/3",
+                "fragment": "„perfekten“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек вместо немецких типографских „ “",
+                "why": "Согласно правилам типографики для немецкого языка, должны использоваться нижние и верхние лапки: „...“."
+              },
+              {
+                "id": "I2",
+                "path": "/alone/1",
+                "fragment": "Man muss sich nicht einsam fühlen",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла и субъекта действия",
+                "why": "В оригинале: 'Он может чувствовать себя не одиноким'. В переводе: 'Человеку не обязательно чувствовать себя одиноким' (через безличное man). Это меняет акцент с описания состояния конкретного человека на общее утверждение/совет."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Typographical error: German quotation marks should be „“ instead of „“ (though the issue description itself uses the correct ones, the text contains standard quotes)."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The shift from a specific person ('He') to an impersonal 'Man' changes the psychological profile description into a general statement, which is a semantic error."
+              }
+            ],
+            "notes": "The translation is generally high quality, but there is a significant shift in subjectivity in the 'Autonomy' section and a minor typographical inconsistency in the 'Impeccability' section.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/impeccability/3",
+                "current": "„perfekten“",
+                "proposed": "„perfekten“",
+                "alternatives": [],
+                "rationale": "Исправление типографики: замена прямых кавычек на немецкие типографские „ “ (в данном случае в JSON уже должны быть правильные символы, если редактор их применил, но я подтверждаю необходимость использования именно „ “)."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/alone/1",
+                "current": "Man muss sich nicht einsam fühlen, denn alle Empfindungen entspringen dem eigenen Inneren.",
+                "proposed": "Er muss sich nicht einsam fühlen, denn alle seine Empfindungen entspringen seinem eigenen Inneren.",
+                "alternatives": [
+                  "Er kann sich nicht einsam fühlen, da alle seine Empfindungen aus seinem eigenen Inneren kommen."
+                ],
+                "rationale": "В оригинале описывается конкретный человек (он), а не абстрактное правило (man). Использование 'Man' превращает психологический портрет в обобщающее суждение, что недопустимо для описания результатов теста. Вариант с 'Er' точно передает смысл оригинала."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на высоком уровне, терминология соблюдена. Основная проблема — потеря субъекта в описании автономии (переход от 'он' к безличному 'man'), что искажает психологический профиль. Также требуется исправление типографики в кавычках. После этих правок текст будет готов к публикации."
+            },
+            "timings": {
+              "issues": 16523,
+              "deliberate": 3434,
+              "recommend": 7621
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/impeccability/3",
+              "reason": "цитата судьи не похожа на лист (сходство 4%)"
+            },
+            {
+              "id": "I2",
+              "path": "/alone/1",
+              "reason": "цитата судьи не похожа на лист (сходство 50%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

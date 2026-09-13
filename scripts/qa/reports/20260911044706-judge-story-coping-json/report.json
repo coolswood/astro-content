@@ -1,0 +1,947 @@
+{
+  "file": "story/coping.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология 'بطاقات المواجهة' соблюдена, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно, цитата звучит естественно, имя автора транслитерировано правильно."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный, передает призыв к действию, грамматика верна."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Терминология (بطاقات المواجهة) соблюдена в точности согласно глоссарию, стиль естественный и соответствует контексту психологического приложения. Грамматических или смысловых ошибок не обнаружено."
+            },
+            "timings": {
+              "issues": 3061,
+              "deliberate": 438,
+              "recommend": 2155
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "cs",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "issue",
+                "note": "Добавлено слово 'přehlednost' (наглядность/структурированность), которого нет в оригинале 'доступность'"
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология и пунктуация в норме"
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод естественный, смысл полностью сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/9",
+                "fragment": "Jednoduchost a přehlednost",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено понятие 'přehlednost' (наглядность/структурированность)",
+                "why": "В оригинале только 'простота и доступность'. Хотя это улучшает текст, с точки зрения строгого перевода это избыточное добавление смысла."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "Это осознанная трансекреация. 'Přehlednost' в чешском контексте интерфейсов является естественным дополнением к 'jednoduchost', передающим смысл 'доступности' через удобство восприятия. Смысл оригинала не искажен."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, замечания носят характер избыточной придирки к стилистическим решениям, которые не нарушают смысл.",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Все термины соответствуют утвержденному глоссарию (copingové kartičky, iracionální přesvědčení). Замечание по поводу добавления 'přehlednost' было отклонено, так как это оправданная трансекреация, делающая текст естественным для чешского пользователя, не искажая при этом основной посыл оригинала."
+            },
+            "timings": {
+              "issues": 4610,
+              "deliberate": 2160,
+              "recommend": 2565
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль соответствует Tone of Voice, терминология (Coping-Karten) соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "issue",
+                "note": "Нарушение правил типографики: использованы прямые кавычки вместо немецких типографских."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод естественный, грамматически верный, тон поддерживающий."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/10",
+                "fragment": "<q author='Aaron Beck'>Sie können leiden, wenn Sie sich für irrationale Überzeugungen entscheiden, aber Sie können nicht leiden, wenn Sie sich für rationale entscheiden.</q>",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек (' ') вместо немецких типографских („ “).",
+                "why": "Согласно правилам немецкой типографики, кавычки должны выглядеть как „слово“. Использование программных кавычек в тексте интерфейса снижает качество локализации."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Typografischer Fehler: Im Deutschen sind „unten-oben“-Anführungszeichen Standard; die Verwendung von Single Quotes ist unprofessionell."
+              }
+            ],
+            "notes": "Der Übersetzer hat die inhaltliche Bedeutung korrekt wiedergegeben, jedoch wurden die typografischen Standards für die deutsche Sprache (Anführungszeichen) missachtet.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/10",
+                "current": "<q author='Aaron Beck'>Sie können leiden, wenn Sie sich für irrationale Überzeugungen entscheiden, aber Sie können nicht leiden, wenn Sie sich für rationale entscheiden.</q>",
+                "proposed": "<q author=\"Aaron Beck\">„Sie können leiden, wenn Sie sich für irrationale Überzeugungen entscheiden, aber Sie können nicht leiden, wenn Sie sich für rationale entscheiden.“</q>",
+                "alternatives": [
+                  "<q author=\"Aaron Beck\">„Sie können leiden, wenn Sie sich für irrationale Überzeugungen entscheiden, aber Sie können nicht leiden, wenn Sie sich für rationale entscheiden.“</q>"
+                ],
+                "rationale": "В немецком языке необходимо использовать типографские кавычки „ “ вместо прямых или одинарных. Поскольку в структуре используется тег <q>, я добавил немецкие кавычки внутрь контента для соблюдения правил визуального восприятия текста."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология и тон соответствуют стандартам. Основная проблема заключается в нарушении правил немецкой типографики (использование неверных кавычек), что требует исправления для обеспечения профессионального вида интерфейса."
+            },
+            "timings": {
+              "issues": 5190,
+              "deliberate": 2294,
+              "recommend": 5757
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "-",
+              "path": "(файл)",
+              "reason": "валидация: лишние ключи: title, description, screen_1/texts/0, screen_1/texts/1, screen_1/texts/2, screen_1/texts/3, screen_1/texts/4, screen_1/texts/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "issue",
+                "note": "Добавлено слово intuitive, которого нет в оригинале, хотя это допустимая трансекреация. Однако 'easy and comfortable' звучит немного тяжеловесно."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод цитаты точный, передает смысл и стиль оригинала."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Смысл передан полностью, стиль естественный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/9",
+                "fragment": "our intuitive interface",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено прилагательное 'intuitive'",
+                "why": "В оригинале только 'понятен и удобен'. Хотя это улучшает текст, с точки зрения строгого соответствия это избыточное добавление."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "This is a case of transcreation. 'Intuitive' is a natural stylistic equivalent for 'понятен и удобен' in English UI/UX contexts and does not distort the original meaning."
+              }
+            ],
+            "notes": "The translation is high quality; the single identified issue is a stylistic enhancement rather than an error.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Использование 'intuitive' в первом пункте оправдано контекстом UX-копирайтинга и не является ошибкой. Терминология (coping cards) соблюдена, стиль естественный и вдохновляющий."
+            },
+            "timings": {
+              "issues": 4310,
+              "deliberate": 1700,
+              "recommend": 2084
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "es",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология 'tarjetas de afrontamiento' соблюдена, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно, кавычки и теги сохранены, стиль соответствует цитате."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод качественный, 'resiliente' удачно передает 'устойчивой' в контексте психологии."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Использована корректная терминология (tarjetas de afrontamiento), соблюден естественный стиль испанского языка, а цитата Аарона Бека адаптирована точно и грамматически верно. Правки не требуются."
+            },
+            "timings": {
+              "issues": 2913,
+              "deliberate": 431,
+              "recommend": 1833
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "fr",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует, терминология (cartes de coping) соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "issue",
+                "note": "Использование одинарных кавычек вместо французских елочек с пробелами."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, смысл передан верно, тон эмпатичный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/10",
+                "fragment": "<q author='Aaron Beck'>",
+                "type": "other",
+                "severity": "major",
+                "problem": "Использование прямых одинарных кавычек вместо французских елочек.",
+                "why": "Согласно правилам типографики FR-FR, должны использоваться елочки « » с неразрывными пробелами внутри. Использование прямых кавычек (' ') является нарушением локального стандарта."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Typographical error: French quotation marks (« ») must be used instead of single quotes (' ') according to FR-FR standards."
+              }
+            ],
+            "notes": "The translation is accurate and follows the source meaning, but fails to adhere to French typographic standards regarding quotation marks.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/10",
+                "current": "<q author='Aaron Beck'>Vous pouvez souffrir si vous choisissez des croyances irrationnelles, mais vous pouvez ne pas souffrir si vous choisissez des croyances rationnelles.</q>",
+                "proposed": "<q author=\"Aaron Beck\">« Vous pouvez souffrir si vous choisissez des croyances irrationnelles, mais vous pouvez ne pas souffrir si vous choisissez des croyances rationnelles. »</q>",
+                "alternatives": [
+                  "<q author=\"Aaron Beck\">« Vous pouvez souffrir si vous choisissez des croyances irrationnelles, mais vous pouvez ne pas souffrir si vous choisissez des croyances rationnelles »</q>"
+                ],
+                "rationale": "Исправлена критическая ошибка типографики: заменены одинарные кавычки на французские елочки « » с пробелами внутри. Внутри тега атрибута использованы двойные кавычки, чтобы избежать конфликта с елочками в тексте."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология и тон соответствуют стандартам. Основная проблема заключается в нарушении правил французской типографики (использование прямых кавычек вместо елочек), что требует исправления перед публикацией."
+            },
+            "timings": {
+              "issues": 4852,
+              "deliberate": 1562,
+              "recommend": 6047
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "-",
+              "path": "(файл)",
+              "reason": "валидация: лишние ключи: title, description, screen_1/texts/0, screen_1/texts/1, screen_1/texts/2, screen_1/texts/3, screen_1/texts/4, screen_1/texts/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "id",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл 'простоты и доступности' через 'intuitif dan nyaman', что естественно для интерфейса."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл циталки передан верно, терминология 'keyakinan irasional/rasional' уместна."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "issue",
+                "note": "Пропущено слово 'копинг' (карточки), которое было в контексте предыдущего экрана, хотя в оригинале здесь просто 'карточки'. Однако, учитывая, что в первом пункте было 'kartu coping', здесь 'kartu Anda' звучит слишком общо."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_3/texts/15",
+                "fragment": "membuat kartu Anda",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "пропущено уточнение типа карточек",
+                "why": "В контексте приложения речь идет именно о 'kartu coping'. Использование просто 'kartu' (карточки) без уточнения может быть воспринято двусмысленно, хотя и не является критической ошибкой."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "В тексте /screen_1/texts/9 термин 'kartu coping' уже введен. В /screen_3/texts/15 использование просто 'kartu' является естественным сокращением (anaphora), не создающим двусмысленности для пользователя."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, соблюдена терминологическая последовательность и стилистическая целостность. Замечание I1 является избыточным приемом упрощения текста.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне: соблюдена терминология (keyakinan irasional, kartu coping), стиль естественен для носителя. Замечание о необходимости уточнения типа карточек отклонено, так как использование 'kartu' во втором упоминании является стилистически верным сокращением, не создающим путаницы."
+            },
+            "timings": {
+              "issues": 5950,
+              "deliberate": 2529,
+              "recommend": 2162
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "he",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология (כרטיסי התמודדות) соблюдена, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология (אמונות) корректна, стиль соответствует цитате."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "issue",
+                "note": "Грамматический род: обращение идет к женщине (התחילי/תעשי), хотя в оригинале пол не указан."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_3/texts/15",
+                "fragment": "התחילי ליצור את כרטיסי ההתמודדות שלך כבר היום, ותעשי את הצעד הראשון",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование женского рода в глаголах (התחילי, תעשי)",
+                "why": "В русском оригинале обращение нейтральное (начинайте/сделайте). В иврите использование женского рода без контекста делает текст направленным только на женщин, что сужает аудиторию приложения. Рекомендуется использовать форму множественного числа для нейтральности или пересмотреть гендерную направленность."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation uses feminine singular verbs (התחילי, תעשי) which limits the audience, whereas the Russian original is gender-neutral. Switching to plural is the standard way to achieve neutrality in Hebrew."
+              }
+            ],
+            "notes": "The translation is accurate in meaning, but the choice of gender in the call to action creates an unintended bias that contradicts the neutral tone of the source.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_3/texts/15",
+                "current": "התחילי ליצור את כרטיסי ההתמודדות שלך כבר היום, ותעשי את הצעד הראשון לעבר חיים רגועים, בטוחים ויציבים יותר.",
+                "proposed": "התחילו ליצור את כרטיסי ההתמודדות שלכם כבר היום, ועשו את הצעד הראשון לעבר חיים רגועים, בטוחים ויציבים יותר.",
+                "alternatives": [
+                  "התחילו ליצור את כרטיסי ההתמודדות שלכם כבר היום, ותעשו את הצעד הראשון לעבר חיים רגועים, בטוחים ויציבים יותר."
+                ],
+                "rationale": "Использование множественного числа (התחילו, עשו) — это стандартный способ обеспечить гендерную нейтральность в иврите, что соответствует нейтральному тону русского оригинала. Вариант с 'תעשו' также допустим, но 'עשו' звучит более лаконично и стилистически выверено для призыва к действию."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен качественно, терминология соблюдена. Основная проблема заключалась в гендерной предвзятости (обращение только к женщинам), что исправляется переходом на множественное число для достижения нейтральности, как в оригинале."
+            },
+            "timings": {
+              "issues": 6205,
+              "deliberate": 2221,
+              "recommend": 6173
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "-",
+              "path": "(файл)",
+              "reason": "валидация: лишние ключи: title, description, screen_1/texts/0, screen_1/texts/1, screen_1/texts/2, screen_1/texts/3, screen_1/texts/4, screen_1/texts/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "it",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно, интерфейс описан естественным для итальянского языка образом (intuitiva e facile da usare)."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Терминология и смысл цитаты соблюдены, кавычки и теги сохранены."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный окрас и призыв к действию переданы верно."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Терминология (schede, convinzioni) соблюдена в соответствии с глоссарием, стиль естественный для носителя языка, а структура предложений полностью соответствует оригиналу. Замечаний нет."
+            },
+            "timings": {
+              "issues": 2871,
+              "deliberate": 437,
+              "recommend": 1763
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "ko",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология '코핑 카드' соблюдена, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Цитата переведена верно, терминология '신념' соблюдена, пунктуация тегов сохранена."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "issue",
+                "note": "Пропущено слово 'карточки' (в оригинале 'свои карточки'), в переводе просто 'свои карты' (나만의 카드), что звучит менее специфично для контекста приложения."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_3/texts/15",
+                "fragment": "나만의 카드를",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "Пропущено уточнение 'копинг-карточки'",
+                "why": "В оригинале 'создавать свои карточки' (имеется в виду продукт приложения — копинг-карточки). Использование просто '카드' (карты) делает фразу слишком общей и менее профессиональной в контексте КПТ."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "В контексте приложения и предыдущего предложения, где уже упоминались '코핑 카드' (coping cards), использование '카드' является естественным сокращением, характерным для UX-копирайтинга. Избыточное повторение термина сделает текст тяжеловесным."
+              }
+            ],
+            "notes": "Замечание является придиркой к стилистике; перевод сохраняет смысл и контекстуальную связность.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Терминология (копинг-карты, рациональные/иррациональные убеждения) соблюдена точно. Редакторское замечание о необходимости уточнения 'копинг-карточки' было отклонено обоснованно: в UX-копирайтинге повторение полного термина избыточно, а контекст приложения позволяет использовать сокращение '카드' без потери смысла. Текст звучит естественно и сохраняет нужный эмоциональный тон."
+            },
+            "timings": {
+              "issues": 8581,
+              "deliberate": 9165,
+              "recommend": 7310
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "ja",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный, терминология 'コーピングカード' соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "issue",
+                "note": "Использование кавычек-елочек вместо японских скобок."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, передает дух оригинала, звучит естественно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/10",
+                "fragment": "<q author=\"アーロン・ベック\">",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование западных кавычек <q> вместо японских скобок 「 」",
+                "why": "Согласно правилам типографики для японского языка, для цитат и выделения должны использоваться кагикакко 「 」. Использование <q> (если это не технический тег, который нельзя менять) или западных кавычек внутри текста нарушает визуальный стандарт японского языка."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Замечание верно. Хотя <q> является HTML-тегом, внутри него текст должен быть оформлен соответствующими японскими кавычками, если это предусмотрено стилистикой, либо тег должен быть заменен на типографически верные символы в финальной верстке. В данном контексте претензия к визуальному стандарту обоснована."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, передает смысл и эмоциональный тон оригинала. Единственное замечание касается типографики цитаты.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/10",
+                "current": "<q author=\"アーロン・ベック\">不合理な思い込みを選べば苦しみが生じますが、合理的なものを選べば、苦しむことはありません。</q>",
+                "proposed": "<q author=\"アーロン・ベック\">「不合理な思い込みを選べば苦しみが生じますが、合理的なものを選べば、苦しむことはありません。」</q>",
+                "alternatives": [
+                  "アーロン・ベック：「不合理な思い込みを選べば苦しみが生じますが、合理的なものを選べば、苦しむことはありません。」"
+                ],
+                "rationale": "Поскольку <q> является техническим тегом, мы не можем его удалить, но согласно правилам типографики, внутри него текст цитаты должен быть заключен в японские скобки 「 」 для естественного восприятия носителем. Вариант с кагикакко внутри тега — самый безопасный и правильный с точки зрения визуального стандарта."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне: соблюдена терминология КПТ и мягкий, поддерживающий тон (Desu/Masu). Основная проблема заключается в нарушении типографических стандартов (отсутствие кагикакко в цитате), что критично для японского рынка. После исправления кавычек текст будет готов к публикации."
+            },
+            "timings": {
+              "issues": 11107,
+              "deliberate": 5703,
+              "recommend": 12644
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "-",
+              "path": "(файл)",
+              "reason": "валидация: лишние ключи: title, description, screen_1/texts/0, screen_1/texts/1, screen_1/texts/2, screen_1/texts/3, screen_1/texts/4, screen_1/texts/5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "nl",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология 'copingkaarten' соблюдена, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно, кавычки и теги сохранены, стиль соответствует цитате."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод качественный, 'veerkrachtiger' — отличный эквивалент для 'устойчивой жизни' в контексте психологии."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Терминология (copingkaarten, irrationele overtuigingen) соблюдена в точности согласно глоссарию. Текст звучит естественно, ритм предложений соответствует оригиналу, а стилистика подходит для интерфейса приложения. Исправления не требуются."
+            },
+            "timings": {
+              "issues": 4634,
+              "deliberate": 806,
+              "recommend": 3425
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный, терминологических ошибок нет."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки и теги сохранены, терминология (crenças) верна."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Транскреация удачная, смысл сохранен, 'resiliente' — отличный эквивалент 'устойчивой жизни'."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Терминология (crenças irracionais/racionais) соблюдена, стиль естественен для носителя языка, а структура предложений полностью соответствует оригиналу. Исправления не требуются."
+            },
+            "timings": {
+              "issues": 5959,
+              "deliberate": 918,
+              "recommend": 3010
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "sv",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный, термин copingkort использован верно, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно, пунктуация и теги соблюдены."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Транскреация удачная, смысл сохранен, звучит естественно."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Терминология (copingkort) соблюдена, стиль естественный для носителя шведского языка, а цитата Аарона Бека передана точно и литературно. Правки не требуются."
+            },
+            "timings": {
+              "issues": 5871,
+              "deliberate": 1027,
+              "recommend": 2995
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "tr",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует принципам вежливости и комфорта, терминология (baş etme kartları) соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "issue",
+                "note": "Использование одинарных кавычек вместо двойных в тегах и потенциальная проблема с именем автора (отсутствие турецкой адаптации/транслитерации, хотя это допустимо, но кавычки — это технический нюанс)."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод хороший, эмоциональный окрас сохранен, грамматика верна."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/10",
+                "fragment": "<q author='Aaron Beck'>",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование одинарных кавычек в атрибуте тега",
+                "why": "В оригинале используются двойные кавычки. Хотя в XML/HTML это допустимо, при строгом следовании исходному коду (как указано в правилах про теги) лучше сохранять структуру оригинала, если это не влияет на парсинг."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "Это техническое замечание к синтаксису разметки, а не к качеству перевода. В XML/HTML использование одинарных кавычек вместо двойных является валидным и не меняет смысл или структуру данных."
+              }
+            ],
+            "notes": "Замечание касается исключительно стиля оформления тегов, что не является ошибкой перевода или смысловым искажением.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Терминология (baş etme kartları, rasyonel inançlar) соблюдена, тон соответствует стандартам (вежливый, поддерживающий, но без лишней витиеватости). Техническое замечание по кавычкам в тегах отклонено, так как это не влияет на качество локализации и валидность разметки."
+            },
+            "timings": {
+              "issues": 8677,
+              "deliberate": 2572,
+              "recommend": 3215
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "uk",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно, транскреация удачная, звучит естественно."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл сохранен, грамматика верна, кавычки в тегах заменены на одинарные, что допустимо в контексте XML/HTML, но не является ошибкой перевода."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный, ритм предложения хороший, пунктуация (тире) уместна для усиления."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Переклад виконаний на високому рівні. Тексти звучать природно, термінологія та пунктуація відповідають нормам української мови. Жодних правок не требуется."
+            },
+            "timings": {
+              "issues": 5487,
+              "deliberate": 921,
+              "recommend": 3632
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

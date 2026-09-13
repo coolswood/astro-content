@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "Дата": "2026-09-10T19:52:20.330Z",
+    "Метка": "automatic-de-old-vs-new",
+    "Сравнение": "NEW = рабочее дерево; OLD = --old-dir backups/pre-retranslate-20260910-automatic",
+    "Файлы": "story/automatic.json",
+    "Локали": "de",
+    "Сэмпл/файл": 10,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:18000/v1",
+    "git HEAD": "dfc3438ef3704cb281f71defd66df4e4cefbc132"
+  },
+  "results": {
+    "story/automatic.json": {
+      "de": [
+        {
+          "file": "story/automatic.json",
+          "lang": "de",
+          "key": "/test/question",
+          "ru": "Автоматические мысли — это...",
+          "oldText": "Was charakterisiert automatische Gedanken am genauesten?",
+          "newText": "Automatische Gedanken sind...",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 100
+              },
+              "reason": "Перевод A является точным и прямым эквивалентом оригинала, сохраняя структуру определения. Перевод B полностью меняет форму высказывания с утвердительной на вопросительную, что является грубой ошибкой (addition/mistranslation) в контексте сохранения структуры текста.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Вместо определения (что это такое) введен вопрос о характеристиках, что меняет смысл и функционал фразы."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 100
+              },
+              "reason": "Перевод B является точным и прямым эквивалентом оригинала, сохраняя структуру определения. Перевод A полностью меняет форму высказывания с утверждения на вопрос, что является грубой ошибкой (addition/mistranslation) в контексте обучающего материала.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Вместо определения (утверждения) представлен вопрос, что меняет функционал фразы."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "de",
+          "key": "/test/answers",
+          "ru": "Устойчивые и фундаментальные убеждения\n\nУстановки, предопределенные нам от рождения\n\nМысли, которые невозможно изменить\n\nОтрывочные, многочисленные мысли, возникающие непроизвольно",
+          "oldText": "Sie sind stabil und fundamental\n\nSie sind von Geburt an fest vorgegeben\n\nSie sind unmöglich zu verändern\n\nSie sind bruchstückhaft, zahlreich und entstehen unwillkürlich",
+          "newText": "Beständige und fundamentale Überzeugungen\n\nEinstellungen, die uns von Geburt an vorgegeben sind\n\nGedanken, die man nicht verändern kann\n\nEinzelne, vielfältige Gedanken, die unwillkürlich entstehen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 95
+              },
+              "reason": "Перевод A превращает заголовки и описательные фразы в законченные предложения с местоимением 'Sie', что полностью меняет структуру и тон оригинала, делая его похожим на учебник, а не на интерфейс или список определений. Перевод B точно передает смысл, сохраняет номинативный стиль (существительные вместо предложений) и использует правильную терминологию.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Добавление местоимения 'Sie' (Они) превращает краткие тезисы в громоздкие предложения, что не соответствует оригиналу и нарушает лаконичность UI."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'Sie sind unmöglich zu verändern' звучит тяжеловесно по сравнению с естественным 'die man nicht verändern kann'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 95
+              },
+              "reason": "Перевод A точно передает структуру оригинала (заголовки/тезисы), в то время как перевод B неоправданно добавляет местоимение 'Sie' (Они), превращая лаконичные определения в полные предложения, что нарушает стиль и ритм текста. Также в B допущена стилистическая ошибка в третьей строке.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Добавлено местоимение 'Sie' в начале каждой строки, что превращает тезисы в повествовательные предложения, нарушая формат оригинала."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'Sie sind unmöglich zu verändern' звучит неестественно и тяжеловесно; в немецком лучше использовать 'unveränderlich' или конструкцию из варианта A."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Потеряна структура заголовков, текст превратился в монотонный список."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "de",
+          "key": "/screen_1/texts",
+          "ru": "Из предыдущей главы мы выяснили главное: наши мысли — это невидимые дирижеры наших эмоций и телесных реакций.\n\nТеперь, опираясь на этот фундамент, давайте познакомимся с тем явлением, с которым нам предстоит работать на практике каждый день.\n\nЧтобы наглядно показать, как устроено наше мышление в КПТ, мы снова обратимся к образу дерева.\n\n<instagram ids=\"17875886496204232,18059186534522759\">\n\nПредставьте раскидистую яблоню. Она символизирует ваше сознание. На ее ветвях висят плоды: одни наливные и сладкие, другие — надкусанные или подгнившие.\n\nЭти яблоки на ветвях — и есть ваши мысли.\n\nВ психологии их называют «автоматическими». Они вспыхивают в голове мгновенно, словно рефлекс, не требуя от вас абсолютно никаких усилий.\n\nОни проносятся так быстро и их так много, что мы воспринимаем их как фоновый шум, даже не замечая, как они диктуют нам настроение.\n\n<q author=\"Эпиктет\">Не события, а наши мнения о них — вот что делает нас счастливыми или несчастными.</q>",
+          "oldText": "Aus dem vorherigen Kapitel wissen wir bereits, dass unsere Gedanken unsere Emotionen und körperlichen Reaktionen maßgeblich beeinflussen.\n\nAufbauend auf diesen Basiskonzepten betrachten wir nun die Phänomene, mit denen wir in der praktischen Arbeit umgehen werden.\n\nWir haben uns intensiv mit der Frage beschäftigt, wie sich die Hierarchie der Überzeugungen in der KVT am anschaulichsten darstellen lässt. Das Bild eines Baumes ist hierfür ideal.\n\n<instagram>\n\nStellen Sie sich einen Apfelbaum vor. Er symbolisiert Ihr Bewusstsein. An den Zweigen hängen reife Früchte. Einige sind leuchtend und saftig, andere hingegen beschädigt oder verdorben.\n\nDie Früchte dieses Baumes stellen Ihre Gedanken dar.\n\nIn der KVT werden solche Gedanken als „automatisch“ bezeichnet, da sie blitzschnell, fast unbemerkt und ohne bewusste Anstrengung in uns aufsteigen.\n\nSie sind so zahlreich und flüchtig, dass wir ihre Entstehung oft gar nicht unmittelbar registrieren.\n\n<q author=\"Epiktet\">Nicht die Dinge selbst beunruhigen die Menschen, sondern die Vorstellungen von den Dingen.</q>",
+          "newText": "Im vorangegangenen Kapitel haben wir das Wesentliche festgestellt: Unsere Gedanken sind die unsichtbaren Dirigenten unserer Emotionen und körperlichen Reaktionen.\n\nAufbauend auf diesem Fundament möchten wir Sie nun mit jenem Phänomen vertraut machen, mit dem wir in der Praxis jeden Tag zu tun haben werden.\n\nUm anschaulich zu machen, wie unser Denken im Rahmen der KVT funktioniert, greifen wir erneut auf das Bild eines Baumes zurück.\n\n<instagram>\n\nStellen Sie sich einen weit ausladenden Apfelbaum vor. Er symbolisiert Ihr Bewusstsein. An seinen Zweigen hängen Früchte: Einige sind prall und süß, andere sind angebissen oder bereits faulig.\n\nDiese Äpfel an den Zweigen sind Ihre Gedanken.\n\nIn der Psychologie nennt man sie „automatisch“. Sie schießen augenblicklich in den Kopf, wie ein Reflex, ohne dass Sie dafür jegliche Anstrengung aufwenden müssen.\n\nSie ziehen so schnell an uns vorbei und treten so zahlreich auf, dass wir sie oft nur als Hintergrundrauschen wahrnehmen, ohne zu bemerken, wie sie unsere Stimmung bestimmen.\n\n<q author='Epiktet'>Nicht die Dinge selbst beunruhigen die Menschen, sondern die Meinungen, die sie über die Dinge haben.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Перевод A максимально точно следует оригиналу, сохраняет его метафоричный стиль и ритм, а также использует правильную терминологию (KVT). Перевод B слишком сильно отклоняется от текста (transcreation), теряя важные детали образа (про яблоки) и меняя структуру предложений, что делает его менее точным.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Вместо описания яблок (плодов) автор B вводит совершенно новую тему про 'иерархию убеждений', которой нет в оригинале."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Потеряно описание конкретных яблок (надкусанные/подгнившие), что критично для визуального образа дерева."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Текст звучит более сухо и академично, теряя эмпатичный и повествовательный тон оригинала."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 96
+              },
+              "reason": "Translation B is a faithful and high-quality transcreation that preserves the metaphors and tone of the original. Translation A significantly deviates from the source text, adding information not present in the original (e.g., about the 'hierarchy of beliefs') and losing the core metaphor of the 'invisible conductors'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added information about 'hierarchy of beliefs' which is not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost the key metaphor 'unsichtbare Dirigenten' (invisible conductors)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The flow is more academic/dry compared to the original's warm, engaging tone."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The quote translation is slightly more literal than the standard German philosophical rendering, but fits the context perfectly."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "de",
+          "key": "/screen_2/texts",
+          "ru": "Давайте проведем небольшой мысленный эксперимент.\n\nВообразите: вы сидите в уютном кресле кинотеатра, свет гаснет, вы ждете начала фильма.\n\nВнезапно женщина в ряду перед вами резко вскакивает и звонко бьет по лицу сидящего рядом мужчину.\n\nСитуация шокирующая и напряженная. Попробуйте отследить, какая мысль первой пронеслась бы в вашей голове и что бы вы почувствовали?\n\nПоскольку мы не знаем вашу личную историю, нам сложно предсказать вашу точную реакцию.\n\nПоэтому давайте заглянем в мысли двух зрителей, которые по нашему сценарию сидят справа и слева от вас.\n\nСлева сидит женщина, которая в прошлом пережила болезненный опыт домашнего насилия. Вот как отзовется эта сцена в ней:\n\n<stepper automatic=\"Какой ужас... Наверное, дома ей за это страшно достанется.\" emotions=\"Печаль, липкий страх, отчаяние.\" behavior=\"Сжимается в кресле, с трудом сдерживает слезы.\">\n\nА справа — молодой мужчина, который совсем недавно прошел через тяжелый, скандальный развод:\n\n<stepper automatic=\"Вот неадекватная! Не могла до дома дотерпеть, обязательно скандалить при всех?!\" emotions=\"Гнев, острое раздражение.\" behavior=\"Сжимает кулаки, чувствует прилив жара.\">\n\nСобытие одно — пощечина в кинотеатре. Но эмоции полярны, потому что каждый зритель смотрит на сцену через уникальные очки своего жизненного опыта.\n\nИменно такие мгновенные, словно выстрел, оценки происходящего мы и называем автоматическими мыслями.",
+          "oldText": "Ich lade Sie zu einem kleinen Gedankenexperiment ein.\n\nStellen Sie sich vor, Sie sitzen im Kino und warten auf den Beginn des Films.\n\nPlötzlich springt eine Frau in der Reihe vor Ihnen auf und gibt dem Mann neben ihr eine Ohrfeige.\n\nDie Situation ist abrupt und emotional geladen. Überlegen Sie kurz: Welche Gedanken könnten in diesem Moment automatisch in Ihnen aufsteigen? Welche Gefühle würden Sie dabei empfinden?\n\nDa wir Ihre persönlichen Erfahrungen nicht kennen, lässt sich Ihre genaue Reaktion nicht exakt vorhersagen.\n\nBetrachten wir daher als Beispiel zwei fiktive Kinobesucher, die neben Ihnen sitzen könnten.\n\nLinks von Ihnen sitzt Sabine. Sie hat in der Vergangenheit Erfahrungen mit häuslicher Gewalt gemacht. So könnte ihre innere Reaktion aussehen:\n\n<stepper automatic=\"Die Arme! Bestimmt bekommt sie zu Hause noch mehr Ärger deswegen.\" emotions=\"Traurigkeit, Furcht, Verzweiflung.\" behavior=\"Kämpft mühsam mit den Tränen.\">\n\nRechts von Ihnen sitzt Thomas. Er hat gerade eine langwierige und schmerzhafte Scheidung hinter sich.\n\n<stepper automatic=\"Was für eine Furie! Musste sie ausgerechnet hier in der Öffentlichkeit eine Szene machen?\" emotions=\"Zorn.\" behavior=\"Ballt die Fäuste, der Blutdruck steigt.\">\n\nWie Sie sehen, löst dasselbe Ereignis bei verschiedenen Menschen völlig unterschiedliche Emotionen aus. Jeder Mensch betrachtet die Welt durch das Prisma seiner individuellen Erfahrungen.\n\nGenau diese schnellen, unwillkürlichen Reaktionen nennen wir „automatische Gedanken“.",
+          "newText": "Lassen Sie uns ein kleines Gedankenexperiment wagen.\n\nStellen Sie sich vor: Sie sitzen in einem gemütlichen Kinosessel, das Licht wird gedimmt und Sie warten auf den Beginn des Films.\n\nPlötzlich springt eine Frau in der Reihe vor Ihnen abrupt auf und verpasst dem neben ihr sitzenden Mann eine laute Ohrfeige.\n\nDie Situation ist schockierend und angespannt. Versuchen Sie zu beobachten, welcher Gedanke als Erstes durch Ihren Kopf gehen würde und was Sie dabei fühlen würden?\n\nDa wir Ihre persönliche Lebensgeschichte nicht kennen, ist es schwierig, Ihre exakte Reaktion vorherzusagen.\n\nSchauen wir uns daher die Gedanken zweier Zuschauer an, die laut unserem Szenario rechts und links von Ihnen sitzen.\n\nLinks sitzt eine Frau, die in der Vergangenheit schmerzhafte Erfahrungen mit häuslicher Gewalt gemacht hat. So wird diese Szene in ihr nachhallen:\n\n<stepper automatic='„Ach du meine Güte... Wahrscheinlich bekommt sie zu Hause Ärger deswegen.“' emotions='Traurigkeit, beklemmende Angst, Verzweiflung.' behavior='Zuckt im Sessel zusammen, versucht mühsam die Tränen zu unterdrücken.'>\n\nUnd rechts sitzt ein junger Mann, der erst vor kurzem eine schwere, turbulente Scheidung durchgemacht hat:\n\n<stepper automatic='„Was für eine Unbeherrschte! Musste sie das wirklich vor allen Leuten ausleben?!“' emotions='Wut, akute Irritation.' behavior='Ballt die Fäuste, spürt, wie ihm die Hitze aufsteigt.'>\n\nDas Ereignis ist dasselbe – eine Ohrfeige im Kino. Doch die Emotionen sind gegensätzlich, weil jeder Zuschauer die Szene durch die einzigartige Brille seiner eigenen Lebenserfahrung betrachtet.\n\nGenau diese unmittelbaren, wie ein Blitzschlag wirkenden Bewertungen des Geschehens nennen wir automatische Gedanken.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B is much closer to the original's tone and imagery, maintaining the descriptive richness (cozy chair, dimming lights, etc.) and the specific metaphors (glasses of experience, lightning-fast thoughts). Translation A takes too many liberties by adding names (Sabine, Thomas) and simplifying the text, which changes the instructional nature of the experiment into a storytelling one.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added names 'Sabine' and 'Thomas' which were not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted descriptive details like 'cozy chair' and 'lights dimming', making the intro feel a bit dry."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of the stepper content is a bit too simplified compared to the emotional depth of the Russian original."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used single quotes for the stepper content; while acceptable in some code contexts, the prompt requested German typographic quotes „ “ if quotes are used, though B used ' ' which is a common fallback."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Translation A is a high-quality literary translation that preserves the atmosphere, rhythm, and nuances of the original. Translation B takes too many liberties, such as adding names (Sabine, Thomas) not present in the source, and simplifies the text to the point of losing its emotional impact.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added names 'Sabine' and 'Thomas' which were not in the original text."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Significant loss of descriptive detail (e.g., 'уютное кресло', 'звонко бьет', 'словно выстрел')."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is a bit too simplified/dry compared to the evocative original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "de",
+          "key": "/screen_3/texts",
+          "ru": "Возникает закономерный вопрос: почему же в одной и той же ситуации мы выдаем такие разные автоматические реакции?\n\nИ значит ли это, что при каждом неприятном событии мы обречены на падение в воронку негатива и депрессии?\n\nАбсолютно нет.\n\nАвтоматические мысли фонят в голове абсолютно у каждого человека на планете, но они далеко не всегда перерастают в психологическую проблему.\n\nСекрет в том, что эти мимолетные мысли рождаются не в пустоте. Они связаны с нашими более глубокими внутренними установками.\n\nТак же, как яблоки не висят в воздухе, а питаются от ветвей, ствола и невидимых корней, наши автоматические реакции неразрывно опираются на наши промежуточные и базовые убеждения.",
+          "oldText": "Warum reagieren Menschen in derselben Situation also so unterschiedlich?\n\nBedeutet das, dass wir bei jedem unangenehmen Ereignis zwangsläufig in einen Teufelskreis aus negativen Gedanken und Emotionen geraten, der in eine Depression führt?\n\nGanz und gar nicht.\n\nObwohl automatische Gedanken bei jedem Menschen auftreten, werden sie nicht zwangsläufig zur Quelle psychischer Belastungen.\n\nDas Auftreten bestimmter Gedanken ist eng mit tiefer liegenden Überzeugungen und inneren Einstellungen verknüpft.\n\nSo wie die Früchte an einem Baum nicht isoliert existieren, sondern von Ästen, dem Stamm und den Wurzeln getragen werden, stützen sich auch unsere automatischen Gedanken auf Zwischenüberzeugungen und Grundüberzeugungen.",
+          "newText": "Es stellt sich die berechtigte Frage: Warum reagieren wir in derselben Situation mit so unterschiedlichen automatischen Reaktionen?\n\nUnd bedeutet das, dass wir bei jedem unangenehmen Ereignis dazu verdammt sind, in einen Abgrund aus Negativität und Depression zu stürzen?\n\nAbsolut nicht.\n\nAutomatische Gedanken sind bei jedem Menschen auf diesem Planeten präsent, aber sie führen keineswegs immer zu einem psychologischen Problem.\n\nDas Geheimnis liegt darin, dass diese flüchtigen Gedanken nicht im luftleeren Raum entstehen. Sie sind mit unseren tiefer liegenden inneren Überzeugungen verknüpft.\n\nSo wie Äpfel nicht einfach in der Luft schweben, sondern aus den Zweigen, dem Stamm und den unsichtbaren Wurzeln genährt werden, so stützen sich auch unsere automatischen Reaktionen untrennbar auf unsere Zwischenüberzeugungen und Grundüberzeugungen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Перевод B гораздо точнее передает метафоричный и эмоциональный тон оригинала, сохраняя все ключевые образы (воронка/бездна, яблоки, корни, пустота). Перевод A слишком сильно упрощает текст, превращая его в сухой научно-популярный текст, и теряет важные смысловые нюансы.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Потеряна метафора 'яблок' (заменено на абстрактные 'плоды'), потеряна метафора 'пустоты' (вместо 'nicht im luftleeren Raum' использовано 'eng verknüpft'), потеряна эмоциональная окраска 'воронки негатива'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Текст звучит слишком сухо и академично для терапевтического контекста, теряется эффект 'разговора с другом-экспертом'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Перевод A идеально передает метафоричный и поддерживающий тон оригинала, сохраняя структуру предложений и точно используя терминологию (Zwischenüberzeugungen, Grundüberzeugungen). Перевод B слишком сильно упрощает текст, теряя эмоциональную глубину и поэтичность метафоры с яблоками.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком сильное упрощение (omission/paraphrasing): потеряна структура 'закономерного вопроса' и метафора с яблоками заменена на абстрактные 'плоды на дереве', что снижает литературность."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Вместо 'воронки негатива' использован 'Teufelskreis' (порочный круг), что меняет образ, хотя и близко по смыслу."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "de",
+          "key": "/description",
+          "ru": "Эта статья погружает вас в мир «автоматических мыслей» — невидимых спутников наших эмоций в когнитивно-поведенческой терапии (КПТ). Возвращаясь к метафоре яблоневого дерева, мы исследуем, как рождаются наши мгновенные реакции. На ярком примере из жизни мы покажем, почему чужой опыт заставляет нас по-разному оценивать одни и те же события, и докажем, что вы способны управлять этим процессом.",
+          "oldText": "Dieser Artikel führt in das Konzept der „automatischen Gedanken“ im Kontext der Kognitiven Verhaltenstherapie (KVT) ein. Wir nutzen das Bild eines Apfelbaums, um zu veranschaulichen, wie die Hierarchie der Überzeugungen unsere schnellen emotionalen Reaktionen formt und wie Lebenserfahrungen unsere Gedanken und Gefühle beeinflussen.",
+          "newText": "Dieser Artikel führt Sie in die Welt der „automatischen Gedanken“ ein – jener unsichtbaren Begleiter unserer Emotionen in der Kognitiven Verhaltenstherapie (KVT). Mithilfe der Metapher eines Apfelbaums untersuchen wir, wie unsere unmittelbaren Reaktionen entstehen. An einem anschaulichen Beispiel zeigen wir auf, warum wir dieselben Situationen aufgrund unterschiedlicher Erfahrungen verschieden bewerten, und verdeutlichen Ihnen, dass Sie in der Lage sind, diesen Prozess zu beeinflussen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 98
+              },
+              "reason": "Перевод A является практически идеальным: он точно передает смысл, сохраняет структуру оригинала и использует правильную терминологию. Перевод B является грубой ошибкой (omission/addition), так как он полностью перефразирует текст, добавляет концепцию 'иерархии убеждений', которой нет в оригинале, и теряет важную часть посыла о способности пользователя управлять процессом.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Пропущена часть текста о том, что пользователь способен управлять процессом."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Добавлена информация про 'иерархию убеждений' (Hierarchie der Überzeugungen), которой нет в оригинале."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Текст потерял эмоциональный и вдохновляющий тон оригинала, превратившись в сухую констатацию фактов."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 98
+              },
+              "reason": "Перевод B практически идеально передает дух, тон и структуру оригинала, соблюдая все правила типографики и терминологии. Перевод A является грубой переработкой (omission/addition), где потеряна значительная часть смысла и эмоциональный посыл текста.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Пропущено описание автоматических мыслей как 'невидимых спутников', пропущена часть про управление процессом и про пример из жизни."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Добавлена концепция 'иерархии убеждений' (Hierarchie der Überzeugungen), которой нет в оригинале."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Текст звучит слишком сухо и академично по сравнению с оригиналом."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "de",
+          "key": "/title",
+          "ru": "Автоматические мысли: какие плоды зреют в саду вашего сознания?",
+          "oldText": "Automatische Gedanken: Was wächst im Garten Ihres Bewusstseins?",
+          "newText": "Automatische Gedanken: Welche Früchte reifen in Ihrem Bewusstsein?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Перевод A звучит гораздо более естественно и поэтично для немецкого языка, используя уместную метафору. Перевод B слишком буквален и звучит тяжеловесно из-за кальки с 'плоды зреют'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'Welche Früchte reifen' является слишком дословным переводом русского метафорического оборота, что делает текст менее живым и избыточным для немецкого уха."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод A сохраняет оригинальную метафору про плоды (Früchte) и процесс созревания (reifen), что делает его точным и поэтичным. Перевод B упрощает метафору до 'что растет', теряя образность оригинала.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Утеряна метафора 'плодов' и 'созревания', текст стал слишком обобщенным по сравнению с оригиналом."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

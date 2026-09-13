@@ -1,0 +1,1604 @@
+{
+  "file": "tests/burnout.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 5,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено верно, передает смысл эмоционального истощения."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Идиома «выжатый лимон» адаптирована корректно."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Термины подобраны верно."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "issue",
+                "note": "Стилистическая калька: «härter werden lässt» звучит неестественно."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "issue",
+                "note": "Стилистическая ошибка: «von allen ausruhen» — калька, звучит как «отдохнуть от всех людей» в физическом смысле, лучше использовать «Pause von allem» или «Ruhe vor allem»."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод качественный."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено верно, терминология (KVT) соблюдена."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, цифры сохранены."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Использованы правильные немецкие кавычки „“."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термин Zynismus уместен."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен, кавычки верные."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Терминология (Mihaly Csikszentmihalyi, Flow) соблюдена."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "issue",
+                "note": "Mistranslation: в оригинале '6-часовой рабочий день', в переводе '6-часовая рабочая неделя'."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/low",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/middle",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/range/high",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Перевод корректен, тон эмпатичный."
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID совпадает, атрибуты отсутствуют согласно конвенции для ru"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/8",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/9",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/10",
+                "fragment": "dass die Arbeit mich härter werden lässt",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Калька с русского синтаксиса. Конструкция «jemanden härter werden lassen» звучит тяжеловесно и неестественно для немецкого языка.",
+                "why": "В немецком лучше использовать «dass die Arbeit mich abstumpfen lässt» или «dass ich durch die Arbeit härter werde»."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps/15",
+                "fragment": "mich von allen ausruhen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное выражение. «Von allen ausruhen» звучит как попытка отдохнуть от физического присутствия людей, а не как потребность в уединении.",
+                "why": "Для передачи смысла «отдохнуть от всех (суеты/людей)» лучше использовать «meine Ruhe vor allen suchen» или «einfach mal abschalten»."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/20/text",
+                "fragment": "6-Stunden-Arbeitswoche",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "В переводе указана '6-часовая рабочая неделя', тогда как в оригинале '6-часовой рабочий день'.",
+                "why": "Это критическая ошибка, так как разница между 6 часами в неделю и 6 часами в день колоссальна и полностью меняет смысл факта."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Стилистическая калька, звучит неестественно."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Неудачный выбор выражения для передачи смысла уединения."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая фактическая ошибка: неделя вместо дня."
+              }
+            ],
+            "notes": "Перевод в целом качественный, но содержит одну критическую фактическую ошибку в описании факта о Швеции и две стилистические неточности, вызванные калькованием синтаксиса оригинала.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/20/text",
+                "current": "In Schweden experimentieren einige Unternehmen mit einer 6-Stunden-Arbeitswoche, um die Produktivität zu steigern und Burnout vorzubeugen.",
+                "proposed": "In Schweden experimentieren einige Unternehmen mit einem 6-Stunden-Arbeitstag, um die Produktivität zu steigern und Burnout vorzubeugen.",
+                "alternatives": [],
+                "rationale": "Критическая фактическая ошибка: в оригинале «6-часовой рабочий день», а в переводе «6-часовая рабочая неделя» (Arbeitswoche). Это полностью искажает смысл факта."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/steps/10",
+                "current": "Ich habe das Gefühl, dass die Arbeit mich härter werden lässt.",
+                "proposed": "Ich habe das Gefühl, dass die Arbeit mich abstumpfen lässt.",
+                "alternatives": [
+                  "Ich habe das Gefühl, dass ich durch die Arbeit härter werde."
+                ],
+                "rationale": "Исходный вариант — калька с русского синтаксиса. 'Abstumpfen' (черстветь/становиться эмоционально холодным) гораздо точнее и естественнее передает смысл «становиться жестче» в психологическом контексте."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 3,
+                "path": "/steps/15",
+                "current": "Ich möchte am liebsten allein sein und mich von allen ausruhen.",
+                "proposed": "Ich möchte am liebsten allein sein und einfach mal meine Ruhe vor allen haben.",
+                "alternatives": [
+                  "Ich möchte am liebsten allein sein und einfach mal abschalten."
+                ],
+                "rationale": "Фраза 'mich von allen ausruhen' звучит неестественно. Вариант 'meine Ruhe vor allen haben' лучше передает потребность в уединении и отдыхе от людей."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая фактическая ошибка (путаница между рабочей неделей и рабочим днем), которая требует немедленного исправления. Также присутствуют стилистические кальки, которые делают текст менее эмпатичным и естественным для носителя. Рекомендуется исправить фактическую ошибку в первую очередь, а затем заменить тяжеловесные конструкции на более живой немецкий язык."
+            },
+            "timings": {
+              "issues": 51388,
+              "deliberate": 5026,
+              "recommend": 12599
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/20/text",
+              "from": "In Schweden experimentieren einige Unternehmen mit einer 6-Stunden-Arbeitswoche, um die Produktivität zu steigern und Burnout vorzubeugen. Erste Ergebnisse zeigen eine Zunahme der Energie und Motivation der Mitarbeiter.",
+              "to": "In Schweden experimentieren einige Unternehmen mit einem 6-Stunden-Arbeitstag, um die Produktivität zu steigern und Burnout vorzubeugen."
+            },
+            {
+              "id": "c1-I1",
+              "path": "/steps/10",
+              "from": "Ich habe das Gefühl, dass die Arbeit mich härter werden lässt.",
+              "to": "Ich habe das Gefühl, dass die Arbeit mich abstumpfen lässt."
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps/15",
+              "from": "Ich möchte am liebsten allein sein und mich von allen ausruhen.",
+              "to": "Ich möchte am liebsten allein sein und einfach mal meine Ruhe vor allen haben."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено верно, передает смысл опустошенности."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Идиома «выжатый лимон» адаптирована верно."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Естественно и грамматически верно."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит профессионально."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "issue",
+                "note": "Смысловое искажение: «жестче» в контексте характера/личности vs «абстумпен» (очерстветь/стать бесчувственным)."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено верно, терминология KVT соблюдена."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, цифры сохранены."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Хороший перевод, передает научный контекст."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Кавычки „ “ использованы правильно, смысл передан."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Термин Zynismus для 'ожесточение' в данном контексте уместен."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл в норме."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Метафора 'ansteckend' передана верно."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Имя Csikszentmihalyi и термин Flow написаны верно."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/low",
+                "verdict": "ok",
+                "note": "Кратко и точно."
+              },
+              {
+                "path": "/range/middle",
+                "verdict": "ok",
+                "note": "Кратко и точно."
+              },
+              {
+                "path": "/range/high",
+                "verdict": "ok",
+                "note": "Кратко и точно."
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, грамматика верная."
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Перевод качественный, тон поддерживающий."
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Перевод точный, соблюден тон эксперта-друга."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID совпадает, атрибуты отсутствуют согласно конвенции для ru/en"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/8",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/9",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/10",
+                "fragment": "dass die Arbeit mich abstumpfen lässt",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла: «жестче» (в значении становлюсь более суровым, жестким в решениях/характере) переведено как «abstumpfen» (очерстветь, потерять чувствительность, стать эмоционально тупым).",
+                "why": "В оригинале речь о характере/стиле поведения (жесткость), а в немецком «abstumpfen» — это потеря способности чувствовать или реагировать, что имеет более негативный и медицинский оттенок потери эмпатии."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The Russian 'жестче' implies becoming tougher/stricter in behavior, whereas 'abstumpfen' implies emotional numbness or desensitization. This is a significant semantic shift."
+              }
+            ],
+            "notes": "The translation is generally high quality, but there is a notable semantic error in step 10 where a behavioral trait is mistranslated as a psychological state of numbness.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/10",
+                "current": "Ich habe das Gefühl, dass die Arbeit mich abstumpfen lässt.",
+                "proposed": "Ich habe das Gefühl, dass die Arbeit mich härter macht.",
+                "alternatives": [
+                  "Ich habe das Gefühl, dass die Arbeit mich unnachgiebiger macht.",
+                  "Ich habe das Gefühl, dass die Arbeit mich strenger werden lässt."
+                ],
+                "rationale": "В оригинале «жестче» относится к характеру или манере поведения (tougher/stricter). Немецкий 'abstumpfen' означает эмоциональное онемение или потерю чувствительности (numbness), что является искажением. Вариант 'härter macht' наиболее точно передает смысл становления более жестким человеком в контексте работы."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология, тон эмпатичен и профессионален, а синтаксис адаптирован под немецкий язык. Единственная серьезная ошибка — семантическое искажение в пункте 10, где 'жесткость характера' была заменена на 'эмоциональное онемение'. После этой правки текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 47725,
+              "deliberate": 3900,
+              "recommend": 8266
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/10",
+              "from": "Ich habe das Gefühl, dass die Arbeit mich abstumpfen lässt.",
+              "to": "Ich habe das Gefühl, dass die Arbeit mich härter macht."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено верно, эмоциональный окрас сохранен."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Идиома «ausgepresste Zitrone» уместна."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Естественно и грамматически верно."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит профессионально."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Терминология и смысл в порядке."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "issue",
+                "note": "Слишком буквальный перевод «härter macht», звучит как калька."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Хороший, естественный немецкий текст."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено верно, терминология KVT соблюдена."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль естественный."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, цифры сохранены."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Научный контекст передан корректно."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие „“, смысл сохранен."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод естественный, термин Zynismus уместен."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Кавычки „fika“ верные, смысл сохранен."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод хороший, стиль подходит."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки „996“ верные."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Метафора „ansteckend“ передана верно."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Термин Digital Detox и кавычки верны."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод корректный."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Имя Csikszentmihalyi и термин Flow написаны верно."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/low",
+                "verdict": "ok",
+                "note": "Кратко и точно."
+              },
+              {
+                "path": "/range/middle",
+                "verdict": "ok",
+                "note": "Кратко и точно."
+              },
+              {
+                "path": "/range/high",
+                "verdict": "ok",
+                "note": "Кратко и точно."
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, грамматика верная."
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, перевод точный."
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, рекомендации звучат корректно."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Вопрос звучит естественно."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID совпадает, атрибуты в ru/en локали не требуются"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/8",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              },
+              {
+                "path": "/instagram/9",
+                "verdict": "ok",
+                "note": "ID совпадает"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/10",
+                "fragment": "dass die Arbeit mich härter macht",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Калька с русского синтаксиса",
+                "why": "Фраза «jemanden härter machen» звучит неестественно в данном контексте. В немецком языке для описания процесса, когда работа делает человека более жестким/черствым, лучше использовать конструкции вроде «dass die Arbeit mich abstumpfen lässt» или «dass ich durch die Arbeit härter werde»."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator used a literal calque from Russian. In German, 'jemanden härter machen' sounds unnatural for emotional hardening; 'abstumpfen lassen' or 'härter werden' is much more idiomatic."
+              }
+            ],
+            "notes": "The translation is overall of high quality and accurate, with only one minor stylistic issue regarding a literal translation of a Russian idiom.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/10",
+                "current": "Ich habe das Gefühl, dass die Arbeit mich härter macht.",
+                "proposed": "Ich habe das Gefühl, dass ich durch die Arbeit härter werde.",
+                "alternatives": [
+                  "Ich habe das Gefühl, dass die Arbeit mich abstumpfen lässt."
+                ],
+                "rationale": "Вариант 'härter werden' звучит более естественно для описания изменения характера человека, чем калька 'jemanden härter machen'. Вариант с 'abstumpfen' (черстветь/отупевать) тоже хорош, но 'härter werden' точнее передает эмоциональный окрас оригинала 'становиться жёстче'."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Терминология (KVT, Burnout, Flow) соблюдена, стиль эмпатичный и профессиональный. Единственная мелкая стилистическая шероховатость — калька в 10-м пункте, которая исправлена. Текст полностью готов к публикации после внесения одной правки."
+            },
+            "timings": {
+              "issues": 48879,
+              "deliberate": 3695,
+              "recommend": 6738
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/10",
+              "from": "Ich habe das Gefühl, dass die Arbeit mich härter macht.",
+              "to": "Ich habe das Gefühl, dass ich durch die Arbeit härter werde."
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

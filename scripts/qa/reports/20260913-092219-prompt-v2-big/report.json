@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "Дата": "2026-09-13T06:22:19.292Z",
+    "Метка": "prompt-v2-big",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "tests/sociophobia.json",
+    "Локали": "de",
+    "Сэмпл/файл": 6,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "e5f619e3caa4d09e8c2e79d0b392e4f3042b4e2d"
+  },
+  "results": {
+    "tests/sociophobia.json": {
+      "de": [
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/15",
+          "ru": "Никогда\n\nИногда\n\nЧасто\n\nПостоянно",
+          "oldText": "Nie\n\nManchmal\n\nHäufig\n\nStändig",
+          "newText": "Nie\n\nManchmal\n\nOft\n\nStändig",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "В контексте шкалы частоты (Likert scale) пара 'Manchmal — Oft' является наиболее естественной и стандартной для немецкого языка. 'Häufig' звучит чуть более формально/книжно, что делает вариант B более подходящим для UX интерфейса.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Häufig' вместо 'Oft' делает шкалу менее разговорной и чуть более тяжеловесной для мобильного приложения."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Both translations are correct, but B is slightly better for a UI context. 'Häufig' is a more neutral and standard term for frequency scales in German psychological assessments than 'Oft', which can sound a bit more colloquial.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/14",
+          "ru": "Нет\n\nЛегкая тревога\n\nУмеренная тревога\n\nИнтенсивная тревога",
+          "oldText": "Keine\n\nLeichte Angst\n\nMäßige Angst\n\nStarke Angst",
+          "newText": "Nein\n\nLeichte Angst\n\nModerate Angst\n\nStarke Angst",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 75
+              },
+              "reason": "Для обозначения отсутствия симптома (шкала интенсивности) в немецком языке используется 'Keine', а не 'Nein', которое является ответом на вопрос. Перевод B также использует более точный термин 'Mäßige' для 'умеренной'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Использование 'Nein' вместо 'Keine' при описании отсутствия состояния (шкала) — грубая ошибка, 'Nein' — это просто 'нет' на вопрос."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 75
+              },
+              "reason": "Перевод A идеально подходит для интерфейса (UI) оценки состояния, используя 'Keine' для обозначения отсутствия симптома. Перевод B содержит ошибку в первом пункте ('Nein' — это ответ на вопрос, а не состояние) и использует англицизм 'Moderate' вместо естественного немецкого 'Mäßige'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Использование 'Nein' вместо 'Keine' для обозначения отсутствия тревоги — грубая ошибка в контексте UI."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Moderate' вместо 'Mäßige' звучит как калька с английского."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/22",
+          "ru": "Нет\n\nЛегкая тревога\n\nУмеренная тревога\n\nИнтенсивная тревога",
+          "oldText": "Nein\n\nLeichte Angst\n\nMäßige Angst\n\nStarke Angst",
+          "newText": "Nein\n\nLeichte Angst\n\nModerate Angst\n\nStarke Angst",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Перевод B использует более естественный и точный для немецкого языка термин 'Mäßige Angst' для обозначения умеренной степени. 'Moderate Angst' в переводе A звучит более клинически/сухо, хотя и допустимо.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Moderate' вместо 'Mäßig' делает текст чуть более формальным и менее естественным для пользовательского интерфейса."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "Перевод A идеально соответствует немецкой психологической терминологии. Перевод B использует 'moderate', что является англицизмом и звучит менее естественно в данном контексте, чем немецкое 'mäßig'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'moderate' вместо 'mäßige' звучит как калька с английского."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/21/text",
+          "ru": "Страх писать или делать записи в присутствии других людей иногда называют \"скриптофобией\". Это частный случай социальной тревожности, связанный с боязнью оценки со стороны окружающих.",
+          "oldText": "Die Angst, in Anwesenheit anderer zu schreiben oder Notizen zu machen, wird manchmal als „Skriptophobie“ bezeichnet. Dies ist ein spezieller Fall von sozialer Angst, der mit der Furcht vor der Bewertung durch andere verbunden ist.",
+          "newText": "Die Angst, in Anwesenheit anderer Menschen zu schreiben oder Aufzeichnungen zu machen, wird manchmal als „Skriptophobie“ bezeichnet. Dies ist eine spezifische Form der sozialen Angst, die mit der Befürchtung verbunden ist, von der Umgebung bewertet zu werden.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Перевод A звучит более естественно и профессионально. Перевод B использует тяжеловесную конструкцию 'von der Umgebung bewertet zu werden', которая является калькой и звучит неестественно для немецкого языка.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Конструкция 'von der Umgebung bewertet zu werden' звучит как канцелярит; носитель скажет 'Bewertung durch andere' или 'von anderen bewertet zu werden'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Перевод A звучит более естественно и профессионально. Использование 'von der Umgebung bewertet zu werden' в контексте социальной тревожности более характерно для немецкого языка, чем буквальный перевод 'Bewertung durch andere' в варианте B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'ein spezieller Fall von sozialer Angst' звучит немного тяжеловесно и калькированно по сравнению с 'eine spezifische Form'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/9/fact",
+          "ru": "Адель, известная британская певица, страдает от социофобии и панических атак. Она избегает многолюдных мест, таких как метро, чтобы уменьшить риск появления панических симптомов.",
+          "oldText": "Adele, die berühmte britische Sängerin, leidet unter sozialer Phobie und Panikattacken. Sie meidet Menschenmengen wie die U-Bahn, um das Risiko von Paniksymptomen zu verringern.",
+          "newText": "Adele, die berühmte britische Sängerin, leidet unter sozialer Phobie und Panikattacken. Sie meidet überfüllte Orte wie die U-Bahn, um das Risiko von Paniksymptomen zu verringern.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Перевод A корректно передает смысл 'многолюдных мест'. Перевод B допускает логическую ошибку (mistranslation), называя метро 'толпой людей' (Menschenmengen), что стилистически и логически неверно.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Menschenmengen (толпы людей) нельзя приравнивать к U-Bahn (метро); метро — это место, а не сама толпа."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Перевод B точнее передает смысл оригинала («многолюдные места» — überfüllte Orte), в то время как перевод A («Menschenmengen» — толпы) немного сужает значение до самих групп людей, а не локаций.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Menschenmengen (толпы) — это не совсем то же самое, что многолюдные места (überfüllte Orte), хотя в контексте допустимо."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/2",
+          "ru": "Приветливо и открыто\n\nС осторожностью и недоверием\n\nПытаюсь избежать разговора\n\nБуквально бегу прочь",
+          "oldText": "Freundlich und offen\n\nMit Vorsicht und Misstrauen\n\nIch versuche, dem Gespräch aus dem Weg zu gehen\n\nIch laufe buchstäblich weg",
+          "newText": "Freundlich und offen.\n\nMit Vorsicht und Misstrauen.\n\nIch versuche, dem Gespräch aus dem Weg zu gehen.\n\nIch möchte am liebsten sofort wegrennen.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Перевод A звучит более естественно и эмоционально сбалансированно для терапевтического контекста. Перевод B содержит кальку 'buchstäblich weg[laufen]', которая в немецком звучит слишком механистично и буквально, в то время как вариант A лучше передает состояние пользователя.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'Ich laufe buchstäblich weg' звучит как калька с русского и слишком тяжеловесна для описания эмоции; вариант A 'Ich möchte am liebsten sofort wegrennen' гораздо более живой и естественный для носителя."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Перевод A точно передает смысл и интенсивность оригинала. Перевод B в последней фразе слишком сильно смягчает смысл («хочу убежать» вместо «бегу»), что искажает эмоциональный накал оригинала.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Фраза 'Буквально бегу прочь' переведена как 'Ich möchte am liebsten sofort wegrennen' (Я бы лучше сразу убежал), что теряет значение 'буквально' и меняет действие с реального на желаемое."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1927 @@
+{
+  "file": "tests/okr.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 6,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, Zwangsgedanken — верный термин для навязчивых мыслей."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "issue",
+                "note": "Смысловая инверсия: в оригинале вопрос 'Легко ли вам...', в переводе 'Трудно ли вам...'"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Терминология (Zwangshandlungen) соблюдена."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "issue",
+                "note": "Стилистическая калька: 'dem Ausführen von Ritualen zu widerstehen' звучит тяжеловесно (номинация)."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "ok",
+                "note": "Кратко и понятно."
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/4",
+                "verdict": "issue",
+                "note": "Mistranslation: 'изменили жизнь' вместо 'перевернули жизнь' (смягчение смысла)."
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: 'Ängste' (страхи) вместо 'Unruhe/Besorgnis' (беспокойство)"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Переведено корректно, использование Zwangssymptome уместно"
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон эмпатичный"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно"
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Переведено корректно, стиль соблюден"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/3",
+                "fragment": "Fällt es Ihnen schwer, sich gegen die Zwangsgedanken zu wehren?",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Перевернут смысл вопроса",
+                "why": "В оригинале спрашивается 'Легко ли вам...', а в переводе 'Трудно ли вам...'. Это меняет логику выбора ответа пользователем."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps/8",
+                "fragment": "dem Ausführen von Ritualen zu widerstehen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Номинативная конструкция",
+                "why": "Использование 'dem Ausführen von...' (выполнение чего-либо) является тяжеловесной калькой. Лучше использовать глагол: 'Ritualen zu widerstehen'."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/variants/1/4",
+                "fragment": "Sie haben mein Leben komplett verändert",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Смягчение экспрессии",
+                "why": "Оригинал 'Полностью перевернули мою жизнь' несет гораздо более сильный эмоциональный заряд, чем нейтральное 'изменили жизнь'. Для оценки тяжести состояния это важно."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/2/fact",
+                "fragment": "dass seine Zwangsgedanken erhebliche Ängste auslösten",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена понятия 'беспокойство' (Unruhe/Besorgnis) на 'страхи' (Ängste)",
+                "why": "В оригинале речь о том, что мысли вызывали беспокойство (состояние), а не конкретные страхи (phobias/fears). В контексте психологии это разные вещи."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical error: the question polarity is reversed (Easy vs Hard), which invalidates the scoring logic."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Major semantic error: 'Ängste' (fears/phobias) is a different psychological construct than 'беспокойство' (anxiety/unease/Unruhe)."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Minor loss of intensity: 'verändert' is too neutral compared to 'перевернули' (umgekrempelt/auf den Kopf gestellt)."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "rejected",
+                "note": "This is a stylistic preference; 'dem Ausführen von Ritualen zu widerstehen' is grammatically correct and clear in German, though a verb would be more concise."
+              }
+            ],
+            "notes": "The translation contains one critical logical error that breaks the test's validity and one major terminological inaccuracy. Stylistic nuances are mostly acceptable.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/3",
+                "current": "Fällt es Ihnen schwer, sich gegen die Zwangsgedanken zu wehren?",
+                "proposed": "Fällt es Ihnen leicht, sich gegen die Zwangsgedanken zu wehren?",
+                "alternatives": [
+                  "Können Sie den Zwangsgedanken leicht widerstehen?"
+                ],
+                "rationale": "Критическая ошибка: в оригинале вопрос «Легко ли вам...», а в переводе «Трудно ли вам...». Это полностью меняет логику ответов в тесте."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/steps_description/2/fact",
+                "current": "dass seine Zwangsgedanken erhebliche Ängste auslösten",
+                "proposed": "dass seine Zwangsgedanken für erhebliche Unruhe sorgten",
+                "alternatives": [
+                  "dass seine Zwangsgedanken ihn stark beunruhigten"
+                ],
+                "rationale": "В психологии 'Ängste' (страхи) и 'Unruhe/Besorgnis' (беспокойство) — разные понятия. Оригинал говорит о беспокойстве, поэтому 'Unruhe' или 'beunruhigen' точнее передают смысл."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 3,
+                "path": "/variants/1/4",
+                "current": "Sie haben mein Leben komplett verändert",
+                "proposed": "Sie haben mein Leben komplett auf den Kopf gestellt",
+                "alternatives": [
+                  "Sie haben mein Leben völlig umgekrempelt"
+                ],
+                "rationale": "Оригинал «перевернули мою жизнь» требует более экспрессивной идиомы. 'Auf den Kopf gestellt' идеально передает масштаб изменений, в то время как 'verändert' звучит слишком нейтрально."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 4,
+                "path": "/steps/8",
+                "current": "Gelingt es Ihnen, dem Ausführen von Ritualen zu widerstehen?",
+                "proposed": "Gelingt es Ihnen, Ritualen zu widerstehen?",
+                "alternatives": [],
+                "rationale": "Хотя замечание было отклонено коллегами как стилистическое, как редактор я рекомендую упростить конструкцию. 'Dem Ausführen von...' — это лишняя номинализация, которая утяжеляет текст. Прямое использование глагола звучит естественнее."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая ошибка в логике вопроса (инверсия вопроса в /steps/3), что делает прохождение теста некорректным. Также есть серьезная терминологическая подмена (страхи вместо беспокойства) и потеря эмоциональной окраски в вариантах ответов. Требуется исправление логики и усиление экспрессии в ключевых точках."
+            },
+            "timings": {
+              "issues": 54740,
+              "deliberate": 6283,
+              "recommend": 13991
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/3",
+              "from": "Fällt es Ihnen schwer, sich gegen die Zwangsgedanken zu wehren?",
+              "to": "Fällt es Ihnen leicht, sich gegen die Zwangsgedanken zu wehren?"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/variants/1/4",
+              "from": "Sie haben mein Leben komplett verändert",
+              "to": "Sie haben mein Leben komplett auf den Kopf gestellt"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/2/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 24%)"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps/8",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, Zwangsgedanken — верный термин для навязчивых мыслей."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Терминология (Zwangshandlungen) соблюдена."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "issue",
+                "note": "Стилистическая калька (номинализация)."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "ok",
+                "note": "Кратко и по смыслу."
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: 'Angst' (страх) вместо 'Unbehagen' (беспокойство/дискомфорт)"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Переведено корректно, использование Zwangssymptome уместно"
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль соответствует"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно"
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Стиль эмпатичный, смысл сохранен"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Переведено верно, тон поддерживающий"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Терминология верная"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/8",
+                "fragment": "Gelingt es Ihnen, dem Ausführen von Ritualen zu widerstehen?",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Номинальная конструкция (Ausführen von Ritualen)",
+                "why": "Использование существительного 'Ausführen' (выполнение) вместе с инфинитивом создает тяжеловесную конструкцию, характерную для кальки с русского. В немецком языке в таких случаях лучше использовать глагол: 'Rituale zu unterlassen' или 'sich gegen Rituale zu wehren'."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/2/fact",
+                "fragment": "dass seine Zwangsgedanken erhebliche Ängste auslösten",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена понятия 'беспокойство' на 'страх'",
+                "weight": "В оригинале 'вызывали беспокойство' (Unbehagen/Besorgnis), в переводе 'вызывали страхи' (Ängste). В контексте ОКР это разные клинические состояния: беспокойство — это часть процесса, а 'Ängste' звучит как панические атаки или фобии, что искажает исторический факт."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The nominal style 'dem Ausführen von Ritualen zu widerstehen' is indeed heavy and slightly unidiomatic compared to a verbal construction."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical distinction: 'Besorgnis/Unbehagen' (anxiety/unease) is not the same as 'Ängste' (fears/phobias) in a clinical context. This alters the meaning of the historical fact."
+              }
+            ],
+            "notes": "The translation is generally high quality, but contains one significant clinical nuance error and one stylistic heaviness.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/2/fact",
+                "current": "Obwohl Frederic Delano Roosevelt keine offizielle Diagnose für eine Zwangsstörung hatte, merken Historiker an, dass seine Zwangsgedanken erhebliche Ängste auslösten, was seine Stimmung und sein tägliches Leben beeinflusste.",
+                "proposed": "Obwohl Frederic Delano Roosevelt keine offizielle Diagnose für eine Zwangsstörung hatte, merken Historiker an, dass seine Zwangsgedanken erhebliche Unruhe auslösten, was seine Stimmung und sein tägliches Leben beeinflusste.",
+                "alternatives": [
+                  "erhebliche Besorgnis auslösten",
+                  "großes Unbehagen verursachten"
+                ],
+                "rationale": "В оригинале речь идет о 'беспокойстве', а не о 'страхах' (Ängste). В контексте ОКР 'Ängste' может быть неверно истолковано как фобии или панические атаки. 'Unruhe' или 'Besorgnis' точнее передают состояние беспокойства, вызванного мыслями."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/steps/8",
+                "current": "Gelingt es Ihnen, dem Ausführen von Ritualen zu widerstehen?",
+                "proposed": "Gelingt es Ihnen, Ritualen zu widerstehen?",
+                "alternatives": [
+                  "Fällt es Ihnen leicht, auf Rituale zu verzichten?",
+                  "Können Sie sich gegen Rituale wehren?"
+                ],
+                "rationale": "Текущая конструкция с номинализацией 'dem Ausführen von Ritualen' звучит тяжеловесно. Упрощение до 'Ritualen zu widerstehen' делает фразу естественной, динамичной и соответствующей правилам немецкого языка (избегание лишних существительных там, где справляется глагол)."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология соблюдена. Однако есть две важные правки: одна критическая (подмена клинического понятия 'беспокойство' на 'страх' в историческом факте) и одна стилистическая (устранение тяжеловесной номинальной конструкции в вопросе). После этих правок текст будет звучать профессионально и естественно."
+            },
+            "timings": {
+              "issues": 53803,
+              "deliberate": 4255,
+              "recommend": 11303
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/2/fact",
+              "from": "Obwohl Frederic Delano Roosevelt keine offizielle Diagnose für eine Zwangsstörung hatte, merken Historiker an, dass seine Zwangsgedanken erhebliche Ängste auslösten, was seine Stimmung und sein tägliches Leben beeinflusste.",
+              "to": "Obwohl Frederic Delano Roosevelt keine offizielle Diagnose für eine Zwangsstörung hatte, merken Historiker an, dass seine Zwangsgedanken erhebliche Unruhe auslösten, was seine Stimmung und sein tägliches Leben beeinflusste."
+            },
+            {
+              "id": "c1-I1",
+              "path": "/steps/8",
+              "from": "Gelingt es Ihnen, dem Ausführen von Ritualen zu widerstehen?",
+              "to": "Gelingt es Ihnen, Ritualen zu widerstehen?"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, термин Zwangsgedanken уместен"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Использована хорошая конструкция с es-падежом"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Терминология Zwangshandlungen верна"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "issue",
+                "note": "Слишком кратко, не совсем соответствует контексту вопроса 'Как долго'"
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/0/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/1/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "ok",
+                "note": "Перевод точный, термин Stimmung на месте"
+              },
+              {
+                "path": "/variants/2/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "Перевод точный, идиома 'beiseite schieben' уместна"
+              },
+              {
+                "path": "/variants/3/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "issue",
+                "note": "Слишком кратко, потерян смысл 'Едва могу' (в контексте контроля)"
+              },
+              {
+                "path": "/variants/4/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/5/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/6/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/7/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/8/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/variants/9/4",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: в оригинале 'сопротивляться мыслям', в переводе 'сопротивляться в процессе обучения сопротивлению' (избыточность/калька)"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Переведено верно, использование Zwangssymptome уместно"
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль соответствует"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, смысл сохранен"
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Стиль эмпатичный, смысл точный"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Переведено верно, тон поддерживающий"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/variants/0/0",
+                "fragment": "Gar nicht",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком лаконично для ответа на вопрос 'Как долго...'",
+                "why": "Вопрос подразумевает временной отрезок. 'Gar nicht' (Вообще нет) грамматически допустимо, но звучит обрывисто. Лучше 'Gar keine' или 'Keine Zeitspanne', чтобы соответствовать вопросу о длительности."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/variants/4/3",
+                "fragment": "Kaum",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Потеря смысла 'Едва могу'",
+                "why": "В оригинале 'Едва могу' (контролировать). Немецкое 'Kaum' (Едва/Вряд ли) — это наречие, которое в данном контексте звучит незавершенно. Нужно либо 'Kaum' (как ответ на вопрос 'Насколько хорошо?'), либо 'Ich kann es kaum' (если это ответ на 'Можете ли вы?'). В текущем виде это звучит как 'Едва ли', что не передает возможности действия."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/3/fact",
+                "fragment": "da sie Betroffenen hilft, den Widerstand gegen Zwangsgedanken zu lernen",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Искажение логики фразы",
+                "why": "В оригинале: 'помогая людям научиться сопротивляться навязчивым мыслям'. В немецком получилось 'помогая им научиться сопротивлению против мыслей'. Это звучит как изучение теоретического навыка 'сопротивления', а не практическое действие. Лучше использовать глагол: '...hilft Betroffenen, Zwangsgedanken besser zu widerstehen'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The translation 'Gar nicht' is a bit abrupt for a question about duration, though acceptable in casual speech. A more precise temporal response would be better."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical issue: 'Kaum' as a standalone answer to 'Can you...?' is grammatically incomplete and weakens the intended meaning of 'barely being able to'."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The phrasing 'den Widerstand... zu lernen' is slightly clunky/nominalized; using a verb would be more natural and closer to the original intent."
+              }
+            ],
+            "notes": "The translation is generally high quality, but there are minor issues with stylistic abruptness and one significant grammatical incompleteness in the responses.",
+            "recommendations": [
+              {
+                "id": "c1-I2",
+                "priority": 1,
+                "path": "/variants/4/3",
+                "current": "Kaum",
+                "proposed": "Ich kann es kaum",
+                "alternatives": [
+                  "Nur kaum",
+                  "Kaum möglich"
+                ],
+                "rationale": "Текущий вариант 'Kaum' — это наречие, которое звучит обрывисто и грамматически незавершенно в ответ на вопрос 'Können Sie...?'. Вариант 'Ich kann es kaum' (Я едва могу) полностью передает смысл оригинала 'Едва могу' и звучит естественно для носителя."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/steps_description/3/fact",
+                "current": "da sie Betroffenen hilft, den Widerstand gegen Zwangsgedanken zu lernen",
+                "proposed": "da sie Betroffenen hilft, Zwangsgedanken besser zu widerstehen",
+                "alternatives": [
+                  "da sie Betroffenen dabei hilft, sich gegen Zwangsgedanken zu wehren"
+                ],
+                "rationale": "В текущем варианте используется тяжеловесная номинализация 'den Widerstand... zu lernen' (учиться сопротивлению), что звучит академично и неестественно. Использование глагола 'widerstehen' делает фразу динамичной, эмпатичной и точной по смыслу, как того требует Tone of Voice."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/variants/0/0",
+                "current": "Gar nicht",
+                "proposed": "Gar keine",
+                "alternatives": [
+                  "Keine"
+                ],
+                "rationale": "Вопрос задан о длительности (Как долго...?). 'Gar nicht' (Вообще нет) — это ответ на вопрос о наличии процесса, а 'Gar keine' (Вообще никаких [часов/времени]) или просто 'Keine' лучше грамматически согласуются с контекстом временного отрезка, хотя 'Gar nicht' допустимо в разговорной речи. Выбираем вариант, максимально приближенный к правильному грамматическому согласованию."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология (KVT, Zwangsgedanken, Zwangshandlungen) соблюдена верно. Основные замечания касаются стилистической тяжеловесности в описаниях и грамматической незавершенности в коротких ответах. После исправления этих нюансов текст будет звучать полностью естественно."
+            },
+            "timings": {
+              "issues": 54613,
+              "deliberate": 5027,
+              "recommend": 12191
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I2",
+              "path": "/variants/4/3",
+              "from": "Kaum",
+              "to": "Ich kann es kaum"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/variants/0/0",
+              "from": "Gar nicht",
+              "to": "Gar keine"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/3/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 32%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

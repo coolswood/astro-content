@@ -1,0 +1,301 @@
+{
+  "file": "texts/mood.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/finish/h2",
+                "verdict": "ok",
+                "note": "Переведено точно согласно терминологии"
+              },
+              {
+                "path": "/finish/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан, тон эмпатичный"
+              },
+              {
+                "path": "/finish/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно"
+              },
+              {
+                "path": "/finish/texts/2",
+                "verdict": "issue",
+                "note": "Стилистическая калька 'Zustand bewerten' вместо более естественного 'Befinden einschätzen'"
+              },
+              {
+                "path": "/finish/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, смысл сохранен"
+              },
+              {
+                "path": "/start/h2",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/start/texts/0",
+                "verdict": "ok",
+                "note": "Смысл и терминология (KVT) верны"
+              },
+              {
+                "path": "/start/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/start/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/start/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/start/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/finishScore/h2",
+                "verdict": "issue",
+                "note": "Слово 'Effektivität' звучит слишком технически/математически для психологического контекта"
+              },
+              {
+                "path": "/finishScore/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/finishScore/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/finish/texts/2",
+                "fragment": "um Ihren Zustand erneut zu bewerten",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование 'Zustand bewerten'",
+                "why": "В контексте психологического трекинга и согласно глоссарию, для оценки самочувствия лучше использовать 'Befinden einschätzen'. 'Zustand bewerten' звучит как оценка технического состояния объекта."
+              },
+              {
+                "id": "I2",
+                "path": "/finishScore/h2",
+                "fragment": "Heutige Effektivität",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неудачный выбор слова 'Effektivität'",
+                "why": "В немецком языке 'Effektivität' в данном контексте звучит как показатель эффективности работы станка или бизнес-процесса. Для обозначения того, насколько успешно прошла работа над собой, лучше подошло бы 'Heutiger Erfolg' или 'Ergebnis des Tages'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Согласен, 'Zustand bewerten' звучит слишком механически; 'Befinden einschätzen' — стандарт для психологического контекста."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая стилистическая ошибка: 'Effektivität' в немецком языке в данном контексте звучит как производственная эффективность, а не личный успех."
+              }
+            ],
+            "notes": "Перевод в целом точен, но страдает от излишней формализации и использования терминов, характерных для технической или бизнес-сферы вместо психологической.",
+            "recommendations": [
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/finishScore/h2",
+                "current": "Heutige Effektivität",
+                "proposed": "Heutiger Erfolg",
+                "alternatives": [
+                  "Ergebnis des Tages"
+                ],
+                "rationale": "Слово 'Effektivität' в немецком языке относится к производительности процессов или механизмов. Для обозначения личного прогресса и успеха в терапии 'Heutiger Erfolg' звучит естественно и вдохновляюще."
+              },
+              {
+                "id": "I1",
+                "priority": 2,
+                "path": "/finish/texts/2",
+                "current": "Wenn Sie fertig sind, kehren Sie hierher zurück, um Ihren Zustand erneut zu bewerten.",
+                "proposed": "Wenn Sie fertig sind, kehren Sie hierher zurück, um Ihr Befinden erneut einzuschätzen.",
+                "alternatives": [],
+                "rationale": "Согласно глоссарию и правилам психологического контекста, 'Befinden einschätzen' является стандартным термином. 'Zustand bewerten' звучит слишком технически (как оценка состояния оборудования)."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод качественный и следует правилам обращения 'Sie'. Основные замечания касаются стилистической точности терминологии: замена 'Effektivität' на 'Erfolg' критически важна, чтобы избежать ощущения 'производственного отчета', а замена 'Zustand bewerten' на 'Befinden einschätzen' приведет текст к принятому в КПТ стандарту."
+            },
+            "timings": {
+              "issues": 26243,
+              "deliberate": 6604,
+              "recommend": 10833
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/finishScore/h2",
+              "from": "Heutige Effektivität",
+              "to": "Heutiger Erfolg"
+            },
+            {
+              "id": "I1",
+              "path": "/finish/texts/2",
+              "from": "Wenn Sie fertig sind, kehren Sie hierher zurück, um Ihren Zustand erneut zu bewerten.",
+              "to": "Wenn Sie fertig sind, kehren Sie hierher zurück, um Ihr Befinden erneut einzuschätzen."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/finish/h2",
+                "verdict": "ok",
+                "note": "Переведено верно, соответствует терминологии"
+              },
+              {
+                "path": "/finish/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон эмпатичный"
+              },
+              {
+                "path": "/finish/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно"
+              },
+              {
+                "path": "/finish/texts/2",
+                "verdict": "ok",
+                "note": "Грамматически верно, смысл сохранен"
+              },
+              {
+                "path": "/finish/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, добавлена естественная для немецкого деталь 'spürbar'"
+              },
+              {
+                "path": "/start/h2",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/start/texts/0",
+                "verdict": "ok",
+                "note": "Терминология (KVT, Einschätzung) верна"
+              },
+              {
+                "path": "/start/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/start/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан полностью"
+              },
+              {
+                "path": "/start/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/start/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/finishScore/h2",
+                "verdict": "issue",
+                "note": "Mistranslation: 'Erfolg' (успех) — это не то же самое, что 'эффективность' (Wirksamkeit/Effektivität) в контексте показателей"
+              },
+              {
+                "path": "/finishScore/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/finishScore/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль хороший"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/finishScore/h2",
+                "fragment": "Heutiger Erfolg",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Использование слова 'Erfolg' (успех) вместо 'Effektivität' или 'Wirksamkeit' (эффективность)",
+                "why": "В контексте отчета о показателях (Score) 'успех' звучит слишком эмоционально и субъективно, в то время как оригинал говорит об эффективности работы/показателе. Это меняет восприятие метрики пользователем."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Перевод 'Erfolg' (успех) действительно смещает акцент с объективного показателя эффективности (Effektivität) на субъективное достижение, что не соответствует нейтральному тону оригинала."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, за исключением одной смысловой ошибки в заголовке, которая искажает восприятие метрики.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/finishScore/h2",
+                "current": "Heutiger Erfolg",
+                "proposed": "Heutige Effektivität",
+                "alternatives": [
+                  "Heutige Wirksamkeit"
+                ],
+                "rationale": "Слово 'Erfolg' (успех) слишком эмоционально и субъективно. 'Effektivität' точнее передает смысл 'эффективности' работы в приложении, как и в оригинале, сохраняя профессиональный тон."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на высоком уровне: соблюдены правила обращения (Sie), терминология (KVT, Einschätzung) и тон. Единственная серьезная ошибка — подмена понятия 'эффективность' на 'успех' в заголовке итогового экрана, что может исказить восприятие метрики. После исправления этого заголовка текст будет готов к публикации."
+            },
+            "timings": {
+              "issues": 13044,
+              "deliberate": 2387,
+              "recommend": 5070
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/finishScore/h2",
+              "reason": "осцилляция: это значение у листа уже было"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

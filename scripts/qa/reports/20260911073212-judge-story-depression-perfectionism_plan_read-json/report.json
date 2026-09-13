@@ -1,0 +1,67 @@
+{
+  "file": "story/depression/perfectionism_plan_read.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/perfectionism/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Цитата переведена точно, смысл сохранен, стиль соответствует оригиналу."
+              },
+              {
+                "path": "/perfectionism/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный, грамматических ошибок нет."
+              },
+              {
+                "path": "/plan/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно, немецкая конструкция звучит естественно."
+              },
+              {
+                "path": "/plan/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен, 'bewältigen' хорошо подходит по контексту к задаче."
+              },
+              {
+                "path": "/read/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл сохранен, философский тон выдержан."
+              },
+              {
+                "path": "/read/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный, передает парадокс оригинала."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Цитаты переданы точно, с соблюдением философского тона и правильной немецкой стилистики. Терминология и грамматика соответствуют нормам языка, использование кавычек и имен соответствует контексту. Исправления не требуются."
+            },
+            "timings": {
+              "issues": 9627,
+              "deliberate": 696,
+              "recommend": 3558
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

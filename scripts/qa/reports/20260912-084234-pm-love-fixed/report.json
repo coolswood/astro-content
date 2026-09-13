@@ -1,0 +1,759 @@
+{
+  "meta": {
+    "Дата": "2026-09-12T05:42:34.489Z",
+    "Метка": "pm-love-fixed",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "story/distortions/love.json",
+    "Локали": "de",
+    "Сэмпл/файл": 12,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "fa37b767b927826188242ca19138d726a05af992"
+  },
+  "results": {
+    "story/distortions/love.json": {
+      "de": [
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/title",
+          "ru": "Зависимость от любви",
+          "oldText": "Liebesabhängigkeit",
+          "newText": "Abhängigkeit von der Liebe",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Перевод A представляет собой естественное, емкое и стилистически верное немецкое существительное, идеально подходящее для заголовка. Перевод B звучит более тяжеловесно и описательно, что менее характерно для лаконичных названий тем или разделов.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Излишне длинная конструкция для заголовка, звучит менее естественно, чем компактное составное существительное."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Перевод B представляет собой естественное немецкое сложное существительное, которое идеально подходит для заголовка. Перевод A грамматически верен, но звучит более громоздко и описательно, как калька с русского.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "звучит менее естественно для заголовка, чем компактное составное слово"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/exercise/screen_1/texts",
+          "ru": "Отношения и любовь могут принести немало радости и счастья в жизнь, но они не являются единственным путем.\n\nСчастье — это сложный и многогранный процесс, и каждый имеет право выбирать свои собственные методы и пути для его достижения.\n\nПоэтому, если в данный момент ваша жизнь не включает романтических отношений, это не делает ее неполноценной.\n\nДля того чтобы изменить свои убеждения надо приложить немало усилий, это долгий и трудоемкий процесс.\n\nНо мы уверены, что, используя следующие рекомендации и техники, вы сможете избавиться от любовной зависимости и научитесь быть счастливым как в отношениях, так и без них.\n\n<h2>Смена фильтра</h2>\n\nВы замечали, что, когда чувствуете себя одиноко, на улице то и дело попадаются влюбленные парочки?\n\nИ, кажется, весь мир против вас: тут пара голубей, там котик и кошечка, а вы все один или одна. Так работает когнитивное искажение — негативный фильтр.\n\nЭто ошибка мышления и восприятия, когда вы замечаете только то, что вас беспокоит, а остальное игнорируете.\n\nСмените фильтр — смотрите на мир шире. Учитесь видеть не только счастливые пары, но и счастливых одиночек. Или людей, у которых есть пара, но счастливее они от этого не стали, — социальный статус не всегда оправдывает себя.\n\n<q author=\"Генри Дэвид Торо\">Счастье — это как бабочка: чем больше вы его ловите, тем больше оно ускользает. Но если вы обратите своё внимание на другие вещи, оно придёт и тихо сядет вам на плечо.</q>",
+          "oldText": "Beziehungen und Liebe können viel Freude und Glück in unser Leben bringen, aber sie sind nicht der einzige Weg.\n\nGlück ist ein komplexer und facettenreicher Prozess, und jeder hat das Recht, seine eigenen Methoden und Wege zu wählen, um es zu erreichen.\n\nWenn Ihre derzeitige Lebenssituation keine romantische Beziehung umfasst, macht das Ihr Leben nicht weniger vollständig.\n\nUm Ihre Überzeugungen zu verändern, erfordert es viel Anstrengung, es ist ein langer und arbeitsintensiver Prozess.\n\nAber wir sind sicher, dass Sie, wenn Sie die folgenden Empfehlungen und Techniken anwenden, sich von Liebesabhängigkeit befreien und lernen können, sowohl in Beziehungen als auch ohne sie glücklich zu sein.\n\n<h2>Den Filter wechseln</h2>\n\nHaben Sie schon einmal bemerkt, dass Sie, wenn Sie sich einsam fühlen, ständig verliebte Paare auf der Straße sehen?\n\nEs scheint, als sei die ganze Welt gegen Sie: Hier ein Paar Tauben, da ein Kätzchen und ein Kater, und Sie sind ganz allein. So funktioniert kognitive Verzerrung – der negative Filter.\n\nDies ist ein Denkfehler, bei dem Sie nur das bemerken, was Sie stört, und alles andere ignorieren.\n\nÄndern Sie den Filter – sehen Sie die Welt weiter. Lernen Sie, nicht nur glückliche Paare zu sehen, sondern auch glückliche Einzelpersonen. Oder Menschen, die zwar einen Partner haben, aber nicht glücklicher sind – sozialer Status ist nicht immer das, was er zu sein scheint.\n\n<q author=\"Henry David Thoreau\">Glück ist wie ein Schmetterling: Je mehr du versuchst, ihn zu fangen, desto mehr entzieht er sich dir. Aber wenn du deine Aufmerksamkeit auf andere Dinge richtest, wird er kommen und sich leise auf deine Schulter setzen.</q>",
+          "newText": "Beziehungen und Liebe können viel Freude und Glück in das Leben bringen, aber sie sind nicht der einzige Weg.\n\nGlück ist ein komplexer und vielschichtiger Prozess, und jeder hat das Recht, seine eigenen Wege zu finden, um es zu erleben.\n\nWenn Ihr Leben im Moment also keine romantische Beziehung beinhaltet, macht dies Ihr Leben nicht weniger wertvoll.\n\nUm die eigenen Überzeugungen zu ändern, ist viel Kraft nötig; es ist ein langer und mühsamer Prozess.\n\nWir sind jedoch davon überzeugt, dass Sie mit den folgenden Empfehlungen und Techniken Ihre Liebesabhängigkeit überwinden können und lernen werden, sowohl in einer Beziehung als auch ohne sie glücklich zu sein.\n\n<h2>Den Filter wechseln</h2>\n\nIst Ihnen schon einmal aufgefallen, dass Ihnen gerade dann ständig Liebespaare begegnen, wenn Sie sich einsam fühlen?\n\nEs scheint fast so, als wäre die ganze Welt gegen Sie: hier ein Liebespaar, dort ein süßes Kätzchen und eine Katze – und Sie sind ganz allein.\n\nEs handelt sich um einen Denk- und Wahrnehmungsfehler, bei dem Sie nur das bemerken, was Sie belastet, während Sie alles andere ignorieren.\n\nWechseln Sie den Filter und betrachten Sie die Welt aus einer breiteren Perspektive. Lernen Sie, nicht nur glückliche Paare zu sehen, sondern auch glückliche Singles. Oder Menschen, die zwar in einer Beziehung sind, aber dadurch nicht glücklicher geworden sind – der Beziehungsstatus ist kein Garant für Glück.\n\n<q author=\"Henry David Thoreau\">„Glück ist wie ein Schmetterling: Je mehr man versucht, es zu fangen, desto mehr entgleitet es einem. Aber wenn man seine Aufmerksamkeit auf andere Dinge richtet, kommt es und setzt sich leise auf die Schulter.“</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Перевод B звучит гораздо естественнее и профессиональнее. Он избегает тяжеловесных конструкций (например, 'erfordert es viel Anstrengung' в A — это калька) и использует более живой, подходящий для психотерапевтического контекста язык. Также в B соблюдены правила типографики для цитаты.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'du' в цитате при использовании 'Sie' в основном тексте создает стилистический диссонанс; конструкция 'erfordert es viel Anstrengung' — типичная калька."
+                },
+                {
+                  "side": "old",
+                  "type": "other",
+                  "severity": "major",
+                  "note": "Использованы прямые кавычки вместо немецких типографских „ “."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "В предложении про котиков немного упрощена структура оригинала, но это идет на пользу гладкости текста."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Translation A is much more natural and follows the professional 'Sie' tone consistently. Translation B suffers from several issues: it switches to 'du' in the quote (breaking the established register), uses clunky phrasing like 'erfordert es viel Anstrengung' (nominalization/syntax error), and has a weak translation for the final idiom.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Switch from 'Sie' to 'du' in the quote is inconsistent and unprofessional for this context."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'sozialer Status ist nicht immer das, was er zu sein scheint' is a weak, literal translation of the idea, whereas A's 'ist kein Garant für Glück' is much more idiomatic."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'котик и кошечка' as 'Kätzchen und Kater' is okay, but A's approach to the flow is smoother."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'Um Ihre Überzeugungen zu verändern, erfordert es viel Anstrengung' is a heavy, slightly unidiomatic construction compared to A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/screen_1/texts",
+          "ru": "Любовь — это великолепное чувство, воспетое поэтами, художниками и музыкантами. Она окрыляет, вдохновляет и дарит ощущение полноты жизни.\n\nЕстественно, каждый из нас стремится к тому, чтобы любить и быть любимым.\n\nОднако, если ваше представление о любви сводится к убеждению: «Я не могу быть по-настоящему счастливым и реализованным человеком, если у меня нет партнера. Для полного счастья мне необходимо быть любимым», это уже признак зависимости.\n\nЧто значит быть зависимым от любви?\n\nЭто когда любовь становится патологической потребностью, без которой вы не чувствуете счастья.\n\n<important>Вы страдаете от отсутствия любви, ожидаете, что кто-то заполнит этот пробел. Вы уверены, что ваша жизнь станет лучше, интереснее и насыщеннее только тогда, когда в ней появится любимый человек, который сделает вас нужным, значимым и полноценным.</important>\n\nТакая зависимость — это деструктивное состояние, которое подрывает вашу личность, самооценку и возможность строить здоровые отношения.\n\nПричины любовной зависимости могут быть разными, но чаще всего они уходят корнями в детство или юность.\n\nОсобенно подвержены этому люди с низкой самооценкой, которые боятся одиночества, сосредоточены на своих недостатках и не верят в свои силы и способности.\n\nНизкая самооценка, проистекающая из детства, воспринимается как неполноценность.\n\n<instagram ids=\"18042843029166400,17951316347979005\">\n\nКогда родители уделяют ребенку мало внимания и он испытывает недостаток родительской любви, во взрослой жизни он будет искать эти чувства у партнёров, формируя зависимые отношения.\n\nРассмотрим пример Виктории, 28 лет, которая проводит вечера и выходные в отчаянии, потому что верит: «Я могу быть счастливой только в отношениях. Без мужчины я ничто».\n\nДля неё быть любимой столь же важно, как дышать. Такая требовательность часто отталкивает людей.",
+          "oldText": "Liebe ist ein großartiges Gefühl, das von Poeten, Künstler und Musiker gefeiert wird. Sie beflügelt, inspiriert und vermittelt das Gefühl von Lebensfülle.\n\nNatürlich strebt jeder Mensch danach, zu lieben und geliebt zu werden.\n\nWenn sich Ihr Liebesverständnis jedoch auf die Überzeugung verkürzt: „Ich kann nicht wirklich glücklich und erfüllt sein, wenn ich keine*n Partner*in habe. Für mein Glück brauche ich unbedingt Liebe“, ist das bereits ein Zeichen von Abhängigkeit.\n\nWas bedeutet es, von Liebe abhängig zu sein?\n\nWenn Liebe zur pathologischen Notwendigkeit wird, ohne die Sie sich nicht glücklich fühlen können.\n\n<important>Sie leiden unter dem Fehlen von Liebe und erwarten, dass jemand diese Leere füllt. Sie sind überzeugt, Ihr Leben werde erst besser, interessanter und erfüllter, wenn ein geliebter Mensch erscheint, der Ihnen Sinn und Ganzheit gibt.</important>\n\nEine solche Abhängigkeit ist destruktiv: Sie untergräbt Persönlichkeit, Selbstwert und die Fähigkeit, gesunde Beziehungen aufzubauen.\n\nDie Ursachen für Liebesabhängigkeit sind vielfältig, reichen jedoch oft bis in Kindheit oder Jugend zurück.\n\nBesonders gefährdet sind Menschen mit geringem Selbstwert, die Angst vor Einsamkeit haben, sich auf eigene Schwächen fixieren und nicht an ihre Fähigkeiten glauben.\n\nEin niedriger, aus der Kindheit stammender Selbstwert wird als eigene Unzulänglichkeit erlebt.\n\nWenn Eltern wenig Aufmerksamkeit schenken und es an elterlicher Zuwendung mangelt, sucht man als Erwachsener diese Gefühle bei Partner – und entwickelt abhängige Beziehungsmuster.\n\nBetrachten wir das Beispiel von Viktoria (28), die Abende und Wochenenden in Verzweiflung verbringt, weil sie glaubt: „Ich kann nur in einer Beziehung glücklich sein. Ohne Mann bin ich nichts.“\n\nFür sie ist Geliebtwerden so wichtig wie Atmen. Diese Anspruchshaltung schreckt häufig ab.\n\nFür sie ist es ebenso lebensnotwendig, geliebt zu werden, wie zu atmen. Doch dieser hohe Anspruch führt oft dazu, dass Menschen sich von ihr distanzieren.",
+          "newText": "Liebe ist ein wundervolles Gefühl, das schon seit jeher von Dichtern, Künstlern und Musikern besungen wird. Sie verleiht Flügel, inspiriert und schenkt das Gefühl, das Leben in seiner Fülle zu erleben.\n\nEs ist nur natürlich, dass jeder von uns danach strebt, zu lieben und geliebt zu werden.\n\nWenn Ihr Verständnis von Liebe jedoch auf dem Glaubenssatz beruht: „Ich kann nur dann wirklich glücklich und erfüllt sein, wenn ich einen Partner habe. Für das vollkommene Glück muss ich geliebt werden“, dann ist dies bereits ein Anzeichen für eine Abhängigkeit.\n\nWas bedeutet es eigentlich, von der Liebe abhängig zu sein?\n\nEs bedeutet, dass die Liebe zu einem zwanghaften Bedürfnis wird, ohne das Sie kein Glück mehr empfinden können.\n\n<important>Sie leiden unter dem Gefühl, nicht genug Liebe zu haben, und erwarten, dass jemand anderes diese Lücke füllt. Sie sind davon überzeugt, dass Ihr Leben erst dann besser, interessanter und erfüllter wird, wenn ein geliebter Mensch in Ihr Leben tritt, der Ihnen das Gefühl gibt, gebraucht, wertvoll und vollständig zu sein.</important>\n\nEine solche Abhängigkeit ist ein destruktiver Zustand, der Ihre Persönlichkeit, Ihr Selbstwertgefühl und die Fähigkeit, gesunde Beziehungen aufzubauen, untergräbt.\n\nDie Ursachen für eine Liebesabhängigkeit können vielfältig sein, doch meistens liegen ihre Wurzeln in der Kindheit oder Jugend.\n\nBesonders anfällig sind Menschen mit einem geringen Selbstwertgefühl, die Angst vor dem Alleinsein haben, sich sehr auf ihre eigenen Unzulänglichkeiten konzentrieren und nicht an die eigenen Kräfte und Fähigkeiten glauben.\n\nEin geringes Selbstwertgefühl, das bereits in der Kindheit entstanden ist, wird oft als ein tiefes Gefühl der Unzulänglichkeit wahrgenommen.\n\n<instagram>\n\nWenn Eltern einem Kind wenig Aufmerksamkeit schenken und es einen Mangel an elterlicher Liebe erfährt, wird es im Erwachsenenalter versuchen, diese Gefühle bei Partnern zu finden, was oft in abhängigen Beziehungen endet.\n\nBetrachten wir das Beispiel von Victoria, 28 Jahre alt. Sie verbringt ihre Abende und Wochenenden oft in Verzweiflung, weil sie glaubt: „Ich kann nur in einer Beziehung glücklich sein. Ohne einen Mann bin ich nichts.“\n\nFür sie ist es so überlebenswichtig, geliebt zu werden, wie das Atmen selbst. Eine solche Bedürftigkeit wirkt auf andere oft abschreckend.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Translation A is much more natural, flows well, and maintains a consistent, empathetic tone. Translation B suffers from grammatical errors, awkward phrasing, and a messy ending.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The text ends with a repetitive, broken sentence structure that looks like a failed merge of two versions."
+                },
+                {
+                  "side": "old",
+                  "type": "other",
+                  "severity": "major",
+                  "note": "In the first paragraph, 'Künstler und Musiker' should be plural 'Künstler und Musiker' (declension error after 'von')."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The sentence 'Wenn Liebe zur pathologischen Notwendigkeit wird...' is a fragment (subordinate clause without a main clause)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of gender-star 'Partner*in' is modern but breaks the flow of the emotional narrative compared to A's smoother approach."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'das Leben in seiner Fülle zu erleben' is slightly wordy but very natural for the genre."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 96
+              },
+              "reason": "Перевод B звучит гораздо более естественно и профессионально. Перевод A содержит грубые грамматические ошибки в окончаниях существительных и дублирует последний абзац, что является критическим браком. Перевод B идеально выдерживает тон 'понимающего эксперта' и использует правильную терминологию (Glaubenssatz).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "other",
+                  "severity": "critical",
+                  "note": "Грубые ошибки в склонении: 'von Poeten, Künstler und Musiker' вместо 'Künstlern und Musikern'."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "В конце текста дважды повторен и перефразирован один и тот же абзац про Викторию."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование гендерно-нейтрального 'Partner*in' в данном художественно-терапевтическом контексте выглядит излишне технически и выбивается из плавного ритма текста."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "В предложении про Викторию можно было бы чуть более элегантно связать два предложения, но это не влияет на качество."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/screen_2/texts",
+          "ru": "В процессе анализа своих убеждений Виктория выписала недостатки и преимущества своего мышления.\n\nНедостатки звучали так:\n\n<li>Убеждение вгоняет меня в уныние, потому что я одна.</li>\n\n<li>Я теряю желание что-либо делать, изучать мир или заниматься хобби.</li>\n\n<li>Из-за этого я чувствую себя ленивой и несчастной.</li>\n\n<li>Это вызывает чувство жалости к себе</li>\n\n<li>Оно лишает меня гордости и уверенности, заставляя завидовать другим и испытывать разочарование.</li>\n\nЗатем она выписала преимущества убеждения:\n\n<li>Надежда найти партнёра, обрести любовь и безопасность.</li>\n\n<li>Оно дает мне цель и смысл жизни.</li>\n\nНасколько эти преимущества реальные?\n\nВиктория много лет считала, что она не может жить без мужчины, но это убеждение до сих пор не привлекло к ней желаемого партнера.\n\n<q author=\"Сенека\">Настоящее счастье заключается в том, чтобы быть довольным собой.</q>\n\nВиктория пришла к выводу, что слишком много значимости придаёт мужчинам, и это не привлекло ни одного из них.\n\nОна также осознала, что зависимые люди часто выглядят слишком требовательными, что затрудняет построение отношений.\n\nОна увидела, что люди, находящие счастье внутри себя, чаще всего привлекают других, потому что излучают радость и уверенность.\n\n<important>Любовная зависимость мешает строить здоровые отношения. Выражая потребность в другом человеке для собственного счастья, вы подсознательно сообщаете: «Люби меня, потому что сам по себе я ничего не стою». Такие отношения вряд ли могут быть здоровыми.</important>\n\nНо даже если вы будете состоять в отношениях, имея подобные убеждения, они вряд ли будут здоровыми. Ведь вы всецело рассчитываете на то, что определенный человек, которого вы подсознательно считаете источником своего счастья, будет рядом.\n\nИ готовы ради этого на все. Не получая «дозу» тех эмоций и чувств, в которых нуждаетесь, вы будете оказывать давление на своего партнера, чтобы почувствовать себя любимым, или начнете фантазировать о том, чтобы найти ту самую любовь на стороне.\n\nИ вам всегда будет недостаточно или «что-то не так», потому что вы возложили на другого человека ответственность за свое состояние.",
+          "oldText": "Bei der Analyse ihrer Überzeugungen notierte Viktoria Nachteile und vermeintliche Vorteile ihres Denkens.\n\nDie Nachteile lauteten so:\n\n<li>Die Überzeugung stürzt mich in Niedergeschlagenheit, weil ich allein bin.</li>\n\n<li>Ich verliere die Lust, etwas zu tun, die Welt zu entdecken oder meinen Hobbys nachzugehen.</li>\n\n<li>Dadurch fühle ich mich träge und unglücklich.</li>\n\n<li>Das weckt Selbstmitleid.</li>\n\n<li>Es raubt mir Stolz und Zuversicht, lässt mich andere beneiden und schürt Enttäuschung.</li>\n\nDann hielt sie die vermeintlichen Vorteile fest:\n\n<li>Hoffnung, eine*n Partner*in zu finden, Liebe und Sicherheit zu erleben.</li>\n\n<li>Sie gibt mir Richtung und Sinn.</li>\n\nWie real sind diese „Vorteile“?\n\nViktoria war jahrelang überzeugt, ohne Mann nicht leben zu können – doch diese Überzeugung hat ihr bisher keine gewünschte Partnerschaft gebracht.\n\n<q author=\"Seneca\">Wahres Glück besteht darin, mit sich selbst im Reinen zu sein.</q>\n\nViktoria erkannte, dass sie Männern übergroße Bedeutung beimisst – und genau das niemanden anzieht.\n\nZudem wurde ihr klar: Abhängige Menschen wirken oft zu fordernd – das erschwert den Beziehungsaufbau.\n\nSie sah, dass Menschen, die ihr Glück in sich selbst finden, andere eher anziehen, weil sie Freude und Selbstsicherheit ausstrahlen.\n\n<important>Liebesabhängigkeit verhindert gesunde Beziehungen. Wer seine Bedürftigkeit nach außen trägt, sendet unterschwellig: „Liebe mich, denn allein bin ich nichts wert.“ Solche Beziehungen sind kaum gesund.</important>\n\nUnd selbst innerhalb einer Beziehung bleiben sie fragil, wenn diese Überzeugungen bestehen: Sie verlassen sich vollständig auf eine bestimmte Person, die Sie als Quelle Ihres Glücks sehen.\n\nDafür sind Sie zu allem bereit. Bleibt die „Dosis“ an Gefühlen aus, setzen Sie die Beziehung unter Druck, um sich geliebt zu fühlen, oder idealisieren eine Liebe anderswo.\n\nEs wird stets zu wenig sein oder „irgendetwas nicht stimmen“, weil Sie einem anderen Menschen die Verantwortung für Ihren Zustand übertragen haben.",
+          "newText": "Im Zuge einer Analyse ihrer Überzeugungen hat Victoria die Vor- und Nachteile ihrer Denkweise aufgelistet.\n\nDie Nachteile lauteten wie folgt:\n\n<li>Dieser Glaube zieht mich runter, weil ich allein bin.</li>\n\n<li>Ich verliere die Lust, etwas zu unternehmen, die Welt zu entdecken oder meinen Hobbys nachzugehen.</li>\n\n<li>Dadurch fühle ich mich träge und unglücklich.</li>\n\n<li>Es löst Selbstmitleid in mir aus.</li>\n\n<li>Es raubt mir meinen Stolz und mein Selbstvertrauen und führt dazu, dass ich auf andere neidisch werde und Enttäuschung empfinde.</li>\n\nAnschließend notierte sie die Vorteile dieses Glaubenssatzes:\n\n<li>Die Hoffnung, einen Partner zu finden und Liebe sowie Sicherheit zu erfahren.</li>\n\n<li>Es gibt mir ein Ziel und einen Sinn im Leben.</li>\n\nWie real sind diese Vorteile tatsächlich?\n\nVictoria war jahrelang davon überzeugt, nicht ohne einen Mann leben zu können – doch genau dieser Glaube hat bisher nicht den gewünschten Partner zu ihr geführt.\n\n<q author=\"Seneca\">„Wahre Glückseligkeit liegt darin, mit sich selbst zufrieden zu sein.“</q>\n\nVictoria erkannte, dass sie Männern viel zu viel Bedeutung beimisst, was jedoch nicht dazu geführt hat, dass sie die gewünschten Partner anzieht.\n\nSie wurde sich auch bewusst, dass abhängige Menschen oft sehr fordernd wirken, was den Aufbau einer Beziehung erschwert.\n\nSie sah, dass Menschen, die ihr Glück in sich selbst finden, oft attraktiver auf andere wirken, weil sie Freude und Selbstvertrauen ausstrahlen.\n\n<important>Liebesabhängigkeit steht dem Aufbau gesunder Beziehungen im Weg. Wenn Sie Ihr Glück von einem anderen Menschen abhängig machen, vermitteln Sie unbewusst die Botschaft: „Liebe mich, denn für mich allein bin ich nichts wert.“ Solche Beziehungen können kaum gesund sein.</important>\n\nSelbst wenn Sie eine Beziehung eingehen, werden diese mit solchen Überzeugungen kaum gesund sein. Denn Sie verlassen sich voll und ganz darauf, dass eine bestimmte Person, die Sie unbewusst als Quelle Ihres Glücks betrachten, immer an Ihrer Seite ist.\n\nUnd Sie wären bereit, für dieses Ziel alles zu tun. Wenn Sie die benötigte „Dosis“ an Emotionen und Gefühlen nicht erhalten, werden Sie Ihren Partner unter Druck setzen, um sich geliebt zu fühlen, oder Sie beginnen davon zu träumen, die große Liebe woanders zu finden.\n\nZudem wird es Ihnen nie genug sein oder es wird immer „etwas nicht stimmen“, weil Sie die Verantwortung für Ihr eigenes Befinden auf eine andere Person übertragen haben.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Translation A is much more natural and stylistically sophisticated. It avoids the clunky, literal structures found in B and uses better psychological terminology (e.g., 'Bedürftigkeit' instead of a literal translation of 'need'). A also correctly handles the quote's typography.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The text sounds like a translation. Phrases like 'Dieser Glaube zieht mich runter' are too colloquial/weak for this context, and 'Wahre Glückseligkeit liegt darin...' is a bit heavy."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'Glaube' where 'Überzeugung' or 'Glaubenssatz' would be more professional in a CBT context."
+                },
+                {
+                  "side": "new",
+                  "type": "other",
+                  "severity": "minor",
+                  "note": "Used straight quotes in the Seneca quote instead of German low-high quotes."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'was jedoch nicht dazu geführt hat, dass sie die gewünschten Partner anzieht' is grammatically awkward/clunky."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Перевод A гораздо точнее следует оригиналу и соблюдает правила работы с цитатами. Перевод B допускает серьезную ошибку, используя гендерно-нейтральные конструкции (Partner*in) там, где в оригинале речь идет о конкретном примере Виктории, а также слишком сильно сокращает предложения, теряя эмоциональную глубину и связность текста.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование Gendersternchen (Partner*in) в контексте личного примера персонажа выглядит неестественно и избыточно."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Сильное сокращение предложений в последнем абзаце делает текст рваным и менее эмпатичным."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'Wer seine Bedürftigkeit nach außen trägt' — это вольная интерпретация, которая немного уходит от смысла оригинала."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/screen_3/texts",
+          "ru": "Очень важно научиться регулировать собственное настроение и находить счастье в самом себе. Это даст вам возможность почувствовать себя в равной степени живым и когда вы один, и когда вы вместе с любимым человеком.\n\nНо вы можете подумать: «Звучит конечно хорошо, но это неправдоподобно. Быть одному — это значит быть эмоциональным неудачником.»\n\nМногие верят, что любовь — двигатель мира. Вы видите это в рекламе, слышите в популярных песнях, читаете в стихах. Но на самом деле, любовь далеко не единственный путь к счастливой и полноценной жизни.\n\nБыть одному совершенно не равно быть несчастным. Большинство удовольствий в жизни мы получаем сами по себе.\n\nНапример, когда вы слушаете любимую музыку, танцуете, гуляете по красивым местам, читаете книгу или едите мороженое. Вам не нужна компания, чтобы испытать приятные ощущения.\n\n<q author=\"Оскар Уайльд\">Любовь к себе — начало романа, который длится всю жизнь.</q>\n\nКоличество удовольствий, которыми можно наслаждаться в одиночестве, бесконечно. А это значит, что вам доступно множество источников удовольствия независимо от того, есть кто-то рядом или нет.\n\nПодумайте какой ваш список удовольствий? Чем вы можете порадовать себя?\n\nИногда мы так сильно стремимся к совершенным отношениям и самой идее высокого чувства, что теряем из виду то, что нам действительно необходимо, чтобы испытать настоящую любовь.",
+          "oldText": "Es ist entscheidend, die eigene Stimmung regulieren zu lernen und das Glück in sich selbst zu finden. Dann fühlen Sie sich sowohl allein als auch mit Partner*in gleichermaßen lebendig.\n\nVielleicht denken Sie: „Klingt gut, ist aber unrealistisch. Alleinsein heißt emotional zu versagen.“\n\nViele glauben, Liebe sei der Motor der Welt – Werbung, Popmusik und Lyrik vermitteln das. Tatsächlich ist Liebe jedoch nicht der einzige Weg zu einem glücklichen, erfüllten Leben.\n\nAlleinsein bedeutet keineswegs Unglück. Die meisten Freuden erleben wir für uns selbst.\n\nZum Beispiel beim Hören Ihrer Lieblingsmusik, beim Tanzen, beim Spazierengehen an schönen Orten, beim Lesen oder beim Eisessen. Für angenehme Empfindungen braucht es keine Begleitung.\n\n<q author=\"Oscar Wilde\">Sich selbst zu lieben ist der Beginn einer lebenslangen Romanze.</q>\n\nDie Zahl der Genüsse, die Sie allein erleben können, ist nahezu unbegrenzt. Das heißt: Ihnen stehen unzählige Quellen von Freude zur Verfügung – unabhängig davon, ob jemand an Ihrer Seite ist oder nicht.\n\nWie sähe Ihre persönliche Genussliste aus? Womit könnten Sie sich heute etwas Gutes tun?\n\nMitunter jagen wir so sehr idealisierten Beziehungen und der Idee „großer Gefühle“ nach, dass wir aus dem Blick verlieren, was wir tatsächlich brauchen, um echte Liebe zu erleben.",
+          "newText": "Es ist sehr wichtig zu lernen, die eigene Stimmung selbst zu regulieren und das Glück in sich selbst zu finden. Das ermöglicht es Ihnen, sich lebendig zu fühlen – egal, ob Sie allein sind oder Zeit mit einem geliebten Menschen verbringen.\n\nAber vielleicht denken Sie: „Das klingt zwar schön, ist aber doch unrealistisch. Allein zu sein bedeutet, ein emotionaler Versager zu sein.“\n\nViele glauben, dass die Liebe der Motor der Welt ist. Man sieht es in der Werbung, hört es in populären Liedern und liest es in Gedichten. Doch in Wirklichkeit ist die Liebe bei Weitem nicht der einzige Weg zu einem glücklichen und erfüllten Leben.\n\nAllein zu sein bedeutet ganz und gar nicht, unglücklich zu sein. Die meisten Freuden des Lebens können wir ganz für uns allein genießen.\n\nZum Beispiel, wenn Sie Ihre Lieblingsmusik hören, tanzen, durch schöne Landschaften spazieren, ein Buch lesen oder ein Eis essen. Sie brauchen keine Gesellschaft, um angenehme Gefühle zu erleben.\n\n<q author=\"Oscar Wilde\">„Selbstliebe ist der Beginn einer Romanze, die ein Leben lang währt.“</q>\n\nDie Möglichkeiten, in der Einsamkeit Freude zu finden, sind unendlich. Das bedeutet, dass Ihnen zahlreiche Quellen der Freude zur Verfügung stehen, ganz gleich, ob jemand an Ihrer Seite ist oder nicht.\n\nÜberlegen Sie einmal: Wie sieht Ihre persönliche Liste an Freuden aus? Was können Sie tun, um sich selbst eine Freude zu bereiten?\n\nManchmal streben wir so sehr nach der perfekten Beziehung und der Vorstellung von der großen Liebe, dass wir aus den Augen verlieren, was wir eigentlich brauchen, um wahre Liebe zu erfahren.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Translation A is much more natural and sophisticated. It avoids the heavy, clunky sentence structures and 'translationese' present in B. A uses elegant phrasing (e.g., 'Die Zahl der Genüsse' vs B's 'Die Möglichkeiten, in der Einsamkeit Freude zu finden') and correctly handles the quote's typography.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Contains several 'translationese' constructions (e.g., 'Allein zu sein bedeutet, ein emotionaler Versager zu sein' is very heavy; 'in der Einsamkeit' carries a negative connotation of loneliness, whereas the original is about being alone/solitude)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The quote uses standard quotes instead of the required German typographic quotes „ “."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'wie sieht Ihre persönliche Liste an Freuden aus' is slightly clunky compared to A's 'Wie sähe Ihre persönliche Genussliste aus'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Перевод A звучит гораздо более естественно и эмпатично, соблюдая баланс между экспертностью и дружелюбием. Перевод B страдает от излишней лаконичности, которая превращает текст в сухой список, и содержит стилистические ошибки (например, 'emotional zu versagen' вместо 'emotionaler Versager').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Конструкция 'Alleinsein heißt emotional zu versagen' звучит крайне неестественно; в немецком это звучит как 'одиночество означает потерпеть эмоционавое фиаско', а не как описание человека (emotionaler Versager)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'beim + Gerundium' (beim Hören, beim Tanzen...) делает текст тяжелым и похожим на инструкцию или перечисление в медицинском протоколе, теряя живой ритм оригинала."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование гендерно-нейтрального 'Partner*in' в данном контексте выглядит избыточным и немного выбивается из общего тона, хотя и допустимо в современной Германии."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "В цитате Уайльда использованы двойные кавычки внутри тега <q>, что технически может быть лишним, если система сама управляет кавычками, но с точки зрения языка это верно."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/exercise/screen_3/texts",
+          "ru": "<h2>Корректировка убеждений</h2>\n\nЛюбовь, отношения и брак не являются необходимым условием счастья и повышения самооценки, иногда их попросту недостаточно.\n\nДоказательство тому — миллионы мужчин и женщин, которые состоят в браке и при этом несчастны.\n\nЕсли бы любовь была лекарством от одиночества, проблем, плохого настроения, депрессий, тогда все психологи остались бы без работы.\n\nНо это увы не так, наличие партнера не гарантирует счастливой жизни. И это надо осознать и принять.\n\nДля того чтобы начать работу с убеждением – сформулируйте и выпишите его. Оно может звучать по-разному:\n\n<li>Если у меня нет пары, я несчастлив</li>\n\n<li>Если меня не любят, значит я неудачник</li>\n\n<li>Без отношений я неполноценный</li>\n\nЗатем, распишите как именно ваше убеждение мешает вам. Например:\n\n<li>чрезмерно высокие требования к себе, которым нет конца, кажется, что я недостаточно хорош для отношений</li>\n\n<li>нереалистичные ожидания от партнера, глобальные выводы о любви и не любви вместо внимания к конкретным проблемам</li>\n\n<li>постоянная неудовлетворенность и подавленное настроение, подпитываемые любыми ситуациями одиночества</li>\n\nПосле этого, напишите контраргументы. Это может быть сложным процессом и возможно займет не один день, дополняйте список по мере того, как приходят новые мысли.\n\nНапример, для убеждения «Быть одиноким – ужасно и унизительно» можно записать следующие контраргументы:\n\n<li>когда человек один, это дает ему возможность лучше узнать себя</li>\n\n<li>без отношений есть возможность попробовать что-то новое, сделать то, что в отношениях будет гораздо сложнее</li>\n\n<li>лучше быть одному, чем с неподходящим партнером</li>\n\nИ самый главный элемент этого процесса – замените ваше старое убеждение на новое. Оно должно звучать реалистично и рационально, чтобы вы верили в него.\n\nНапример: «Одиночество бывает приятным и полезным, в нем можно отдохнуть и лучше узнать себя. А любовь проявляется в разных отношениях.\n\nДаже при отсутствии партнера можно чувствовать близость с людьми, делиться переживаниями и проявлять тепло. Стоит опираться на то, каких отношений хочу лично я, и, если у меня их нет — задаться целью и попытаться их создать.\n\nНо отсутствие партнера не делает меня неполноценным. Также как и желание иметь партнера не делает меня слабым и зависимым.»\n\n<important>Перечитывайте эти записи каждый день в течение 2-3 недель, можете дополнять их или менять. Таким образом, у вас получится преодолеть негативный образ мышления и положить начало своим изменениям.</important>\n\nЛюбовь — чудесный опыт, но, как и любой другой, может быть положительным и отрицательным и не должен определять, кто мы и зачем мы здесь.\n\nЖелание и потребность — это не одно и то же. Кислород — это потребность, а любовь — это желание.\n\nЛюбовь не является потребностью взрослого человека!\n\nЖелание построить любовные отношения — это нормально. В нем нет ничего плохого. Хорошие отношения с любимым человеком — это восхитительное удовольствие.\n\nНо для того, чтобы выжить или испытать наивысшее счастье, вам не требуется ни одобрение, ни любовь, ни внимание другого человека.",
+          "oldText": "<h2>Korrektur von Überzeugungen</h2>\n\nLiebe, Beziehungen und Ehe sind keine Voraussetzung für Glück und Selbstwertsteigerung, manchmal sind sie einfach nicht genug.\n\nDer Beweis dafür sind Millionen von Männern und Frauen, die verheiratet sind und dennoch unglücklich.\n\nWenn Liebe ein Heilmittel gegen Einsamkeit, Probleme, schlechte Laune und Depressionen wäre, wären alle Psychologen arbeitslos.\n\nAber leider ist das nicht der Fall, ein Partner garantiert nicht automatisch ein glückliches Leben. Das muss man anerkennen und akzeptieren.\n\nUm mit einer Überzeugung zu arbeiten, formulieren und schreiben Sie sie auf. Sie kann sich auf verschiedene Weise äußern:\n\n<li>Wenn ich keinen Partner habe, bin ich unglücklich.</li>\n\n<li>Wenn mich niemand liebt, bin ich ein Versager.</li>\n\n<li>Ohne Beziehung bin ich unvollständig.</li>\n\nDann beschreiben Sie, wie Ihre Überzeugung Sie hindert. Zum Beispiel:\n\n<li>übermäßig hohe Anforderungen an sich selbst, die keine Grenzen haben, das Gefühl, nicht gut genug für eine Beziehung zu sein.</li>\n\n<li>unrealistische Erwartungen an den Partner, globale Schlussfolgerungen über Liebe und Nicht-Liebe anstelle von Aufmerksamkeit für konkrete Probleme.</li>\n\n<li>ständige Unzufriedenheit und gedrückte Stimmung, genährt von jeder Situation der Einsamkeit.</li>\n\nDanach schreiben Sie Gegenargumente. Dieser Prozess kann schwierig sein und möglicherweise mehrere Tage in Anspruch nehmen, aber ergänzen Sie die Liste, sobald neue Gedanken auftauchen.\n\nFür die Überzeugung „Allein zu sein ist schrecklich und beschämend“ könnten folgende Gegenargumente sinnvoll sein:\n\n<li>Wenn man alleine ist, hat man die Chance, sich selbst besser kennenzulernen.</li>\n\n<li>Ohne Beziehung hat man die Möglichkeit, Neues auszuprobieren, Dinge zu tun, die in einer Beziehung viel schwieriger wären.</li>\n\n<li>Es ist besser, alleine zu sein, als mit dem falschen Partner.</li>\n\nDer wichtigste Teil dieses Prozesses: Ersetzen Sie Ihre alte Überzeugung durch eine neue. Sie sollte realistisch und rational klingen, damit Sie daran glauben.\n\nZum Beispiel: „Alleinsein kann angenehm und nützlich sein, es gibt mir die Möglichkeit, mich auszuruhen und mich selbst besser kennenzulernen. Und Liebe zeigt sich in verschiedenen Beziehungen.\n\nAuch ohne Partner kann man Nähe zu Menschen empfinden, seine Gefühle teilen und Wärme erfahren. Ich sollte darauf achten, welche Art von Beziehung ich möchte, und wenn ich sie nicht habe, sollte ich das Ziel setzen, sie zu finden.\n\nAber der Mangel an einem Partner macht mich nicht unvollständig. Ebenso wie der Wunsch nach einem Partner macht mich nicht schwach oder abhängig.“\n\n<important>Lesen Sie diese Einträge täglich für 2–3 Wochen, und ergänzen oder ändern Sie sie nach Bedarf. So können Sie ein negatives Denkmuster überwinden und den Weg zu Ihren Veränderungen beginnen.</important>\n\nLiebe ist eine wundervolle Erfahrung, aber wie jede andere kann sie sowohl positiv als auch negativ sein und sollte nicht bestimmen, wer wir sind und warum wir hier sind.\n\nBedürfnis und Wunsch sind nicht dasselbe. Sauerstoff ist ein Bedürfnis, aber Liebe ist ein Wunsch.\n\nLiebe ist kein Bedürfnis für erwachsene Menschen!\n\nDer Wunsch, eine Liebesbeziehung aufzubauen, ist normal. Daran ist nichts Schlechtes. Eine gute Beziehung zu einem geliebten Menschen ist ein wunderbares Vergnügen.\n\nAber um zu überleben oder das größte Glück zu erleben, brauchen Sie weder die Zustimmung noch die Liebe oder Aufmerksamkeit eines anderen Menschen.",
+          "newText": "<h2>Überzeugungen hinterfragen</h2>\n\nLiebe, Beziehungen und die Ehe sind keine Voraussetzung für Glück oder ein gesundes Selbstwertgefühl; manchmal reichen sie schlichtweg nicht aus.\n\nEin Beweis dafür sind Millionen von Menschen, die verheiratet, aber dennoch unglücklich sind.\n\nWäre die Liebe ein Heilmittel gegen Einsamkeit, Probleme, schlechte Laune oder Depressionen, müssten Psychologen ihren Beruf aufgeben.\n\nDoch so ist es nicht: Einen Partner zu haben, garantiert kein glückliches Leben. Das ist eine Erkenntnis, die man akzeptieren muss.\n\nUm an einer Überzeugung zu arbeiten, formulieren und notieren Sie diese zuerst. Sie könnte zum Beispiel so klingen:\n\n<li>Wenn ich keinen Partner habe, bin ich unglücklich</li>\n\n<li>Wenn ich nicht geliebt werde, bin ich ein Versager</li>\n\n<li>Ohne eine Beziehung bin ich minderwertig</li>\n\nBeschreiben Sie anschließend genau, wie diese Überzeugung Sie einschränkt. Zum Beispiel:\n\n<li>übermäßig hohe Ansprüche an mich selbst, die kein Ende nehmen; das Gefühl, nicht gut genug für eine Beziehung zu sein</li>\n\n<li>unrealistische Erwartungen an den Partner; dazu, aus einzelnen Situationen globale Schlüsse über Liebe und Nichtliebe zu ziehen, statt sich auf konkrete Probleme zu konzentrieren</li>\n\n<li>ständige Unzufriedenheit und gedrückte Stimmung, die durch jede Situation der Einsamkeit verstärkt wird</li>\n\nSchreiben Sie danach Gegenargumente auf. Dies kann ein schwieriger Prozess sein, der mehrere Tage in Anspruch nehmen kann. Ergänzen Sie die Liste, sobald Ihnen neue Gedanken kommen.\n\nFür die Überzeugung „Allein zu sein ist schrecklich und demütigend“ könnten beispielsweise folgende Gegenargumente hilfreich sein:\n\n<li>Wenn ein Mensch allein ist, gibt ihm das die Möglichkeit, sich selbst besser kennenzulernen</li>\n\n<li>Ohne eine Beziehung hat man die Freiheit, Neues auszuprobieren oder Dinge zu tun, die in einer Partnerschaft viel schwieriger wären</li>\n\n<li>Es ist besser, allein zu sein, als mit dem falschen Partner zusammen</li>\n\nDas wichtigste Element dieses Prozesses ist, Ihre alte Überzeugung durch eine neue zu ersetzen. Diese sollte realistisch und rational klingen, damit Sie ihr glauben können.\n\nZum Beispiel: „Einsamkeit kann angenehm und nützlich sein; sie bietet Raum, um zur Ruhe zu kommen und sich selbst besser kennenzulernen. Zudem zeigt sich Liebe in ganz unterschiedlichen Formen der Verbundenheit.“\n\nAuch ohne Partner kann man Nähe zu anderen Menschen spüren, Erfahrungen teilen und Wärme empfinden. Es lohnt sich, zu reflektieren, welche Art von Beziehung ich persönlich möchte, und – falls ich sie nicht habe – mir das Ziel zu setzen, sie aufzubauen.\n\nAber das Fehlen eines Partners macht mich nicht minderwertig. Ebenso wenig macht der Wunsch nach einem Partner mich schwach oder abhängig.“\n\n<important>Lesen Sie diese Notizen zwei bis drei Wochen lang jeden Tag wieder. Sie können sie ergänzen oder ändern. Auf diese Weise lernen Sie, negative Denkmuster zu überwinden und legen den Grundstein für Ihre Veränderung.</important>\n\nLiebe ist eine wunderbare Erfahrung, aber wie alles andere kann sie sowohl positiv als auch negativ sein. Sie sollte nicht definieren, wer wir sind oder was unser Sinn im Leben ist.\n\nEin Wunsch und ein Bedürfnis sind nicht dasselbe. Sauerstoff ist ein Bedürfnis, Liebe hingegen ist ein Wunsch.\n\nLiebe ist kein Bedürfnis eines erwachsenen Menschen!\n\nDer Wunsch, eine Liebesbeziehung aufzubauen, ist völlig normal. Daran ist nichts falsch. Eine gute Beziehung mit einem geliebten Menschen ist ein wunderbares Glück.\n\nDoch um zu überleben oder wahres Glück zu erfahren, benötigen Sie weder die Bestätigung noch die Liebe oder die Aufmerksamkeit eines anderen Menschen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Перевод B звучит гораздо более естественно и профессионально. Он избегает калькирования структуры русского языка и использует более богатый, характерный для немецкой психотерапевтической литературы лексикон (например, 'minderwertig' вместо 'unvollständig' в контексте самооценки, и 'Verbundenheit' вместо простого 'Beziehungen').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Текст местами звучит суховато и слишком близко к структуре оригинала (например, 'Korrektur von Überzeugungen' — звучит как технический процесс, а не терапевтическая работа)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'macht mich nicht schwach oder abhängig' грамматически верна, но в B вариант 'macht mich schwach oder abhängig' звучит более гладко в контексте противопоставления."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Перевод A звучит гораздо более естественно и профессионально. Он избегает калькирования структуры русского предложения и использует более богатый, подходящий для терапевтического контекста лексикон. Перевод B местами звучит тяжеловесно и содержит грамматические шероховатости (например, пропуск глагола в одном из предложений и не совсем удачные конструкции).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "В предложении 'Der Beweis dafür sind Millionen von Männern und Frauen, die verheiratet sind und dennoch unglücklich' пропущен глагол (должно быть 'unglücklich sind')."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'Korrektur von Überzeugungen' звучит слишком технически/сухо по сравнению с более естественным 'Überzeugungen hinterfragen'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'warum wir hier sind' (почему мы здесь) — это калька с английского/русского, в немецком в таком контексте лучше звучит 'was unser Sinn im Leben ist'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'unvollständig' для 'неполноценный' допустимо, но 'minderwertig' (как в A) в контексте КПТ и самооценки является более точным термином."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/exercise/screen_2/texts",
+          "ru": "<h2>Лист предполагаемого удовольствия</h2>\n\nСчастье можно находить каждый день в малых радостях, в собственном развитии, в дружбе и множестве других аспектов жизни.\n\nНо скорее всего, вы так не думаете и уверены, что не можете быть счастливым без другого человека.\n\nЧтобы проверить это убеждение на реальность используйте «Лист предполагаемого удовольствия». В нем несколько столбцов, где вам надо будет спрогнозировать и указать фактическую степень удовольствия, которое вы получаете от различных занятий (работы и отдыха) в одиночестве или в компании других людей.\n\n<li>В первой колонке укажите дату эксперимента</li>\n\n<li>Во второй запишите несколько действий, которые планируете сделать в этот день в рамках эксперимента (Рекомендуем провести 40–50 экспериментов в течение двух-трех недель. Выберите занятия, которые обычно приносят вам чувство удовлетворенности или наслаждения, либо те, что имеют потенциал для обучения или личного роста.)</li>\n\n<li>В третьей колонке запишите, с кем вы будете их делать. Если в одиночку, напишите: «Я».</li>\n\n<important>В четвертой колонке предположите, сколько удовольствия вам принесет то или иное занятие, оценивая его по шкале от 0 до 100%, — чем больше число, тем выше ожидаемое удовольствие.</important>\n\n<li>Очень важно заполнять четвертую колонку до того, как приступите к запланированному занятию, а не после! Заполнив первые четыре колонки, перейдите к действию.</li>\n\nПосле этого, в пятую колонку запишите реальную степень удовольствия, используя ту же систему оценку — от 0 до 100%.\n\nПроведя ряд таких экспериментов, вы сможете проанализировать собранные вами данные и узнаете о себе много интересного.\n\nВо-первых, сравнивая предполагаемое удовольствие (колонка 4) с реальным (колонка 5), вы узнаете, насколько точны ваши прогнозы.\n\n<q author=\"Элеонора Рузвельт\">Никто не может заставить вас чувствовать себя неполноценным без вашего согласия.</q>\n\nВы можете осознать, что обычно недооцениваете степень удовольствия, которое ожидаете получить, особенно когда делаете что-то в одиночку.\n\nВозможно, вы также удивитесь, узнав, что занятия с кем-то не всегда оправдывают ваши ожидания.\n\nНа самом деле вы даже можете обнаружить, что во множестве случаев проводить время одному вам было приятнее, чем в компании.\n\nА также вы можете увидеть, что самые высокие оценки, которыми вы отметили одиночные занятия, равны оценкам занятий в компании или даже выше них.",
+          "oldText": "<h2>Liste der vermuteten Freude</h2>\n\nGlück lässt sich jeden Tag in kleinen Freuden finden, in persönlicher Entwicklung, in Freundschaften und vielen anderen Lebensbereichen.\n\nAber wahrscheinlich denken Sie nicht so und sind überzeugt, dass Sie ohne eine andere Person nicht glücklich sein können.\n\nUm diese Überzeugung auf ihre Realität zu überprüfen, verwenden Sie die „Liste der vermuteten Freude“. Diese enthält mehrere Spalten, in denen Sie vorhersagen und die tatsächliche Freude aufzeichnen, die Sie bei verschiedenen Aktivitäten (Arbeit und Freizeit) alleine oder in Gesellschaft anderer Menschen empfinden.\n\n<li>In der ersten Spalte tragen Sie das Datum des Experiments ein.</li>\n\n<li>In der zweiten Spalte notieren Sie einige Aktivitäten, die Sie an diesem Tag im Rahmen des Experiments durchführen möchten (Wir empfehlen, 40–50 Experimente über zwei bis drei Wochen durchzuführen. Wählen Sie Aktivitäten, die normalerweise Zufriedenheit oder Freude bringen oder die Potenzial für Lernen oder persönliches Wachstum haben).</li>\n\n<li>In der dritten Spalte schreiben Sie auf, mit wem Sie diese Aktivitäten durchführen werden. Wenn alleine, schreiben Sie: „Ich“. </li>\n\n<important>In der vierten Spalte schätzen Sie, wie viel Freude diese Aktivität Ihnen bringen wird, auf einer Skala von 0 bis 100 %, wobei höhere Werte mehr Freude erwarten lassen.</important>\n\n<li>Es ist wichtig, die vierte Spalte vor der Durchführung der Aktivität auszufüllen, nicht danach! Nachdem Sie die ersten vier Spalten ausgefüllt haben, gehen Sie zur Handlung über.</li>\n\nNach der Aktivität tragen Sie in die fünfte Spalte die tatsächliche Freude ein, ebenfalls auf einer Skala von 0 bis 100 %.\n\nNach einer Reihe solcher Experimente können Sie die gesammelten Daten analysieren und viele interessante Dinge über sich selbst herausfinden.\n\nVergleichen Sie zunächst die vermutete Freude (Spalte 4) mit der tatsächlichen (Spalte 5), um herauszufinden, wie genau Ihre Vorhersagen waren.\n\n<q author=\"Eleanor Roosevelt\">Niemand kann dich ohne dein Einverständnis fühlen lassen, dass du unvollständig bist.</q>\n\nSie werden möglicherweise feststellen, dass Sie normalerweise die Freude, die Sie beim Alleinsein erleben, unterschätzen.\n\nEs könnte auch überraschend sein, dass Aktivitäten mit anderen nicht immer Ihre Erwartungen erfüllen.\n\nTatsächlich könnten Sie entdecken, dass Sie in vielen Fällen mehr Freude daran haben, Zeit alleine zu verbringen, als in Gesellschaft.\n\nUnd Sie könnten feststellen, dass die höchsten Bewertungen für Allein-Aktivitäten genauso hoch oder sogar höher sind als für Aktivitäten in Gesellschaft.",
+          "newText": "<h2>Liste der erwarteten Freude</h2>\n\nGlück kann man jeden Tag in kleinen Momenten finden: in der eigenen Entwicklung, in Freundschaften und in vielen anderen Aspekten des Lebens.\n\nWahrscheinlich denken Sie jedoch nicht so und sind davon überzeugt, dass Sie ohne einen anderen Menschen nicht glücklich sein können.\n\nUm diese Überzeugung auf den Prüfstand zu stellen, nutzen Sie das „Blatt der erwarteten Freude“. Es enthält mehrere Spalten, in denen Sie die zu erwartende sowie die tatsächliche Intensität der Freude prognostizieren und angeben sollen, die Sie bei verschiedenen Aktivitäten (Arbeit und Freizeit) erleben – entweder allein oder in Gesellschaft anderer.\n\n<li>Tragen Sie in der ersten Spalte das Datum des Experiments ein</li>\n\n<li>Notieren Sie in der zweiten Spalte einige Aktivitäten, die Sie an diesem Tag im Rahmen des Experiments planen (Wir empfehlen, über zwei bis drei Wochen hinweg etwa 40–50 Experimente durchzuführen. Wählen Sie Tätigkeiten, die Ihnen normalerweise ein Gefühl der Zufriedenheit oder Freude bereiten, oder solche, die Potenzial für Lernen oder persönliches Wachstum bieten.)</li>\n\n<li>Schreiben Sie in die dritte Spalte, mit wem Sie diese Aktivitäten ausführen werden. Wenn Sie allein sind, schreiben Sie: „Ich“.</li>\n\n<important>Schätzen Sie in der vierten Spalte voraus, wie viel Freude Ihnen die jeweilige Tätigkeit bereiten wird, indem Sie diese auf einer Skala von 0 bis 100 % bewerten – je höher die Zahl, desto größer die erwartete Freude.</important>\n\n<li>Es ist sehr wichtig, die vierte Spalte auszufüllen, BEVOR Sie mit der geplanten Tätigkeit beginnen, und nicht erst danach! Sobald Sie die ersten vier Spalten ausgefüllt haben, gehen Sie zur Tat über.</li>\n\nTragen Sie anschließend in die fünfte Spalte die tatsächliche Intensität der Freude ein, wobei Sie dasselbe Bewertungssystem verwenden – von 0 bis 100 %.\n\nNachdem Sie eine Reihe solcher Experimente durchgeführt haben, können Sie die gesammelten Daten analysieren und werden viel Interessantes über sich selbst erfahren.\n\nErstens werden Sie durch den Vergleich der erwarteten Freude (Spalte 4) mit der tatsächlichen Freude (Spalte 5) feststellen, wie genau Ihre Prognosen sind.\n\n<q author=\"Eleanor Roosevelt\">„Niemand kann Ihnen das Gefühl geben, minderwertig zu sein, ohne dass Sie zustimmen.“</q>\n\nVielleicht werden Sie erkennen, dass Sie die Freude, die Sie erwarten, oft unterschätzen – besonders wenn Sie etwas alleine unternehmen.\n\nMöglicherweise werden Sie auch überrascht sein, wenn Sie feststellen, dass Aktivitäten in Gesellschaft nicht immer Ihren Erwartungen entsprechen.\n\nTatsächlich könnten Sie sogar entdecken, dass es Ihnen in vielen Fällen angenehmer war, Zeit allein zu verbringen als in Gesellschaft.\n\nZudem können Sie sehen, dass die höchsten Werte, die Sie für Einzelaktivitäten vergeben haben, gleichauf mit den Werten für Aktivitäten in Gesellschaft liegen oder diese sogar übertreffen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 96
+              },
+              "reason": "Translation A is a high-quality, professional text that sounds natural to a native speaker and adheres to all stylistic guidelines. Translation B contains a critical grammatical error in the quote and uses awkward, non-native phrasing throughout.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The quote 'Niemand kann dich ohne dein Einverständnis fühlen lassen, dass du unvollständig bist' is grammatically incorrect and sounds like a machine translation. It should be 'Niemand kann Ihnen das Gefühl geben...'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The text switches from 'Sie' (implied) to 'dich' in the quote, breaking the consistency of the formal address required for the target market."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Phrases like 'auf ihre Realität zu überprüfen' are heavy calques from Russian/English; 'auf den Prüfstand stellen' (used in A) is much more idiomatic."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure in the fourth column instruction is clunky and lacks the flow of a professional guide."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 94
+              },
+              "reason": "Перевод B звучит гораздо естественнее и профессиональнее. Перевод A содержит грубую стилистическую ошибку в цитате Рузвельт (неправильное использование глагола 'fühlen lassen') и звучит как калька. Перевод B использует правильную терминологию ('auf den Prüfstand stellen') и соблюдает вежливую форму 'Sie' во всем тексте, в то время как A срывается на 'dich' в цитате, что нарушает единообразие.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "critical",
+                  "note": "Конструкция 'Niemand kann dich... fühlen lassen' — это грамматически неверная калька. В немецком нельзя сказать 'jemanden fühlen lassen, dass...'. Правильно: 'jemandem das Gefühl geben, dass...'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Переход с вежливого 'Sie' на 'dich' в цитате нарушает общую тональность и правила обращения."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'Um diese Überzeugung auf ihre Realität zu überprüfen' звучит тяжеловесно и неестественно."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "В списке <li> в некоторых пунктах отсутствуют точки в конце, что допустимо, но требует единообразия (хотя в оригинале их тоже нет)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/description",
+          "ru": "Любовь, воспетая поэтами и художниками, окрыляет и дарит ощущение полноты жизни. Однако превращение любви в патологическую потребность разрушает личность и мешает строить здоровые отношения, особенно у людей с низкой самооценкой. Настоящее счастье и полноценность жизни можно найти, научившись регулировать своё настроение и наслаждаться удовольствиями, которые не зависят от наличия партнёра.",
+          "oldText": "Liebe, von Dichter und Künstler besungen, beflügelt und lässt das Leben erfüllter erscheinen. Wird sie jedoch zur pathologischen Bedürftigkeit, zerstört sie die Persönlichkeit und verhindert gesunde Beziehungen – besonders bei Menschen mit geringem Selbstwert. Echtes Glück und Lebensfülle lassen sich finden, wenn wir unsere Stimmung regulieren lernen und Genüsse kultivieren, die nicht von einer Partnerschaft abhängen.",
+          "newText": "Liebe, wie sie von Dichtern und Künstlern besungen wird, verleiht Flügel und schenkt das Gefühl, das Leben in seiner Fülle zu genießen. Wenn Liebe jedoch zu einem zwanghaften Bedürfnis wird, kann dies die Persönlichkeit schwächen und es erschweren, gesunde Beziehungen aufzubauen – besonders bei Menschen mit geringem Selbstwertgefühl. Wahres Glück und eine erfüllte Lebensqualität lassen sich stattdessen dadurch finden, dass man lernt, die eigene Stimmung selbst zu regulieren und Freude an Dingen zu finden, die unabhängig von einem Partner existieren.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Перевод A звучит гораздо более литературно, лаконично и естественно для немецкого языка. Перевод B перегружен тяжеловесными конструкциями и кальками (например, 'verleiht Flügel' вместо 'beflügelt' или 'unabhängig von einem Partner existieren'), что делает его менее приятным для чтения.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Избыточность и тяжеловесность синтаксиса (Nominalstil/Schachtelsätze), что делает текст менее эмпатичным и более сухим."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'unabhängig von einem Partner existieren' звучит неестественно в контексте удовольствий; лучше использовать 'unabhängig von einer Partnerschaft'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 92
+              },
+              "reason": "Перевод A звучит гораздо более естественно и литературно, соблюдая баланс между эмпатией и качественной прозой. Перевод B содержит грамматические ошибки и стилистические огрехи, которые делают его менее профессиональным.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Грамматическая ошибка в начале: 'von Dichter und Künstler' вместо 'von Dichtern und Künstlern' (нужен дательный падеж множественного числа)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'lässt das Leben erfüllter erscheinen' (заставляет жизнь казаться более наполненной) — это смысловое ослабление оригинала 'дарит ощущение полноты жизни'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Selbstwert' вместо 'Selbstwertgefühl' допустимо, но в данном контексте звучит суховато."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/exercise/description",
+          "ru": "Статья посвящена исследованию счастья и убеждений, связанных с любовью и отношениями. В ней объясняется, что счастье можно достигать разными способами, и предлагаются техники для изменения негативных убеждений, связанных с одиночеством. Статья учит видеть радость в повседневных вещах и развиваться независимо от наличия романтических отношений.",
+          "oldText": "Der Beitrag untersucht das Thema Glück und die Überzeugungen rund um Liebe und Beziehungen. Es wird erklärt, dass Glück auf verschiedene Arten erreicht werden kann, und es werden Techniken vorgeschlagen, um negative Überzeugungen über Einsamkeit zu verändern. Der Artikel lehrt, Freude in alltäglichen Dingen zu finden und sich unabhängig von romantischen Beziehungen weiterzuentwickeln.",
+          "newText": "Dieser Artikel befasst sich mit der Erforschung von Glück und den Überzeugungen, die mit Liebe und Beziehungen verbunden sind. Er erklärt, dass Glück auf vielfältige Weise erreicht werden kann, und bietet Techniken an, um negative Überzeugungen im Zusammenhang mit dem Alleinsein zu verändern. Der Artikel zeigt, wie man Freude in den alltäglichen Dingen findet und sich unabhängig von einer romantischen Beziehung weiterentwickelt.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Перевод A звучит более естественно и профессионально. Перевод B страдает от тяжеловесных конструкций (Nominalstil), характерных для кальки с русского, например, 'befasst sich mit der Erforschung von', что звучит избыточно.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'befasst sich mit der Erforschung von' слишком тяжеловесна и академична для данного контекста; лучше использовать глагол 'untersucht'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Alleinsein' вместо 'Einsamkeit' меняет оттенок: 'Alleinsein' — это состояние одиночества (быть одному), а 'Einsamkeit' — это чувство одиночества (психологический аспект), что ближе к оригиналу."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Перевод A звучит более естественно и профессионально, избегая избыточного использования безличных конструкций (es wird...), которые характерны для тяжелого стиля. Перевод B страдает от повторения 'es wird' и менее удачного подбора слов (Einsamkeit вместо Alleinsein в данном контексте).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Избыточное использование пассивных безличных конструкций 'Es wird erklärt' и 'es werden vorgeschlagen' делает текст сухим и академичным."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Einsamkeit' (одиночество как чувство/страдание) вместо 'Alleinsein' (состояние одиночества) немного меняет эмоциональный оттенок оригинала."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/love.json",
+          "lang": "de",
+          "key": "/exercise/title",
+          "ru": "Как избавиться от любовной зависимости?",
+          "oldText": "Wie befreie ich mich von Liebesabhängigkeit?",
+          "newText": "Wie kann man eine Liebesabhängigkeit überwinden?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Перевод B звучит гораздо естественнее и профессиональнее. Перевод A содержит грамматическую неточность (отсутствие артикля перед Liebesabhängigkeit) и звучит как калька с русского.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Отсутствует артикль перед существительным 'Liebesabhängigkeit', что делает фразу грамматически незавершенной. Также глагол 'befreien' в данном контексте звучит менее естественно, чем 'überwinden'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование первого лица 'ich' в заголовке делает его слишком узким, в то время как оригинал задает общий вопрос."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Перевод A звучит более естественно и профессионально для заголовка статьи или раздела. Перевод B использует форму 'ich', что делает заголовок слишком личным и менее подходящим для общего вопроса, а также звучит немного тяжеловесно.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование первого лица (ich) в общем вопросе делает тон менее экспертным и более разговорным, чем того требует контекст темы."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "en": [
+    {
+      "order": 0,
+      "A_score": 92,
+      "B_score": 96,
+      "winner_for": "NEW",
+      "A_issues": "Accuracy: missed 'neurosis' in screen 1.1; Style: 'unhelpful beliefs' is slightly weaker than 'destructive mindsets' for the context; Fluency: 'loss of energy' is a bit literal for 'упадок сил' compared to 'exhaustion'.",
+      "B_issues": "Minor: 'neurosis' is a slightly dated term in English clinical contexts compared to 'anxiety disorders', but it is a faithful translation of the source."
+    },
+    {
+      "order": 1,
+      "A_score": 95,
+      "B_score": 88,
+      "winner_for": "NEW",
+      "A_issues": "Minor stylistic choice: 'neurosis' is slightly more clinical/dated than 'anxiety disorders' in modern self-help, but accurate to source.",
+      "B_issues": "Accuracy: 'anxiety disorders' is an addition/interpretation of 'невроз'; 'loss of energy' is a slightly weak translation for 'упадок сил' (exhaustion/depletion) in a CBT context; 'crown' is technically correct for trees but 'canopy' is more natural for the metaphor; 'calmer' in the final sentence is"
+    }
+  ],
+  "ja": [
+    {
+      "order": 0,
+      "A_score": 95,
+      "B_score": 88,
+      "winner_for": "OLD",
+      "A_issues": "Minor terminology nuance: 'スキーマ' is used for 'deep beliefs', which is common in CBT but slightly more technical than the source; however, it enhances professional quality. Overall excellent flow.",
+      "B_issues": "Style/Tone: Slightly more literal/stiff translation (e.g., '欠陥のある人間' for 'неполноценным' sounds a bit harsh/clinical in Japanese compared to the empathetic tone of the source). Terminology: '深層信念' is a valid translation but 'スキーマ' (used in A) is more standard in Japanese CBT contexts. Some phrasing "
+    },
+    {
+      "order": 1,
+      "A_score": 95,
+      "B_score": 88,
+      "winner_for": "NEW",
+      "A_issues": "Minor stylistic choice: '深層信念' is accurate but slightly more formal than 'スキーマ' in some CBT contexts; otherwise, excellent accuracy and tone.",
+      "B_issues": "Accuracy/Omission: Skips the sentence about 'not being imperfect/incomplete' (screen_1/texts/7) which is crucial for the self-help tone. Terminology: Uses 'スキーマ' which is good, but the translation of 'intermediate beliefs' as '中間的な信念・ルール' is slightly wordy. Style: Some phrasing is a bit too casual/s"
+    }
+  ],
+  "ar": [
+    {
+      "order": 0,
+      "A_score": 95,
+      "B_score": 88,
+      "winner_for": "OLD",
+      "A_issues": "Minor stylistic choice: 'العُصاب' is technically correct but 'الاضطرابات العصبية' is more common in modern self-help contexts; otherwise, excellent terminology and flow.",
+      "B_issues": "Terminology: 'المعتقدات العميقة' is used instead of the more standard CBT term 'المعتقدات الجوهرية' (Core Beliefs); 'الأغصان والأوراق' for 'Крона' (canopy/crown) is slightly imprecise; 'الاضطرابات العصبية' for 'невроз' is a slight shift in clinical nuance."
+    },
+    {
+      "order": 1,
+      "A_score": 92,
+      "B_score": 96,
+      "winner_for": "OLD",
+      "A_issues": "Terminology: 'الاضطرابات العصبية' is a slightly loose translation for 'невроз' (neurosis) in a clinical context; 'الأغصان والأوراق' (branches and leaves) is a bit wordy for 'Крона' (canopy/crown); Style: slightly more literal/clunky in some sentence structures.",
+      "B_issues": "Terminology: 'العُصاب' is correct but can feel slightly more clinical/dated than 'اضطرابات عصبية' depending on the target audience; 'التاج' for 'Крона' is a literal botanical term that might be slightly less intuitive than 'أغصان' in a metaphor, though technically accurate."
+    }
+  ],
+  "de": [
+    {
+      "order": 0,
+      "A_score": 95,
+      "B_score": 88,
+      "winner_for": "OLD",
+      "A_issues": "Minor stylistic choice: 'zwischenüberzeugungen' is slightly less common than 'Zwischenebene/Zwischenregeln' in some contexts, but perfectly acceptable in CBT. Overall very natural and professional.",
+      "B_issues": "Terminology: 'zwischengeschaltete Überzeugungen' is a literal translation of 'intermediate' that sounds clunky/mechanical in German psychology; 'tief sitzende' is okay but 'tief verwurzelte' is more idiomatic. Style: Some sentences feel slightly more 'translated' and less fluid than A (e.g., 'die Be"
+    },
+    {
+      "order": 1,
+      "A_score": 92,
+      "B_score": 96,
+      "winner_for": "OLD",
+      "A_issues": "Terminology: 'zwischengeschaltete Überzeugungen' is a literal translation of 'intermediate beliefs' but is not standard CBT terminology in German (standard is 'Zwischenüberzeugungen' or 'Zwischenebene'). Style: Slightly more wordy/stilted in some places compared to B.",
+      "B_issues": "Terminology: 'Zwischenüberzeugungen' is better, but 'Grundannahmen' is used interchangeably with 'tief verwurzelte Überzeugungen', which is fine but slightly inconsistent with the source's strict hierarchy. Minor: 'Anspannung' for 'тревога' is slightly different in nuance but acceptable in context."
+    }
+  ]
+}

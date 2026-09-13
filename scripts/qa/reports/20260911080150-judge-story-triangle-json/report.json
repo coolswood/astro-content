@@ -1,0 +1,112 @@
+{
+  "file": "story/triangle.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Смысл передан точно, звучит естественно."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, передает эмоциональное состояние."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Вежливое обращение соблюдено, смысл точен."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Естественный немецкий язык."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Терминология и тон в порядке."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Кавычки „ “ использованы верно, смысл передан."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Структура сохранена, термины уместны."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Звучит профессионально и мягко."
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Разговорная речь передана хорошо."
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Смысл и логика сохранены."
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "ok",
+                "note": "Сложная конструкция переведена корректно."
+              },
+              {
+                "path": "/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Использование 'hilfreicher Gedanke' соответствует контексту КПТ."
+              },
+              {
+                "path": "/screen_3/texts/14",
+                "verdict": "ok",
+                "note": "Все верно."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Эмоциональный отклик передан верно."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком профессиональном уровне. Соблюдены все требования по терминологии КПТ (Gedanke, Situation), использовано корректное вежливое обращение «Sie», а также правильно применены немецкие типографские кавычки „ “. Текст звучит естественно, эмпатично и соответствует целевому тону экспертного помощника."
+            },
+            "timings": {
+              "issues": 11769,
+              "deliberate": 715,
+              "recommend": 2971
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

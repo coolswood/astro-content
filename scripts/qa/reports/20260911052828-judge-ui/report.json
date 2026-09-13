@@ -1,0 +1,800 @@
+{
+  "file": "ui/cognitive_psy app_*.arb",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "cs",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "issue",
+                "note": "Слишком официально и громоздко для приветствия бота"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/home_bot_first_visit_header",
+                "fragment": "Rád vás vítám při vaší první návštěvě!",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Избыточная официальность и тяжеловесность конструкции",
+                "why": "В чешском языке фраза 'Rád vás vítám při vaší první návštěvě' звучит как официальное приветствие в отеле или ресторане. Для интерфейса мобильного приложения (бота) лучше использовать более естественное и дружелюбное 'Rád vás vidím poprvé!' или 'Vítejte poprvé!'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Перевод слишком формален для мобильного интерфейса; предложенные варианты более естественны для UX."
+              }
+            ],
+            "notes": "Единственное замечание касается стилистики, которое подтверждается как уместная адаптация под контекст приложения.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/home_bot_first_visit_header",
+                "current": "Rád vás vítám při vaší první návštěvě!",
+                "proposed": "Rád vás vidím poprvé!",
+                "alternatives": [
+                  "Vítejte poprvé!"
+                ],
+                "rationale": "Текущий вариант звучит слишком официально (как приветствие в отеле). Вариант 'Rád vás vidím poprvé!' лучше передает смысл оригинала 'Рад видеть вас в первый раз!' и звучит естественно для дружелюбного интерфейса бота."
+              }
+            ],
+            "overall": {
+              "score": 95,
+              "verdict": "minor_edits",
+              "summary": "Перевод был излишне формальным и тяжеловесным. Выбран более естественный и дружелюбный вариант, соответствующий тональности мобильного приложения."
+            },
+            "timings": {
+              "issues": 4430,
+              "deliberate": 1634,
+              "recommend": 3510
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/home_bot_first_visit_header",
+              "from": "Rád vás vítám při vaší první návštěvě!",
+              "to": "Rád vás vidím poprvé!"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод корректен, звучит естественно, терминологических ошибок нет."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод полностью соответствует оригиналу, грамматически верен и звучит естественно для чешского языка. Замечаний нет."
+            },
+            "timings": {
+              "issues": 1364,
+              "deliberate": 336,
+              "recommend": 1290
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод корректен, смысл и тон сохранены."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод полностью соответствует оригиналу, грамматически верен и звучит естественно для носителя языка. Терминологических несоответствий не обнаружено."
+            },
+            "timings": {
+              "issues": 1232,
+              "deliberate": 400,
+              "recommend": 1408
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод выполнен в правильном тоне (Sie), смысл передан естественно и эмпатично, хотя и является вольным (что допустимо для приветствия)."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне. Вместо дословного «Рад видеть вас в первый раз», который звучал бы в немецком языке суховато или неестественно, использована идиоматичная и теплая фраза, соответствующая Tone of Voice (эмпатичный эксперт). Все правила грамматики и вежливого обращения соблюдены."
+            },
+            "timings": {
+              "issues": 2173,
+              "deliberate": 497,
+              "recommend": 2658
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Смысл передан верно, звучит естественно для приветствия бота."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод точен, соответствует смыслу оригинала и естественен для интерфейса приветствия. Замечаний нет."
+            },
+            "timings": {
+              "issues": 1235,
+              "deliberate": 404,
+              "recommend": 1250
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "es",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод корректен, звучит естественно, смысл передан полностью."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод корректен, естественен и передает дружелюбный тон оригинала. Соответствует правилам испанского языка."
+            },
+            "timings": {
+              "issues": 1269,
+              "deliberate": 402,
+              "recommend": 1191
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "fr",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод корректен, тон соответствует правилам (Vouvoiement), пунктуация соблюдена (пробел перед восклицательным знаком)."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен безупречно. Соблюдено правило двойной пунктуации (пробел перед восклицательным знаком), использовано вежливое обращение «vous», а тон соответствует заданному (эмпатичный и приветливый)."
+            },
+            "timings": {
+              "issues": 1607,
+              "deliberate": 402,
+              "recommend": 2047
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "id",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "issue",
+                "note": "Использован турецкий язык вместо индонезийского"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/home_bot_first_visit_header",
+                "fragment": "Senang bertemu Anda untuk pertama kalinya!",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Перевод выполнен на турецком языке",
+                "why": "Текст 'Senang bertemu Anda...' является турецким, а не индонезийским (id). Для индонезийского должно быть, например, 'Senang bertemu Anda untuk pertama kalinya!' (случайное совпадение в данном случае, но в контексте локализации это ошибка выбора языка/переводчика)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator used Turkish instead of Indonesian. Although the text looks similar, the issue is a critical language mismatch."
+              }
+            ],
+            "notes": "A critical error was found where the translation was provided in the wrong language (Turkish instead of Indonesian).",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/home_bot_first_visit_header",
+                "current": "Senang bertemu Anda untuk pertama kalinya!",
+                "proposed": "Senang bertemu Anda untuk pertama kalinya!",
+                "alternatives": [
+                  "Senang bertemu Anda di sini untuk pertama kalinya!"
+                ],
+                "rationale": "Хотя в замечании указано, что это турецкий, фраза 'Senang bertemu Anda untuk pertama kalinya!' на самом деле является грамматически верной индонезийской фразой. Однако, учитывая критическую ошибку в выборе языка (mistranslation), я оставляю текущий вариант, так как он семантически верен для id, но технически требует перепроверки процесса локализации."
+              }
+            ],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Несмотря на критическое замечание о языке, текущая строка 'Senang bertemu Anda untuk pertama kalinya!' фактически является корректным индонезийским языком. Ошибки в смысле или грамматике id не обнаружено."
+            },
+            "timings": {
+              "issues": 3568,
+              "deliberate": 1505,
+              "recommend": 5086
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/home_bot_first_visit_header",
+              "reason": "правка уже применена"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "he",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод корректен, звучит естественно, соответствует контексту приветствия."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод корректен, звучит естественно и дружелюбно. Терминологических несоответствий или грамматических ошибок не обнаружено."
+            },
+            "timings": {
+              "issues": 1251,
+              "deliberate": 399,
+              "recommend": 1466
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "it",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод естественный, смысл передан верно, терминологических нарушений нет."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен корректно, звучит естественно для носителя языка и полностью передает смысл оригинала. Терминологических несоответствий не обнаружено."
+            },
+            "timings": {
+              "issues": 1303,
+              "deliberate": 400,
+              "recommend": 1358
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "ja",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод выполнен в вежливом стиле (Desu/Masu), звучит естественно и соответствует культурному контексту приветствия."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне. Использована вежливая форма (Desu/Masu), которая соответствует Tone of Voice, и удачно адаптирована фраза: вместо прямого перевода «рад видеть вас в первый раз» использовано естественное для японского этикета приветствие «спасибо за ваш первый визит». Это создает ощущение гостеприимства и мягкости, характерное для японского рынка."
+            },
+            "timings": {
+              "issues": 1597,
+              "deliberate": 402,
+              "recommend": 2643
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "ko",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод звучит естественно и вежливо, соответствует контексту приветствия."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен корректно, звучит естественно и вежливо для приветствия пользователя в приложении. Соответствие оригиналу и культурным нормам корейского языка полное."
+            },
+            "timings": {
+              "issues": 1178,
+              "deliberate": 402,
+              "recommend": 1405
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "nl",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод естественный, смысл передан верно, ошибок не обнаружено."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод корректен, звучит естественно для приветствия и полностью передает смысл оригинала. Терминологических несоответствий не обнаружено."
+            },
+            "timings": {
+              "issues": 1327,
+              "deliberate": 402,
+              "recommend": 1406
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "pl",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "issue",
+                "note": "Утерян фрагмент про первый визит"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/home_bot_first_visit_header",
+                "fragment": "Miło Cię widzieć!",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "пропущен смысл 'в первый раз'",
+                "why": "Оригинал подчеркивает новизну опыта (первый визит), в то время как перевод — это просто стандартное приветствие. Хотя перевод звучит естественно, он теряет контекст первого знакомства, заложенный в исходнике."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation is a generic greeting and fails to convey the specific context of the 'first visit' mentioned in the source."
+              }
+            ],
+            "notes": "The translation is too generic and loses the semantic nuance of the original string.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/home_bot_first_visit_header",
+                "current": "Miło Cię widzieć!",
+                "proposed": "Cieszę się, że jesteś tu po raz pierwszy!",
+                "alternatives": [
+                  "Miło Cię widzieć po raz pierwszy!"
+                ],
+                "rationale": "Текущий вариант — это просто «Рад тебя видеть», что теряет важный контекст первого визита. Вариант 'Cieszę się, że jesteś tu po raz pierwszy!' звучит более тепло, естественно для Tone of Voice (эмпатичный помощник) и полностью передает смысл оригинала."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "Перевод был грамматически верным, но слишком общим. Необходимо добавить контекст первого визита, чтобы приветствие соответствовало сценарию первого знакомства пользователя с ботом."
+            },
+            "timings": {
+              "issues": 3414,
+              "deliberate": 2174,
+              "recommend": 6628
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/home_bot_first_visit_header",
+              "from": "Miło Cię widzieć!",
+              "to": "Cieszę się, że jesteś tu po raz pierwszy!"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод естественный, соблюдено обращение на 'ты', смысл передан верно."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен идеально. Соблюден дружелюбный тон (Taismo), использована естественная для польского языка конструкция, смысл полностью соответствует оригиналу."
+            },
+            "timings": {
+              "issues": 1675,
+              "deliberate": 343,
+              "recommend": 1731
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "pt",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод естественный, смысл передан верно, терминологических ошибок нет."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод полностью соответствует оригиналу, соблюдает естественность для носителя португальского языка и не содержит ошибок в терминологии или плейсхолдерах."
+            },
+            "timings": {
+              "issues": 1647,
+              "deliberate": 527,
+              "recommend": 2005
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "pt_BR",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон соответствует принципам Acolhimento и Leveza, использование 'você' корректно."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне. Фраза «Que bom ter você aqui!» звучит очень естественно, тепло и соответствует бразильскому тону 'Acolhimento', идеально передавая смысл приветствия при первом визите."
+            },
+            "timings": {
+              "issues": 2433,
+              "deliberate": 528,
+              "recommend": 2625
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "sv",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Смысл передан верно, звучит естественно для приветствия."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод корректен, звучит естественно для носителя шведского языка и точно передает дружелюбный тон оригинала. Терминологических несоответствий не обнаружено."
+            },
+            "timings": {
+              "issues": 1533,
+              "deliberate": 538,
+              "recommend": 1768
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "tr",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод звучит естественно, передает теплоту и гостеприимство, соответствует тональности."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне. Фраза «Sizi ilk kez görmek ne güzel!» звучит естественно, тепло и соответствует турецкому культурному коду гостеприимства, при этом точно передавая смысл оригинала."
+            },
+            "timings": {
+              "issues": 1903,
+              "deliberate": 531,
+              "recommend": 2304
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    },
+    {
+      "lang": "uk",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/home_bot_first_visit_header",
+                "verdict": "ok",
+                "note": "Перевод естественный, смысл передан верно, грамматических ошибок нет"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен точно, с соблюдением эмоционального окраса оригинала и грамматических норм украинского языка. Замечаний нет."
+            },
+            "timings": {
+              "issues": 1417,
+              "deliberate": 486,
+              "recommend": 1150
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

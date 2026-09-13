@@ -1,0 +1,789 @@
+{
+  "file": "texts/diary.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 6,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология соблюдена, синтаксис естественный"
+              },
+              {
+                "path": "/info/body",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (Alternative Sichtweise) верна"
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "issue",
+                "note": "Стиль: заголовок звучит как пассивное описание, а не как название ошибки/типа записи"
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "issue",
+                "note": "Style: грамматически верно, но в немецком 'Ich fühle Angst' звучит менее естественно, чем 'Ich habe Angst"
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "issue",
+                "note": "Style: заголовок слишком сухой/номинативный, калька с русского"
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "issue",
+                "note": "Смысловое искажение: в оригинале 'Пропуск' (процесс/ошибка), в переводе 'Пропущенная мысль' (состояние)."
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо, без калек, смысл сохранен."
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "issue",
+                "note": "Стиль: слишком сухо, похоже на заголовок в таблице, а не на описание ошибки в обучении."
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо, кальки нет."
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "ok",
+                "note": "Переведено верно, соблюдено вежливое обращение."
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно, естественный синтаксис."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/automaticAnalysis/0/title",
+                "fragment": "Gefühle statt Gedanken notiert",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком описательный и тяжеловесный заголовок для UI",
+                "why": "В немецких интерфейсах заголовки категорий ошибок или типов записей обычно короче и энергичнее. Текущий вариант звучит как констатация факта в протоколе."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/automaticAnalysis/0/wrong",
+                "fragment": "Ich fühle Angst",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное сочетание глагола и существительного",
+                "why": "Хотя грамматически это допустимо, носители гораздо чаще говорят 'Ich habe Angst'. 'Ich fühle Angst' звучит немного клинически или как калька."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/automaticAnalysis/2/title",
+                "fragment": "Fakt statt Interpretation notiert",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Канцелярский/сухой стиль",
+                "why": "Как и в первом случае, заголовок выглядит как техническая заметка. Для пользователя лучше использовать более живой формат, например 'Nur ein Fakt statt einer Interpretation'."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/automaticAnalysis/4/title",
+                "fragment": "Automatischer Gedanke ausgelassen",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла",
+                "why": "В оригинале 'Пропуск автоматической мысли' (как действие или ошибка пользователя), в немецком 'Automatischer Gedanke ausgelassen' звучит как 'Автоматическая мысль была пропущена' (факт/состояние). Для заголовка раздела об ошибке лучше использовать существительное, например 'Auslassen automatischer Gedanken'."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/automaticAnalysis/5/title",
+                "fragment": "Kernaspekte ignoriert",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком лаконичный, 'телеграфный' стиль",
+                "why": "Фраза 'Kernaspekte ignoriert' звучит как техническая пометка или статус в базе данных. Для обучающего контента лучше использовать более естественное для заголовка: 'Ignorieren von Kernaspekten' или 'Kernaspekte werden ignoriert'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Согласен, заголовок звучит как пассивный отчет, а не как название категории."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Верно, 'Ich habe Angst' — стандарт, 'Ich fühle Angst' — калька."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Дублирует проблему c1-I1 (сухой стиль заголовков)."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критично: в немецком это звучит как описание состояния объекта, а не как тип ошибки пользователя."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Принято, стиль слишком обрывистый для обучающего приложения."
+              }
+            ],
+            "notes": "Перевод в целом точный, но страдает от избыточного использования пассивных конструкций и 'телеграфного' стиля в заголовках, что делает интерфейс сухим и менее естественным.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/automaticAnalysis/4/title",
+                "current": "Automatischer Gedanke ausgelassen",
+                "proposed": "Automatischer Gedanke wurde ausgelassen",
+                "alternatives": [
+                  "Auslassen des automatischen Gedankens",
+                  "Automatischer Gedanke fehlt"
+                ],
+                "rationale": "Текущий вариант звучит как технический статус объекта. Чтобы передать смысл 'Пропуск мысли' (как ошибку действия), нужно либо использовать существительное, либо добавить вспомогательный глагол для естественности."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/automaticAnalysis/0/wrong",
+                "current": "Ich fühle Angst",
+                "proposed": "Ich habe Angst",
+                "alternatives": [],
+                "rationale": "В немецком языке для выражения страха стандартно используется конструкция 'Angst haben'. 'Angst fühlen' — это калька, которая звучит неестественно для носителя."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/automaticAnalysis/0/title",
+                "current": "Gefühle statt Gedanken notiert",
+                "proposed": "Gefühle statt Gedanken",
+                "alternatives": [
+                  "Notierte Gefühle statt Gedanken"
+                ],
+                "rationale": "Убираем причастие 'notiert', которое делает заголовок похожим на протокол. В UI заголовки должны быть лаконичными и концептуальными."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 4,
+                "path": "/automaticAnalysis/2/title",
+                "current": "Fakt statt Interpretation notiert",
+                "proposed": "Fakt statt Interpretation",
+                "alternatives": [
+                  "Nur ein Fakt statt einer Interpretation"
+                ],
+                "rationale": "Аналогично первой правке: убираем 'notiert', чтобы заголовок не выглядел как техническая запись в базе данных, а служил названием категории."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 5,
+                "path": "/automaticAnalysis/5/title",
+                "current": "Kernaspekte ignoriert",
+                "proposed": "Kernaspekte werden ignoriert",
+                "alternatives": [
+                  "Ignorieren von Kernaspekten"
+                ],
+                "rationale": "Текущий вариант слишком 'телеграфный'. Добавление глагола делает фразу полноценным заголовком, подходящим для обучающего контента."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 6,
+                "path": "/automaticAnalysis/0/title",
+                "current": "Gefühle statt Gedanken notiert",
+                "proposed": "Gefühle statt Gedanken",
+                "alternatives": [],
+                "rationale": "Удаление 'notiert' делает заголовок чище и профессиональнее для интерфейса."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "Перевод в целом качественный и точный, терминология (KVT, alternative Sichtweise) соблюдена. Основные риски связаны с 'канцелярским' стилем заголовков в разделах анализа, которые звучат как сухие отчеты, а не как дружелюбный интерфейс. Также исправлены две важные стилистические ошибки (калька с 'Angst fühlen' и грамматика в заголовках)."
+            },
+            "timings": {
+              "issues": 71686,
+              "deliberate": 11473,
+              "recommend": 25232
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/automaticAnalysis/4/title",
+              "from": "Automatischer Gedanke ausgelassen",
+              "to": "Automatischer Gedanke wurde ausgelassen"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/automaticAnalysis/0/wrong",
+              "from": "Ich fühle Angst",
+              "to": "Ich habe Angst"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/automaticAnalysis/0/title",
+              "from": "Gefühle statt Gedanken notiert",
+              "to": "Gefühle statt Gedanken"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/automaticAnalysis/2/title",
+              "from": "Fakt statt Interpretation notiert",
+              "to": "Fakt statt Interpretation"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/automaticAnalysis/5/title",
+              "from": "Kernaspekte ignoriert",
+              "to": "Kernaspekte werden ignoriert"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология соблюдена, синтаксис естественный"
+              },
+              {
+                "path": "/info/body",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (Alternative Sichtweise) верна"
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Перевод хороший, передает смысл"
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Терминология верна"
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "ok",
+                "note": "Перевод точный, смысл передан верно."
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "Стиль хороший, терминология соблюдена."
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "issue",
+                "note": "Слишком абстрактно и официально (номинальный стиль), теряется связь с контекстом мыслей."
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "ok",
+                "note": "Хороший перевод, кальки нет."
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "ok",
+                "note": "Соблюдено вежливое обращение Sie."
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "Терминология (Zwischenüberzeugungen) верная."
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "Стиль естественный, смысл сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/automaticAnalysis/5/title",
+                "fragment": "Kernaspekte werden ignoriert",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Избыточный пассивный залог и номинальный стиль (Kernaspekte werden ignoriert)",
+                "why": "В немецком языке для заголовков в приложениях лучше использовать более живые конструкции. Текущий вариант звучит как заголовок в научной статье, а не как часть терапевтического процесса. Хотя смысл передан, это звучит сухо."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Замечание верно: номинативный пассивный стиль действительно звучит слишком академично для интерфейса приложения. Рекомендуется использовать активный залог или более вовлекающую форму."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, терминология (когнитивные искажения, автоматические мысли) соблюдена. Единственное замечание касается стилистики заголовка, которая не искажает смысл, но влияет на тон общения с пользователем.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/automaticAnalysis/5/title",
+                "current": "Kernaspekte werden ignoriert",
+                "proposed": "Wichtige Gedanken ignoriert",
+                "alternatives": [
+                  "Kernaspekte übersehen",
+                  "Wichtige Gedanken übersehen"
+                ],
+                "rationale": "Текущий вариант звучит как сухой заголовок из научной статьи. Вариант 'Wichtige Gedanken ignoriert' (или 'übersehen') звучит более естественно для интерфейса, сохраняя краткость, но избавляясь от тяжеловесного пассивного залога."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Терминология (KVT, Zwischenüberzeugungen, Alternative Sichtweise) соблюдена безупречно. Тон эмпатичный и профессиональный. Единственная мелкая правка касается стилистики заголовка, чтобы избежать излишней академичности."
+            },
+            "timings": {
+              "issues": 52602,
+              "deliberate": 5664,
+              "recommend": 9029
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/automaticAnalysis/5/title",
+              "from": "Kernaspekte werden ignoriert",
+              "to": "Wichtige Gedanken ignoriert"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

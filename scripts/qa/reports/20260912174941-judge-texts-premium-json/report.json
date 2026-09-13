@@ -1,0 +1,429 @@
+{
+  "file": "texts/premium.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/list/0/title",
+                "verdict": "ok",
+                "note": "Переведено корректно, термин KI-Unterstützung уместен."
+              },
+              {
+                "path": "/list/0/description",
+                "verdict": "ok",
+                "note": "Стиль хороший, 'herausfordernd' вместо 'schwierig' звучит эмпатично."
+              },
+              {
+                "path": "/list/1/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/1/description",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrungen) соблюдена."
+              },
+              {
+                "path": "/list/2/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/2/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, юридически корректно."
+              },
+              {
+                "path": "/list/3/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/3/description",
+                "verdict": "ok",
+                "note": "Стиль естественный."
+              },
+              {
+                "path": "/list/4/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/4/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/5/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/5/description",
+                "verdict": "ok",
+                "note": "Использован правильный термин 'Befinden'."
+              },
+              {
+                "path": "/list/6/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/6/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/7/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/list/7/description",
+                "verdict": "issue",
+                "note": "Смешение терминов: в оригинале 'заметки', в переводе 'Notizen', хотя в приложении используется 'Einträge'."
+              },
+              {
+                "path": "/last/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/last/advantages/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/last/advantages/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/last/advantages/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/last/advantages/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/h2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/terms/texts/9",
+                "verdict": "ok",
+                "note": "Типографика соблюдена (немецкие кавычки)."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/list/7/description",
+                "fragment": "Fügen Sie Ihren Notizen Bilder hinzu",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование 'Notizen' вместо 'Einträge'",
+                "why": "В контексте данного приложения (Gedankentagebuch) записи называются 'Einträge' (согласно глоссарию и другим элементам текста). 'Notizen' звучит как обычные заметки, что снижает консистентность интерфейса."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Терминологическая несогласованность: в других частях текста (например, /list/1/title) используется 'Einträge', тогда как здесь 'Notizen', что нарушает единство интерфейса."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, единственная выявленная проблема — локальная несогласованность терминов (Einträge vs Notizen).",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/list/7/description",
+                "current": "Fügen Sie Ihren Notizen Bilder hinzu, um Gefühle und Kontexte präziser auszudrücken. Alle Fotos werden zwischen den Geräten synchronisiert und können bei Bedarf für Ihren Therapeuten bereitgestellt werden.",
+                "proposed": "Fügen Sie Ihren Einträgen Bilder hinzu, um Gefühle und Kontexte präziser auszudrücken. Alle Fotos werden zwischen den Geräten synchronisiert und können bei Bedarf für Ihren Therapeuten bereitgestellt werden.",
+                "alternatives": [],
+                "rationale": "Согласно глоссарию и контексту приложения, записи в дневнике должны называться 'Einträge'. Использование 'Notizen' создает терминологический диссонанс с разделом /list/1/title."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден тон (empathisch/expert), правильно использована терминология (Gedankentagebuch, kognitive Verzerrungen, Befinden) и соблюдены правила обращения (Sie). Единственная правка касается консистентности терминологии (Einträge vs Notizen). После исправления текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 21691,
+              "deliberate": 3239,
+              "recommend": 6218
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/list/7/description",
+              "from": "Fügen Sie Ihren Notizen Bilder hinzu, um Gefühle und Kontexte präziser auszudrücken. Alle Fotos werden zwischen den Geräten synchronisiert und können bei Bedarf für Ihren Therapeuten bereitgestellt werden.",
+              "to": "Fügen Sie Ihren Einträgen Bilder hinzu, um Gefühle und Kontexte präziser auszudrücken. Alle Fotos werden zwischen den Geräten synchronisiert und können bei Bedarf für Ihren Therapeuten bereitgestellt werden."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/list/0/title",
+                "verdict": "ok",
+                "note": "Переведено корректно, термин KI-Unterstützung уместен."
+              },
+              {
+                "path": "/list/0/description",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, отсутствие кальки 'бывает сложно' через es-падеж."
+              },
+              {
+                "path": "/list/1/title",
+                "verdict": "ok",
+                "note": "Точно и лаконично."
+              },
+              {
+                "path": "/list/1/description",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrungen) соблюдена, стиль естественный."
+              },
+              {
+                "path": "/list/2/title",
+                "verdict": "ok",
+                "note": "Соответствует стандартам."
+              },
+              {
+                "path": "/list/2/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, юридически грамотно."
+              },
+              {
+                "path": "/list/3/title",
+                "verdict": "ok",
+                "note": "Термин верный."
+              },
+              {
+                "path": "/list/3/description",
+                "verdict": "ok",
+                "note": "Стиль хороший, смысл сохранен."
+              },
+              {
+                "path": "/list/4/title",
+                "verdict": "ok",
+                "note": "Стандартный UX-термин."
+              },
+              {
+                "path": "/list/4/description",
+                "verdict": "ok",
+                "note": "Все корректно."
+              },
+              {
+                "path": "/list/5/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/list/5/description",
+                "verdict": "ok",
+                "note": "Использование 'Befinden' вместо 'Zustand' — отличная адаптация."
+              },
+              {
+                "path": "/list/6/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/list/6/description",
+                "verdict": "ok",
+                "note": "Стиль эмпатичный, без канцелярита."
+              },
+              {
+                "path": "/list/7/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/list/7/description",
+                "verdict": "ok",
+                "note": "Терминология (Gefühle) и смысл соблюдены."
+              },
+              {
+                "path": "/last/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/last/advantages/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/last/advantages/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/last/advantages/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/last/advantages/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/h2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/terms/texts/9",
+                "verdict": "ok",
+                "note": "Проблема с кавычками."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/terms/texts/9",
+                "fragment": "„Profil“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование правильных немецких кавычек в тексте — это хорошо, но в исходном JSON-значении в поле 'tr' используются типографские кавычки „ “, в то время как в 'ru' используются программные \" \". Однако, если рассматривать это как проверку на соответствие правилам немецкого языка, то здесь всё верно. Но стоит проверить, не нарушает ли это парсинг, если система ожидает только программные кавычки. В контексте задачи: переводчик применил правила немецкой типографики, что является плюсом, но в самом задании сказано: 'Если в оригинале есть кавычки — обязательно замени их на немецкие типографские „ “.'. Здесь переводчик сделал именно так. Проблема отсутствует, это была проверка на внимательность к правилам."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "Переводчик строго следовал инструкции по замене программных кавычек на немецкие типографские „ “. Это не ошибка, а корректное выполнение требований к локализации."
+              }
+            ],
+            "notes": "Замечаний, указывающих на ошибки в переводе, не обнаружено; перевод выполнен качественно и с соблюдением правил типографики.",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высочайшем уровне. Все ключевые термины (Gedankentagebuch, kognitive Verzerrungen, Befinden, Therapeuten) использованы строго в соответствии с глоссарием. Соблюдены правила немецкой типографики (кавычки „ “) и стилистические нормы (вежливое Sie, эмпатичный, но профессиональный тон). Замечание по кавычкам было отклонено, так как переводчик идеально выполнил инструкцию по локализации типографики."
+            },
+            "timings": {
+              "issues": 24486,
+              "deliberate": 2466,
+              "recommend": 3764
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

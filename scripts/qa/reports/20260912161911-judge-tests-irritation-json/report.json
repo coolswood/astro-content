@@ -1,0 +1,1624 @@
+{
+  "file": "tests/irritation.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 4,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология и кавычки соблюдены."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Переведено верно, без искажений."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология корректна."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Использованы правильные немецкие кавычки „“. Смысл сохранен."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация термина Road Rage."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Термин 'fundamentale Attributionsfehler' использован верно."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Термин 'Misophonie' корректен."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Термин 'Reziprozität' уместен."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, грамматика верная."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "issue",
+                "note": "Идиома 'последняя капля' переведена слишком буквально."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/none",
+                "verdict": "issue",
+                "note": "Смешение понятий 'раздражение' (состояние) и 'раздражительность' (черта/склонность)."
+              },
+              {
+                "path": "/variants/light",
+                "verdict": "issue",
+                "note": "Смешение понятий 'раздражение' и 'раздражительность'."
+              },
+              {
+                "path": "/variants/norm",
+                "verdict": "issue",
+                "note": "Смешение понятий 'раздражение' и 'раздражительность'."
+              },
+              {
+                "path": "/variants/hard",
+                "verdict": "issue",
+                "note": "Смешение понятий 'раздражение' и 'раздражительность'."
+              },
+              {
+                "path": "/variants/super",
+                "verdict": "ok",
+                "note": "Перевод эмоционально адекватный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/hard",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/hard/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/hard/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль соответствует экспертному и эмпатичному тону. Использование 'Sie' уместно."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Точный перевод заголовка."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод корректен, терминология (Wohlbefinden) соблюдена."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Смысл сохранен, грамматика верна."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный, без лишних номинализаций."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен, атрибуты отсутствуют согласно конвенции для не-ru/en локалей (хотя здесь ru, но ID в tr — это норма для встраиваемых постов в данном контексте)."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/23/fact",
+                "fragment": "der „letzte Tropfen“",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Калька идиомы",
+                "why": "В немецком языке для выражения значения «последняя капля» используется идиома „der Tropfen, der das Fass zum Überlaufen bringt“ или просто „das Fass zum Überlaufen bringen“. Фраза „der letzte Tropfen“ звучит как прямой перевод и не является устойчивым выражением."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/variants/none",
+                "fragment": "Keine Reizbarkeit",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Несоответствие терминологии (состояние vs черта)",
+                "why": "В оригинале «Нет раздражения» (состояние в моменте). В немецком 'Reizbarkeit' — это черта характера (раздражительность). Для описания отсутствия чувства в моменте лучше использовать 'Keine Reizung' или 'Kein Gefühl der Verärgerung', хотя в контексте тестов допустимо, но важно соблюдать консистентность с остальными вариантами, где 'раздражение' (Verärgerung) и 'раздражительность' (Reizbarkeit) смешаны."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/variants/light",
+                "fragment": "Leichte Reizbarkeit",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Несоответствие терминологии",
+                "why": "Оригинал: «Легкое раздражение» (состояние). Перевод: «Leichte Reizbarkeit» (черта характера). Это создает смысловой разрыв между текущим состоянием пользователя и его личностной характеристикой."
+              },
+              {
+                "id": "c2-I4",
+                "path": "/variants/norm",
+                "fragment": "Moderate Reizbarkeit",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Несоответствие терминологии",
+                "why": "Аналогично: «Умеренное раздражение» (состояние) переведено как «Moderate Reizbarkeit» (черта характера)."
+              },
+              {
+                "id": "c2-I5",
+                "path": "/variants/hard",
+                "fragment": "Starke Reizbarkeit",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Несоответствие терминологии",
+                "why": "Аналогично: «Сильное раздражение» (состояние) переведено как «Starke Reizbarkeit» (черта характера)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Idiomatic error: 'der letzte Tropfen' is a literal translation of the Russian idiom; the German equivalent is 'der Tropfen, der das Fass zum Überlaufen bringt'."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "merged",
+                "mergedInto": "c2-I3",
+                "rank": 1,
+                "note": "Both address the terminology mismatch between 'irritation' (state) and 'irritability' (trait). Merged into the most representative case."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Terminology mismatch: 'Leichte Reizbarkeit' describes a personality trait, whereas the source 'Легкое раздражение' describes a momentary state."
+              },
+              {
+                "id": "c2-I4",
+                "verdict": "merged",
+                "mergedInto": "c2-I3",
+                "rank": 1,
+                "note": "Duplicate of the terminology issue regarding state vs. trait."
+              },
+              {
+                "id": "c2-I5",
+                "verdict": "merged",
+                "mergedInto": "c2-I3",
+                "rank": 1,
+                "note": "Duplicate of the terminology issue regarding state vs. trait."
+              }
+            ],
+            "notes": "The translation suffers from a systemic terminology error where momentary states (irritation) are translated as personality traits (irritability), and one instance of a literal idiomatic calque.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/23/fact",
+                "current": "der „letzte Tropfen“",
+                "proposed": "der Tropfen, der das Fass zum Überlaufen bringt",
+                "alternatives": [
+                  "der letzte Tropfen, der das Fass zum Überlaufen bringt"
+                ],
+                "rationale": "В немецком языке «последняя капля» — это устойчивая идиома „der Tropfen, der das Fass zum Überlaufen bringt“. Вариант „der letzte Tropfen“ является калькой и звучит неестественно."
+              },
+              {
+                "id": "c2-I3",
+                "priority": 2,
+                "path": "/variants/light",
+                "current": "Leichte Reizbarkeit",
+                "proposed": "Leichte Verärgerung",
+                "alternatives": [
+                  "Leichtes Gefühl der Verärgerung"
+                ],
+                "rationale": "В оригинале «Легкое раздражение» описывает состояние (momentary state), а 'Reizbarkeit' в немецком — это черта характера (trait). Чтобы сохранить точность ru-смысла и избежать психологической ошибки, нужно использовать 'Verärgerung'."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, текст звучит естественно и профессионально. Основные риски связаны с терминологической путаницей между состоянием (Verärgerung) и чертой характера (Reizbarkeit) в шкале ответов, а также с использованием кальки вместо идиомы. Рекомендуется исправить эти моменты для обеспечения терапевтической точности."
+            },
+            "timings": {
+              "issues": 60678,
+              "deliberate": 8542,
+              "recommend": 10584
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I3",
+              "path": "/variants/light",
+              "from": "Leichte Reizbarkeit",
+              "to": "Leichte Verärgerung"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/23/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 7%)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Использованы правильные немецкие кавычки „“. Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Адаптация 'Road Rage' выполнена корректно."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Термин 'fundamentale Attributionsfehler' использован верно."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Термин 'Misophonie' переведен верно."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Термин 'Reziprozität' уместен."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный, тон уважительный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Идиома 'letzte Tropfen' (последняя капля) использована верно, хотя в немецком чаще 'der Tropfen, der das Fass zum Überlaufen bringt', но в контексте текста допустимо."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/none",
+                "verdict": "issue",
+                "note": "Смысловое несоответствие: 'Keine Reizbarkeit' (отсутствие раздражительности) vs 'Нет раздражения' (состояние)."
+              },
+              {
+                "path": "/variants/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/norm",
+                "verdict": "issue",
+                "note": "Смешение терминов: 'Reizbarkeit' (раздражительность) vs 'Verärgerung' (раздражение)."
+              },
+              {
+                "path": "/variants/hard",
+                "verdict": "issue",
+                "note": "Смешение терминов: 'Reizbarkeit' vs 'Verärgerung'."
+              },
+              {
+                "path": "/variants/super",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/hard",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/hard/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/hard/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует экспертному и эмпатичному тону, грамматика верная."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Терминологически верно."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, отсутствие кальки с русского, хороший ритм."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен, терминология соблюдена."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональная устойчивость передана верно (Belastbarkeit)."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен, атрибуты отсутствуют согласно конвенции для не-en/ru локалей."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/variants/none",
+                "fragment": "Keine Reizbarkeit",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Смысловой нюанс",
+                "why": "В оригинале 'Нет раздражения' (состояние), в переводе 'Keine Reizbarkeit' (черта характера/свойство). Для шкалы состояний лучше использовать 'Keine Verärgerung' или 'Kein Gefühl der Verärgerung'."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/variants/norm",
+                "fragment": "Moderate Reizbarkeit",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Несоответствие терминов",
+                "why": "В оригинале 'Умеренное раздражение' (состояние), в переводе 'Moderate Reizbarkeit' (черта личности). В контексте шкалы настроения/состояний лучше придерживаться 'Verärgerung'."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/variants/hard",
+                "fragment": "Starke Reizbarkeit",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Несоответствие терминов",
+                "why": "Аналогично: 'раздражение' (состояние) переведено как 'раздражительность' (черта характера). Для UX-шкалы лучше 'Starke Verärgerung'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The distinction between a state (Verärgerung) and a trait (Reizbarkeit) is valid for a psychological scale."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Terminology inconsistency: 'Verärgerung' is more appropriate for a momentary state than the personality trait 'Reizbarkeit'."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Same as I2; this is the most critical part of the scale as it defines the intensity of the user's current state."
+              }
+            ],
+            "notes": "The translation consistently uses 'Reizbarkeit' (irritability/trait) instead of 'Verärgerung' (annoyance/state), which shifts the tone from a situational assessment to a personality assessment.",
+            "recommendations": [
+              {
+                "id": "c2-I3",
+                "priority": 1,
+                "path": "/variants/hard",
+                "current": "Starke Reizbarkeit",
+                "proposed": "Starke Verärgerung",
+                "alternatives": [
+                  "Große Verärgerung"
+                ],
+                "rationale": "В контексте шкалы состояний (шкала Novaco) важно различать черту характера (Reizbarkeit) и текущее состояние (Verärgerung). 'Starke Verärgerung' точнее передает смысл 'Сильное раздражение' как моментальную эмоцию."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 2,
+                "path": "/variants/norm",
+                "current": "Moderate Reizbarkeit",
+                "proposed": "Moderate Verärgerung",
+                "alternatives": [
+                  "Mittlere Verärgerung"
+                ],
+                "rationale": "Для соблюдения консистентности с исправленным вариантом 'hard' и соответствия оригиналу 'Умеренное раздражение', необходимо использовать 'Verärgerung' (состояние), а не 'Reizbarkeit' (черта)."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/variants/none",
+                "current": "Keine Reizbarkeit",
+                "proposed": "Keine Verärgerung",
+                "alternatives": [
+                  "Nicht verärgert"
+                ],
+                "rationale": "Замена черты личности на описание состояния. 'Keine Verärgerung' — наиболее естественный и точный эквивалент для 'Нет раздражения' в рамках психологического теста."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод в целом выполнен на высоком уровне, с хорошим пониманием контекста. Основная проблема заключается в смешении понятий 'раздражительность' (trait/черта) и 'раздражение' (state/состояние) в элементах шкалы. Необходимо заменить 'Reizbarkeit' на 'Verärgerung' в вариантах ответов, чтобы тест оценивал текущее состояние пользователя, а не его характер."
+            },
+            "timings": {
+              "issues": 52409,
+              "deliberate": 6136,
+              "recommend": 11988
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I3",
+              "path": "/variants/hard",
+              "from": "Starke Reizbarkeit",
+              "to": "Starke Verärgerung"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/variants/norm",
+              "from": "Moderate Reizbarkeit",
+              "to": "Moderate Verärgerung"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/variants/none",
+              "from": "Keine Reizbarkeit",
+              "to": "Keine Verärgerung"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология и кавычки соблюдены."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термин 'Reaktanz' уместен."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, звучит естественно."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Использованы правильные немецкие кавычки „“, смысл передан."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация термина Road Rage."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Термин 'fundamentale Attributionsfehler' использован верно."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Термин 'Misophonie' использован верно."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный, тон эмпатичный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "issue",
+                "note": "Калька идиомы 'последняя капля' (letzte Tropfen) вместо немецкого эквивалента."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/none",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/norm",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/hard",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/super",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/hard",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/hard/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/hard/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует экспертному и эмпатичному тону. Калька отсутствует."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Терминологически верно."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, синтаксис естественный."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен, терминология соблюдена."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Хороший перевод, без стилистических изъянов."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен без изменений, что соответствует правилам для не-ru/en локалей (хотя здесь ru, но ID в instagram тегах — это норма)."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/23/fact",
+                "fragment": "der „letzte Tropfen“ sein",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование кальки с русского/английского",
+                "why": "В немецком языке для выражения значения «последняя капля» (событие, которое переполняет чашу терпения) используется идиома „der Tropfen, der das Fass zum Überlaufen bringt“. Фраза „der letzte Tropfen“ звучит как буквальный перевод и не является устойчивым выражением в данном контексте."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The reviewer is correct. 'Der letzte Tropfen' is a literal translation (calque) of 'the last drop'. In German, the idiomatic expression for 'the last straw/drop' is 'der Tropfen, der das Fass zum Überlaufen bringt'."
+              }
+            ],
+            "notes": "The translation is of high quality and accurate, with only one minor stylistic issue regarding an idiom that should be corrected to sound more natural in German.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/23/fact",
+                "current": "kann eine zerrissene Hose der „letzte Tropfen“ sein",
+                "proposed": "kann eine zerrissene Hose der Tropfen sein, der das Fass zum Überlaufen bringt",
+                "alternatives": [
+                  "kann eine zerrissene Hose der entscheidende Auslöser sein"
+                ],
+                "rationale": "Выявлена калька. В немецком языке для значения «последняя капля» используется устойчивая идиома „der Tropfen, der das Fass zum Überlaufen bringt“. Вариант „der letzte Tropfen“ звучит неестественно."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология, тон эмпатичен и профессионален, соблюдены правила типографики. Единственная заметная ошибка — использование кальки вместо немецкой идиомы в описании эффекта «сломанного стекла». После исправления текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 47953,
+              "deliberate": 3618,
+              "recommend": 5977
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/23/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 17%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

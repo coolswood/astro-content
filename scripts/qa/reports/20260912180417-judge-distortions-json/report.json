@@ -1,0 +1,402 @@
+{
+  "file": "distortions.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/BLACK_AND_WHITE/textHTML",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена, стиль эмпатичный."
+              },
+              {
+                "path": "/BLACK_AND_WHITE/dialogSummary",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/BLACK_AND_WHITE/dialog/0",
+                "verdict": "ok",
+                "note": "Естественная немецкая фраза."
+              },
+              {
+                "path": "/BLACK_AND_WHITE/dialog/1",
+                "verdict": "ok",
+                "note": "Соблюдено вежливое обращение Sie."
+              },
+              {
+                "path": "/BLACK_AND_WHITE/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/CATASTROPHIZATION/textHTML",
+                "verdict": "ok",
+                "note": "Терминология и стиль в норме."
+              },
+              {
+                "path": "/CATASTROPHIZATION/dialogSummary",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/CATASTROPHIZATION/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/CATASTROPHIZATION/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/CATASTROPHIZATION/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/CATASTROPHIZATION/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/CATASTROPHIZATION/dialog/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/COMMON/textHTML",
+                "verdict": "ok",
+                "note": "Терминология (Übergeneralisierung) верна."
+              },
+              {
+                "path": "/COMMON/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/COMMON/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/COMMON/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/COMMON/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/COMMON/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DISCVAL/textHTML",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DISCVAL/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DISCVAL/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DISCVAL/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DISCVAL/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DISCVAL/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DUE/textHTML",
+                "verdict": "ok",
+                "note": "Термин „Muss-Sätze“ уместен."
+              },
+              {
+                "path": "/DUE/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DUE/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DUE/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DUE/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/DUE/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/EMO/textHTML",
+                "verdict": "ok",
+                "note": "Термин „emotionales Schlussfolgern“ корректен."
+              },
+              {
+                "path": "/EMO/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/EMO/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/EMO/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/EMO/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/EMO/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/FILTER/textHTML",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/FILTER/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/FILTER/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/FILTER/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/FILTER/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод точный, тон эмпатичный."
+              },
+              {
+                "path": "/FILTER/dialog/3",
+                "verdict": "ok",
+                "note": "Терминология (mentale Filter) и обращение (Sie) соблюдены."
+              },
+              {
+                "path": "/LABEL/textHTML",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrung) верна, кавычки „“ использованы правильно."
+              },
+              {
+                "path": "/LABEL/dialogSummary",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/LABEL/dialog/0",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/LABEL/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/LABEL/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/LABEL/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/MAYBE/textHTML",
+                "verdict": "ok",
+                "note": "Хорошая адаптация метафоры «можно было бы»."
+              },
+              {
+                "path": "/MAYBE/dialogSummary",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/MAYBE/dialog/0",
+                "verdict": "ok",
+                "note": "Разговорно и верно."
+              },
+              {
+                "path": "/MAYBE/dialog/1",
+                "verdict": "ok",
+                "note": "Соблюдено вежливое обращение."
+              },
+              {
+                "path": "/MAYBE/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/MAYBE/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/MORE_MINE/textHTML",
+                "verdict": "ok",
+                "note": "Терминология и стиль в норме."
+              },
+              {
+                "path": "/MORE_MINE/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/MORE_MINE/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/MORE_MINE/dialog/1",
+                "verdict": "ok",
+                "note": "Соблюдено вежливое обращение."
+              },
+              {
+                "path": "/MORE_MINE/dialog/2",
+                "verdict": "ok",
+                "note": "Идиома 'den Faden verlieren' подобрана очень удачно."
+              },
+              {
+                "path": "/MORE_MINE/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/MORE_MINE/dialog/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/READ/textHTML",
+                "verdict": "ok",
+                "note": "Терминология (Gedankenlesen) верна."
+              },
+              {
+                "path": "/READ/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/READ/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/READ/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/READ/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/READ/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/RESPONSE/textHTML",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/RESPONSE/dialogSummary",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/RESPONSE/dialog/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/RESPONSE/dialog/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/RESPONSE/dialog/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/RESPONSE/dialog/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком профессиональном уровне. Соблюдена вся специфическая терминология КПТ (kognitive Verzerrungen, Grundüberzeugungen и т.д.), выдержан правильный тон (Sie-Form, эмпатичный, но экспертный) и соблюдены правила типографики (немецкие кавычки „ “). Текст звучит естественно, без признаков кальки с русского языка. Рисков для публикации не обнаружено."
+            },
+            "timings": {
+              "issues": 50420,
+              "deliberate": 2849,
+              "recommend": 6708
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

@@ -73,3 +73,12 @@ export async function writeJsonAtomic(
   const data = JSON.stringify(value, null, 2);
   await writeFileAtomic(filePath, data, encoding);
 }
+
+/** Атомарно записывает текст (отчёты и пр.). */
+export async function writeTextAtomic(
+  filePath: string,
+  text: string,
+  encoding: BufferEncoding = 'utf-8',
+): Promise<void> {
+  await writeFileAtomic(filePath, text, encoding);
+}

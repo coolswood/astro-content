@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "Дата": "2026-09-13T06:08:00.268Z",
+    "Метка": "prompt-v2",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "tests/sociophobia.json",
+    "Локали": "de",
+    "Сэмпл/файл": 3,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "e5f619e3caa4d09e8c2e79d0b392e4f3042b4e2d"
+  },
+  "results": {
+    "tests/sociophobia.json": {
+      "de": [
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/15",
+          "ru": "Никогда\n\nИногда\n\nЧасто\n\nПостоянно",
+          "oldText": "Nie\n\nManchmal\n\nHäufig\n\nStändig",
+          "newText": "Nie\n\nManchmal\n\nOft\n\nStändig",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод B более естественен для шкалы частотности. В немецком языке в подобных прогрессиях (Nie — Manchmal — ...) пара 'Manchmal — Oft' является стандартной и наиболее плавной, в то время как 'Häufig' звучит чуть более официально или тяжеловесно для простого интерфейса.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Häufig' вместо 'Oft' делает шкалу менее разговорной и чуть более формальной, что нарушает ритм естественной прогрессии."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Both translations are correct, but 'Häufig' in B is a more precise and professional equivalent for 'Часто' in the context of frequency scales (e.g., in psychological assessments), whereas 'Oft' is slightly more colloquial.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/14",
+          "ru": "Нет\n\nЛегкая тревога\n\nУмеренная тревога\n\nИнтенсивная тревога",
+          "oldText": "Keine\n\nLeichte Angst\n\nMäßige Angst\n\nStarke Angst",
+          "newText": "Nein\n\nLeichte Angst\n\nModerate Angst\n\nStarke Angst",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 75
+              },
+              "reason": "В контексте оценки уровня симптомов (шкалы) 'Keine' является стандартным и естественным ответом, в то время как 'Nein' звучит как простое отрицание на вопрос, что является калькой с русского.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'Nein' вместо 'Keine' для обозначения отсутствия симптома звучит неестественно для носителя в контексте шкал/опросов."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 75
+              },
+              "reason": "Перевод A идеально подходит для интерфейса (UI) шкалы состояний. Перевод B содержит ошибку в первом пункте: 'Nein' (нет) — это ответ на вопрос, в то время как для обозначения отсутствия симптома в медицинских шкалах используется 'Keine'. Также 'Moderate' в немецком звучит более официально-канцелярски, чем естественное 'Mäßige'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Использование 'Nein' вместо 'Keine' для обозначения отсутствия тревоги (отрицание существительного vs отрицание вопроса)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Moderate' вместо более естественного 'Mäßige' для описания интенсивности."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/22",
+          "ru": "Нет\n\nЛегкая тревога\n\nУмеренная тревога\n\nИнтенсивная тревога",
+          "oldText": "Nein\n\nLeichte Angst\n\nMäßige Angst\n\nStarke Angst",
+          "newText": "Nein\n\nLeichte Angst\n\nModerate Angst\n\nStarke Angst",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Перевод B использует более естественный и точный для немецкого языка термин 'Mäßige Angst' для обозначения умеренной степени. 'Moderate Angst' в переводе A звучит более клинически/сухо и является калькой с английского.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "использование 'Moderate' вместо 'Mäßig' звучит менее естественно для носителя в данном контексте"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "Перевод A использует естественный для немецкого языка термин 'Mäßige Angst', в то время как перевод B использует англицизм 'Moderate Angst', который звучит более клинически и менее естественно в данном контексте.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Moderate' вместо 'Mäßige' звучит как калька с английского."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

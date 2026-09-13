@@ -24,10 +24,11 @@ export interface ParsedCli {
 }
 
 /**
- * Парсит process.argv в именованные флагы и позиционные аргументы.
+ * Парсит process.argv в именованные флаги и позиционные аргументы.
  *
  * Поддерживает формы:
  *   --flag value        → flags.flag = 'value'
+ *   --flag=value        → flags.flag = 'value' ('' для пустого значения)
  *   --flag (без значения или за ним другой флаг) → flags.flag = 'true'
  *   positional          → positional[]
  *
@@ -40,6 +41,12 @@ export function parseCli(argv: string[] = process.argv.slice(2)): ParsedCli {
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     if (arg.startsWith('--')) {
+      // --flag=value: значение внутри самого аргумента.
+      const eq = arg.indexOf('=');
+      if (eq !== -1) {
+        flags[arg.slice(2, eq)] = arg.slice(eq + 1);
+        continue;
+      }
       const nextArg = argv[i + 1];
       if (nextArg && !nextArg.startsWith('--')) {
         flags[arg.slice(2)] = nextArg;

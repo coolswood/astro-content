@@ -1,0 +1,1329 @@
+{
+  "file": "story/depression/label_lawyer_lazy.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 4,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/label/title",
+                "verdict": "ok",
+                "note": "Переведено точно и красиво"
+              },
+              {
+                "path": "/label/description",
+                "verdict": "ok",
+                "note": "Смысл передан полностью, стиль соответствует"
+              },
+              {
+                "path": "/label/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Терминология и смысл верны"
+              },
+              {
+                "path": "/label/screen_1/texts/1",
+                "verdict": "issue",
+                "note": "Нарушена типографика кавычек в атрибуте и тексте"
+              },
+              {
+                "path": "/label/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/5",
+                "verdict": "issue",
+                "note": "Потерян атрибут в теге instagram"
+              },
+              {
+                "path": "/label/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/question",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/description",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/4",
+                "verdict": "issue",
+                "note": "Использование прямых кавычек вместо немецких типографских"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/description",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lazy/screen_4/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/label/screen_1/texts/1",
+                "fragment": "<q author='William Somerset Maugham'>",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование одинарных кавычек в атрибуте вместо двойных, что может быть критично для парсинга, и использование прямых кавычек в тексте вместо немецких „ “.",
+                "why": "Нарушение правил типографики и потенциальный риск для структуры JSON/XML."
+              },
+              {
+                "id": "I2",
+                "path": "/label/screen_2/texts/5",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Потерян атрибут 'ids=\"18055242047218399\"'.",
+                "why": "Это ломает функциональность вставки конкретного поста Instagram."
+              },
+              {
+                "id": "I3",
+                "path": "/lawyer/screen_1/texts/4",
+                "fragment": "<q author='Elizabeth Gilbert'>„Seien Sie der Anwalt Ihrer inneren Welt, nicht der Richter Ihrer eigenen Geschichte.“</q>",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек в атрибуте и смешение стилей кавычек.",
+                "why": "Несоответствие стандартам типографики (немецкие кавычки должны быть „ “)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Typographic error (straight quotes instead of German „“) and potential parsing risk with single quotes in attributes."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical functional error: the Instagram ID is lost, which breaks the integration."
+              },
+              {
+                "id": "I3",
+                "verdict": "merged",
+                "mergedInto": "I1",
+                "rank": 2,
+                "note": "Both issues concern inconsistent/incorrect quotation marks in attributes and text content."
+              }
+            ],
+            "notes": "The translation is high quality, but there are critical technical omissions (missing Instagram ID) and typographic inconsistencies regarding German quotation marks.",
+            "recommendations": [
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/label/screen_2/texts/5",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18055242047218399\">",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: потерян идентификатор поста, что делает тег бесполезным для приложения. Необходимо восстановить атрибут ids."
+              },
+              {
+                "id": "I1",
+                "priority": 2,
+                "path": "/label/screen_1/texts/1",
+                "current": "<q author='William Somerset Maugham'>„Die Menschen lieben es mehr als alles andere auf der Welt, anderen ein Etikett aufzukleben, das sie ein für alle Mal von der Notwendigkeit befreit, nachzudenken.“</q>",
+                "proposed": "<q author=\"William Somerset Maugham\">„Die Menschen lieben es mehr als alles andere auf der Welt, anderen ein Etikett aufzukleben, das sie ein für alle Mal von der Notwendigkeit befreit, nachzudenken.“</q>",
+                "alternatives": [],
+                "rationale": "Исправление атрибута (замена одинарных кавычек на двойные для надежности парсинга) и проверка типографики. В самом тексте кавычки уже верные („“), поэтому меняем только техническую часть."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/lawyer/screen_1/texts/4",
+                "current": "<q author='Elizabeth Gilbert'>„Seien Sie der Anwalt Ihrer inneren Welt, nicht der Richter Ihrer eigenen Geschichte.“</q>",
+                "proposed": "<q author=\"Elizabeth Gilbert\">„Seien Sie der Anwalt Ihrer inneren Welt, nicht der Richter Ihrer eigenen Geschichte.“</q>",
+                "alternatives": [],
+                "rationale": "Аналогично I1: замена одинарных кавычек в атрибуте на двойные для соблюдения стандартов разметки и консистентности."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В переводе обнаружена критическая ошибка — потерян ID инстаграм-поста, что нарушит работу интерфейса. Также требуется техническая правка атрибутов (замена одинарных кавычек на двойные в тегах <q>), чтобы избежать проблем с парсингом. В остальном текст качественный, с соблюдением немецкой типографики и терминологии КПТ."
+            },
+            "timings": {
+              "issues": 65929,
+              "deliberate": 5467,
+              "recommend": 13231
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/label/screen_2/texts/5",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18055242047218399\">"
+            },
+            {
+              "id": "I1",
+              "path": "/label/screen_1/texts/1",
+              "from": "<q author='William Somerset Maugham'>„Die Menschen lieben es mehr als alles andere auf der Welt, anderen ein Etikett aufzukleben, das sie ein für alle Mal von der Notwendigkeit befreit, nachzudenken.“</q>",
+              "to": "<q author=\"William Somerset Maugham\">„Die Menschen lieben es mehr als alles andere auf der Welt, anderen ein Etikett aufzukleben, das sie ein für alle Mal von der Notwendigkeit befreit, nachzudenken.“</q>"
+            },
+            {
+              "id": "I3",
+              "path": "/lawyer/screen_1/texts/4",
+              "from": "<q author='Elizabeth Gilbert'>„Seien Sie der Anwalt Ihrer inneren Welt, nicht der Richter Ihrer eigenen Geschichte.“</q>",
+              "to": "<q author=\"Elizabeth Gilbert\">„Seien Sie der Anwalt Ihrer inneren Welt, nicht der Richter Ihrer eigenen Geschichte.“</q>"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/label/title",
+                "verdict": "ok",
+                "note": "Переведено точно и красиво."
+              },
+              {
+                "path": "/label/description",
+                "verdict": "ok",
+                "note": "Смысл передан, стиль соответствует."
+              },
+              {
+                "path": "/label/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Терминология и смысл верны."
+              },
+              {
+                "path": "/label/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие, смысл сохранен."
+              },
+              {
+                "path": "/label/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок. Идиома 'in eine Schublade stecken' использована очень удачно."
+              },
+              {
+                "path": "/label/screen_2/texts/5",
+                "verdict": "issue",
+                "note": "Потерян атрибут в теге instagram."
+              },
+              {
+                "path": "/label/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/question",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/description",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/description",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_4/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/label/screen_2/texts/5",
+                "fragment": "<instagram>",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Потерян атрибут 'ids=\"18055242047218399\"'",
+                "why": "В структуре JSON/HTML теги с атрибутами должны сохранять свои параметры, иначе ссылка на конкретный пост в Instagram будет потеряна."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: удаление атрибута `ids` в теге `instagram` ломает функциональность (ссылку на контент)."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, с соблюдением стилистики и нюансов, однако допущена техническая ошибка в обработке HTML-тега, что является критическим дефектом для реализации контента.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/label/screen_2/texts/5",
+                "current": "<instagram>",
+                "proposed": "<instagram ids=\"18055242047218399\">",
+                "alternatives": [],
+                "rationale": "Это критическая ошибка: удаление атрибута `ids` приводит к потере связи с конкретным контентом в Instagram. Необходимо восстановить исходную структуру тега."
+              }
+            ],
+            "overall": {
+              "score": 90,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, выдержан эмпатичный и профессиональный тон (Sie-Form), а также правильно использована немецкая типографика. Единственная серьезная проблема — техническая ошибка в одном из тегов (потеря атрибута в Instagram), которая может сломать отображение контента. После исправления этого тега текст готов к публикации."
+            },
+            "timings": {
+              "issues": 66939,
+              "deliberate": 4450,
+              "recommend": 7060
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/label/screen_2/texts/5",
+              "from": "<instagram>",
+              "to": "<instagram ids=\"18055242047218399\">"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

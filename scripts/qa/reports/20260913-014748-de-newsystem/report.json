@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "Дата": "2026-09-12T22:47:48.368Z",
+    "Метка": "de-newsystem",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "tests/sociophobia.json",
+    "Локали": "de",
+    "Сэмпл/файл": 3,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "30b56bc18b00a3d1f474cb07c30edcd508b703d1"
+  },
+  "results": {
+    "tests/sociophobia.json": {
+      "de": [
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/15",
+          "ru": "Никогда\n\nИногда\n\nЧасто\n\nПостоянно",
+          "oldText": "Nie\n\nManchmal\n\nOft\n\nStändig",
+          "newText": "Nie\n\nManchmal\n\nHäufig\n\nStändig",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 98
+              },
+              "reason": "Both translations are grammatically correct, but 'Häufig' in B is more stylistically appropriate for a scale of frequency in a therapeutic or formal context than 'Oft' in A.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Перевод B использует 'Oft', что является наиболее естественным и стандартным вариантом для шкалы частотности в немецком языке. 'Häufig' в переводе A звучит чуть более официально/статистически, что менее подходит для пользовательского интерфейса.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Häufig звучит более формально, чем привычное в таких шкалах Oft."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/14",
+          "ru": "Нет\n\nЛегкая тревога\n\nУмеренная тревога\n\nИнтенсивная тревога",
+          "oldText": "Nein\n\nLeichte Angst\n\nMäßige Angst\n\nStarke Angst",
+          "newText": "Keine\n\nLeichte Angst\n\nMäßige Angst\n\nStarke Angst",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 70,
+                "new": 100
+              },
+              "reason": "В контексте шкалы состояний (отсутствие симптома) 'Keine' является правильным ответом, тогда как 'Nein' — это грамматическая калька с русского 'Нет', которая звучит неестественно для немецкого интерфейса.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'Nein' вместо 'Keine' при описании отсутствия состояния (Angst) является типичной ошибкой перевода (калькой)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 100
+              },
+              "reason": "В контексте шкалы оценки состояния (отсутствие симптома) 'Keine' является стандартным и естественным вариантом, в то время как 'Nein' звучит как ответ на вопрос и является калькой с русского.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'Nein' вместо 'Keine' для обозначения отсутствия симптома звучит неестественно для носителя (калька с 'Нет')."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/21/text",
+          "ru": "Страх писать или делать записи в присутствии других людей иногда называют \"скриптофобией\". Это частный случай социальной тревожности, связанный с боязнью оценки со стороны окружающих.",
+          "oldText": "Die Angst, in Anwesenheit anderer zu schreiben oder Notizen zu machen, wird bisweilen „Scriptophobie“ genannt – eine spezifische Form sozialer Bewertungsangst.",
+          "newText": "Die Angst, in Anwesenheit anderer zu schreiben oder Notizen zu machen, wird manchmal als „Skriptophobie“ bezeichnet. Dies ist ein spezieller Fall von sozialer Angst, der mit der Furcht vor der Bewertung durch andere verbunden ist.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Перевод A звучит гораздо более естественно и профессионально, объединяя две части оригинала в одно элегантное предложение, в то время как перевод B страдает от избыточного дробления и тяжеловесных конструкций.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Излишнее дробление на два предложения делает текст менее плавным (staccato-Stil)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'Dies ist ein spezieller Fall...' звучит как сухой перевод с русского, а не живой немецкий текст."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 85
+              },
+              "reason": "Перевод B звучит гораздо более естественно и профессионально для немецкого языка, избегая тяжеловесных конструкций. Перевод A страдает от избыточного использования придаточных предложений, характерных для кальки с русского.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'Dies ist ein spezieller Fall..., der mit...' звучит слишком академично и громоздко (Nominalstil/Relativsatz-Kette), в то время как вариант B использует более элегантное тире и точный термин 'soziale Bewertungsangst'."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Использование 'sozialer Angst' допустимо, но в контексте психологии 'soziale Bewertungsangst' (как в варианте B) является более точным и устоявшимся термином."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

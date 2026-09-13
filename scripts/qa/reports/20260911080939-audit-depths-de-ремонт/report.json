@@ -1,0 +1,282 @@
+{
+  "file": "story/depths.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено как 'tief verwurzelte Überzeugungen', что допустимо, хотя в глоссарии указано 'Grundüberzeugungen'."
+              },
+              {
+                "path": "/description",
+                "verdict": "issue",
+                "note": "Пропущено упоминание 'неприятия' в контексте категорий (в оригинале три: беспомощность, неприятие, никчемность)."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Метафора сохранена, звучит естественно."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие „“, теги сохранены."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Терминология KVT соблюдена."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Тег instagram обработан корректно."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Вопрос корректен."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/description",
+                "fragment": "Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Nichtzugehörigkeit und Wertlosigkeit.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "В оригинале три категории: беспомощность, неприятие и никчемность. В немецком переводе вместо 'неприятия' (Nichtakzeptanz/Ablehnung) использовано 'Nichtzugehörigkeit' (непринадлежность), что меняет психологический оттенок, но главная проблема в том, что переводчик в описании категорий потерял нюанс или перефразировал их иначе, чем в последующих разделах, хотя здесь скорее ошибка в подборе термина для 'неприятия' (в контексте КПТ это чаще Ablehnung/Nicht-Akzeptanz). Однако, если смотреть на структуру, переводчик заменил 'неприятие' на 'Nichtzugehörigkeit', что является смысловой подменой (mistranslation) или как минимум отклонением от контекста оригинала.",
+                "why": "Неприятие (rejection/non-acceptance) и непринадлежность (not belonging) — это разные психологические конструкты."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "В оригинале категория «неприятие» (rejection/non-acceptance), в переводе — «Nichtzugehörigkeit» (not belonging). Это разные психологические концепты: неприятие — это действие/реакция среды, а непринадлежность — это состояние субъекта. Термин не соответствует контексту КПТ и последующим разделам."
+              }
+            ],
+            "notes": "Перевод содержит серьезную смысловую подмену в ключевом термине, что искажает психологическую точность текста.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/description",
+                "current": "Wir widmen besondere Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Nichtzugehörigkeit und Wertlosigkeit.",
+                "proposed": "Wir widmen besonderen Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Ablehnung und Wertlosigkeit.",
+                "alternatives": [
+                  "Wir widmen besonderen Aufmerksamkeit drei Kategorien solcher Überzeugungen: Hilflosigkeit, Nichtakzeptanz und Wertlosigkeit."
+                ],
+                "rationale": "В оригинале указано «неприятие». 'Nichtzugehörigkeit' (непринадлежность) — это другое состояние. Для КПТ-контекста 'Ablehnung' (отвержение/неприятие) или 'Nichtakzeptanz' подходят лучше. Выбран 'Ablehnung', так как он наиболее точно передает смысл «неприятия» как внешнего или внутреннего процесса и лучше сочетается с последующим текстом про страх отвержения (Ablehnung). Также исправлена грамматическая ошибка: 'widmen besonderen Aufmerksamkeit' (Dativ) вместо 'besondere'."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология (KVT, Zwischenüberzeugungen, Grundüberzeugungen) соблюдена верно. Основная проблема заключалась в смысловой подмене термина «неприятие» на «непринадлежность» в описании, что создавало диссонанс с последующими разделами. После исправления этого момента текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 46042,
+              "deliberate": 5338,
+              "recommend": 12387
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/description",
+              "reason": "текст в файле не совпал с current из отчёта"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

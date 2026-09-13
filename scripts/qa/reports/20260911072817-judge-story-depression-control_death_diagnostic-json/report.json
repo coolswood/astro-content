@@ -1,0 +1,354 @@
+{
+  "file": "story/depression/control_death_diagnostic.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/control/screen_1/texts/8",
+                "verdict": "issue",
+                "note": "Смысловая ошибка в переводе буквы и названия достижения"
+              },
+              {
+                "path": "/control/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/control/screen_3/texts/4",
+                "verdict": "issue",
+                "note": "Использование программных кавычек вместо немецких типографских"
+              },
+              {
+                "path": "/death/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно, кавычки правильные"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/18",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/19",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/control/screen_1/texts/8",
+                "fragment": "„D-Erfolg“",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла буквенного обозначения",
+                "why": "В оригинале буква «Д» (от слова Дело), в переводе — «D» (от слова Erfolg). Это не просто транслитерация, а подмена логики системы маркировки. Если пользователь должен искать букву «Д», он не найдет её в немецком интерфейсе."
+              },
+              {
+                "id": "I2",
+                "path": "/control/screen_3/texts/4",
+                "fragment": "\"Peter Drucker\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек в атрибуте/теге",
+                "why": "Хотя это технический атрибут, в контексте задачи по проверке типографики и визуальной целостности, использование прямых кавычек вместо немецких „ “ (если это подразумевается как часть отображаемого текста или если правила касаются всей структуры) может быть расценено как нарушение. Однако, так как это атрибут тега <q>, это скорее технический нюанс, но в рамках инструкции по кавычкам стоит обратить внимание."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: подмена символа маркировки ломает логику взаимодействия с интерфейсом. Буква 'D' не соответствует 'Д'."
+              },
+              {
+                "id": "I2",
+                "verdict": "rejected",
+                "note": "Это технический атрибут XML/HTML тега <q>. Правила типографики немецкого языка относятся к контенту внутри тега, а не к синтаксису разметки."
+              }
+            ],
+            "notes": "Основная проблема заключается в нарушении логики системы маркировки (символ 'D' вместо 'Д'), в то время как замечание по кавычкам в атрибуте является технически необоснованным.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/control/screen_1/texts/8",
+                "current": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „D-Erfolg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                "proposed": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „L-Leistung“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                "alternatives": [
+                  "Markieren Sie zudem jede Aktivität mit dem Buchstaben „E-Erfolg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                  "Markieren Sie zudem jede Aktivität mit dem Buchstaben „D-Durchführung“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte."
+                ],
+                "rationale": "В оригинале используется буква «Д» от слова «Дело». Перевод «D-Erfolg» ошибочен, так как буква D не связана со словом Erfolg. Чтобы сохранить логику «Буква-Значение», нужно либо использовать немецкую букву, соответствующую смыслу (L для Leistung — достижение/усилие), либо адаптировать под немецкое слово на D, если это критично для интерфейса. Вариант с «L-Leistung» наиболее естественен для передачи смысла «достижения» (Leistung) и сохраняет структуру."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/control/screen_3/texts/4",
+                "current": "<q author=\"Peter Drucker\">Das Wichtigste beim Zeitmanagement ist nicht, die Zeit zu managen, sondern sich selbst zu managen.</q>",
+                "proposed": "<q author=\"Peter Drucker\">Das Wichtigste beim Zeitmanagement ist nicht, die Zeit zu managen, sondern sich selbst zu managen.</q>",
+                "alternatives": [],
+                "rationale": "Замечание отклонено. Кавычки внутри атрибута `author=\"...\"` являются частью синтаксиса разметки (HTML/XML), а не типографикой текста. Правила использования немецких кавычек „ “ относятся к контенту, который видит пользователь, а не к программному коду."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "Основная проблема заключается в логической ошибке с буквенным обозначением в первом пункте: буква 'D' не соответствует немецкому слову 'Erfolg', что запутает пользователя. В остальном перевод выполнен на высоком уровне, соблюдены правила обращения 'Sie' и терминология. После исправления буквы в первом пункте текст будет готов к публикации."
+            },
+            "timings": {
+              "issues": 18017,
+              "deliberate": 8048,
+              "recommend": 20942
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/control/screen_1/texts/8",
+              "from": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „D-Erfolg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+              "to": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „L-Leistung“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I2",
+              "path": "/control/screen_3/texts/4",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/control/screen_1/texts/8",
+                "verdict": "issue",
+                "note": "Смысловая подмена: 'Д-дело' (достижение) переведено как 'L-Leistung' (достижение/успех), но в немецком контексте буква 'L' не несет такого же эмоционального/аллитеративного веса, как 'Д' в русском. Однако главная проблема в потере нюанса 'достижение конкретно для вас'."
+              },
+              {
+                "path": "/control/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует, HTML-теги сохранены."
+              },
+              {
+                "path": "/control/screen_3/texts/4",
+                "verdict": "issue",
+                "note": "Использование кавычек: в оригинале программные кавычки, в переводе — правильные немецкие, но в самом тексте внутри тега <q> используются стандартные кавычки, а не типографские „ “."
+              },
+              {
+                "path": "/death/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон уместный, пунктуация и кавычки соблюдены."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология корректна."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный, цитата звучит естественно."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/control/screen_1/texts/8",
+                "fragment": "„L-Leistung“",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Потеря аллитерации и культурного кода",
+                "why": "В русском языке используется 'Д-дело' для обозначения 'Достижения'. В немецком 'L-Leistung' звучит технически, но не передает ту же игру слов и эмоциональный акцент на личном триумфе, который заложен в оригинале. Это скорее вопрос адаптации, чем прямой ошибки, но для пользователя это может выглядеть странно."
+              },
+              {
+                "id": "I2",
+                "path": "/control/screen_3/texts/4",
+                "fragment": "<q author=\"Peter Drucker\">Das Wichtigste beim Zeitmanagement ist nicht, die Zeit zu managen, sondern sich selbst zu managen.</q>",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Несоответствие типографики кавычек",
+                "why": "Согласно правилам, внутри цитат должны использоваться немецкие типографские кавычки „ “ (внизу-вверху), а не стандартные программные кавычки, которые могут подтянуться из разметки."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Перевод 'L-Leistung' вместо 'Д-дело' теряет аллитерацию и специфический педагогический/психологический контекст оригинала. Это требует адаптации, а не простого перевода."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Типографика не соответствует немецким стандартам (необходимы „ “ вместо стандартных кавычек)."
+              }
+            ],
+            "notes": "Перевод в целом точен по смыслу, однако требует внимания к культурной адаптации (аллитерация) и соблюдению немецких правил типографики.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/control/screen_1/texts/8",
+                "current": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „L-Leistung“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                "proposed": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „E-Erfolg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                "alternatives": [
+                  "Markieren Sie zudem jede Aktivität mit dem Buchstaben „S-Sieg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                  "Markieren Sie zudem jede Aktivität mit dem Buchstaben „T-Triumph“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte."
+                ],
+                "rationale": "Вариант 'L-Leistung' звучит слишком сухо и технически. 'E-Erfolg' (от Erfolg — успех/достижение) лучше передает эмоциональный подтекст 'достижения' и сохраняет аллитерацию (E-Erfolg), что максимально близко к духу русского 'Д-дело'."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/control/screen_3/texts/4",
+                "current": "<q author=\"Peter Drucker\">Das Wichtigste beim Zeitmanagement ist nicht, die Zeit zu managen, sondern sich selbst zu managen.</q>",
+                "proposed": "<q author=\"Peter Drucker\">„Das Wichtigste beim Zeitmanagement ist nicht, die Zeit zu managen, sondern sich selbst zu managen.“</q>",
+                "alternatives": [],
+                "rationale": "В немецком языке внутри тегов цитат необходимо использовать типографские кавычки „ “ (внизу-вверху), чтобы текст соответствовал стандартам немецкой пунктуации."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "Перевод в целом качественный и точный, однако требует тонкой стилистической адаптации в части аллитерации (I1) и исправления типографики кавычек (I2) согласно правилам немецкого языка. Основной риск — потеря эмоционального вовлечения пользователя из-за слишком сухого перевода метафоры."
+            },
+            "timings": {
+              "issues": 26067,
+              "deliberate": 6477,
+              "recommend": 16835
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/control/screen_1/texts/8",
+              "from": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „L-Leistung“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+              "to": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „E-Erfolg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte."
+            },
+            {
+              "id": "I2",
+              "path": "/control/screen_3/texts/4",
+              "from": "<q author=\"Peter Drucker\">Das Wichtigste beim Zeitmanagement ist nicht, die Zeit zu managen, sondern sich selbst zu managen.</q>",
+              "to": "<q author=\"Peter Drucker\">„Das Wichtigste beim Zeitmanagement ist nicht, die Zeit zu managen, sondern sich selbst zu managen.“</q>"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/control/screen_1/texts/8",
+                "verdict": "issue",
+                "note": "Смысл буквы 'Д' (Дело) заменен на 'E' (Erfolg). Это меняет систему кодирования занятий."
+              },
+              {
+                "path": "/control/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует."
+              },
+              {
+                "path": "/control/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Цитата переведена верно, кавычки немецкие."
+              },
+              {
+                "path": "/death/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон уместный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/control/screen_1/texts/8",
+                "fragment": "„E-Erfolg“",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Буква изменена с 'Д' на 'E'",
+                "why": "В оригинале предлагается использовать букву «Д» (Дело) для маркировки достижений. Переводчик заменил её на немецкую «E» (Erfolg). Если пользователь будет следовать инструкции, он будет искать букву 'E', хотя в интерфейсе или его записях может подразумеваться логика оригинала, либо это создаёт путаницу в системе кодирования, заложенной автором."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "Это осознанная транскреация. Буква «Д» (Дело) не имеет смысла в немецком контексте; переводчик адаптировал её под немецкое «E» (Erfolg), чтобы сохранить аллитерацию и логику упражнения для носителя языка."
+              }
+            ],
+            "notes": "Перевод выполнен на высоком уровне, с качественной адаптацией культурных и языковых нюансов (транскреацией), что делает текст естественным для немецкого читателя.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/control/screen_1/texts/8",
+                "current": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „E-Erfolg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                "proposed": "Markieren Sie zudem jede Aktivität mit dem Buchstaben „E-Erfolg“, wenn diese Aufgabe für Sie nicht besonders leicht war und eine persönliche Leistung darstellte.",
+                "alternatives": [],
+                "rationale": "Замечание отклонено, так как это удачная транскреация. Буква «Д» из русского оригинала не несет смысловой нагрузки, кроме как служить маркером; замена на «E-Erfolg» (E-Erfolg) сохраняет логику упражнения, делает его понятным для немца и сохраняет аллитерацию, что критически важно для запоминания метода."
+              }
+            ],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Редакторская правка по поводу замены буквы «Д» на «E» была отклонена, так как переводчик применил грамотную транскреацию, адаптировав методику под немецкий язык (E-Erfolg вместо бессмысленного D-Erfolg). Текст звучит естественно, терминология соблюдена, кавычки и пунктуация соответствуют стандартам немецкого языка."
+            },
+            "timings": {
+              "issues": 13628,
+              "deliberate": 4971,
+              "recommend": 10277
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/control/screen_1/texts/8",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,8 @@
+/**
+ * LEGACY-провайдер (puppeteer/CDP :9222).
+ * Основной путь локализации — HTTP к vLLM (scripts/lib/pipeline.ts, VllmClient).
+ * Сохранён по решению о постепенном выводе из эксплуатации; НЕ развивать.
+ */
 import { Page } from 'puppeteer-core';
 import {
   retryAction,

@@ -1,0 +1,106 @@
+{
+  "file": "story/distortions/perfectionism.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/15",
+                "verdict": "issue",
+                "note": "Использование прямых кавычек вместо немецких типографских"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_1/texts/15",
+                "fragment": "<q author=\"Elizabeth Gilbert\">Perfektionismus ist die Angst in schicken Schuhen und einem Pelzmantel, die vorgibt, elegant zu sein, während sie in Wahrheit einfach nur verängstigt ist.</q>",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование программных кавычек вместо немецких типографских „“",
+                "why": "Согласно правилам типографики для немецкого рынка (DE), кавычки должны иметь вид „слово“ (внизу-вверху). Использование прямых кавычек в тексте, даже внутри тегов, нарушает визуальную целостность и стандарты локализации."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Typografische Korrektheit ist für die deutsche Lokalisierung essenziell; die Verwendung von Anführungszeichen innerhalb des Textinhalts muss den DE-Standards entsprechen."
+              }
+            ],
+            "notes": "Der Übersetzer hat den Inhalt korrekt übertragen, jedoch wurden die deutschen typografischen Standards bei den Anführungszeichen nicht berücksichtigt.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/15",
+                "current": "<q author=\"Elizabeth Gilbert\">Perfektionismus ist die Angst in schicken Schuhen und einem Pelzmantel, die vorgibt, elegant zu sein, während sie in Wahrheit einfach nur verängstigt ist.</q>",
+                "proposed": "<q author=\"Elizabeth Gilbert\">„Perfektionismus ist die Angst in schicken Schuhen und einem Pelzmantel, die vorgibt, elegant zu sein, während sie in Wahrheit einfach nur verängstigt ist.“</q>",
+                "alternatives": [
+                  "<q author=\"Elizabeth Gilbert\">„Perfektionismus ist die Angst in schicken Schuhen und einem Pelzmantel, die vorgibt, elegant zu sein, während sie in Wahrheit einfach nur verängstigt ist.“</q>"
+                ],
+                "rationale": "В текущем тексте отсутствуют немецкие типографские кавычки „“. Поскольку теги <q> и атрибуты author являются частью программной структуры, кавычки должны быть добавлены непосредственно в текстовое содержимое внутри тегов для соответствия стандартам немецкой типографики."
+              }
+            ],
+            "overall": {
+              "score": 95,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен очень качественно, смысл и тон полностью переданы. Единственная необходимая правка касается типографики: нужно заменить отсутствие кавычек (или их программный вид) на немецкие типографские „“. После этого текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 6398,
+              "deliberate": 3679,
+              "recommend": 10118
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/15",
+              "from": "<q author=\"Elizabeth Gilbert\">Perfektionismus ist die Angst in schicken Schuhen und einem Pelzmantel, die vorgibt, elegant zu sein, während sie in Wahrheit einfach nur verängstigt ist.</q>",
+              "to": "<q author=\"Elizabeth Gilbert\">„Perfektionismus ist die Angst in schicken Schuhen und einem Pelzmantel, die vorgibt, elegant zu sein, während sie in Wahrheit einfach nur verängstigt ist.“</q>"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Смысл передан точно, кавычки соответствуют немецким стандартам („“), грамматика и стиль верны."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Цитата передает метафоричный и эмоциональный тон оригинала, соблюдены правила немецкой типографики (использование правильных кавычек „“) и грамматические нормы. Терминология и стиль полностью соответствуют целевой аудитории."
+            },
+            "timings": {
+              "issues": 1864,
+              "deliberate": 593,
+              "recommend": 3135
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

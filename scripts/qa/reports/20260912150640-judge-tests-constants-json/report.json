@@ -1,0 +1,97 @@
+{
+  "file": "tests/constants.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/bdi",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sdvg",
+                "verdict": "ok",
+                "note": "Использована общепринятая аббревиатура ADHS"
+              },
+              {
+                "path": "/anxiety",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/eat",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/irritation",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/burnout",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/okr",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/impostor",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/bipolar",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sociophobia",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/hopelessness",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/acceptance",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком профессиональном уровне. Все термины соответствуют принятой немецкой психологической номенклатуре (KVT/DSM/ICD). Использованы корректные медицинские эквиваленты (например, 'Zwangsstörungen' для ОКР и 'Soziale Phobie' для социофобии), соблюдена точность передачи смыслов без калькирования структуры русского языка. Ошибок в терминологии или стилистике не обнаружено."
+            },
+            "timings": {
+              "issues": 6491,
+              "deliberate": 527,
+              "recommend": 3810
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,144 +1,147 @@
 {
   "steps": [
-    "Ich blicke mit Hoffnung und Enthusiasmus in die Zukunft",
-    "Ich sollte lieber aufgeben, denn ich kann nichts tun, um mein Leben zu verbessern",
-    "Wenn es schlecht läuft, hilft mir der Gedanke, dass es nicht immer so bleiben wird",
-    "Ich kann mir nicht vorstellen, wie mein Leben in zehn Jahren aussehen wird",
-    "Ich habe genug Zeit, um das zu erreichen, was ich möchte",
-    "Für das, was mir wichtig ist, erwarte ich in Zukunft Erfolg",
-    "Meine Zukunft erscheint mir düster",
-    "Ich habe Glück und erwarte mehr Gutes im Leben als die meisten Menschen",
-    "Ich bekomme keine guten Chancen, und es gibt keinen Grund zu glauben, dass sie in Zukunft auftauchen",
-    "Meine bisherigen Erfahrungen haben mich gut auf die Zukunft vorbereitet",
-    "Alles, was ich vor mir sehe, sind Schwierigkeiten",
-    "Ich erwarte nicht, das zu bekommen, was ich mir wirklich wünsche",
-    "Wenn ich in die Zukunft schaue, erwarte ich, glücklicher zu sein als jetzt",
-    "Es wird einfach nicht so laufen, wie ich will",
-    "Ich glaube fest an die Zukunft",
-    "Ich bekomme nie, was ich will, also ist es dumm, sich überhaupt etwas zu wünschen",
-    "Es ist sehr unwahrscheinlich, dass ich in Zukunft echte Zufriedenheit erlebe",
-    "Die Zukunft erscheint mir unbestimmt und unklar",
-    "Ich kann auf mehr gute als schlechte Zeiten hoffen",
-    "Es hat keinen Sinn, zu versuchen, zu bekommen, was ich will, denn wahrscheinlich bekomme ich es ohnehin nicht"
+    "Ich blicke voller Hoffnung und Zuversicht in die Zukunft.",
+    "Ich möchte am liebsten alles hinschmeißen, weil ich nicht glaube, dass ich etwas ändern kann.",
+    "Wenn alles schwerfällt, hilft mir der Gedanke, dass es nicht ewig so bleiben wird.",
+    "Es fällt mir schwer, mir mein Leben in zehn Jahren vorzustellen.",
+    "Ich habe das Gefühl, dass ich noch genug Zeit habe, um das zu erreichen, was mir wichtig ist.",
+    "Ich habe das Gefühl, dass mir in der Zukunft Erfolg in den Dingen bevorsteht, die mir wichtig sind.",
+    "Die Zukunft erscheint mir düster.",
+    "Ich habe das Gefühl, dass ich im Leben mehr Gutes erfahre als viele andere.",
+    "Ich habe das Gefühl, dass gute Gelegenheiten an mir vorbeiziehen und sich kaum noch ergeben werden.",
+    "Ich habe das Gefühl, dass die Vergangenheit mir eine Basis für die Zukunft gegeben hat.",
+    "Ich sehe vor mir nur Schwierigkeiten.",
+    "Ich erwarte nicht, dass ich das bekomme, was ich mir wirklich wünsche.",
+    "Wenn ich an die Zukunft denke, habe ich das Gefühl, dass ich glücklicher sein werde als jetzt.",
+    "Ich glaube nicht daran, dass alles so kommt, wie ich es mir wünsche.",
+    "Ich glaube fest an die Zukunft.",
+    "Ich habe das Gefühl, dass es sinnlos ist, sich etwas zu wünschen, weil ich es ohnehin nicht bekomme.",
+    "Es fällt mir schwer zu glauben, dass ich in Zukunft echte Zufriedenheit empfinden werde.",
+    "Wenn ich an die Zukunft denke, erscheint sie mir unklar und ungewiss.",
+    "Ich glaube daran, dass ich in Zukunft mehr gute als schwere Zeiten erleben werde.",
+    "Ich sehe keinen Sinn darin, mich für meine Wünsche anzustrengen, weil ich nicht an das Ergebnis glaube."
   ],
   "variants": {
-    "wrong": "Völlig unzutreffend",
-    "maybe": "Eher unzutreffend",
-    "maybeYes": "Eher zutreffend",
-    "yes": "Völlig zutreffend"
+    "wrong": "Stimmt überhaupt nicht",
+    "maybe": "Stimmt eher nicht",
+    "maybeYes": "Stimmt eher",
+    "yes": "Stimmt absolut"
   },
   "steps_description": {
     "0": {
-      "text": "Studien zeigen: Menschen mit positivem Zukunftsblick berichten häufiger von Zufriedenheit und Wohlbefinden. Optimismus korreliert mit besseren Ergebnissen in Beruf, Privatleben und Gesundheit.",
-      "fact": "Bei Optimist*innen werden Hirnareale für Belohnung und positive Erwartungen aktiver rekrutiert als bei Pessimist*innen."
+      "text": "Studien zeigen, dass Menschen mit einer positiven Zukunftsperspektive oft ein höheres Maß an Glück und Lebenszufriedenheit empfinden. Optimismus ist mit besseren Ergebnissen in der Karriere, im Privatleben und in der Gesundheit verbunden.",
+      "fact": "Wissenschaftler haben herausgefunden, dass Optimisten andere Hirnareale aktivieren als Pessimisten. Bei Optimisten werden die Bereiche, die für Belohnung und positive Erwartungen zuständig sind, häufiger aktiviert."
     },
     "1": {
-      "text": "Martin Seligman beschrieb das Phänomen der erlernten Hilflosigkeit: Nach wiederholten Misserfolgen neigen Menschen dazu zu glauben, sie könnten ihre Lage nicht verändern – selbst wenn Möglichkeiten vorhanden sind.",
-      "fact": "Winston Churchill erlebte zahlreiche Niederlagen, hielt jedoch an Zuversicht und Handlungsfähigkeit fest – ein Schlüssel seiner späteren Führungsstärke."
+      "text": "Der Psychologe Martin Seligman beschrieb erstmals das Phänomen der erlernten Hilflosigkeit. Dabei beginnt ein Mensch zu glauben, seine Situation nicht ändern zu können, selbst wenn Möglichkeiten dazu bestehen. Dieses Phänomen tritt häufig bei Menschen auf, die wiederholt Misserfolge oder negative Ereignisse erleben.",
+      "fact": "Der ehemalige britische Premierminister Winston Churchill erlebte in seiner politischen Karriere viele Rückschläge, darunter Wahlniederlagen und Kritik. Doch seine Widerstandsfähigkeit und der Glaube an seine Fähigkeiten halfen ihm, Schwierigkeiten zu überwinden und einer der bedeutendsten Anführer der Geschichte zu werden."
     },
     "2": {
-      "text": "Das Leben verläuft in Zyklen. Das Bewusstsein für die Vergänglichkeit schwieriger Phasen erleichtert das Durchhalten.",
-      "fact": "Diese Fähigkeit zum inneren Zurückfedern nennen Psycholog*innen Resilienz – sie schützt vor Langzeitfolgen von Stress."
+      "text": "Das Leben besteht aus Höhen und Tiefen, und das Verständnis für diese Zyklen kann helfen, schwierige Zeiten leichter zu bewältigen. Historisch gesehen betonen viele Kulturen und philosophische Lehren die Vergänglichkeit von Krisen und die Bedeutung der Hoffnung auf eine bessere Zukunft.",
+      "fact": "Psychologen nennen die Fähigkeit eines Menschen, sich nach Schwierigkeiten wieder zu erholen, Resilienz. Diese Eigenschaft hilft dabei, die Herausforderungen und den Stress des Lebens zu meistern, während die psychische Gesundheit und eine positive Zukunftswahrnehmung bewahrt werden."
     },
     "3": {
-      "text": "Unklarheit über die ferne Zukunft ist normal – je weiter der Zeithorizont, desto diffuser die Vorstellung.",
-      "fact": "Menschen können die nahe Zukunft viel konkreter antizipieren als weit entfernte Zeiträume („Unschärfe“ der Zukunft)."
+      "text": "Das Gefühl der Ungewissheit gegenüber der Zukunft ist ganz natürlich und weit verbreitet. Studien zeigen, dass viele Menschen Schwierigkeiten mit der langfristigen Planung haben, besonders in einer sich schnell verändernden Welt.",
+      "fact": "Psychologen bezeichnen dieses Phänomen als die „Unschärfe“ der Zukunft. Je weiter der Zeithorizont entfernt ist, desto unklarer und weniger konkret erscheint er. Das ist völlig normal, da Menschen die nahe Zukunft meist deutlicher vor Augen haben."
     },
     "4": {
-      "text": "Wirksames Zeitmanagement und Priorisieren zählen zu den stärksten Prädiktoren für Zielerreichung.",
-      "fact": "Parkinsonsches Gesetz: Arbeit dehnt sich in dem Maß aus, wie Zeit dafür zur Verfügung steht – klare Deadlines schaffen Fokus."
+      "text": "Ein entscheidender Faktor für das Erreichen von Zielen ist die Fähigkeit, die eigene Zeit effektiv zu managen. Untersuchungen zeigen, dass Menschen, die ihren Tag planen und Prioritäten setzen, in verschiedenen Lebensbereichen erfolgreicher sind.",
+      "fact": "Das Parkinson’sche Gesetz besagt, dass Arbeit sich genau in dem Maß ausdehnt, wie Zeit für ihre Erledigung zur Verfügung steht. Daher ist es wichtig, klare Fristen zu setzen und diese einzuhalten, um die Zeit so effizient wie möglich zu nutzen – selbst wenn es so wirkt, als bliebe wenig Zeit."
     },
     "5": {
-      "text": "Erwarteter Erfolg und Glaube an die eigenen Fähigkeiten (Selbstwirksamkeit) fördern Ausdauer und Zielerreichung.",
-      "fact": "Eine Studie im Journal of Applied Psychology fand: Wer an seinen Erfolg glaubt, erreicht Ziele um rund ein Drittel häufiger."
+      "text": "Die Erwartung von Erfolg und der Glaube an die eigenen Fähigkeiten sind wesentliche Bestandteile psychischer Widerstandskraft und Zielerreichung. Psychologen nennen dies „Selbstwirksamkeit“. Menschen mit einer hohen Selbstwirksamkeit neigen dazu, an die Kontrolle über ihren Erfolg zu glauben, und erreichen deshalb oft große Ziele.",
+      "fact": "Laut einer im „Journal of Applied Psychology“ veröffentlichten Studie erreichen Menschen, die an ihren Erfolg glauben, ihre Ziele um 33 % häufiger als jene, die an ihren Fähigkeiten zweifeln."
     },
     "6": {
-      "text": "Chronisch negatives Denken kann Ursache und Folge depressiver Verstimmung sein – die Zukunft erscheint dann oft zwangsläufig düster.",
-      "fact": "Kognitive Verzerrungen wie Katastrophisieren oder Schwarz-Weiß-Denken nähren das Bild einer miesen Zukunft."
+      "text": "Psychologen weisen darauf hin, dass negatives Denken sowohl Ursache als auch Folge einer Depression sein kann. Menschen mit chronischem Pessimismus sehen die Zukunft oft in düsteren Farben, was ihren psychischen Zustand weiter verschlechtern kann.",
+      "fact": "Ein Faktor, der die düstere Wahrnehmung der Zukunft beeinflusst, sind kognitive Verzerrungen wie die Katastrophisierung (das Übertreiben negativer Ausgänge) und das Schwarz-Weiß-Denken (die Wahrnehmung von Ereignissen nur in extremen Kategorien)."
     },
     "7": {
-      "text": "Positive Erwartung unterstützt zielgerichtetes Handeln (selbsterfüllende Prophezeiung) und erhöht so reale Chancen.",
-      "fact": "C. G. Jungs Begriff der „Synchronizität“ beschreibt bedeutsame Zufälle, die oft als Rückenwind wahrgenommen werden."
+      "text": "Menschen, die auf Glück und Erfolg hoffen, ziehen diesen oft in ihr Leben. Dies hängt mit dem Effekt der Selbsterfüllung zusammen: Wer an seinen Erfolg glaubt, handelt entschlossener und offener, was die Chancen auf Erfolg erhöht.",
+      "fact": "Der berühmte Psychologe Carl Jung führte den Begriff der „Synchronizität“ ein, um bedeutungsvolle Zufälle zu beschreiben, die wie Glück wirken. Solche Ereignisse werden oft als Bestätigung wahrgenommen, dass man auf dem richtigen Weg ist."
     },
     "8": {
-      "text": "Erlernte Hilflosigkeit verstärkt das Gefühl von „Pech“ und blockiert Initiative – obwohl Handlungsspielräume da sind.",
-      "fact": "Bestätigungsfehler und das Übersehen positiver Ereignisse können den Eindruck chronischen Unglücks zementieren."
+      "text": "Der Begriff der „erlernten Hilflosigkeit“ wurde vom Psychologen Martin Seligman geprägt. Er beschreibt einen Zustand, in dem man glaubt, die eigene Situation nicht beeinflussen zu können, selbst wenn es Wege gäbe. Dies wird oft bei Menschen beobachtet, die wiederholt negative Erfahrungen gemacht haben.",
+      "fact": "Studien zeigen, dass die Wahrnehmung von Pech mit kognitiven Verzerrungen zusammenhängen kann, wie etwa dem Bestätigungsfehler (die Tendenz, nur nach Belegen für die eigenen negativen Überzeugungen zu suchen) oder dem Ignorieren positiver Ereignisse."
     },
     "9": {
-      "text": "Vergangene Erfahrungen bilden Lernstoff für Anpassung und spätere Kompetenz.",
-      "fact": "Anpassungsfähigkeit – nicht Stärke – ist laut Darwin zentral für Erfolg unter wechselnden Bedingungen."
+      "text": "Psychologen betonen, dass vergangene Erfahrungen eine wichtige Rolle bei der Formung unseres Verhaltens und unserer Wahrnehmung spielen. Experimentieren und Fehler sind wesentliche Bestandteile von Lernen und Wachstum. Menschen, die aus ihren Fehlern lernen können, sind in der Zukunft meist erfolgreicher.",
+      "fact": "Charles Darwin vertrat die Ansicht, dass die Fähigkeit, sich an Veränderungen anzupassen, der Schlüssel zum Überleben und zum Erfolg ist. Unsere Erfahrungen helfen uns dabei, uns besser an neue Bedingungen anzupassen und künftige Herausforderungen zu meistern."
     },
     "10": {
-      "text": "Dauerstress verschlechtert Zukunftserwartungen: Er erhöht Anspannung und alarmistische Prognosen.",
-      "fact": "Resiliente Menschen gewichten Chancen und Risiken ausgewogener und kommen mit Belastungen besser zurecht."
+      "text": "Dauerhafter Stress kann die negative Wahrnehmung der Zukunft verstärken. Studien zeigen, dass chronischer Stress die Gehirnfunktion verändert und das Angstniveau sowie negative Erwartungen erhöht.",
+      "fact": "Menschen mit hoher psychischer Resilienz neigen weniger zu negativen Vorahnungen. Sie können sowohl unangenehme als auch angenehme Aspekte der Zukunft wahrnehmen und meistern Herausforderungen besser."
     },
     "11": {
-      "text": "Niedrige Erwartungen drosseln Verhalten – man ergreift seltener Chancen und bestätigt so den Pessimismus.",
-      "fact": "Karrieren wie die von Michael Jordan zeigen, wie Zuversicht und Übung Rückschläge in Antrieb verwandeln."
+      "text": "Psychologen argumentieren, dass Erwartungen eine zentrale Rolle dabei spielen, wie wir handeln und welche Ergebnisse wir erzielen. Wenn jemand nicht erwartet, sein Ziel zu erreichen, kann dies zu einer Selbsterfüllung werden, da er unbewusst Handlungen vermeidet, die zum Erfolg führen könnten.",
+      "fact": "Der Basketballstar Michael Jordan schaffte es zu Beginn seiner Karriere nicht in die Schulmannschaft. Er verlor jedoch nie den Glauben an sich selbst und trainierte weiter, was ihn schließlich zu einem der größten Sportler aller Zeiten machte. Seine Beharrlichkeit und das Vertrauen in seine Fähigkeiten halfen ihm, das zu erreichen, was er wirklich wollte."
     },
     "12": {
-      "text": "Der „schöne-Zukunfts-Effekt“: Die Erwartung eines besseren Morgen stützt Motivation und Ausdauer.",
-      "fact": "Menschen, die mit mehr Glück rechnen, sind oft leistungsbereiter, entwickeln seltener Stressfolgen und erzielen bessere Outcomes."
+      "text": "Dieses Phänomen wird als „Effekt der schönen Zukunft“ bezeichnet: Menschen erwarten, dass die Zukunft mehr Freude und Vergnügen bereithält als die Gegenwart. Dies hilft ihnen, die Motivation und den Drang zur Verbesserung ihres Lebens aufrechtzuerhalten.",
+      "fact": "Untersuchungen zeigen, dass Menschen, die erwarten, in Zukunft glücklicher zu werden, im Beruf und im Privatleben erfolgreicher sind. Sie sind produktiver und erleben seltener Stress."
     },
     "13": {
-      "text": "Resilienz – die Fähigkeit, nach Niederlagen wieder aufzustehen – ist zentral für langfristigen Erfolg.",
-      "fact": "Edisons berühmtes Diktum („10 000 Wege, die nicht funktionieren“) illustriert produktives Scheitern."
+      "text": "Die Fähigkeit, sich von Rückschlägen zu erholen (Resilienz), spielt eine Schlüsselrolle beim Erfolg. Menschen, die diese Fähigkeit entwickeln, neigen weniger zu negativen Vorahnungen und bewältigen die Herausforderungen des Lebens besser.",
+      "fact": "Der große Erfinder Thomas Edison erlebte auf dem Weg zur Erfindung der Glühbirne viele Rückschläge. Er sagte einmal: „Ich bin nicht gescheitert. Ich habe lediglich 10.000 Wege gefunden, die nicht funktionieren.“ Sein Durchhaltevermögen und sein Glaube an den Erfolg halfen ihm, Schwierigkeiten zu überwinden und Großartiges zu leisten."
     },
     "14": {
-      "text": "Der Pygmalion-Effekt: Positive Erwartungen formen Verhalten – und damit Ergebnisse.",
-      "fact": "Harvard-Daten legen nahe: Optimist*innen leben im Schnitt 11–15 % länger – u. a. durch besseren Umgang mit Stress."
+      "text": "Psychologen nennen dies den „Erwartungseffekt“ oder „Pygmalion-Effekt“. Menschen, die an eine erfolgreiche Zukunft glauben, handeln zielgerichteter, was die Erreichung ihrer Ziele fördert. Ihre positiven Erwartungen beeinflussen ihr Verhalten und tragen dazu bei, Erfolgssituationen zu schaffen.",
+      "fact": "Eine Studie der Harvard University zeigte, dass Optimisten im Durchschnitt 11 bis 15 % länger leben als Pessimisten. Das liegt daran, dass Optimisten besser mit Stress umgehen und einen gesünderen Lebensstil führen."
     },
     "15": {
-      "text": "Ein innerer Lokuskontrollstil („Ich kann Einfluss nehmen“) stärkt Selbstvertrauen und Zielverfolgung.",
-      "fact": "Nelson Mandela steht exemplarisch für Handlungsfähigkeit trotz widrigster Umstände."
+      "text": "Psychologen unterscheiden zwei Arten des Kontrollüberzeugungskonzepts: die interne und die externe Kontrollüberzeugung. Menschen mit einer internen Kontrollüberzeugung glauben, dass sie ihr Leben und ihre Erfolge selbst beeinflussen können, während Menschen mit einer externen Kontrollüberzeugung glauben, dass Erfolg und Misserfolg von äußeren Umständen abhängen. Die Entwicklung einer internen Kontrollüberzeugung kann helfen, mehr Vertrauen in die eigenen Kräfte und Möglichkeiten zu gewinnen.",
+      "fact": "Nelson Mandela, Anführer der südafrikanischen Anti-Apartheid-Bewegung, verbrachte 27 Jahre im Gefängnis für seinen Kampf für Gleichheit und Gerechtigkeit. Trotz zahlreicher Schwierigkeiten verlor er nie den Glauben an seine Ziele und wurde schließlich Präsident von Südafrika, was das Land maßgeblich veränderte."
     },
     "16": {
-      "text": "Menschen unterschätzen häufig ihre Anpassungsfähigkeit und überschätzen negative Zukunftseffekte.",
-      "fact": "Neuroplastizität ermöglicht es, Denkmuster auch im Erwachsenenalter gezielt in Richtung Hoffnung und Handlung zu verändern."
+      "text": "Studien zeigen, dass Menschen oft ihre Fähigkeit unterschätzen, sich an Veränderungen anzupassen, und die negativen Auswirkungen künftiger Ereignisse auf ihr Wohlbefinden überschätzen. Dies ist paradox, da viele Menschen in der Realität Wege finden, selbst unter ungünstigen Umständen zufrieden zu sein.",
+      "fact": "Das menschliche Gehirn besitzt die Fähigkeit, sich ein Leben lang zu verändern und anzupassen – dieses Phänomen nennt man Neuroplastizität. Selbst wenn jemand gewohnt ist, negativ zu denken, können gezielte Anstrengungen und Training diese Denkmuster verändern und eine positivere Wahrnehmung von Möglichkeiten und Perspektiven entwickeln."
     },
     "17": {
-      "text": "Ungewissheit stresst – doch Toleranz gegenüber Unsicherheit ist trainierbar und schützt die Psyche.",
-      "fact": "Umfragen der APA berichten von verbreitetem Stress durch Zukunftsunsicherheit – Training von Flexibilität hilft."
+      "text": "Von Natur aus streben Menschen nach Vorhersehbarkeit und Kontrolle. Studien zeigen, dass Ungewissheit bei uns Stress und Angst auslöst. Die Fähigkeit, sich an Ungewissheit und wechselnde Bedingungen anzupassen, ist jedoch ein wichtiger Faktor für die psychische Gesundheit und den Erfolg.",
+      "fact": "Nach Angaben der American Psychological Association (APA) erleben etwa 60 % der Menschen ein hohes Stressniveau aufgrund der Ungewissheit über die Zukunft und sich ändernder Lebensbedingungen."
     },
     "18": {
-      "text": "Optimismus korreliert mit besserer körperlicher und psychischer Gesundheit sowie gesünderen Gewohnheiten.",
-      "fact": "Praxisnahe Programme zur Kultivierung eines positiven Mindsets zeigen Verbesserungen in Wohlbefinden und Immunparametern."
+      "text": "Untersuchungen zeigen, dass Optimisten im Allgemeinen eine bessere körperliche und psychische Gesundheit haben. Eine positive Einstellung fördert einen gesünderen Lebensstil, stärkt das Immunsystem und verringert das Risiko für chronische Krankheiten.",
+      "fact": "Der Motivationsredner und Autor Tony Robbins ist bekannt für seine positive Lebenseinstellung. Er lehrt Menschen, wie sie optimistisches Denken entwickeln und an eine bessere Zukunft glauben können. Seine Methoden haben Millionen von Menschen geholfen, ihr Leben zum Besseren zu verändern."
     },
     "19": {
-      "text": "Angst vor Misserfolg blockiert Handlungen – doch Lernen erfordert Versuch und Irrtum.",
-      "fact": "Steven Spielberg wurde mehrfach abgelehnt, bevor seine Laufbahn Fahrt aufnahm – Beharrlichkeit zahlt sich aus."
+      "text": "Psychologen haben herausgefunden, dass die Angst vor dem Scheitern Menschen oft lähmt und sie daran hindert, ihre Ziele zu erreichen. Studien zeigen, dass viele erfolgreiche Menschen Rückschläge erlebt haben und diese als Chance zum Lernen und Wachsen genutzt haben. Misserfolge als Teil des Prozesses zu akzeptieren, kann helfen, die Angst vor dem Ausprobieren zu überwinden.",
+      "fact": "Der berühmte Regisseur Steven Spielberg wurde von der University of Southern California mehrfach abgelehnt, bevor er an die California State University aufgenommen wurde, wo er seine Filmkarriere begann. Seine Beharrlichkeit und das Vertrauen in sein Talent führten zur Schaffung zahlreicher Kultfilme."
     }
   },
   "range": {
-    "positive": "Positiver Zukunftsblick",
-    "neutrally": "Neutraler Zukunftsblick",
-    "negative": "Negativer Zukunftsblick",
+    "positive": "Ein positiver Blick in die Zukunft",
+    "neutrally": "Ein neutraler Blick in die Zukunft",
+    "negative": "Ein negativer Blick in die Zukunft",
     "hopeless": "Hoffnungslosigkeit"
   },
   "result": {
     "positive": {
-      "title": "Positiver Zukunftsblick",
-      "text": "Ihr Blick nach vorn ist von Zuversicht, Interesse und gesundem Optimismus geprägt. Auch in schwierigen Phasen bewahren Sie Hoffnung und Motivation – das stärkt Ihre Handlungsfähigkeit und innere Stabilität."
+      "title": "Ein positiver Blick in die Zukunft",
+      "text": "Ihr Blick in die Zukunft ist von Hoffnung, Interesse und gesundem Optimismus geprägt. Selbst wenn Sie auf Schwierigkeiten stoßen, bewahren Sie den Glauben an das Gute und finden Wege, Ihre Motivation aufrechtzuerhalten. Diese Einstellung hilft Ihnen, zuversichtlich voranzuschreiten und eine innere Stabilität zu finden."
     },
     "neutrally": {
-      "title": "Neutraler Zukunftsblick",
-      "text": "Ihre Haltung zur Zukunft ist ausgewogen und realistisch. Weder übermäßiger Optimismus noch Pessimismus dominieren – das erleichtert nüchterne Einschätzungen und tragfähige Entscheidungen."
+      "title": "Ein neutraler Blick in die Zukunft",
+      "text": "Ihre Einstellung zur Zukunft ist ausgewogen und realistisch. Sie neigen weder zu übermäßigem Optimismus noch zu negativen Erwartungen, was Ihnen hilft, das Geschehen sachlich einzuschätzen und fundierte Entscheidungen zu treffen. Dieser Ansatz fördert Ihre Resilienz und innere Ruhe."
     },
     "negative": {
-      "title": "Negativer Zukunftsblick",
-      "text": "Aktuell könnte Ihr Blick nach vorn von Sorge oder Pessimismus gefärbt sein. Das kann Motivation dämpfen und auf die Stimmung drücken. Das Wahrnehmen dieses Musters ist bereits ein wichtiger Schritt zu einem unterstützenderen, realistischeren Zukunftsbild."
+      "title": "Ein negativer Blick in die Zukunft",
+      "text": "Momentan könnte Ihr Blick in die Zukunft von Angst oder Pessimismus geprägt sein. Sie nehmen mögliche Schwierigkeiten häufiger wahr als Perspektiven, was Ihre Motivation senken und Ihre Stimmung beeinflussen kann. Das Erkennen dieser Tendenz ist bereits ein wichtiger Schritt – es eröffnet die Möglichkeit, schrittweise eine unterstützendere und realistischere Sicht auf die Zukunft zu entwickeln."
     },
     "hopeless": {
       "title": "Hoffnungslosigkeit",
-      "text": "Sie erleben möglicherweise eine ausgeprägte Aussichtslosigkeit und Schwierigkeiten, sich eine positivere Zukunft vorzustellen. Dieses Empfinden kann Energie, Stimmung und Handlungsspielraum deutlich beeinträchtigen. Bitte bedenken Sie: Solche Phasen können vorübergehen – Unterstützung anzunehmen ist ein mutiger, wirksamer Schritt zurück zu Zuversicht und Kraft."
+      "text": "Möglicherweise erleben Sie ein Gefühl der Ausweglosigkeit und es fällt Ihnen schwer, sich eine positive Zukunft vorzustellen. Ein solcher Zustand kann Ihre Stimmung, Ihre Energie und Ihre Handlungsfähigkeit spürbar beeinflussen. Bitte denken Sie daran, dass solche Empfindungen vorübergehend sein können. Die Suche nach Unterstützung ist ein mutiger und wichtiger Schritt auf dem Weg zu mehr Wohlbefinden und zur Rückkehr der Hoffnung."
     }
   },
   "description": {
     "text": [
       "Wie blicken Sie auf Ihre Zukunft?",
-      "Unsere Erwartungen an das, was vor uns liegt, beeinflussen Stimmung, Energie und Zielsetzung. Dieser Test hilft zu erkunden, ob Ihre Zukunftsbilder eher von Zuversicht oder von Sorge geprägt sind.",
-      "Er stellt keine Diagnose, sondern unterstützt das Selbstverständnis und die Reflexion der eigenen Reaktionen auf Zukunftsgedanken.",
-      "Das Bewusstwerden des eigenen Zukunftsblicks kann ein wichtiger Schritt zu Wachstum, innerem Halt und mehr psychischem Wohlbefinden sein."
+      "Unsere Einstellung zu dem, was vor uns liegt, beeinflusst unsere Stimmung, unser Energieniveau und unsere Fähigkeit, Ziele zu setzen. Dieser Test hilft Ihnen zu untersuchen, ob Ihre Erwartungen an die Zukunft eher von Zuversicht oder von Angst geprägt sind.",
+      "Er dient nicht der Diagnosestellung, sondern hilft Ihnen, sich selbst und Ihre emotionalen Reaktionen auf den Gedanken an die Zukunft besser zu verstehen.",
+      "Das Bewusstsein über Ihren Blick auf die Zukunft kann ein wichtiger Schritt für Ihr persönliches Wachstum, die Stärkung Ihrer inneren Stabilität und die Steigerung Ihres psychischen Wohlbefindens sein."
     ]
-  }
+  },
+  "instagram": [
+    "18060891175932564"
+  ]
 }
