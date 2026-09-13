@@ -1,0 +1,1579 @@
+{
+  "meta": {
+    "Дата": "2026-09-13T08:26:06.466Z",
+    "Метка": "ui-canary-new-pipeline",
+    "Сравнение": "NEW = рабочее дерево; OLD = --old-dir backups/ui-canary-20260913",
+    "Файлы": "ui/cognitive_psy",
+    "Локали": "de",
+    "Сэмпл/файл": 30,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "448f5a54adea70ca4960d096ea0177f0c2cfad2d"
+  },
+  "results": {
+    "ui/cognitive_psy": {
+      "de": [
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/email_feedback_error",
+          "ru": "Не удалось открыть почтовый клиент",
+          "oldText": "E-Mail-Client konnte nicht geöffnet werden",
+          "newText": "Das E-Mail-Programm konnte nicht geöffnet werden.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 80,
+                "new": 95
+              },
+              "reason": "Перевод A звучит естественно и грамматически полно. Перевод B страдает от отсутствия артикля, что делает его похожим на сухой машинный перевод или технический лог, а не на дружелюбный интерфейс.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Отсутствие определенного артикля перед 'E-Mail-Client' делает фразу неестественной для пользовательского интерфейса (стиль 'Telegram-style' или лог-файла)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Перевод A использует более точный технический термин 'E-Mail-Client', который является стандартом для системных сообщений об ошибках. Перевод B звучит чуть более разговорно ('Programm'), что допустимо, но менее профессионально для данного контекста.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/intro_new_problem_grief",
+          "ru": "Утрата близкого",
+          "oldText": "Verlust eines nahestehenden Menschen",
+          "newText": "Verlust eines Angehörigen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод A является стандартным, лаконичным и наиболее естественным заголовком для психологического контекста. Перевод B звучит избыточно и тяжеловесно для заголовка.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком длинная и описательная конструкция для заголовка; звучит менее профессионально, чем устоявшееся 'Verlust eines Angehörigen'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод B использует устоявшийся немецкий термин 'Angehöriger' для обозначения близкого человека/родственника, что звучит более естественно и профессионально в контексте психологии. Перевод A звучит избыточно описательно.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком длинная и описательная конструкция (Verlust eines nahestehenden Menschen), которая звучит скорее как пояснение, а не как заголовок."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/coping_info_hint_1",
+          "ru": "Влево, если вера в деструктивную мысль уменьшилась.",
+          "oldText": "Nach links, wenn der Glaube an den destruktiven Gedanken abgenommen hat.",
+          "newText": "Nach links wischen, wenn der Glaube an den destruktiven Gedanken nachgelassen hat.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 80,
+                "new": 95
+              },
+              "reason": "Перевод B звучит гораздо естественнее для интерфейса приложения благодаря добавлению глагола 'wischen' (свайпать), что делает инструкцию понятной. Также 'nachgelassen' лучше передает процесс ослабления веры, чем сухой 'abgenommen'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Отсутствует глагол действия (свайп), из-за чего фраза звучит как обрывок предложения, а не как инструкция."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Перевод A более полный и естественный для интерфейса: добавление глагола 'wischen' (свайпать) делает инструкцию понятной, в то время как B звучит как обрывок фразы. Оба перевода верно используют терминологию.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Отсутствует глагол действия (wischen), что делает инструкцию менее естественной для UX, хотя смысл понятен из контекста."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/notification_every_day_5_head",
+          "ru": "🤔 \"Это катастрофа!\" — точно?",
+          "oldText": "🤔 „Das ist eine Katastrophe!“ – Wirklich?",
+          "newText": "🤔 „Das ist eine Katastrophe!“ – wirklich?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 95
+              },
+              "reason": "Перевод A идеально следует правилам немецкой типографики и пунктуации. В немецком языке после тире, разделяющего части предложения, если вторая часть является самостоятельным вопросительным предложением, первое слово пишется с заглавной буквы.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "строчная буква 'wirklich' после тире в данном контексте выглядит менее грамматически корректно, чем заглавная"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "Перевод A идеально соблюдает правила немецкой типографики и грамматики. В переводе B слово 'Wirklich' написано с заглавной буквы, что является ошибкой, так как после тире в данном контексте идет вопросительное наречие, продолжающее мысль, а не новое предложение.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Неправильная капитализация: 'Wirklich' не должно писаться с большой буквы в данном контексте."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/tariff_includes",
+          "ru": "В этот тариф входит",
+          "oldText": "In diesem Tarif enthalten",
+          "newText": "Dieser Tarif beinhaltet",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод A является грамматически полным и естественным предложением. Перевод B — это неполная конструкция (фрагмент), которая звучит как заголовок в списке, но без глагола или подлежащего она менее предпочтительна для чистого интерфейса.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'In diesem Tarif enthalten' является эллиптической (неполной) и звучит скорее как подпись к пункту, чем как законченное утверждение."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Перевод B звучит естественно и грамматически законченно для заголовка или описания. Перевод A является калькой с английского (In this tariff included) и грамматически неполноценен в немецком языке без глагола (например, 'ist enthalten').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Грамматически неестественная конструкция, напоминающая англицизм; звучит как обрывок фразы."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/intro_new_problem_anxiety",
+          "ru": "Тревога",
+          "oldText": "Ängste",
+          "newText": "Angst",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 100
+              },
+              "reason": "В контексте раздела приложения или названия проблемы (как в оригинале) используется собирательное существительное 'Angst'. Вариант 'Ängste' (страхи) звучит как перечисление конкретных фобий, что не соответствует терминологическому стандарту.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование множественного числа 'Ängste' вместо общепринятого термина 'Angst' для обозначения состояния тревоги."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "В контексте заголовка раздела или обозначения состояния (как в оригинале) единственное число 'Angst' является стандартным термином. Множественное число 'Ängste' смещает акцент на конкретные виды страхов, что менее уместно для общего названия категории.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование множественного числа делает заголовок менее универсальным и чуть менее естественным для обозначения общего состояния тревоги."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/fault",
+          "ru": "Вина",
+          "oldText": "Schuldgefühl",
+          "newText": "Schuldgefühle",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "В немецком языке при описании эмоционального состояния (чувства вины) чаще используется множественное число 'Schuldgefühle', так как это звучит более естественно и менее клинически/абстрактно, чем единственное число.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Единственное число 'Schuldgefühl' звучит более сухо и формально, в то время как множественное число 'Schuldgefühle' — стандарт для описания переживаний в психологическом контексте."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "В контексте психологии и заголовков в немецком языке для обозначения состояния «вина» чаще используется множественное число (Schuldgefühle), что звучит более естественно и охватывает эмоциональный спектр. Единственное число (Schuldgefühl) звучит более узко и технично.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Единственное число звучит менее естественно для заголовка темы в терапевтическом контексте"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/ab_premium_upgrade",
+          "ru": "Получить",
+          "oldText": "Holen",
+          "newText": "Jetzt upgraden",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 95
+              },
+              "reason": "В контексте интерфейса (CTA) 'Получить' почти всегда подразумевает переход к платной функции или подписке, поэтому 'Jetzt upgraden' — это правильная адаптация. 'Holen' звучит как грубая калька и не является стандартным призывом к действию в немецких приложениях.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Слишком буквальный перевод (калька), не характерный для немецких интерфейсов; звучит неестественно для кнопки."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 40
+              },
+              "reason": "Перевод A точно передает смысл короткого императива 'Получить'. Перевод B является вольной интерпретацией (addition), добавляя смысл 'обновиться', которого нет в оригинале.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Добавлено слово 'upgraden', которого нет в оригинале; перевод превращает нейтральное действие в конкретное предложение об апгрейде."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/errors_label_shortdesc",
+          "ru": "Подмена реальности упрощённым ложным представлением",
+          "oldText": "Ersatz der Realität durch eine vereinfachte, falsche Vorstellung",
+          "newText": "Übervereinfachung: Die Realität durch ein vereinfachtes, falsches Bild ersetzen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Перевод B является точным и стилистически выверенным заголовком. Перевод A содержит избыточное слово 'Übervereinfachung' (масло масляное) и превращает заголовок в громоздкую конструкцию с инфинитивом, что не характерно для немецких заголовков.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'Übervereinfachung' вместе с 'vereinfachtes' создает тавтологию; структура с инфинитивом звучит как инструкция, а не как название концепции."
+                },
+                {
+                  "side": "new",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Добавлено слово 'Übervereinfachung', которого нет в оригинале."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Перевод A точно передает структуру заголовка (существительное + дополнение), сохраняя лаконичность оригинала. Перевод B превращается в громоздкую конструкцию с двоеточием и инфинитивом, что звучит как инструкция, а не как название концепции.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование двоеточия и инфинитива 'ersetzen' делает фразу тяжелой и менее естественной для заголовка; 'Übervereinfachung' — это добавление (addition), которого нет в оригинале."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/response_button",
+          "ru": "Ответы пользователей",
+          "oldText": "Community-Antworten",
+          "newText": "Antworten der Nutzer",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Перевод A звучит более современно и естественно для интерфейса приложения (UX), в то время как перевод B является тяжеловесной калькой с русского.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Genitiv-Konstruktion 'Antworten der Nutzer' звучит слишком официально и громоздко для заголовка интерфейса; 'Community-Antworten' лучше передает дух социального взаимодействия."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 85
+              },
+              "reason": "Перевод B звучит гораздо естественнее для интерфейса современного приложения. 'Community-Antworten' — это устоявшийся и живой термин, в то время как 'Antworten der Nutzer' звучит как сухая и тяжеловесная калька с русского.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "звучит слишком официально и тяжеловесно (Genitiv-Konstruktion), не характерно для современного UX"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/awkwardness",
+          "ru": "Неловкость",
+          "oldText": "Befangenheit",
+          "newText": "Unbehagen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 70
+              },
+              "reason": "В контексте психологии и социальных взаимодействий 'Неловкость' (чувство скованности) переводится как 'Befangenheit'. 'Unbehagen' — это скорее общее физическое или душевное недомогание/дискомфорт.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Unbehagen означает дискомфорт или неудобство в широком смысле, тогда как оригинал подразумевает социальную неловкость/скованность."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Перевод A точно передает эмоциональное состояние неловкости/скованности в социальном контексте. Перевод B означает скорее 'дискомфорт' или 'неприятное чувство', что является слишком широким и менее точным понятием.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Unbehagen — это скорее общее чувство дискомфорта или беспокойства, тогда как 'неловкость' в русском языке чаще подразумевает социальную скованность (Befangenheit)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/drawer_changelang",
+          "ru": "Изменить язык",
+          "oldText": "Sprache auswählen",
+          "newText": "Sprache ändern",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "Перевод A является стандартным и точным эквивалентом для функции смены языка в интерфейсах. Перевод B («выбрать язык») допустим, но смещает акцент с действия по изменению на процесс выбора из списка.",
+              "issues": []
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Перевод A («Sprache auswählen») звучит гораздо естественнее для интерфейса (UX), так как пользователь обычно выбирает язык из списка, а не просто меняет текущий процесс. Перевод B является калькой с русского.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "«Sprache ändern» звучит как техническая команда, в то время как в мобильных приложениях и веб-интерфейсах стандартным паттерном является «Sprache auswählen» или «Sprache wählen»."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/story_base_description_3",
+          "ru": "Узнайте, как изменить негативные мысли и поведенческие паттерны, чтобы вести более счастливую и здоровую жизнь.",
+          "oldText": "Lernen Sie, negative Gedanken und Verhaltensmuster zu ändern, um ein glücklicheres und gesünderes Leben zu führen.",
+          "newText": "Erfahren Sie, wie Sie negative Gedanken und Verhaltensmuster verändern können, um ein glücklicheres und gesünderes Leben zu führen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод A звучит более естественно и профессионально для терапевтического контекста. Использование 'Erfahren Sie, wie...' (Узнайте, как...) лучше передает смысл 'Узнайте, как...' в данном контексте, чем суховатое 'Lernen Sie...' (Выучите/Научитесь), которое в немецком чаще ассоциируется с академическим обучением.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'Lernen Sie, ... zu ändern' звучит немного по-учебному (как 'learn to change'), в то время как 'Erfahren Sie, wie...' звучит как приглашение к открытию новых возможностей."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод B звучит более естественно и по-человечески за счет использования конструкции 'Erfahren Sie, wie Sie...', в то время как перевод A звучит как сухая инструкция или заголовок учебника.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком лаконично и формально (Lernen Sie...), что делает тон менее эмпатичным и более академичным."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/errors_maybe_shortdesc",
+          "ru": "Попытка переиграть прошлое снова и снова",
+          "oldText": "Das gedankliche Durchspielen vergangener Ereignisse und verpasster Chancen",
+          "newText": "„Was wäre wenn“: Der Versuch, die Vergangenheit gedanklich immer wieder neu durchzuspielen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 95
+              },
+              "reason": "Перевод B точно передает смысл оригинала, используя естественную для немецкого языка конструкцию с 'Was wäre wenn' для передачи идеи 'переигрывания'. Перевод A является грубой ошибкой (omission/mistranslation), так как он полностью меняет смысл, превращая 'попытку переиграть' в 'процесс обдумывания событий и упущенных возможностей'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Вместо 'попытки переиграть' (Versuch, die Vergangenheit neu zu erleben/durchzuspielen) автор перевел это как 'обдумывание событий и упущенных возможностей', что является описанием процесса, а не самой сути действия."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Перевод A гораздо ближе к оригиналу по смыслу и структуре, сохраняя эмоциональный посыл 'попытки'. Перевод B уходит в сторону описания 'упущенных возможностей', которых нет в оригинале.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Добавлена информация про 'verpasste Chancen' (упущенные возможности), которой нет в исходном тексте."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Звучит как сухой заголовок из учебника, теряется динамика 'попытки' (Versuch)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/mood_chart_subtitle",
+          "ru": "Ваше самочувствие утром и вечером",
+          "oldText": "Ihr Befinden am Morgen und am Abend",
+          "newText": "Ihr Befinden am Morgen und Abend",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 92
+              },
+              "reason": "Перевод B звучит более естественно и грамматически полно для немецкого языка. Повторение предлога 'am' перед вторым существительным делает ритм фразы правильным и законченным.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Отсутствие повтора предлога 'am' делает фразу чуть более сжатой и менее естественной для заголовка, хотя это не является грубой ошибкой."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 95
+              },
+              "reason": "Перевод A грамматически более полный и стилистически выверенный для заголовка. Повторение артикля перед 'Abend' делает фразу ритмически сбалансированной и естественной для немецкого языка.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Пропуск артикля перед 'Abend' делает фразу чуть более лаконичной, но менее элегантной и ритмически менее завершенной по сравнению с вариантом A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/portrait",
+          "ru": "Портрет",
+          "oldText": "Persönlichkeitsprofil",
+          "newText": "Porträt",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 95
+              },
+              "reason": "Перевод B точно передает лаконичный заголовок оригинала. Перевод A является избыточным и меняет смысл: 'Persönlichkeitsprofil' звучит как технический психологический термин (профиль личности), в то время как 'Porträt' — это художественное или описательное представление человека.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Слишком тяжеловесно и официально для простого заголовка 'Портрет'; звучит как название теста или документа."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 100
+              },
+              "reason": "Перевод A точно передает лаконичный заголовок оригинала. Перевод B является избыточным добавлением (addition), превращая художественное или общее понятие 'Портрет' в узкоспециализированный термин 'Профиль личности'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Слово 'Persönlichkeitsprofil' слишком тяжеловесно и меняет смысл с 'Портрета' на психологический термин 'Профиль личности'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/gooseCompanionWelcome",
+          "ru": "Всегда приятно видеть тебя здесь.",
+          "oldText": "Es ist immer schön, dich hier zu sehen.",
+          "newText": "Schön, dass Sie da sind.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Перевод A идеально соответствует стандартам Tone of Voice: он звучит естественно, эмпатично и использует вежливое 'Sie', что является золотым стандартом для немецкого рынка. Перевод B — это калька с русского, которая звучит тяжеловесно и избыточно.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Калька с русского 'Es ist... zu sehen'. Носитель скажет просто 'Schön, dass Sie da sind'. Также использование 'dich' нарушает правило вежливого обращения 'Sie' для терапевтических приложений."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком буквальный перевод, лишенный естественного ритма немецкой речи."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Перевод B идеально попадает в Tone of Voice (эмпатичный эксперт) и использует правильное вежливое обращение 'Sie', в то время как перевод A звучит как калька с русского и использует неформальное 'dich', что нарушает стандарты для терапевтических приложений.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Использование 'dich' (ты) вместо 'Sie' (Вы) противоречит правилам обращения; фраза звучит как дословный перевод (калька)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'Es ist schön...' слишком тяжеловесна для приветствия, носители чаще используют более лаконичные формы."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/notifications_countdown_hint",
+          "ru": "Включите уведомления! Мы напомним, чтобы вы не забыли дать повторную оценку до конца дня.",
+          "oldText": "Aktivieren Sie Benachrichtigungen, um Ihren täglichen Check-in nicht zu vergessen.",
+          "newText": "Aktivieren Sie die Benachrichtigungen! Wir erinnern Sie daran, damit Sie Ihre erneute Einschätzung nicht bis zum Ende des Tages vergessen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 65
+              },
+              "reason": "Перевод A звучит естественно и профессионально, используя удачную транскреацию (Check-in вместо тяжеловесного повторного оценивания). Перевод B — это типичная калька с русского, перегруженная лишними словами и грамматически тяжелая конструкция 'damit Sie... nicht... vergessen'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Синтаксис крайне неестественен (калька), фраза 'damit Sie Ihre erneute Einschätzung nicht bis zum Ende des Tages vergessen' звучит очень громоздко и не по-немецки."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Потерян акцент на 'напоминании' как действии приложения, хотя это и исправлено стилистически."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 65
+              },
+              "reason": "Перевод A — это тяжеловесная калька с русского, которая звучит неестественно из-за избыточного синтаксиса. Перевод B — это качественная транскреация: он передает суть (напоминание о ежедневном действии) живым, лаконичным языком, подходящим для интерфейса.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Конструкция 'damit Sie... nicht vergessen' является громоздкой калькой; фраза звучит неестественно для носителя."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование артикля 'die Benachrichtigungen' вместо 'Benachrichtigungen' в данном контексте звучит излишне специфично."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Перевод 'повторная оценка' как 'erneute Einschätzung' слишком формален и клиничен для дружелюбного интерфейса."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/acceptance",
+          "ru": "Принятие",
+          "oldText": "Akzeptanz",
+          "newText": "Annahme",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 40
+              },
+              "reason": "In a psychological context, 'Akzeptanz' is the correct term for 'acceptance'. 'Annahme' means 'assumption' or 'acceptance of a gift/offer', which is a mistranslation here.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "Annahme refers to an assumption or the act of accepting something (like a package), not the psychological state of acceptance."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 70
+              },
+              "reason": "В контексте психологии и КПТ термин 'Akzeptanz' является прямым и общепринятым эквивалентом 'принятия' (как процесса или навыка). 'Annahme' чаще означает 'предположение' или 'принятие (чего-либо) на веру/в работу', что не передает терапевтический смысл.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Annahme не является стандартным термином для обозначения психологического процесса принятия (Acceptance)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/smerAiChatTitle",
+          "ru": "Заполнение с AI",
+          "oldText": "Mit KI ausfüllen",
+          "newText": "KI-Unterstützung beim Ausfüllen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Перевод A звучит более профессионально и естественно для интерфейса приложения, предлагая 'поддержку', в то время как перевод B звучит как сухая команда или техническая инструкция.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слишком лаконично и функционально, звучит менее эмпатично, чем вариант с 'KI-Unterstützung'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Перевод B звучит гораздо более естественно и профессионально для интерфейса приложения, предлагая 'поддержку', в то время как перевод A звучит как сухая техническая команда.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Звучит немного механистично, как прямой перевод инструкции, а не как дружелюбный интерфейс."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/tutorial_tests_description",
+          "ru": "Здесь собраны техники, которые помогут быстро справиться с тревогой или навязчивыми мыслями",
+          "oldText": "Hier finden Sie Techniken, um bei akuter Angst oder kreisenden Gedanken schnell wieder Ruhe zu finden.",
+          "newText": "Hier finden Sie Techniken, die Ihnen helfen, schnell mit Angst oder aufdringlichen Gedanken umzugehen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Перевод B звучит гораздо более естественно и эмпатично для носителя, используя живые выражения (kreisende Gedanken, Ruhe finden) вместо тяжеловесной конструкции с инфинитивом в переводе A. Перевод A грамматически верен, но звучит как сухая инструкция, в то время как B соответствует заданному Tone of Voice.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция 'helfen, ... umzugehen' звучит немного тяжеловесно и напоминает кальку; 'aufdringliche Gedanken' — допустимо, но менее выразительно, чем 'kreisende Gedanken' в данном контексте."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Перевод A звучит гораздо более естественно и профессионально для немецкого рынка. Использование 'kreisende Gedanken' вместо кальки 'aufdringliche Gedanken' и фразы 'Ruhe zu finden' вместо сухого 'umzugehen' делает текст эмпатичным и живым, соответствуя Tone of Voice.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'aufdringliche Gedanken' — это калька с английского 'intrusive thoughts'; в немецком психологическом контексте для описания навязчивых мыслей в поддерживающем тексте лучше подходят 'kreisende Gedanken' или 'zwanghafte Gedanken'. Также конструкция 'mit ... umzugehen' звучит суховато и механистично."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/smerAiChatFinishRecord",
+          "ru": "Закончить запись",
+          "oldText": "Aufnahme beenden",
+          "newText": "Eintrag beenden",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 100
+              },
+              "reason": "Перевод A использует правильный UI-термин 'Eintrag' согласно глоссарию, в то время как перевод B использует 'Aufnahme', что звучит как завершение аудио- или видеозаписи.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "использовано 'Aufnahme' (запись процесса/звука) вместо 'Eintrag' (запись в дневнике/текстовый элемент)"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 100
+              },
+              "reason": "В контексте дневника (Gedankentagebuch) 'запись' — это 'Eintrag'. Вариант A (Aufnahme) означает 'запись звука/видео' или 'сбор данных', что является смысловой ошибкой.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Aufnahme относится к аудио/видео записи, а не к текстовому посту в дневнике"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/stats",
+          "ru": "Статистика",
+          "oldText": "Statistiken",
+          "newText": "Statistik",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "В интерфейсах приложений для обозначения раздела с данными чаще всего используется единственное число (Statistik), что является стандартом UX. Множественное число (Statistiken) звучит менее естественно для заголовка раздела.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование множественного числа делает заголовок менее лаконичным и менее типичным для навигации в приложении."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "В контексте интерфейса (заголовок раздела) единственное число 'Statistik' является стандартным и наиболее естественным обозначением раздела со сводными данными. Множественное число 'Statistiken' звучит избыточно, как будто пользователь ожидает увидеть список разных видов статистических отчетов.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование множественного числа в заголовке раздела менее типично для немецкого UX, чем единственное число."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/days_active",
+          "ru": "Дней занятий",
+          "oldText": "Aktive Tage",
+          "newText": "Tage mit Aktivitäten",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 65
+              },
+              "reason": "Перевод B звучит естественно и лаконично, как заголовок в интерфейсе. Перевод A является калькой и звучит тяжеловесно и неестественно для немецкого пользователя.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Конструкция 'Tage mit Aktivitäten' звучит как описание процесса, а не как краткий заголовок; это избыточная номинализация."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 90
+              },
+              "reason": "Перевод A («Aktive Tage») означает «активные дни» (например, физически активные), что полностью искажает смысл оригинала. Перевод B («Tage mit Aktivitäten») точно передает суть: дни, в которые проводились занятия/активности.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Смысл изменен: 'активные дни' вместо 'дней с занятиями'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/believe_final_finish",
+          "ru": "Закончить",
+          "oldText": "Abschließen",
+          "newText": "Beenden",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "В контексте интерфейса (UI) для завершения процесса, транзакции или настройки 'Abschließen' является стандартным и наиболее естественным вариантом. 'Beenden' чаще ассоциируется с закрытием приложения или прерыванием процесса.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Beenden звучит более технически (как 'закрыть программу' или 'прекратить'), в то время как Abschließen лучше подходит для завершения действия/этапа."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "В контексте интерфейса (кнопка завершения процесса или выхода) 'Beenden' является стандартным и наиболее естественным вариантом. 'Abschließen' чаще означает 'завершить проект' или 'закрыть дверь/замок', что звучит менее функционально для UI.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слово 'Abschließen' звучит более весомо и процессно, в то время как для кнопки действия в приложении предпочтительнее лаконичное 'Beenden'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/comparison_for",
+          "ru": "Аргумент за",
+          "oldText": "Pro-Argument",
+          "newText": "Dafür",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Перевод A является наиболее естественным и лаконичным для заголовка или краткой пометки в немецком языке. Перевод B звучит избыточно и тяжеловесно (канцелярит).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование 'Pro-Argument' звучит неестественно для краткого заголовка; носители чаще используют просто 'Dafür' или 'Pro' в контексте аргументации."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 98
+              },
+              "reason": "Перевод B является естественным и лаконичным вариантом для обозначения стороны 'за' в немецком языке. Перевод A звучит как тяжеловесная калька и не соответствует стилистике интерфейса.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Неестественная конструкция; в немецком языке для обозначения аргумента 'за' в контексте дискуссии или выбора чаще используется 'Dafür' или 'Pro-Argument' (но без дефиса в таком виде, скорее 'Pro-Seite' или просто 'Dafür'). 'Pro-Argument' звучит избыточно и по-канцелярски."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/das_description",
+          "ru": "Пройдите тест на гармоничность личности и узнайте больше о своих сильных и слабых сторонах. Этот тест поможет вам лучше понять себя, выявить ключевые аспекты вашей личности и найти пути для дальнейшего личностного роста.",
+          "oldText": "Machen Sie den Test zur persönlichen Harmonie und erfahren Sie mehr über Ihre Stärken und Schwächen. Dieser Test hilft Ihnen, sich selbst besser zu verstehen, wichtige Aspekte Ihrer Persönlichkeit zu erkennen und Wege für Ihr persönliches Wachstum zu finden.",
+          "newText": "Machen Sie den Test zur Persönlichkeitsharmonie und erfahren Sie mehr über Ihre Stärken und Schwächen. Dieser Test hilft Ihnen, sich selbst besser zu verstehen, Schlüsselaspekte Ihrer Persönlichkeit zu identifizieren und Wege für Ihr weiteres persönliches Wachstum zu finden.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Перевод B звучит более профессионально и точно передает нюансы оригинала. Использование 'Schlüsselaspekte' и 'identifizieren' лучше соответствует контексту психологического теста, чем более простые варианты в версии A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "«persönliche Harmonie» звучит немного размыто по сравнению с «Persönlichkeitsharmonie», а «erkennen» менее точно передает смысл «выявить» (identifizieren) в контексте тестирования."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Перевод A точнее передает смысл 'гармоничности личности' через устойчивое словосочетание 'Persönlichkeitsharmonie', в то время как вариант B звучит более размыто ('persönliche Harmonie' — это скорее душевный покой, а не характеристика личности). Перевод A также лучше сохраняет структуру оригинала, не теряя нюансов.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "persönliche Harmonie звучит как 'личное спокойствие/гармония в жизни', а не как психологический термин 'гармоничность личности'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/premium_terms_2",
+          "ru": "условиями ее использования.",
+          "oldText": "Nutzungsbedingungen zu.",
+          "newText": "den Nutzungsbedingungen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 95
+              },
+              "reason": "Перевод A является грамматически незавершенным и обрывается на предлоге, в то время как перевод B корректно передает падежную форму (Akkusativ/Dativ), необходимую для завершения фразы в контексте (например, 'gemäß den Nutzungsbedingungen').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "critical",
+                  "note": "Фраза обрывается на предлоге 'zu', что делает её грамматически неверной и бессмысленной."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 20,
+                "new": 100
+              },
+              "reason": "Перевод A является грамматически верным и полным (с учетом контекста падежа), в то время как перевод B — это оборванная фраза, которая не имеет смысла в немецком языке.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "critical",
+                  "note": "Фраза обрывается на предлоге 'zu', что делает её грамматически неполной и бессмысленной."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/gooseCompanionQuoteCardTitle",
+          "ru": "Мудрое слово ✨",
+          "oldText": "Ein weises Wort ✨",
+          "newText": "Ein weiser Gedanke ✨",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "В контексте психологического приложения или ежедневника 'Ein weiser Gedanke' (мудрая мысль) звучит гораздо естественнее и глубже, чем дословное 'Ein weises Wort', которое в немецком чаще воспринимается как буквальное высказывание или афоризм.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Дословный перевод 'Wort' звучит несколько плоско и менее эмоционально в контексте самопознания"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "Перевод A является точным эквивалентом оригинала. Перевод B заменяет 'слово' на 'мысль', что является смысловым отступлением.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Слово 'Gedanke' (мысль) не является синонимом 'слова' (Wort), хотя в контексте цитат это допустимо, но это уже не точный перевод."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "de",
+          "key": "/notifications_tests_body",
+          "ru": "Результаты вашего психологического теста устарели!",
+          "oldText": "Ihre Testergebnisse sind nicht mehr aktuell.",
+          "newText": "Die Ergebnisse Ihres psychologischen Tests sind veraltet!",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 80
+              },
+              "reason": "Перевод B звучит гораздо естественнее и мягче, что соответствует Tone of Voice (поддерживающий эксперт). Перевод A использует слово 'veraltet', которое в контексте психологических тестов звучит слишком технически или даже грубо (как 'устаревший/древний'), в то время как 'nicht mehr aktuell' — идеальный вариант для интерфейса.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слово 'veraltet' звучит излишне резко и механистично для терапевтического приложения."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 80
+              },
+              "reason": "Перевод A звучит более естественно и профессионально для интерфейса приложения. Перевод B использует слово 'veraltet', которое в контексте психологических тестов звучит слишком резко и технически (как 'устаревший стандарт' или 'просроченный продукт'), в то время как 'nicht mehr aktuell' — это мягкая и корректная формулировка.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слово 'veraltet' звучит слишком грубо и механистично для поддерживающего тона приложения."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

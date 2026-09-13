@@ -3,6 +3,8 @@ import {
   validateTranslation,
   extractPlaceholderNames,
   extractTagSignatures,
+  stripIcuConstructs,
+  invalidPlaceholderTokens,
 } from '../scripts/lib/validation.js';
 import { flattenLeaves } from '../scripts/lib/tree.js';
 
@@ -188,7 +190,8 @@ describe('validateTranslation — негативные сценарии', () => 
 describe('извлечения', () => {
   test('extractPlaceholderNames: простые и ICU', () => {
     expect(extractPlaceholderNames('Через {days} дней, {count}')).toEqual(['days', 'count']);
-    expect(extractPlaceholderNames('{count, plural, other {#}}')).toEqual(['count']);
+    // ICU-конструкция ушла из плейсхолдеров: её имя сверяет extractIcuConstructs
+    expect(extractPlaceholderNames('{count, plural, other {#}}')).toEqual([]);
     expect(extractPlaceholderNames('без плейсхолдеров')).toEqual([]);
   });
 
@@ -196,5 +199,46 @@ describe('извлечения', () => {
     expect(extractTagSignatures('<b>x</b>')).toEqual(['b', '/b']);
     expect(extractTagSignatures("<Q author='X'>y</q>")).toEqual(['q', '/q']);
     expect(extractTagSignatures('нет тегов')).toEqual([]);
+  });
+});
+
+describe('extractPlaceholderNames — ICU-конструкции (латиница)', () => {
+  const deIcu = 'Rückgang um {count} {count, plural, one{Punkt} other{Punkte}}';
+  const ruIcu = 'Снижение на {count} {count, plural, one{пункт} few{пункта} many{пунктов} other{пункта}}';
+
+  test('слова внутри категорий не считаются плейсхолдерами (регресс полного прогона de)', () => {
+    expect(extractPlaceholderNames(deIcu)).toEqual(['count']);
+    expect(extractPlaceholderNames(ruIcu)).toEqual(['count']);
+  });
+
+  test('обычные плейсхолдеры рядом с ICU сохраняются', () => {
+    expect(extractPlaceholderNames('{days} {days, plural, one{Tag} other{Tage}}')).toEqual(['days']);
+    expect(extractPlaceholderNames('Von {name} und {count, plural, one{{count} Tag} other{{count} Tagen}}')).toEqual(['name']);
+  });
+
+  test('stripIcuConstructs убирает конструкцию целиком, текст вне — остаётся', () => {
+    expect(stripIcuConstructs('A {count, plural, one{X{y}} other{Z}} B')).toBe('A  B');
+    expect(stripIcuConstructs('нет ICU')).toBe('нет ICU');
+  });
+});
+
+describe('невалидные токены и несущие пробелы', () => {
+  test('invalidPlaceholderTokens: {:.0f} и мусор — ловится, ICU и {name} — нет', () => {
+    expect(invalidPlaceholderTokens('um {count} {count, plural, one{Punkt} other{Punkte}}')).toEqual([]);
+    expect(invalidPlaceholderTokens('um {:.0f} % verbessert')).toEqual(['{:.0f}']);
+    expect(invalidPlaceholderTokens('a {1} b {count } c')).toEqual(['{1}', '{count }']);
+  });
+
+  test('валидация: краевые пробелы обязаны совпадать с оригиналом (RichText-склейка)', () => {
+    const ru = { k: 'улучшилось на ' };
+    expect(validateTranslation('de', ru, { k: 'verbessert um ' })).toEqual([]);
+    const issues = validateTranslation('de', ru, { k: 'verbessert um' });
+    expect(issues.length).toBe(1);
+    expect(issues[0]!.message).toContain('несущие пробелы');
+  });
+
+  test('валидация: {:.0f} ловится как невалидный токен', () => {
+    const issues = validateTranslation('de', { k: 'улучшилось' }, { k: 'um {:.0f} % verbessert' });
+    expect(issues.some((i) => i.message.includes('невалидные плейсхолдер-токены'))).toBe(true);
   });
 });

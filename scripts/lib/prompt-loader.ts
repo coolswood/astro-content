@@ -21,13 +21,13 @@ const PROMPTS_DIR = path.join(process.cwd(), 'scripts/prompts');
  *   {{TARGET_MARKET}}  — market name extracted from style file (TARGET_MARKET line)
  *   {{GLOSSARY}}       — injected by the caller script
  *
- * @param type      - 'text', 'ui', 'keys', or 'qa'
+ * @param type      - 'text', 'ui', or 'qa'
  * @param name      - 'main', 'editor', 'tech', 'judge', ...
  * @param lang      - language code (e.g. 'pt_br'), 'all', or an array of codes
  *                    for an aggregated multi-language block (used by keys batching).
  */
 export async function loadPrompt(
-  type: 'text' | 'ui' | 'keys' | 'qa',
+  type: 'text' | 'ui' | 'qa',
   name: string,
   lang: string | string[],
 ): Promise<string> {

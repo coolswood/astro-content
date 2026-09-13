@@ -5,7 +5,9 @@
  * полный документ (структуру и порядок элементов фиксирует мердж), review —
  * список замечаний, fix правит по ним («критикуй отдельно, правь
  * отдельно», как в translation-agent/Aphra).
- * UI/keys:        main → editor → tech — однозапросная смысловая сверка.
+ * UI:              те же 4 стадии по интерфейсным промптам base/ui/*
+ *                  (лаконичность, плейсхолдеры {…}/ICU, роль строки по @-мете);
+ *                  мета ARB уходит в запросы полем meta и в перевод не входит.
  *
  * Порт логики scripts/lingo_proxy.py (качество которого подтверждено слепым
  * MQM-сравнением) + legacy-адаптер для старых браузерных провайдеров.
@@ -22,6 +24,7 @@ import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
 import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes } from './tag-reconcile.js';
+import { stripIcuConstructs } from './validation.js';
 import { buildSubtree } from './tree.js';
 import type { AIProvider, ProviderType } from './types.js';
 
@@ -215,7 +218,7 @@ export async function createLegacyClient(type: ProviderType): Promise<StageClien
 // Сборка промптов — источник истины scripts/prompts/**, ничего не дублируем
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type PromptKind = 'text' | 'keys';
+export type PromptKind = 'text' | 'ui';
 
 /** Хинт формата ответа для стадии MAIN (порт MAIN_EXTRA из lingo_proxy.py). */
 const MAIN_EXTRA_TEXT =
@@ -232,9 +235,9 @@ export function formatGlossaryDetailed(items: GlossaryItem[]): string {
 export interface StagePrompts {
   main: string;
   editor: string;
-  /** Однозапросная смысловая сверка с правкой (keys/ui; legacy-путь text). */
+  /** Legacy: однозапросная смысловая сверка с правкой (промпт keys/tech). */
   tech?: string;
-  /** 4-стадийный путь text: ревью (список замечаний) + правка по замечаниям. */
+  /** 4-стадийный путь (text и ui): ревью (список замечаний) + правка по замечаниям. */
   review?: string;
   fix?: string;
 }
@@ -245,7 +248,7 @@ export interface StagePrompts {
  * где шаблон его использует) и хинт формата для main.
  *
  * text → {main, editor, review, fix} (4-стадийный путь);
- * keys → {main, editor, tech} (однозапросная смысловая сверка).
+ * ui   → те же 4 стадии по интерфейсным промптам base/ui/*.
  */
 export async function buildStagePrompts(
   kind: PromptKind,
@@ -258,13 +261,13 @@ export async function buildStagePrompts(
     glossaryText = formatGlossaryDetailed(items);
   }
   const inject = (p: string) => p.split('{{GLOSSARY}}').join(glossaryText);
+  const [main, editor, review, fix] = await Promise.all([
+    loadPrompt(kind, 'main', lang),
+    loadPrompt(kind, 'editor', lang),
+    loadPrompt(kind, 'review', lang),
+    loadPrompt(kind, 'fix', lang),
+  ]);
   if (kind === 'text') {
-    const [main, editor, review, fix] = await Promise.all([
-      loadPrompt(kind, 'main', lang),
-      loadPrompt(kind, 'editor', lang),
-      loadPrompt(kind, 'review', lang),
-      loadPrompt(kind, 'fix', lang),
-    ]);
     return {
       main: inject(main) + MAIN_EXTRA_TEXT,
       editor: inject(editor),
@@ -272,15 +275,11 @@ export async function buildStagePrompts(
       fix: inject(fix),
     };
   }
-  const [main, editor, tech] = await Promise.all([
-    loadPrompt(kind, 'main', lang),
-    loadPrompt(kind, 'editor', lang),
-    loadPrompt(kind, 'tech', lang),
-  ]);
   return {
     main: inject(main),
     editor: inject(editor),
-    tech: inject(tech),
+    review: inject(review),
+    fix: inject(fix),
   };
 }
 
@@ -308,6 +307,24 @@ function flattenAll(o: any, p = ''): Record<string, any> {
     out[p] = o;
   }
   return out;
+}
+
+/**
+ * Оставляет в мете только записи ключей, присутствующих в payload (ui: ключ
+ * ARB плоский, bare-путь листа совпадает с ключом). Мета — контекст запроса,
+ * а не перевод: в paths и валидацию полноты она не попадает.
+ */
+function filterMetaByPayload(
+  meta: Record<string, any> | undefined,
+  payload: any,
+): Record<string, any> | undefined {
+  if (!meta) return undefined;
+  const out: Record<string, any> = {};
+  for (const p of Object.keys(flattenAll(payload))) {
+    const bare = p.replace(/^\//, '');
+    if (meta[bare] !== undefined) out[bare] = meta[bare];
+  }
+  return Object.keys(out).length > 0 ? out : undefined;
 }
 
 /** Вписывает скаляр по пути, создавая промежуточные объекты/массивы. */
@@ -363,11 +380,16 @@ function tagMultiset(s: string): Map<string, number> {
   return m;
 }
 
-/** Пул плейсхолдеров {…} листа: подстановка → количество. */
+/** Пул плейсхолдеров {…} листа: имя → количество. ICU-конструкции учитываются
+ *  по имени конструкции (вложенные {count} внутри категорий — часть ICU,
+ *  латинские слова категорий ({Punkt}/{Tage}) не плейсхолдеры). */
 function placeholderMultiset(s: string): Map<string, number> {
   const m = new Map<string, number>();
-  for (const ph of s.match(/\{[^{}]+\}/g) ?? []) {
-    m.set(ph, (m.get(ph) ?? 0) + 1);
+  const bump = (k: string) => m.set(k, (m.get(k) ?? 0) + 1);
+  const icuRe = /\{([a-zA-Z_][a-zA-Z0-9_]*)\s*,\s*(?:plural|select|selectordinal)\s*,/g;
+  for (let mm = icuRe.exec(s); mm; mm = icuRe.exec(s)) bump(mm[1]!);
+  for (const ph of stripIcuConstructs(s).match(/\{([a-zA-Z_][a-zA-Z0-9_]*)[^{}]*\}/g) ?? []) {
+    bump(ph.replace(/[{}]/g, '').trim().split(/[,\s]/)[0]!);
   }
   return m;
 }
@@ -400,7 +422,7 @@ export function stageEditRejections(draft: string, patch: string): string[] {
   const dp = placeholderMultiset(draft);
   const pp = placeholderMultiset(patch);
   for (const [ph, n] of dp) {
-    if ((pp.get(ph) ?? 0) < n) reasons.push(`потерян плейсхолдер ${ph}`);
+    if ((pp.get(ph) ?? 0) < n) reasons.push(`потерян плейсхолдер {${ph}}`);
   }
   if (draft.length >= 60) {
     if (patch.length < draft.length * COLLAPSE_RATIO) {
@@ -432,7 +454,7 @@ const MAIN_PATHS_ADDENDUM = `
 export { MAIN_PATHS_ADDENDUM };
 
 /** Плоская карта «/a/b/0 → значение» → дерево (объекты с числовыми ключами → массивы). */
-function buildTreeFromPaths(map: Record<string, string>): any {
+export function buildTreeFromPaths(map: Record<string, string>): any {
   const root: any = {};
   for (const [p, v] of Object.entries(map)) {
     const parts = p.split('/').filter(Boolean);
@@ -643,7 +665,9 @@ function chunkPayload(node: any, max: number, prefix: string[] = []): PayloadChu
     binLeaves = 0;
   };
   for (const [k, v] of entries) {
-    const lv = countLeaves(v);
+    // Скалярный лист — тоже лист: countLeaves(строка) = 0, и без max(…, 1)
+    // плоская карта строк (ui-payload) бинируется в ноль чанков.
+    const lv = Math.max(countLeaves(v), 1);
     if (lv > max) {
       flush();
       chunks.push(...chunkPayload(v, max, [...prefix, k]));
@@ -690,9 +714,15 @@ async function runStagesOnce(
     mainPathMap?: boolean;
     capture?: (stage: CaptureStage, snapshot: any) => void;
     context?: Record<string, string>;
+    /** Служебная мета ключей (ui: @-мета ARB) — контекст запроса, не перевода. */
+    meta?: Record<string, any>;
   },
 ): Promise<{ draft: any; timings: PipelineResult['timings'] }> {
+  // В чанк уходит только мета его собственных ключей (пути без ведущего
+  // слэша; ui-ключ плоский, поэтому bare-путь совпадает с ключом ARB).
+  const chunkMeta = filterMetaByPayload(o.meta, payload);
   const wrapped: Record<string, unknown> = { sourceLocale: o.sourceLocale, targetLocale, data: payload };
+  if (chunkMeta) wrapped.meta = chunkMeta;
   if (o.context && Object.keys(o.context).length > 0) wrapped.context = o.context;
   const payloadText = JSON.stringify(wrapped);
   const timings: PipelineResult['timings'] = { main: 0, editor: 0 };
@@ -707,6 +737,7 @@ async function runStagesOnce(
             sourceLocale: o.sourceLocale,
             targetLocale,
             paths: flattenAll(payload),
+            ...(chunkMeta ? { meta: chunkMeta } : {}),
             ...(o.context && Object.keys(o.context).length > 0 ? { context: o.context } : {}),
           }),
           temperature: 0.3,
@@ -737,10 +768,26 @@ async function runStagesOnce(
     const expected = flattenAll(payload);
     const clean: Record<string, string> = {};
     const missing: string[] = [];
+    // Толерантность к модели, теряющей ведущий '/' в пути: совпадение по
+    // bare-ключу засчитывается, значение попадает на канонический путь.
+    const byBare = new Map(
+      Object.entries(map as Record<string, unknown>).map(([k, v]) => [k.replace(/^\//, ''), v]),
+    );
+    let bareRescued = 0;
     for (const [p, ru] of Object.entries(expected)) {
-      const v = (map as Record<string, unknown>)[p];
+      let v = (map as Record<string, unknown>)[p];
+      if (v === undefined) {
+        const alt = byBare.get(p.slice(1));
+        if (alt !== undefined) {
+          v = alt;
+          bareRescued++;
+        }
+      }
       if (typeof v === 'string' && v.trim()) clean[p] = v;
       else missing.push(p);
+    }
+    if (bareRescued > 0) {
+      console.warn(`⚠️ [main:paths] ${bareRescued} путей вернулись без ведущего '/' — засчитано по bare-ключу`);
     }
     if (missing.length > 0) {
       // Клин path-map (монотонно-повторяющиеся секции: trap/love) — модель
@@ -797,8 +844,8 @@ async function runStagesOnce(
   if (editorPatch) draft = mergeSubset(draft, editorPatch, 'editor', stageEditRejections);
   o.capture?.('editor', structuredClone(draft));
 
-  // Стадии 3–4 (text): REVIEW — смысловая сверка с оригиналом; FIX — правка
-  // по замечаниям («критикуй отдельно, правь отдельно»).
+  // Стадии 3–4 (text и ui): REVIEW — смысловая сверка с оригиналом; FIX —
+  // правка по замечаниям («критикуй отдельно, правь отдельно»).
   if (prompts.review && prompts.fix) {
     t = Date.now();
     const review = await runStage(
@@ -883,8 +930,10 @@ export async function runPipeline(
     mainPathMap?: boolean;
     /** Наблюдатель стадий: draft после main/editor/fix, {issues, raw} после review. Не влияет на конвейер. */
     capture?: (stage: CaptureStage, snapshot: any) => void;
-    /** Принятые переводы соседних ключей (keys/ui): образец стиля и запрет дублей. */
+    /** Принятые переводы соседних ключей (ui): образец стиля и запрет дублей. */
     context?: Record<string, string>;
+    /** Служебная мета ключей (ui: @-мета ARB) — в запросы, не в перевод. */
+    meta?: Record<string, any>;
   } = {},
 ): Promise<PipelineResult> {
   const sourceLocale = opts.sourceLocale ?? 'ru';
@@ -959,6 +1008,7 @@ export async function runPipeline(
           mainPathMap: opts.mainPathMap,
           capture: opts.capture,
           context,
+          meta: opts.meta,
         },
       ));
     } catch (e) {
@@ -978,6 +1028,7 @@ export async function runPipeline(
           stageAttempts,
           capture: opts.capture,
           context,
+          meta: opts.meta,
         },
       ));
     }
@@ -1083,6 +1134,8 @@ export async function runPipeline(
     // детерминированный промах: «потеряны ключи: /x/screen_3/texts/11»),
     // и полный ретрай конвейера из-за 1–2 листьев — это 4 запроса по всему
     // документу с тем же исходом. Допереводим только потерянное и доклеиваем.
+    // Упрямые хвосты (модель стабильно молчит по 1–2 путям) добиваются
+    // вторым проходом по остатку — полный ретрай языка дороже.
     const ratio = lost.length / Math.max(srcKeys.length, 1);
     if (ratio > 0.3) {
       throw new Error(
@@ -1092,57 +1145,89 @@ export async function runPipeline(
     console.warn(
       `⚠️ [recovery] потеряны ключи (${lost.length}/${srcKeys.length}): ${lost.slice(0, 3).join(', ')} — доперевод точечно`,
     );
-    const lostSubtree = buildSubtree(doc, lost);
-    const recText = await client.complete({
-      system: prompts.main,
-      user: JSON.stringify({ sourceLocale, targetLocale, data: lostSubtree }),
-      temperature: 0.2,
-      maxTokens: 8_192,
-      jsonMode: true,
-    });
-    let recovered = await parseWithRepair<any>(recText);
-    if (recovered && typeof recovered === 'object' && !Array.isArray(recovered) && 'data' in recovered) {
-      recovered = recovered.data;
-    }
-    if (!recovered || typeof recovered !== 'object') {
-      throw new Error(`потеряны ключи: ${lost.slice(0, 5).join(', ')} (recovery не распарсился)`);
-    }
-    // Контейнер в draft КОРОЧЕ потерянного индекса (модель срезала хвост
-    // массива), а mergeSubset по дизайну не растит массивы («длины массивов
-    // фиксируются базой») — дорастаем контейнеры до путей восстановления.
-    for (const [rp, rv] of Object.entries(flattenAll(recovered))) {
-      if (typeof rv !== 'string' || !rv.trim()) continue;
-      const parts = rp.split('/').filter(Boolean);
-      let cur: any = checkTarget;
-      for (let i = 0; i < parts.length; i++) {
-        const seg = parts[i]!;
-        const isIndex = /^\d+$/.test(seg);
-        if (i < parts.length - 1) {
-          const nextIsIndex = /^\d+$/.test(parts[i + 1]!);
-          if (Array.isArray(cur)) {
+    let remaining = lost;
+    for (let pass = 1; pass <= 2 && remaining.length > 0; pass++) {
+      const lostSubtree = buildSubtree(doc, remaining);
+      const recText = await client.complete({
+        system: prompts.main,
+        user: JSON.stringify({
+          sourceLocale,
+          targetLocale,
+          data: lostSubtree,
+          ...(filterMetaByPayload(opts.meta, lostSubtree)
+            ? { meta: filterMetaByPayload(opts.meta, lostSubtree) }
+            : {}),
+        }),
+        temperature: 0.2,
+        maxTokens: 8_192,
+        jsonMode: true,
+      });
+      let recovered = await parseWithRepair<any>(recText);
+      if (recovered && typeof recovered === 'object' && !Array.isArray(recovered) && 'data' in recovered) {
+        recovered = recovered.data;
+      }
+      // Модель, привыкшая к path-map, отвечает recovery картой путей —
+      // принимаем её, но только если ВСЕ пути карты указывают на потерянные
+      // листья: иначе это обычный документ, где «paths» — легитимный ключ.
+      if (
+        recovered &&
+        typeof recovered === 'object' &&
+        !Array.isArray(recovered) &&
+        recovered.paths &&
+        typeof recovered.paths === 'object' &&
+        !Array.isArray(recovered.paths)
+      ) {
+        const lostSet = new Set(remaining);
+        const mapPaths = Object.keys(recovered.paths);
+        const allLost =
+          mapPaths.length > 0 && mapPaths.every((p) => lostSet.has(p.startsWith('/') ? p : `/${p}`));
+        if (allLost) recovered = buildTreeFromPaths(recovered.paths);
+      }
+      if (!recovered || typeof recovered !== 'object') {
+        throw new Error(`потеряны ключи: ${remaining.slice(0, 5).join(', ')} (recovery не распарсился)`);
+      }
+      // Контейнер в draft КОРОЧЕ потерянного индекса (модель срезала хвост
+      // массива), а mergeSubset по дизайну не растит массивы («длины массивов
+      // фиксируются базой») — дорастаем контейнеры до путей восстановления.
+      for (const [rp, rv] of Object.entries(flattenAll(recovered))) {
+        if (typeof rv !== 'string' || !rv.trim()) continue;
+        const parts = rp.split('/').filter(Boolean);
+        let cur: any = checkTarget;
+        for (let i = 0; i < parts.length; i++) {
+          const seg = parts[i]!;
+          const isIndex = /^\d+$/.test(seg);
+          if (i < parts.length - 1) {
+            const nextIsIndex = /^\d+$/.test(parts[i + 1]!);
+            if (Array.isArray(cur)) {
+              const idx = Number(seg);
+              while (cur.length <= idx) cur.push(null);
+              if (cur[idx] == null) cur[idx] = nextIsIndex ? [] : {};
+              cur = cur[idx];
+            } else {
+              if (cur[seg] == null || typeof cur[seg] !== 'object') cur[seg] = nextIsIndex ? [] : {};
+              cur = cur[seg];
+            }
+          } else if (Array.isArray(cur)) {
             const idx = Number(seg);
             while (cur.length <= idx) cur.push(null);
-            if (cur[idx] == null) cur[idx] = nextIsIndex ? [] : {};
-            cur = cur[idx];
-          } else {
-            if (cur[seg] == null || typeof cur[seg] !== 'object') cur[seg] = nextIsIndex ? [] : {};
-            cur = cur[seg];
           }
-        } else if (Array.isArray(cur)) {
-          const idx = Number(seg);
-          while (cur.length <= idx) cur.push(null);
         }
       }
+      mergeSubset(checkTarget, recovered, `recovery${pass > 1 ? `-${pass}` : ''}`);
+      remaining = srcKeys.filter(isLostIn(flattenAll(checkTarget)));
+      if (pass === 1 && remaining.length > 0) {
+        console.warn(
+          `⚠️ [recovery] после прохода 1 без перевода ${remaining.length}: ${remaining.slice(0, 3).join(', ')} — второй проход`,
+        );
+      }
     }
-    mergeSubset(checkTarget, recovered, 'recovery');
     // Восстановленные листья могли прийти с атрибутами <instagram> из
     // оригинала — конвенция та же, что и для основного draft.
     stripInstagramAttributes(draft, targetLocale);
-    const stillLost = srcKeys.filter(isLostIn(flattenAll(checkTarget)));
-    if (stillLost.length > 0) {
-      throw new Error(`потеряны ключи после recovery: ${stillLost.slice(0, 5).join(', ')}`);
+    if (remaining.length > 0) {
+      throw new Error(`потеряны ключи после recovery: ${remaining.slice(0, 5).join(', ')}`);
     }
-    console.warn(`⚠️ [recovery] вписано ${lost.length} листьев`);
+    console.warn(`⚠️ [recovery] все потерянные листья вписаны`);
   }
 
   if (arrayRoot) {
