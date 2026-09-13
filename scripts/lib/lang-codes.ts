@@ -127,6 +127,15 @@ function getScriptRegex(langCode: string): RegExp {
 }
 
 /**
+ * Эмодзи и их служебные символы (ZWJ-склейки, вариационные селекторы,
+ * модификаторы тона кожи) — не «чужой алфавит»: они легитимно наследуются
+ * из ru-оригинала во всех локалях, а в SCRIPT_MAP их список неполон
+ * (♂ U+2642, ⚡ U+26A1, ZWJ U+200D не входили — false positive на ja).
+ */
+const EMOJI_RE =
+  /[\p{Extended_Pictographic}\u200D\uFE0E\uFE0F\u20E3\u{1F3FB}-\u{1F3FF}]/gu;
+
+/**
  * Валидирует значение (строка/массив/объект) против письменности языка.
  * Возвращает массив «проблемных» слов.
  */
@@ -139,7 +148,9 @@ export function validateValue(value: any, langCode: string): string[] {
     // Японский не использует пробелы — проверяем строку целиком.
     const words = canonical === 'ja' ? [value] : value.split(/\s+/);
     for (const word of words) {
-      const cleanWord = word.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
+      const cleanWord = word
+        .replace(EMOJI_RE, '')
+        .replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
       if (cleanWord && !regex.test(cleanWord)) {
         errors.push(word);
       }
