@@ -47,9 +47,10 @@ import {
   setModelConcurrency,
   type StageClient,
 } from './lib/pipeline.js';
+import { MAX_REPAIR_GROUPS, repairDuplicateGroups } from './lib/duplicate-repair.js';
 import { TranslationState, type ScopeState } from './lib/state.js';
 import { analyzeTree, keysToTranslate, type Analysis } from './lib/analyze.js';
-import { validateTranslation, type ValidationIssue } from './lib/validation.js';
+import { validateTranslation, findDuplicateGroups, type ValidationIssue } from './lib/validation.js';
 import { judgeFile } from './lib/judge.js';
 import {
   flattenLeaves,
@@ -304,7 +305,38 @@ async function translateWithRetries(
         console.warn(`   ❌ Валидация ${lang} не пройдена (попытка ${attempt}):`);
         logIssues(lang, issues);
         lastError = new Error(`validation: ${issues.length} проблем`);
-        continue;
+
+        // Дубли («крючки»): полным ретраем чинятся плохо — модель стабильно
+        // унифицирует близкие оригиналы. Точечная разведка пар (как recovery
+        // для потерянных листьев): маленький запрос правит только затронутые
+        // листья, попытка спасается целиком.
+        let repairedClean = false;
+        if (kind === 'text') {
+          const groups = findDuplicateGroups(lang, sentLeaves, result);
+          if (groups.length > MAX_REPAIR_GROUPS) {
+            console.warn(`   ⚠️ Групп дублей ${groups.length} > ${MAX_REPAIR_GROUPS} — обычный ретрай.`);
+          } else if (groups.length > 0) {
+            console.log(`   🩹 Дубли: ${groups.length} групп — точечная разведка пар.`);
+            const fixed = await repairDuplicateGroups(
+              ctx.client,
+              prompts.main,
+              lang,
+              ctx.cfg.sourceLocale,
+              sentLeaves,
+              result,
+              groups,
+            );
+            const again = validateTranslation(lang, sentLeaves, result);
+            if (fixed > 0 && again.length === 0) {
+              console.log(`   🩹 Пары разведены (${fixed} правок) — валидация пройдена, файл спасён без ретрая.`);
+              repairedClean = true;
+            } else {
+              console.warn(`   ⚠️ Разведка не спасла (правок ${fixed}, проблем после: ${again.length}) — обычный ретрай.`);
+              if (again.length > 0 && again.length < issues.length) logIssues(lang, again);
+            }
+          }
+        }
+        if (!repairedClean) continue;
       }
       const stageTimes = [
         `main=${(timings.main / 1000).toFixed(0)}s`,

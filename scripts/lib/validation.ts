@@ -202,6 +202,38 @@ export function validateTranslation(
   // массиве) дублем фразы из другого места того же файла. Легитимные повторы
   // (оригинал и так повторяет одну фразу) не флагуются: сравниваются пары
   // путей, а не тексты разных языков между собой.
+  for (const group of findDuplicateGroups(lang, ruLeaves, translated)) {
+    issues.push({
+      path: '(файл)',
+      message: `дубль перевода при разных оригиналах (${group.paths.slice(0, 3).join(', ')}): «${group.normText.slice(0, 40)}…»`,
+    });
+  }
+
+  return issues;
+}
+
+/** Группа листьев, схлопнувшихся в одинаковый перевод при разных оригиналах. */
+export interface DuplicateGroup {
+  /** Нормализованные пути (без ведущего слэша). */
+  paths: string[];
+  /** Нормализованный (общий) текст перевода — для сообщений. */
+  normText: string;
+}
+
+/**
+ * Группы дублей: листья с одинаковым переводом, чьи ru-оригиналы различаются.
+ * Детект «крючков» — един для валидации (правило 7) и точечной разведки пар
+ * в раннере: после отказа валидации группа уходит в маленький Repair-запрос
+ * вместо полной потери попытки.
+ */
+export function findDuplicateGroups(lang: string, ruLeaves: Leaves, translated: any): DuplicateGroup[] {
+  const norm = (m: Leaves): Leaves => {
+    const out: Leaves = {};
+    for (const k of Object.keys(m)) out[k.replace(/^\//, '')] = m[k];
+    return out;
+  };
+  const ru = norm(ruLeaves);
+  const outLeaves = norm(flattenLeaves(translated));
   const normText = (s: string): string =>
     s
       .replace(TAG_RE, '')
@@ -211,7 +243,7 @@ export function validateTranslation(
       .replace(/ё/g, 'е')
       .replace(/[^\p{L}\p{N}]/gu, '');
   const byNormText = new Map<string, string[]>();
-  for (const p of ruPaths) {
+  for (const p of Object.keys(ru)) {
     const v = outLeaves[p];
     if (typeof v !== 'string' || v.trim() === '') continue;
     const n = normText(v);
@@ -220,16 +252,11 @@ export function validateTranslation(
     list.push(p);
     byNormText.set(n, list);
   }
+  const groups: DuplicateGroup[] = [];
   for (const [n, paths] of byNormText) {
     if (paths.length < 2) continue;
     const ruNorms = new Set(paths.map((p) => normText(ru[p] ?? '')));
-    if (ruNorms.size > 1) {
-      issues.push({
-        path: '(файл)',
-        message: `дубль перевода при разных оригиналах (${paths.slice(0, 3).join(', ')}): «${n.slice(0, 40)}…»`,
-      });
-    }
+    if (ruNorms.size > 1) groups.push({ paths, normText: n });
   }
-
-  return issues;
+  return groups;
 }
