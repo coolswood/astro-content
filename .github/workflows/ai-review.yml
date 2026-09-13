@@ -54,7 +54,8 @@ jobs:
           # Локальный loopback-маппинг Forgejo (compose: 127.0.0.1:8101->3000):
           # раннер и Forgejo живут на одном боксе, tailnet/TLS не нужны.
           FORGEJO_API: http://127.0.0.1:8101/api/v1
-          # Авто-токен джобы = токен инстанса Forgejo (НЕ GitHub-токен).
+          # Авто-токен джобы = токен инстанса Forgejo (НЕ GitHub-токен); живьём
+# проверено 2026-09-13: под ним проходят и дифф, и постинг комментариев.
           FORGEJO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
