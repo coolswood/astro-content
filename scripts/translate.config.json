@@ -1,5 +1,5 @@
 {
-  "$comment": "Конфигурация scripts/translate.ts. Всё переопределяется env (TRANSLATE_ENDPOINT, TRANSLATE_MODEL, TRANSLATE_STATE_PATH, COGNITIVE_PSY_DIR) и флагами CLI (--endpoint, --model, --state, --psy-dir, --concurrency, --priority). targetLocales: null = все 18 канонических локалей из scripts/lib/lang-codes.ts. concurrency — одновременных запросов к модели (общий семафор VllmClient; сервер vLLM держит --max-num-seqs 8). requestPriority — приоритет в очереди vLLM (--scheduling-policy priority: МЕНЬШЕ = раньше), перевод ходит с >0, чтобы не отбивать канал у интерактивных потребителей. requestTimeoutMs=300000: по гистограмме vLLM ни один реальный запрос не шёл дольше 240с (99.5% — до 60с), а зависшее соединение держит слот конкурентности до таймаута — 600с замораживали треть пула на 10 минут на каждый висяк.",
+  "$comment": "Конфигурация scripts/translate.ts. Всё переопределяется env (TRANSLATE_ENDPOINT, TRANSLATE_MODEL, TRANSLATE_STATE_PATH, COGNITIVE_PSY_DIR) и флагами CLI (--endpoint, --model, --state, --psy-dir, --concurrency, --priority). targetLocales: null = все 18 канонических локалей из scripts/lib/lang-codes.ts. concurrency — одновременных запросов к модели (общий семафор VllmClient; сервер vLLM держит --max-num-seqs 8). Замер 2026-09-13: 3 → 138 ток/с, 6 → 237 ток/с (+72%), 8 → без прироста; латентность интерактивных запросов растёт лишь 4.8с → 5.4с, а приоритет (requestPriority >0) всё равно пропускает их вперёд — поэтому дефолт 6. requestPriority — приоритет в очереди vLLM (--scheduling-policy priority: МЕНЬШЕ = раньше), перевод ходит с >0, чтобы не отбивать канал у интерактивных потребителей. requestTimeoutMs=300000: по гистограмме vLLM ни один реальный запрос не шёл дольше 240с (99.5% — до 60с), а зависшее соединение держит слот конкурентности до таймаута — 600с замораживали треть пула на 10 минут на каждый висяк.",
   "sourceLocale": "ru",
   "targetLocales": null,
   "psyDir": "",
@@ -8,6 +8,6 @@
   "statePath": "scripts/translation-state.json",
   "retries": 2,
   "requestTimeoutMs": 300000,
-  "concurrency": 3,
+  "concurrency": 6,
   "requestPriority": 10
 }

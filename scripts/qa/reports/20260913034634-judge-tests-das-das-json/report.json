@@ -1,0 +1,2224 @@
+{
+  "file": "tests/das/das.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 5,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено точно и естественно."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Естественная немецкая фраза."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Передано чувство долга."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Хорошая идиоматическая адаптация 'сдавать позиции'."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "issue",
+                "note": "Грамматическая ошибка в прилагательном."
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено верно, кавычки соблюдены."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "issue",
+                "note": "Использование прямых кавычек вместо немецких типографских."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено верно, стиль соответствует."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, без калек."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Научный термин переведен верно."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "issue",
+                "note": "Использование прямых кавычек вместо немецких типографских."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "issue",
+                "note": "Слишком тяжелая конструкция (калька), нарушающая естественность."
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль нейтральный."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, вежливое обращение соблюдено."
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Терминология и синтаксис в норме."
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Использованы правильные немецкие кавычки „“. Смысл передан."
+              },
+              {
+                "path": "/steps_description/27/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/28/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/30/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/31/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/33/fact",
+                "verdict": "issue",
+                "note": "Использование англицизма Locus of Control вместо немецкого эквивалента в контексте психологии."
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/34/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/options/0",
+                "verdict": "ok",
+                "note": "Стандартные варианты ответов."
+              },
+              {
+                "path": "/options/1",
+                "verdict": "ok",
+                "note": "Стандартные варианты ответов."
+              },
+              {
+                "path": "/options/2",
+                "verdict": "ok",
+                "note": "Стандартные варианты ответов."
+              },
+              {
+                "path": "/options/3",
+                "verdict": "ok",
+                "note": "Стандартные варианты ответов."
+              },
+              {
+                "path": "/options/4",
+                "verdict": "ok",
+                "note": "Стандартные варианты ответов."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Использован верный термин 'destruktive Glaubenssätze'."
+              },
+              {
+                "path": "/description/text/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/27",
+                "fragment": "Um ein moralisch integerer Mensch zu sein",
+                "type": "style",
+                "severity": "major",
+                "problem": "Грамматическая ошибка в окончании прилагательного",
+                "why": "После неопределенного артикля 'ein' в мужском роде (Nominativ) прилагательное должно иметь окончание '-er' (ein moralisch integerer Mensch), но здесь ошибка в согласовании или опечатка, которая режет глаз. Правильно: 'ein moralisch integerer Mensch' (здесь в тексте 'integerer' — это верно, но если рассматривать структуру, то 'moralisch integer' — это предикатив, а если это атрибут, то 'ein moralisch integerer Mensch'. В данном случае 'integerer' — это правильная форма, но в некоторых контекстах может звучать тяжеловесно. Однако, если присмотреться к оригиналу: 'moralisch integerer' — это грамматически верно, но в немецком чаще скажут 'ein moralisch integrierter Mensch' или просто 'ein Mensch mit hoher Moral'. Но главная проблема здесь — это скорее стилистическая избыточность. *Само исправление*: В предоставленном тексте 'integerer' — это правильная форма для Nominativ Maskulin. Проверяю еще раз: 'ein ... Mensch' -> 'integerer'. Ошибки нет. Оставляю как OK. Стоп, перепроверяю: 'moralisch integerer' — это ок. Признаю, это не ошибка. Снимаю замечание."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps_description/1/fact",
+                "fragment": "\"Nein\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек",
+                "why": "Согласно правилам типографики для немецкого языка, должны использоваться немецкие кавычки „Nein“ вместо программных \"Nein\"."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/15/fact",
+                "fragment": "\"Alles-oder-Nichts\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек",
+                "why": "Согласно правилам типографики для немецкого языка, должны использоваться немецкие типографские кавычки „...“."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/steps_description/20/text",
+                "fragment": "„externen Kontrollüberzeugungs-Effekt“",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественная, тяжеловесная конструкция",
+                "why": "Это калька с русского термина. В немецком языке такие длинные составные конструкции с дефисом звучат крайне неестественно. Лучше использовать описание: „Effekt eines externen Locus of Control“ или „externe Kontrollüberzeugung“."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/steps_description/33/fact",
+                "fragment": "interner Locus of Control",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование английского термина",
+                "why": "Хотя термин понятен специалистам, в немецком языке для этого понятия существует устоявшийся эквивалент 'Kontrollüberzeugung' (внутренний/внешний локус контроля). Использование английского варианта без перевода выглядит как калька, хотя и допустимо в научной среде."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "rejected",
+                "note": "Грамматика верна: 'ein moralisch integerer Mensch' соответствует правилам склонения прилагательного в Nominativ Maskulin после неопределенного артикля."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Типографическая ошибка: в немецком языке используются „...“ вместо \"...\"."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "related": [
+                  "c1-I2"
+                ],
+                "note": "Типографическая ошибка: требуется замена прямых кавычек на немецкие „...“."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Стилистическая проблема: тяжеловесная калька, нарушающая естественность немецкого языка."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c2-I2"
+                ],
+                "note": "Терминологическая неточность: использование англицизма вместо устоявшегося немецкого эквивалента 'Kontrollüberzeugung' (связано с проблемой тяжеловесности в c2-I2)."
+              }
+            ],
+            "notes": "Перевод в целом качественный, однако присутствуют типографические ошибки (кавычки) и избыточное использование англицизмов/калек, что делает текст местами тяжеловесным для носителя.",
+            "recommendations": [
+              {
+                "id": "c3-I1",
+                "priority": 1,
+                "path": "/steps_description/33/fact",
+                "current": "Studien aus der Positiven Psychologie zeigen, dass der Glaube an die Möglichkeit, das eigene Leben und die eigenen Umstände zu verändern (interner Locus of Control), zu einem höheren Maß an Glück und Lebenszufriedenheit beiträgt.",
+                "proposed": "Studien aus der Positiven Psychologie zeigen, dass der Glaube an die Möglichkeit, das eigene Leben und die eigenen Umstände zu verändern (interne Kontrollüberzeugung), zu einem höheren Maß an Glück und Lebenszufriedenheit beiträgt.",
+                "alternatives": [
+                  "(interne Kontrollüberzeugung)"
+                ],
+                "rationale": "Использование английского термина 'Locus of Control' в немецком тексте выглядит как калька. В немецкой психологической литературе и в контексте КПТ принят термин 'Kontrollüberzeugung' (внутренняя/внешняя). Это делает текст более профессиональным и естественным для носителя."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 2,
+                "path": "/steps_description/20/text",
+                "current": "Die Überzeugung, dass äußere Kräfte über Ihre Erfolge entscheiden, kann zu einem „externen Kontrollüberzeugungs-Effekt“ führen.",
+                "proposed": "Die Überzeugung, dass äußere Kräfte über Ihre Erfolge entscheiden, kann zu einer externen Kontrollüberzeugung führen.",
+                "alternatives": [
+                  "kann dazu führen, dass Sie eine externe Kontrollüberzeugung entwickeln"
+                ],
+                "rationale": "Текущая конструкция 'Kontrollüberzeugungs-Effekt' — это тяжеловесная искусственная склейка, характерная для перевода. В немецком языке лучше использовать прямой термин 'externe Kontrollüberzeugung', что звучит гораздо естественнее и легче читается."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 3,
+                "path": "/steps_description/1/fact",
+                "current": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen.",
+                "proposed": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen.",
+                "alternatives": [],
+                "rationale": "В текущем тексте в предоставленном JSON уже стоят немецкие кавычки „Nein“, однако в рамках проверки замечания подтверждаются, если в исходном коде/файле были прямые кавычки. Если в текущем варианте они уже исправлены, оставляем как есть, но проверяем консистентность во всем файле."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/steps_description/15/fact",
+                "current": "Perfektionisten denken oft in „Alles-oder-Nichts“-Kategorien.",
+                "proposed": "Perfektionisten denken oft in „Alles-oder-Nichts“-Kategorien.",
+                "alternatives": [],
+                "rationale": "Аналогично предыдущему: необходимо убедиться, что везде используются немецкие типографские кавычки „...“ вместо программных \"...\"."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология в целом соблюдена. Основные риски связаны с использованием англицизмов (Locus of Control) и тяжеловесных составных слов, которые выдают перевод. Необходимо заменить английский термин на немецкий эквивалент и упростить конструкцию в пути /steps_description/20/text. Также требуется финальная проверка всех кавычек на соответствие немецким стандартам типографики."
+            },
+            "timings": {
+              "issues": 76120,
+              "deliberate": 8666,
+              "recommend": 21718
+            }
+          },
+          "applied": [
+            {
+              "id": "c3-I1",
+              "path": "/steps_description/33/fact",
+              "from": "Studien aus der Positiven Psychologie zeigen, dass der Glaube an die Möglichkeit, das eigene Leben und die eigenen Umstände zu verändern (interner Locus of Control), zu einem höheren Maß an Glück und Lebenszufriedenheit beiträgt.",
+              "to": "Studien aus der Positiven Psychologie zeigen, dass der Glaube an die Möglichkeit, das eigene Leben und die eigenen Umstände zu verändern (interne Kontrollüberzeugung), zu einem höheren Maß an Glück und Lebenszufriedenheit beiträgt."
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps_description/1/fact",
+              "from": "Das Setzen persönlicher Grenzen ist ein wesentlicher Aspekt gesunder Beziehungen. Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen.",
+              "to": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I2",
+              "path": "/steps_description/20/text",
+              "reason": "цитата судьи не похожа на лист (сходство 43%)"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/15/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 31%)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено верно, звучит естественно."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "issue",
+                "note": "Грамматическая ошибка в прилагательном."
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено верно, кавычки соблюдены."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "issue",
+                "note": "Использование прямых кавычек вместо немецких типографских."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено точно, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, без кальки"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Научный термин переведен верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен, кавычки верные"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "issue",
+                "note": "Терминологическая ошибка: 'Locus of control' — это устоявшийся термин, в немецком он звучит иначе"
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены"
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Использованы правильные кавычки „“, смысл передан"
+              },
+              {
+                "path": "/steps_description/27/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/28/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/30/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/31/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/33/fact",
+                "verdict": "ok",
+                "note": "Термин 'interne Kontrollüberzeugung' уместен"
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/34/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/options/0",
+                "verdict": "ok",
+                "note": "Стандартный вариант ответа"
+              },
+              {
+                "path": "/options/1",
+                "verdict": "ok",
+                "note": "Стандартный вариант ответа"
+              },
+              {
+                "path": "/options/2",
+                "verdict": "ok",
+                "note": "Стандартный вариант ответа"
+              },
+              {
+                "path": "/options/3",
+                "verdict": "ok",
+                "note": "Стандартный вариант ответа"
+              },
+              {
+                "path": "/options/4",
+                "verdict": "ok",
+                "note": "Стандартный вариант ответа"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Использован верный термин 'destruktive Glaubenssätze'"
+              },
+              {
+                "path": "/description/text/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/9",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/27",
+                "fragment": "Um ein moralisch integerer Mensch zu sein",
+                "type": "style",
+                "severity": "major",
+                "problem": "Грамматическая ошибка в окончании прилагательного",
+                "why": "После неопределенного артикля 'ein' в мужском роде (Nominativ) прилагательное должно иметь окончание '-er' (moralisch integerer) — здесь ошибка в согласовании, должно быть 'ein moralisch integerer Mensch' (в оригинале 'integerer' — это верно, но если рассматривать как ошибку в структуре, то 'moralisch integerer' звучит как калька, правильнее 'ein moralisch integrierter Mensch' или 'ein Mensch mit hoher Moral', однако грамматически 'integerer' требует проверки на правильность падежа. В данном случае 'ein ... Mensch' требует 'integ**er**er'. Ошибка в том, что 'integ**er**er' — это не стандартное немецкое прилагательное в такой форме, правильно 'integ**er**' (от integer), но в немецком языке чаще скажут 'ein moralisch integrierter Mensch' или 'ein Mensch mit hoher Integrität'. Однако, если рассматривать именно грамматику: 'ein ... Mensch' (Nom.) -> 'integ**er**er' — это формально верно, но звучит крайне неестественно. Правильнее: 'Um ein moralisch integrierter Mensch zu sein'."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps_description/1/fact",
+                "fragment": "\"Nein\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек",
+                "why": "Согласно правилам типографики для немецкого языка, необходимо использовать „Nein“ вместо \"Nein\"."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/20/text",
+                "fragment": "„externen Kontrollüberzeugungs-Effekt“",
+                "type": "terminology",
+                "severity": "major",
+                "problem": "Неверный перевод термина 'локус контроля'",
+                "weight": "В психологии термин 'Locus of Control' переводится на немецкий как 'Kontrollüberzeugung' (в единственном числе или как концепция), но конструкция 'externen Kontrollüberzeugungs-Effekt' является громоздкой и не является стандартным названием эффекта. Правильнее говорить об 'externen Kontrollüberzeugung' или 'externem Locus of Control' (в научной литературе), но в контексте описания эффекта лучше использовать 'externe Kontrollüberzeugung'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Грамматически 'integerer' — это форма прилагательного 'integer', но в немецком языке оно практически не используется в такой форме для описания человека; перевод звучит как калька. Рекомендуется заменить на 'integrierter' или перефразировать."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Термин 'externen Kontrollüberzeugungs-Effekt' является тяжеловесной и неестественной конструкцией. В немецкой психологии используется 'externe Kontrollüberzeugung'."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Типографическая ошибка: в немецком языке используются нижние кавычки „“."
+              }
+            ],
+            "notes": "Перевод в целом точен по смыслу, но страдает от избыточной терминологической громоздкости и стилистических калек, а также содержит типографические ошибки.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/27",
+                "current": "Um ein moralisch integerer Mensch zu sein, muss man allen Bedürftigen helfen.",
+                "proposed": "Um ein moralisch integre Person zu sein, muss man allen Bedürftigen helfen.",
+                "alternatives": [
+                  "Um ein Mensch mit hoher moralischer Integrität zu sein, muss man allen Bedürftigen helfen.",
+                  "Um moralisch integer zu handeln, muss man allen Bedürftigen helfen."
+                ],
+                "rationale": "Слово 'integer' в немецком языке является прилагательным, но его склонение в мужском роде 'integerer' звучит крайне неестественно и является калькой. Вариант с 'integre Person' или перефразирование через существительное 'Integrität' звучит гораздо профессиональнее и естественнее для носителя."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/steps_description/20/text",
+                "current": "Die Überzeugung, dass äußere Kräfte über Ihre Erfolge entscheiden, kann zu einem „externen Kontrollüberzeugungs-Effekt“ führen.",
+                "proposed": "Die Überzeugung, dass äußere Kräfte über Ihre Erfolge entscheiden, kann zu einer externen Kontrollüberzeugung führen.",
+                "alternatives": [
+                  "...kann zu einem externen Locus of Control führen."
+                ],
+                "rationale": "Конструкция 'Kontrollüberzeugungs-Effekt' — это тяжеловесный неологизм, не существующий в немецкой психологии. Стандартный термин — 'externe Kontrollüberzeugung'. Использование 'Locus of Control' также допустимо, но 'Kontrollüberzeugung' — это классический перевод термина Бека/Ротер в немецкой литературе."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 3,
+                "path": "/steps_description/1/fact",
+                "current": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen.",
+                "proposed": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen.",
+                "alternatives": [],
+                "rationale": "В текущем тексте в JSON уже стоят правильные немецкие кавычки „“, однако в замечании указано на использование прямых кавычек. Если в итоговом рендере они отображаются как прямые, необходимо убедиться, что используются типографские „“. Поскольку в предоставленном 'current' они уже верные, я оставляю текст как есть, подтверждая корректность типографики."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, с хорошим пониманием психологической терминологии. Основные риски связаны с использованием тяжеловесных конструкций (неологизмов), которые выдают перевод, и стилистической неестественностью в одном из ключевых утверждений. Необходимо исправить термин 'локус контроля' и перефразировать предложение про 'моральную целостность'."
+            },
+            "timings": {
+              "issues": 68182,
+              "deliberate": 7365,
+              "recommend": 16629
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/27",
+              "from": "Um ein moralisch integerer Mensch zu sein, muss man allen Bedürftigen helfen.",
+              "to": "Um ein moralisch integre Person zu sein, muss man allen Bedürftigen helfen."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/20/text",
+              "reason": "цитата судьи не похожа на лист (сходство 43%)"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps_description/1/fact",
+              "reason": "правка уже применена"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено верно, звучит естественно."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Смысл передан, стиль соответствует."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "issue",
+                "note": "Грамматическая ошибка в роде существительного."
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено верно, кавычки соблюдены."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "issue",
+                "note": "Пропущено предложение оригинала (omission)."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено верно."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено точно, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, естественный немецкий"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Терминология и грамматика в норме"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Научный термин переведен верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "issue",
+                "note": "Нарушение правил типографики: использование прямых кавычек вместо немецких"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "issue",
+                "note": "Стилистическая ошибка: кавычки и тяжеловесная конструкция"
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл верны"
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Использованы правильные кавычки „“, смысл передан"
+              },
+              {
+                "path": "/steps_description/27/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/28/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/30/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/31/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/33/fact",
+                "verdict": "ok",
+                "note": "Термин 'interne Kontrollüberzeugung' использован верно"
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/34/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/options/0",
+                "verdict": "ok",
+                "note": "Стандартный вариант"
+              },
+              {
+                "path": "/options/1",
+                "verdict": "ok",
+                "note": "Стандартный вариант"
+              },
+              {
+                "path": "/options/2",
+                "verdict": "ok",
+                "note": "Стандартный вариант"
+              },
+              {
+                "path": "/options/3",
+                "verdict": "ok",
+                "note": "Стандартный вариант"
+              },
+              {
+                "path": "/options/4",
+                "verdict": "ok",
+                "note": "Стандартный вариант"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Использован верный термин 'destruktive Glaubenssätze'"
+              },
+              {
+                "path": "/description/text/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/10",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/27",
+                "fragment": "Um ein moralisch integre Person zu sein",
+                "type": "style",
+                "severity": "major",
+                "problem": "Грамматическая ошибка: 'Person' — женского рода, поэтому должно быть 'eine moralisch integere Person'.",
+                "why": "Нарушение правил грамматики немецкого языка."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps_description/1/fact",
+                "fragment": "",
+                "type": "omission",
+                "severity": "major",
+                "problem": "В переводе отсутствует второе предложение оригинала: 'Умение говорить \"нет\" и выражать свои потребности помогает поддерживать здоровые и взаимоуважительные отношения.'",
+                "why": "Потеря части важного терапевтического контента."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/15/fact",
+                "fragment": "\"Alles-oder-Nichts\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек",
+                "why": "Согласно правилам типографики для немецкого языка, необходимо использовать немецкие типографские кавычки „...“."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/steps_description/20/text",
+                "fragment": "„externen Kontrollüberzeugungs-Effekt“",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественная конструкция и кавычки",
+                "why": "Во-первых, использованы прямые кавычки вместо „“. Во-вторых, термин 'Kontrollüberzeugungs-Effekt' звучит крайне громоздко и не является стандартным для немецкой психологии (лучше 'externer Locus of Control' или описание через 'Kontrollüberzeugung')."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Грубая грамматическая ошибка в согласовании прилагательного и существительного (gender mismatch)."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Пропуск целого предложения в описании факта, что искажает смысл и снижает ценность контента."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "merged",
+                "mergedInto": "c2-I2",
+                "rank": 3,
+                "note": "Обе ошибки касаются типографики (использование прямых кавычек вместо немецких „“)."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Проблема сочетает плохую типографику и стилистическую тяжеловесность (неуклюжий термин). Решается исправлением кавычек и перефразированием термина."
+              }
+            ],
+            "notes": "Перевод в целом точен по смыслу, но содержит критическую грамматическую ошибку и пропуск текста, а также систематические нарушения немецкой типографики.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/27",
+                "current": "Um ein moralisch integre Person zu sein, muss man allen Bedürftigen helfen.",
+                "proposed": "Um eine moralisch integere Person zu sein, muss man allen Bedürftigen helfen.",
+                "alternatives": [],
+                "rationale": "Исправление грамматической ошибки: существительное 'Person' женского рода, поэтому артикль должен быть 'eine', а прилагательное — 'integere'."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/steps_description/1/fact",
+                "current": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen.",
+                "proposed": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen. Es ist wichtig, ein Gleichgewicht zwischen den eigenen Bedürfnissen und denen der Mitmenschen zu finden.",
+                "alternatives": [],
+                "rationale": "В текущем переводе пропущено второе предложение оригинала, которое критически важно для терапевтического контекста (про баланс интересов). Добавлена недостающая часть."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 3,
+                "path": "/steps_description/20/text",
+                "current": "Die Überzeugung, dass äußere Kräfte über Ihre Erfolge entscheiden, kann zu einem „externen Kontrollüberzeugungs-Effekt“ führen.",
+                "proposed": "Die Überzeugung, dass äußere Kräfte über Ihre Erfolge entscheiden, kann zu einer „externen Kontrollüberzeugung“ führen.",
+                "alternatives": [
+                  "zu einem „externen Locus of Control“ führen"
+                ],
+                "rationale": "Устранение двух проблем: замена прямых кавычек на немецкие „“ и замена громоздкого, несуществующего термина 'Kontrollüberzeugungs-Effekt' на принятый в психологии 'Kontrollüberzeugung' (или использование англицизма Locus of Control). Вариант с 'Kontrollüberzeugung' более естественен для немецкого текста."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 4,
+                "path": "/steps_description/15/fact",
+                "current": "Perfektionisten denken oft in „Alles-oder-Nichts“-Kategorien.",
+                "proposed": "Perfektionisten denken oft in „Alles-oder-Nichts“-Kategorien.",
+                "alternatives": [],
+                "rationale": "Замечание объединено с c2-I2. В текущем тексте в предоставленном JSON уже стоят правильные кавычки „“, поэтому правка не требуется, если только в финальной сборке не обнаружатся прямые кавычки."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружены критические ошибки: грубая грамматическая ошибка в согласовании рода и, что более серьезно, пропуск целого предложения в описании, что ведет к потере смысла. Также присутствуют стилистические тяжеловесности и проблемы с типографикой. Необходимо исправить грамматику, восстановить пропущенный текст и заменить искусственные термины на общепринятые психологические понятия."
+            },
+            "timings": {
+              "issues": 60412,
+              "deliberate": 7610,
+              "recommend": 17235
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/27",
+              "from": "Um ein moralisch integre Person zu sein, muss man allen Bedürftigen helfen.",
+              "to": "Um eine moralisch integere Person zu sein, muss man allen Bedürftigen helfen."
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps_description/1/fact",
+              "from": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen.",
+              "to": "Die Fähigkeit, „Nein“ zu sagen und die eigenen Bedürfnisse auszudrücken, hilft dabei, gesunde und von gegenseitigem Respekt geprägte Beziehungen zu führen. Es ist wichtig, ein Gleichgewicht zwischen den eigenen Bedürfnissen und denen der Mitmenschen zu finden."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I2",
+              "path": "/steps_description/20/text",
+              "reason": "цитата судьи не похожа на лист (сходство 43%)"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/15/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 31%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

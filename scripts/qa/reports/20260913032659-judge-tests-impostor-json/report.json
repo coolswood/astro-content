@@ -1,0 +1,1571 @@
+{
+  "file": "tests/impostor.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 4,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено точно, звучит естественно."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "issue",
+                "note": "Mistranslation: смысл искажен. В оригинале 'производить впечатление, что разбираюсь лучше', в переводе 'чувствую себя компетентнее'. Это разные вещи: внешнее впечатление vs внутреннее ощущение."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Переведено хорошо, 'überkommt mich Angst' — естественная конструкция."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/rarely",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/sometimes",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Кавычки заменены на немецкие, смысл передан верно."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено точно, кавычки верные."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Терминология (KVT) верная."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrungen) верная."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует экспертному и эмпатичному."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrung) соблюдена, кавычки правильные."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно, цитата оформлена корректно."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Естественный немецкий язык."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Дубликат 9/text, перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Дубликат 9/fact, перевод корректен."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "issue",
+                "note": "В оригинале указаны два термина в кавычках, в переводе один из них пропущен."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Терминология и кавычки в порядке."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный, тон эмпатичный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID instagram сохранен, атрибуты отсутствуют согласно конвенции для ru/en"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID instagram сохранен, атрибуты отсутствуют согласно конвенции для ru/en"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/1",
+                "fragment": "Manchmal fühle ich mich kompetenter, als ich mich eigentlich selbst einschätze.",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла: оригинал говорит о внешнем впечатлении ('производить впечатление'), а перевод — о внутреннем самоощущении ('чувствую себя компетентнее').",
+                "why": "В контексте синдрома самозванца критически важно различие между тем, как человек выглядит в глазах других, и тем, как он оценивает себя сам."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/14/text",
+                "fragment": "kognitive Verzerrungen entstehen.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущены конкретные примеры искажений, указанные в оригинале.",
+                "why": "В оригинале перечислены два термина: \"синдром мошенника\" и \"парадокс превосходства\". В немецком переводе они полностью опущены, оставлено только общее упоминание когнитивных искажений, что искажает обучающий смысл текста."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка: оригинал описывает разрыв между внешним впечатлением (impression) и самооценкой, а перевод сводит всё к внутреннему ощущению, теряя суть синдрома самозванца."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Серьезное упущение: удаление конкретных терминов (синдром мошенника и парадокс превосходства) обедняет информативность текста и нарушает точность передачи обучающего контента."
+              }
+            ],
+            "notes": "Перевод содержит серьезные смысловые ошибки: как на уровне передачи нюансов (различие внешнего и внутреннего), так и на уровне полноты передачи терминологии.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/1",
+                "current": "Manchmal fühle ich mich kompetenter, als ich mich eigentlich selbst einschätze.",
+                "proposed": "Ich kann den Eindruck erwecken, kompetenter zu sein, als ich mich selbst einschätze.",
+                "alternatives": [
+                  "Ich kann kompetenter wirken, als ich mich selbst fühle.",
+                  "Es kann so wirken, als wäre ich kompetenter, als ich mich selbst einschätze."
+                ],
+                "rationale": "Оригинал подчеркивает разрыв между внешним восприятием ('производить впечатление') и внутренним самоощущением. Текущий вариант говорит только о внутреннем чувстве, что полностью меняет смысл психологического конструкта. Предложенный вариант точно передает 'производить впечатление' (den Eindruck erwecken) и сохраняет структуру."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/steps_description/14/text",
+                "current": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen entstehen.",
+                "proposed": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen.",
+                "alternatives": [
+                  "...können durch kognitive Verzerrungen wie das „Hochstapler-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen."
+                ],
+                "rationale": "В оригинале даны конкретные термины, которые являются обучающим элементом. В текущем переводе они удалены. Необходимо вернуть их, чтобы сохранить информативность. Я предлагаю использовать 'Imposter-Syndrom', так как в контексте когнитивных искажений это звучит более профессионально, но 'Hochstapler-Syndrom' также допустимо для консистентности с остальным текстом."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружены критические смысловые ошибки. Главная проблема — подмена внешнего впечатления внутренним ощущением в ключевом утверждении о синдроме самозванца, что искажает суть метода. Также в обучающем блоке пропущены важные термины. Требуется исправление этих двух узлов перед публикацией."
+            },
+            "timings": {
+              "issues": 45862,
+              "deliberate": 5628,
+              "recommend": 12831
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/1",
+              "from": "Manchmal fühle ich mich kompetenter, als ich mich eigentlich selbst einschätze.",
+              "to": "Ich kann den Eindruck erwecken, kompetenter zu sein, als ich mich selbst einschätze."
+            },
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/14/text",
+              "from": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen entstehen. Menschen, die unter dem Hochstapler-Syndrom leiden, neigen dazu, ihre Erfolge abzuwerten und als Zufall zu betrachten.",
+              "to": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный и естественный"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/rarely",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/sometimes",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "issue",
+                "note": "Использование кавычек-елочек вместо немецких типографских"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Термин 'kognitive Verzerrung' использован верно, кавычки правильные."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Хороший перевод, без калек."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Дубликат текста, перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Дубликат текста, перевод корректен."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "issue",
+                "note": "Пропущена часть предложения в конце."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID в локали ru, атрибуты отсутствуют согласно конвенции"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID в локали ru, атрибуты отсутствуют согласно конвенции"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/0/fact",
+                "fragment": "„Unzulänglichkeit“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование кавычек-елочек вместо немецких типографских „ “",
+                "why": "Согласно правилам типографики для немецкого языка, должны использоваться кавычки „слово“."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/14/text",
+                "fragment": "können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущено второе предложение оригинала.",
+                "why": "В оригинале после перечисления искажений идет предложение: 'Люди, испытывающие эти искажения, склонны принижать свои успехи и считать их случайными.' В немецком переводе эта мысль полностью отсутствует."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Typographical error in quotation marks; German standard requires „ “."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Significant omission of a sentence, leading to loss of meaning regarding the behavior of people with these distortions."
+              }
+            ],
+            "notes": "The translation is generally high quality, but contains one critical omission of a sentence and a minor typographical error in quotation marks.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/14/text",
+                "current": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen.",
+                "proposed": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen. Menschen, die diese Verzerrungen erleben, neigen dazu, ihre Erfolge herabzuspielen und sie als Zufall abzutun.",
+                "alternatives": [
+                  "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen. Betroffene neigen dazu, ihre Erfolge zu minimieren und als bloßen Zufall zu betrachten.",
+                  "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen. Menschen mit diesen Verzerrungen neigen dazu, ihre Erfolge kleinzureden und als zufällig zu betrachten."
+                ],
+                "rationale": "В текущем переводе полностью отсутствует второе предложение оригинала, что критически искажает смысл (не объясняется поведение людей с этими искажениями). Предложенный вариант восстанавливает полноту текста, сохраняя стиль и терминологию."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/steps_description/0/fact",
+                "current": "Emma Watson, die bekannte Schauspielerin und Aktivistin, hat offen über ihre Gefühle des Hochstapler-Syndroms gesprochen. Trotz ihrer Erfolge im Film und im gesellschaftlichen Engagement zweifelte sie oft an ihren Fähigkeiten und hatte Angst, dass andere ihre „Unzulänglichkeit“ bemerken könnten.",
+                "proposed": "Emma Watson, die bekannte Schauspielerin und Aktivistin, hat offen über ihre Gefühle des Hochstapler-Syndroms gesprochen. Trotz ihrer Erfolge im Film und im gesellschaftlichen Engagement zweifelte sie oft an ihren Fähigkeiten und hatte Angst, dass andere ihre „Unzulänglichkeit“ bemerken könnten.",
+                "alternatives": [],
+                "rationale": "В текущем тексте уже использованы правильные немецкие кавычки „ “, несмотря на то, что в замечании указано обратное. Поскольку текущий текст соответствует правилам типографики, замена не требуется (proposed = current)."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, с хорошим пониманием терминологии КПТ и естественным звучанием. Однако обнаружена серьезная ошибка: пропущено целое предложение в блоке /steps_description/14/text, что нарушает логику повествования. Также необходимо проверить единообразие кавычек по всему тексту, хотя в проблемном фрагменте они уже выглядят корректно."
+            },
+            "timings": {
+              "issues": 42098,
+              "deliberate": 4290,
+              "recommend": 15942
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/14/text",
+              "from": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen.",
+              "to": "Zweifel an der Fähigkeit, einen Erfolg zu wiederholen – trotz vorangegangener Anerkennung – können durch kognitive Verzerrungen wie das „Imposter-Syndrom“ und das „Paradoxon der Überlegenheit“ entstehen. Menschen, die diese Verzerrungen erleben, neigen dazu, ihre Erfolge herabzuspielen und sie als Zufall abzutun."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/0/fact",
+              "reason": "правка уже применена"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено точно и естественно"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/variants/rarely",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/variants/sometimes",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "issue",
+                "note": "Использование кавычек-елочек вместо немецких типографских"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "issue",
+                "note": "Использование кавычек-елочек вместо немецких типографских"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "issue",
+                "note": "Использование кавычек-елочек вместо немецких типографских"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "issue",
+                "note": "Использование кавычек-елочек вместо немецких типографских"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Терминология (kognitive Verzerrung) верна"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Дубликат 9/text, перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Дубликат 9/fact, перевод корректен"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термины соблюдены"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный, тон эмпатичный"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки немецкие"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID в локали ru сохранен, атрибуты отсутствуют согласно конвенции"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID в локали ru сохранен, атрибуты отсутствуют согласно конвенции"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/0/fact",
+                "fragment": "\"Unzulänglichkeit\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек вместо немецких типографских „ “",
+                "why": "Согласно правилам типографики для немецкого языка, должны использоваться кавычки „слово“."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps_description/4/fact",
+                "fragment": "„Bossypants“",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование кавычек-елочек вместо немецких типографских „ “",
+                "why": "В тексте смешаны стили кавычек. Для немецкого рынка необходимо единообразие: „Bossypants“."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/steps_description/5/fact",
+                "fragment": "\"Oscar-Preisträger\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек вместо немецких типографских „ “",
+                "why": "Нарушение правил типографики (немецкие кавычки „ “ обязательны)."
+              },
+              {
+                "id": "c1-I4",
+                "path": "/steps_description/6/fact",
+                "fragment": "\"Becoming\"",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование прямых кавычек вместо немецких типографских „ “",
+                "why": "Нарушение правил типографики (немецкие кавычки „ “ обязательны)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Typographical error: German quotation marks „ “ should be used instead of straight quotes."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Typographical error: Inconsistent use of quotation marks; German style „ “ is required."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Typographical error: German quotation marks „ “ should be used instead of straight quotes."
+              },
+              {
+                "id": "c1-I4",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Typographical error: German quotation marks „ “ should be used instead of straight quotes."
+              }
+            ],
+            "notes": "The translation is high quality, but there is a systemic issue with typography regarding quotation marks (mixing straight quotes and inconsistent styles).",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps_description/0/fact",
+                "current": "Emma Watson, die bekannte Schauspielerin und Aktivistin, hat offen über ihre Gefühle des Hochstapler-Syndroms gesprochen. Trotz ihrer Erfolge im Film und im gesellschaftlichen Engagement zweifelte sie oft an ihren Fähigkeiten und hatte Angst, dass andere ihre „Unzulänglichkeit“ bemerken könnten.",
+                "proposed": "Emma Watson, die bekannte Schauspielerin und Aktivistin, hat offen über ihre Gefühle des Hochstapler-Syndroms gesprochen. Trotz ihrer Erfolge im Film und im gesellschaftlichen Engagement zweifelte sie oft an ihren Fähigkeiten und hatte Angst, dass andere ihre „Unzulänglichkeit“ bemerken könnten.",
+                "alternatives": [],
+                "rationale": "В текущем тексте уже использованы правильные немецкие кавычки „Unzulänglichkeit“. Замена не требуется, так как ошибка в фрагменте (прямые кавычки) не соответствует предоставленному тексту (где уже стоят лапки)."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/steps_description/4/fact",
+                "current": "Tina Fey, die bekannte Komikerin und Autorin, hat mehrfach über ihre Gefühle des Hochstapler-Syndroms gesprochen. Sie dachte oft, ihre Erfolge in Comedy und Fernsehen seien reiner Zufall. In ihrem Buch „Bossypants“ teilt sie ihre Zweifel und Ängste und zeigt damit, dass selbst die erfolgreichsten Menschen das Gefühl haben können, nicht an den richtigen Platz zu gehören.",
+                "proposed": "Tina Fey, die bekannte Komikerin und Autorin, hat mehrfach über ihre Gefühle des Hochstapler-Syndroms gesprochen. Sie dachte oft, ihre Erfolge in Comedy und Fernsehen seien reiner Zufall. In ihrem Buch „Bossypants“ teilt sie ihre Zweifel und Ängste und zeigt damit, dass selbst die erfolgreichsten Menschen das Gefühl haben können, nicht an den richtigen Platz zu gehören.",
+                "alternatives": [],
+                "rationale": "В текущем тексте уже использованы правильные немецкие кавычки „Bossypants“. Замена не требуется."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 3,
+                "path": "/steps_description/5/fact",
+                "current": "Tom Hanks, der berühmte Schauspieler und zweifache Oscar-Preisträger, sprach offen über seine Angst, entlarvt zu werden. Er gab zu, dass er sich oft fehl am Platz fühlt und befürchtet, die Menschen könnten merken, dass er nicht so talentiert ist, wie sie glauben.",
+                "proposed": "Tom Hanks, der berühmte Schauspieler und zweifache „Oscar“-Preisträger, sprach offen über seine Angst, entlarvt zu werden. Er gab zu, dass er sich oft fehl am Platz fühlt und befürchtet, die Menschen könnten merken, dass er nicht so talentiert ist, wie sie glauben.",
+                "alternatives": [],
+                "rationale": "В исходном переводе кавычки вокруг Oscar отсутствуют, хотя в русском оригинале они есть. Необходимо добавить немецкие типографские кавычки „Oscar“."
+              },
+              {
+                "id": "c1-I4",
+                "priority": 4,
+                "path": "/steps_description/6/fact",
+                "current": "Michelle Obama, die ehemalige First Lady der USA, sprach über ihre Gefühle des Hochstapler-Syndroms und ihre Tendenz, sich auf Misserfolge zu fokussieren. In ihrer Autobiografie „Becoming“ beschreibt sie, wie sie mit dem Gefühl kämpfen musste, ihre Erfolge seien zufällig und unverdient, und wie sie lernte, ihre Leistungen anzuerkennen und zu schätzen.",
+                "proposed": "Michelle Obama, die ehemalige First Lady der USA, sprach über ihre Gefühle des Hochstapler-Syndroms und ihre Tendenz, sich auf Misserfolge zu fokussieren. In ihrer Autobiografie „Becoming“ beschreibt sie, wie sie mit dem Gefühl kämpfen musste, ihre Erfolge seien zufällig und unverdient, und wie sie lernte, ihre Leistungen anzuerkennen und zu schätzen.",
+                "alternatives": [],
+                "rationale": "В текущем тексте уже использованы правильные немецкие кавычки „Becoming“. Замена не требуется."
+              }
+            ],
+            "overall": {
+              "score": 98,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, тон эмпатичен и профессионален. Основные замечания касались типографики, однако при детальном сравнении выяснилось, что в большинстве случаев в предоставленном немецком тексте кавычки уже исправлены на немецкие. Требуется лишь точечная правка по слову Oscar для соответствия оригиналу."
+            },
+            "timings": {
+              "issues": 44329,
+              "deliberate": 5920,
+              "recommend": 20890
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I3",
+              "path": "/steps_description/5/fact",
+              "from": "Tom Hanks, der berühmte Schauspieler und zweifache Oscar-Preisträger, sprach offen über seine Angst, entlarvt zu werden. Er gab zu, dass er sich oft fehl am Platz fühlt und befürchtet, die Menschen könnten merken, dass er nicht so talentiert ist, wie sie glauben.",
+              "to": "Tom Hanks, der berühmte Schauspieler und zweifache „Oscar“-Preisträger, sprach offen über seine Angst, entlarvt zu werden. Er gab zu, dass er sich oft fehl am Platz fühlt und befürchtet, die Menschen könnten merken, dass er nicht so talentiert ist, wie sie glauben."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/0/fact",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps_description/4/fact",
+              "reason": "правка уже применена"
+            },
+            {
+              "id": "c1-I4",
+              "path": "/steps_description/6/fact",
+              "reason": "правка уже применена"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
