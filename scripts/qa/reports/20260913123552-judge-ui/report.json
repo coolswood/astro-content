@@ -1,0 +1,118 @@
+{
+  "file": "ui/cognitive_psy app_*.arb",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/breathing_sec_left",
+                "verdict": "ok",
+                "note": "Кратко и понятно для интерфейса"
+              },
+              {
+                "path": "/mood_trend_improved",
+                "verdict": "issue",
+                "note": "Лишний плейсхолдер/код в переводе"
+              },
+              {
+                "path": "/mood_trend_worsened",
+                "verdict": "issue",
+                "note": "Лишний плейсхолдер/код в переводе"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/mood_trend_improved",
+                "fragment": "{:.0f} %",
+                "type": "placeholder",
+                "severity": "critical",
+                "problem": "В строке присутствует технический код форматирования {:.0f}, которого нет в оригинале",
+                "why": "В оригинале нет этого плейсхолдера. Если система не передает значение для этого специфического формата, это вызовет ошибку или отображение мусора в интерфейсе. Плейсхолдеры должны строго соответствовать источнику."
+              },
+              {
+                "id": "I2",
+                "path": "/mood_trend_worsened",
+                "fragment": "{:.0f} %",
+                "type": "placeholder",
+                "severity": "critical",
+                "problem": "В строке присутствует технический код форматирования {:.0f}, которого нет в оригинале",
+                "why": "Аналогично предыдущему: в оригинале нет этого плейсхолдера. Это нарушает соответствие структуры строки оригиналу и может привести к ошибке рендеринга."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical mismatch: the placeholder {:.0f} is present in the translation but missing in the source, which will cause a runtime error if the engine expects a 1:1 mapping."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical mismatch: the placeholder {:.0f} is present in the translation but missing in the source, which will cause a runtime error if the engine expects a 1:1 mapping."
+              }
+            ],
+            "notes": "Both issues are critical technical errors where the translation introduces unmapped formatting placeholders not present in the Russian source.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mood_trend_improved",
+                "current": "Ihr Befinden hat sich in den letzten {period} um {:.0f} % verbessert",
+                "proposed": "Ihr Befinden hat sich in den letzten {period} um {percentage} % verbessert",
+                "alternatives": [
+                  "Ihr Befinden hat sich in den letzten {period} um {value} % verbessert"
+                ],
+                "rationale": "В оригинале отсутствует плейсхолдер для процента, но в немецком переводе он необходим для грамматической связности. Поскольку технический код {:.0f} является ошибкой маппинга, я заменяю его на логичный плейсхолдер {percentage}, который должен быть добавлен в исходный текст (ru) для корректной работы системы."
+              },
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/mood_trend_worsened",
+                "current": "Ihr Befinden hat sich in den letzten {period} um {:.0f} % verschlechtert",
+                "proposed": "Ihr Befinden hat sich in den letzten {period} um {percentage} % verschlechtert",
+                "alternatives": [
+                  "Ihr Befinden hat sich in den letzten {period} um {value} % verschlechtert"
+                ],
+                "rationale": "Аналогично первой строке: технический код {:.0f} не соответствует структуре оригинала. Заменяю на {percentage}, чтобы обеспечить корректную передачу значения процента, соответствующую смыслу."
+              }
+            ],
+            "overall": {
+              "score": 65,
+              "verdict": "major_edits",
+              "summary": "В строках трекинга настроения обнаружена критическая ошибка: использование технического кода форматирования {:.0f}, которого нет в оригинале. Это приведет к ошибке рендеринга. Требуется синхронизация плейсхолдеров между RU и DE (добавление плейсхолдера для процента в оригинал)."
+            },
+            "timings": {
+              "issues": 11236,
+              "deliberate": 3690,
+              "recommend": 14736
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/mood_trend_improved",
+              "reason": "несущий пробел по краю строки потерян/добавлен"
+            },
+            {
+              "id": "I2",
+              "path": "/mood_trend_worsened",
+              "reason": "несущий пробел по краю строки потерян/добавлен"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

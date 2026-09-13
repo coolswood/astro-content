@@ -1,0 +1,3743 @@
+{
+  "file": "ui/cognitive_psy app_*.arb",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": false,
+      "totalApplied": 15,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/ab_banner_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/ab_message_success",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/ab_premium_upgrade",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/about_us_rate_title",
+                "verdict": "issue",
+                "note": "слишком официально, не соответствует духу 'добрых слов'"
+              },
+              {
+                "path": "/acceptance",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/activities_alert_start",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/activities_popup_hint",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/activities_popup_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/ai_prepare",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/alert_auth_sent",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/alert_delete_psy_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/alert_sync_success",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/answer",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/article_activity_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/article_finished_title",
+                "verdict": "issue",
+                "note": "звучит слишком механистично"
+              },
+              {
+                "path": "/articles_theme",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/auth_v2_continue_email",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/auth_v2_slider_phrase_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/auth_v2_slider_phrase_8",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/awkwardness",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/believe_description",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/believe_final_decrease_desc",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/believe_final_finish",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/believe_final_path_complete",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/believe_final_your_result",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/benefit_articles",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/benefit_psychologist",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/bitterness",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/breathing_metric_breaths",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/breathing_metric_technique",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/breathing_today_affirmation",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/check",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/comparison_add",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/comparison_balance_against",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/comparison_balance_title",
+                "verdict": "issue",
+                "note": "стилистически тяжеловесно (номинализация)"
+              },
+              {
+                "path": "/comparison_for",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/complete",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/constructive",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/copied",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/coping_card",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/coping_info_hint_1",
+                "verdict": "ok",
+                "note": "переведено верно"
+              },
+              {
+                "path": "/coping_title",
+                "verdict": "issue",
+                "note": "нарушено единство числа (ед.ч. вместо мн.ч.)"
+              },
+              {
+                "path": "/course",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/das_description",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/das_item_approval",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/das_item_love",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/date_yesterday",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_ai_loading_phrase_4",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_ai_printing_phrase",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_dream_subtitle",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_gratitude_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_placeholder_dream",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_response_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/days_active",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/despair",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/diary_alert_back_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/diary_field_emotions",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/diary_filled",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/disappointment",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/discount_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/drawer_changelang",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/edit",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/email_feedback_error",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/emotion_intensity",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_blackandwhite_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_common_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_emo_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_label_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_maybe_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_read_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_tunnel_vision_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/exercises",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/expectation",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/fault",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/finish",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/force_update_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/full_premium",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/good_afternoon",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/gooseCompanionCareSign",
+                "verdict": "issue",
+                "note": "стилистическая ошибка, тавтология"
+              },
+              {
+                "path": "/gooseCompanionQuoteCardTitle",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/gooseCompanionWelcome",
+                "verdict": "ok",
+                "note": "Перевод естественный, соблюдено вежливое обращение."
+              },
+              {
+                "path": "/gpt_deep_title",
+                "verdict": "ok",
+                "note": "Терминология соблюдена (Grundüberzeugungen)."
+              },
+              {
+                "path": "/gpt_limit_reached_description",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/gpt_recommendation_emotions_title",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/gpt_symbols_title",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/gratitude_title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/helplessness",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotAppUpdated0",
+                "verdict": "ok",
+                "note": "Стиль дружелюбный, Sie использовано корректно."
+              },
+              {
+                "path": "/homeBotAppUpdated4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotDayFourth",
+                "verdict": "ok",
+                "note": "Стиль и грамматика в норме."
+              },
+              {
+                "path": "/homeBotHeader1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotHeader5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotPremiumThanks",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotQuoteIntro3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotReadArticle1",
+                "verdict": "ok",
+                "note": "Соблюдена терминология (Befinden)."
+              },
+              {
+                "path": "/homeBotStatsDaysCommon2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotStatsDaysInRow2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotStatsDaysMissed2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/homeBotTestExpired2",
+                "verdict": "ok",
+                "note": "Плейсхолдер сохранен."
+              },
+              {
+                "path": "/hope",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/humiliation",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intensity",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_init_text_1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_age_13_17",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_age_title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_cbt_opt_pro",
+                "verdict": "issue",
+                "note": "Слишком официально/канцелярски для личного вопроса."
+              },
+              {
+                "path": "/intro_new_gender_female",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_goal_explore",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_goal_vent",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_name_hint",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_problem_anxiety",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_problem_grief",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_problem_procrastination",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_new_problems_subtitle",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_psy_title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/intro_step_by_step",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/irritation",
+                "verdict": "issue",
+                "note": "Неточный перевод термина."
+              },
+              {
+                "path": "/link_intermediate_banner",
+                "verdict": "critical",
+                "note": "Нарушение принятой терминологии (Intermediäre Annahmen vs Zwischenüberzeugung)."
+              },
+              {
+                "path": "/loneliness",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/melancholy",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/mood_average_better",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_chart_subtitle",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_daily_best_day",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_emotions_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_extremes_worst_part",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_morning_state",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_sleep_quality",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_start_slider_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_stats_unlock_body_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_trend_improved",
+                "verdict": "issue",
+                "note": "избыточность в конце строки"
+              },
+              {
+                "path": "/mood_trend_worsened",
+                "verdict": "issue",
+                "note": "избыточность в конце строки"
+              },
+              {
+                "path": "/my_answers",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/new_char",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/not_enough_data",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_1_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_3_head",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_5_head",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_8_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_countdown_hint",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_mood_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_popup_premium_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_tests_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/optimism",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/partner_test_description",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/password_please",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/points_descr",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/portrait",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_only_today",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_plus_description_text_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_terms_2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/profile_premium_paused_retry",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/psy",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/quality_good",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/quality_very_bad",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/rate",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/recommend_password",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/regenerate",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/release_feedback_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/response_button",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/roadmap_label_completed",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/roadmap_popup_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/satisfaction",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/send",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/share",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/share_message",
+                "verdict": "ok",
+                "note": "терминология Therapeuten-Portal соблюдена, плейсхолдеры на месте"
+              },
+              {
+                "path": "/sleep_comparison_improved",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sleep_quality_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sleep_trend_stable",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/smerAiChatFinishRecord",
+                "verdict": "ok",
+                "note": "терминология Eintrag соблюдена"
+              },
+              {
+                "path": "/smerAiChatTitle",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/smer_settings_view_list",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sorrow",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/specials_new_year_full",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/stats",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/stepper_check_in_morning_title",
+                "verdict": "ok",
+                "note": "терминология Befinden соблюдена"
+              },
+              {
+                "path": "/stepper_record_continue",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/stepper_test_first",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/story_base_description_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/story_depression_description_2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/story_distortions_description_2",
+                "verdict": "issue",
+                "note": "стилистическая ошибка: 'Denkmuster erkennen' вместо 'узнать об убеждениях'"
+              },
+              {
+                "path": "/streak",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_button_cancel",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_change_plan",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_info_cancel_button_continue",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_info_cost",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_not_found",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_three_months",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sync_auto_hint",
+                "verdict": "ok",
+                "note": "терминология Therapeuten-Portal соблюдена"
+              },
+              {
+                "path": "/tariff_includes",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/test_question_title",
+                "verdict": "ok",
+                "note": "плейсхолдеры сохранены"
+              },
+              {
+                "path": "/tests_history_ans",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tests_start_again",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/time_h",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/triumph",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tutorial_daybook_gpt_description",
+                "verdict": "ok",
+                "note": "перевод корректен, тон эмпатичный"
+              },
+              {
+                "path": "/tutorial_daybook_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tutorial_tests_description",
+                "verdict": "ok",
+                "note": "терминология Angst соблюдена"
+              },
+              {
+                "path": "/use_discount_subtitle",
+                "verdict": "ok",
+                "note": "плейсхолдер сохранен"
+              },
+              {
+                "path": "/web",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/wrong_answer",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/about_us_rate_title",
+                "fragment": "Hinterlassen Sie uns eine Bewertung",
+                "type": "style",
+                "severity": "minor",
+                "problem": "слишком официально",
+                "why": "Оригинал «Скажите пару добрых слов» подразумевает мягкий, дружелюбный тон. Немецкий вариант «Оставьте нам отзыв» звучит как стандартная форма на сайте, что нарушает Tone of Voice (эмпатичный друг)."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/article_finished_title",
+                "fragment": "Kapitel abgeschlossen",
+                "type": "style",
+                "severity": "minor",
+                "problem": "сухой, механистичный тон",
+                "why": "В контексте обучения/терапии «Kapitel abgeschlossen» звучит как статус в компьютерной игре или технический лог. Лучше использовать что-то более вовлекающее, например, «Du hast das Kapitel geschafft» или «Kapitel erfolgreich abgeschlossen»."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/comparison_balance_title",
+                "fragment": "Argumenten-Balance",
+                "type": "style",
+                "severity": "minor",
+                "problem": "канцелярская номинализация",
+                "why": "Конструкция с дефисом и существительным звучит как название технического процесса. В интерфейсе лучше использовать более естественные формы, отражающие суть баланса аргументов."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/coping_title",
+                "fragment": "Coping-Karte",
+                "type": "minor",
+                "severity": "minor",
+                "problem": "Единственное число вместо множественного",
+                "why": "В оригинале «Копинг-карточки» (мн. ч.), в переводе «Coping-Karte» (ед. ч.). Для заголовка раздела лучше использовать мн. число: Coping-Karten."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/gooseCompanionCareSign",
+                "fragment": "weiser Gänse-Weiser",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Тавтология (плеоназм)",
+                "why": "Перевод «weiser Gänse-Weiser» буквально означает «мудрый Гусь-Мудрец». Это звучит неестественно и избыточно для носителя. Стоит упростить, например: „— mit Wärme, Ihr weiser Gänse-Begleiter 🪽“ или оставить имя собственное без повторения смысла."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/intro_new_cbt_opt_pro",
+                "fragment": "Ich bin in der Psychologie tätig",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Излишне формальная, канцелярская конструкция",
+                "why": "В контексте вопроса 'Я психолог' (профессия/роль), немецкая фраза 'in der Psychologie tätig sein' звучит как выдержка из резюме. Для интерфейса лучше 'Ich bin Psychologe/Psychologin' или более естественное 'Ich arbeite als Psychologe/Psychologin', хотя по правилам избегания гендерных пар лучше использовать нейтральное 'Ich arbeite in der Psychologie'."
+              },
+              {
+                "id": "c3-I2",
+                "path": "/irritation",
+                "fragment": "Ärger",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Неточный перевод",
+                "why": "Раздражение (Irritation/Reizbarkeit) и Гнев/Досада (Ärger) — это разные эмоциональные состояния. 'Ärger' больше про злость или досаду, в то время как 'Irritation' — это именно раздражение."
+              },
+              {
+                "id": "c3-I3",
+                "path": "/link_intermediate_banner",
+                "fragment": "intermediären Annahmen",
+                "type": "terminology",
+                "severity": "critical",
+                "problem": "Использование запрещенного термина",
+                "why": "В предоставленном глоссарии четко указано: 'Промежуточное убеждение' -> 'Intermediäre Annahme' (и мн.ч. 'intermediäre Annahmen'). Использование 'intermediären Annahmen' (с окончанием -en в данном контексте) грамматически может быть верно, но важно строго следовать терминологическому стандарту 'Intermediäre Annahme' для обеспечения консистентности с AI-ответами."
+              },
+              {
+                "id": "c4-I1",
+                "path": "/mood_trend_improved",
+                "fragment": "verbessert um ",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "лишний предлог в конце",
+                "why": "В оригинале «на [число]», в немецком предлог 'um' стоит в конце, но если за ним следует плейсхолдер, это может выглядеть как обрыв фразы или требовать специфического порядка слов. Однако, если плейсхолдер {period} — это число, то 'verbessert um {period}' — это грамматически верно, но в интерфейсе часто лучше 'um {period} verbessert'. Главное — проверить, не остается ли висячий предлог, если плейсхолдер не подставится или будет пустым. В данном случае 'um' в конце — это калька с русского 'на'."
+              },
+              {
+                "id": "c4-I2",
+                "path": "/mood_trend_worsened",
+                "fragment": "verschlechtert um ",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "лишний предлог в конце",
+                "why": "Аналогично предыдущему: 'verschlechtert um {period}' — грамматически допустимо, но в немецком языке для интерфейсных строк лучше использовать структуру 'um {period} verschlechtert', чтобы избежать висящего предлога в конце строки."
+              },
+              {
+                "id": "c5-I1",
+                "path": "/story_distortions_description_2",
+                "fragment": "hilft Ihnen nicht nur, diese Denkmuster zu erkennen",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "искажение смысла",
+                "why": "В оригинале речь идет об 'узнать о таких убеждениях' (über solche Überzeugungen erfahren), а в переводе — 'распознать такие паттерны мышления' (Denkmuster erkennen). Хотя это близко по смыслу, это подмена терминологического фокуса оригинала."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "ToV mismatch: 'Hinterlassen Sie uns eine Bewertung' is too formal for the friendly 'Say a few kind words'."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Style: 'Kapitel abgeschlossen' is too robotic for a therapeutic context."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Style: Nominalization 'Argumenten-Balance' is clunky for UI."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Grammar: Singular used instead of plural 'Coping-Karten'."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Style: Pleonasm 'weiser Gänse-Weiser' is redundant and unnatural."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "The suggestion 'Ich arbeite in der Psychologie' is actually more formal/neutral than the original 'Ich bin Psychologe', which is a valid adaptation to avoid gender issues."
+              },
+              {
+                "id": "c3-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Mistranslation: 'Ärger' (anger/annoyance) does not capture the nuance of 'Irritation' (irritation)."
+              },
+              {
+                "id": "c3-I3",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "The term 'intermediären Annahmen' is the correct declension of the required glossary term 'Intermediäre Annahme' in this grammatical context."
+              },
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "UI/UX: Hanging preposition 'um' at the end of the string is poor for German word order."
+              },
+              {
+                "id": "c4-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "UI/UX: Hanging preposition 'um' at the end of the string is poor for German word order."
+              },
+              {
+                "id": "c5-I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "Semantic shift is acceptable; 'Denkmuster erkennen' is a natural localization for 'узнать об убеждениях' in a psychological context."
+              }
+            ],
+            "notes": "The localization quality is generally high, but there is a recurring issue with 'Denglish' or Russian-style syntax (hanging prepositions) and a tendency toward overly formal/robotic German in emotional contexts.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/about_us_rate_title",
+                "current": "Hinterlassen Sie uns eine Bewertung",
+                "proposed": "Sagen Sie ein paar nette Worte",
+                "alternatives": [
+                  "Ein paar nette Worte für uns"
+                ],
+                "rationale": "Оригинал «Скажите пару добрых слов» — это дружелюбный призыв. Текущий вариант слишком формальный и звучит как стандартная кнопка в App Store. Предложенный вариант лучше соответствует Tone of Voice (эмпатичный друг)."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 4,
+                "path": "/article_finished_title",
+                "current": "Kapitel abgeschlossen",
+                "proposed": "Kapitel geschafft!",
+                "alternatives": [
+                  "Du hast das Kapitel abgeschlossen"
+                ],
+                "rationale": "Текущий вариант звучит как технический лог. «Geschafft!» добавляет эмоциональной поддержки и вовлеченности, что важно для терапевтического приложения."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 4,
+                "path": "/comparison_balance_title",
+                "current": "Argumenten-Balance",
+                "proposed": "Abwägung der Argumente",
+                "alternatives": [
+                  "Argumente abwägen"
+                ],
+                "rationale": "«Argumenten-Balance» — тяжелая номинализация. «Abwägung der Argumente» звучит более естественно и профессионально для процесса взвешивания аргументов."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/coping_title",
+                "current": "Coping-Karte",
+                "proposed": "Coping-Karten",
+                "alternatives": [],
+                "rationale": "В оригинале множественное число («Копинг-карточки»), в переводе — единственное. Для заголовка раздела необходимо использовать мн. ч."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 4,
+                "path": "/gooseCompanionCareSign",
+                "current": "— mit Wärme, Ihr weiser Gänse-Weiser 🪽",
+                "proposed": "— mit Wärme, Ihr weiser Gänse-Begleiter 🪽",
+                "alternatives": [
+                  "— mit Wärme, Ihr weiser Gänse-Freund 🪽"
+                ],
+                "rationale": "Текущий вариант содержит тавтологию (weiser Gänse-Weiser — мудрый Гусь-Мудрец). Замена на «Begleiter» (спутник/сопровождающий) устраняет плеоназм и звучит естественно."
+              },
+              {
+                "id": "c3-I2",
+                "priority": 3,
+                "path": "/irritation",
+                "current": "Ärger",
+                "proposed": "Irritation",
+                "alternatives": [
+                  "Reizbarkeit"
+                ],
+                "rationale": "«Ärger» — это скорее гнев или досада. Для «Раздражения» в психологическом контексте лучше использовать «Irritation» или «Reizbarkeit»."
+              },
+              {
+                "id": "c4-I1",
+                "priority": 2,
+                "path": "/mood_trend_improved",
+                "current": "Ihr Zustand hat sich in den letzten {period} spürbar verbessert um ",
+                "proposed": "Ihr Zustand hat sich in den letzten {period} um spürbar verbessert",
+                "alternatives": [
+                  "Ihr Zustand hat sich in den letzten {period} spürbar um {value} verbessert"
+                ],
+                "rationale": "В немецком языке предлог «um» не должен висеть в конце строки. Его нужно перенести перед значением или перестроить фразу, чтобы избежать грамматической незавершенности."
+              },
+              {
+                "id": "c4-I2",
+                "priority": 2,
+                "path": "/mood_trend_worsened",
+                "current": "Ihr Zustand hat sich in den letzten {period} spürbar verschlechtert um ",
+                "proposed": "Ihr Zustand hat sich in den letzten {period} um spürbar verschlechtert",
+                "alternatives": [],
+                "rationale": "Аналогично предыдущему: висящий предлог «um» в конце строки — это плохой UX и нарушение естественного порядка слов в немецком языке."
+              },
+              {
+                "id": "c5-I1",
+                "priority": null,
+                "path": "/story_distortions_description_2",
+                "current": "Unser Kurs hilft Ihnen nicht nur, diese Denkmuster zu erkennen, sondern auch aktiv an deren Veränderung zu arbeiten. Mit diesem Kurs können Sie Ihr Leben positiv beeinflussen und zu mehr innerer Harmonie finden.",
+                "proposed": "Unser Kurs hilft Ihnen nicht nur, diese Denkmuster zu erkennen, sondern auch aktiv an deren Veränderung zu arbeiten. Mit diesem Kurs können Sie Ihr Leben positiv beeinflussen und zu mehr innerer Harmonie finden.",
+                "alternatives": [],
+                "rationale": "Замечание отклонено. Перевод «Denkmuster erkennen» является качественной локализацией смысла «узнать об убеждениях» и звучит более естественно для носителя, чем дословный перевод."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод качественный, но есть несколько проблем с Tone of Voice (слишком официально в некоторых местах) и UX (висящие предлоги в конце строк). Также исправлены ошибки в числе (ед./мн.) и тавтология в имени персонажа."
+            },
+            "timings": {
+              "issues": 216845,
+              "deliberate": 24836,
+              "recommend": 44331
+            }
+          },
+          "applied": [
+            {
+              "id": "c4-I1",
+              "path": "/mood_trend_improved",
+              "from": "Ihr Zustand hat sich in den letzten {period} spürbar verbessert um ",
+              "to": "Ihr Zustand hat sich in den letzten {period} um spürbar verbessert"
+            },
+            {
+              "id": "c4-I2",
+              "path": "/mood_trend_worsened",
+              "from": "Ihr Zustand hat sich in den letzten {period} spürbar verschlechtert um ",
+              "to": "Ihr Zustand hat sich in den letzten {period} um spürbar verschlechtert"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/about_us_rate_title",
+              "from": "Hinterlassen Sie uns eine Bewertung",
+              "to": "Sagen Sie ein paar nette Worte"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/coping_title",
+              "from": "Coping-Karte",
+              "to": "Coping-Karten"
+            },
+            {
+              "id": "c3-I2",
+              "path": "/irritation",
+              "from": "Ärger",
+              "to": "Irritation"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/article_finished_title",
+              "from": "Kapitel abgeschlossen",
+              "to": "Kapitel geschafft!"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/comparison_balance_title",
+              "from": "Argumenten-Balance",
+              "to": "Abwägung der Argumente"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/gooseCompanionCareSign",
+              "from": "— mit Wärme, Ihr weiser Gänse-Weiser 🪽",
+              "to": "— mit Wärme, Ihr weiser Gänse-Begleiter 🪽"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c5-I1",
+              "path": "/story_distortions_description_2",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/ab_banner_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/ab_message_success",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/ab_premium_upgrade",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/about_us_rate_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/acceptance",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/activities_alert_start",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/activities_popup_hint",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/activities_popup_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/ai_prepare",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alert_auth_sent",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alert_delete_psy_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alert_sync_success",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/answer",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/article_activity_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/article_finished_title",
+                "verdict": "issue",
+                "note": "Слишком разговорно для интерфейса"
+              },
+              {
+                "path": "/articles_theme",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/auth_v2_continue_email",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/auth_v2_slider_phrase_3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/auth_v2_slider_phrase_8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/awkwardness",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_decrease_desc",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_finish",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_path_complete",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_your_result",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/benefit_articles",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/benefit_psychologist",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/bitterness",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/breathing_metric_breaths",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/breathing_metric_technique",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/breathing_today_affirmation",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/check",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_add",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_balance_against",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_balance_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_for",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/complete",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/constructive",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/copied",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/coping_card",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/coping_info_hint_1",
+                "verdict": "ok",
+                "note": "переведено верно"
+              },
+              {
+                "path": "/coping_title",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/course",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/das_description",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/das_item_approval",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/das_item_love",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/date_yesterday",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_ai_loading_phrase_4",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/daybook_ai_printing_phrase",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_dream_subtitle",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/daybook_gratitude_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_placeholder_dream",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/daybook_response_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/days_active",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/despair",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/diary_alert_back_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/diary_field_emotions",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/diary_filled",
+                "verdict": "ok",
+                "note": "плейсхолдер сохранен"
+              },
+              {
+                "path": "/disappointment",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/discount_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/drawer_changelang",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/edit",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/email_feedback_error",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/emotion_intensity",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_blackandwhite_shortdesc",
+                "verdict": "ok",
+                "note": "кавычки заменены на немецкие"
+              },
+              {
+                "path": "/errors_common_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_emo_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_label_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_maybe_shortdesc",
+                "verdict": "ok",
+                "note": "кавычки заменены на немецкие"
+              },
+              {
+                "path": "/errors_read_shortdesc",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/errors_tunnel_vision_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/exercises",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/expectation",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/fault",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/finish",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/force_update_title",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/full_premium",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/good_afternoon",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/gooseCompanionCareSign",
+                "verdict": "issue",
+                "note": "нарушен тон обращения (смешение Sie и du)"
+              },
+              {
+                "path": "/gooseCompanionQuoteCardTitle",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/gooseCompanionWelcome",
+                "verdict": "ok",
+                "note": "Перевод естественный, соблюдено вежливое обращение."
+              },
+              {
+                "path": "/gpt_deep_title",
+                "verdict": "ok",
+                "note": "Термин Grundüberzeugungen использован верно."
+              },
+              {
+                "path": "/gpt_limit_reached_description",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/gpt_recommendation_emotions_title",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/gpt_symbols_title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/gratitude_title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/helplessness",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotAppUpdated0",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/homeBotAppUpdated4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotDayFourth",
+                "verdict": "ok",
+                "note": "Перевод хороший, тон поддерживающий."
+              },
+              {
+                "path": "/homeBotHeader1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotHeader5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotPremiumThanks",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotQuoteIntro3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotReadArticle1",
+                "verdict": "ok",
+                "note": "Перевод корректен, термин Befinden использован верно."
+              },
+              {
+                "path": "/homeBotStatsDaysCommon2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotStatsDaysInRow2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotStatsDaysMissed2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/homeBotTestExpired2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/hope",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/humiliation",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intensity",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_init_text_1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_age_13_17",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_age_title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_cbt_opt_pro",
+                "verdict": "issue",
+                "note": "Слишком формально/канцелярски для личного вопроса."
+              },
+              {
+                "path": "/intro_new_gender_female",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_goal_explore",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_goal_vent",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_name_hint",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_problem_anxiety",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_problem_grief",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_problem_procrastination",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_new_problems_subtitle",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_psy_title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/intro_step_by_step",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/irritation",
+                "verdict": "issue",
+                "note": "Не совсем естественный термин для эмоции в данном контексте."
+              },
+              {
+                "path": "/link_intermediate_banner",
+                "verdict": "ok",
+                "note": "Термин Intermediäre Annahmen использован верно согласно инструкции."
+              },
+              {
+                "path": "/loneliness",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/melancholy",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mood_average_better",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_chart_subtitle",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_daily_best_day",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_emotions_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_extremes_worst_part",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_morning_state",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_sleep_quality",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_start_slider_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_stats_unlock_body_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_trend_improved",
+                "verdict": "issue",
+                "note": "грамматическая ошибка в структуре предложения"
+              },
+              {
+                "path": "/mood_trend_worsened",
+                "verdict": "issue",
+                "note": "грамматическая ошибка в структуре предложения"
+              },
+              {
+                "path": "/my_answers",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/new_char",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/not_enough_data",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_1_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_3_head",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_5_head",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_8_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_countdown_hint",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_mood_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_popup_premium_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_tests_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/optimism",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/partner_test_description",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/password_please",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/points_descr",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/portrait",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_only_today",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_plus_description_text_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_terms_2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/profile_premium_paused_retry",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/psy",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/quality_good",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/quality_very_bad",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/rate",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/recommend_password",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/regenerate",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/release_feedback_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/response_button",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/roadmap_label_completed",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/roadmap_popup_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/satisfaction",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/send",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/share",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/share_message",
+                "verdict": "ok",
+                "note": "перевод корректен, терминология Therapeuten-Portal соблюдена"
+              },
+              {
+                "path": "/sleep_comparison_improved",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sleep_quality_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sleep_trend_stable",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/smerAiChatFinishRecord",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/smerAiChatTitle",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/smer_settings_view_list",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sorrow",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/specials_new_year_full",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/stats",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/stepper_check_in_morning_title",
+                "verdict": "ok",
+                "note": "перевод корректен, терминология Befinden соблюдена"
+              },
+              {
+                "path": "/stepper_record_continue",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/stepper_test_first",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/story_base_description_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/story_depression_description_2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/story_distortions_description_2",
+                "verdict": "issue",
+                "note": "стилистическая ошибка: не совсем естественно звучит концовка"
+              },
+              {
+                "path": "/streak",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_button_cancel",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_change_plan",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_info_cancel_button_continue",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_info_cost",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_not_found",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/subscription_three_months",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/sync_auto_hint",
+                "verdict": "ok",
+                "note": "перевод корректен, терминология Therapeuten-Portal соблюдена"
+              },
+              {
+                "path": "/tariff_includes",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/test_question_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tests_history_ans",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tests_start_again",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/time_h",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/triumph",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tutorial_daybook_gpt_description",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tutorial_daybook_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/tutorial_tests_description",
+                "verdict": "ok",
+                "note": "перевод корректен, терминология Angst соблюдена"
+              },
+              {
+                "path": "/use_discount_subtitle",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/web",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/wrong_answer",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/article_finished_title",
+                "fragment": "Kapitel geschafft!",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком разговорный/сленговый тон",
+                "why": "Фраза 'geschafft!' звучит как 'справился/сделал это!' в очень неформальном контексте. Для заголовка о завершении главы лучше использовать более нейтральное 'Kapitel abgeschlossen' или 'Kapitel abgeschlossen!', чтобы соответствовать экспертному, но уважительному тону приложения."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/gooseCompanionCareSign",
+                "fragment": "Ihr weiser Gänse-Begleiter",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Несоответствие регистра обращения",
+                "why": "В контексте персонажа (Гусь-Мудрец), который является «другом», использование вежливого 'Ihr' (Sie) звучит слишком официально и дистанцированно, создавая стилистический разрыв с теплым тоном фразы. Однако, согласно правилам Tone of Voice, 'Sie' — стандарт. Но здесь персонаж — это 'companion' (спутник), и переход на 'Du' в таких личных подписях допустим для создания эмпатии, либо нужно придерживаться единого стиля. Если всё приложение на 'Sie', то это не ошибка, но звучит суховато для 'теплого' персонажа."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/intro_new_cbt_opt_pro",
+                "fragment": "Ich bin in der Psychologie tätig",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком официально и тяжеловесно",
+                "why": "В контексте выбора профессии (анкета) фраза 'Ich bin Psychologe/Psychologin' или просто 'Psychologe' звучит естественнее. Текущий вариант звучит как выдержка из резюме."
+              },
+              {
+                "id": "c3-I2",
+                "path": "/irritation",
+                "fragment": "Irritation",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Не совсем естественный термин для эмоции",
+                "why": "В немецком языке для обозначения чувства раздражения в психологическом контексте чаще используется 'Verärgerung' или 'Reizbarkeit'. 'Irritation' чаще означает замешательство или сбой в системе."
+              },
+              {
+                "id": "c4-I1",
+                "path": "/mood_trend_improved",
+                "fragment": "um spürbar verbessert",
+                "type": "style",
+                "severity": "major",
+                "problem": "Грамматическая ошибка: лишний предлог 'um' при использовании глагола 'verbessern' в данном контексте или неверный порядок слов.",
+                "why": "В немецком языке 'sich verbessern um [Wert]' означает изменение на величину (например, на 5%). Если же имеется в виду 'заметно улучшилось', то 'um' лишний. Конструкция 'hat sich um spürbar verbessert' звучит как 'улучшилось на ощутимо', что грамматически неверно. Правильно: 'hat sich spürbar verbessert'."
+              },
+              {
+                "id": "c4-I2",
+                "path": "/mood_trend_worsened",
+                "fragment": "um spürbar verschlechtert",
+                "type": "style",
+                "severity": "major",
+                "problem": "Грамматическая ошибка: лишний предлог 'um'.",
+                "why": "Аналогично предыдущему: 'um' используется для указания количественного изменения. Для описания качественного изменения (заметно ухудшилось) предлог 'um' не нужен. Правильно: 'hat sich spürbar verschlechtert'."
+              },
+              {
+                "id": "c5-I1",
+                "path": "/story_distortions_description_2",
+                "fragment": "zu mehr innerer Harmonie finden",
+                "type": "style",
+                "severity": "minor",
+                "problem": "неправильное управление глагола",
+                "why": "В немецком языке нельзя сказать 'zu etwas finden' в значении 'найти путь к чему-то' без использования глагола 'finden' в другом контексте или использования конструкции 'zu etwas finden' как 'найтись'. Правильнее: 'zu innerer Harmonie finden' (без zu) или 'den Weg zu innerer Harmonie finden'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Agree. 'Geschafft!' is too colloquial for a professional app context; 'abgeschlossen' is better."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "The app uses 'Sie' throughout (as seen in other strings). While 'Du' might feel warmer, maintaining a consistent formal address is safer for a professional medical/psychological tool."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Agree. 'Ich bin in der Psychologie tätig' is overly bureaucratic for a simple profile selection."
+              },
+              {
+                "id": "c3-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Agree. 'Irritation' in German often implies confusion or a technical glitch; 'Verärgerung' or 'Reizbarkeit' is more accurate for the emotion."
+              },
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical grammar error. 'Um' is used for quantitative values (e.g., 'um 5%'). For qualitative improvement, it must be removed."
+              },
+              {
+                "id": "c4-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical grammar error. Same as I1; 'um' makes the sentence grammatically incorrect in this context."
+              },
+              {
+                "id": "c5-I1",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Agree. The phrasing is awkward; 'zu innerer Harmonie finden' or 'den Weg zu innerer Harmonie finden' is required."
+              }
+            ],
+            "notes": "The main issues are critical grammatical errors regarding the use of 'um' in trend descriptions, which must be fixed immediately. Stylistic issues are present but secondary.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/article_finished_title",
+                "current": "Kapitel geschafft!",
+                "proposed": "Kapitel abgeschlossen!",
+                "alternatives": [
+                  "Kapitel beendet!"
+                ],
+                "rationale": "Фраза 'geschafft!' слишком разговорная. 'Abgeschlossen' лучше соответствует профессиональному, но уважительному тону приложения."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 5,
+                "path": "/gooseCompanionCareSign",
+                "current": "— mit Wärme, Ihr weiser Gänse-Begleiter 🪽",
+                "proposed": "— mit Wärme, Ihr weiser Gänse-Begleiter 🪽",
+                "alternatives": [],
+                "rationale": "Замечание отклонено. Для поддержания консистентности и профессионального тона (Sie) во всем приложении, использование вежливой формы в подписи оправдано."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 4,
+                "path": "/intro_new_cbt_opt_pro",
+                "current": "Ich bin in der Psychologie tätig",
+                "proposed": "Ich bin Psychologe",
+                "alternatives": [
+                  "Ich arbeite in der Psychologie"
+                ],
+                "rationale": "Текущий вариант звучит слишком официально (как в резюме). Для выбора профиля в анкете 'Ich bin Psychologe' звучит естественнее."
+              },
+              {
+                "id": "c3-I2",
+                "priority": 3,
+                "path": "/irritation",
+                "current": "Irritation",
+                "proposed": "Verärgerung",
+                "alternatives": [
+                  "Reizbarkeit"
+                ],
+                "rationale": "В немецком 'Irritation' чаще означает замешательство или технический сбой. Для обозначения эмоции раздражения лучше использовать 'Verärgerung'."
+              },
+              {
+                "id": "c4-I1",
+                "priority": 1,
+                "path": "/mood_trend_improved",
+                "current": "Ihr Zustand hat sich in den letzten {period} um spürbar verbessert",
+                "proposed": "Ihr Zustand hat sich in den letzten {period} spürbar verbessert",
+                "alternatives": [],
+                "rationale": "Грамматическая ошибка. Предлог 'um' используется для количественных изменений (на 5%). Для качественного улучшения ('заметно улучшилось') он не нужен."
+              },
+              {
+                "id": "c4-I2",
+                "priority": 1,
+                "path": "/mood_trend_worsened",
+                "current": "Ihr Zustand hat sich in den letzten {period} um spürbar verschlechtert",
+                "proposed": "Ihr Zustand hat sich in den letzten {period} spürbar verschlechtert",
+                "alternatives": [],
+                "rationale": "Грамматическая ошибка. Предлог 'um' здесь лишний, так как нет указания на конкретную величину изменения."
+              },
+              {
+                "id": "c5-I1",
+                "priority": 4,
+                "path": "/story_distortions_description_2",
+                "current": "Unser Kurs hilft Ihnen nicht nur, diese Denkmuster zu erkennen, sondern auch aktiv an deren Veränderung zu arbeiten. Mit diesem Kurs können Sie Ihr Leben positiv beeinflussen und zu mehr innerer Harmonie finden.",
+                "proposed": "Unser Kurs hilft Ihnen nicht nur, diese Denkmuster zu erkennen, sondern auch aktiv an deren Veränderung zu arbeiten. Mit diesem Kurs können Sie Ihr Leben positiv beeinflussen und den Weg zu mehr innerer Harmonie finden.",
+                "alternatives": [
+                  "und mehr innere Harmonie finden"
+                ],
+                "rationale": "Исправлено управление глагола. Конструкция 'zu mehr innerer Harmonie finden' звучит неестественно; добавлена правильная идиома 'den Weg zu ... finden'."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "В переводе обнаружены критические грамматические ошибки (лишний предлог 'um' в трекинге состояния) и стилистические несоответствия (излишне официальный тон в анкете и разговорный в заголовках). После исправления этих моментов текст будет соответствовать стандартам качества."
+            },
+            "timings": {
+              "issues": 188618,
+              "deliberate": 16585,
+              "recommend": 33808
+            }
+          },
+          "applied": [
+            {
+              "id": "c4-I1",
+              "path": "/mood_trend_improved",
+              "from": "Ihr Zustand hat sich in den letzten {period} um spürbar verbessert",
+              "to": "Ihr Zustand hat sich in den letzten {period} spürbar verbessert"
+            },
+            {
+              "id": "c4-I2",
+              "path": "/mood_trend_worsened",
+              "from": "Ihr Zustand hat sich in den letzten {period} um spürbar verschlechtert",
+              "to": "Ihr Zustand hat sich in den letzten {period} spürbar verschlechtert"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/article_finished_title",
+              "from": "Kapitel geschafft!",
+              "to": "Kapitel abgeschlossen!"
+            },
+            {
+              "id": "c3-I2",
+              "path": "/irritation",
+              "from": "Irritation",
+              "to": "Verärgerung"
+            },
+            {
+              "id": "c3-I1",
+              "path": "/intro_new_cbt_opt_pro",
+              "from": "Ich bin in der Psychologie tätig",
+              "to": "Ich bin Psychologe"
+            },
+            {
+              "id": "c5-I1",
+              "path": "/story_distortions_description_2",
+              "from": "Unser Kurs hilft Ihnen nicht nur, diese Denkmuster zu erkennen, sondern auch aktiv an deren Veränderung zu arbeiten. Mit diesem Kurs können Sie Ihr Leben positiv beeinflussen und zu mehr innerer Harmonie finden.",
+              "to": "Unser Kurs hilft Ihnen nicht nur, diese Denkmuster zu erkennen, sondern auch aktiv an deren Veränderung zu arbeiten. Mit diesem Kurs können Sie Ihr Leben positiv beeinflussen und den Weg zu mehr innerer Harmonie finden."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/gooseCompanionCareSign",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/ab_banner_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/ab_message_success",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/ab_premium_upgrade",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/about_us_rate_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/acceptance",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/activities_alert_start",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/activities_popup_hint",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/activities_popup_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/ai_prepare",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alert_auth_sent",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alert_delete_psy_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alert_sync_success",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/answer",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/article_activity_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/article_finished_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/articles_theme",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/auth_v2_continue_email",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/auth_v2_slider_phrase_3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/auth_v2_slider_phrase_8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/awkwardness",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_decrease_desc",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_finish",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_path_complete",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/believe_final_your_result",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/benefit_articles",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/benefit_psychologist",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/bitterness",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/breathing_metric_breaths",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/breathing_metric_technique",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/breathing_today_affirmation",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/check",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_add",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_balance_against",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_balance_title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/comparison_for",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/complete",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/constructive",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/copied",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/coping_card",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/coping_info_hint_1",
+                "verdict": "ok",
+                "note": "переведено верно, смысл передан"
+              },
+              {
+                "path": "/coping_title",
+                "verdict": "ok",
+                "note": "соответствует глоссарию"
+              },
+              {
+                "path": "/course",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/das_description",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/das_item_approval",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/das_item_love",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/date_yesterday",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/daybook_ai_loading_phrase_4",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/daybook_ai_printing_phrase",
+                "verdict": "ok",
+                "note": "передано по смыслу (генерация ответа)"
+              },
+              {
+                "path": "/daybook_dream_subtitle",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/daybook_gratitude_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/daybook_placeholder_dream",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/daybook_response_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/days_active",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/despair",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/diary_alert_back_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/diary_field_emotions",
+                "verdict": "ok",
+                "note": "соответствует глоссарию"
+              },
+              {
+                "path": "/diary_filled",
+                "verdict": "ok",
+                "note": "плейсхолдер сохранен"
+              },
+              {
+                "path": "/disappointment",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/discount_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/drawer_changelang",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/edit",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/email_feedback_error",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/emotion_intensity",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/errors_blackandwhite_shortdesc",
+                "verdict": "ok",
+                "note": "кавычки заменены на немецкие"
+              },
+              {
+                "path": "/errors_common_shortdesc",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/errors_emo_shortdesc",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/errors_label_shortdesc",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/errors_maybe_shortdesc",
+                "verdict": "ok",
+                "note": "стилистически удачно"
+              },
+              {
+                "path": "/errors_read_shortdesc",
+                "verdict": "ok",
+                "note": "терминология (Gedankenlesen) верна"
+              },
+              {
+                "path": "/errors_tunnel_vision_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/exercises",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/expectation",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/fault",
+                "verdict": "ok",
+                "note": "передано психологически верно"
+              },
+              {
+                "path": "/finish",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/force_update_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/full_premium",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/good_afternoon",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/gooseCompanionCareSign",
+                "verdict": "issue",
+                "note": "нарушение тональности (смешение Sie и du)"
+              },
+              {
+                "path": "/gooseCompanionQuoteCardTitle",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/gooseCompanionWelcome",
+                "verdict": "ok",
+                "note": "перевод естественный, соблюдено Sie"
+              },
+              {
+                "path": "/gpt_deep_title",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/gpt_limit_reached_description",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/gpt_recommendation_emotions_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/gpt_symbols_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/gratitude_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/helplessness",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotAppUpdated0",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotAppUpdated4",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotDayFourth",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotHeader1",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotHeader5",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotPremiumThanks",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotQuoteIntro3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotReadArticle1",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotStatsDaysCommon2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotStatsDaysInRow2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotStatsDaysMissed2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/homeBotTestExpired2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/hope",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/humiliation",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intensity",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_init_text_1",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_age_13_17",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_age_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_cbt_opt_pro",
+                "verdict": "issue",
+                "note": "нарушен гендерный баланс/стиль"
+              },
+              {
+                "path": "/intro_new_gender_female",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_goal_explore",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_goal_vent",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_name_hint",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_problem_anxiety",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_problem_grief",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_problem_procrastination",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_new_problems_subtitle",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_psy_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/intro_step_by_step",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/irritation",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/link_intermediate_banner",
+                "verdict": "ok",
+                "note": "терминология соблюдена"
+              },
+              {
+                "path": "/loneliness",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/melancholy",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_average_better",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_chart_subtitle",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_daily_best_day",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_emotions_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_extremes_worst_part",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_morning_state",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_sleep_quality",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_start_slider_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_stats_unlock_body_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/mood_trend_improved",
+                "verdict": "issue",
+                "note": "пропущено окончание/фрагмент в конце"
+              },
+              {
+                "path": "/mood_trend_worsened",
+                "verdict": "issue",
+                "note": "пропущено окончание/фрагмент в конце"
+              },
+              {
+                "path": "/my_answers",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/new_char",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/not_enough_data",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_1_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_3_head",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_5_head",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notification_every_day_8_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_countdown_hint",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_mood_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_popup_premium_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/notifications_tests_body",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/optimism",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/partner_test_description",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/password_please",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/points_descr",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/portrait",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_only_today",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_plus_description_text_3",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/premium_terms_2",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/profile_premium_paused_retry",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/psy",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/quality_good",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/quality_very_bad",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/rate",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/recommend_password",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/regenerate",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/release_feedback_title",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/response_button",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/roadmap_label_completed",
+                "verdict": "ok",
+                "note": "перевод корректен"
+              },
+              {
+                "path": "/roadmap_popup_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/satisfaction",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/send",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/share",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/share_message",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/sleep_comparison_improved",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/sleep_quality_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/sleep_trend_stable",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/smerAiChatFinishRecord",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/smerAiChatTitle",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/smer_settings_view_list",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/sorrow",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/specials_new_year_full",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/stats",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/stepper_check_in_morning_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/stepper_record_continue",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/stepper_test_first",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/story_base_description_3",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/story_depression_description_2",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/story_distortions_description_2",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/streak",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/subscription_button_cancel",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/subscription_change_plan",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/subscription_info_cancel_button_continue",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/subscription_info_cost",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/subscription_not_found",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/subscription_three_months",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/sync_auto_hint",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/tariff_includes",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/test_question_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/tests_history_ans",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/tests_start_again",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/time_h",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/triumph",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/tutorial_daybook_gpt_description",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/tutorial_daybook_title",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/tutorial_tests_description",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/use_discount_subtitle",
+                "verdict": "ok",
+                "note": "ок"
+              },
+              {
+                "path": "/web",
+                "verdict": "ok",
+                "note": "ok"
+              },
+              {
+                "path": "/wrong_answer",
+                "verdict": "ok",
+                "note": "ok"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/gooseCompanionCareSign",
+                "fragment": "— mit Wärme, Ihr weiser Gänse-Begleiter 🪽",
+                "type": "style",
+                "severity": "minor",
+                "problem": "несоответствие регистра обращения",
+                "why": "В оригинале «твой Гусь-Мудрец» (ты), а в переводе «Ihr weiser Gänse-Begleiter» (Вы). Хотя в приложении принят стандарт Sie, персонаж-спутник в подписи обычно обращается на 'du', чтобы создать эффект эмпатичного друга. Если же мы придерживаемся строгого Sie, то фраза звучит слишком официально для милого персонажа."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/intro_new_cbt_opt_pro",
+                "fragment": "Ich bin Psychologe",
+                "type": "style",
+                "severity": "minor",
+                "problem": "мужской род",
+                "weight": "В контексте выбора роли пользователя (где есть 'Женский') использование только мужского рода 'Psychologe' выглядит несбалансированно. Хотя в немецком это допустимо как общая форма, в интерфейсе выбора лучше использовать нейтральную форму или перефразировать, чтобы не создавать гендерного перекоса, согласно правилам Tone of Voice."
+              },
+              {
+                "id": "c4-I1",
+                "path": "/mood_trend_improved",
+                "fragment": "spürbar verbessert",
+                "type": "omission",
+                "severity": "major",
+                "problem": "пропущено значение 'на X %' (на ",
+                " ": "В оригинале фраза обрывается на 'на ', подразумевая подстановку числа. В немецком переводе фраза заканчивается на 'verbessert', что делает её грамматически законченной, но теряется смысл сравнения, заложенный в оригинале (хотя в RU оригинал тоже выглядит как оборванный кусок, в DE это выглядит как потерянный контекст для пользователя)."
+              },
+              {
+                "id": "c4-I2",
+                "path": "/mood_trend_worsened",
+                "fragment": "spürbar verschlechtert",
+                "type": "omission",
+                "severity": "major",
+                "problem": "пропущено значение 'на X %' (на ",
+                " ": "Аналогично предыдущему: в оригинале ожидается числовое значение после 'на', в немецком фраза обрывается, что может запутать пользователя при отображении динамики."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Логично. Для персонажа-спутника (Goose) переход на 'du' в подписи создаст нужный эмоциональный контакт, даже если основной интерфейс на 'Sie'."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "rejected",
+                "note": "В контексте выбора роли (как и в случае с 'Weiblich') 'Psychologe' здесь выступает как название профессии/роли. Использование гендерно-нейтральных форм в кнопках выбора часто перегружает интерфейс, а 'Psychologe' является стандартным обозначением профессии."
+              },
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical. В оригинале есть предлог 'на', ожидающий число. В немецком переводе предлог отсутствует, из-за чего подставленное число (например, '10%') будет грамматически оторвано от фразы. Нужно добавить предлог (например, 'um')."
+              },
+              {
+                "id": "c4-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c4-I1"
+                ],
+                "note": "Critical. Аналогично c4-I1: отсутствует предлог для связи с числовым значением. Требуется исправление грамматической структуры для корректного отображения динамики."
+              },
+              {
+                "id": "c4-I1",
+                "verdict": "merged",
+                "mergedInto": "c4-I2",
+                "note": "Обе ошибки касаются одной и той же проблемы: отсутствия предлога для числового значения в строках тренда."
+              },
+              {
+                "id": "c4-I2",
+                "verdict": "merged",
+                "mergedInto": "c4-I1",
+                "note": "Дублирует проблему отсутствия предлога для подстановки значения."
+              }
+            ],
+            "notes": "Основные проблемы связаны с грамматической неполнотой строк, содержащих плейсхолдеры для процентов (mood trends), что критично для восприятия данных. Стилистическое замечание по персонажу обосновано, но второе замечание по гендеру отклонено как избыточное для UI-кнопки.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/gooseCompanionCareSign",
+                "current": "— mit Wärme, Ihr weiser Gänse-Begleiter 🪽",
+                "proposed": "— mit Wärme, dein weiser Gänse-Begleiter 🪽",
+                "alternatives": [],
+                "rationale": "Для персонажа-спутника (Гусь-Мудрец) использование 'du' уместнее, так как это создает эффект эмпатичного друга, что соответствует Tone of Voice, несмотря на общее 'Sie' в приложении."
+              },
+              {
+                "id": "c4-I1",
+                "priority": 1,
+                "path": "/mood_trend_improved",
+                "current": "Ihr Zustand hat sich in den letzten {period} spürbar verbessert",
+                "proposed": "Ihr Zustand hat sich in den letzten {period} spürbar um {value}% verbessert",
+                "alternatives": [],
+                "rationale": "В оригинале подразумевается процентное изменение (на ...). В немецком языке для связи с числом необходимо добавить предлог 'um'. Примечание: я добавил плейсхолдер {value}, так как без него фраза не может быть завершена, но если в ARB нет этого ключа, следует использовать 'um {percentage}' или аналогичный, подходящий под структуру данных."
+              },
+              {
+                "id": "c4-I2",
+                "priority": 1,
+                "path": "/mood_trend_worsened",
+                "current": "Ihr Zustand hat sich in den letzten {period} spürbar verschlechtert",
+                "proposed": "Ihr Zustand hat sich in den letzten {period} spürbar um {value}% verschlechtert",
+                "alternatives": [],
+                "rationale": "Аналогично предыдущему: добавлен предлог 'um' для корректного грамматического соединения с числовым значением (процентами), которое ожидается в этой строке."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "Основные проблемы связаны с грамматической незавершенностью строк тренда (отсутствие предлога 'um' для связи с числом) и стилистическим несоответствием персонажа-спутника. Исправление этих строк критично для корректного отображения динамики состояния пользователя."
+            },
+            "timings": {
+              "issues": 171232,
+              "deliberate": 20974,
+              "recommend": 31209
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/gooseCompanionCareSign",
+              "from": "— mit Wärme, Ihr weiser Gänse-Begleiter 🪽",
+              "to": "— mit Wärme, dein weiser Gänse-Begleiter 🪽"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c4-I1",
+              "path": "/mood_trend_improved",
+              "reason": "валидация листа: плейсхолдеры — лишние: {value}"
+            },
+            {
+              "id": "c4-I2",
+              "path": "/mood_trend_worsened",
+              "reason": "валидация листа: плейсхолдеры — лишние: {value}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "file": "ui/cognitive_psy app_*.arb",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "de",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mood_trend_improved",
+                "verdict": "issue",
+                "note": "Синтаксическая ошибка: фраза обрывается на предлоге 'um'"
+              },
+              {
+                "path": "/mood_trend_worsened",
+                "verdict": "issue",
+                "note": "Синтаксическая ошибка: фраза обрывается на предлоге 'um'"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/mood_trend_improved",
+                "fragment": "verbessert um ",
+                "type": "style",
+                "severity": "major",
+                "problem": "Незавершенное предложение",
+                "why": "В немецком языке предлог 'um' требует после себя числительное (например, 'um 10%'). В текущем виде строка заканчивается предлогом, что выглядит как ошибка верстки или недописанный текст. Хотя в оригинале тоже стоит предлог, в интерфейсе это создает ощущение пустоты или ошибки."
+              },
+              {
+                "id": "I2",
+                "path": "/mood_trend_worsened",
+                "fragment": "verschlechtert um ",
+                "type": "style",
+                "severity": "major",
+                "problem": "Незавершенное предложение",
+                "why": "Аналогично первой строке: фраза обрывается на предлоге 'um', что грамматически и визуально не завершено для пользователя."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Grammatikalisch unvollständig; der Satz endet auf einer Präposition, was im UI als Fehler wahrgenommen wird."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Grammatikalisch unvollständig; der Satz endet auf einer Präposition, was im UI als Fehler wahrgenommen wird."
+              }
+            ],
+            "notes": "Beide Strings leiden unter dem gleichen strukturellen Problem: Der Satzbau bricht vor dem (fehlenden) numerischen Wert ab, was die User Experience negativ beeinflusst.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mood_trend_improved",
+                "current": "Ihr Befinden hat sich in {period} deutlich verbessert um ",
+                "proposed": "Ihr Befinden hat sich in {period} um ",
+                "alternatives": [
+                  "Ihr Befinden hat sich in {period} deutlich verbessert:"
+                ],
+                "rationale": "В немецком языке конструкция 'verbessert um [Wert]' требует числительного сразу после 'um'. Поскольку значение подставляется динамически, лучше перенести 'um' в начало или использовать структуру, где предлог не висит в конце. Однако, учитывая структуру ARB, где значение (процент) — это отдельный элемент, наиболее естественным и грамматически верным для UI будет вариант 'Ihr Befinden hat sich in {period} um ', где значение подставится сразу после 'um'. Но так как в оригинале 'за {period} на ', я предлагаю убрать лишнее 'deutlich', чтобы избежать нагромождения, если это мешает верстке, либо оставить 'um' в конце, если технически невозможно изменить порядок. Самый чистый вариант для немецкого синтаксиса: 'Ihr Befinden hat sich in {period} um ' (значение подставится следом)."
+              },
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/mood_trend_worsened",
+                "current": "Ihr Befinden hat sich in {period} deutlich verschlechtert um ",
+                "proposed": "Ihr Befinden hat sich in {period} um ",
+                "alternatives": [
+                  "Ihr Befinden hat sich in {period} um "
+                ],
+                "rationale": "Аналогично первой строке. Предлог 'um' в конце строки без последующего числа выглядит как ошибка. Чтобы фраза 'ухудшилось на X%' звучала естественно, 'um' должно стоять перед числом. В текущей архитектуре строк (где число, вероятно, идет отдельным блоком) мы оставляем 'um' в конце, но убираем 'deutlich', чтобы минимизировать эффект 'обрыва' фразы, либо принимаем, что 'um' — это связка. Однако, согласно правилам немецкого, 'verschlechtert um [X]' — это норма. Проблема в том, что 'deutlich' разрывает логику. Лучший вариант для UI: 'Ihr Befinden hat sich in {period} um ' (и далее подставляется значение, например, '10%')."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "Обе строки страдают от грамматической незавершенности из-за предлога 'um' в конце. В немецком языке 'um' — это предлог, требующий дополнения, и его одиночное наличие в конце строки воспринимается как технический брак. Необходимо пересмотреть порядок слов или структуру, чтобы 'um' стояло непосредственно перед числовым значением."
+            },
+            "timings": {
+              "issues": 9549,
+              "deliberate": 4718,
+              "recommend": 15592
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/mood_trend_improved",
+              "reason": "несущий пробел по краю строки потерян/добавлен"
+            },
+            {
+              "id": "I2",
+              "path": "/mood_trend_worsened",
+              "reason": "несущий пробел по краю строки потерян/добавлен"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

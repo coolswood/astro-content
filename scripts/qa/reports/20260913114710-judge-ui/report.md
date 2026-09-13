@@ -1,0 +1,83 @@
+# Коллегия: ui/cognitive_psy app_*.arb
+
+## de — раундов 3, правок 46 · НЕ сошлось (лимит раундов)
+
+**Вердикт: major_edits · score 72** — В переводе обнаружено множество критических ошибок в ICU-конструкциях (неверные формы множественного числа для немецкого), что приведет к багам в интерфейсе. Также присутствуют серьезные смысловые ошибки (mistranslations) в терминах эмоций и КПТ-понятиях, а также грамматические ошибки в управлении глаголов.
+
+- [раунд 1] `/ab_exercises_1`: Bild ändern in → **Bild ändern zu**
+- [раунд 1] `/appreciation`: Dankbarkeit → **Wertschätzung**
+- [раунд 1] `/breathing_metric_breaths`: Atemzüge → **Zyklen**
+- [раунд 1] `/das_item_achievements`: Leistungen → **Errungenschaften**
+- [раунд 1] `/errors_discval_shortdesc`: Positive Aspekte von Ereignissen komplett ignorieren → **Abwertung positiver Aspekte von Ereignissen**
+- [раунд 1] `/force_update_body`: Ihre App-Version ist veraltet. Da sich einige Serverfunktionen geänder → **Ihre App-Version ist um mehr als 20 Versionen veraltet. Da sich einige Serverfunktionen ge**
+- [раунд 1] `/gooseCompanionPillStreak`: {count, plural, one{{count} Tag} other{{count} Tage}} → **{count, plural, one{{count} Tag} few{{count} Tage} many{{count} Tage} other{{count} Tage}}**
+- [раунд 1] `/irritation`: Reizbarkeit → **Irritation**
+- [раунд 1] `/sorrow`: Traurigkeit → **Reue**
+- [раунд 1] `/time_d`: T. → **Tg.**
+- [раунд 1] `/torment`: Belastung → **Qual**
+- [раунд 1] `/triumph`: Erfolg → **Triumph**
+- [раунд 1] `/ab_premium_upgrade`: Holen → **Jetzt upgraden**
+- [раунд 1] `/comparison_balance_title`: Argumenten-Balance → **Argumente abwägen**
+- [раунд 1] `/coping_believe_title`: Grad der Überzeugung von dem destruktiven Glaubenssatz → **Grad der Überzeugung an den destruktiven Glaubenssatz**
+- [раунд 1] `/coping_info_hint_1`: Nach links, wenn die Überzeugung an den destruktiven Gedanken abgenomm → **Nach links, wenn der Glaube an den destruktiven Gedanken abgenommen hat.**
+- [раунд 1] `/coping_info_hint_2`: Nach rechts, wenn die Überzeugung an den destruktiven Gedanken zugenom → **Nach rechts, wenn der Glaube an den destruktiven Gedanken zugenommen hat.**
+- [раунд 1] `/coping_info_hint_3`: Nach oben, wenn sich die Überzeugung an den destruktiven Gedanken nich → **Nach oben, wenn sich der Glaube an den destruktiven Gedanken nicht verändert hat.**
+- [раунд 1] `/delight`: Freude → **Entzücken**
+- [раунд 1] `/elation`: Euphorie → **Glückseligkeit**
+- [раунд 1] `/errors_catastrophization_shortdesc`: Die Folgen negativer Ereignisse übermäßig aufblasen → **Übertreibung der Folgen negativer Ereignisse**
+- [раунд 1] `/errors_magnification_minimization_title`: Vergrößerung und Verkleinerung → **Übertreibung und Verharmlosung**
+- [раунд 1] `/fault`: Schuldgefühle → **Schuld**
+- [раунд 1] `/intro_improving_recommendations`: Empfehlungen verbessern → **Verbesserung der Empfehlungen**
+- [раунд 1] `/intro_new_cbt_opt_pro`: Ich bin Psychologe → **Ich arbeite als Psychologe/Psychologin**
+- [раунд 1] `/intro_new_problem_partner`: Beziehungsprobleme → **Beziehung mit dem Partner**
+- [раунд 1] `/notifications_mood_title`: ⏰ Vergessen Sie nicht, Ihr Befinden einzuschätzen → **Vergessen Sie nicht, Ihr Befinden erneut einzuschätzen**
+- [раунд 1] `/positive`: Positiv → **Positive**
+- [раунд 1] `/tutorial_interrupted`: Lernunterbrechung → **Das Lernen wurde unterbrochen**
+- [раунд 1] `/vulnerability`: Vulnerabilität → **Verletzlichkeit**
+- [раунд 1] `/auth_email_second_title`: Geben Sie den Code aus der E-Mail ein (bitte prüfen Sie auch Ihren Spa → **Geben Sie den Code aus der E-Mail ein (bitte prüfen Sie auch Ihren „Spam-Ordner“)**
+- [раунд 2] `/believe_final_decrease`: Rückgang um {count} {count, plural, one{Punkt} other{Punkte}} → **Rückgang um {count} {count, plural, one{Punkt} few{Punkt} many{Punkt} other{Punkte}}**
+- [раунд 2] `/believe_final_increase`: Anstieg um {count} {count, plural, one{Punkt} other{Punkte}} → **Anstieg um {count} {count, plural, one{Punkt} few{Punkt} many{Punkt} other{Punkte}}**
+- [раунд 2] `/believe_final_steps_done`: {count} {count, plural, one{Schritt abgeschlossen} other{Schritte abge → **{count} {count, plural, one{Schritt abgeschlossen} few{Schritt abgeschlossen} many{Schritt**
+- [раунд 2] `/mood_freq_worsened`: In {percent} % der Tage hat sich Ihre Stimmung bis zum Abend verschlec → **In {percent} der Tage hat sich Ihre Stimmung bis zum Abend verschlechtert**
+- [раунд 2] `/confidence`: Überzeugung → **Sicherheit**
+- [раунд 2] `/intro_new_problems_category`: WAS SIE BELASTET → **Womit Sie arbeiten**
+- [раунд 2] `/sorrow`: Reue → **Trauer**
+- [раунд 2] `/story_distortions_description_2`: Unser Kurs hilft Ihnen, diese Muster zu erkennen und aktiv an ihrer Ve → **Unser Kurs hilft Ihnen, diese Muster zu erkennen und aktiv an ihrer Veränderung zu arbeite**
+- [раунд 3] `/irritation`: Irritation → **Verärgerung**
+- [раунд 3] `/sorrow`: Trauer → **Bedauern**
+- [раунд 3] `/auth_v2_slider_phrase_6`: Ihre Balance → **Deine Balance**
+- [раунд 3] `/community`: Community → **Gemeinschaft**
+- [раунд 3] `/errors_emo_title`: Emotionales Beweisführen → **Emotionale Beweisführung**
+- [раунд 3] `/intro_new_problem_anger`: Häufige Wutgefühle → **Wut**
+- [раунд 3] `/test_clarification`: Erklärung der KI → **KI-Erklärung**
+
+- ⏭ отклонено (раунд 1): Nominal style is acceptable for UI headers.
+- ⏭ отклонено (раунд 1): Anglicism 'Community' is widely accepted in modern German UI.
+- ⏭ отклонено (раунд 1): Minor semantic overlap is acceptable for variety.
+- ⏭ отклонено (раунд 1): Punctuation consistency is a minor stylistic choice.
+- ⏭ отклонено (раунд 1): Acceptable adaptation for list items.
+- ⏭ отклонено (раунд 1): Acceptable nuance differentiation.
+- ⏭ отклонено (раунд 1): Acceptable nuance differentiation.
+- ⏭ отклонено (раунд 1): Acceptable terminology variation.
+- ⏭ отклонено (раунд 1): Subjective stylistic preference.
+- ⏭ отклонено (раунд 2): Соблюдение Tone of Voice (Sie/Ihre) приоритетнее поэтичности в интерфейсе; это осознанная адаптация под стандарт.
+- ⏭ отклонено (раунд 2): Community допустимо в современном DE-интерфейсе, не является ошибкой.
+- ⏭ отклонено (раунд 2): Субъективная стилистическая придирка, 'Entzücken' допустимо для эмоциональных списков.
+- ⏭ отклонено (раунд 2): Стилистическая адаптация, не является ошибкой.
+- ⏭ отклонено (раунд 2): Термин 'Beweisführen' допустим в контексте логики, не является критическим канцеляризмом.
+- ⏭ отклонено (раунд 2): Ложное срабатывание: разные оригиналы могут иметь идентичный перевод, если контекст в DE совпадает.
+- ⏭ отклонено (раунд 2): Типографика в интерфейсах часто допускает прямые кавычки, не критично.
+- ⏭ отклонено (раунд 2): Отсутствие точки в заголовках — стандарт дизайна.
+- ⏭ отклонено (раунд 2): Адаптация под существительные в списках — норма.
+- ⏭ отклонено (раунд 2): Стилистическое предпочтение, не ошибка.
+- ⏭ отклонено (раунд 2): Замечание ошибочно, перевод соответствует глоссарию.
+- ⏭ отклонено (раунд 2): Разница в стиле (заголовок vs действие) допустима для разных типов уведомлений.
+- ⏭ отклонено (раунд 2): Разные оттенки в оригинале оправдывают разные переводы.
+- ⏭ отклонено (раунд 2): Стилистическая адаптация.
+- ⏭ отклонено (раунд 2): Sale — общепринятый термин в e-commerce.
+- ⏭ отклонено (раунд 2): Двоеточие может быть частью дизайна верстки.
+- ⏭ отклонено (раунд 2): Двоеточие может быть частью дизайна верстки.
+- ⏭ отклонено (раунд 2): Термин понятен, не является критической ошибкой.
+- ⏭ отклонено (раунд 2): Лаконичность для бейджа — норма.
+- ⏭ отклонено (раунд 2): Субъективное замечание по тону.
+- ⏭ отклонено (раунд 3): Semantic nuance is acceptable; 'Traurigkeit' is a standard base emotion
