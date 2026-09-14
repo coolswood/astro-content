@@ -2,8 +2,10 @@ import { describe, test, expect } from 'bun:test';
 import {
   expectedMediaPath,
   isMediaPath,
+  isVideoPath,
   mediaLocaleFor,
   restoreMediaPaths,
+  sourceLeavesForLang,
 } from '../scripts/lib/media-paths.js';
 import { validateTranslation } from '../scripts/lib/validation.js';
 import { flattenLeaves } from '../scripts/lib/tree.js';
@@ -80,6 +82,30 @@ describe('restoreMediaPaths', () => {
     expect(fixed).toEqual(['activity/0/img']);
     expect(result['activity/0/img']).toBe('activity/en/s1.png');
     expect(result['activity/0/video']).toBe('activity/en/v1.mp4');
+  });
+});
+
+describe('isVideoPath / sourceLeavesForLang — видео только для ru', () => {
+  test('видео-расширения распознаются, картинки — нет', () => {
+    expect(isVideoPath('activity/ru/v1.mp4')).toBe(true);
+    expect(isVideoPath('activity/en/v1.mov')).toBe(true);
+    expect(isVideoPath('activity/ru/s1.png')).toBe(false);
+    expect(isVideoPath('разберём на сеансе что такое mp4')).toBe(false);
+  });
+
+  test('для не-ru локалей видео-листья выбрасываются из источника', () => {
+    const ruLeaves = flattenLeaves({
+      activity: [{ subtitle: 'Текст', img: 'activity/ru/s1.png', video: 'activity/ru/v1.mp4' }],
+    });
+    const forDe = sourceLeavesForLang(ruLeaves, 'de');
+    expect(Object.keys(forDe)).toEqual(['/activity/0/subtitle', '/activity/0/img']);
+    // ru получает источник целиком
+    expect(Object.keys(sourceLeavesForLang(ruLeaves, 'ru'))).toHaveLength(3);
+  });
+
+  test('валидация для ru по-прежнему требует ru-сегмент видео-пути', () => {
+    const ru = { video: 'diary/ru/v2.mp4' };
+    expect(validateTranslation('ru', flattenLeaves(ru), { video: 'diary/en/v2.mp4' }).length).toBe(1);
   });
 });
 

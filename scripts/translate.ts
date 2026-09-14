@@ -61,7 +61,7 @@ import {
   type ValidationIssue,
 } from './lib/validation.js';
 import { judgeFile } from './lib/judge.js';
-import { restoreMediaPaths } from './lib/media-paths.js';
+import { restoreMediaPaths, sourceLeavesForLang } from './lib/media-paths.js';
 import {
   flattenLeaves,
   buildSubtree,
@@ -648,7 +648,9 @@ async function runContent(ctx: RunCtx): Promise<number> {
     for (const lang of ctx.langs) {
       const targetPath = path.join(ROOT, 'src', 'i18n', lang.toLowerCase(), relPath);
       const target = await readJsonOr<any>(targetPath, {});
-      perLang[lang] = analyzeTree(ruLeaves, flattenLeaves(target), scope, {
+      // Видео-медиа существуют только для ru: в остальных локалях видео-листья
+      // не переводятся и выпиливаются из целевых файлов как «мёртвые».
+      perLang[lang] = analyzeTree(sourceLeavesForLang(ruLeaves, lang), flattenLeaves(target), scope, {
         retranslateChanged: args.retranslateChanged,
       });
     }
@@ -704,7 +706,11 @@ async function runContent(ctx: RunCtx): Promise<number> {
   const tasks: Array<{ item: ContentItem; lang: string; todo: string[] }> = [];
   for (const item of items) {
     for (const lang of ctx.langs) {
-      const todo = keysToTranslate(item.perLang[lang], args.full, Object.keys(item.ruLeaves));
+      const todo = keysToTranslate(
+        item.perLang[lang],
+        args.full,
+        Object.keys(sourceLeavesForLang(item.ruLeaves, lang)),
+      );
       if (todo.length === 0) {
         console.log(`⏭  ${lang} ${item.relPath}: актуально`);
         continue;

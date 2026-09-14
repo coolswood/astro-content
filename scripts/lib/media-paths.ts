@@ -1,7 +1,10 @@
 /**
- * Защита медиа-путей от перевода: файлы картинок и видео существуют только
- * для en и ru (stories.json: поля img/video, формат «<секция>/<lang>/<файл>»),
- * поэтому во всех языках, кроме ru, языковой сегмент пути обязан быть «en».
+ * Защита медиа-путей от перевода: картинки существуют только для en и ru
+ * (stories.json: поле img, формат «<секция>/<lang>/<файл>»), поэтому во всех
+ * языках, кроме ru, языковой сегмент пути обязан быть «en». Видео существуют
+ * ТОЛЬКО для ru: в остальных локалях видео-поля не переводятся и существовать
+ * не должны (sourceLeavesForLang выбрасывает их из источника, purge мёртвых
+ * ключей выпиливает из целевых файлов).
  *
  * Три уровня обороны:
  *   1. Промпт (prompts/base/fragments/common.txt) — просим модель не трогать пути.
@@ -31,6 +34,9 @@ const LANG_SEGMENTS = new Set([
 /** Расширения медиафайлов, на которые ссылаются пути в контенте. */
 const MEDIA_EXT = 'png|jpe?g|webp|gif|mp4|mov|m4v|svg|m4a|mp3|wav|ogg|aac';
 
+/** Расширения видеофайлов: такие пути легитимны только в ru-контенте. */
+const VIDEO_EXT = 'mp4|mov|m4v|webm|avi|mkv';
+
 /**
  * Похожа ли строка на медиа-путь («activity/ru/s1.png», «audio/story/ru/intro.mp3»):
  * сегменты без пробелов и с медиа-расширением в конце.
@@ -40,6 +46,32 @@ export function isMediaPath(value: unknown): value is string {
   const s = value.trim();
   if (!s || /\s/.test(s)) return false;
   return new RegExp(`^[A-Za-z0-9_\\-]+(?:/[A-Za-z0-9_\\-]+)+\\.(${MEDIA_EXT})$`, 'i').test(s);
+}
+
+/**
+ * Похожа ли строка на путь к ВИДЕО («activity/ru/v1.mp4»).
+ */
+export function isVideoPath(value: unknown): boolean {
+  if (!isMediaPath(value)) return false;
+  return new RegExp(`\\.(${VIDEO_EXT})$`, 'i').test(value.trim());
+}
+
+/**
+ * Представление ru-источника для целевого языка: видео-листья существуют
+ * только для ru, в остальных локалях они не переводятся вообще — не уходят
+ * в payload, не валидируются, не пишутся, а в целевых файлах считаются
+ * «мёртвыми» и выпиливаются штатным purge.
+ */
+export function sourceLeavesForLang<T extends Record<string, unknown>>(
+  ruLeaves: T,
+  lang: string,
+): T {
+  if (normalizeLangCode(lang) === 'ru') return ruLeaves;
+  const out: Record<string, unknown> = {};
+  for (const [p, v] of Object.entries(ruLeaves)) {
+    if (!isVideoPath(v)) out[p] = v;
+  }
+  return out as T;
 }
 
 /**

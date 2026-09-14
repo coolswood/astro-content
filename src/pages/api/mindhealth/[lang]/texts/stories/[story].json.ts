@@ -65,8 +65,12 @@ export const GET: APIRoute = async ({ params }) => {
         img,
       };
 
-      if (['activity', 'coping', 'daybook', 'diary'].includes(story)) {
-        updatedCard.video = card.video || `${story}/${targetLang}/v${index + 1}.mp4`;
+      // Видео существуют только в русской версии: не-ru локалям видео-поле
+      // не выдаётся, даже если оно затесалось в исходник.
+      if (lang === 'ru' && ['activity', 'coping', 'daybook', 'diary'].includes(story)) {
+        updatedCard.video = card.video || `${story}/ru/v${index + 1}.mp4`;
+      } else {
+        delete updatedCard.video;
       }
 
       return updatedCard;
