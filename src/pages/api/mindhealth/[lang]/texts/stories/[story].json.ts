@@ -1,6 +1,6 @@
-import { loadI18nJson } from '@/lib/loadI18nJson';
 import type { APIRoute } from 'astro';
 import { getLangStaticPaths } from '@/lib/getLangStaticPaths';
+import { withMediaFallback, type StoryCard } from '@/lib/storyCards';
 
 export const prerender = true;
 
@@ -20,12 +20,6 @@ const ALLOWED = new Set([
   'diary',
   'intermediate',
 ]);
-
-type StoryCard = {
-  subtitle: string;
-  img: string;
-  video?: string;
-};
 
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang!;
@@ -56,27 +50,7 @@ export const GET: APIRoute = async ({ params }) => {
       );
     }
 
-    const cardsWithFallback = cards.map((card, index) => {
-      const targetLang = lang === 'ru' ? 'ru' : 'en';
-      const img = `${story}/${targetLang}/s${index + 1}.png`;
-
-      const updatedCard: StoryCard = {
-        ...card,
-        img,
-      };
-
-      // Видео существуют только в русской версии: не-ru локалям видео-поле
-      // не выдаётся, даже если оно затесалось в исходник.
-      if (lang === 'ru' && ['activity', 'coping', 'daybook', 'diary'].includes(story)) {
-        updatedCard.video = card.video || `${story}/ru/v${index + 1}.mp4`;
-      } else {
-        delete updatedCard.video;
-      }
-
-      return updatedCard;
-    });
-
-    return new Response(JSON.stringify(cardsWithFallback), {
+    return new Response(JSON.stringify(withMediaFallback(cards, lang, story)), {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
