@@ -5,6 +5,7 @@
  *   bun scripts/qa/eval.ts story/start.json --old-dir backups/.../old-pipeline --langs de,ja
  *   bun scripts/qa/eval.ts story --git-ref 2695c5f --sample 15 --label prompt-v3
  *   bun scripts/qa/eval.ts story/start.json --old-dir ... --dry-run
+ *   bun scripts/qa/eval.ts --ui --old-dir backups/ui-canary-.../ --langs de --sample 30
  *
  * Берёт ru-оригинал, «старый» перевод (базлайн) и «новый» (рабочее дерево),
  * нарезает детерминированный сэмпл БЛОКОВ (лист-строка или массив строк
@@ -15,6 +16,11 @@
  * позиционного смещения судьи. Судья слепой: не знает, какая сторона
  * новая. Промпт судьи: scripts/prompts/base/qa/judge.txt (языковые правила
  * — {{LANG_STYLE}}, терминология — глоссарий локали).
+ *
+ * Режим --ui: сравнение ARB-локалей cognitive_psy. ru = app_ru.arb,
+ * NEW = app_<lang>.arb рабочего дерева, OLD = снапшот <old-dir>/<lang>.json
+ * (плоская форма). @-мета из сравнения исключается. Базлайн — только
+ * --old-dir: --git-ref читает репозиторий контента, а не cognitive_psy.
  *
  * Базлайн (--old-dir XOR --git-ref):
  *   --old-dir  каталог снапшотов, ищется по очереди:
@@ -91,6 +97,7 @@ async function loadConfig(): Promise<Config> {
 }
 
 interface Args {
+  ui: boolean;
   fileArg: string;
   langs: string[];
   oldDir: string | null;
@@ -104,17 +111,20 @@ interface Args {
   dryRun: boolean;
   endpoint?: string;
   model?: string;
+  psyDir?: string;
 }
 
 function parseArgs(cfg: Config): Args {
   const { flags, positional } = parseCli();
+  const ui = (flags.ui ?? 'false') === 'true';
   const fileArg = positional[0] ?? flags.file ?? '';
-  if (!fileArg) {
+  if (!fileArg && !ui) {
     console.error(
-      '❌ Укажите файл/каталог внутри src/i18n/ru и базлайн.\n' +
+      '❌ Укажите файл/каталог внутри src/i18n/ru и базлайн (или флаг --ui).\n' +
         '   Примеры:\n' +
         '     bun scripts/qa/eval.ts story/start.json --old-dir backups/start-translations-20260910/old-pipeline --langs de,ja\n' +
-        '     bun scripts/qa/eval.ts story --git-ref 2695c5f --sample 15 --dry-run',
+        '     bun scripts/qa/eval.ts story --git-ref 2695c5f --sample 15 --dry-run\n' +
+        '     bun scripts/qa/eval.ts --ui --old-dir backups/ui-canary-20260913 --langs de --sample 30',
     );
     process.exit(2);
   }
@@ -124,6 +134,10 @@ function parseArgs(cfg: Config): Args {
   }
   const oldDir = flags['old-dir'] ?? null;
   const gitRef = flags['git-ref'] ?? null;
+  if (ui && gitRef) {
+    console.error('❌ В режиме --ui базлайн — только --old-dir: --git-ref читает репозиторий контента, а не cognitive_psy.');
+    process.exit(2);
+  }
   if (Boolean(oldDir) === Boolean(gitRef)) {
     console.error('❌ Нужен ровно один базлайн: --old-dir PATH или --git-ref REF.');
     process.exit(2);
@@ -131,6 +145,7 @@ function parseArgs(cfg: Config): Args {
   const langsRaw = (flags.langs ?? flags.lang ?? '').split(',').map((l) => normalizeLangCode(l)).filter(Boolean);
   const langs = langsRaw.length > 0 ? langsRaw : [...ALL_TARGET_LANGS];
   return {
+    ui,
     fileArg,
     langs,
     oldDir,
@@ -144,6 +159,7 @@ function parseArgs(cfg: Config): Args {
     dryRun: flags['dry-run'] === 'true',
     endpoint: flags.endpoint,
     model: flags.model,
+    psyDir: flags['psy-dir'],
   };
 }
 
@@ -183,6 +199,24 @@ async function resolveContentFiles(fileArg: string): Promise<string[]> {
 
 async function fileExists(p: string): Promise<boolean> {
   return (await fs.stat(p).catch(() => null))?.isFile() ?? false;
+}
+
+/** Корень cognitive_psy: --psy-dir → env COGNITIVE_PSY_DIR → сиблинг репозитория. */
+function resolvePsyDir(args: Args): string {
+  const raw = args.psyDir || process.env.COGNITIVE_PSY_DIR || '';
+  return raw ? path.resolve(ROOT, raw) : path.resolve(ROOT, '..', 'cognitive_psy');
+}
+
+/** ARB без @@locale и @-меты: плоская карта «ключ → строка». null = не читается. */
+async function readArbFlat(p: string): Promise<Record<string, string> | null> {
+  const raw = await readJsonOr<Record<string, any> | null>(p, null);
+  if (raw == null) return null;
+  const out: Record<string, string> = {};
+  for (const [k, v] of Object.entries(raw)) {
+    if (k === '@@locale' || k.startsWith('@')) continue;
+    out[k] = String(v ?? '');
+  }
+  return out;
 }
 
 async function parseJsonText(raw: string): Promise<any> {
@@ -380,9 +414,12 @@ async function main(): Promise<number> {
     return 2;
   }
 
-  const relFiles = await resolveContentFiles(args.fileArg);
+  const relFiles = args.ui
+    ? ['ui/cognitive_psy'] // плоская метка файла; базлайн ищется как <old-dir>/<lang>.json
+    : await resolveContentFiles(args.fileArg);
+  const psyDir = args.ui ? resolvePsyDir(args) : '';
   const baselineDesc = args.oldDir ? `--old-dir ${args.oldDir}` : `--git-ref ${args.gitRef}`;
-  console.log(`⚖️  QA-сравнение: src/i18n/ru/${args.fileArg}`);
+  console.log(`⚖️  QA-сравнение: ${args.ui ? `UI cognitive_psy (${psyDir})` : `src/i18n/ru/${args.fileArg}`}`);
   console.log(`   NEW = рабочее дерево, OLD = ${baselineDesc}`);
   console.log(`   Локали (${args.langs.length}): ${args.langs.join(', ')}; сэмпл ${args.sample}/файл, seed ${args.seed}, min-chars ${args.minChars}`);
   if (args.dryRun) console.log('🔍 DRY-RUN: только план — модель не вызывается.');
@@ -402,9 +439,11 @@ async function main(): Promise<number> {
   let totalCalls = 0;
 
   for (const relFile of relFiles) {
-    const ruJson = await readJsonOr<any>(path.join(ROOT, 'src', 'i18n', 'ru', relFile), null);
+    const ruJson = args.ui
+      ? await readArbFlat(path.join(psyDir, 'lib', 'l10n', 'app_ru.arb'))
+      : await readJsonOr<any>(path.join(ROOT, 'src', 'i18n', 'ru', relFile), null);
     if (ruJson == null) {
-      console.error(`❌ Не удалось прочитать src/i18n/ru/${relFile}`);
+      console.error(`❌ Не удалось прочитать ru-источник (${args.ui ? 'app_ru.arb' : `src/i18n/ru/${relFile}`})`);
       return 2;
     }
     const ruUnits = buildComparisonUnits(ruJson);
@@ -414,8 +453,9 @@ async function main(): Promise<number> {
 
     for (const lang of args.langs) {
       const langLc = lang.toLowerCase();
-      const newPath = path.join(ROOT, 'src', 'i18n', langLc, relFile);
-      const newRoot = await readJsonOr<any>(newPath, null);
+      const newRoot = args.ui
+        ? await readArbFlat(path.join(psyDir, 'lib', 'l10n', `app_${lang}.arb`))
+        : await readJsonOr<any>(path.join(ROOT, 'src', 'i18n', langLc, relFile), null);
       const oldRoot = args.oldDir
         ? await readOldJson(args.oldDir, lang, relFile)
         : await readGitJson(args.gitRef!, `src/i18n/${langLc}/${relFile}`);
@@ -424,7 +464,7 @@ async function main(): Promise<number> {
         continue;
       }
       if (newRoot == null) {
-        console.log(`   ⏭  ${lang}: в рабочем дереве нет src/i18n/${langLc}/${relFile} — пропуск.`);
+        console.log(`   ⏭  ${lang}: в рабочем дереве нет перевода — пропуск.`);
         continue;
       }
 

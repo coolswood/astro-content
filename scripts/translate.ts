@@ -25,7 +25,9 @@
  *   --chunk-leaves N          размер чанка перевода в листьях (по умолчанию 40)
  *   --no-main-path-map        вернуть документный формат ответа MAIN
  *                             (по умолчанию — плоская карта «путь → перевод»)
- *   --ui-batch N              ключей ARB в одной партии перевода UI (по умолчанию 5)
+ *   --ui-batch removed        ui-режим чанкуется общим механизмом (--chunk-leaves)
+ *   --limit-keys N            канарейка: перевести N ключей, равномерно по канону
+ *                             (ui-режим; сэмпл покрывает весь файл, не одну зону)
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *
  * Требует поднятого туннеля к vLLM (для провайдера vllm):
@@ -45,13 +47,21 @@ import {
   buildStagePrompts,
   runPipeline,
   setModelConcurrency,
+  mergeSubset,
+  buildTreeFromPaths,
   type StageClient,
 } from './lib/pipeline.js';
 import { MAX_REPAIR_GROUPS, repairDuplicateGroups } from './lib/duplicate-repair.js';
 import { TranslationState, type ScopeState } from './lib/state.js';
 import { analyzeTree, keysToTranslate, type Analysis } from './lib/analyze.js';
-import { validateTranslation, findDuplicateGroups, type ValidationIssue } from './lib/validation.js';
+import {
+  validateTranslation,
+  findDuplicateGroups,
+  extractTagSignatures,
+  type ValidationIssue,
+} from './lib/validation.js';
 import { judgeFile } from './lib/judge.js';
+import { restoreMediaPaths, sourceLeavesForLang } from './lib/media-paths.js';
 import {
   flattenLeaves,
   buildSubtree,
@@ -130,8 +140,8 @@ interface Args {
   chunkLeaves?: number;
   /** MAIN отвечает плоской картой «путь → перевод» (экспериментальный формат). */
   mainPathMap: boolean;
-  /** Ключей ARB в одной партии перевода (ui-режим). */
-  uiBatch: number;
+  /** Канарейка: ограничить перевод N ключами, равномерно по каноническому порядку (ui). */
+  limitKeys?: number;
 }
 
 function parseBoolFlag(raw: string | undefined, defaultValue: boolean): boolean {
@@ -200,7 +210,7 @@ function parseArgs(): Args {
     // документный формат; see AI_INSTRUCTIONS — известное ограничение:
     // монотонно-повторяющиеся секции могут зациклить генерацию.
     mainPathMap: parseBoolFlag(flags['main-path-map'], !parseBoolFlag(flags['no-main-path-map'], false)),
-    uiBatch: parseIntFlag(flags['ui-batch']) ?? 5,
+    limitKeys: parseIntFlag(flags['limit-keys']),
   };
 }
 
@@ -255,20 +265,60 @@ function logIssues(lang: string, issues: ValidationIssue[]): void {
   if (issues.length > 20) console.warn(`   … и ещё ${issues.length - 20}`);
 }
 
+/**
+ * Проблемные листья для точечной добивки: потерянные/пустые, листья с
+ * по-листовыми замечаниями валидации (плейсхолдеры, чужие алфавиты), листья
+ * групп дублей и локально разбалансированные по тегам (если валидация
+ * ругалась на теги на уровне файла). Пути — без ведущего слэша.
+ */
+function collectProblemPaths(
+  lang: string,
+  sentLeaves: Leaves,
+  result: any,
+  issues: ValidationIssue[],
+): string[] {
+  const paths = new Set<string>();
+  const flatRaw = flattenLeaves(result);
+  const flat: Record<string, unknown> = {};
+  for (const k of Object.keys(flatRaw)) flat[k.replace(/^\//, '')] = flatRaw[k];
+  const hasTagIssue = issues.some((i) => i.path === '(файл)' && i.message.includes('теги'));
+  for (const [p, ru] of Object.entries(sentLeaves)) {
+    const tr = flat[p];
+    if (typeof tr !== 'string' || !tr.trim()) {
+      paths.add(p); // потерянные или пустые
+      continue;
+    }
+    if (hasTagIssue && extractTagSignatures(ru).length !== extractTagSignatures(tr).length) {
+      paths.add(p);
+    }
+  }
+  for (const iss of issues) {
+    if (iss.path !== '(файл)') paths.add(iss.path);
+  }
+  for (const group of findDuplicateGroups(lang, sentLeaves, result)) {
+    for (const p of group.paths) paths.add(p);
+  }
+  return [...paths].filter((p) => p in sentLeaves);
+}
+
 /** Один прогон конвейера с ретраями и валидацией. Возвращает листья перевода или null. */
 async function translateWithRetries(
   ctx: RunCtx,
   lang: string,
-  kind: 'text' | 'keys',
+  kind: 'text' | 'ui',
   payload: any,
   sentLeaves: Leaves,
   context?: Record<string, string>,
+  meta?: Record<string, any>,
+  /** Текущие переводы целевого файла (те же ключи): источник спасения листьев. */
+  fallbackLeaves?: Leaves,
 ): Promise<Leaves | null> {
   const prompts = await buildStagePrompts(kind, lang.toLowerCase(), {
     glossaryPath: path.join(ROOT, 'scripts', 'prompts', lang.toLowerCase(), 'glossary.json'),
   });
 
   let lastError: unknown = null;
+  let lastResult: any = null;
   for (let attempt = 1; attempt <= ctx.retries + 1; attempt++) {
     if (attempt > 1) {
       console.log(`   🔁 Попытка ${attempt}/${ctx.retries + 1} для ${lang}...`);
@@ -281,12 +331,13 @@ async function translateWithRetries(
         context,
         chunkLeaves: ctx.args.chunkLeaves,
         mainPathMap: ctx.args.mainPathMap,
+        meta,
       });
 
-      // keys-режим: ответ {lang: {key: val}} — снимаем обёртку.
+      // ui-режим: модель может эхом вернуть обёртку {lang: {key: val}} —
+      // снимаем её; написание локали нормализуем (pt-BR/pt_br → pt_BR).
       let result: any = data;
-      if (kind === 'keys') {
-        // Снимаем обёртку {lang: {…}}; модель может дать pt-BR/pt_br вместо pt_BR.
+      if (kind === 'ui') {
         const envelopeKey =
           result && typeof result === 'object' && !Array.isArray(result)
             ? Object.keys(result).find(
@@ -299,6 +350,18 @@ async function translateWithRetries(
           for (const k of Object.keys(result)) if (k.startsWith('@')) delete result[k];
         }
       }
+
+      // Медиа-пути (stories.json: img/video) не переводятся: у моделей рука
+      // дёргается «локализовать» сегмент пути или имя файла. Чинится
+      // детерминированно до валидации, без расхода ретраев; повторяется после
+      // каждой добивки (ответ добивки мержится в result без этого guard'а).
+      const guardMediaPaths = (): void => {
+        const fixes = restoreMediaPaths(lang, sentLeaves, result);
+        if (fixes.length > 0) {
+          console.warn(`   🛠 [${lang}] восстановлены медиа-пути: ${short(fixes)}`);
+        }
+      };
+      guardMediaPaths();
 
       const issues = validateTranslation(lang, sentLeaves, result);
       if (issues.length > 0) {
@@ -326,6 +389,7 @@ async function translateWithRetries(
               result,
               groups,
             );
+            guardMediaPaths();
             const again = validateTranslation(lang, sentLeaves, result);
             if (fixed > 0 && again.length === 0) {
               console.log(`   🩹 Пары разведены (${fixed} правок) — валидация пройдена, файл спасён без ретрая.`);
@@ -336,7 +400,120 @@ async function translateWithRetries(
             }
           }
         }
-        if (!repairedClean) continue;
+
+        // Точечная добивка: один битый лист не должен перегонять весь файл.
+        // Проблемные листья проходят полный конвейер на мини-payload, ответ
+        // вписывается по путям, валидация повторяется (до 2 проходов).
+        // Полный ретрай — только если добивка не спасла или проблем много
+        // (системный сбой: >25% листьев или больше 6).
+        if (!repairedClean) {
+          const total = Object.keys(sentLeaves).length;
+          const cap = Math.max(6, Math.ceil(total * 0.25));
+          let targets = collectProblemPaths(lang, sentLeaves, result, issues);
+          if (targets.length === 0 || targets.length > cap) {
+            console.warn(
+              `   ⚠️ Точечная добивка нецелесообразна (${targets.length}/${total} листьев, кап ${cap}) — полный ретрай.`,
+            );
+          } else {
+            const targetSet = new Set(targets);
+            const subMeta = meta
+              ? Object.fromEntries(Object.entries(meta).filter(([k]) => targetSet.has(k)))
+              : undefined;
+            for (let pass = 1; pass <= 2 && !repairedClean && targets.length > 0; pass++) {
+              console.log(`   🩹 Точечная добивка (проход ${pass}): листьев ${targets.length} — ${short(targets)}`);
+              try {
+                const subPayload = buildTreeFromPaths(
+                  Object.fromEntries(targets.map((p) => [p, sentLeaves[p] ?? ''])),
+                );
+                const { data: subData } = await runPipeline(ctx.client, prompts, subPayload, lang, {
+                  sourceLocale: ctx.cfg.sourceLocale,
+                  jsonModeMain: true,
+                  context,
+                  mainPathMap: ctx.args.mainPathMap,
+                  meta: subMeta,
+                });
+                mergeSubset(result, subData, `repair${pass > 1 ? `-${pass}` : ''}`);
+              } catch (e) {
+                console.warn(`   ⚠️ Добивка не удалась: ${(e as Error)?.message ?? e}`);
+                break;
+              }
+              guardMediaPaths();
+              const again = validateTranslation(lang, sentLeaves, result);
+              if (again.length === 0) {
+                console.log(`   🩹 Добивка спасла попытку (${targets.length} листьев перегнано) — без полного ретрая.`);
+                repairedClean = true;
+                break;
+              }
+              const next = collectProblemPaths(lang, sentLeaves, result, again);
+              const progress = next.length < targets.length;
+              logIssues(lang, again);
+              targets = next;
+              if (!progress) break;
+            }
+          }
+        }
+        // Анонимный прогон: модель якорится на осмысленном английском ключе
+        // («breathing_sec_left» → выдуманный {count}) и не слушает правила.
+        // Застрявшим после добивки листьям ключ в ЗАПРОСЕ нейтрализуется
+        // (item_1, item_2, …), перевод идёт по ru-тексту и мете, ответ маппится
+        // обратно. Дешёвый шаг перед дорогим полным ретраем — только для
+        // листьев, которые не спасла добивка.
+        if (!repairedClean) {
+          const again = validateTranslation(lang, sentLeaves, result);
+          const stuck = collectProblemPaths(lang, sentLeaves, result, again);
+          const total = Object.keys(sentLeaves).length;
+          const cap = Math.max(6, Math.ceil(total * 0.25));
+          if (stuck.length > 0 && stuck.length <= cap) {
+            const anonMap = new Map(stuck.map((p, i) => [p, `item_${i + 1}`]));
+            const anonMeta = meta
+              ? Object.fromEntries(
+                  Object.entries(meta)
+                    .filter(([k]) => anonMap.has(k))
+                    .map(([k, v]) => [anonMap.get(k)!, v]),
+                )
+              : undefined;
+            try {
+              const anonPayload = Object.fromEntries(
+                stuck.map((p) => [anonMap.get(p)!, sentLeaves[p] ?? '']),
+              );
+              console.log(
+                `   🫥 Анонимный прогон: ${stuck.length} застрявших ключей нейтрализованы — ${short(stuck)}`,
+              );
+              const { data: anonData } = await runPipeline(ctx.client, prompts, anonPayload, lang, {
+                sourceLocale: ctx.cfg.sourceLocale,
+                jsonModeMain: true,
+                // Контекст соседей СОЗНАТЕЛЬНО не передаётся: у подписей рядом
+                // с ICU-ключами он сам становится якорем (модель копирует
+                // {count}-паттерн и inventит плейсхолдер). Анонимный прогон —
+                // максимально чистый: нейтральный ключ + ru-текст + мета.
+                mainPathMap: ctx.args.mainPathMap,
+                meta: anonMeta,
+              });
+              // Маппинг назад: item_N → оригинальный путь/ключ.
+              const flatAnon = flattenLeaves(anonData);
+              const back: Record<string, string> = {};
+              for (const [p, anon] of anonMap) {
+                const v = flatAnon[anon] ?? flatAnon[`/${anon}`];
+                if (typeof v === 'string' && v.trim()) back[p] = v;
+              }
+              mergeSubset(result, buildTreeFromPaths(back), 'anon');
+              guardMediaPaths();
+              const finalIssues = validateTranslation(lang, sentLeaves, result);
+              if (finalIssues.length === 0) {
+                console.log(`   🫥 Анонимный прогон спас попытку (${stuck.length} листьев) — без полного ретрая.`);
+                repairedClean = true;
+              } else {
+                logIssues(lang, finalIssues);
+              }
+            } catch (e) {
+              console.warn(`   ⚠️ Анонимный прогон не удался: ${(e as Error)?.message ?? e}`);
+            }
+          }
+        }
+        if (!repairedClean) {
+          lastResult = result;
+          continue;
+        }
       }
       const stageTimes = [
         `main=${(timings.main / 1000).toFixed(0)}s`,
@@ -357,6 +534,51 @@ async function translateWithRetries(
     } catch (e: any) {
       lastError = e;
       console.warn(`   ⚠️ Ошибка конвейера ${lang} (попытка ${attempt}): ${e?.message ?? e}`);
+    }
+  }
+
+  // Спасение листа: упрямый ключ (модель стабильно ломает один лист — например,
+  // выдумывает плейсхолдер, подсказанный английским именем ключа) не должен
+  // топить весь файл. Лист берётся из результата последней попытки, если он
+  // валиден по-листу; иначе остаётся СТАРЫЙ перевод из целевого файла, если
+  // он есть и валиден. Всё громко логируется; некрытый лист — провал как раньше.
+  if (lastResult != null && fallbackLeaves) {
+    const flatRaw = flattenLeaves(lastResult);
+    const bare: Record<string, unknown> = {};
+    for (const k of Object.keys(flatRaw)) bare[k.replace(/^\//, '')] = flatRaw[k];
+    const leafValid = (k: string, v: unknown): boolean =>
+      typeof v === 'string' &&
+      v.trim() !== '' &&
+      validateTranslation(lang, { [k]: sentLeaves[k] ?? '' }, { [k]: v }).length === 0;
+    const salvaged: Leaves = {};
+    const keptOld: string[] = [];
+    let impossible = false;
+    for (const rawKey of Object.keys(sentLeaves)) {
+      const k = rawKey.replace(/^\//, '');
+      if (leafValid(k, bare[k])) {
+        salvaged[rawKey] = bare[k] as string;
+        continue;
+      }
+      const fb = fallbackLeaves[k] ?? fallbackLeaves[rawKey];
+      if (leafValid(k, fb)) {
+        salvaged[rawKey] = fb;
+        keptOld.push(k);
+        continue;
+      }
+      impossible = true;
+      break;
+    }
+    if (!impossible) {
+      // Медиа-пути в спасённых листьях канонизируем: старый перевод мог
+      // остаться с доисторическим сегментом пути.
+      restoreMediaPaths(lang, sentLeaves, salvaged);
+      console.warn(
+        `   🪢 Спасение: за ${ctx.retries + 1} попыток конвейер не дал полностью валидный перевод — ` +
+          (keptOld.length > 0
+            ? `${keptOld.length} листьев (из ${Object.keys(sentLeaves).length}) остались со СТАРЫМ переводом: ${short(keptOld)}`
+            : 'все листья валидны'),
+      );
+      return salvaged;
     }
   }
   console.error(`   🛑 ${lang}: провалено после ${ctx.retries + 1} попыток (${(lastError as any)?.message ?? lastError}).`);
@@ -426,7 +648,9 @@ async function runContent(ctx: RunCtx): Promise<number> {
     for (const lang of ctx.langs) {
       const targetPath = path.join(ROOT, 'src', 'i18n', lang.toLowerCase(), relPath);
       const target = await readJsonOr<any>(targetPath, {});
-      perLang[lang] = analyzeTree(ruLeaves, flattenLeaves(target), scope, {
+      // Видео-медиа существуют только для ru: в остальных локалях видео-листья
+      // не переводятся и выпиливаются из целевых файлов как «мёртвые».
+      perLang[lang] = analyzeTree(sourceLeavesForLang(ruLeaves, lang), flattenLeaves(target), scope, {
         retranslateChanged: args.retranslateChanged,
       });
     }
@@ -482,7 +706,11 @@ async function runContent(ctx: RunCtx): Promise<number> {
   const tasks: Array<{ item: ContentItem; lang: string; todo: string[] }> = [];
   for (const item of items) {
     for (const lang of ctx.langs) {
-      const todo = keysToTranslate(item.perLang[lang], args.full, Object.keys(item.ruLeaves));
+      const todo = keysToTranslate(
+        item.perLang[lang],
+        args.full,
+        Object.keys(sourceLeavesForLang(item.ruLeaves, lang)),
+      );
       if (todo.length === 0) {
         console.log(`⏭  ${lang} ${item.relPath}: актуально`);
         continue;
@@ -506,14 +734,19 @@ async function runContent(ctx: RunCtx): Promise<number> {
       const sentLeaves: Leaves = {};
       for (const p of todo) sentLeaves[p] = item.ruLeaves[p];
 
-      const translated = await translateWithRetries(ctx, lang, 'text', payload, sentLeaves);
+      // Fallback для спасения листьев — текущие переводы целевого файла
+      // (только для ключей, которые уже есть; новые остаются требованиями).
+      const targetPath = path.join(ROOT, 'src', 'i18n', lang.toLowerCase(), item.relPath);
+      const currentTarget = await readJsonOr<any>(targetPath, {});
+      const translated = await translateWithRetries(
+        ctx, lang, 'text', payload, sentLeaves, undefined, undefined, flattenLeaves(currentTarget ?? {}),
+      );
       if (!translated) {
         failures++;
         continue;
       }
 
       // Запись: только после полного успеха; target читаем свежим (не залипшим).
-      const targetPath = path.join(ROOT, 'src', 'i18n', lang.toLowerCase(), item.relPath);
       const target = await readJsonOr<any>(targetPath, {});
       applyLeaves(target, translated);
       await writeJsonAtomic(targetPath, target);
@@ -594,6 +827,29 @@ function uiContextWindow(
   return context;
 }
 
+/**
+ * Предупреждения мобильного UI: разбухание и мусорные пробелы. Не блокируют
+ * запись — но строка вдвое длиннее оригинала почти наверняка не влезет в
+ * вёрстку; окончательное решение за коллегией (у неё длина теперь в чек-листе).
+ */
+function warnUiBloat(lang: string, sentLeaves: Leaves, translated: Leaves): void {
+  const suspects: string[] = [];
+  for (const k of Object.keys(sentLeaves)) {
+    const tr = translated[k];
+    const ru = sentLeaves[k]!;
+    if (typeof tr !== 'string') continue;
+    if (ru.length >= 8 && tr.length > ru.length * 2 + 10) {
+      suspects.push(`${k}: ${ru.length} → ${tr.length} симв.`);
+    }
+  }
+  if (suspects.length > 0) {
+    console.warn(
+      `   ⚠️ [ui] ${lang}: подозрение на разбухание (${suspects.length}): ` +
+        `${suspects.slice(0, 5).join('; ')}${suspects.length > 5 ? ' …' : ''}`,
+    );
+  }
+}
+
 interface ArbCanon {
   realKeys: string[];
   values: Record<string, string>;
@@ -615,6 +871,41 @@ async function loadArbCanon(psyDir: string): Promise<ArbCanon> {
       canon.values[key] = String(ru[key] ?? '');
     }
   }
+  // Роли спорных ключей (ручной актив): для ключей без описания в @-мете
+  // подставляем note из base/ui/notes.json — модель должна знать, ГДЕ строка
+  // живёт в интерфейсе (таб профиля vs фото, кнопка vs поле, короткий title).
+  const notes = await readJsonOr<Record<string, unknown>>(
+    path.join(ROOT, 'scripts', 'prompts', 'base', 'ui', 'notes.json'),
+    {},
+  );
+  let noted = 0;
+  for (const [key, note] of Object.entries(notes)) {
+    if (key.startsWith('$') || typeof note !== 'string' || !note.trim()) continue;
+    const metaKey = `@${key}`;
+    const existing = canon.meta[metaKey];
+    if (existing && existing.description) continue; // авторская @-мета приоритетнее
+    canon.meta[metaKey] = { ...(existing ?? {}), description: note };
+    noted++;
+  }
+  if (noted > 0) console.log(`📝 notes.json: подставлено ролей для ${noted} ключей без @-меты.`);
+  // ICU-конструкции: Gemma стабильно разворачивает {count, plural, one{…}…}
+  // в псевдо-плейсхолдеры ({Punkt}/{Punkte}) — полный прогон de 2026-09-13
+  // трижды падал на 6 таких ключах. Каждому ICU-ключу уходит явное правило.
+  const ICU_NOTE =
+    'ICU-множественное число: сохрани конструкцию {имя, plural, …} ЦЕЛИКОМ; ' +
+    'переведи только слова ВНУТРИ категорий; категории приведи к системе целевого языка ' +
+    '(например one/other); НЕ превращай слова из категорий в плейсхолдеры и не теряй {имя}.';
+  let icu = 0;
+  for (const key of canon.realKeys) {
+    if (!/\{[a-zA-Z_][a-zA-Z0-9_]*\s*,\s*(plural|select|selectordinal)\s*,/.test(canon.values[key])) continue;
+    const metaKey = `@${key}`;
+    const existing = canon.meta[metaKey];
+    const desc = existing?.description ?? '';
+    if (desc.includes('ICU')) continue;
+    canon.meta[metaKey] = { ...(existing ?? {}), description: desc ? `${desc} ${ICU_NOTE}` : ICU_NOTE };
+    icu++;
+  }
+  if (icu > 0) console.log(`📝 ICU: правило множественного числа подставлено в ${icu} ключей.`);
   return canon;
 }
 
@@ -690,10 +981,20 @@ async function runUi(ctx: RunCtx): Promise<number> {
   let failures = 0;
   const uiTasks: Array<{ lang: string; todo: string[] }> = [];
   for (const lang of ctx.langs) {
-    const todo = keysToTranslate(perLang[lang], args.full, canon.realKeys);
+    let todo = keysToTranslate(perLang[lang], args.full, canon.realKeys);
     if (todo.length === 0) {
       console.log(`⏭  ${lang}: актуально`);
       continue;
+    }
+    // Канарейка: прореживаем todo равномерно по каноническому порядку —
+    // прогон покрывает весь файл, а не одну алфавитную зону ключей.
+    if (args.limitKeys && todo.length > args.limitKeys) {
+      const sampled: string[] = [];
+      for (let i = 0; i < args.limitKeys; i++) {
+        sampled.push(todo[Math.floor((i * todo.length) / args.limitKeys)]!);
+      }
+      console.log(`   🎯 ${lang}: канарейка — ${sampled.length} из ${todo.length} ключей (равномерно)`);
+      todo = sampled;
     }
     uiTasks.push({ lang, todo });
   }
@@ -704,69 +1005,59 @@ async function runUi(ctx: RunCtx): Promise<number> {
   const worker = async (): Promise<void> => {
     while (cursor < uiTasks.length) {
       const { lang, todo } = uiTasks[cursor++]!;
-      const batches: string[][] = [];
-      for (let i = 0; i < todo.length; i += ctx.args.uiBatch) {
-        batches.push(todo.slice(i, i + ctx.args.uiBatch));
-      }
-      console.log(
-        `\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): ключей к переводу ${todo.length}` +
-          (batches.length > 1 ? ` (${batches.length} партий по ≤${ctx.args.uiBatch})` : ''),
-      );
+      console.log(`\n🌐 ${lang} (${LANG_NAMES[lang] ?? lang}): ключей к переводу ${todo.length}`);
 
       // Целевой ARB читается один раз на язык: по нему строится контекст
-      // принятых переводов и в него вписываются партии.
+      // принятых переводов и в него вписывается результат.
       const targetPath = arbFilePath(psyDir, lang);
       const target = await readArbTarget(psyDir, lang);
       if (!('@@locale' in target)) target['@@locale'] = lang;
 
-      const sentAll: Leaves = {};
+      // Источник: плоская карта «ключ → ru» без @-меты. Мета (описания ролей,
+      // placeholders) уходит отдельным полем запроса — контекстом, а не
+      // переводимым содержимым.
+      const payload: Record<string, string> = {};
+      const meta: Record<string, any> = {};
+      const sentLeaves: Leaves = {};
+      for (const key of todo) {
+        payload[key] = canon.values[key];
+        sentLeaves[key] = canon.values[key];
+        const m = canon.meta[`@${key}`];
+        if (m !== undefined) meta[key] = m;
+      }
+      // Контекст принятых переводов: до 50 ключей, ближайших к переводу в
+      // каноническом порядке (соседние эмоции/категории попадают в окно).
+      const context = uiContextWindow(canon.realKeys, todo, target);
+
+      // Тот же конвейер, что у контента: чанки ≤40 листьев, path-map,
+      // editor → review → fix с пер-листовым guard'ом, recovery хвостов.
+      // Fallback для спасения листьев — текущие переводы целевого файла.
+      const translated = await translateWithRetries(
+        ctx, lang, 'ui', payload, sentLeaves, context, meta, arbLeaves(target),
+      );
+      if (!translated) {
+        failures++;
+        continue;
+      }
+      warnUiBloat(lang, sentLeaves, translated);
+
+      // Запись в ARB: @-мета переносится только с placeholders (конвенция cognitive_psy).
       let written = 0;
-      let batchNo = 0;
-      for (const batch of batches) {
-        batchNo++;
-        if (batches.length > 1) console.log(`   📦 партия ${batchNo}/${batches.length}: ${batch.length} ключей`);
-
-        // Контекст принятых переводов: до 50 ключей, ближайших к партии в
-        // каноническом порядке (соседние эмоции/категории попадают в окно).
-        const context = uiContextWindow(canon.realKeys, batch, target);
-
-        // Источник: ключи партии + @-мета как контекст (как в translate-arb).
-        const payload: Record<string, any> = {};
-        for (const key of batch) {
-          payload[key] = canon.values[key];
-          const meta = canon.meta[`@${key}`];
-          if (meta !== undefined) payload[`@${key}`] = meta;
+      for (const key of todo) {
+        const value = translated[key];
+        if (typeof value !== 'string') continue;
+        target[key] = value;
+        written++;
+        const m = canon.meta[`@${key}`];
+        if (m && m.placeholders) {
+          target[`@${key}`] = { placeholders: m.placeholders };
         }
-        const sentLeaves: Leaves = {};
-        for (const key of batch) sentLeaves[key] = canon.values[key];
-
-        const translated = await translateWithRetries(ctx, lang, 'keys', payload, sentLeaves, context);
-        if (!translated) {
-          failures++;
-          continue;
-        }
-
-        // Запись в ARB: @-мета переносится только с placeholders (конвенция cognitive_psy).
-        for (const key of batch) {
-          const value = translated[key];
-          if (typeof value !== 'string') continue;
-          target[key] = value;
-          written++;
-          const meta = canon.meta[`@${key}`];
-          if (meta && meta.placeholders) {
-            target[`@${key}`] = { placeholders: meta.placeholders };
-          }
-        }
-        await writeJsonAtomic(targetPath, target);
-        Object.assign(sentAll, sentLeaves);
       }
-
-      if (Object.keys(sentAll).length > 0) {
-        ctx.state.markTranslated(scope, sentAll);
-        await ctx.state.save();
-        console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, targetPath)}`);
-        judgeTargets[lang] = Object.keys(sentAll).map((k) => `/${k}`);
-      }
+      await writeJsonAtomic(targetPath, target);
+      ctx.state.markTranslated(scope, sentLeaves);
+      await ctx.state.save();
+      console.log(`   💾 Вписано ${written} ключей → ${path.relative(ROOT, targetPath)}`);
+      judgeTargets[lang] = todo.map((k) => `/${k}`);
     }
   };
   await Promise.all(Array.from({ length: Math.min(ctx.concurrency, uiTasks.length) }, worker));

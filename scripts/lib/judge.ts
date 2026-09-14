@@ -332,6 +332,17 @@ export async function applyJudgeRecommendations(
       skipped.push({ id, path: p, reason: 'путь отсутствует в файле' });
       continue;
     }
+    // Несущие пробелы по краям: если ru-оригинал начинается/кончается
+    // пробелом, строка склеивается с соседним текстом в UI, и правка,
+    // теряющая этот пробел (или добавляющая лишний), ломает рендер.
+    const ruVal = sentLeaves[p];
+    if (typeof ruVal === 'string') {
+      const edges = (s: string) => `${/^\s/.test(s) ? 'L' : ''}${/\s$/.test(s) ? 'T' : ''}`;
+      if (edges(ruVal) !== edges(proposed)) {
+        skipped.push({ id, path: p, reason: 'несущий пробел по краю строки потерян/добавлен' });
+        continue;
+      }
+    }
     if (flat[p] === proposed) {
       skipped.push({ id, path: p, reason: 'правка уже применена' });
       continue;

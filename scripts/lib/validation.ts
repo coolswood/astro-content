@@ -18,18 +18,60 @@
  */
 import { flattenLeaves, type Leaves } from './tree.js';
 import { validateValue } from './lang-codes.js';
+import { expectedMediaPath, isMediaPath } from './media-paths.js';
 
 export interface ValidationIssue {
   path: string;
   message: string;
 }
 
+/**
+ * Вырезает ICU-конструкции «{name, plural|select|selectordinal, …}» вместе со
+ * вложенными {…} категорий (скобочный баланс). Слова внутри категорий —
+ * не плейсхолдеры: на кириллице наивный regex их и не ловил, а на латинице
+ * ({Punkt}, {Tage}) давал ложные «лишние плейсхолдеры» и отбраковки в guard'ах.
+ */
+export function stripIcuConstructs(value: string): string {
+  const out: string[] = [];
+  let i = 0;
+  while (i < value.length) {
+    const brace = value.indexOf('{', i);
+    if (brace === -1) {
+      out.push(value.slice(i));
+      break;
+    }
+    const head = value.slice(brace + 1, brace + 80);
+    const m = head.match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*,\s*(?:plural|select|selectordinal)\s*,/);
+    if (!m) {
+      out.push(value.slice(i, brace + 1));
+      i = brace + 1;
+      continue;
+    }
+    // Скобочный баланс конструкции от её открывающей скобки.
+    out.push(value.slice(i, brace)); // текст до конструкции остаётся
+    let depth = 0;
+    let j = brace;
+    for (; j < value.length; j++) {
+      if (value[j] === '{') depth++;
+      else if (value[j] === '}') {
+        depth--;
+        if (depth === 0) break;
+      }
+    }
+    i = j < value.length ? j + 1 : value.length; // конструкция исчезает целиком
+  }
+  return out.join('');
+}
+
 /** Имена плейсхолдеров: {days}, {count, plural, ...} → ["days"], ["count"]. */
 export function extractPlaceholderNames(value: string): string[] {
+  // ICU-конструкции вырезаются до извлечения: содержимое их категорий —
+  // переводимые слова, а не плейсхолдеры (сверяются отдельно, extractIcuConstructs).
+  const stripped = stripIcuConstructs(value);
   const names: string[] = [];
   const re = /\{([a-zA-Z_][a-zA-Z0-9_]*)(?:\s*,)?/g;
   let m;
-  while ((m = re.exec(value)) !== null) names.push(m[1]);
+  while ((m = re.exec(stripped)) !== null) names.push(m[1]);
   return names;
 }
 
@@ -44,6 +86,20 @@ export function extractIcuConstructs(value: string): string[] {
   const re = /\{([a-zA-Z_][a-zA-Z0-9_]*)\s*,\s*(plural|select|selectordinal)\s*,/g;
   let m;
   while ((m = re.exec(value)) !== null) out.push(`${m[1]}:${m[2]}`);
+  return out;
+}
+
+/**
+ * Невалидные плейсхолдер-токены: {…}, который не является ни простым {name},
+ * ни ICU-конструкцией. Модель подглядывает python-форматы ({:.0f}) у соседних
+ * полей или оставляет мусорные скобки — gen_l10n такое не переваривает.
+ */
+export function invalidPlaceholderTokens(value: string): string[] {
+  const stripped = stripIcuConstructs(value);
+  const out: string[] = [];
+  for (const tok of stripped.match(/\{[^{}]*\}/g) ?? []) {
+    if (!/^\{[a-zA-Z_][a-zA-Z0-9_]*\}$/.test(tok)) out.push(tok);
+  }
   return out;
 }
 
@@ -129,6 +185,20 @@ export function validateTranslation(
       continue;
     }
 
+    // 3.7. Медиа-пути (stories.json: img/video) не переводятся: файлы существуют
+    // только для en и ru, поэтому во всех языках, кроме ru, сегмент пути — «en».
+    // Модель могла «перевести» имя файла или подставить свой язык.
+    if (isMediaPath(ru[p])) {
+      const expectedPath = expectedMediaPath(ru[p], lang);
+      if (translatedValue !== expectedPath) {
+        issues.push({
+          path: p,
+          message: `медиа-путь изменён — должно быть «${expectedPath}», получено «${translatedValue}»`,
+        });
+      }
+      continue; // путь — не текст: плейсхолдеры/пробелы/алфавит не проверяем
+    }
+
     // 3. Плейсхолдеры: сравниваются МНОЖЕСТВА имён (ICU-категории различаются
     // по языкам, поэтому количество вхождений одного имени не фиксировано).
     const expectedPh = new Set(extractPlaceholderNames(ru[p]));
@@ -145,6 +215,25 @@ export function validateTranslation(
       if (lostIcu.length)
         parts.push(`потеряны ICU-конструкции: ${lostIcu.map((c) => c.replace(':', ', ')).join('; ')}`);
       issues.push({ path: p, message: `плейсхолдеры — ${parts.join('; ')}` });
+    }
+
+    // 3.5. Невалидные плейсхолдер-токены: {…}, который не является ни простым
+    // {name}, ни ICU-конструкцией ({:.0f}, {1}, «{count }») — gen_l10n такое
+    // не переваривает (модель подглядывает python-форматы у соседних полей).
+    const badTokens = invalidPlaceholderTokens(translatedValue);
+    if (badTokens.length > 0) {
+      issues.push({ path: p, message: `невалидные плейсхолдер-токены: ${badTokens.join(', ')}` });
+    }
+
+    // 3.6. Несущие пробелы по краям: строка склеивается с соседним текстом в
+    // RichText-спанах БЕЗ разделителя (mood_trend_improved + «12%») — краевой
+    // пробел оригинала обязателен в переводе, лишний — рвёт вёрстку.
+    const edges = (s: string) => `${/^\s/.test(s) ? 'L' : ''}${/\s$/.test(s) ? 'T' : ''}`;
+    if (edges(ru[p]) !== edges(translatedValue)) {
+      issues.push({
+        path: p,
+        message: `несущие пробелы — край не совпадает с оригиналом (ru: «${edges(ru[p]) || '—'}», перевод: «${edges(translatedValue) || '—'}»)`,
+      });
     }
 
     // 4. Теги сверяются на уровне файла (см. п.6) — по-листово только алфавит.

@@ -9,9 +9,11 @@
 - **Контент**: `src/i18n/ru` — источник истины, переводы в `src/i18n/<lang>`
   (ar cs de en es fr he id it ja ko nl pl pt pt_br ru sv tr uk).
 - **UI приложения**: `cognitive_psy/lib/l10n/app_ru.arb` → `app_<lang>.arb`
-  (переводится из этого репозитория, режим `--ui`).
-- **Раннер**: `bun scripts/translate.ts` — трёхстадийный конвейер
-  (перевод → редактура → тех-аудит) на локальной модели vLLM.
+  (переводится из этого репозитория, режим `--ui`; те же 4 стадии и чанки,
+  что у контента, + специфика мобильного интерфейса: лаконичность,
+  плейсхолдеры {…}/ICU, роль строки по @-мете).
+- **Раннер**: `bun scripts/translate.ts` — конвейер main → editor → review →
+  fix на локальной модели vLLM.
   Подробности и команды — [scripts/AI_INSTRUCTIONS.md](scripts/AI_INSTRUCTIONS.md).
 
 Требования к качеству текста — в [TRANSLATION_GUIDELINES.md](TRANSLATION_GUIDELINES.md)

@@ -6,12 +6,18 @@
 # обновляется на месте результатами (review + verify) или ошибкой — по одному
 # комментарию на PR вместо кучи на каждый пуш.
 #
-# Требования к раннеру: инстанс github-runner на GX10 (пользователь coolswood).
-# Из-под него доступны ~/pr-agent-lab (обёртка bin/pr-review-ci, лимитер :8102,
-# локальная Gemma через llm-router — ревью идёт фоновым приоритетом и не душит
-# боевую модель) и Infisical: LOCAL_LLM_TOKEN берётся обёрткой из ~/local-llm-box,
-# на диск и в секреты GitHub не пишется. Профиль фреймворка (исключения
-# генератов/l10n/доков) включается авто-детектом по чекауту репо.
+# Требования к раннеру: инстанс forgejo-runner на GX10 (пользователь coolswood,
+# метки self-hosted/gx10 — с 2026-09-13 CI репозиториев живёт в Forgejo Actions).
+# Из-под раннера доступны ~/pr-agent-lab (обёртка bin/pr-review-ci, лимитер
+# :8102, локальная Gemma через llm-router — ревью идёт фоновым приоритетом и не
+# душит боевую модель) и Infisical: LOCAL_LLM_TOKEN берётся обёрткой из
+# ~/local-llm-box, на диск и в секреты не пишется. Профиль фреймворка
+# (исключения генератов/l10n/доков) включается авто-детектом по чекауту репо.
+#
+# Транспорт — Forgejo API v1, не gh: secrets.GITHUB_TOKEN на Forgejo — это
+# токен инстанса Forgejo (GitHub API его отвергает: «Bad credentials (HTTP
+# 401)»), а gh не умеет /api/v1. bin/pr-review-ci ходит curl'ом на локальный
+# loopback-порт Forgejo (тот же бокс, что раннер).
 
 name: ai-review
 
@@ -36,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          # Полный чекаут не нужен: дифф берётся через `gh pr diff`, а чекаут —
+          # Полный чекаут не нужен: дифф берётся из Forgejo API, а чекаут —
           # чтобы детектор профиля фреймворка видел pubspec.yaml/go.mod/package.json.
           fetch-depth: 1
 
@@ -45,7 +51,12 @@ jobs:
           # PATH юнита раннера не содержит ~/.local/bin, где живут gh и uv —
           # добавляем его сами (infisical/curl/git доступны в /usr/bin).
           PATH: /home/coolswood/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Локальный loopback-маппинг Forgejo (compose: 127.0.0.1:8101->3000):
+          # раннер и Forgejo живут на одном боксе, tailnet/TLS не нужны.
+          FORGEJO_API: http://127.0.0.1:8101/api/v1
+          # Авто-токен джобы = токен инстанса Forgejo (НЕ GitHub-токен); живьём
+# проверено 2026-09-13: под ним проходят и дифф, и постинг комментариев.
+          FORGEJO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
