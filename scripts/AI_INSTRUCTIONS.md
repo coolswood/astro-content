@@ -245,8 +245,14 @@ bun scripts/translate.ts story/start.json --full
 
 ```bash
 bun check-translations.ts <lang>   # чужие алфавиты по всему каталогу локали
+bun scripts/canonicalize-media-paths.ts   # медиа-пути (img/video): сегмент — en (ru — ru); --apply исправляет
 bun test                           # тесты state/диффа/валидации/дерева
 ```
+
+Медиа-пути (`stories.json`: поля img/video) не переводятся: локализованных
+медиа нет, все языки кроме ru ссылаются на `en` (см. `scripts/lib/media-paths.ts`).
+Конвейер восстанавливает такие пути автоматически; валидация (правило 3.7)
+отклоняет лист с изменённым путём — включая правки коллегии.
 
 ## Аудит статьи: судейский пайплайн
 

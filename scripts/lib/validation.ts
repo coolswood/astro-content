@@ -18,6 +18,7 @@
  */
 import { flattenLeaves, type Leaves } from './tree.js';
 import { validateValue } from './lang-codes.js';
+import { expectedMediaPath, isMediaPath } from './media-paths.js';
 
 export interface ValidationIssue {
   path: string;
@@ -182,6 +183,20 @@ export function validateTranslation(
     if (typeof translatedValue !== 'string' || translatedValue.trim() === '') {
       issues.push({ path: p, message: 'пустое или нестроковое значение' });
       continue;
+    }
+
+    // 3.7. Медиа-пути (stories.json: img/video) не переводятся: файлы существуют
+    // только для en и ru, поэтому во всех языках, кроме ru, сегмент пути — «en».
+    // Модель могла «перевести» имя файла или подставить свой язык.
+    if (isMediaPath(ru[p])) {
+      const expectedPath = expectedMediaPath(ru[p], lang);
+      if (translatedValue !== expectedPath) {
+        issues.push({
+          path: p,
+          message: `медиа-путь изменён — должно быть «${expectedPath}», получено «${translatedValue}»`,
+        });
+      }
+      continue; // путь — не текст: плейсхолдеры/пробелы/алфавит не проверяем
     }
 
     // 3. Плейсхолдеры: сравниваются МНОЖЕСТВА имён (ICU-категории различаются

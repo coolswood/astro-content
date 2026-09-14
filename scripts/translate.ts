@@ -61,6 +61,7 @@ import {
   type ValidationIssue,
 } from './lib/validation.js';
 import { judgeFile } from './lib/judge.js';
+import { restoreMediaPaths } from './lib/media-paths.js';
 import {
   flattenLeaves,
   buildSubtree,
@@ -350,6 +351,18 @@ async function translateWithRetries(
         }
       }
 
+      // Медиа-пути (stories.json: img/video) не переводятся: у моделей рука
+      // дёргается «локализовать» сегмент пути или имя файла. Чинится
+      // детерминированно до валидации, без расхода ретраев; повторяется после
+      // каждой добивки (ответ добивки мержится в result без этого guard'а).
+      const guardMediaPaths = (): void => {
+        const fixes = restoreMediaPaths(lang, sentLeaves, result);
+        if (fixes.length > 0) {
+          console.warn(`   🛠 [${lang}] восстановлены медиа-пути: ${short(fixes)}`);
+        }
+      };
+      guardMediaPaths();
+
       const issues = validateTranslation(lang, sentLeaves, result);
       if (issues.length > 0) {
         console.warn(`   ❌ Валидация ${lang} не пройдена (попытка ${attempt}):`);
@@ -376,6 +389,7 @@ async function translateWithRetries(
               result,
               groups,
             );
+            guardMediaPaths();
             const again = validateTranslation(lang, sentLeaves, result);
             if (fixed > 0 && again.length === 0) {
               console.log(`   🩹 Пары разведены (${fixed} правок) — валидация пройдена, файл спасён без ретрая.`);
@@ -423,6 +437,7 @@ async function translateWithRetries(
                 console.warn(`   ⚠️ Добивка не удалась: ${(e as Error)?.message ?? e}`);
                 break;
               }
+              guardMediaPaths();
               const again = validateTranslation(lang, sentLeaves, result);
               if (again.length === 0) {
                 console.log(`   🩹 Добивка спасла попытку (${targets.length} листьев перегнано) — без полного ретрая.`);
@@ -482,6 +497,7 @@ async function translateWithRetries(
                 if (typeof v === 'string' && v.trim()) back[p] = v;
               }
               mergeSubset(result, buildTreeFromPaths(back), 'anon');
+              guardMediaPaths();
               const finalIssues = validateTranslation(lang, sentLeaves, result);
               if (finalIssues.length === 0) {
                 console.log(`   🫥 Анонимный прогон спас попытку (${stuck.length} листьев) — без полного ретрая.`);
@@ -553,6 +569,9 @@ async function translateWithRetries(
       break;
     }
     if (!impossible) {
+      // Медиа-пути в спасённых листьях канонизируем: старый перевод мог
+      // остаться с доисторическим сегментом пути.
+      restoreMediaPaths(lang, sentLeaves, salvaged);
       console.warn(
         `   🪢 Спасение: за ${ctx.retries + 1} попыток конвейер не дал полностью валидный перевод — ` +
           (keptOld.length > 0
