@@ -5,6 +5,7 @@
 Японский - TRANSLATION_GUIDELINES_JP.md
 Украинский - TRANSLATION_GUIDELINES_UK.md
 Немецкий - TRANSLATION_GUIDELINES_DE.md
+Английский - TRANSLATION_GUIDELINES_EN.md
 
 Если перевод уже существует, значит внимательно проведи его контроль качества сверяясь с оригиналом (ru).
 
