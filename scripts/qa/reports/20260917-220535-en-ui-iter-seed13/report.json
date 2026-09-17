@@ -1,0 +1,1596 @@
+{
+  "meta": {
+    "Дата": "2026-09-17T19:05:35.657Z",
+    "Метка": "en-ui-iter-seed13",
+    "Сравнение": "NEW = рабочее дерево; OLD = --old-dir backups/ui-en-canary-20260917",
+    "Файлы": "ui/cognitive_psy",
+    "Локали": "en",
+    "Сэмпл/файл": 30,
+    "Seed": 13,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "31f3b61b8ac692a1f2d70200931d7e6363c07a33"
+  },
+  "results": {
+    "ui/cognitive_psy": {
+      "en": [
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/share_no",
+          "ru": "Ваша запись больше не видна!",
+          "oldText": "Your entry is no longer visible!",
+          "newText": "Your entry is no longer visible",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Перевод B точнее передает пунктуацию оригинала. В интерфейсах важно сохранять эмоциональный окрас или акцент, заданный восклицательным знаком, если он есть в исходном тексте.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "отсутствует восклицательный знак, который есть в оригинале"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "Translation A correctly preserves the punctuation (exclamation mark) from the original text, whereas Translation B omits it.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "missing exclamation mark"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/homeBotTestExpired2",
+          "ru": "Похоже, результаты теста <b>{testName}</b> устарели. Давай проверим, как ты чувствуешь себя сейчас!",
+          "oldText": "Looks like your <b>{testName}</b> results are out of date. Let’s check how you’re feeling now!",
+          "newText": "It looks like your <b>{testName}</b> test results are outdated. Let’s check in on how you’re feeling today!",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more concise and natural for a mobile app interface. Translation B adds unnecessary words ('test', 'today') that weren't in the original and feels slightly more wordy.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'test' (redundant since testName is used) and 'today' (not in original)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'check in on how you're feeling' is slightly more heavy than the punchy 'check how you're feeling'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A sounds more natural and warm, using the idiomatic 'check in on' which fits the 'understanding friend' tone perfectly. Translation B is grammatically correct but feels slightly more abrupt.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'check how you're feeling' is slightly less idiomatic in a mental health context than 'check in on how you're feeling'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/comparison_balance_title",
+          "ru": "Баланс аргументов",
+          "oldText": "Argument balance",
+          "newText": "Balance of arguments",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation A is a more natural and standard way to express this concept in a psychological or logical context. Translation B sounds slightly more like a technical or financial term (e.g., 'account balance').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Sounds a bit clipped and more like a technical metric than a cognitive process."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 80
+              },
+              "reason": "Translation A follows the standard English UX pattern for titles, using a concise noun adjunct construction. Translation B is grammatically correct but sounds unnecessarily heavy and formal for an app interface.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses a wordy 'of' construction instead of a more natural noun adjunct for a heading"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/home_bot_first_visit_header",
+          "ru": "Привет! Рад нашему знакомству",
+          "oldText": "Hi! So glad we’ve met",
+          "newText": "Hi! It’s lovely to meet you",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A uses a natural, idiomatic expression for a first meeting. Translation B sounds awkward and uses the Present Perfect incorrectly in this context, making it sound like the meeting happened a long time ago.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'So glad we've met' sounds unnatural for a greeting; 'It's lovely to meet you' or 'Nice to meet you' is the standard idiomatic way to express this."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation B uses a natural, idiomatic greeting common for a warm, supportive tone. Translation A sounds slightly awkward and overly literal, as if describing a past event rather than a greeting.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'So glad we've met' sounds unnatural for an initial greeting; it implies a reflection on a meeting that has already concluded."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/gentle",
+          "ru": "Нежность",
+          "oldText": "Tenderness",
+          "newText": "Gentleness",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "In the context of emotions and mental well-being, 'Tenderness' is the standard and most natural way to express 'Нежность'. 'Gentleness' refers more to a person's manner or a soft touch, rather than the feeling itself.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Gentleness sounds more like a character trait (being mild/not rough) rather than an emotional state."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "In the context of emotions and mental well-being, 'Tenderness' is the direct and most accurate translation for 'Нежность'. 'Gentleness' refers more to a manner of behavior or a soft touch rather than the feeling itself.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Gentleness describes a quality of character or action (softness/mildness) rather than the specific emotion of tenderness."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/quality_disgusting",
+          "ru": "Отвратительно",
+          "oldText": "Awful",
+          "newText": "Disgusting",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "In the context of a mood tracker or emotional state, 'Awful' is the natural way to describe a feeling, whereas 'Disgusting' refers to something that causes physical or moral revulsion.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Translates the literal meaning of 'отвратительно' as a physical sensation/quality rather than an emotional state (mood)."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "In the context of emotions/moods, 'Disgusting' is the direct and standard translation for 'Отвратительно' (the feeling of disgust), whereas 'Awful' is more generic and often refers to a situation or quality rather than a specific visceral emotion.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Awful is a bit too vague for a specific emotion; it sounds more like 'terrible' than the specific feeling of disgust."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/das_item_impeccability",
+          "ru": "Перфекционизм",
+          "oldText": "Perfectionism",
+          "newText": "Impeccability",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 40
+              },
+              "reason": "The original term 'Перфекционизм' refers to the psychological trait/concept of perfectionism. Translation A 'Impeccability' means the state of being faultless or flawless, which is a positive quality and a different concept entirely.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "Impeccability is a positive attribute (faultlessness), whereas perfectionism is the psychological phenomenon/trait described in CBT."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 30
+              },
+              "reason": "The original term 'Перфекционизм' refers to the psychological trait/concept of perfectionism. Translation A is the direct and correct term, while Translation B ('Impeccability') refers to the state of being faultless, which is a different concept and not a psychological term.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "Impeccability is a state of being flawless, not the psychological phenomenon of perfectionism."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/homeBotQuoteIntro5",
+          "ru": "Делюсь глубокой мыслью — пусть она вдохновит тебя сегодня",
+          "oldText": "Sharing a deep thought — may it inspire you today",
+          "newText": "Sharing a deep thought — let it inspire you today",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B uses 'may it inspire you', which is a more natural and idiomatic way to express a wish or a blessing in English. Translation A's 'let it inspire you' sounds slightly more like a command or a direct instruction, which slightly misses the warm, poetic tone of the original.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The imperative 'let it' is a bit more forceful/directive than the gentle wish intended in the Russian original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B uses the natural imperative 'let it', which fits the warm, supportive tone of the app. Translation A uses 'may it', which sounds overly formal, poetic, or archaic for a modern mobile interface.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'may it' is too formal/literary for a friendly AI assistant/app context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/homeBotReadArticle2",
+          "ru": "Выбрал для тебя полезный материал на сегодня — загляни, когда будет свободная минутка.",
+          "oldText": "I’ve chosen a helpful read for today — check it out when you have a free minute.",
+          "newText": "I’ve selected some helpful material for you today — take a look when you have a free moment.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A sounds more natural and idiomatic for a supportive AI assistant, using 'helpful read' instead of the clunky 'helpful material'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'helpful material' sounds slightly formal and academic compared to the warm, friendly tone of the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more natural and follows the 'understanding friend' tone perfectly. Translation B uses 'a helpful read', which is a bit more restrictive than the original 'material' (материал), and 'free minute' is a slightly less idiomatic way to express availability than 'free moment'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'a helpful read' is a bit more specific than the original 'material', and 'free minute' sounds slightly less natural than 'free moment' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/homeBotStatsDaysInRow0",
+          "ru": "Занятий подряд уже <b>{days}</b> д. — отличный темп!",
+          "oldText": "Day <b>{days}</b> of practicing in a row — great pace!",
+          "newText": "<b>{days}</b> days in a row — great momentum!",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation B is much more natural and idiomatic for a gamified UX context. Translation A is clunky and uses a literal structure ('Day X of practicing') that doesn't match the original meaning of 'X consecutive days'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrasing 'Day X of practicing' sounds like a manual instruction rather than a celebratory achievement; it also changes the meaning from 'X days in a row' to 'The X-th day'."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Using 'pace' is okay, but 'momentum' in B is a much better fit for gamification/streaks."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is punchy, idiomatic, and perfectly fits the gamification/UX tone. Translation B is wordy, awkward, and sounds like a literal translation of the Russian structure.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'Day {days} of practicing in a row' is unidiomatic and heavy for a UI notification."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The word 'pace' is a bit more literal/mechanical than the more natural 'momentum' used in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/daybook_ai_loading_phrase_3",
+          "ru": "Формирую психологический портрет...",
+          "oldText": "Creating a psychological profile...",
+          "newText": "Building your psychological profile...",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A uses the possessive 'your', which is much more natural for a personalized UX experience, whereas B sounds like a generic system process.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Lacks the personal touch ('your') expected in a user-centric app interface."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation B is more engaging and follows the 'understanding friend' tone by using the possessive 'your', making it feel personalized rather than a generic system process.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Sounds slightly more like a robotic system status than a personalized app experience."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/breathing_sec_left",
+          "ru": "сек. осталось",
+          "oldText": "sec left",
+          "newText": "sec. left",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation B correctly uses a period for the abbreviation 'sec.', which is standard for UI elements and follows the original's punctuation. Translation A omits the period, making it look like a typo or an incomplete word.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "missing period in abbreviation 'sec'"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 95
+              },
+              "reason": "Both are acceptable for a UI timer, but Translation A follows standard English punctuation conventions for abbreviations. In English, abbreviations like 'sec.' typically require a period to distinguish them from full words, making it look more polished and professional.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing period after the abbreviation 'sec'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/mood_trend_improved",
+          "ru": "Состояние заметно улучшилось за {period} на ",
+          "oldText": "Overall, things improved noticeably over {period} by ",
+          "newText": "Your mood improved significantly over {period} by ",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Translation B is more natural and aligns with the app's focus on mood tracking, whereas Translation A is too vague ('things improved').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Overall, things improved' sounds a bit colloquial and vague for a mental health context compared to 'Your mood improved'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The original 'Состояние' in a mental health app context specifically refers to the user's state/mood, which 'things' fails to capture accurately."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Translation A is more direct and aligns with the app's focus on mood tracking, whereas B is too vague and uses 'things', which sounds unnatural in this context. Both translations suffer from a dangling 'by' at the end, likely due to the original Russian sentence being cut off.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'things improved' is too colloquial and vague for a mental health app; 'Your mood improved' is more precise and professional."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'Overall', which is not in the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/homeBotDayFirst",
+          "ru": "<p>Привет! Я твой проводник в этом приложении. Моя задача — быть рядом и бережно поддерживать тебя, когда тревожно, тяжело или просто нужно разложить мысли по полочкам.</p><p>Для начала я подобрал несколько простых шагов, чтобы ты мог познакомиться с практиками без спешки и давления.</p><p>Заглядывай сюда почаще и делись тем, что на душе — так я смогу лучше чувствовать твоё состояние и давать именно то, что тебе сейчас поможет.</p>",
+          "oldText": "<p>Hi! I’m your guide in this app. My job is to be by your side and gently support you when you feel anxious, when things are hard, or when you simply need to sort your thoughts out.</p><p>To start, I’ve picked out a few simple steps so you can get to know the practices at your own pace, with no rush and no pressure.</p><p>Drop by often and share what’s on your mind — that way I can sense how you’re doing even better and offer exactly what will help you right now.</p>",
+          "newText": "<p>Hi! I’m your guide in this app. My job is to be right here, supporting you gently whenever you feel anxious, overwhelmed, or just need to organize your thoughts.</p><p>To start, I’ve picked out a few simple steps so you can get to know the practices without any rush or pressure.</p><p>Stop by often and share what’s on your mind — that way, I can better understand how you’re feeling and provide exactly what you need right now.</p>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and follows the UX guidelines perfectly, especially with the use of 'overwhelmed' for 'тяжело' and 'right here' for 'быть рядом'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The repetition of 'when you feel... when things are... when you...' is slightly clunky compared to the smoother flow of A."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Sense how you're doing' is a bit literal for 'чувствовать состояние'; 'understand how you're feeling' is more natural in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A captures the warm, supportive 'expert friend' tone more effectively with idiomatic phrasing like 'sort your thoughts out' and 'at your own pace'. Translation B feels slightly more formal and less fluid.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'organize your thoughts' is a bit more clinical/stiff than the idiomatic 'sort your thoughts out' in A. 'Stop by' is slightly less inviting than 'Drop by' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/intro_new_name_category",
+          "ru": "ЗНАКОМСТВО",
+          "oldText": "GETTING TO KNOW YOU",
+          "newText": "INTRODUCTION",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "In the context of a mental health app or a user onboarding experience, 'Getting to know you' sounds much warmer and more personal, whereas 'Introduction' is overly formal and academic.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too formal/dry for a supportive 'expert friend' tone"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 80
+              },
+              "reason": "Translation A uses a warm, engaging, and person-centered tone ('Getting to know you') which fits the 'understanding friend' persona, whereas Translation B is overly formal and dry ('Introduction').",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too academic/formal for a supportive mental health app context"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/use_discount",
+          "ru": "Используйте скидку!",
+          "oldText": "Use the discount!",
+          "newText": "Use your discount!",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A uses the possessive 'your', which is more natural and engaging for a user-centric interface, whereas Translation B sounds slightly detached and robotic.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Use of the definite article 'the' instead of a possessive pronoun makes the tone less personal and more like a generic instruction."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "In English UX writing, using the possessive 'your' makes the call to action feel more personal and engaging, whereas 'the discount' sounds slightly detached and robotic.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Sounds a bit impersonal/mechanical compared to the standard 'your' in marketing/UX."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/errors_due_shortdesc",
+          "ru": "Жёсткие «должен/должна» к себе и другим",
+          "oldText": "Rigid \"must\" rules for yourself and others",
+          "newText": "Rigid \"should\" statements toward yourself and others",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation B uses the canonical CBT term 'should statements' as required by the glossary, whereas Translation A uses a non-standard 'must rules'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'must rules' instead of the required 'should statements' for 'долженствование'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A uses the canonical CBT term 'should statements' as specified in the glossary, whereas Translation B uses 'must rules', which is non-standard and sounds unnatural.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Does not use the required term 'should statements' for 'долженствование'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'must rules' is awkward and not idiomatic in a psychological context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/daybook_title",
+          "ru": "Умный ежедневник",
+          "oldText": "Smart Diary",
+          "newText": "Smart Journal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 100
+              },
+              "reason": "Translation A follows the project's specific glossary and brand guidelines, using 'Smart Journal' as the product name. Translation B uses 'Diary', which is explicitly marked as legacy and should not be used.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Uses 'Diary' instead of the required 'Journal' for the product name."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 70,
+                "new": 100
+              },
+              "reason": "According to the project glossary, 'Smart Journal' is the specific brand name for the product, whereas 'Diary' is the legacy term that has been replaced by 'Journal'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Uses 'Diary' instead of the required brand name 'Smart Journal'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/sleep_quality_subtitle",
+          "ru": "Показатели сна в динамике",
+          "oldText": "Sleep quality trends over time",
+          "newText": "Sleep trends",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A is concise and perfectly fits the UX standard for a dashboard or chart title. Translation B is unnecessarily wordy and adds 'quality', which is not present in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'quality', which changes the scope from general sleep metrics to just quality"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too long for a UI header; 'over time' is redundant when 'trends' is used"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Translation A accurately captures the full meaning of the original, including the concept of 'dynamics' (trends over time), whereas B is too brief and loses the specific nuance of 'sleep metrics/indicators'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing the 'sleep metrics/indicators' aspect and the sense of progression/dynamics implied in the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/notification_every_day_2_body",
+          "ru": "Откройте приложение и уделите себе 5 минут!",
+          "oldText": "Open the app and take a 5-minute break!",
+          "newText": "Open the app and take 5 minutes for yourself!",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation B is a faithful and natural rendering of the original intent. Translation A adds the word 'break', which changes the meaning from 'spending time on yourself' to 'taking a break', which is a slight semantic shift.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'break', which wasn't in the original and slightly alters the focus from self-care to rest."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A is a faithful and natural rendering of the original intent. Translation B introduces an addition ('break') that changes the meaning from 'spending time on oneself' to 'taking a break from something'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "The word 'break' is not in the original and shifts the focus from self-care to a pause in activity."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/homeBotStatsDaysCommon0",
+          "ru": "Здорово! Визитов уже <b>{days}</b> — приятно, что ты заглядываешь.",
+          "oldText": "Wonderful! You’ve dropped by <b>{days}</b> times already.",
+          "newText": "Great job! You’ve visited <b>{days}</b> times — it’s lovely to see you checking in.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A perfectly captures the warm, supportive 'expert friend' tone and includes the second part of the original sentence, whereas B omits it. A's use of 'checking in' is also more idiomatic for a mental health app than B's 'dropped by'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The second clause 'приятно, что ты заглядываешь' is completely missing."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A is punchy, natural, and perfectly matches the warm, concise UX tone. Translation B is slightly too wordy and 'checking in' feels a bit heavy for this context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'it’s lovely to see you checking in' is a bit long for a celebratory microcopy and feels slightly more formal/stilted than the original 'приятно, что ты заглядываешь'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/intro_new_problem_selfesteem",
+          "ru": "Недовольство собой",
+          "oldText": "Feeling unhappy with myself",
+          "newText": "Dissatisfaction with myself",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation B is a concise, noun-based heading that accurately reflects the original Russian noun phrase. Translation A uses a gerund phrase ('Feeling unhappy...'), which sounds more like a description of a state rather than a formal title or category name.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too wordy for a heading; 'Feeling unhappy with myself' sounds like a sentence fragment rather than a label."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 75
+              },
+              "reason": "Translation B sounds much more natural and empathetic for a mental health app, whereas A is a heavy, noun-based construction that feels like a clinical diagnosis or a textbook heading.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too formal and noun-heavy ('Dissatisfaction with...'); sounds like a clinical label rather than a relatable feeling."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/article_activity_title",
+          "ru": "Эта техника есть в разделе активности. Вы можете взять ее в работу!",
+          "oldText": "This technique is in the Activities section. Try it out!",
+          "newText": "This technique is available in the Activities section. You can start working on it!",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 85
+              },
+              "reason": "Translation B is much more natural and follows the UX guidelines for a 'supportive friend' tone. Translation A is a bit heavy and literal ('start working on it' sounds like a chore).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'start working on it' is a bit clunky and formal for a friendly app; 'Try it out' is more idiomatic for an invitation to action."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 78
+              },
+              "reason": "Translation A is much more natural and follows the UX guidelines for a warm, supportive tone. Translation B is too literal and heavy, sounding like a direct translation of the Russian 'взять в работу'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'start working on it' is a clunky calque of 'взять в работу' and sounds overly formal/laborious for a mental health app; 'Try it out!' is the idiomatic way to express this in English UX."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'is available' adds unnecessary wordiness compared to the direct 'is in'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/homeBotQuoteIntro6",
+          "ru": "Предлагаю ненадолго остановиться и прислушаться к этой мысли",
+          "oldText": "I suggest pausing for a moment and listening to this thought",
+          "newText": "I suggest pausing for a moment to listen to this thought",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B uses a more natural infinitive structure ('to listen') to express purpose, whereas Translation A uses a gerund ('and listening') which sounds slightly more like a list of two separate actions rather than a single cohesive suggestion.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The 'and + -ing' construction is grammatically correct but feels slightly less fluid and purposeful than the infinitive 'to listen' in this context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more idiomatic and flows better as a natural suggestion. Translation B creates a slight grammatical imbalance by using 'and listening', which makes the two actions feel like separate, heavy steps rather than a single fluid process.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'and listening' is grammatically correct but less smooth than the infinitive construction 'to listen' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/story_distortions_description_1",
+          "ru": "Исследования Аарона Бека показывают, что большинство из нас хранит неадаптивные схемы мышления, которые остаются неактивными, пока не столкнутся со стрессовыми жизненными событиями.",
+          "oldText": "Research by Aaron Beck showed that many of us hold maladaptive thinking patterns that stay dormant until triggered by stressful events.",
+          "newText": "Aaron Beck's research shows that most of us hold unhelpful thinking patterns that often remain outside of awareness until we face stressful life events.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation B follows the project's specific CBT terminology guidelines (using 'unhelpful' instead of 'maladaptive' and 'remain outside of awareness' for the concept of latent patterns) and sounds more natural for a mental well-being context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'maladaptive' instead of the preferred 'unhelpful'; uses 'showed' (past) instead of 'shows' (present) for established research."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'triggered by stressful events' is a bit more clinical/abrupt than the smoother flow in B."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A perfectly aligns with the project's specific terminology guidelines (unhelpful, outside of awareness) and maintains a warm, expert tone. Translation B uses 'maladaptive' and 'dormant', which, while correct in a general sense, deviate from the established glossary and sound more academic/clinical.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'maladaptive' instead of 'unhelpful' and 'dormant' instead of 'outside of awareness' as per the project's specific CBT terminology guidelines."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is slightly more clinical/academic than the 'understanding friend-expert' tone required."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/tutorial_daybook_gpt_title",
+          "ru": "Вы отлично справились!",
+          "oldText": "You did an excellent job!",
+          "newText": "You did great!",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "Both are natural, but 'You did an excellent job!' better captures the enthusiastic and slightly more formal 'отлично справились' while maintaining a warm, supportive tone.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 98
+              },
+              "reason": "Translation A is more natural, punchy, and fits the warm, supportive 'expert friend' tone of the app. Translation B is grammatically correct but feels slightly more formal and heavy for a quick celebratory feedback message.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "slightly too formal/wordy for a quick UI feedback message"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/smerAiChatHint",
+          "ru": "Ваш ответ…",
+          "oldText": "Your answer…",
+          "newText": "Your answer...",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 85
+              },
+              "reason": "Translation B correctly uses the typographic ellipsis (…), whereas Translation A uses three periods (...), which violates the typography rules specified in the instructions.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses three periods instead of a typographic ellipsis"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "Translation A uses the correct typographic ellipsis (three dots), whereas Translation B uses three periods, which is a common stylistic error in professional English typesetting.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses three separate periods instead of a single ellipsis character or proper typographic ellipsis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/alert_auth_sent",
+          "ru": "Проверочный код отправлен на Email",
+          "oldText": "We sent a verification code to your email",
+          "newText": "Verification code sent to your email",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A follows UX best practices for system notifications by being concise and using a passive construction that focuses on the object. Translation B adds an unnecessary subject ('We'), which makes it feel more like a conversational message than a standard UI status update.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Unnecessary addition of 'We', making the tone slightly more wordy than typical for a status message."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation B follows UX best practices for system notifications by being concise and omitting unnecessary pronouns/subjects. Translation A is grammatically correct but sounds more like a conversational message than a standard UI status update.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Unnecessary use of 'We sent' and 'your', making the string longer and more conversational than typical for a system notification."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/believe_final_fail",
+          "ru": "К сожалению, ваше состояние ухудшилось",
+          "oldText": "We're sorry to hear you're feeling worse",
+          "newText": "Unfortunately, you’re feeling worse",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation B follows the 'understanding friend-expert' tone guidelines by using a warm, supportive opening, whereas A is a bit too blunt and direct for a mental health app.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Sounds slightly more clinical/detached than the desired supportive tone."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 75
+              },
+              "reason": "Translation A uses a warm, empathetic 'understanding friend' tone ('We're sorry to hear'), whereas Translation B is a literal, cold, and somewhat blunt translation of 'К сожалению' that sounds unnatural in a mental health context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The use of 'Unfortunately' at the start of a sentence in a supportive app feels clinical and detached, violating the 'warm, supportive tone' requirement."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "ui/cognitive_psy",
+          "lang": "en",
+          "key": "/auth_title",
+          "ru": "Авторизация",
+          "oldText": "Sign in",
+          "newText": "Log in",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "tie",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 100
+              },
+              "reason": "Both 'Sign in' and 'Log in' are standard, natural, and perfectly acceptable UX patterns for 'Авторизация' in English. There is no functional or stylistic preference between them in this context.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 100
+              },
+              "reason": "Both 'Log in' and 'Sign in' are standard, natural UX terms for 'Авторизация' in English. The choice between them is a matter of stylistic preference for the specific app, and neither is incorrect.",
+              "issues": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
