@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "Дата": "2026-09-17T15:25:48.475Z",
+    "Метка": "en-content-start",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "story/start.json",
+    "Локали": "en",
+    "Сэмпл/файл": 10,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "3907b3511f2db1a1d0814f4ca645e5f04015007c"
+  },
+  "results": {
+    "story/start.json": {
+      "en": [
+        {
+          "file": "story/start.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Понимание себя через когнитивно-поведенческую терапию",
+          "oldText": "Understanding Yourself Through Cognitive Behavioral Therapy",
+          "newText": "Understanding yourself through cognitive behavioral therapy (CBT)",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation B correctly follows the project's rule to introduce the abbreviation (CBT) upon first mention, whereas A misses this requirement. B also uses sentence case, which is more appropriate for a title/heading in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing the (CBT) abbreviation required by the style guide for the first mention of the term."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A correctly follows the project's requirement for sentence case in titles and includes the mandatory introduction of the 'CBT' abbreviation upon first mention. Translation B uses title case, which violates the style guide, and omits the abbreviation.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of Sentence case for a title."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing the '(CBT)' abbreviation required for the first mention of the term."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/start.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "В современном мире, полном стрессов и неопределённости, психологическое благополучие как никогда важно.\n\nМиллионы людей ежедневно сталкиваются с трудностями — от лёгкого дискомфорта и тревоги до серьёзных состояний, таких как депрессия, невроз, посттравматическое стрессовое расстройство (ПТСР) и другие.\n\nТакие проблемы заметно отражаются на качестве жизни, мешая радоваться повседневности, строить тёплые отношения и двигаться к целям.\n\nЕсли вы читаете эти строки и чувствуете, что что-то внутри мешает жить полной жизнью, — вы не одни, это естественно.\n\nДаже у самых успешных и внешне спокойных людей бывают деструктивные установки и внутренние барьеры.\n\nНередко их корни уходят в детство, формируясь под влиянием травмирующих событий или неблагоприятных обстоятельств.\n\n<instagram ids=\"17871269061162491,17921284721929207,17867381700470550\">\n\nВажно помнить: наличие таких трудностей не делает вас «неполноценным» — это часть человеческого опыта.\n\nЕсли вы хотите перемен, приглашаем в увлекательное путешествие по миру когнитивно-поведенческой терапии (КПТ).\n\nЭтот эффективный подход помогает лучше понимать себя и даёт инструменты для управления мыслями и эмоциями.\n\nВ этой главе начнём знакомство с базовыми идеями метода.\n\n<q author=\"Ребекка Уокер\">Наши мысли формируют наше восприятие, и это восприятие определяет, как мы живём.</q>\n\nНеважно, кажутся ли ваши трудности небольшими или приносят серьёзный дискомфорт — от временной подавленности до многолетних симптомов: КПТ может стать ценным ресурсом.\n\nСейчас мы предложим упрощённую модель ключевой концепции, а в следующих главах разберём её подробнее.",
+          "oldText": "In today’s world, full of stress and uncertainty, psychological well-being is more important than ever.\n\nEvery day, millions of people face challenges — from mild discomfort and anxiety to serious conditions such as depression, anxiety disorders, post-traumatic stress disorder (PTSD) and others.\n\nThese difficulties strongly affect quality of life, getting in the way of enjoying everyday moments, building close relationships and moving toward personal goals.\n\nIf you are reading this and feel that something inside is keeping you from living a full life, you are not alone — and that’s completely normal.\n\nEven the most successful and outwardly calm people have unhelpful beliefs and inner barriers.\n\nTheir roots often go back to childhood, shaped by painful experiences or difficult circumstances.\n\nIt is important to remember: having such difficulties does not make you “defective” — it is part of being human.\n\nIf you are ready for change, we invite you on an engaging journey into the world of cognitive behavioral therapy (CBT).\n\nThis effective approach helps you understand yourself better and gives you tools to manage your thoughts and emotions.\n\nIn this chapter, we will start with the basic ideas of the method.\n\nIt does not matter whether your difficulties seem small or cause significant distress — from a brief low mood to many years of symptoms: CBT can become a valuable resource.\n\nFor now, we will offer a simplified model of a key concept, and in the following chapters we will explore it in more detail.",
+          "newText": "In today’s world of stress and uncertainty, mental well-being is more important than ever.\n\nMillions of people face difficulties every day — from mild anxiety to more serious conditions like depression, neurosis, or PTSD.\n\nThese challenges can significantly impact your quality of life, making it harder to enjoy everyday moments, build warm relationships, and reach your goals.\n\nIf you’re reading this and feel like something is preventing you from living life to the fullest — you’re not alone, and it’s a natural feeling.\n\nEven the most successful and outwardly calm people deal with unhelpful beliefs and internal barriers.\n\nOften, these roots go back to childhood, shaped by traumatic events or difficult circumstances.\n\n<instagram ids=\"17871269061162491,17921284721929207,17867381700470550\">\n\nIt’s important to remember: having these difficulties doesn’t make you “broken” — it’s simply part of the human experience.\n\nIf you’re looking for change, we invite you on an engaging journey into the world of CBT.\n\nThis effective approach helps you understand yourself better and provides tools to manage your thoughts and emotions.\n\nIn this chapter, we’ll start by introducing the core ideas of the method.\n\n<q author=\"Rebecca Walker\">Our thoughts shape our perception, and that perception determines how we live.</q>\n\nWhether your struggles seem minor or cause significant distress — from temporary low moods to long-term symptoms — CBT can be a valuable resource.\n\nRight now, we’ll offer a simplified model of the key concepts, and in the following chapters, we’ll dive into the details.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B is much more natural and follows the 'supportive friend' tone guidelines, using contractions (you're, it's) and better flow. Translation A feels slightly more formal/stiff and contains an omission of the quote.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The quote by Rebecca Walker was completely omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'psychological well-being' instead of the preferred 'mental well-being' and avoids contractions, making it feel less like a modern app and more like a textbook."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Translated 'невроз' as 'anxiety disorders', which is a different clinical term than 'neurosis'."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'neurosis' which is a direct translation; while less common in modern US clinical settings than 'anxiety disorders', it is faithful to the original text."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is much more natural and follows the 'warm, supportive friend' tone required for the target market. It uses appropriate contractions (you're, it's) and avoids the stiff, academic feel of Translation B. Translation A also correctly uses 'mental well-being' instead of the heavier 'psychological well-being'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Too formal and academic; lacks contractions (you are, it is), which makes it feel like a textbook rather than a supportive guide."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'psychological well-being' instead of the preferred 'mental well-being'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The word 'defective' for 'неполноценным' is quite harsh and clinical; 'broken' in A is much more empathetic and natural in a mental health context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/start.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Статья знакомит с основами когнитивно-поведенческой терапии (КПТ) и показывает, как глубинные и промежуточные убеждения формируют автоматические мысли и эмоции. Через образ яблоневого дерева поясняется, каким образом внутренние установки влияют на восприятие событий и нашу реакцию. Приведённые примеры демонстрируют, почему одно и то же событие вызывает разные эмоции у разных людей.",
+          "oldText": "This article introduces the basics of cognitive behavioral therapy (CBT) and shows how core and intermediate beliefs shape automatic thoughts and emotions. Using the image of an apple tree, it explains how inner beliefs influence the way we interpret events and react to them. The examples show why the same situation can trigger very different emotions in different people.",
+          "newText": "This article introduces the basics of CBT and shows how core beliefs and intermediate beliefs shape your automatic thoughts and emotions. Using the metaphor of an apple tree, it explains how your internal beliefs influence how you perceive events and react to them. These examples demonstrate why the same event can trigger different emotions in different people.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation A is more concise and flows naturally, avoiding the repetitive 'beliefs' used in B. It also correctly uses 'image' or 'metaphor' (though A uses 'image' which is fine) without overusing the second-person 'your', which makes the text feel more like a professional article summary.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'core beliefs and intermediate beliefs' instead of grouping them; excessive use of 'your' makes the tone slightly more instructional than the original descriptive summary."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 98
+              },
+              "reason": "Translation A is more natural and follows the project's tone guidelines by using 'your' to engage the reader. Translation B is slightly more formal/academic and uses 'image' instead of the more appropriate 'metaphor' for an apple tree.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Using 'image' for an apple tree metaphor is less idiomatic than 'metaphor' or 'imagery'; 'the way we interpret' is slightly more wordy than 'how you perceive'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is slightly more detached/academic compared to the 'understanding friend' tone requested."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/start.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Рассмотрим пример. Двум коллегам сделали одинаковое замечание по работе:\n\nМария: с детства у неё сформировалось глубинное убеждение «Я недостаточно хороша».\n\nЕё промежуточное убеждение: «Чтобы меня ценили, я должна быть безупречна». Получив критику, она думает: «Я всё испортила, начальник разочарован, я потеряю работу». Итог — страх, тревога, упадок сил.\n\nКристина: у неё другое глубинное убеждение — «Я способна учиться и развиваться».\n\nЕё промежуточное убеждение: «Критика — возможность стать лучше». Услышав замечание, она думает: «Начальник указал на слабые стороны — это поможет улучшить работу». Итог — спокойствие, мотивация и готовность исправлять ошибки.\n\nИтак, событие одно и то же — замечание от начальника.\n\nНо реакции противоположны — из-за различий в глубинных и промежуточных убеждениях.\n\nКПТ помогает замечать и менять такие убеждения, чтобы реагировать конструктивнее и сохранять эмоциональное равновесие.\n\n<important>Поскольку у каждого своя «модель дерева», по-разному воспринимаются и одинаковые ситуации.</important>\n\nВ ответ на них рождаются автоматические мысли, а те — влияют на эмоции и поведение.\n\nО взаимосвязи мыслей, эмоций и поведения мы обязательно поговорим в следующих главах подробнее.\n\nВ этой главе мы набросали общую картину, поэтому не переживайте, если вопросов осталось много: мы будем возвращаться к идеям и разбирать их детальнее.\n\nПредлагаем отнестись к материалу с открытостью и готовностью к экспериментам. Используйте техники на практике — пусть жизнь становится более полной, радостной и гармоничной.",
+          "oldText": "Let’s look at an example. Two colleagues receive the same comment about their work:\n\nMaria: from childhood she developed a core belief, “I’m not good enough.”\n\nHer intermediate belief is: “To be valued, I have to be flawless.” When she hears criticism, she thinks: “I ruined everything, my manager is disappointed, I’m going to lose my job.” The result is fear, anxiety and loss of energy.\n\nKristina: she has a different core belief — “I am capable of learning and growing.”\n\nHer intermediate belief is: “Feedback is a chance to get better.” Hearing the same remark, she thinks: “My manager pointed out weak spots — this will help me improve my work.” The result is calm, motivation and readiness to make changes.\n\nSo the event is the same — a remark from the manager.\n\nBut the reactions are opposite because their core and intermediate beliefs are different.\n\nCBT helps you notice and change such beliefs so you can respond more constructively and maintain emotional balance.\n\nBecause each person has their own “tree model”, identical situations are perceived in very different ways.\n\nIn response to them, automatic thoughts arise, and those thoughts influence emotions and behavior.\n\nWe will definitely talk in more detail about the connection between thoughts, emotions and behavior in the next chapters.\n\nIn this chapter we have outlined the overall picture, so do not worry if you still have many questions: we will come back to these ideas and unpack them step by step.\n\nWe invite you to approach this material with openness and a willingness to experiment. Try the techniques in real life — and let your life gradually become fuller, calmer and more harmonious.",
+          "newText": "Let’s look at an example. Two colleagues receive the same feedback at work:\n\nMaria: since childhood, she has held the core belief, “I am not good enough.”\n\nHer intermediate belief is: “To be valued, I must be perfect.” When she receives criticism, she thinks: “I’ve ruined everything, my boss is disappointed, I’m going to lose my job.” The result — fear, anxiety, and exhaustion.\n\nKristina: she has a different core belief — “I am capable of learning and growing.”\n\nHer intermediate belief is: “Criticism is an opportunity to improve.” After hearing the feedback, she thinks: “My boss pointed out some weaknesses — this will help me improve my work.” The result — calmness, motivation, and a readiness to fix mistakes.\n\nSo, the event is exactly the same — feedback from a boss.\n\nBut the reactions are opposites — due to the differences in their core and intermediate beliefs.\n\nCBT helps you notice and change these beliefs so you can react more constructively and maintain emotional balance.\n\n<important>Since everyone has their own “tree model,” even identical situations are perceived differently.</important>\n\nIn response to these situations, automatic thoughts are born, which in turn influence your emotions and behavior.\n\nWe will certainly discuss the connection between thoughts, emotions, and behavior in more detail in the following chapters.\n\nThis chapter has provided a general overview, so don’t worry if you still have many questions — we will return to these ideas and break them down in more detail.\n\nWe suggest approaching this material with an open mind and a readiness to experiment. Put these techniques into practice — and let your life become fuller, more joyful, and more harmonious.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 96
+              },
+              "reason": "Translation B is much more natural and follows the 'warm expert' tone guidelines. It uses appropriate contractions (don't, I've) and better vocabulary (exhaustion vs loss of energy, feedback vs comment). Translation A feels slightly more literal and stiff in several places.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'loss of energy' which is a bit clunky compared to 'exhaustion'; 'comment' is a weaker choice than 'feedback' for a work context; lacks contractions like 'don't' which are preferred in the style guide."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'do not worry' is more formal/stiff than the recommended 'don't worry'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'automatic thoughts are born' is a slight calque from Russian, but acceptable in this context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 84,
+                "new": 96
+              },
+              "reason": "Translation A is much more natural and professional. It uses 'feedback' instead of the clunky 'comment about their work' or 'remark', and correctly uses 'exhaustion' for 'упадок сил'. Translation B contains several stylistic weaknesses and a mistranslation of 'упадок сил' as 'loss of energy', which sounds unnatural in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'comment about their work' is a bit wordy compared to 'feedback'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'loss of energy' is a literal translation of 'упадок сил'; 'exhaustion' or 'fatigue' is better."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'the result is calm' is grammatically awkward; 'the result is calmness' (A) is better."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'do not worry' instead of the more natural contraction 'don't worry' preferred in the tone guidelines."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/start.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "В когнитивно-поведенческой терапии сознание условно описывается тремя уровнями: глубинные убеждения, промежуточные убеждения (правила) и автоматические мысли.\n\nКлючевая идея КПТ заключается в том, что самочувствие и чувства зависят от того, как мы думаем.\n\n<important>Отсюда основной принцип: когда мы замечаем и осознанно корректируем мышление, жизнь становится более устойчивой и продуктивной.</important>\n\nЭто краткое изложение сути КПТ, но впереди у нас ещё много важных деталей, которыми мы с радостью поделимся.\n\nЧтобы было нагляднее, вообразим яблоневое дерево.\n\nКорни в этой метафоре — глубинные убеждения: базовые представления о себе, мире и других людях.\n\nОни формируются ранним опытом и часто неосознаваемы. Примеры: «Я недостоин любви», «Мир — опасное место».\n\nСтвол обозначает промежуточные убеждения — правила и установки, которыми мы руководствуемся изо дня в день.\n\nОни опираются на глубинные убеждения и направляют наши реакции. Примеры: «Если я не идеален, меня не будут любить», «Чтобы выжить, нужно быть настороже».\n\nКрона — это автоматические мысли: быстрые, спонтанные реакции на события.\n\nЭто словно плоды на дереве — они могут быть «здоровыми» или «гнилыми». Примеры: «Я опоздал — значит, в следующий раз выйду раньше» или «Я опоздал — значит, я неудачник».\n\nУ каждого из нас своё «дерево», и каждое событие мы пропускаем через его призму.\n\nПоэтому одна и та же ситуация может вызывать совершенно разные эмоции у разных людей — значение придаётся через собственные убеждения.\n\nТак формируется широкий спектр эмоциональных реакций даже на внешне одинаковые события.",
+          "oldText": "In cognitive behavioral therapy, the mind is often described as having three levels: core beliefs, intermediate beliefs (rules), and automatic thoughts.\n\nThe key idea of CBT is that our emotional state and well-being depend on how we think.\n\nThis leads to the main principle: when we notice our thinking and consciously adjust it, life becomes more stable and fulfilling.\n\nThis is a brief summary of what CBT is about, but there are still many important details ahead that we are happy to share.\n\nTo make this clearer, imagine an apple tree.\n\nIn this metaphor, the roots are your core beliefs: basic ideas about yourself, the world, and other people.\n\nThey are shaped by early experiences and often remain outside of awareness. Examples: “I am not worthy of love”, “The world is a dangerous place.”\n\nThe trunk stands for intermediate beliefs — the rules and assumptions you rely on in everyday life.\n\nThey grow out of core beliefs and guide your reactions. Examples: “If I’m not perfect, no one will love me”, “To survive, I always have to stay on guard.”\n\nThe crown of the tree represents automatic thoughts: quick, spontaneous reactions to events.\n\nThey are like the fruit on the tree — they can be “healthy” or “rotten”. Examples: “I’m late — so next time I’ll leave earlier” or “I’m late — which means I’m a failure.”\n\nEach of us has our own “tree”, and every event we encounter passes through its lens.\n\nThat is why the very same situation can trigger completely different emotions in different people — we assign meaning through our own beliefs.\n\nThis is how a wide range of emotional responses appears, even to seemingly identical events.",
+          "newText": "In CBT, the mind is conceptually described through three levels: core beliefs, intermediate beliefs (rules), and automatic thoughts.\n\nThe key idea of CBT is that your well-being and feelings depend on how you think.\n\n<important>This leads to the main principle: when we notice and consciously adjust our thinking, life becomes more stable and productive.</important>\n\nThis is just a brief summary of CBT, but there are many more important details ahead that we look forward to sharing.\n\nTo make it clearer, let’s imagine an apple tree.\n\nIn this metaphor, the roots are your core beliefs: your fundamental ideas about yourself, the world, and others.\n\nThey are formed by early experiences and are often unconscious. Examples: “I am unworthy of love” or “The world is a dangerous place.”\n\nThe trunk represents your intermediate beliefs — the rules and attitudes that guide you day to day.\n\nThey are built upon your core beliefs and direct your reactions. Examples: “If I’m not perfect, people won’t love me” or “I must always be on guard to survive.”\n\nThe crown of the tree represents your automatic thoughts: quick, spontaneous reactions to events.\n\nThey are like the fruit on the tree — they can be “healthy” or “rotten.” Examples: “I’m late, so I should leave earlier next time” or “I’m late, so I’m a failure.”\n\nEach of us has our own “tree,” and we view every event through its lens.\n\nThis is why the same situation can trigger completely different emotions in different people — meaning is assigned through your own beliefs.\n\nThis is how a wide range of emotional reactions is formed, even in response to seemingly identical events.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more polished and follows the target tone of a 'knowledgeable friend' more naturally. It uses better flow and more idiomatic phrasing (e.g., 'view every event through its lens' vs 'passes through its lens'). It also correctly handles the CBT terminology and maintains a consistent 'you' perspective which is more engaging for the user.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'remains outside of awareness' is slightly more clinical/academic than the warm tone requested, whereas 'often unconscious' is more direct."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'This is how a wide range of emotional responses appears' is a bit clunky compared to A's more natural construction."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation A is more natural and flows better as a piece of educational content. It avoids the slightly clunky passive constructions found in B (e.g., 'meaning is assigned') and uses more idiomatic phrasing ('outside of awareness' vs 'unconscious', 'fulfillng' vs 'productive').",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'meaning is assigned through your own beliefs' is a bit heavy and passive; A's 'we assign meaning' is much more natural for a 'supportive friend' tone."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of the example 'I'm late — so I should leave earlier next time' is a slight deviation from the original 'I'll leave earlier' (future intent vs obligation), though acceptable."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
