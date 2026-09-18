@@ -1,0 +1,1165 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T11:48:50.649Z",
+    "Метка": "en-b4-anxiety",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "tests/anxiety.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "59773e25fd9cb826f3e71e3a543930f97721ad28"
+  },
+  "results": {
+    "tests/anxiety.json": {
+      "en": [
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/14/fact",
+          "ru": "Стресс и тревога могут привести к спазмам в желудке, усиленной секреции желудочной кислоты или даже к синдрому раздраженного кишечника (СРК). Эти симптомы являются психосоматическими, то есть физическими проявлениями психологического недомогания.",
+          "oldText": "Stress and anxiety can lead to stomach cramps, increased stomach acid secretion or even irritable bowel syndrome (IBS). These symptoms are psychosomatic — physical manifestations of psychological distress.",
+          "newText": "Stress and anxiety can lead to stomach spasms, increased gastric acid secretion, or even irritable bowel syndrome (IBS). These symptoms are psychosomatic, meaning they are physical manifestations of psychological distress.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more concise and natural for a mental health context. Translation B uses 'gastric acid secretion' and 'stomach spasms', which sound slightly more clinical/medical than the smoother 'stomach acid secretion' and 'stomach cramps' preferred in psychoeducation.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'meaning they are' is slightly wordy compared to the elegant em dash used in A; 'gastric' and 'spasms' feel a bit too formal/medical for a supportive tone."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation B is more natural and follows the stylistic guidelines better. The use of an em dash instead of 'meaning they are' makes the text punchier and more idiomatic for a mental health context, and 'stomach cramps' is more common in patient-facing language than the clinical 'stomach spasms'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'meaning they are' is slightly more wordy and academic than the more direct em dash used in B."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Stomach spasms' is grammatically correct but 'stomach cramps' (in B) sounds more natural for a supportive 'expert friend' tone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps",
+          "ru": "Я чувствую больше тревоги и нервозности, чем обычно\n\nЯ чувствую страх без понятной причины\n\nМеня легко выбить из равновесия или довести до паники\n\nМне трудно собраться и взять себя в руки\n\nУ меня есть чувство безопасности и спокойствия за свое будущее\n\nЯ замечаю дрожь в руках и ногах\n\nУ меня бывают головные боли, боли в шее и спине\n\nЯ чувствую усталость и быстро устаю\n\nОбычно я ощущаю спокойствие и внутреннюю собранность\n\nУ меня бывает ощущение учащенного сердцебиения\n\nУ меня бывают приступы головокружения\n\nУ меня бывает чувство, будто я могу потерять сознание\n\nЯ дышу легко и свободно\n\nЯ ощущаю онемение или покалывание в пальцах рук и ног\n\nУ меня бывают боли в желудке и расстройства пищеварения\n\nУ меня бывают частые позывы к мочеиспусканию\n\nЯ ощущаю сухость рук\n\nМое лицо «горит» и краснеет\n\nЯ легко засыпаю и утром просыпаюсь отдохнувшим\n\nМеня мучают ночные кошмары",
+          "oldText": "I feel more nervous and anxious than usual\n\nI feel afraid for no apparent reason\n\nI get upset or panic easily\n\nI feel like I can’t pull myself together or get a grip\n\nI have a sense of well-being, I feel that nothing bad will happen to me\n\nMy hands and feet tremble and shake\n\nI have headaches and pain in my neck and back\n\nI feel worn out and get tired quickly\n\nI feel calm and unhurried\n\nI sometimes feel my heart racing\n\nI have episodes of dizziness\n\nI faint or feel as if I might pass out\n\nI breathe freely\n\nI feel numbness and tingling in my fingers or toes\n\nI have stomach pains and digestive upsets\n\nI have frequent urges to urinate\n\nMy hands feel dry\n\nMy face feels hot and flushed\n\nI fall asleep easily and wake up feeling rested\n\nI am troubled by nightmares",
+          "newText": "I feel more anxious and nervous than usual\n\nI feel fear for no apparent reason\n\nI feel easily unsettled or driven to panic\n\nI find it hard to pull myself together\n\nI feel safe and secure about my future\n\nI notice trembling in my hands and legs\n\nI experience headaches or pain in my neck and back\n\nI feel fatigued and tire easily\n\nI usually feel calm and composed\n\nI sometimes feel my heart racing\n\nI experience bouts of dizziness\n\nI sometimes feel as if I might pass out\n\nI breathe easily and freely\n\nI feel numbness or tingling in my fingers and toes\n\nI have stomach aches and digestive issues\n\nI have frequent urges to urinate\n\nMy hands feel dry\n\nMy face feels hot and turns red\n\nI fall asleep easily and wake up feeling rested\n\nI suffer from nightmares",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B is much more accurate to the original text and follows the required tone. Translation A introduces significant mistranslations and omissions, such as changing 'safety and calm about the future' into a generic 'well-being' and misinterpreting 'feeling like I might pass out' as 'I faint'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The phrase 'I have a sense of well-being, I feel that nothing bad will happen to me' is a massive departure from the original 'feeling of safety and calm about the future'."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "'I faint or feel as if I might pass out' changes the meaning from 'feeling like I might' to 'I actually faint'."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "'I feel calm and unhurried' is a poor translation of 'спокойствие и внутренняя собранность' (calm and composed)."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed 'legs' in the trembling sentence (only mentioned hands and feet)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'I suffer from nightmares' is slightly heavy, but acceptable for a clinical/symptom context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more precise, maintains the original's tone, and uses more natural, idiomatic English for a clinical/self-help context. Translation B contains several mistranslations and stylistic issues.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The line 'У меня есть чувство безопасности...' is translated as 'I have a sense of well-being, I feel that nothing bad will happen to me', which is a massive addition/interpretation not present in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The line 'Меня легко выбить из равновесия...' is translated as 'I get upset or panic easily', which loses the nuance of being 'unsettled' or 'thrown off balance'."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The line 'У меня бывает чувство, будто я могу потерять сознание' is translated as 'I faint or feel as if I might pass out'. The original says 'as if I might', but B adds 'I faint' (actual loss of consciousness), which changes the meaning."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'I feel calm and unhurried' is a poor translation for 'спокойствие и внутреннюю собранность' (composed/collected)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'My hands and feet tremble and shake' is redundant and less natural than 'trembling in my hands and legs'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/4/fact",
+          "ru": "Исследования показывают, что оптимизм может даже повлиять на физическое здоровье. Оптимисты часто имеют меньший риск развития хронических заболеваний и дольше живут по сравнению с пессимистами.",
+          "oldText": "Research shows that optimism can even influence physical health. Optimistic people often have a lower risk of chronic diseases and tend to live longer than pessimists.",
+          "newText": "Research shows that optimism can even impact physical health. Optimists often have a lower risk of developing chronic diseases and tend to live longer than pessimists.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 96
+              },
+              "reason": "Both translations are excellent, but B is slightly more precise and idiomatic. The use of 'developing' in B accurately reflects the Russian 'развития' and follows standard medical/psychological English collocations better than the slightly more abrupt A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing 'developing' makes the phrase 'lower risk of chronic diseases' grammatically correct but slightly less precise than 'lower risk of developing chronic diseases'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Translation A is more concise and uses 'impact', which sounds more natural in this context. Translation B is slightly more wordy ('Optimistic people' vs 'Optimists') and omits 'developing' before 'chronic diseases', making it slightly less precise.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Optimistic people' is slightly more wordy than the idiomatic 'Optimists'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted 'developing' (развития), though the meaning remains clear."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/15/text",
+          "ru": "Частые позывы к мочеиспусканию могут быть одним из физиологических симптомов тревожности. Активация симпатической нервной системы в ответ на стресс может усиливать работу мочевого пузыря и уринарного тракта, что приводит к учащенному мочеиспусканию.",
+          "oldText": "Frequent urges to urinate can be one of the physical symptoms of anxiety. Activation of the sympathetic nervous system in response to stress can increase activity of the bladder and urinary tract, which leads to more frequent urination.",
+          "newText": "Frequent urges to urinate can be one of the physiological symptoms of anxiety. The activation of the sympathetic nervous system in response to stress can increase bladder and urinary tract activity, leading to frequent urination.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation B is more idiomatic and flows better as a professional medical/educational text. Translation A uses 'more frequent urination', which is slightly clunky compared to the more natural 'leading to frequent urination' in B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'increase activity of the bladder' is slightly less natural than 'increase bladder activity'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more idiomatic and flows better. It uses 'physiological symptoms' which is more precise for this context, and the phrasing 'increase bladder and urinary tract activity' is much more natural than the clunky 'increase activity of the bladder...' in B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The construction 'increase activity of the bladder and urinary tract' is wordy and less natural than the compound noun structure used in A."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'physical symptoms' is acceptable, but 'physiological' (as in A) is more accurate for the biological mechanism described."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/variants/seldom",
+          "ru": "Редко",
+          "oldText": "Rarely",
+          "newText": "Seldom",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 85
+              },
+              "reason": "In the context of a mobile app (likely a frequency scale for mood or symptoms), 'Rarely' is the standard, modern UX term. 'Seldom' sounds overly formal and literary.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too formal/literary for a modern app interface"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 75
+              },
+              "reason": "In the context of frequency (like mood or activity tracking), 'Rarely' is the standard, natural choice for English speakers. 'Seldom' sounds overly formal, literary, or archaic for a modern app interface.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too formal/literary for a modern UX context"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/14/text",
+          "ru": "Боли в желудке и расстройства пищеварения часто встречаются у людей с тревожными расстройствами. Это связано с тем, что тревожность может усиливать работу симпатической нервной системы, что приводит к изменениям в пищеварении, включая ускорение или замедление желудочной моторики.",
+          "oldText": "Stomach pain and digestive problems are common in people with anxiety disorders. Anxiety can increase the activity of the sympathetic nervous system, which changes digestive processes, speeding them up or slowing them down.",
+          "newText": "Stomach aches and digestive issues are common among people with anxiety disorders. This is because anxiety can heighten the activity of the sympathetic nervous system, leading to digestive changes, such as speeding up or slowing down gastric motility.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation A is more precise and professional, using the correct medical term 'gastric motility' which matches the original 'желудочной моторики'. Translation B is a bit too simplified and loses the specific nuance of the physiological process.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'which changes digestive processes' is a bit clunky compared to the more natural 'leading to digestive changes' in A."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted the specific term 'gastric motility', replacing it with a generic description."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B uses more precise and professional terminology ('gastric motility', 'heighten') while maintaining a natural flow. Translation A is grammatically correct but sounds slightly more simplistic and less like a high-quality psychoeducational text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'changes digestive processes' is a bit generic compared to the more professional 'leading to digestive changes' or 'affecting digestion'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/result/light/text",
+          "ru": "Ваш результат говорит о лёгком уровне тревожности. Это может быть связано со стрессовыми или неприятными событиями, такими как сложности в отношениях, финансовые переживания, изменения в жизни. Настроение может быть снижено, но эти состояния обычно проходят. Поддержка близких, отдых и практики осознанности могут помочь вам почувствовать себя лучше.",
+          "oldText": "Your result suggests a mild level of anxiety. This may be related to stressful or unpleasant events such as relationship difficulties, financial concerns or life changes. Your mood may be lowered, but these states usually pass. Support from loved ones, rest and mindfulness practices can help you feel better.",
+          "newText": "Your results suggest a mild level of anxiety. This may be linked to stressful or unpleasant events, such as relationship difficulties, financial concerns, or life changes. Your mood might be slightly lower, but these states usually pass. Support from loved ones, rest, and mindfulness practices can help you feel better.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more natural and idiomatic. Using 'results' (plural) is standard for test outcomes, and 'might be slightly lower' sounds much more like a supportive expert than the clunky 'may be lowered' in B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Your mood may be lowered' sounds unnatural and passive; 'slightly lower' or 'lowered mood' is better."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing Oxford comma in a list, which is fine, but A's flow is smoother for a professional medical/wellness context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation B is more idiomatic and uses better punctuation (Oxford comma) and natural phrasing ('might be slightly lower' vs 'may be lowered').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Your mood may be lowered' sounds slightly unnatural/clunky compared to 'might be slightly lower'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/10/text",
+          "ru": "Головокружение может быть прямым симптомом тревожного расстройства. В состояниях повышенной тревожности, организм может реагировать активацией автономной нервной системы, что ведет к изменениям в кровообращении и, как следствие, к ощущению головокружения.",
+          "oldText": "Dizziness can be a direct symptom of an anxiety disorder. During heightened anxiety the autonomic nervous system is activated, which leads to changes in blood circulation and, as a result, to feelings of light-headedness or dizziness.",
+          "newText": "Dizziness can be a direct symptom of an anxiety disorder. During periods of high anxiety, the body may respond by activating the autonomic nervous system, leading to changes in blood circulation and, consequently, a sensation of dizziness.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation B is more accurate to the original text and follows the 'expert friend' tone. Translation A adds 'light-headedness', which is an addition not present in the source, and omits the mention of 'the body' (организм).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'light-headedness' which wasn't in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted 'the body' (организм), making the sentence slightly less precise compared to the source."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more precise and follows the original structure without adding unnecessary interpretations. Translation B introduces 'light-headedness' which is not in the source, and its phrasing is slightly more clunky.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'light-headedness' which wasn't in the original text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'the autonomic nervous system is activated' is slightly more passive and less fluid than 'the body may respond by activating...'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/result/extreme/text",
+          "ru": "Ваш результат говорит о сильной тревоге, которая может сопровождаться выраженным эмоциональным дискомфортом и сложностями в повседневной жизни. Если вы чувствуете себя подавленно, переживаете тяжёлые мысли или вам трудно справляться самостоятельно, обратитесь за профессиональной поддержкой. Вы не одни, помощь существует, и она может стать важным шагом к улучшению самочувствия.",
+          "oldText": "Your result indicates severe anxiety, which may be accompanied by intense emotional discomfort and difficulties in daily life. If you feel down, experience distressing thoughts or find it hard to cope on your own, please reach out for professional support. You are not alone — help exists and can become an important step toward feeling better.",
+          "newText": "Your results suggest severe anxiety, which may be accompanied by significant emotional discomfort and difficulties in daily life. If you feel overwhelmed, experience distressing thoughts, or find it hard to cope on your own, please seek professional support. You’re not alone, help is available, and reaching out can be an important step toward feeling better.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more idiomatic and aligns better with the 'understanding friend' tone. It uses 'overwhelmed' (more natural for 'подавленно' in this context) and 'help is available' (standard English collocation), whereas A feels slightly more formal and stiff.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'help exists' is a bit literal/clunky compared to 'help is available'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'You are not alone' instead of the more natural contraction 'You're not alone' used in the app's tone guidelines."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation A is more idiomatic and flows better for a mental health context. 'Feeling overwhelmed' is a much more natural and accurate way to translate 'чувствуете себя подавленно' in this context than 'feel down', and 'reaching out' is a smoother way to conclude the sentence than the clunky 'help exists and can become'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Feel down' is a bit too casual/colloquial for this level of clinical concern; 'overwhelmed' is better."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Help exists' sounds slightly unnatural/translated; 'help is available' is the standard English idiom."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'help exists and can become an important step' is logically disconnected; the help itself isn't the step, the act of seeking it is."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/description/text",
+          "ru": "Этот тест для самооценки тревожности, разработанный в Университете Дьюка под руководством Вильяма Занга, помогает оценить уровень тревожных проявлений, включая беспокойство, панические реакции и напряжение. Шкала ZARS (Zung Anxiety Rating Scale) позволяет лучше понять, насколько тревога влияет на вашу повседневную жизнь и эмоциональное состояние.",
+          "oldText": "This self-rating anxiety test, developed at Duke University under the guidance of William Zang, helps assess the level of anxiety symptoms, including worry, panic reactions and tension. The ZARS (Zung Anxiety Rating Scale) allows you to better understand how much anxiety affects your daily life and emotional state.",
+          "newText": "This self-assessment test for anxiety, developed at Duke University under the direction of William Zung, helps evaluate levels of anxiety, including worry, panic reactions, and tension. The ZARS (Zung Anxiety Rating Scale) allows for a better understanding of how anxiety affects your daily life and emotional state.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation B is more idiomatic and follows the 'understanding friend-expert' tone better. It uses 'anxiety symptoms' (more natural than 'anxiety manifestations/levels') and 'allows you to' (more engaging) instead of the more formal 'allows for'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'evaluate levels of anxiety' is slightly more clinical/stiff than 'assess the level of anxiety symptoms'."
+                },
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "The original name is William Zung, but the Russian text says 'Вильяма Занга' (Zang). Translation A corrected this to 'Zung', which is factually correct for the scale, but Translation B followed the Russian spelling error. However, B's overall flow is superior."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B correctly identifies the author as William Zung (the creator of the scale), whereas Translation A incorrectly names him William Zang. Translation B also uses more natural phrasing ('self-assessment test' and 'allows for a better understanding').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The name of the developer is incorrectly transcribed as 'William Zang' instead of 'William Zung'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Self-rating anxiety test' is slightly clunky compared to 'self-assessment test for anxiety'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/instagram",
+          "ru": "17925464928138340",
+          "oldText": "18009974963641831",
+          "newText": "17925464928138340",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 0,
+                "new": 100
+              },
+              "reason": "The original text is a numeric identifier. Translation A changed the number, which is a critical error, while Translation B preserved it exactly.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The numeric value was altered"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 0,
+                "new": 100
+              },
+              "reason": "The input consists of numeric identifiers. Both translations are treated as literal copies of the source, though B is a mistranslation/corruption of the number.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The number does not match the original"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/7/text",
+          "ru": "Согласно статистике, около 10% людей в мире страдают от хронической усталости, которая значительно влияет на их способность выполнять повседневные задачи.",
+          "oldText": "According to statistics, about 10% of people worldwide suffer from chronic fatigue, which significantly affects their ability to perform everyday tasks.",
+          "newText": "Statistics show that about 10% of people worldwide suffer from chronic fatigue, which significantly impacts their ability to perform daily tasks.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B sounds more natural and professional for an article. 'Statistics show' is a more idiomatic way to introduce data than the slightly more formal/clunky 'According to statistics', and 'impacts' is a stronger, more modern choice than 'affects' in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'According to statistics' is grammatically correct but slightly more textbook-like/stiff compared to 'Statistics show'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A sounds more natural and professional for an English-speaking audience by using 'Statistics show' instead of the more literal and slightly clunky 'According to statistics'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'According to statistics' is a bit of a translationese/cliché; 'Statistics show' is more idiomatic for high-quality non-fiction/articles."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/range/normal",
+          "ru": "Нормальное состояние",
+          "oldText": "Normal state",
+          "newText": "Normal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 70,
+                "new": 95
+              },
+              "reason": "In a UX/UI context, 'Normal' is the standard, concise way to label a state or status. 'Normal state' sounds like a clinical or scientific description rather than a natural interface label.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too wordy and sounds like a literal translation of 'состояние' instead of a natural UI label."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "In a mental health app context, 'Normal' is the standard, concise way to describe a baseline state. 'Normal state' sounds overly clinical and heavy for a UI label.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Unnecessarily wordy and clinical for a UI element; 'state' is redundant here."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/result/extreme/title",
+          "ru": "Сильная тревога",
+          "oldText": "Severe anxiety",
+          "newText": "Extreme anxiety",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "In a clinical or mental health context, 'severe' is the standard term used to describe the intensity of symptoms (e.g., severe anxiety, severe depression). 'Extreme' sounds more colloquial and less professional.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "In a clinical or psychological context, 'severe' is the standard term to describe the intensity of anxiety, whereas 'extreme' sounds slightly more colloquial and less professional.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Extreme' is less idiomatic for describing clinical symptoms than 'severe'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/19/text",
+          "ru": "Регулярные кошмары могут серьезно нарушить структуру сна, приводя к недосыпу, что, в свою очередь, увеличивает уровень дневной усталости и снижает общее качество жизни. Это также может способствовать развитию депрессии и других психологических расстройств.",
+          "oldText": "Frequent nightmares can seriously disrupt sleep structure, leading to sleep deprivation, which in turn increases daytime fatigue and reduces overall quality of life. This can also contribute to the development of depression and other psychological disorders.",
+          "newText": "Regular nightmares can seriously disrupt sleep structure, leading to sleep deprivation, which in turn increases daytime fatigue and lowers overall quality of life. This can also contribute to the development of depression and other psychological disorders.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Translation A uses 'Frequent', which is more idiomatic than 'Regular' when describing the occurrence of nightmares in a clinical/psychological context. Both are grammatically correct, but A sounds more natural to a native speaker.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Regular' sounds slightly more like a scheduled routine rather than frequency of occurrence; 'Frequent' is the standard colocation for nightmares."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Both translations are grammatically correct and accurate, but B is slightly better due to the choice of 'Frequent' for 'Регулярные' (which sounds more natural in a clinical/descriptive context than 'Regular') and 'reduces' instead of 'lowers' for quality of life.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Regular' is a bit literal; 'Frequent' is more idiomatic for describing recurring symptoms. 'Lowers' is acceptable, but 'reduces' is more standard for 'quality of life'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/5/text",
+          "ru": "Дрожание рук и ног может быть вызвано множеством причин, включая стресс, усталость, переутомление или кофеин. Это также может быть симптомом медицинских состояний, таких как тревожное расстройство, гипертиреоз или даже начало неврологических заболеваний, таких как болезнь Паркинсона.",
+          "oldText": "Trembling of the hands and feet can have many causes, including stress, fatigue, overexertion or caffeine. It can also be a symptom of medical conditions such as an anxiety disorder, hyperthyroidism or even early stages of neurological conditions like Parkinson’s disease.",
+          "newText": "Trembling in your hands and legs can be caused by many things, including stress, fatigue, exhaustion, or caffeine. It can also be a symptom of medical conditions such as anxiety disorders, hyperthyroidism, or even the onset of neurological conditions like Parkinson’s disease.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 94
+              },
+              "reason": "Translation B sounds much more natural to a native speaker. 'Trembling in your hands and legs' is more idiomatic than the heavy 'Trembling of the hands and feet', and 'exhaustion' is a better fit for 'переутомление' in this context than 'overexertion'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'Trembling of the hands and feet' is slightly clunky/formal; 'in your hands and legs' is more natural for health content."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'overexertion' for 'переутомление', which is acceptable but 'exhaustion' (in B) is more common in this list of symptoms."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 84,
+                "new": 92
+              },
+              "reason": "Translation A sounds more natural and empathetic ('Trembling in your hands and legs'), whereas B feels slightly more clinical and detached. A also correctly uses the plural 'anxiety disorders' to match the context of multiple medical conditions.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'hands and feet' is a bit more formal/clinical than the original 'рук и ног' (hands and legs)."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'an anxiety disorder' (singular) where 'anxiety disorders' (plural) is more appropriate for a general list of conditions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/18/fact",
+          "ru": "Крепкий сон улучшает иммунную функцию и снижает риск развития хронических заболеваний. Джефф Безос, основатель Amazon, также подчеркивает, что полноценный сон является ключевым для поддержания его производительности и благополучия.",
+          "oldText": "Sound sleep improves immune function and reduces the risk of chronic illnesses. Jeff Bezos, the founder of Amazon, has also emphasized that proper sleep is key to maintaining his productivity and well-being.",
+          "newText": "Deep sleep improves immune function and reduces the risk of chronic diseases. Amazon founder Jeff Bezos also emphasizes that adequate sleep is key to maintaining his productivity and well-being.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more concise and follows modern journalistic/UX standards for flow. Translation B is slightly more wordy and uses 'has also emphasized', which adds unnecessary weight to the sentence.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of present perfect 'has also emphasized' makes the sentence feel slightly more heavy/formal than the direct present tense in A, which is better for readability."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation B is more idiomatic and follows professional journalistic style. 'Deep sleep' is a more natural collocation than 'Sound sleep' in this context, and the removal of 'the' before 'founder' makes the sentence flow better.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Sound sleep' is slightly more poetic/old-fashioned; 'Deep sleep' is the standard term in health contexts. 'The founder of Amazon' is grammatically correct but slightly wordier than the more natural 'Amazon founder'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/range/extreme",
+          "ru": "Крайняя степень тревожного расстройства",
+          "oldText": "Extreme anxiety",
+          "newText": "Extreme anxiety disorder",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation A accurately reflects the original medical/psychological term 'тревожное расстройство' (anxiety disorder), whereas B omits the 'disorder' part, changing the meaning from a clinical condition to a mere state of feeling.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing 'disorder' (расстройство), which is a key part of the original term."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 80
+              },
+              "reason": "In English, 'extreme anxiety' is a natural, idiomatic way to describe a high level of anxiety. Adding 'disorder' makes it sound overly clinical and heavy, which deviates from the 'understanding friend' tone.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The addition of 'disorder' makes the phrase sound like a formal medical diagnosis rather than a descriptive state, which is less natural for a supportive app context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/result/normal/title",
+          "ru": "Нормальное состояние",
+          "oldText": "Normal state",
+          "newText": "Normal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 95
+              },
+              "reason": "In a mental health app context, 'Normal state' sounds like a clinical or technical status (like a machine's state), whereas 'Normal' is the natural, concise way to label a baseline or standard condition in UI.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Sounds like a literal translation (calque) and is too clinical/robotic for a supportive app interface."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "In a mental health app context, 'Normal' is the standard, concise way to describe a baseline state. 'Normal state' sounds overly clinical and heavy for a UI label.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Unnecessarily wordy and clinical for a UI element; 'state' is redundant here."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/anxiety.json",
+          "lang": "en",
+          "key": "/steps_description/5/fact",
+          "ru": "Тревожные расстройства являются одними из самых распространенных психических заболеваний, поражающих миллионы людей по всему миру. Около 31% взрослого населения в какой-то момент своей жизни испытывают тревожное расстройство.",
+          "oldText": "Anxiety disorders are among the most common mental health conditions, affecting millions of people worldwide. Around 31% of adults experience an anxiety disorder at some point in their lives.",
+          "newText": "Anxiety disorders are among the most common mental health conditions, affecting millions of people worldwide. About 31% of the adult population will experience an anxiety disorder at some point in their lives.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Translation A is more precise and natural. Translation B introduces an unnecessary 'will', which changes the factual statement into a prediction of the future, and 'the adult population' is slightly more clunky than the concise 'adults'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'will experience' sounds like a prediction rather than a statistical fact."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'the adult population' is slightly more wordy/formal than the more natural 'adults'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Translation A uses 'will experience', which perfectly captures the sense of a life-course probability implied by 'в какой-то момент своей жизни'. Translation B is grammatically correct but sounds slightly more like a static fact rather than a life event.",
+              "issues": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
