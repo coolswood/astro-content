@@ -1,0 +1,2067 @@
+{
+  "file": "story/depression/control_death_diagnostic.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 9,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/control/title",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/control/description",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, смысл сохранен"
+              },
+              {
+                "path": "/control/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/control/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_1/texts/8",
+                "verdict": "issue",
+                "note": "Смысловая подмена буквы: в оригинале Д, в переводе A"
+              },
+              {
+                "path": "/control/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Несоответствие букв: в оригинале Д-2, в переводе A-2"
+              },
+              {
+                "path": "/control/screen_2/texts/2",
+                "verdict": "issue",
+                "note": "Смысловая подмена буквы: в оригинале У, в переводе P"
+              },
+              {
+                "path": "/control/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/control/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_3/texts/0",
+                "verdict": "issue",
+                "note": "Грамматическая ошибка/стилистическая калька: keep a schedule regularly"
+              },
+              {
+                "path": "/control/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/control/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/title",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/description",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Переведено верно"
+              },
+              {
+                "path": "/death/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден."
+              },
+              {
+                "path": "/death/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/death/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/death/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortion, personalization) верна."
+              },
+              {
+                "path": "/death/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Грамматика и смысл в порядке."
+              },
+              {
+                "path": "/death/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/death/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла."
+              },
+              {
+                "path": "/death/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/title",
+                "verdict": "ok",
+                "note": "Заголовок адаптирован хорошо."
+              },
+              {
+                "path": "/diagnostic/description",
+                "verdict": "issue",
+                "note": "Omission: потерян фрагмент про упражнения в конце."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Тег instagram в en/ru — норма."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Sentence case в h2 — ок."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология (mild/severe) верна."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Естественный перевод, без лишней вежливости."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Смысл сохранен, теги на месте."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок переведен корректно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Терминология (psychologist, psychiatrist) соблюдена."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, 'along the way' уместно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно, 'mild to moderate' — стандарт."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/5",
+                "verdict": "issue",
+                "note": "Добавлена вежливая конструкция 'Please note', которой нет в оригинале."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Стиль и смысл соблюдены."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Терминология (exercises) верна."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/11",
+                "verdict": "issue",
+                "note": "Добавлена интерпретация 'steps toward healing', которой нет в оригинале."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/control/screen_1/texts/8",
+                "fragment": "mark any activity with the letter “A” (for Achievement)",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена буквы",
+                "why": "В оригинале используется русская буква «Д» (Дело), перевод заменяет её на английскую «A» (Achievement). Это ломает связь с последующими примерами, где пользователь должен искать букву «Д»."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/control/screen_2/texts/1",
+                "fragment": "you might write “A-2,”",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Несоответствие буквенного кода",
+                "why": "В оригинале «Д-2», в переводе «A-2». Это следствие ошибки в предыдущем блоке, но критично для консистентности инструкции."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/control/screen_2/texts/2",
+                "fragment": "mark it with “P” for “Pleasure.”",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена буквы",
+                "why": "В оригинале буква «У» (Удовольствие), в переводе «P» (Pleasure). Хотя это попытка адаптации, это создает разрыв между русским текстом (если он где-то встретится) и логикой упражнения."
+              },
+              {
+                "id": "c1-I4",
+                "path": "/control/screen_3/texts/0",
+                "fragment": "If you keep a daily schedule regularly",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Плеоназм / тяжелый ритм",
+                "why": "Фраза 'keep a schedule regularly' звучит избыточно. Лучше 'If you keep a daily schedule' или 'If you make a schedule regularly'."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/diagnostic/description",
+                "fragment": "and offers practical steps for supporting your mental well-being.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущена часть предложения про упражнения.",
+                "why": "В оригинале: «...и предлагает практические шаги и упражнения для тех, кто хочет заботиться о своём эмоциональном состоянии». В переводе упражнения (exercises) и уточнение про целевую аудиторию (for those who want to...) потеряны."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/diagnostic/screen_3/texts/5",
+                "fragment": "Please note, however, that",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлена вежливая вводная конструкция 'Please note'",
+                "why": "В правилах указано: 'Не добавляй вежливость, которой нет в оригинале'. В русском тексте нет прямого обращения или просьбы обратить внимание, это просто констатация факта."
+              },
+              {
+                "id": "c3-I2",
+                "path": "/diagnostic/screen_3/texts/11",
+                "fragment": "steps toward healing",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено уточнение 'toward healing' (навстречу исцелению)",
+                "why": "В оригинале 'шаги навстречу себе' — это более широкая и менее клиническая метафора. 'Healing' вносит специфический оттенок, которого нет в исходном тексте."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical error: changing the letter 'Д' to 'A' breaks the logic of the instruction for the user."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c1-I1"
+                ],
+                "note": "Consistency error: follows the logic of the previous mistranslation of the letter code."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Transcreation issue: while 'P' for 'Pleasure' is a logical adaptation, it is a deviation from the source letter 'У'."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Omission of 'exercises' and the target audience clause, which changes the scope of the description."
+              },
+              {
+                "id": "c3-I2",
+                "verdict": "confirmed",
+                "rank": 5,
+                "note": "Unnecessary addition of 'healing' which narrows the original metaphorical meaning."
+              },
+              {
+                "id": "c1-I4",
+                "verdict": "confirmed",
+                "rank": 6,
+                "note": "Stylistic redundancy: 'keep... regularly' is tautological."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "rejected",
+                "note": "This is a natural English stylistic filler to soften a warning; it doesn't change the meaning and is acceptable transcreation."
+              }
+            ],
+            "notes": "The translation suffers from significant logical inconsistencies caused by changing the exercise's letter codes (D -> A), which would confuse a user. There are also notable omissions in the diagnostic description.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/control/screen_1/texts/8",
+                "current": "mark any activity with the letter “A” (for Achievement) if that task was difficult for you and felt like a specific accomplishment.",
+                "proposed": "mark any activity with the letter “D” (for Deed) if that task was difficult for you and felt like a specific accomplishment.",
+                "alternatives": [
+                  "mark any activity with the letter “D” (for Done) if that task was difficult for you and felt like a specific accomplishment."
+                ],
+                "rationale": "В оригинале используется буква «Д» (Дело). Хотя «A» (Achievement) логично для английского, это ломает консистентность, если пользователь будет искать букву «Д» в интерфейсе или если текст будет сопоставляться с русским. Нужно сохранить букву, адаптировав расшифровку."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/control/screen_2/texts/1",
+                "current": "you might write “A-2,” but if cooking lunch was harder, it might be “A-7.”",
+                "proposed": "you might write “D-2,” but if cooking lunch was harder, it might be “D-7.”",
+                "alternatives": [],
+                "rationale": "Исправление ошибки консистентности: буква должна соответствовать исправленной в предыдущем пункте инструкции."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 3,
+                "path": "/control/screen_2/texts/2",
+                "current": "mark it with “P” for “Pleasure.”",
+                "proposed": "mark it with “U” for “Unwind” or “U” for “Utmost pleasure.”",
+                "alternatives": [
+                  "mark it with “U” for “Utmost pleasure.”"
+                ],
+                "rationale": "В оригинале буква «У» (Удовольствие). Чтобы сохранить букву «У» и не потерять смысл, нужно подобрать английское слово на «U». Вариант 'U for Pleasure' невозможен. 'U for Unwind' или 'U for Utmost pleasure' — попытка сохранить и букву, и смысл, хотя это и сложнее. Если же приоритет — естественность, то лучше оставить 'P', но по правилам точности мы должны стремиться к сохранению символа, если это часть системы кодирования."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 4,
+                "path": "/diagnostic/description",
+                "current": "It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps for supporting your mental well-being.",
+                "proposed": "It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being.",
+                "alternatives": [],
+                "rationale": "Восстановление пропущенного смысла: добавлены 'exercises' и уточнение целевой аудитории, как в оригинале."
+              },
+              {
+                "id": "c3-I2",
+                "priority": 5,
+                "path": "/diagnostic/screen_3/texts/11",
+                "current": "If you want to improve your quality of life and are ready to take steps toward healing, let’s continue this journey together.",
+                "proposed": "If you want to improve your quality of life and are ready to take steps toward yourself, let’s continue this journey together.",
+                "alternatives": [
+                  "If you want to improve your quality of life and are ready to take steps toward your own well-being, let’s continue this journey together."
+                ],
+                "rationale": "Удаление избыточного 'healing'. Оригинал 'навстречу себе' — это метафора самопознания, а не клинический процесс исцеления. 'Steps toward yourself' звучит более поэтично и ближе к духу оригинала."
+              },
+              {
+                "id": "c1-I4",
+                "priority": 6,
+                "path": "/control/screen_3/texts/0",
+                "current": "If you keep a daily schedule regularly, you will soon notice your motivation growing.",
+                "proposed": "If you keep a daily schedule, you will soon notice your motivation growing.",
+                "alternatives": [
+                  "If you make a daily schedule regularly, you will soon notice your motivation growing."
+                ],
+                "rationale": "Устранение плеоназма. 'Keep a schedule' уже подразумевает регулярность, 'regularly' здесь лишнее."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 7,
+                "path": "/diagnostic/screen_3/texts/5",
+                "current": "Please note, however, that for severe depression, self-help tools alone may not be enough.",
+                "proposed": "However, for severe depression, self-help tools alone may not be enough.",
+                "alternatives": [],
+                "rationale": "Удаление лишней вежливости 'Please note', которой нет в оригинале, согласно правилам Tone of Voice."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружены критические ошибки в логике упражнения (подмена буквенных кодов 'Д' на 'A'), что делает инструкцию нерабочей. Также есть пропуски важных смысловых блоков в описании диагностики. Требуется исправить кодировку букв и восстановить полноту перевода."
+            },
+            "timings": {
+              "issues": 75334,
+              "deliberate": 10663,
+              "recommend": 26478
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/control/screen_1/texts/8",
+              "from": "Additionally, mark any activity with the letter “A” (for Achievement) if that task was difficult for you and felt like a specific accomplishment.",
+              "to": "mark any activity with the letter “D” (for Deed) if that task was difficult for you and felt like a specific accomplishment."
+            },
+            {
+              "id": "c2-I1",
+              "path": "/diagnostic/description",
+              "from": "This article explores how to identify depression, from recognizing common symptoms to using self-assessment tools like the “Beck Depression Inventory.” It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps for supporting your mental well-being.",
+              "to": "It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being."
+            },
+            {
+              "id": "c3-I2",
+              "path": "/diagnostic/screen_3/texts/11",
+              "from": "If you want to improve your quality of life and are ready to take steps toward healing, let’s continue this journey together.",
+              "to": "If you want to improve your quality of life and are ready to take steps toward yourself, let’s continue this journey together."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I2",
+              "path": "/control/screen_2/texts/1",
+              "reason": "цитата судьи не похожа на лист (сходство 45%)"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/control/screen_2/texts/2",
+              "reason": "цитата судьи не похожа на лист (сходство 43%)"
+            },
+            {
+              "id": "c1-I4",
+              "path": "/control/screen_3/texts/0",
+              "reason": "цитата судьи не похожа на лист (сходство 42%)"
+            },
+            {
+              "id": "c3-I1",
+              "path": "/diagnostic/screen_3/texts/5",
+              "reason": "замечание отклонено коллегией"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/control/title",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/control/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон соблюден"
+              },
+              {
+                "path": "/control/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/control/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/control/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_1/texts/8",
+                "verdict": "issue",
+                "note": "Ошибка в букве: в оригинале 'Д', в переводе 'A'"
+              },
+              {
+                "path": "/control/screen_2/texts/0",
+                "verdict": "issue",
+                "note": "Ошибка в букве: в оригинале 'Д', в переводе 'A'"
+              },
+              {
+                "path": "/control/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Ошибка в букве: в оригинале 'Д', в переводе 'A'"
+              },
+              {
+                "path": "/control/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/control/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/control/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/death/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/death/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/death/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/death/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortion, personalization) верна"
+              },
+              {
+                "path": "/death/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Грамматика и смысл верны"
+              },
+              {
+                "path": "/death/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно"
+              },
+              {
+                "path": "/death/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод хороший, идиоматичный"
+              },
+              {
+                "path": "/death/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/death/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/death/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/death/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/death/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод хороший, передает нюансы"
+              },
+              {
+                "path": "/death/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/death/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/title",
+                "verdict": "ok",
+                "note": "Заголовок адаптирован хорошо"
+              },
+              {
+                "path": "/diagnostic/description",
+                "verdict": "issue",
+                "note": "Omission: пропущено упоминание Шкалы Бека в самом тексте перевода"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Тег instagram в ru/en — ок"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон соответствует."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок корректен."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, 'along the way' уместно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/5",
+                "verdict": "issue",
+                "note": "Добавлена вежливая конструкция 'Please note', которой нет в оригинале."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/11",
+                "verdict": "issue",
+                "note": "Калька 'steps toward yourself' звучит неестественно для английского языка."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/control/screen_1/texts/8",
+                "fragment": "mark any activity with the letter “D” (for Deed)",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Буква 'Д' (Дело) заменена на 'D' (Deed)",
+                "why": "Хотя перевод 'Deed' пытается передать смысл, в интерфейсе и последующих инструкциях пользователь будет искать букву 'Д', а не 'D'. Это ломает логику упражнения."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/control/screen_2/texts/0",
+                "fragment": "you would write the letter “A” next to the task",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Буква 'Д' заменена на 'A'",
+                "why": "В оригинале 'Д', в переводе 'A'. Это критическая ошибка, так как пользователь не сможет следовать инструкции."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/control/screen_2/texts/1",
+                "fragment": "you might write “A-2,”",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Буква 'Д' заменена на 'A'",
+                "why": "Аналогично предыдущему: подмена идентификатора действия делает инструкцию невыполнимой."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/diagnostic/description",
+                "fragment": "It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being.",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущено упоминание «Шкалы депрессии Бека» (Beck Depression Inventory)",
+                "was": "В оригинале текст содержит конкретное упоминание инструмента диагностики, что важно для информативности статьи. В английском варианте это предложение полностью удалено."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/diagnostic/screen_3/texts/5",
+                "fragment": "Please note, however, that",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлена вежливая вводная конструкция 'Please note'",
+                "why": "В правилах Tone of Voice указано: 'Не добавляй вежливость, которой нет в оригинале'. В русском тексте нет призыва 'обратите внимание'."
+              },
+              {
+                "id": "c3-I2",
+                "path": "/diagnostic/screen_3/texts/11",
+                "fragment": "take steps toward yourself",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Калька с русского 'шаги навстречу себе'",
+                "why": "Фраза 'take steps toward yourself' звучит неестественно. В английском в контексте саморазвития лучше использовать 'take steps toward self-care' или 'take steps to care for yourself'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translator attempted transcreation (Deed), but it breaks the functional logic of the exercise as the user needs to write the specific Cyrillic letter 'Д'."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c1-I1",
+                  "c1-I3"
+                ],
+                "note": "Critical functional error: the identifier 'Д' is replaced by 'A', making the instructions impossible to follow. This is the highest priority."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c1-I1",
+                  "c1-I2"
+                ],
+                "note": "Critical functional error: same as I2, the identifier is wrong."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Significant omission of a key term (Beck Depression Inventory) mentioned in the source description."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 5,
+                "note": "Minor violation of Tone of Voice regarding unnecessary politeness."
+              },
+              {
+                "id": "c3-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Stylistic issue: unnatural phrasing resulting from literal translation of a Russian idiom."
+              }
+            ],
+            "notes": "The translation contains critical functional errors where Cyrillic identifiers ('Д') were replaced with Latin letters, rendering the instructions unusable. There are also notable omissions and stylistic calques.",
+            "recommendations": [
+              {
+                "id": "c1-I2",
+                "priority": 1,
+                "path": "/control/screen_2/texts/0",
+                "current": "In those cases, you would write the letter “A” next to the task.",
+                "proposed": "In those cases, you would write the letter “Д” next to the task.",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: буква 'Д' заменена на 'A'. Поскольку упражнение завязано на использовании кириллической буквы, необходимо вернуть оригинал."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 1,
+                "path": "/control/screen_2/texts/1",
+                "current": "For example, if making the bed was quite easy, you might write “A-2,” but if cooking lunch was harder, it might be “A-7.”",
+                "proposed": "For example, if making the bed was quite easy, you might write “Д-2,” but if cooking lunch was harder, it might be “Д-7.”",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: подмена идентификатора 'Д' на 'A' делает инструкцию невыполнимой для пользователя."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/control/screen_1/texts/8",
+                "current": "mark any activity with the letter “D” (for Deed) if that task was difficult for you and felt like a specific accomplishment.",
+                "proposed": "mark any activity with the letter “Д” (for Deed) if that task was difficult for you and felt like a specific accomplishment.",
+                "alternatives": [],
+                "rationale": "Несмотря на попытку адаптации (Deed), пользователь должен видеть в интерфейсе именно букву 'Д'. Оставляем пояснение в скобках для понимания смысла."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/diagnostic/description",
+                "current": "It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being.",
+                "proposed": "The article covers various ways to diagnose depression, from recognizing general symptoms to self-assessment using the Beck Depression Inventory (BDI). It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being.",
+                "alternatives": [],
+                "rationale": "В оригинале было важное упоминание конкретного инструмента (BDI), которое было полностью упущено в переводе. Необходимо восстановить полноту информации."
+              },
+              {
+                "id": "c3-I2",
+                "priority": 4,
+                "path": "/diagnostic/screen_3/texts/11",
+                "current": "If you want to improve your quality of life and are ready to take steps toward yourself, let’s continue this journey together.",
+                "proposed": "If you want to improve your quality of life and are ready to take steps toward self-care, let’s continue this journey together.",
+                "alternatives": [
+                  "ready to take steps to care for yourself"
+                ],
+                "rationale": "Фраза 'take steps toward yourself' — это калька, которая звучит неестественно. Вариант с 'self-care' лучше передает смысл и звучит по-английски."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 5,
+                "path": "/diagnostic/screen_3/texts/5",
+                "current": "It can help ease symptoms and provide a better understanding of what you’re going through. Please note, however, that for severe depression, self-help tools alone may not be enough.",
+                "proposed": "It can help ease symptoms and provide a better understanding of what you’re going through. However, for severe depression, self-help tools alone may not be enough.",
+                "alternatives": [],
+                "rationale": "Удалено лишнее 'Please note', так как в оригинале нет призыва обратить внимание. Это соответствует правилам Tone of Voice (избегать лишней вежливости, которой нет в тексте)."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружены критические ошибки в идентификаторах (замена буквы 'Д' на 'A'), что делает инструкции к упражнениям нерабочими. Также пропущено важное упоминание методики (BDI) в описании. Требуется исправление логики упражнения и устранение стилистических калек."
+            },
+            "timings": {
+              "issues": 63512,
+              "deliberate": 10659,
+              "recommend": 22639
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/diagnostic/description",
+              "from": "It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being.",
+              "to": "The article covers various ways to diagnose depression, from recognizing general symptoms to self-assessment using the Beck Depression Inventory (BDI). It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being."
+            },
+            {
+              "id": "c3-I2",
+              "path": "/diagnostic/screen_3/texts/11",
+              "from": "If you want to improve your quality of life and are ready to take steps toward yourself, let’s continue this journey together.",
+              "to": "If you want to improve your quality of life and are ready to take steps toward self-care, let’s continue this journey together."
+            },
+            {
+              "id": "c3-I1",
+              "path": "/diagnostic/screen_3/texts/5",
+              "from": "It can help ease symptoms and provide a better understanding of what you’re going through. Please note, however, that for severe depression, self-help tools alone may not be enough.",
+              "to": "It can help ease symptoms and provide a better understanding of what you’re going through. However, for severe depression, self-help tools alone may not be enough."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I2",
+              "path": "/control/screen_2/texts/0",
+              "reason": "цитата судьи не похожа на лист (сходство 22%)"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/control/screen_2/texts/1",
+              "reason": "валидация листа: чужие символы/слова: “Д-2,”, “Д-7.”"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/control/screen_1/texts/8",
+              "reason": "валидация листа: чужие символы/слова: “Д”"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/control/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/description",
+                "verdict": "ok",
+                "note": "Смысл передан, тон соответствует"
+              },
+              {
+                "path": "/control/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/control/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_1/texts/8",
+                "verdict": "issue",
+                "note": "Ошибка в букве: в оригинале 'Д', в переводе 'A' (хотя пояснение Deed дано, это путает)"
+              },
+              {
+                "path": "/control/screen_2/texts/0",
+                "verdict": "issue",
+                "note": "Критическая ошибка: буква 'A' вместо 'D' (из-за путаницы с 'Deed')"
+              },
+              {
+                "path": "/control/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Критическая ошибка: буква 'A' вместо 'D'"
+              },
+              {
+                "path": "/control/screen_2/texts/2",
+                "verdict": "issue",
+                "note": "Ошибка в букве: в оригинале 'У', в переводе 'P' (хотя пояснение Pleasure дано, это не соответствует букве 'Д/D' из контекста)"
+              },
+              {
+                "path": "/control/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Тег без изменений"
+              },
+              {
+                "path": "/control/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/control/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/title",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/description",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/death/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден."
+              },
+              {
+                "path": "/death/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/death/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/death/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortion, personalization) верна."
+              },
+              {
+                "path": "/death/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Грамматика Conditionals верна."
+              },
+              {
+                "path": "/death/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/death/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/death/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/death/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/title",
+                "verdict": "ok",
+                "note": "Заголовок адаптирован хорошо."
+              },
+              {
+                "path": "/diagnostic/description",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология (BDI) верна."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Sentence case в h2."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Термин (intrusive thoughts) верный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_1/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/3",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: в оригинале 21 категория симптомов, в переводе — 21 категория симптомов (но это звучит как 21 group of symptoms, хотя в BDI это 21 item/question). Однако, главная проблема в '21 categories of symptoms' — это калька, в английском это звучит избыточно и не совсем корректно для теста."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл тяжести симптомов."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Естественно, без лишней вежливости."
+              },
+              {
+                "path": "/diagnostic/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Смысл сохранен, теги на месте."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок переведен корректно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Терминология (psychologist) соблюдена, тон поддерживающий."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая транскреация фразы 'А мы рядом'."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод 'mild to moderate symptoms' — отличная адаптация."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный, соблюден тон."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен, 'medical support' звучит естественно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный, теги на месте."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод 'low mood' для 'подавленное настроение' — стандарт."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/diagnostic/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'шагам навстречу себе' через 'self-care'."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/control/screen_1/texts/8",
+                "fragment": "mark any activity with the letter “D” (for Deed)",
+                "type": "minor",
+                "problem": "Несоответствие букв",
+                "why": "В оригинале буква 'Д', переводчик пытается адаптировать её под 'Deed', но это создает риск путаницы, если в интерфейсе или логике упражнения ожидается именно 'D' (как транслитерация или символ). Однако, главная проблема в следующем элементе, где эта ошибка масштабируется."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/control/screen_2/texts/0",
+                "fragment": "you would write the letter “A” next to the task",
+                "type": "critical",
+                "problem": "Mistranslation of the key symbol",
+                "why": "В оригинале буква «Д», в переводе — «A». Это полностью ломает инструкцию по заполнению дневника."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/control/screen_2/texts/1",
+                "fragment": "you might write “A-2,” but if cooking lunch was harder, it might be “A-7.”",
+                "type": "critical",
+                "problem": "Mistranslation of the key symbol",
+                "why": "В оригинале буква «Д», в переводе — «A». Пользователь не поймет, какую букву писать, если в инструкции указана 'A', а в упражнении подразумевается 'D'."
+              },
+              {
+                "id": "c1-I4",
+                "path": "/control/screen_2/texts/2",
+                "fragment": "mark it with “P” for “Pleasure.”",
+                "type": "major",
+                "problem": "Mistranslation of the key symbol",
+                "why": "В оригинале буква «У» (Удовольствие), в переводе — «P» (Pleasure). Хотя это логичная адаптация, она нарушает единообразие, если пользователь ожидает соответствия символов или если система настроена на конкретные маркеры."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/diagnostic/screen_2/texts/3",
+                "fragment": "includes 21 categories of symptoms",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественная формулировка",
+                "why": "В контексте теста BDI речь идет о 21 пункте (item) или вопросе, а не о 21 категории. '21 categories of symptoms' звучит как очень громоздкая классификация, что является лексической избыточностью (калькой)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "merged",
+                "mergedInto": "c1-I2",
+                "rank": 1,
+                "note": "I1 is a minor observation about the adaptation of 'Д' to 'D', but it is part of the same systemic error where the symbol was changed from the original. I2 is the critical manifestation of this error."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical error: the translator changed the symbol 'Д' to 'A', which breaks the core instruction of the exercise."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c1-I2"
+                ],
+                "note": "Critical error: consistent with I2, the symbol 'Д' is incorrectly translated as 'A' in the examples, making the instructions impossible to follow."
+              },
+              {
+                "id": "c1-I4",
+                "verdict": "confirmed",
+                "rank": 3,
+                "related": [
+                  "c1-I2"
+                ],
+                "note": "Major error: while 'P' for 'Pleasure' is a logical adaptation of 'У' for 'Удовольствие', it contributes to the loss of the original symbolic system used in the exercise."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Minor stylistic issue: '21 categories' is a lexical inaccuracy; in the context of the BDI, these are 'items' or 'questions'."
+              }
+            ],
+            "notes": "The translation suffers from a critical failure in the 'Control' section where the key symbolic markers (Д, У) were inconsistently and incorrectly adapted (to A, P), rendering the instructions unusable. The diagnostic section is generally accurate but contains a minor terminological inaccuracy regarding the BDI scale.",
+            "recommendations": [
+              {
+                "id": "c1-I2",
+                "priority": 1,
+                "path": "/control/screen_2/texts/0",
+                "current": "In those cases, you would write the letter “A” next to the task. You should also note the level of difficulty.",
+                "proposed": "In those cases, you would write the letter “D” next to the task. You should also note the level of difficulty.",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: переводчик заменил оригинальную букву «Д» на «A». Это ломает логику упражнения. Необходимо вернуть «D» (как адаптацию «Д-дело»), чтобы сохранить связь с предыдущим шагом инструкции."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 2,
+                "path": "/control/screen_2/texts/1",
+                "current": "For example, if making the bed was quite easy, you might write “A-2,” but if cooking lunch was harder, it might be “A-7.” You decide the scale based on how you feel.",
+                "proposed": "For example, if making the bed was quite easy, you might write “D-2,” but if cooking lunch was harder, it might be “D-7.” You decide the scale based on how you feel.",
+                "alternatives": [],
+                "rationale": "Критическая ошибка: повторное использование неверного символа «A» вместо «D». Исправлено для соответствия инструкции."
+              },
+              {
+                "id": "c1-I4",
+                "priority": 3,
+                "path": "/control/screen_2/texts/2",
+                "current": "If an activity in your plan was enjoyable, mark it with “P” for “Pleasure.”",
+                "proposed": "If an activity in your plan was enjoyable, mark it with “U” for “Unforgettable pleasure” or simply “U” to match the original symbol.",
+                "alternatives": [
+                  "If an activity in your plan was enjoyable, mark it with “U”."
+                ],
+                "rationale": "Хотя адаптация «P» (Pleasure) логична, она полностью разрывает связь с оригинальным символом «У». Если интерфейс или логика приложения завязаны на кириллических или специфических маркерах, это вызовет путаницу. Рекомендуется либо оставить «U» (как транслитерацию), либо использовать максимально близкую к оригиналу букву, если это технически возможно. Однако, учитывая Tone of Voice, если мы адаптируем «Д» в «D», то «У» в «P» — это допустимый, но требующий единообразия подход. Я предлагаю вернуть «U» для минимизации риска расхождения с оригинальной методикой."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 4,
+                "path": "/diagnostic/screen_2/texts/3",
+                "current": "Developed by psychotherapist Aaron Beck, this method includes 21 categories of symptoms, each reflecting different aspects of a depressive state.",
+                "proposed": "Developed by psychotherapist Aaron Beck, this method includes 21 items, each reflecting different aspects of a depressive state.",
+                "alternatives": [
+                  "includes 21 questions"
+                ],
+                "rationale": "В контексте BDI (Beck Depression Inventory) корректно говорить «items» (пункты/вопросы), а не «categories». Слово «categories» создает ложное впечатление о масштабности классификации."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая системная ошибка: переводчик самовольно изменил ключевые символы упражнения (заменил «Д» на «A»), что делает инструкцию по заполнению дневника невыполнимой. Также требуется исправить терминологическую неточность в описании теста Бека. Требуется тщательная проверка всех буквенных маркеров в упражнении на соответствие друг другу."
+            },
+            "timings": {
+              "issues": 66005,
+              "deliberate": 9369,
+              "recommend": 20505
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I3",
+              "path": "/control/screen_2/texts/1",
+              "from": "For example, if making the bed was quite easy, you might write “A-2,” but if cooking lunch was harder, it might be “A-7.” You decide the scale based on how you feel.",
+              "to": "For example, if making the bed was quite easy, you might write “D-2,” but if cooking lunch was harder, it might be “D-7.” You decide the scale based on how you feel."
+            },
+            {
+              "id": "c1-I4",
+              "path": "/control/screen_2/texts/2",
+              "from": "If an activity in your plan was enjoyable, mark it with “P” for “Pleasure.”",
+              "to": "If an activity in your plan was enjoyable, mark it with “U” for “Unforgettable pleasure” or simply “U” to match the original symbol."
+            },
+            {
+              "id": "c2-I1",
+              "path": "/diagnostic/screen_2/texts/3",
+              "from": "Developed by psychotherapist Aaron Beck, this method includes 21 categories of symptoms, each reflecting different aspects of a depressive state.",
+              "to": "Developed by psychotherapist Aaron Beck, this method includes 21 items, each reflecting different aspects of a depressive state."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I2",
+              "path": "/control/screen_2/texts/0",
+              "reason": "цитата судьи не похожа на лист (сходство 38%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

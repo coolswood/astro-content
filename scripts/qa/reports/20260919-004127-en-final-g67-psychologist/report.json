@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T21:41:27.050Z",
+    "Метка": "en-final-g67-psychologist",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "texts/psychologist.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "texts/psychologist.json": {
+      "en": [
+        {
+          "file": "texts/psychologist.json",
+          "lang": "en",
+          "key": "",
+          "ru": "Подключите вашего психолога прямо в приложение!\n\nТеперь специалист сможет видеть ваши записи из дневника автоматических мыслей и поддерживать вас ещё эффективнее.\n\nВсе записи автоматически синхронизируются в его личном кабинете. При этом вы в любой момент можете отключить доступ.\n\nКак подключить психолога:\n\nНажмите «Пригласить психолога» и отправьте ссылку вашему специалисту.\n\nПсихолог примет приглашение, авторизовавшись в своём личном кабинете.\n\nГотово! Вы на связи и можете работать вместе. 🎉\n\nВесь процесс занимает всего несколько минут. 🕒",
+          "oldText": "Connect your psychologist right in the app!\n\nYour psychologist will be able to see your automatic thought diary entries and support you even more effectively.\n\nAll entries are automatically synced to their professional account, and you can revoke access at any time.\n\nHow to connect your psychologist:\n\nTap “Invite psychologist” and send the link to your specialist.\n\nYour psychologist will accept the invitation by signing in to their professional account.\n\nThat’s it! You’re connected and can work together. 🎉\n\nThe whole process takes just a few minutes. 🕒",
+          "newText": "Connect with your psychologist directly in the app!\n\nNow your specialist can see your automatic thought journal entries and support you even more effectively.\n\nAll entries sync automatically to their personal dashboard. You can revoke access at any time.\n\nHow to connect your psychologist:\n\nTap “Invite a psychologist” and send the link to your specialist.\n\nThe psychologist will accept the invitation by logging into their personal dashboard.\n\nDone! You’re connected and ready to work together. 🎉\n\nThe whole process takes just a few minutes. 🕒",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 98
+              },
+              "reason": "Translation A follows the glossary perfectly (automatic thought journal, dashboard) and sounds more natural for a modern app. Translation B uses 'diary' instead of 'journal' and 'professional account' instead of 'dashboard', which feels less idiomatic in this UX context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'diary' instead of the required 'journal' for automatic thought journal."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'professional account' instead of 'dashboard' (личный кабинет)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing 'a' in 'Invite a psychologist' (though buttons often omit it, the original had it and A's version is smoother)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Translation A uses the correct terminology ('automatic thought diary' is acceptable, though 'journal' is preferred, but it correctly handles the professional context) and more natural phrasing. Translation B uses 'personal dashboard' for the psychologist, which sounds like a user-facing feature rather than a professional interface, and 'Invite a psychologist' deviates from the likely UI label 'Invite psychologist'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'personal dashboard' instead of 'professional account/dashboard', which is slightly off for a specialist's view."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The addition of 'a' in 'Invite a psychologist' might not match the actual UI button (sentence case/label style)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Done!' is a bit more abrupt than the warmer 'That's it!' or 'You're all set!' in this context, though acceptable."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

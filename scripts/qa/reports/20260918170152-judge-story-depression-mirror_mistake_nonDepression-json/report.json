@@ -1,0 +1,929 @@
+{
+  "file": "story/depression/mirror_mistake_nonDepression.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соблюден"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон дружелюбный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег перенесен без изменений"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, смысл сохранен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Терминология (client/psychologist) верна"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод диалога естественный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Цитата переведена верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег перенесен без изменений"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный, идиоматичный."
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок переведен хорошо."
+              },
+              {
+                "path": "/mistake/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Тег сохранен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Термин black-and-white thinking использован верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Термин cognitive distortions использован верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Цитата переведена верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mirror/description",
+                "current": "This practice helps you see just how harsh your inner critic can be. Through a brief role-play, you’ll direct your usual self-critical phrases toward a loved one to feel how they sound from the outside. This exercise helps you notice the unfairness of self-deprecation and encourages a kinder attitude toward yourself.",
+                "proposed": "This practice helps you see just how harsh your inner critic can be. Through a brief role-play, you’ll direct your usual self-critical phrases toward a loved one to feel how they sound from an outside perspective. This exercise helps you notice the unfairness of self-criticism and encourages a kinder attitude toward yourself.",
+                "alternatives": [
+                  "This exercise helps you notice the unfairness of self-deprecating thoughts"
+                ],
+                "rationale": "В оригинале «самообесценивание» — это процесс/действие, а не просто черта. 'Self-deprecation' в английском часто имеет оттенок иронии или скромности. 'Self-criticism' точнее передает смысл деструктивного процесса, а 'from an outside perspective' звучит более естественно, чем 'from the outside'."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/mirror/screen_1/texts/1",
+                "current": "Try this: imagine holding a loved one to the same harsh standards you usually hold yourself to. Do it honestly.",
+                "proposed": "Try this: imagine holding a loved one to the same harsh standards you usually hold yourself to. Be honest with yourself as you do it.",
+                "alternatives": [
+                  "Try this: imagine holding a loved one to the same harsh standards you usually hold yourself to. Do so honestly."
+                ],
+                "rationale": "Фраза 'Do it honestly' звучит немного обрывисто и двусмысленно (честно ли выполнять само действие?). В контексте упражнения важно подчеркнуть честность перед собой в процессе погружения в роль."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/nonDepression/screen_2/texts/4",
+                "current": "With depression, it’s as if only the “cold tap” is turned on—sadness, anxiety, and hopelessness. This is often not a consequence of the situation itself, but the result of a distorted perception that requires care and adjustment.",
+                "proposed": "With depression, it’s as if only the “cold tap” is turned on—sadness, anxiety, and hopelessness. This is often not a consequence of the situation itself, but the result of a distorted perception that requires attention and adjustment.",
+                "alternatives": [
+                  "requires support and adjustment"
+                ],
+                "rationale": "Слово 'care' в контексте 'distorted perception' звучит немного по-детски или как уход за больным. 'Attention' (внимание к восприятию) или 'support' лучше подходят для психологического контекста."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден тон «понимающего эксперта», использована правильная терминология КПТ и соблюдены правила UX. Основные риски связаны с легкой «калькой» в описаниях (self-deprecation вместо self-criticism) и мелкими стилистическими шероховатостями в диалогах. Рекомендуется внести правки для придания тексту большей идиоматичности."
+            },
+            "timings": {
+              "issues": 42597,
+              "deliberate": 1537,
+              "recommend": 17205
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/mirror/description",
+              "from": "This practice helps you see just how harsh your inner critic can be. Through a brief role-play, you’ll direct your usual self-critical phrases toward a loved one to feel how they sound from the outside. This exercise helps you notice the unfairness of self-deprecation and encourages a kinder attitude toward yourself.",
+              "to": "This practice helps you see just how harsh your inner critic can be. Through a brief role-play, you’ll direct your usual self-critical phrases toward a loved one to feel how they sound from an outside perspective. This exercise helps you notice the unfairness of self-criticism and encourages a kinder attitude toward yourself."
+            },
+            {
+              "id": "I2",
+              "path": "/mirror/screen_1/texts/1",
+              "from": "Try this: imagine holding a loved one to the same harsh standards you usually hold yourself to. Do it honestly.",
+              "to": "Try this: imagine holding a loved one to the same harsh standards you usually hold yourself to. Be honest with yourself as you do it."
+            },
+            {
+              "id": "I3",
+              "path": "/nonDepression/screen_2/texts/4",
+              "from": "With depression, it’s as if only the “cold tap” is turned on—sadness, anxiety, and hopelessness. This is often not a consequence of the situation itself, but the result of a distorted perception that requires care and adjustment.",
+              "to": "With depression, it’s as if only the “cold tap” is turned on—sadness, anxiety, and hopelessness. This is often not a consequence of the situation itself, but the result of a distorted perception that requires attention and adjustment."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/mirror/title",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/mirror/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон соблюден"
+              },
+              {
+                "path": "/mirror/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Тег перенесен без изменений"
+              },
+              {
+                "path": "/mirror/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, смысл сохранен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Термин 'client' уместен для психолога"
+              },
+              {
+                "path": "/mirror/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод диалога корректен"
+              },
+              {
+                "path": "/mirror/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Цитата переведена верно"
+              },
+              {
+                "path": "/mirror/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mirror/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/title",
+                "verdict": "ok",
+                "note": "Переведено адекватно"
+              },
+              {
+                "path": "/mistake/description",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег перенесен без изменений"
+              },
+              {
+                "path": "/mistake/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/mistake/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный, идиоматичный."
+              },
+              {
+                "path": "/mistake/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Заголовок переведен хорошо."
+              },
+              {
+                "path": "/mistake/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Тег сохранен."
+              },
+              {
+                "path": "/mistake/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Термин black-and-white thinking использован верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/mistake/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/title",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/nonDepression/description",
+                "verdict": "ok",
+                "note": "Термин cognitive distortions использован верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Цитата переведена хорошо."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Тег Instagram сохранен."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/4",
+                "verdict": "minor",
+                "note": "Метафора 'холодный кран' переведена как 'cold tap', что грамматически верно, но в контексте сантехники (faucet) чаще говорят 'cold water tap' или просто 'cold water'. Однако 'cold tap' допустимо."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/nonDepression/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/nonDepression/screen_2/texts/4",
+                "fragment": "only the “cold tap” is turned on",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Стилистическая шероховатость метафоры",
+                "why": "В английском языке при описании смесителя (faucet) чаще используется 'cold water' или 'cold water tap'. 'Cold tap' звучит немного упрощенно, хотя и понятно."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The metaphor is understandable, but 'cold tap' is slightly unidiomatic compared to 'cold water tap' or 'cold side' in the context of a faucet/mixer."
+              }
+            ],
+            "notes": "Only one minor stylistic issue was identified; the translation is otherwise high quality and faithful to the source.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/nonDepression/screen_2/texts/4",
+                "current": "With depression, it’s as if only the “cold tap” is turned on—sadness, anxiety, and hopelessness.",
+                "proposed": "With depression, it’s as if only the “cold water” is running—sadness, anxiety, and hopelessness.",
+                "alternatives": [
+                  "With depression, it’s as if only the “cold side” is turned on",
+                  "With depression, it’s as if only the “cold tap” is running"
+                ],
+                "rationale": "В контексте метафоры смесителя (faucet) фраза 'cold water is running' звучит наиболее естественно для носителя. Вариант 'cold tap' (холодный кран) технически верен, но в английском языке, когда говорят о потоке воды из смесителя, чаще используют 'water is running'. 'Cold side' — хороший вариант, но 'cold water' лучше передает суть метафоры (состояние потока эмоций)."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Соблюдены все правила Tone of Voice, терминология КПТ (cognitive distortions, black-and-white thinking) и правила использования сокращений. Единственная правка касается стилистической естественности метафоры, которая не является критической ошибкой, но сделает текст более идиоматичным."
+            },
+            "timings": {
+              "issues": 54262,
+              "deliberate": 2985,
+              "recommend": 8143
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/nonDepression/screen_2/texts/4",
+              "reason": "цитата судьи не похожа на лист (сходство 41%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

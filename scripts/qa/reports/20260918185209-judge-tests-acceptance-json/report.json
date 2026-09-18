@@ -1,0 +1,929 @@
+{
+  "file": "tests/acceptance.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термин cognitive distortion на месте"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/low",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/middle",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/high",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID перенесен верно"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/steps/11",
+                "current": "When I hear negative feedback about myself, I find it hard to take it calmly",
+                "proposed": "When I hear negative feedback about myself, I find it hard to take it without getting upset",
+                "alternatives": [
+                  "I find it hard to stay calm when I hear negative feedback about myself"
+                ],
+                "rationale": "Фраза 'take it calmly' звучит немного неестественно для носителя в данном контексте. 'Take it without getting upset' или 'stay calm' лучше передают эмоциональное состояние (трудность в сохранении спокойствия)."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/steps_description/6/text",
+                "current": "Psychologists suggest that for many people, self-esteem is closely tied to how they are perceived by others, especially significant others (family, friends, partners).",
+                "proposed": "Psychologists suggest that for many people, self-esteem is closely tied to how they are perceived by others, especially significant people (family, friends, partners).",
+                "alternatives": [],
+                "rationale": "В английском языке термин 'significant others' чаще всего используется в контексте романтических партнеров. Поскольку в скобках указаны и семья, и друзья, лучше использовать 'significant people' или 'important people', чтобы избежать двусмысленности."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/steps_description/11/fact",
+                "current": "He once said, “I can live on a little praise for two months.”",
+                "proposed": "He once said, “I can live on a single piece of praise for two months.”",
+                "alternatives": [
+                  "He once said, “I can live on one good compliment for two months.”"
+                ],
+                "rationale": "В оригинале 'на одной хорошей похвале'. 'A little praise' звучит как 'немного похвалы' (количество), а не как 'один случай похвалы'. 'A single piece of praise' или 'one good compliment' точнее передают смысл единичного события."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/steps_description/18/fact",
+                "current": "For example, a person might start thinking that if they failed at one thing, they are a failure as a whole.",
+                "proposed": "For example, a person might start thinking that if they fail at one thing, they are a failure as a whole.",
+                "alternatives": [],
+                "rationale": "Использование Present Simple ('if they fail') вместо Past Simple ('if they failed') делает утверждение более универсальным и подходящим для описания когнитивного искажения (как общего правила/паттерна)."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден тон, терминология КПТ и структура. Основные риски связаны с мелкими нюансами использования 'significant others' (что может сузить смысл до романтических отношений) и легкой неестественностью некоторых фраз. После внесения правок текст будет звучать полностью аутентично."
+            },
+            "timings": {
+              "issues": 41563,
+              "deliberate": 2303,
+              "recommend": 20632
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/steps/11",
+              "from": "When I hear negative feedback about myself, I find it hard to take it calmly",
+              "to": "When I hear negative feedback about myself, I find it hard to take it without getting upset"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I2",
+              "path": "/steps_description/6/text",
+              "reason": "цитата судьи не похожа на лист (сходство 48%)"
+            },
+            {
+              "id": "I3",
+              "path": "/steps_description/11/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 21%)"
+            },
+            {
+              "id": "I4",
+              "path": "/steps_description/18/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 31%)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, звучит естественно."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл самооценки."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный, использование they для единственного числа корректно."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный, передает эмоциональный окрас."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод качественный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термин resilience использован верно."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термин cognitive distortion использован верно."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "issue",
+                "note": "В оригинале 'чувство собственного достоинства', в переводе 'sense of dignity'. В контексте самооценки и привязанности лучше использовать 'self-worth' или 'self-esteem', так как dignity — это скорее социальный статус или честь."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/low",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/middle",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/high",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID перенесен верно"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/6/text",
+                "fragment": "their sense of dignity increases",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "неточное использование слова dignity",
+                "why": "В контексте психологии самооценки и привязанности (attachment theory) 'чувство собственного достоинства' в данном случае означает 'self-worth' или 'self-esteem'. 'Dignity' больше относится к человеческому достоинству как к праву или чести, а не к внутреннему ощущению ценности себя, о котором идет речь в тексте."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The term 'dignity' is indeed a mistranslation of 'чувство собственного достоинства' in this psychological context; 'self-worth' or 'self-esteem' is the correct terminology for the described phenomenon."
+              }
+            ],
+            "notes": "The translation is overall high quality and maintains the psychological nuances, with only one minor terminological inaccuracy regarding 'dignity' vs 'self-worth'.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps_description/6/text",
+                "current": "their sense of dignity increases",
+                "proposed": "their sense of self-worth increases",
+                "alternatives": [
+                  "their self-esteem increases"
+                ],
+                "rationale": "В контексте психологии и привязанности (attachment theory) 'чувство собственного достоинства' — это внутреннее ощущение ценности (self-worth), а не социальный статус или честь (dignity). 'Self-worth' лучше передает смысл 'чувства собственной ценности', о котором идет речь в тексте."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден теплый тон, правильно использована терминология КПТ и соблюдены правила написания имен собственных. Единственная мелкая правка касается нюанса в использовании 'dignity' вместо 'self-worth' в контексте психологического исследования. Статья полностью готова к публикации после внесения этой правки."
+            },
+            "timings": {
+              "issues": 47302,
+              "deliberate": 3968,
+              "recommend": 7485
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/6/text",
+              "reason": "цитата судьи не похожа на лист (сходство 9%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1087 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T21:21:03.102Z",
+    "Метка": "en-final-g67-das",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "tests/das/das.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "tests/das/das.json": {
+      "en": [
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/13/fact",
+          "ru": "Согласно исследованию, проведенному Университетом Торонто, 70% людей, склонных к частому сравнению себя с другими, испытывают высокие уровни стресса и депрессии.",
+          "oldText": "According to a study conducted at the University of Toronto, 70% of people who frequently compare themselves to others experience high levels of stress and depression.",
+          "newText": "According to a study by the University of Toronto, 70% of people prone to frequent social comparison experience high levels of stress and depression.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more concise and professional, using the idiomatic 'prone to frequent social comparison' which flows better in a scientific/educational context. Translation B is grammatically correct but uses a wordier, more 'translated' structure ('people who frequently compare themselves to others').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Wordy construction that lacks the punchy, academic flow of a native speaker's summary."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B uses the more professional and idiomatic psychological term 'prone to frequent social comparison' instead of the wordier 'who frequently compare themselves to others'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'people who frequently compare themselves to others' is grammatically correct but sounds slightly more like a literal translation of the Russian structure than a polished academic/journalistic English sentence."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/5/text",
+          "ru": "Созависимость — это состояние, при котором человек слишком сильно полагается на другого в вопросах одобрения и эмоциональной поддержки. Это может привести к потере собственной идентичности и снижению самооценки.",
+          "oldText": "Codependency is a state in which a person relies too heavily on another for approval and emotional support. This can lead to a loss of personal identity and reduced self-esteem.",
+          "newText": "Codependency is a state in which a person relies too heavily on another for approval and emotional support. This can lead to a loss of identity and lower self-esteem.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 96
+              },
+              "reason": "Both translations are excellent and accurate, but B is slightly more natural and concise. The addition of 'personal' in A is redundant because 'identity' in this context inherently implies the self.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'personal identity' is slightly wordy compared to the more idiomatic 'loss of identity'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 90
+              },
+              "reason": "Both translations are excellent and natural, but B is slightly better because 'personal identity' and 'reduced self-esteem' are more idiomatic and precise in a psychological context than the slightly more clipped versions in A.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'loss of identity' is fine, but 'loss of personal identity' (as in B) sounds more complete in clinical/educational writing; 'lower self-esteem' is slightly less formal/natural than 'reduced self-esteem'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/10/fact",
+          "ru": "Согласно теории Абрахама Маслоу, самореализация (достижение собственного потенциала) является высшим уровнем в иерархии потребностей человека. Однако это не обязательно означает, что нужно быть выдающимся в чем-то; важно развивать свои способности и стремиться к личному росту.",
+          "oldText": "According to Abraham Maslow’s theory, self-actualisation (realising one’s potential) is the highest level in the hierarchy of human needs. However, this does not necessarily mean being outstanding in something; what matters is developing your abilities and striving for personal growth.",
+          "newText": "According to Abraham Maslow’s theory, self-actualization (reaching one’s full potential) is the highest level in the hierarchy of human needs. However, this doesn’t necessarily mean being exceptional at something; it’s about developing your abilities and striving for personal growth.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A sounds more natural and follows the project's tone guidelines by using contractions ('doesn’t', 'it’s') and more idiomatic phrasing ('reaching one’s full potential').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'does not' instead of contractions, making it feel slightly more formal/stiff than the desired 'understanding friend' tone; 'outstanding in something' is slightly less idiomatic than 'exceptional at something'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more idiomatic and aligns better with the requested 'warm, expert friend' tone through the use of contractions and more natural phrasing ('it’s about' vs 'what matters is').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'what matters is' is slightly more formal/stiff than the more natural 'it's about' used in B, and the lack of contractions makes it feel less like a modern mental health resource."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/17/text",
+          "ru": "Постоянное стремление к максимальной эффективности может привести к выгоранию. Когда вы пытаетесь быть максимально эффективным во всех аспектах жизни, это создает постоянное давление и стресс, что в конечном итоге может истощить вас как физически, так и эмоционально.",
+          "oldText": "Constantly striving for maximum efficiency can lead to burnout. When you aim to be as efficient as possible in every area of life, it creates ongoing pressure and stress that can eventually exhaust you both physically and emotionally.",
+          "newText": "A constant drive for maximum efficiency can lead to burnout. When you try to be as efficient as possible in every aspect of life, it creates constant pressure and stress, which can ultimately exhaust you both physically and emotionally.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B sounds more natural and idiomatic for a mental health context. The use of 'striving' and 'aim to be' is more sophisticated than the repetitive 'drive' and 'try' in A, and 'ongoing pressure' flows better than 'constant pressure' when 'constant' was already used in the previous sentence.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'constant' in two consecutive sentences makes the rhythm heavy."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A flows more naturally for a native speaker, using 'Constantly striving' as a strong opening and avoiding the repetitive use of 'constant' found in B. Translation A also uses 'ongoing pressure', which sounds more idiomatic in this context than B's 'constant pressure and stress'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'constant' (constant drive... constant pressure) makes the rhythm clunky."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/18/text",
+          "ru": "Страх совершить ошибку может привести к прокрастинации. Люди откладывают задачи, боясь, что не смогут выполнить их идеально.",
+          "oldText": "Fear of making a mistake can lead to procrastination. People put tasks off because they are afraid they will not be able to complete them perfectly.",
+          "newText": "The fear of making a mistake can lead to procrastination. People put off tasks because they fear they won’t be able to complete them perfectly.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B sounds more natural and idiomatic for a mental health context, using appropriate contractions ('won't') and a smoother rhythm. Translation A is grammatically correct but feels slightly more formal and stiff due to the lack of contractions and the word order in the second sentence.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Slightly formal/stiff tone; 'they are afraid they will not' is less fluid than 'they fear they won't' in a supportive context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 98
+              },
+              "reason": "Translation A sounds more natural and fluid for a mental health article. Translation B uses a slightly clunky phrasal verb placement ('put tasks off') and overly formal 'will not' instead of the preferred contractions.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasal verb 'put off' is split awkwardly, and the lack of contractions makes the tone feel less like a 'supportive friend' and more like a textbook."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing the definite article 'The' at the beginning, though acceptable in some contexts, 'The fear' is more standard for this sentence structure."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/8/text",
+          "ru": "Отвержение может вызвать сильную эмоциональную реакцию, так как мы эволюционно запрограммированы искать социальное принятие. Однако важно понимать, что одиночные случаи отвержения не определяют нашу ценность как личности.",
+          "oldText": "Rejection can trigger a strong emotional reaction because we are evolutionarily wired to seek social acceptance. However, it is important to understand that single episodes of rejection do not define our worth as a person.",
+          "newText": "Rejection can trigger a strong emotional reaction because we are evolutionarily programmed to seek social acceptance. However, it is important to understand that isolated instances of rejection do not define our worth as individuals.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A uses 'isolated instances', which is more idiomatic and precise in a psychological context than 'single episodes'. It also uses 'worth as individuals', which flows better and sounds more natural for a professional yet supportive text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'single episodes' sounds slightly more clinical/medical than the original, and 'worth as a person' is a bit more basic/cliché compared to 'worth as individuals'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation A uses the much more idiomatic and natural 'evolutionarily wired' instead of the literal 'programmed'. It also uses 'single episodes', which flows better in this psychological context than 'isolated instances'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'evolutionarily programmed' is a bit of a cliché/calque; 'wired' is more native-like. 'isolated instances' is slightly more formal/stiff than necessary for this tone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/28/text",
+          "ru": "Поведение ребенка определяется многими факторами, включая генетику, окружение, личностные особенности и социальные влияния. Родители не могут контролировать все эти факторы, и не всегда могут предотвратить поведение, которое не соответствует общественным нормам.",
+          "oldText": "A child’s behaviour is shaped by many factors, including genetics, environment, personality traits and social influences. Parents cannot control all of these factors and cannot always prevent behaviour that does not align with social norms.",
+          "newText": "A child’s behavior is determined by many factors, including genetics, environment, personality traits, and social influences. Parents cannot control all these factors and cannot always prevent behavior that does not meet social norms.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B uses more natural, idiomatic collocations ('shaped by' instead of 'determined by' and 'align with' instead of 'meet') which sounds more like high-quality English prose rather than a direct translation.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'determined by' and 'meet social norms' is grammatically correct but feels slightly more clinical and less fluid than B."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Both translations are excellent, but A is slightly more idiomatic for a psychological/educational context. 'Align with social norms' is a more natural and sophisticated collocation than 'meet social norms'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'meet social norms' is grammatically correct but sounds slightly more mechanical/clunky compared to 'align with' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/22/text",
+          "ru": "Самопожертвование ради других может приносить удовлетворение, но только если это делается добровольно и без ожиданий. Исследования показывают, что люди, которые жертвуют своими интересами ради других с ожиданием вознаграждения, часто испытывают разочарование и обиду.",
+          "oldText": "Self-sacrifice for others can be rewarding, but only when it is truly voluntary and without expectations. Studies show that people who give up their own interests for others while expecting something in return often end up feeling disappointed and resentful.",
+          "newText": "Self-sacrifice for others can be fulfilling, but only if it is done voluntarily and without expectations. Research shows that people who sacrifice their own interests for others while expecting a reward often experience frustration and resentment.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more concise and uses more precise, professional terminology ('reward', 'frustration') that fits the psychological context perfectly. Translation B is slightly more wordy and uses 'disappointed', which is a bit weaker than the original 'разочарование' in this specific context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'expecting something in return' is slightly more colloquial than 'expecting a reward', and 'end up feeling disappointed' is a bit wordy compared to the direct 'experience frustration'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A sounds more natural and idiomatic for a mental health article. 'End up feeling' is a much more native way to describe the outcome of a behavior than the slightly more clinical 'often experience'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'experience frustration and resentment' is grammatically correct but feels a bit more like a textbook translation than a warm, expert-friend tone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/description/text",
+          "ru": "Прохождение теста на гармоничность личности может стать значимым шагом на пути к самопознанию и улучшению качества вашей жизни.\n\nЭтот уникальный индекс помогает выявить скрытые дисфункциональные убеждения и мыслительные паттерны\n\nПо результатам теста вы получите анализ вашей личности по 7 дисфункциональным убеждениям:\n\nПотребность в одобрении\n\nЗависимость от любви\n\nПотребность в достижениях\n\nПерфекционизм\n\nТребования к окружающим\n\nПотребность в контроле\n\nАвтономность в жизни\n\nЭтот тест откроет вам глаза на многие скрытые аспекты вашего мышления, поможет идентифицировать области, требующие внимания, и станет основой для разработки стратегий личностного развития.",
+          "oldText": "Taking this personality harmony test can be an important step toward self-understanding and improving your quality of life.\n\nThis unique index helps to identify hidden dysfunctional beliefs and thinking patterns.\n\nBased on the results, you will receive an analysis of your personality across seven dysfunctional belief domains:\n\nNeed for approval\n\nDependence on love\n\nAchievement-driven self-worth\n\nPerfectionism\n\nDemands toward others\n\nNeed for control\n\nAutonomy in life\n\nThis test will help you notice many hidden aspects of your thinking, identify areas that need attention, and lay the foundation for your personal growth strategy.",
+          "newText": "Taking this personality harmony test can be a significant step toward self-discovery and improving your quality of life.\n\nThis unique index helps identify hidden unhelpful beliefs and thought patterns.\n\nBased on your results, you will receive an analysis of your personality based on 7 unhelpful beliefs:\n\nNeed for approval\n\nDependency on love\n\nNeed for achievement\n\nPerfectionism\n\nDemands placed on others\n\nNeed for control\n\nAutonomy in life\n\nThis test will open your eyes to many hidden aspects of your thinking, help you identify areas that need attention, and serve as a foundation for developing personal growth strategies.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 92
+              },
+              "reason": "Translation A adheres to the project's specific terminology (using 'unhelpful beliefs' instead of 'dysfunctional') and maintains a more natural, supportive tone. Translation B uses 'dysfunctional' which is explicitly flagged as a legacy/avoided term in the glossary, and its translation of 'Потребность в достижениях' is a creative leap that distorts the original meaning.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'dysfunctional beliefs' instead of the required 'unhelpful beliefs'."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "'Achievement-driven self-worth' is a significant departure from the original 'Потребность в достижениях' (Need for achievement)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Demands toward others' is less idiomatic than 'Demands placed on others'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B follows the project's specific terminology guidelines by using 'unhelpful beliefs' instead of 'dysfunctional beliefs'. It also sounds more natural and idiomatic in its phrasing.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'dysfunctional beliefs' instead of the required 'unhelpful beliefs'"
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "'Achievement-driven self-worth' is a significant departure from the original 'Потребность в достижениях' (Need for achievement)"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Demands toward others' is slightly less idiomatic than 'Demands placed on others'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/14/fact",
+          "ru": "Люди, которые могут учиться на своих ошибках и воспринимать их как возможность для развития, обычно успешнее в долгосрочной перспективе.",
+          "oldText": "People who are able to learn from their mistakes and see them as opportunities for development tend to be more successful in the long run.",
+          "newText": "People who can learn from their mistakes and view them as opportunities for development are usually more successful in the long run.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 90
+              },
+              "reason": "Translation B sounds more natural and idiomatic for a psychological/self-help context. The use of 'tend to be' is a better stylistic match for the nuanced Russian 'обычно' than the more blunt 'are usually'.",
+              "issues": []
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Both translations are excellent, but A sounds slightly more natural and sophisticated due to the use of 'tend to be', which better captures the nuance of 'обычно' in a psychological/observational context than the more blunt 'are usually'.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/19/text",
+          "ru": "Перфекционисты часто страдают от тревожности, депрессии и выгорания. Исследования показывают, что перфекционизм связан с высоким уровнем стресса и низким уровнем удовлетворенности жизнью.",
+          "oldText": "Perfectionists often struggle with anxiety, depression and burnout. Research shows that perfectionism is associated with high stress and low life satisfaction.",
+          "newText": "Perfectionists often suffer from anxiety, depression, and burnout. Research shows that perfectionism is linked to high stress levels and low life satisfaction.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Translation A is more concise and uses 'struggle with', which sounds more natural and empathetic in a mental health context than the heavier 'suffer from'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The addition of 'levels' (high stress levels) is grammatically correct but slightly more wordy than necessary for a smooth, modern reading experience."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 90
+              },
+              "reason": "Translation B sounds more natural and idiomatic for a mental health context. 'Struggle with' is a warmer, more supportive way to describe mental health challenges than the more clinical 'suffer from'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'suffer from' is grammatically correct but can sound slightly more clinical/heavy compared to the more empathetic 'struggle with'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/27/fact",
+          "ru": "Если вы пытаетесь помочь слишком многим людям одновременно, это может снизить качество вашей помощи, так как ваши ресурсы и внимание будут распределены слишком тонко.",
+          "oldText": "If you try to help too many people at once, the quality of your support may decrease because your resources and attention are spread too thin.",
+          "newText": "If you try to help too many people at once, the quality of your help may decrease, as your resources and attention become spread too thin.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more concise and natural for a supportive expert tone. Translation B uses 'become spread too thin', which is slightly wordier and less idiomatic than the direct 'are spread too thin'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'become spread' is slightly more heavy-handed than the more natural 'are spread' in this context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 95
+              },
+              "reason": "Translation A is more natural and idiomatic; the use of 'become spread too thin' captures the process and nuance of the original better than the static 'are spread too thin' in B. Additionally, 'help' is a more direct and accurate translation of 'помощь' in this context than 'support'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "used 'support' instead of 'help', which slightly shifts the tone from general assistance to professional/emotional support"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/options",
+          "ru": "Полностью согласен\n\nСкорее согласен\n\nНе знаю\n\nСкорее не согласен\n\nПолностью не согласен",
+          "oldText": "Strongly agree\n\nSomewhat agree\n\nNot sure\n\nSomewhat disagree\n\nStrongly disagree",
+          "newText": "Strongly agree\n\nAgree\n\nI don’t know\n\nDisagree\n\nStrongly disagree",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 85
+              },
+              "reason": "Translation A perfectly captures the nuances of the Likert scale (the degree of agreement) present in the original. Translation B simplifies the scale, losing the 'somewhat' (скорее) distinction.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Lost the 'somewhat' (скорее) nuance in the second and fourth options, turning a 5-point scale into a 3-point scale."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation B accurately captures the nuances of the Russian scale (the 'somewhat' aspect of 'скорее'), whereas Translation A collapses the scale into a standard 5-point Likert scale that loses the specific intensity of the original.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The scale is too blunt; 'Agree' and 'Disagree' do not reflect the 'скорее' (somewhat/rather) nuance of the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/5/fact",
+          "ru": "Эмоциональная зависимость от любви окружающих может привести к хронической тревожности и страху быть отвергнутым. Это состояние может помешать человеку развивать здоровые и сбалансированные отношения.",
+          "oldText": "Emotional dependence on other people’s love can lead to chronic anxiety and fear of rejection. This can prevent a person from building healthy, balanced relationships.",
+          "newText": "Emotional dependency on the love of others can lead to chronic anxiety and a fear of rejection. This state can make it difficult to develop healthy, balanced relationships.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more concise and idiomatic for a mental health context. Translation B uses 'This state can make it difficult', which is a bit wordy and slightly more formal/clunky than the direct 'This can prevent' in A.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'This state can make it difficult to develop' is slightly more heavy-handed and less natural than the more direct approach in A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more idiomatic and flows better for a native reader. 'The love of others' is a more natural collocation than 'other people's love', and 'make it difficult to develop' is a smoother, less heavy way to express the impact than 'prevent a person from building'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'other people's love' is slightly clunky compared to 'the love of others'. 'Prevent a person from building' is a bit more heavy-handed/clinical than the original's nuance of 'impeding' development."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/2/text",
+          "ru": "Люди — социальные существа, и стремление к одобрению других заложено в нас эволюционно. Это помогает нам чувствовать себя частью группы, что было жизненно важно для выживания наших предков.",
+          "oldText": "Humans are social beings, and the drive for approval from others is rooted in our evolution. It helps us feel part of a group, which was vital for our ancestors’ survival.",
+          "newText": "Humans are social beings, and the drive for approval is evolutionarily ingrained in us. This helps us feel part of a group, which was essential for the survival of our ancestors.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and flows better; 'evolutionarily ingrained' is a much more natural and sophisticated collocation than 'rooted in our evolution'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'rooted in our evolution' sounds slightly clunky/translated compared to the more seamless 'evolutionarily ingrained'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and flows better for a native reader. Translation B uses a heavy adverbial construction ('evolutionarily ingrained') which feels slightly more academic and clunky compared to the natural 'rooted in our evolution'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'evolutionarily ingrained in us' is grammatically correct but sounds less natural and more like a direct translation of the Russian structure than A's more fluid approach."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/25/text",
+          "ru": "Чувство ответственности за других может привести к нарушению личных границ и созависимости, что негативно влияет на качество жизни и взаимоотношений.",
+          "oldText": "Feeling responsible for other people can lead to blurred boundaries and codependency, which negatively affects quality of life and relationships.",
+          "newText": "Feeling responsible for others can lead to blurred personal boundaries and codependency, which negatively impacts your quality of life and relationships.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more natural and follows the UX guidelines by using 'your' to address the reader directly, making the text more engaging and personal. Translation A is grammatically correct but feels slightly more detached and clinical.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing the personal 'your' which makes the tone less supportive and more like a textbook definition."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more natural and follows the UX guidelines by using 'your' to address the reader directly, making the text feel supportive rather than clinical. Translation B is slightly too impersonal and lacks the possessive pronoun required for a smooth flow in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing possessive 'your' before 'quality of life', making it sound a bit like a textbook rather than a supportive guide."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/1/fact",
+          "ru": "Установление личных границ является важным аспектом здоровых отношений. Умение говорить \"нет\" и выражать свои потребности помогает поддерживать здоровые и взаимоуважительные отношения.",
+          "oldText": "Setting personal boundaries is a key aspect of healthy relationships. The ability to say “no” and to express your needs helps sustain relationships that are healthy and based on mutual respect.",
+          "newText": "Setting personal boundaries is a vital aspect of healthy relationships. Learning to say “no” and expressing your needs helps maintain healthy, mutually respectful connections.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more idiomatic and concise, avoiding the repetitive 'healthy relationships' and the clunky 'relationships that are healthy and based on...' structure found in A. B uses 'connections' to avoid repetition and 'Learning to' which sounds more natural for a self-help context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'healthy relationships' and wordy relative clause 'relationships that are healthy and based on...'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'to say... and to express' is slightly more formal/stiff than the more natural 'saying... and expressing' or 'learning to say... and expressing'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more concise, idiomatic, and flows better for a reader. Translation B is grammatically correct but feels slightly wordy and repetitive due to the structure 'relationships that are healthy and based on...'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'helps sustain relationships that are healthy and based on mutual respect' is unnecessarily heavy and wordy compared to the more natural 'helps maintain healthy, mutually respectful connections'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/23/fact",
+          "ru": "Брак Принца Чарльза и Принцессы Дианы является примером того, как ожидания и обязательства могут привести к несчастливым отношениям. Несмотря на общественные и личные ожидания, их отношения не были успешными, что привело к разочарованию и расставанию.",
+          "oldText": "The marriage of Prince Charles and Princess Diana illustrates how expectations and obligations can lead to an unhappy relationship. Despite personal and public expectations, their marriage was not successful, which resulted in disappointment and separation.",
+          "newText": "The marriage of Prince Charles and Princess Diana is an example of how expectations and obligations can lead to unhappy relationships. Despite public and personal expectations, their relationship was not successful, leading to frustration and separation.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation B uses more sophisticated and natural vocabulary ('illustrates' instead of 'is an example of', 'disappointment' instead of 'frustration') and maintains better singular/plural consistency with the original context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Using 'unhappy relationships' (plural) when referring to a specific case is slightly less natural than the singular 'unhappy relationship'; 'frustration' is a slightly different emotional nuance than 'разочарование' (disappointment)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The word order 'personal and public' is a slight departure from the original 'общественные и личные', but it flows better in English."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 86
+              },
+              "reason": "Translation A is more cohesive and uses 'disappointment', which accurately reflects the Russian 'разочарование'. Translation B uses 'frustration', which changes the emotional nuance, and its phrasing 'leading to...' is slightly less formal/polished in this context than A's 'which resulted in'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "frustration is a different emotion than disappointment (разочарование)"
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "slightly less formal than 'resulted in' for this narrative style"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/31/fact",
+          "ru": "Без работы над управлением стрессом и расстройствами качество вашей жизни может значительно снизиться, включая ухудшение социальных связей и снижение продуктивности.",
+          "oldText": "Without working on how you manage stress and distress, your quality of life can significantly decline, including poorer social connections and reduced productivity.",
+          "newText": "Without working on stress management and managing your distress, your quality of life can significantly decline, including worsening social connections and decreased productivity.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 82
+              },
+              "reason": "Translation B is more idiomatic and avoids the repetitive 'management/managing' structure found in A. It also uses more natural adjective-noun pairings ('poorer social connections') rather than the clunky gerund phrases in A.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'management/managing' makes the sentence heavy and less natural."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'worsening social connections' is grammatically acceptable but feels slightly less fluid than 'poorer social connections' in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Translation A is more concise and avoids the repetitive 'managing/management' structure found in B. It uses 'poorer social connections,' which sounds more natural in this context than 'worsening social connections.'",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'manage/management' makes the sentence clunky."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Worsening social connections' is slightly less idiomatic here than 'poorer social connections'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/das/das.json",
+          "lang": "en",
+          "key": "/steps_description/4/fact",
+          "ru": "Теория социального сравнения утверждает, что люди склонны оценивать свои способности и успехи, сравнивая себя с другими. Это может быть полезно для мотивации, но чрезмерное сравнение может привести к снижению самооценки и недовольству собой.",
+          "oldText": "Social comparison theory states that people tend to evaluate their abilities and achievements by comparing themselves to others. This can be useful for motivation, but excessive comparison may lower self-esteem and increase dissatisfaction with oneself.",
+          "newText": "Social comparison theory suggests that people tend to evaluate their own abilities and successes by comparing themselves to others. While this can be motivating, excessive comparison can lead to lower self-esteem and self-dissatisfaction.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A flows much more naturally for a native reader, using the idiomatic 'can be motivating' and the concise 'self-dissatisfaction'. Translation B is grammatically correct but feels slightly more clunky and academic due to the phrasing 'increase dissatisfaction with oneself'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'dissatisfaction with oneself' is a bit wordy compared to the more natural 'self-dissatisfaction' or simply 'dissatisfaction'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation B is more idiomatic and flows better, especially with the use of 'While this can be motivating' and the concise 'self-dissatisfaction'. Translation A is grammatically correct but feels slightly more repetitive and heavy.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'increase dissatisfaction with oneself' is a bit wordy compared to the more natural 'self-dissatisfaction' or 'dissatisfaction with oneself' used in B."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

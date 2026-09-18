@@ -1,0 +1,692 @@
+{
+  "file": "story/suicide.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 9,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Перевод точный, передает дух оригинала"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, смысл сохранен"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, перевод естественный"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Стиль выдержан"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Терминология и смысл в норме"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая идиоматическая адаптация (catch your breath)"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Тег instagram в ru/en содержит ID, это норма"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Терминология CBT верна"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Смысл и тон соблюдены"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод хороший, смысловой акцент на изменениях передан"
+              },
+              {
+                "path": "/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Цитата переведена верно"
+              },
+              {
+                "path": "/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/3",
+                "current": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they reveal one thing: the scale of this pain is colossal, and so many people are going through the same struggle right now.",
+                "proposed": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they scream one thing: the scale of this pain is colossal, and so many people are going through the same struggle right now.",
+                "alternatives": [
+                  "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they cry out one thing: the scale of this pain is colossal, and so many people are going through the same struggle right now."
+                ],
+                "rationale": "В оригинале используется экспрессивный глагол «кричат». Вариант 'reveal' (раскрывают) слишком нейтрален и снижает эмоциональный накал текста. 'Scream' или 'cry out' лучше передают метафору оригинала, сохраняя нужный тон."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_2/texts/2",
+                "current": "Sometimes it is a cry for relief from suffering, or a heavy, distorted desire to “stop being a burden” to loved ones. Please understand: this is despair speaking, not a true assessment of your value or the importance of your presence.",
+                "proposed": "Sometimes it is a cry for relief from suffering, or a heavy, distorted desire to “stop being a burden” to loved ones. Please understand: this is despair speaking, not a true assessment of how valuable and needed you are.",
+                "alternatives": [],
+                "rationale": "Текущий вариант 'the importance of your presence' звучит слишком официально и тяжеловесно (канцелярит). Оригинал «насколько вы ценны и нужны» — это личное обращение к человеку. Вариант 'how valuable and needed you are' звучит гораздо естественнее и теплее, что соответствует Tone of Voice."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/screen_4/texts/7",
+                "current": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is an absolute value. Please, remember this: the world is worth living in!",
+                "proposed": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is infinitely valuable. Please, remember this: the world is worth living in!",
+                "alternatives": [
+                  "your life is of absolute value"
+                ],
+                "rationale": "Фраза 'your life is an absolute value' — это калька с русского «абсолютная ценность», которая в английском звучит как экономический или математический термин. Для передачи глубокого смысла лучше использовать прилагательное 'infinitely valuable' или конструкцию 'is of absolute value'."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Текст переведен очень качественно, с соблюдением эмоционального тона и терминологии КПТ. Основные риски связаны с легким канцеляритом в местах, где нужно подчеркнуть личную значимость (ценность человека), и потерей экспрессии в метафорах. После исправления этих нюансов статья будет готова к публикации."
+            },
+            "timings": {
+              "issues": 19342,
+              "deliberate": 825,
+              "recommend": 16915
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/3",
+              "from": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they reveal one thing: the scale of this pain is colossal, and so many people are going through the same struggle right now.",
+              "to": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they scream one thing: the scale of this pain is colossal, and so many people are going through the same struggle right now."
+            },
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/2",
+              "from": "Sometimes it is a cry for relief from suffering, or a heavy, distorted desire to “stop being a burden” to loved ones. Please understand: this is despair speaking, not a true assessment of your value or the importance of your presence.",
+              "to": "Sometimes it is a cry for relief from suffering, or a heavy, distorted desire to “stop being a burden” to loved ones. Please understand: this is despair speaking, not a true assessment of how valuable and needed you are."
+            },
+            {
+              "id": "I3",
+              "path": "/screen_4/texts/7",
+              "from": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is an absolute value. Please, remember this: the world is worth living in!",
+              "to": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is infinitely valuable. Please, remember this: the world is worth living in!"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, смысл сохранен"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, передает драматизм"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Терминология и смысл в порядке"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая идиоматическая адаптация (catch your breath)"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Тег instagram в en/ru идентичен, это норма"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Терминология CBT соблюдена"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Цитата переведена верно"
+              },
+              {
+                "path": "/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/0",
+                "current": "As we explore the complexities of negative thinking and depression, we must address the most difficult yet vital topic — suicidal thoughts.",
+                "proposed": "Since we are exploring the labyrinths of negative thinking and depression, we must pause at the most difficult yet vital topic — suicidal thoughts.",
+                "alternatives": [
+                  "As we explore the labyrinths of negative thinking and depression, we must address the most difficult yet vital topic — suicidal thoughts.",
+                  "Since we are exploring the complexities of negative thinking and depression, we must stop at the most difficult yet vital topic — suicidal thoughts."
+                ],
+                "rationale": "В оригинале используется метафора «лабиринты», которую текущий перевод заменил на более сухое 'complexities'. Для сохранения эмоционального и литературного тона статьи (narrative register) лучше вернуть 'labyrinths'. Также 'Since we are exploring' чуть лучше передает причинно-следственную связь 'Раз уж мы...'. "
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_2/texts/3",
+                "current": "Psychology confirms that a main catalyst is an absolute sense of hopelessness. When depression distorts perception, the world narrows down to a single black dot, and the future feels completely sealed off.",
+                "proposed": "Psychology confirms that the main catalyst is an absolute sense of hopelessness. When depression distorts perception, the world narrows down to a single black dot, and the future feels completely shut tight.",
+                "alternatives": [
+                  "Psychology confirms that the main catalyst is an absolute sense of hopelessness. When depression distorts perception, the world narrows down to a single black dot, and the future feels completely sealed off.",
+                  "Psychology confirms that the main catalyst is an absolute sense of hopelessness. When depression distorts perception, the world narrows down to a single black dot, and the future feels locked away."
+                ],
+                "rationale": "В оригинале «заколоченным наглухо» — это сильная визуальная метафора. 'Sealed off' звучит слишком технически/абстрактно. 'Shut tight' или 'shut away' лучше передают ощущение запертой двери/окна, что ближе к смыслу оригинала."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден поддерживающий тон, использована правильная терминология и отличная идиоматика. Основные правки касаются тонких нюансов (resilient вместо strong, living for вместо living in) и улучшения коллокаций (key catalyst). Статья готова к публикации после внесения этих мелких правок."
+            },
+            "timings": {
+              "issues": 16391,
+              "deliberate": 880,
+              "recommend": 19185
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/0",
+              "from": "As we explore the complexities of negative thinking and depression, we must address the most difficult yet vital topic — suicidal thoughts.",
+              "to": "Since we are exploring the labyrinths of negative thinking and depression, we must pause at the most difficult yet vital topic — suicidal thoughts."
+            },
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/3",
+              "from": "Psychology confirms that a main catalyst is an absolute sense of hopelessness. When depression distorts perception, the world narrows down to a single black dot, and the future feels completely sealed off.",
+              "to": "Psychology confirms that the main catalyst is an absolute sense of hopelessness. When depression distorts perception, the world narrows down to a single black dot, and the future feels completely shut tight."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено как призыв, соответствует духу"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, смысл сохранен"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный английский"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, грамматика верна"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Эмоционально и идиоматично"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Терминология и смысл верны"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая передача метафоры"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Цитата верна"
+              },
+              {
+                "path": "/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/3",
+                "current": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they scream one thing: the scale of this pain is colossal, and so many people are going through the same struggle right now.",
+                "proposed": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they scream one thing: the scale of this pain is colossal, and so many people are going through the same struggle.",
+                "alternatives": [
+                  "...and so many people are facing this same struggle."
+                ],
+                "rationale": "Удаление 'right now' делает фразу более вечной и менее ограниченной текущим моментом, что лучше соответствует контексту 'всей истории человечества'. Также это делает ритм предложения более сильным и менее перегруженным."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_2/texts/1",
+                "current": "People reach this edge for many different reasons, but they are often united by one thing: unbearable, suffocating emotional pain. When it feels endless, death can start to seem like the only way to catch your breath.",
+                "proposed": "People reach this edge for many different reasons, but they are often united by one thing: unbearable, suffocating emotional pain. When it feels endless, death can start to seem like the only way to breathe.",
+                "alternatives": [
+                  "...the only way to find relief."
+                ],
+                "rationale": "В оригинале 'единственным способом выдохнуть'. 'Catch your breath' обычно означает передышку после физической нагрузки или паники. 'Way to breathe' или 'way to find relief' лучше передают экзистенциальное желание облегчения, заложенное в русском тексте."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/screen_3/texts/2",
+                "current": "But try, just for a moment, to entertain one thought: this impenetrable darkness is merely a pair of dark, distorted glasses that depression has placed on you. They ruthlessly warp your view of the world.",
+                "proposed": "But try, just for a moment, to entertain one thought: this impenetrable darkness is merely a pair of dark, distorted glasses that depression has placed on you. They ruthlessly distort your view of the world.",
+                "alternatives": [
+                  "...distort the picture of the world."
+                ],
+                "rationale": "Хотя 'warp' допустимо, 'distort' — более точный и естественный термин для описания искаженного восприятия (cognitive distortion) в контексте психологии. Это создает более профессиональный, но при этом понятный тон."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/screen_4/texts/7",
+                "current": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is infinitely valuable. Please, remember this: the world is worth living in!",
+                "proposed": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is of absolute value. Please, remember this: the world is worth living in!",
+                "alternatives": [
+                  "...your life is an absolute treasure."
+                ],
+                "rationale": "В оригинале 'ваша жизнь — абсолютная ценность'. 'Infinitely valuable' — это неплохо, но 'is of absolute value' или 'is an absolute value' ближе к философскому и весомому тону оригинала. 'Infinitely' звучит чуть более гиперболизированно, чем нужно."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Текст переведен очень качественно, с соблюдением правильного тона (поддерживающий, но серьезный). Основные правки касаются тонких нюансов идиоматики и соответствия метафор оригиналу. Рекомендуется поправить 'catch your breath' и 'warp', чтобы текст звучал максимально естественно для носителя."
+            },
+            "timings": {
+              "issues": 18810,
+              "deliberate": 977,
+              "recommend": 19726
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/3",
+              "from": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they scream one thing: the scale of this pain is colossal, and so many people are going through the same struggle right now.",
+              "to": "The statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they scream one thing: the scale of this pain is colossal, and so many people are going through the same struggle."
+            },
+            {
+              "id": "I2",
+              "path": "/screen_2/texts/1",
+              "from": "People reach this edge for many different reasons, but they are often united by one thing: unbearable, suffocating emotional pain. When it feels endless, death can start to seem like the only way to catch your breath.",
+              "to": "People reach this edge for many different reasons, but they are often united by one thing: unbearable, suffocating emotional pain. When it feels endless, death can start to seem like the only way to breathe."
+            },
+            {
+              "id": "I3",
+              "path": "/screen_3/texts/2",
+              "from": "But try, just for a moment, to entertain one thought: this impenetrable darkness is merely a pair of dark, distorted glasses that depression has placed on you. They ruthlessly warp your view of the world.",
+              "to": "But try, just for a moment, to entertain one thought: this impenetrable darkness is merely a pair of dark, distorted glasses that depression has placed on you. They ruthlessly distort your view of the world."
+            },
+            {
+              "id": "I4",
+              "path": "/screen_4/texts/7",
+              "from": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is infinitely valuable. Please, remember this: the world is worth living in!",
+              "to": "Life can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is of absolute value. Please, remember this: the world is worth living in!"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

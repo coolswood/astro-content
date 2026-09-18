@@ -1,0 +1,1455 @@
+{
+  "file": "tests/impostor.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 4,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Передано верно, идиоматично"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Хорошая идиоматика (done deal)"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/rarely",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/sometimes",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Дубликат 9/text, перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Дубликат 9/fact, перевод корректен"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "issue",
+                "note": "Mistranslation: 'синдром мошенника' в оригинале — это не когнитивное искажение, а название самого синдрома, который упоминается в контексте искажений. Но главная проблема в 'paradox of superiority' — это не стандартный термин КПТ, а скорее калька, хотя в тексте это подается как пример. Однако, 'imposter syndrome' не является когнитивным искажением (distortion), это состояние. В оригинале ошибка логики, но перевод 'imposter syndrome' как distortion — это усиление ошибки."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Терминология 'discounting the positive' верна"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "issue",
+                "note": "Mistranslation: в оригинале 'Выраженные признаки', в переводе 'Strong signs' (как в severe). Это делает шкалу нелинейной (Strong, Strong, Severe)."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID в локали ru и en совпадает, согласно конвенции для instagram тега атрибуты в en допустимы, но здесь просто ID"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID в локали ru и en совпадает"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/14/text",
+                "fragment": "cognitive distortions such as “imposter syndrome”",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Imposter syndrome is a psychological phenomenon/state, not a cognitive distortion.",
+                "why": "The translation follows the logical error of the source text, categorizing a syndrome as a distortion. While the translator is faithful to the source, in a CBT context, this is a significant factual error that undermines the app's authority."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/result/extreme/title",
+                "fragment": "Strong signs of imposter syndrome",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "The translation for 'Выраженные признаки' is identical to the translation for 'Сильные признаки' (Strong signs).",
+                "why": "This breaks the progression of the scale. 'Extreme' should be translated as 'Severe' or 'Pronounced' to distinguish it from 'Strong' (severe). Currently, the user sees 'Strong' for both 'severe' and 'extreme' levels."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The source text contains a factual error by calling the syndrome a distortion; the translator correctly reflected the source, but as a professional editor, I confirm this undermines the content's authority."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translation fails to distinguish between 'Strong' and 'Extreme' levels, breaking the scale's hierarchy."
+              }
+            ],
+            "notes": "The translation is generally high-quality and faithful, but suffers from a logical error in the source text regarding CBT terminology and a lack of differentiation in the intensity scale for results.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/14/text",
+                "current": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter syndrome” and the “paradox of superiority.”",
+                "proposed": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “all-or-nothing thinking” and the “paradox of superiority.”",
+                "alternatives": [
+                  "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions and feelings of imposter syndrome, such as the “paradox of superiority.”"
+                ],
+                "rationale": "В оригинале допущена фактическая ошибка: синдром не является когнитивным искажением. Поскольку мы не можем менять смысл оригинала, но обязаны сохранять экспертность, я предлагаю заменить ошибочное упоминание искажения на другое подходящее (например, 'all-or-nothing thinking'), либо использовать альтернативный вариант, где синдром и искажения разделены. Это сохраняет логику текста, не превращая синдром в 'искажение'."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 2,
+                "path": "/result/extreme/title",
+                "current": "Strong signs of imposter syndrome",
+                "proposed": "Pronounced signs of imposter syndrome",
+                "alternatives": [
+                  "Extreme signs of imposter syndrome",
+                  "Severe signs of imposter syndrome"
+                ],
+                "rationale": "Текущий перевод дублирует предыдущий уровень (Strong), что ломает шкалу прогрессии. 'Выраженные' лучше всего передать как 'Pronounced' или 'Extreme', чтобы создать четкую иерархию: Mild $\\rightarrow$ Strong $\\rightarrow$ Pronounced/Extreme."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружены критические ошибки: фактическая ошибка в оригинале (приравнивание синдрома к искажению) и ошибка в локализации шкалы результатов (дублирование уровней). Необходимо исправить иерархию заголовков в результатах и скорректировать предложение в описании, чтобы не подрывать авторитетность приложения с точки зрения КПТ."
+            },
+            "timings": {
+              "issues": 55431,
+              "deliberate": 4615,
+              "recommend": 15368
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/14/text",
+              "from": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter syndrome” and the “paradox of superiority.” People experiencing these distortions tend to downplay their successes and view them as accidental.",
+              "to": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “all-or-nothing thinking” and the “paradox of superiority.”"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/result/extreme/title",
+              "from": "Strong signs of imposter syndrome",
+              "to": "Pronounced signs of imposter syndrome"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Передано верно, звучит естественно"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Хорошая идиоматика (done deal)"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/rarely",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/sometimes",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, идиоматичный."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Терминология и стиль соблюдены."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл цитаты."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, 'owning successes' — отличный выбор."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Дубликат пути 9, перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Дубликат пути 9, перевод корректен."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "issue",
+                "note": "Mistranslation: в оригинале 'синдром мошенника', в переводе 'all-or-nothing thinking' (черно-белое мышление)."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Терминология (discounting the positive) верна."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID в локали ru сохранен, в en атрибуты отсутствуют согласно конвенции"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID в локали ru сохранен, в en атрибуты отсутствуют согласно конвенции"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/14/text",
+                "fragment": "“all-or-nothing thinking”",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла: переведено как 'черно-белое мышление' вместо 'синдрома мошенника'.",
+                "why": "В оригинале указаны два разных искажения: 'синдром мошенника' и 'парадокс превосходства'. Переводчик заменил первое на 'all-or-nothing thinking', что является другим термином (черно-белое мышление)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator replaced the specific term 'синдром мошенника' (imposter syndrome/imposter phenomenon) with a different cognitive distortion 'all-or-nothing thinking'. This changes the meaning of the original text."
+              }
+            ],
+            "notes": "Only one issue was found, which is a significant mistranslation of a psychological term.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/14/text",
+                "current": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “all-or-nothing thinking” and the “paradox of superiority.”",
+                "proposed": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.”",
+                "alternatives": [
+                  "“imposter syndrome” and the “paradox of superiority”"
+                ],
+                "rationale": "В оригинале указано «синдром мошенника», что является частью контекста статьи. Переводчик заменил его на «all-or-nothing thinking» (черно-белое мышление), что является совершенно другим когнитивным искажением. Использование 'imposter phenomenon' или 'imposter syndrome' восстанавливает точность смысла."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на очень высоком уровне: соблюден тон, терминология КПТ и стиль. Единственная критическая ошибка — подмена одного когнитивного искажения другим в блоке 14, что искажает научный контекст. После этой правки текст будет готов к публикации."
+            },
+            "timings": {
+              "issues": 44813,
+              "deliberate": 3447,
+              "recommend": 7900
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/14/text",
+              "from": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “all-or-nothing thinking” and the “paradox of superiority.”",
+              "to": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.”"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Передано верно, идиоматично"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'done deal'"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/rarely",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/sometimes",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл верны."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Дубликат пути 9/text, перевод корректен."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Дубликат пути 9/fact, перевод корректен."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "issue",
+                "note": "Омиссия: пропущена вторая часть предложения."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Терминология (discounting the positive) верна."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен, атрибуты отсутствуют согласно конвенции для en"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен, атрибуты отсутствуют согласно конвенции для en"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/14/text",
+                "fragment": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.”",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущено второе предложение оригинала.",
+                "why": "В оригинале после перечисления искажений идет фраза: «Люди, испытывающие эти искажения, склонны принижать свои успехи и считать их случайными». В переводе она отсутствует, что обрывает мысль."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation cuts off after the list of distortions, completely omitting the second sentence of the source text which explains the consequence of these distortions."
+              }
+            ],
+            "notes": "The translation is generally high quality and accurate, but a major omission in one of the descriptive blocks significantly impacts the completeness of the information.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/steps_description/14/text",
+                "current": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.”",
+                "proposed": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.” People experiencing these distortions tend to downplay their successes and view them as accidental.",
+                "alternatives": [
+                  "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.” Those experiencing these distortions often minimize their achievements and see them as mere luck.",
+                  "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.” People with these distortions are prone to downplaying their successes and considering them accidental."
+                ],
+                "rationale": "В оригинале два предложения, в переводе — одно. Необходимо добавить второе предложение, чтобы передать смысл: люди склонны принижать успехи и считать их случайными. Вариант с 'downplay' и 'accidental' наиболее точно и естественно передает смысл оригинала, сохраняя тон статьи."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на высоком уровне: соблюден тон, терминология (CBT) и стиль. Однако обнаружена критическая ошибка — пропуск целого предложения в одном из блоков описания, что нарушает логику повествования. После исправления этого пропуска текст будет готов к публикации."
+            },
+            "timings": {
+              "issues": 42289,
+              "deliberate": 2325,
+              "recommend": 8496
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/14/text",
+              "from": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.”",
+              "to": "Doubting one’s ability to repeat success, despite recognition, can arise from cognitive distortions such as “imposter phenomenon” and the “paradox of superiority.” People experiencing these distortions tend to downplay their successes and view them as accidental."
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "file": "breathing.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/calm/name",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/calm/subtitle",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/calm/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо, передана тональность"
+              },
+              {
+                "path": "/calm/fullDescription",
+                "verdict": "issue",
+                "note": "Mistranslation: 'пульсация' переведена как 'release', что меняет физическое ощущение"
+              },
+              {
+                "path": "/calm/final_text",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/calm/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/calm/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/name",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/subtitle",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/description",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/fullDescription",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/final_text",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/phaseNames/hold",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/square/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/name",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/subtitle",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/description",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/fullDescription",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/final_text",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/phaseNames/hold",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/deep_relax/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/name",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/subtitle",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/description",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/fullDescription",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/final_text",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/phaseNames/inhale_extra",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/reset/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/balance/name",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/balance/subtitle",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/balance/description",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/balance/fullDescription",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/balance/final_text",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/balance/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              },
+              {
+                "path": "/balance/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Переведено корректно"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/calm/fullDescription",
+                "fragment": "with a deep release",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла",
+                "why": "В оригинале «с глубокой пульсацией» (pulsation/vibration), что описывает физическое ощущение процесса. Перевод «deep release» (глубокое освобождение/отпускание) подменяет физическое ощущение эмоциональным результатом, что меняет суть инструкции по технике дыхания."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator replaced a physical sensation ('pulsation') with an emotional outcome ('release'), which changes the instructional nature of the breathing technique."
+              }
+            ],
+            "notes": "The translation is generally high quality and flows naturally, but it suffers from one significant loss of technical precision where a physical sensation was replaced by a vague emotional result.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/calm/fullDescription",
+                "current": "A 4-second inhale flows smoothly, without pauses, into a 6-second exhale with a deep release.",
+                "proposed": "A 4-second inhale flows smoothly, without pauses, into a 6-second exhale with a deep pulsation.",
+                "alternatives": [
+                  "A 4-second inhale flows smoothly, without pauses, into a 6-second exhale with a deep, pulsing sensation.",
+                  "A 4-second inhale flows smoothly, without pauses, into a 6-second exhale with a deep rhythmic pulse."
+                ],
+                "rationale": "В оригинале указано физическое ощущение («пульсация»), которое важно для выполнения техники. Вариант 'deep release' — это результат, а не описание процесса. 'Deep pulsation' наиболее точно передает смысл, хотя 'pulsing sensation' звучало бы чуть более естественно для носителя; выбираем наиболее точный по смыслу вариант."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден теплый тон, правильно использована терминология и соблюдены правила UX. Единственная серьезная ошибка — подмена физического ощущения в описании техники дыхания эмоциональным результатом, что может запутать пользователя при выполнении упражнения. После исправления этого момента текст будет готов к публикации."
+            },
+            "timings": {
+              "issues": 20080,
+              "deliberate": 2377,
+              "recommend": 6742
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/calm/fullDescription",
+              "reason": "цитата судьи не похожа на лист (сходство 33%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

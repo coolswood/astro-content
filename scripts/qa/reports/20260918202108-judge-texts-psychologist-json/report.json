@@ -1,0 +1,93 @@
+{
+  "file": "texts/psychologist.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный, соответствует контексту."
+              },
+              {
+                "path": "/1",
+                "verdict": "ok",
+                "note": "Терминология (automatic thought journal) соблюдена, смысл передан верно."
+              },
+              {
+                "path": "/2",
+                "verdict": "issue",
+                "note": "Использование 'their' для 'его' (специалиста) — грамматически верно, но в контексте 'его личном кабинете' (специалиста) может звучать двусмысленно, хотя в целом допустимо. Однако 'sync automatically to' — небольшая стилистическая шероховатость, лучше 'sync automatically with'."
+              },
+              {
+                "path": "/3",
+                "verdict": "ok",
+                "note": "Короткая фраза, перевод адекватен."
+              },
+              {
+                "path": "/4",
+                "verdict": "ok",
+                "note": "Императив соблюден, кавычки верные."
+              },
+              {
+                "path": "/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно, использование 'their' для гендерно-нейтрального 'психолога' — норма."
+              },
+              {
+                "path": "/6",
+                "verdict": "ok",
+                "note": "Тон и смысл соблюдены."
+              },
+              {
+                "path": "/7",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/2",
+                "fragment": "All entries sync automatically to their personal dashboard",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Предлог 'to' вместо 'with'",
+                "why": "В контексте синхронизации данных между двумя точками (приложение и кабинет) более естественно использовать 'sync with', хотя 'to' допустимо в значении направления потока данных."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "The translator used 'sync to' to indicate the destination of the data flow (from app to dashboard), which is grammatically correct and stylistically appropriate in a technical context. 'Sync with' would imply a mutual two-way synchronization, which is not explicitly stated in the source."
+              }
+            ],
+            "notes": "No significant issues were found; the translation is accurate and follows natural English patterns.",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне: соблюдены все правила Tone of Voice, терминология КПТ (automatic thought journal) и UX-стандарты. Замечание редакции по поводу 'sync to' vs 'sync with' отклонено справедливо, так как 'sync to' корректно описывает направление передачи данных в техническом контексте."
+            },
+            "timings": {
+              "issues": 7829,
+              "deliberate": 2029,
+              "recommend": 2145
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

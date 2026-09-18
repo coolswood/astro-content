@@ -1,0 +1,431 @@
+{
+  "file": "texts/premium.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/list/0/title",
+                "verdict": "ok",
+                "note": "Переведено адекватно, guidance — хороший выбор"
+              },
+              {
+                "path": "/list/0/description",
+                "verdict": "ok",
+                "note": "Транскреация удачная, смысл сохранен, тон дружелюбный"
+              },
+              {
+                "path": "/list/1/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/1/description",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortions) верна, тон соблюден"
+              },
+              {
+                "path": "/list/2/title",
+                "verdict": "ok",
+                "note": "Стандартная формулировка"
+              },
+              {
+                "path": "/list/2/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/list/3/title",
+                "verdict": "ok",
+                "note": "Лаконично"
+              },
+              {
+                "path": "/list/3/description",
+                "verdict": "ok",
+                "note": "Смысл передан, стиль естественный"
+              },
+              {
+                "path": "/list/4/title",
+                "verdict": "ok",
+                "note": "Коротко и ясно"
+              },
+              {
+                "path": "/list/4/description",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/list/5/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/list/5/description",
+                "verdict": "ok",
+                "note": "Термин mental well-being использован верно"
+              },
+              {
+                "path": "/list/6/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/list/6/description",
+                "verdict": "ok",
+                "note": "Стиль хороший, смысл передан"
+              },
+              {
+                "path": "/list/7/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/list/7/description",
+                "verdict": "ok",
+                "note": "Смысл передан, терминология (psychologist) верна"
+              },
+              {
+                "path": "/last/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/last/advantages/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/last/advantages/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/last/advantages/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/last/advantages/3",
+                "verdict": "ok",
+                "note": "Price lock — отличная адаптация"
+              },
+              {
+                "path": "/terms/h2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/3",
+                "verdict": "ok",
+                "note": "Ок, Premium с большой буквы как в глоссарии"
+              },
+              {
+                "path": "/terms/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/terms/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/list/0/title",
+                "current": "AI guidance for journaling",
+                "proposed": "AI-powered journaling guidance",
+                "alternatives": [
+                  "AI guidance for your journal"
+                ],
+                "rationale": "Текущий вариант звучит немного сухо. Добавление 'powered' или использование 'AI-powered' делает заголовок более современным и маркетингово привлекательным, что соответствует тону приложения."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/list/0/description",
+                "current": "Keeping an automatic thought journal can sometimes feel challenging. Our recommendation system is here to help—offering guidance and support to help you navigate your thoughts more clearly and comfortably.",
+                "proposed": "Keeping an automatic thought journal can sometimes be challenging. Our recommendation system is here to help—offering guidance and support to help you navigate your thoughts more clearly and comfortably.",
+                "alternatives": [],
+                "rationale": "Минимальная правка: 'can sometimes feel challenging' (может казаться сложным) — это субъективное ощущение, в то время как оригинал 'бывает непросто' более нейтрален. Однако текущий вариант допустим, правка скорее стилистическая для точности."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/last/advantages/3",
+                "current": "Price lock for your subscription",
+                "proposed": "Price protection for your subscription",
+                "alternatives": [
+                  "Subscription price lock"
+                ],
+                "rationale": "Хотя 'Price lock' — устойчивое выражение, в контексте защиты пользователя от повышения цен (защита от роста стоимости), 'Price protection' звучит более естественно для описания функции безопасности/гарантии."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдены все правила терминологии (CBT, mental well-being, Premium), тон дружелюбный и профессиональный. Основные рекомендации касаются легкой полировки заголовков для придания им более современного 'продуктового' звучания. Текст полностью готов к использованию после внесения мелких правок."
+            },
+            "timings": {
+              "issues": 15246,
+              "deliberate": 649,
+              "recommend": 9802
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/list/0/title",
+              "from": "AI guidance for journaling",
+              "to": "AI-powered journaling guidance"
+            },
+            {
+              "id": "I2",
+              "path": "/list/0/description",
+              "from": "Keeping an automatic thought journal can sometimes feel challenging. Our recommendation system is here to help—offering guidance and support to help you navigate your thoughts more clearly and comfortably.",
+              "to": "Keeping an automatic thought journal can sometimes be challenging. Our recommendation system is here to help—offering guidance and support to help you navigate your thoughts more clearly and comfortably."
+            },
+            {
+              "id": "I3",
+              "path": "/last/advantages/3",
+              "from": "Price lock for your subscription",
+              "to": "Price protection for your subscription"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/list/0/title",
+                "verdict": "ok",
+                "note": "Переведено хорошо, передает смысл"
+              },
+              {
+                "path": "/list/0/description",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, смысл сохранен"
+              },
+              {
+                "path": "/list/1/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/1/description",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortions) верна"
+              },
+              {
+                "path": "/list/2/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/2/description",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/list/3/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/3/description",
+                "verdict": "ok",
+                "note": "Хорошо"
+              },
+              {
+                "path": "/list/4/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/4/description",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/5/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/5/description",
+                "verdict": "ok",
+                "note": "Терминология (mental well-being) верна"
+              },
+              {
+                "path": "/list/6/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/6/description",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/7/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/list/7/description",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/last/title",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/last/advantages/0",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/last/advantages/1",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/last/advantages/2",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/last/advantages/3",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/h2",
+                "verdict": "ok",
+                "note": "Стандартно"
+              },
+              {
+                "path": "/terms/texts/0",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/1",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/2",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/3",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/4",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/5",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/6",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/7",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/8",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/terms/texts/9",
+                "verdict": "ok",
+                "note": "Точно"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Соблюдены все требования по терминологии (CBT, mental well-being, Premium, journal), выдержан теплый, поддерживающий тон и корректный UX-регистр. Текст звучит естественно для носителя и не содержит калек с русского. Рисков для публикации не обнаружено."
+            },
+            "timings": {
+              "issues": 13536,
+              "deliberate": 638,
+              "recommend": 2590
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

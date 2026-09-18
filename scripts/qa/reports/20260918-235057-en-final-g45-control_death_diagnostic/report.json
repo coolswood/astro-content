@@ -1,0 +1,1025 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:50:57.221Z",
+    "Метка": "en-final-g45-control_death_diagnostic",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/depression/control_death_diagnostic.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/depression/control_death_diagnostic.json": {
+      "en": [
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/control/screen_2/texts",
+          "ru": "Может быть так, что при депрессии почистить зубы или принять душ будет для вас достижением, в этом нет ничего ужасного или стыдного, поверьте. И тогда рядом с этими занятиями вы будете писать букву «Д». Также отмечайте степень трудности.\n\nНапример, заправить постель было достаточно просто, и тогда это может быть «Д-2», а вот приготовить обед было более трудно, и тогда это «Д-7». Шкалу, по которой вы будете это оценивать, определяют ваши ощущения.\n\nЕсли занятие в вашем плане было для вас чем-то приятным, тогда ставьте рядом «У-удовольствие».\n\n<instagram ids=\"18510613267047104\">\n\nНапример, просмотр фильма или прогулка по парку были вам в радость, тогда поставьте соответствующую букву и также оцените степень удовольствия, которое вы получили от этого действия.\n\nСобственно, в этом и заключается все упражнение: оно простое, но эффективное. Вы можете подумать, что это не сработает, но если не попробуете выполнять это регулярно какое-то время, то точно не поймете этого. Это работает, потому что:\n\n<li>Это остановит вашу склонность к постоянному обдумыванию важности и ценности тех или иных действий и поможет справиться с внутренними противоречиями: стоит ли что-то делать или нет;</li>\n\n<li>Поможет вам распланировать свое время сбалансированно, потому что там будут дела, которые вам просто надо делать по той или иной причине, а также занятия, которые приносят вам удовольствие;</li>",
+          "oldText": "With depression, brushing your teeth or taking a shower can be an achievement—there’s nothing wrong or shameful about that. In such cases, add an “A.” Also note the difficulty level.\n\nFor example, making the bed was fairly easy—so that might be “A-2.” Cooking lunch was harder—so that could be “A-7.” Use a scale that reflects how it felt to you.\n\nIf something on your plan was enjoyable, add “P — pleasure.”\n\nFor instance, if a movie or a walk in the park brought you joy, add the letter and rate how much pleasure the activity gave you.\n\nThat’s the whole exercise: simple but effective. You might think it won’t work, but without trying it regularly for a while, you won’t really know. It works because it:\n\ninterrupts the constant weighing of whether an activity is “important enough,” easing inner conflicts about whether to act;\n\nhelps you plan time more evenly—balancing obligations with activities that bring pleasure.",
+          "newText": "When dealing with depression, things like brushing your teeth or taking a shower might feel like a real achievement; believe me, there is nothing wrong or shameful about that. In those cases, you would write the letter “A” next to the task. You should also note the level of difficulty.\n\nFor example, if making the bed was quite easy, you might write “D-2,” but if cooking lunch was harder, it might be “D-7.” You decide the scale based on how you feel.\n\nIf an activity in your plan was enjoyable, mark it with “U” for “Unforgettable pleasure” or simply “U” to match the original symbol.\n\n<instagram ids=\"18510613267047104\">\n\nFor instance, if watching a movie or walking in the park brought you joy, mark it with the corresponding letter and rate the level of pleasure you derived from the activity.\n\nThat is essentially the whole exercise: it’s simple but effective. You might think it won’t work, but you won’t know for sure unless you give it a try regularly for a while. It works because:\n\n<li>It stops you from constantly overthinking the importance or value of certain actions and helps you manage internal conflicts about whether or not you should do something;</li>\n\n<li>It helps you plan your time in a balanced way, as it includes both necessary tasks and activities that bring you pleasure;</li>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 72
+              },
+              "reason": "Translation B is much more natural and follows the UX/tone guidelines. Translation A makes a critical error by changing the letter 'Д' to 'A' (likely trying to adapt it to English, but failing to maintain the logic of the example 'D-2' later in the text) and adds a hallucinated meaning for 'У' ('Unforgettable pleasure'). Translation B handles the adaptation of letters more cleanly and uses much better flow.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The translator changed 'Д' to 'A' in the first paragraph, but then used 'D-2' in the second paragraph, creating a logical contradiction. Also, 'У-удовольствие' was translated as 'Unforgettable pleasure', which is a massive addition/hallucination not present in the original."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'you would write the letter' is a bit wordy for a supportive guide."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The list items are slightly more condensed than the original, but this is acceptable for better English flow."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 65
+              },
+              "reason": "Translation A is much more natural and follows the 'understanding expert' tone. Translation B makes a critical error by hallucinating a meaning for the letter 'U' ('Unforgettable pleasure') and fails to handle the letter 'Д' (D) correctly, whereas A correctly adapts the letter to the English context (A for Achievement).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "Hallucinated 'Unforgettable pleasure' for 'У-удовольствие'; the original just uses the letter as a marker."
+                },
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Inconsistent lettering: uses 'A' in the first paragraph but 'D' in the second, whereas A consistently uses 'A' (Achievement)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'You should also note' is slightly more directive/heavy than the original's supportive tone."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The Instagram tag was omitted, though this might be a formatting artifact."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/diagnostic/description",
+          "ru": "Статья рассказывает о способах диагностики депрессии: от общего распознавания симптомов до самостоятельной оценки состояния с помощью «Шкалы депрессии Бека». Она подчёркивает важность обращения к специалистам для точного диагноза и поддержки, особенно при выраженных симптомах, и предлагает практические шаги и упражнения для тех, кто хочет заботиться о своём эмоциональном состоянии.",
+          "oldText": "This article explores ways to assess depression—from recognizing common symptoms to self-evaluation using the Beck Depression Inventory (BDI). It emphasizes the importance of consulting professionals for an accurate diagnosis and support, especially when symptoms are pronounced, and offers practical steps and exercises for those who want to care for their emotional well-being.",
+          "newText": "The article covers various ways to diagnose depression, from recognizing general symptoms to self-assessment using the Beck Depression Inventory (BDI). It emphasizes the importance of seeking professional help for an accurate diagnosis and support, especially when symptoms are severe, and offers practical steps and exercises for those who want to care for their emotional well-being.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more natural and uses better collocations for a mental health context ('diagnose depression' and 'severe symptoms'). Translation B uses 'assess depression' and 'pronounced symptoms', which sound slightly more clinical or stiff in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Assess depression' is acceptable but 'diagnose' or 'identify' is more standard for an article overview; 'pronounced symptoms' is a bit formal/stiff compared to 'severe'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation A uses more sophisticated and natural vocabulary ('explores ways to assess' vs 'covers various ways to diagnose'), which fits the 'expert friend' tone better. Translation B uses 'diagnose' in the first sentence, which is slightly too clinical/heavy for a general article description, and 'severe' is a bit more medical than the original 'выраженных'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'diagnose' in the opening sentence sounds slightly more clinical/stiff than 'assess' or 'identify' for a general reader."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/control/screen_3/texts",
+          "ru": "Если вы будете регулярно составлять расписание дня, то вскоре заметите, что ваша мотивация растет, потому что начиная делать хоть что-то, вы опровергнете свои убеждения о том, что не способны делать что-либо.\n\nОдин человек, который долгое время был в депрессии и страдал от прокрастинации, поделился своим отзывом о данной технике:\n\n<dialog man=\"true\">Планируя свой день и глядя вечером на результаты, я осознал, на что именно я трачу время.</dialog>\n\n<dialog man=\"true\">Это помогло мне вновь взять на себя ответственность за свою жизнь. Я осознаю, что могу контролировать ситуацию, если захочу.</dialog>\n\n<q author=\"Питер Друкер\">Самое важное в управлении временем — не управлять временем, а управлять собой</q>",
+          "oldText": "If you keep making a daily schedule, you’ll likely notice your motivation grow: doing even a little challenges the belief that you can’t do anything.\n\nSomeone who lived with depression for a long time and struggled with procrastination shared their experience with this technique:\n\n“By planning my day and reviewing the results in the evening, I realized exactly what I was spending my time on.”\n\n“It helped me take responsibility for my life again. I recognize that I can regain control when I choose to.”",
+          "newText": "If you keep a daily schedule regularly, you will soon notice your motivation growing. By starting to do even small things, you will begin to challenge the belief that you are incapable of doing anything.\n\nOne person who struggled with long-term depression and procrastination shared their feedback on this technique:\n\n<dialog man=\"true\">By planning my day and looking at the results in the evening, I realized exactly where my time was going.</dialog>\n\n<dialog man=\"true\">It helped me take responsibility for my life again. I realize that I can control the situation if I choose to.</dialog>\n\n<q author=\"Peter Drucker\">The most important thing in time management is not to manage time, but to manage yourself</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 82
+              },
+              "reason": "Translation A is much more idiomatic and flows naturally, avoiding the clunky 'If you keep... regularly' construction in B. It also uses a more sophisticated structure to link the motivation to the challenging of beliefs, whereas B feels like a series of disconnected sentences.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Redundant phrasing: 'keep a daily schedule regularly' is tautological."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure is heavy and feels like a direct translation from Russian (translationese)."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'feedback' instead of 'experience/review', which sounds slightly more clinical/corporate than the warm tone required."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more faithful to the original structure and tone, maintaining the formal yet supportive narrative flow. Translation B introduces unnecessary stylistic changes (like the colon in the first paragraph) and loses the specific quote formatting/tags present in the source.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost the specific XML-style tags (<dialog>, <q>) which are crucial for the technical structure of the input."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The first sentence is slightly too condensed compared to the original's explanatory rhythm."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Changed 'shared their feedback' to 'shared their experience', which is a slight shift in meaning."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/control/description",
+          "ru": "В статье представлена уникальная техника планирования \"Две Колонки\", направленная на улучшение самоорганизации и повышение личной эффективности. Читатели узнают, как простое разделение задач на \"планы\" и \"факты\" может помочь не только в достижении поставленных целей, но и в осмыслении своих ежедневных действий. Особое внимание уделяется анализу выполненного, что позволяет научиться адаптироваться к изменениям и находить баланс между должным и желаемым.",
+          "oldText": "This article presents a practical planning approach—the Two-Column method—designed to improve personal organization and boost effectiveness. You’ll see how a simple split between “Plan” and “What Actually Happened” can help you not only reach goals but also reflect on your day. Special attention goes to reviewing outcomes, which builds adaptability and balance between what must be done and what you want to do.",
+          "newText": "This article introduces the unique “Two-Column” planning technique, designed to improve self-organization and boost personal effectiveness. You’ll learn how simply splitting tasks into “plans” and “facts” can help you not only achieve your goals but also reflect on your daily actions. We’ll focus on analyzing what you’ve actually accomplished, helping you learn how to adapt to changes and find a balance between what you need to do and what you want to do.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Translation A sounds much more natural and professional for an English-speaking reader, using idiomatic phrasing like 'What Actually Happened' instead of the literal and awkward 'facts'. Translation B suffers from 'translationese' and heavy use of literal calques from the Russian source.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The term 'facts' for 'факты' in this context is a literal calque; in English planning contexts, we describe the outcome or reality, not just 'facts'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'simply splitting tasks' is slightly clunky compared to 'a simple split'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The transition 'We'll focus on...' introduces a 'we' that wasn't explicitly in the original, making it feel more like a lecture than an article description."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is much more natural and follows the 'understanding friend' tone, whereas B feels slightly more academic and uses clunky phrasing like 'Special attention goes to'. A also preserves the specific terms 'plans' and 'facts' from the original more accurately.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'Special attention goes to' is a bit passive and stiff for this context."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "The term 'What Actually Happened' is a significant departure from the original 'facts' (факты), making it wordy and less punchy."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/diagnostic/screen_3/texts",
+          "ru": "<h2>Консультация со специалистом</h2>\n\nЕсли результаты самодиагностики указывают на возможное депрессивное состояние, важно обратиться к психологу, психиатру или психотерапевту.\n\nСпециалист поможет уточнить диагноз и подобрать подходящий план поддержки и лечения. А мы рядом, чтобы сопровождать вас и давать полезную информацию.\n\nЭтот материал создан, чтобы поддержать людей с лёгкими и умеренными проявлениями депрессии.\n\nНо он также может принести пользу тем, кто сталкивается с более тяжёлым состоянием.\n\nОн поможет немного облегчить симптомы и лучше понять своё состояние. Однако при выраженной депрессии одних инструментов самопомощи может быть недостаточно.\n\nВ таких ситуациях особенно важно обратиться за профессиональной помощью и, если необходимо, рассмотреть вариант медикаментозной поддержки.\n\n<important>Диагностика эмоциональных состояний — процесс тонкий и непростой.</important>\n\nПри самостоятельной оценке всегда существует риск ошибиться.\n\nДаже если у вас нет клинической депрессии, а лишь временное подавленное настроение, этот раздел всё равно может быть полезен.\n\nМы подробно разберём механизмы депрессии и поделимся практическими рекомендациями и упражнениями.\n\nЕсли вы хотите улучшить качество своей жизни и готовы к шагам навстречу себе, давайте продолжим этот путь вместе.",
+          "oldText": "Consulting a professional\n\nIf self-assessment suggests a possible depressive state, it’s important to reach out to a psychologist, psychiatrist, or psychotherapist.\n\nA specialist will help clarify the diagnosis and propose an appropriate plan for support and treatment. We’re here alongside you to provide guidance and useful information.\n\nThis material is designed to support people with mild to moderate symptoms of depression.\n\nBut it can also offer value to those facing more severe symptoms.\n\nIt may ease symptoms and deepen understanding of your condition. However, in more severe depression, self-help tools alone may not be enough.\n\nIn such cases, it’s especially important to seek professional help and, if needed, consider medication.\n\nAssessing emotional states is a subtle, complex process.\n\nThere is always a risk of error in self-evaluation.\n\nEven if you don’t meet criteria for clinical depression and are experiencing a temporary low mood, this section can still be helpful.\n\nWe’ll examine the mechanisms of depression in detail and share practical recommendations and exercises.\n\nIf you want to improve your quality of life and are ready to take steps forward, let’s continue this path together.",
+          "newText": "<h2>Consultation with a specialist</h2>\n\nIf your self-assessment results suggest possible depression, it’s important to reach out to a psychologist, psychiatrist, or psychotherapist.\n\nA specialist can help clarify a diagnosis and find the right support and treatment plan. We’re here to support you and provide helpful information along the way.\n\nThis material is designed to support people experiencing mild to moderate symptoms of depression.\n\nHowever, it can also be beneficial for those facing more severe conditions.\n\nIt can help ease symptoms and provide a better understanding of what you’re going through. However, for severe depression, self-help tools alone may not be enough.\n\nIn such cases, it is especially important to seek professional help and, if necessary, consider medical support.\n\n<important>Diagnosing emotional states is a delicate and complex process.</important>\n\nThere is always a risk of error when assessing yourself.\n\nEven if you don’t have clinical depression but are just experiencing a temporary low mood, this section can still be helpful.\n\nWe will explore the mechanisms of depression in detail and share practical recommendations and exercises.\n\nIf you want to improve your quality of life and are ready to take steps toward self-care, let’s continue this journey together.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation A is more natural, flows better, and adheres strictly to the 'supportive expert' tone. It avoids the slightly clunky phrasing found in B (e.g., 'We’re here alongside you' or 'propose an appropriate plan'). Translation A also correctly handles the HTML tags which were present in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing the <h2> and <important> HTML tags present in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Phrasing like 'We’re here alongside you' is slightly unnatural compared to 'We’re here to support you'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Consulting a professional' as a header is a bit dry compared to the original structure."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 84
+              },
+              "reason": "Translation A is more idiomatic and flows better as a cohesive piece of psychoeducation. Translation B contains several 'translationese' markers and slightly clunky phrasing (e.g., 'medical support' instead of 'medication', 'steps toward self-care' instead of a more natural flow).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'medical support' is a bit vague/clinical compared to the more natural 'medication' or 'medication support' in this context."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'steps toward self-care' is a slight deviation from the original 'шагам навстречу себе' (steps toward yourself/forward), though acceptable, it feels a bit more like a cliché."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'provide a better understanding of what you’re going through' is fine, but A's 'deepen understanding of your condition' feels more professional for this specific context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/control/title",
+          "ru": "Техника: День под контролем",
+          "oldText": "Technique: A Day in Control",
+          "newText": "Technique: Day Under Control",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Translation A uses the idiomatic expression 'in control', which sounds natural for a title. Translation B is a literal calque from Russian ('under control') that sounds awkward in this context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'Day Under Control' is unidiomatic; a native speaker would say 'Day in Control' or 'Staying in Control'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 80
+              },
+              "reason": "Translation B uses the idiomatic 'in control', which sounds natural for a title, whereas Translation A is a literal calque of the Russian structure.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Day Under Control' sounds slightly unnatural/clunky; 'in control' is the standard English idiom for this meaning."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/death/description",
+          "ru": "Статья рассказывает историю Анастасии, пережившей глубокую депрессию и тяжёлое чувство вины после трагической смерти брата. Благодаря психотерапии она смогла постепенно освободиться от самообвинений, изменить отношение к себе и своим переживаниям. Постепенно Анастасия вышла из депрессии, приняла, что не виновата, и снова начала жить полной жизнью.",
+          "oldText": "This article tells the story of Anastasia, who experienced profound depression and a heavy sense of guilt after her brother’s tragic death. Through psychotherapy, she gradually let go of self-blame and changed the way she related to herself and her experiences. Over time, Anastasia emerged from depression, accepted that she was not at fault, and began to live a full life again.",
+          "newText": "This article tells the story of Anastasia, who experienced deep depression and intense guilt following the tragic death of her brother. Through psychotherapy, she was able to gradually let go of self-blame, change how she viewed herself and her experiences, and eventually emerge from depression, accepting that she was not to blame and beginning to live a full life again.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A follows the original sentence structure and rhythm perfectly, making it easier to read. Translation B attempts to combine the last two sentences into one long, cumbersome sentence, which feels less natural for a narrative summary.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure is overly complex and loses the punchy, progressive rhythm of the original by merging the final thoughts into a single long clause."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B is more idiomatic and has a better narrative rhythm. It avoids the long, slightly breathless sentence structure of A by breaking the text into two clear parts, which is more natural for an article summary.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The second sentence is overly long and becomes a run-on, making it harder to read than the segmented approach in B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/diagnostic/screen_1/texts",
+          "ru": "В прошлом разделе мы уже говорили о том, что такое депрессия.\n\nТеперь давайте разберёмся, как можно определить её у себя.\n\nУсловно диагностику депрессии можно разделить на три этапа:\n\n<instagram ids=\"18067256407767438,18071830373069533\">\n\n<h2>Общий скрининг</h2>\n\nКак и любое другое эмоциональное состояние, депрессия проявляется через определённые симптомы. Давайте рассмотрим их:\n\n<li>Подавленное настроение.</li>\n\n<li>Потеря интереса к привычным занятиям и радостям.</li>\n\n<li>Ангедония — снижение способности получать удовольствие.</li>\n\n<li>Трудности с концентрацией, работоспособностью, принятием решений.</li>\n\n<li>Нарушения сна и аппетита — снижение или наоборот увеличение.</li>\n\n<li>Чувства безнадёжности, беспомощности, раздражительности, стыда или вины.</li>\n\n<li>Тревожность или выраженная апатия.</li>\n\n<li>Снижение энергии, чувство постоянной усталости.</li>\n\n<li>Навязчивые мысли о смерти или самоубийстве.</li>\n\nМногие из нас хотя бы раз сталкивались с некоторыми из этих проявлений.\n\nОднако отдельные симптомы не всегда означают депрессию. Как же определить её наличие?\n\nО депрессивном расстройстве можно говорить, если вы наблюдаете у себя как минимум четыре из перечисленных симптомов на протяжении двух недель и дольше.\n\nТакже важно учитывать общее состояние здоровья и влияние жизненных обстоятельств.\n\n<q author=\"Виктор Франкл\">Мы не можем изменить ситуации, которые жизнь нам преподносит, но можем изменить, как мы переживаем их.</q>",
+          "oldText": "In the previous section, we discussed what depression is.\n\nNow let’s look at how you can recognize it in yourself.\n\nFor clarity, we can think of depression assessment in three stages:\n\nGeneral screening\n\nLike any other emotional state, depression shows up through specific symptoms. Let’s review them:\n\nLow mood.\n\nLoss of interest in usual activities and pleasures.\n\nAnhedonia—reduced ability to experience pleasure.\n\nDifficulties with concentration, productivity, and decision-making.\n\nSleep and appetite changes—either reduced or increased.\n\nFeelings of hopelessness, helplessness, irritability, shame, or guilt.\n\nAnxiety or marked apathy.\n\nLow energy, persistent fatigue.\n\nIntrusive thoughts about death or suicide.\n\nMost of us have encountered some of these at least once.\n\nHowever, isolated symptoms don’t always indicate depression. So how do you determine whether it’s present?\n\nYou can speak of a depressive disorder when at least four of these symptoms persist for two weeks or more.\n\nIt’s also important to consider your overall health and current life circumstances.",
+          "newText": "In the previous section, we discussed what depression is.\n\nNow, let’s look at how you can identify it in yourself.\n\nIdentifying depression generally involves three stages:\n\n<instagram ids=\"18067256407767438,18071830373069533\">\n\n<h2>General screening</h2>\n\nLike any other emotional state, depression manifests through specific symptoms. Let’s look at them:\n\n<li>Low mood.</li>\n\n<li>Loss of interest in activities you used to enjoy.</li>\n\n<li>Anhedonia — a reduced ability to experience pleasure.</li>\n\n<li>Difficulty concentrating, working, or making decisions.</li>\n\n<li>Changes in sleep or appetite — either a decrease or an increase.</li>\n\n<li>Feelings of hopelessness, helplessness, irritability, shame, or guilt.</li>\n\n<li>Anxiety or profound apathy.</li>\n\n<li>Low energy or a constant feeling of fatigue.</li>\n\n<li>Intrusive thoughts about death or suicide.</li>\n\nMany of us have experienced some of these symptoms at least once.\n\nHowever, experiencing individual symptoms doesn’t always mean you have depression. So, how can you tell?\n\nA depressive disorder may be considered if you observe at least four of these symptoms for two weeks or longer.\n\nIt is also important to consider your overall health and the impact of your current life circumstances.\n\n<q author=\"Viktor Frankl\">We cannot change the situations life presents to us, but we can change how we experience them.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is superior because it preserves all HTML tags (h2, li, instagram, q), which is critical for technical implementation. It also uses more natural, idiomatic English for a mental health context (e.g., 'identify it in yourself' vs 'recognize it', and 'profound apathy' vs 'marked apathy').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "All HTML tags (h2, li, instagram, q) were stripped out, which would break the layout/rendering."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'For clarity, we can think of...' is a bit wordy compared to the original's directness."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The list items lack the structure/formatting of the original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 84,
+                "new": 95
+              },
+              "reason": "Translation B is much more natural and follows the source structure perfectly, including the HTML tags which A omitted. B also uses better idiomatic phrasing (e.g., 'activities you used to enjoy' vs 'usual activities').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Omitted all HTML tags (instagram, h2, li, q), which is critical for technical/content integrity."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'For clarity, we can think of...' is a bit wordy compared to the directness of B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/death/screen_2/texts",
+          "ru": "Самообвинения Анастасии появились ещё до трагедии. Она часто думала, что её жизнь сложилась удачнее, чем у брата, и пыталась помогать ему эмоционально и финансово во время его длительной борьбы с депрессией.\n\nОна поддерживала его в решении обратиться к психологу, помогала оплачивать терапию и даже сняла ему жильё рядом, чтобы быть рядом и всегда прийти на помощь.\n\nНастя была уверена, что именно она виновата в его смерти, ведь «должна была сделать ещё больше».\n\nЕё переживания были глубокими и искренними, она чувствовала эту боль постоянно.\n\nНа первых сеансах терапии она говорила о причинах своего самообвинения и мыслях о смерти: «Я была ответственна за его жизнь. Мне кажется, что моя неспособность помочь привела к трагедии. Я должна была увидеть его состояние и спасти его.»\n\nОна верила, что её мучения оправданы и что она обязана нести наказание.\n\nСо стороны может быть заметно, что такие мысли иррациональны и только причиняют вред.\n\nОсновная когнитивная ошибка, которую она совершала, — персонализация. В ходе терапии Анастасия пришла к важным выводам:\n\n<li>Если бы она действительно была ответственна за смерть брата, это означало бы, что она — причина его решения.</li>\n\n<li>Она не могла контролировать его мысли и внутреннюю боль, поэтому не могла отвечать за те убеждения, которые привели его к тяжёлой депрессии. Это была его борьба, а не её вина.</li>\n\n<li>Пытаясь взять на себя ответственность за его состояние, она пыталась влиять на то, что ей не подвластно. Максимум, что она могла делать, — поддерживать его в рамках своих сил и возможностей.</li>",
+          "oldText": "Anastasia’s self-blame began even before the tragedy. She often thought her life had turned out better than her brother’s and tried to help him—emotionally and financially—through his long struggle with depression.\n\nShe supported his decision to see a psychologist, helped pay for therapy, and even rented him an apartment nearby so she could be there and help at any time.\n\nAnastasia was convinced she was to blame for his death because she “should have done even more.”\n\nHer feelings were deep and sincere; the pain was constant.\n\nIn the first therapy sessions she spoke about the reasons for her self-blame and her thoughts about death: “I was responsible for his life. I feel like my inability to help led to the tragedy. I should have seen his state and saved him.”\n\nShe believed her suffering was justified and that she was obligated to bear punishment.\n\nFrom the outside, it’s clear these thoughts are irrational and harmful.\n\nThe main cognitive distortion was personalization. In therapy, Anastasia reached several important conclusions:\n\nIf she were truly responsible for her brother’s death, that would mean she was the cause of his decision.\n\nShe could not control his thoughts or inner pain, and therefore could not be responsible for the beliefs that led him to severe depression. It was his struggle, not her fault.\n\nBy trying to take responsibility for his state, she was trying to control what was beyond her power. The most she could do was support him within her own limits and abilities.",
+          "newText": "Anastasia’s self-blame began even before the tragedy. She often felt her life had turned out better than her brother’s, and she tried to support him both emotionally and financially during his long struggle with depression.\n\nShe encouraged him to see a psychologist, helped pay for his therapy, and even rented an apartment near him so she could be close and always be there to help.\n\nAnastasia was convinced she was to blame for his death because she “should have done even more.”\n\nHer feelings were deep and sincere; she felt this pain constantly.\n\nDuring her first therapy sessions, she spoke about the reasons for her self-blame and her thoughts about death: “I was responsible for his life. I feel like my inability to help led to this tragedy. I should have seen his state and saved him.”\n\nShe believed her suffering was justified and that she was obligated to carry the punishment.\n\nFrom the outside, it can be clear that such thoughts are irrational and only cause harm.\n\nThe main cognitive distortion she was experiencing was personalization. Through therapy, Anastasia reached several important conclusions:\n\n<li>If she had truly been responsible for her brother’s death, it would mean she was the cause of his decision.</li>\n\n<li>She could not control his thoughts or his internal pain, so she could not be responsible for the beliefs that led him into deep depression. It was his struggle, not her fault.</li>\n\n<li>By trying to take responsibility for his condition, she was trying to influence things beyond her control. The most she could do was support him within her own limits and abilities.</li>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 86
+              },
+              "reason": "Translation A is more idiomatic and flows much better as a narrative piece. Translation B contains several 'translationese' markers and slightly clunky phrasing (e.g., 'it can be clear', 'carry the punishment', 'influence things beyond her control'). A's use of em dashes and more natural verb choices makes it feel like it was originally written in English.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'it can be clear' is a weak, non-idiomatic construction compared to 'it's clear'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'carry the punishment' is less natural than 'bear punishment'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'influence things beyond her control' is a bit wordy/clunky compared to 'control what was beyond her power'."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Lost the <li> tags present in the original for the list items."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more polished and follows the source structure more accurately, especially regarding the list items. Translation B loses the HTML tags and has slightly more awkward phrasing in the conclusion.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The <li> tags were removed, which breaks the intended structure of the text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'bear punishment' is slightly less idiomatic than 'carry the punishment' or 'bear the punishment' in this context, though acceptable."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/death/title",
+          "ru": "Поиски себя после потери близкого человека",
+          "oldText": "Finding Yourself After Losing a Loved One",
+          "newText": "Finding Yourself After the Loss of a Loved One",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Both are grammatically correct and natural, but Translation A is more elegant and fits the tone of a professional article title better. Translation B is slightly more colloquial/informal.",
+              "issues": []
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Both are grammatically correct, but B uses the more idiomatic and natural noun phrase 'the loss of a loved one' for a title, whereas A sounds slightly more like a casual description of an ongoing process.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Using the gerund 'losing' is slightly less formal/polished for a title than the noun 'the loss'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/diagnostic/title",
+          "ru": "Диагностика депрессии: Путешествие к пониманию себя",
+          "oldText": "Depression Assessment: A Journey Toward Understanding Yourself",
+          "newText": "Understanding Depression: A Journey to Self-Discovery",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 96
+              },
+              "reason": "Translation B is much more idiomatic and natural for a title. 'Understanding Depression' is a smoother way to convey the essence of the topic than the clinical-sounding 'Depression Assessment', and 'Self-Discovery' is a more evocative and common term for this context than 'Understanding Yourself'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Depression Assessment' sounds overly clinical and dry compared to the poetic 'Journey' part of the title; 'Understanding Yourself' is a bit wordy for a title."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A is more idiomatic and evocative for a title, using 'Self-Discovery' which fits the 'Journey' metaphor perfectly. Translation B is slightly more literal and clunky.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'A Journey Toward Understanding Yourself' is a bit wordy and less punchy for a title compared to 'A Journey to Self-Discovery'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/diagnostic/screen_2/texts",
+          "ru": "Самодиагностика с помощью проверенных методик\n\nСуществует множество инструментов, которые помогают оценить своё состояние.\n\nОдним из самых известных и надёжных считается «Шкала депрессии Бека» (BDI).\n\nЭта методика, созданная психотерапевтом Аароном Беком, включает 21 категорию симптомов, и каждая отражает разные аспекты депрессивного состояния.\n\nПройдя этот тест, вы сможете ориентировочно определить степень тяжести симптомов: от лёгкой до выраженной депрессии.\n\nТест доступен в нашем приложении, и он прост и интуитивен в использовании.\n\n<q author=\"Леннард Дэвис\">Забота о себе — это не исключение из ваших обязанностей, а важная их часть.</q>",
+          "oldText": "Self-assessment with validated tools\n\nThere are many instruments that help you assess your state.\n\nOne of the best known and most reliable is the Beck Depression Inventory (BDI).\n\nDeveloped by psychiatrist Aaron Beck, it includes 21 symptom categories, each reflecting different aspects of the depressive experience.\n\nBy taking this test, you can get an approximate indication of severity—from mild to severe depression.\n\nThe test is available in our app and is simple and intuitive to use.",
+          "newText": "Self-assessment using proven methods\n\nThere are many tools available to help you assess how you’re feeling.\n\nOne of the most well-known and reliable is the “Beck Depression Inventory” (BDI).\n\nDeveloped by psychotherapist Aaron Beck, this method includes 21 items, each reflecting different aspects of a depressive state.\n\nBy taking this test, you can get an idea of the severity of your symptoms, ranging from mild to severe depression.\n\nThe test is available in our app and is simple and intuitive to use.\n\n<q author=\"Lennard Davis\">Self-care is not an exception to your responsibilities, but an important part of them.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 82
+              },
+              "reason": "Translation A sounds more natural and professional, using 'depressive experience' and 'approximate indication' which fits the tone of a high-quality mental health app. Translation B contains a terminology error regarding Aaron Beck's profession and uses a slightly clunky phrasing in the quote.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "While Beck was a psychotherapist, in English-speaking clinical contexts, he is most famously referred to as a psychiatrist (as in A)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The quote 'an important part of them' is grammatically correct but sounds slightly weak/clunky compared to the more idiomatic 'an important part of it' or 'an essential part of your responsibilities'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of quotation marks around the name of the scale is unnecessary in English once the acronym is provided."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Translation A sounds much more natural and follows the 'understanding friend' tone. Translation B uses heavy, unnatural phrasing like 'assess your state' and 'approximate indication of severity', which sounds like a machine translation.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'assess your state' is a Russianism; 'assess how you're feeling' is much more natural."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'approximate indication of severity' is overly wordy and academic (clunky)."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "The original says 'психотерапевт', A uses 'psychotherapist', B uses 'psychiatrist'. While Beck was a psychiatrist, we should stick to the source text."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The quote by Lennard Davis is completely missing in translation B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/death/screen_3/texts",
+          "ru": "<li>Если бы она знала о его намерениях, она сделала бы всё, чтобы помочь и предотвратить трагедию. Но она не знала — и изменить то, что было скрыто, было невозможно.</li>\n\n<li>Обвиняя себя, Настя словно предполагала, что обязана была предвидеть будущее и обладать безграничным знанием. Эти ожидания оказались нереалистичными, и у неё не было оснований винить себя.</li>\n\nВсе доводы указывали на одно: брать на себя ответственность за его поступок было тяжелой и несправедливой ошибкой.\n\nЕё ответственность — только за свою собственную жизнь и своё благополучие.\n\nСо временем она поняла: её страдания возникали не потому, что она «подвела брата», а потому, что дала вине поглотить себя и позволила депрессии разрушить её жизнь.\n\nПоддерживающим решением стало отпустить чувство вины, постепенно восстанавливаться и учиться снова жить радостной и наполненной жизнью.\n\nТак выглядит настоящая забота о себе. После терапии состояние Анастасии значительно улучшилось, и она смогла преодолеть депрессию. Она объяснила это глубокими переменами в отношении к себе и своему внутреннему миру.",
+          "oldText": "Had she known his intentions, she would have done everything to help and prevent the tragedy. But she didn’t know—and you can’t change what you couldn’t see.\n\nBy blaming herself, Anastasia was assuming she should have foreseen the future and possessed limitless knowledge. These expectations were unrealistic; she had no grounds to condemn herself.\n\nAll the reasoning pointed to one thing: taking responsibility for his action was a heavy and unfair mistake.\n\nHer responsibility is for her own life and well-being.\n\nOver time, she realized her suffering didn’t arise because she had “let her brother down,” but because she allowed guilt to consume her and let depression erode her life.\n\nA supportive choice was to release the guilt, recover step by step, and learn to live joyfully and fully again.\n\nThat is what genuine self-care looks like. After therapy, Anastasia’s condition improved significantly, and she was able to overcome depression. She attributed this to deep changes in how she related to herself and her inner world.",
+          "newText": "<li>If she had known his intentions, she would have done everything possible to help and prevent the tragedy. But she didn’t know—and it was impossible to change what was hidden.</li>\n\n<li>By blaming herself, Anastasia was acting as if she were required to foresee the future and possess limitless knowledge. These expectations were unrealistic, and she had no reason to blame herself.</li>\n\nAll the evidence pointed to one thing: taking responsibility for his actions was a heavy and unfair mistake.\n\nHer responsibility was only to her own life and her own well-being.\n\nOver time, she realized that her suffering didn’t stem from “letting her brother down,” but from letting guilt consume her and allowing depression to destroy her life.\n\nA supportive step was to let go of the guilt, gradually recover, and learn to live a joyful, fulfilling life again.\n\nThis is what true self-care looks like. After therapy, Anastasia’s condition improved significantly, and she was able to overcome her depression. She attributed this to deep changes in how she viewed herself and her inner world.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 84
+              },
+              "reason": "Translation A is more idiomatic and flows better as a narrative piece. It uses more natural phrasing (e.g., 'you can’t change what you couldn’t see' vs the clunky 'it was impossible to change what was hidden'). Translation B suffers from slight stiffness and minor tense inconsistencies.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'it was impossible to change what was hidden' is a bit literal and heavy compared to the more natural A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The shift to 'Her responsibility was only to...' feels slightly less impactful than the present tense 'is' used in A, which works well for a universal truth/lesson."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A is more consistent in its narrative voice and maintains the third-person perspective of the story. Translation B makes an abrupt and uncharacteristic shift to the second person ('you can't change what you couldn't see'), which breaks the storytelling flow.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Inconsistent person: shifts from 'she' to 'you' in the first paragraph, which is jarring in a narrative context."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The shift from past tense ('was') to present tense ('is') in the fourth paragraph is slightly inconsistent with the narrative flow."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'taking responsibility for his action' (singular) is slightly less natural than 'actions' (plural) in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/control/screen_1/texts",
+          "ru": "<activitylink id=\"lsafnanS3sf\">\n\nПервое упражнение, которым мы хотим поделиться с вами, простое, но эффективное, и поможет в вашей самоорганизации.\n\nВечером, накануне следующего дня, сядьте и напишите свое расписание на день. Оно будет состоять из двух частей, соответственно, из двух колонок.\n\nПервая колонка — «До». Это почасовой план того, что вы хотите сделать. Не надо записывать сразу много: в каждой часовой строчке запишите одно-два слова, обозначая какое-то занятие или действие.\n\nНапример, это может быть что-то мелкое: сходить в душ, позавтракать, поставить стирку. Или это может быть что-то более энергозатратное: уборка, подготовка к экзамену, составление резюме и т.д.\n\nВ конце каждого дня записывайте во вторую колонку — «После».\n\nТуда стоит записывать, что вы делали на самом деле в течение всего дня, также по часам. Ваши занятия могут совпадать с запланированными, а могут и отличаться — это нормально, не переживайте.\n\n<important>Ведь даже если вы сможете реализовать всего лишь небольшую часть из списка «до», простое планирование вашего времени может оказаться для вас очень полезным и визуально понятным процессом.</important>\n\nПомимо этого, каждое из занятий отмечайте буквой «Д-дело», если это занятие было для вас не очень простым и стало достижением конкретно для вас.",
+          "oldText": "The first exercise we’d like to share is simple yet effective and supports your personal organization.\n\nIn the evening, plan the next day: write out a schedule with two parts—and two columns.\n\nThe first column is “Before.” It’s an hourly plan of what you want to do. Don’t overload it—write one or two words in each hour to note an activity or action.\n\nFor example, it could be something small: take a shower, have breakfast, start a load of laundry. Or something more demanding: cleaning, exam prep, drafting a résumé, and so on.\n\nAt the end of the day, fill in the second column—“After.”\n\nRecord what you actually did, hour by hour. It may match the plan—or not—and that’s okay.\n\nEven if you complete only a small part of the “Before” list, planning your time is still helpful and makes the day more concrete.\n\nAlso mark “A — achievement” next to any activity that wasn’t easy for you and counts as a personal accomplishment.",
+          "newText": "<activitylink id=\"lsafnanS3sf\">\n\nThe first exercise we want to share with you is simple yet effective, and it will help with your self-organization.\n\nIn the evening, before the next day begins, sit down and write out your schedule. It will consist of two parts, and therefore, two columns.\n\nThe first column is “Before.” This is an hourly plan of what you want to do. Don’t write too much at once: in each hourly slot, just write one or two words to denote an activity or action.\n\nFor example, it could be something small, like taking a shower, having breakfast, or starting a load of laundry. Or it could be something more demanding, such as cleaning, studying for an exam, or writing a resume.\n\nAt the end of each day, fill in the second column — “After.”\n\nUse this column to record what you actually did throughout the day, also on an hourly basis. Your activities might match your plans, or they might differ — that’s perfectly fine, so don’t worry.\n\n<important>Even if you only manage to complete a small part of your “Before” list, the simple act of planning your time can be a very helpful and visually clear process for you.</important>\n\nmark any activity with the letter “D” (for Deed) if that task was difficult for you and felt like a specific accomplishment.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 78
+              },
+              "reason": "Translation A is much more natural and follows the UX guidelines for a 'supportive expert' tone. Translation B is overly wordy, contains several 'translationese' structures (e.g., 'it will consist of', 'therefore'), and fails to handle the specific 'Д-дело' instruction correctly, whereas A provides a logical English equivalent.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The text is too wordy and follows the Russian sentence structure too closely (e.g., 'It will consist of two parts, and therefore, two columns'), which sounds unnatural in English."
+                },
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The instruction for 'Д-дело' is poorly handled. 'D (for Deed)' is a literal attempt that doesn't flow well, whereas A's 'A — achievement' is a much better transcreation for an English-speaking user."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing the <important> tags which were present in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing the <activitylink> and <important> tags, though the text itself is superior."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 92
+              },
+              "reason": "Translation A is much more faithful to the original text, preserving all nuances and the specific 'D-deed' instruction. Translation B makes several critical errors: it changes the 'D' instruction to 'A' (which is a hallucination/mistranslation of the specific mnemonic), omits the <important> tag, and simplifies the text too much, losing the supportive tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The original asks to mark 'Д-дело' (D-deed), but B changes it to 'A — achievement', which changes the specific instruction/mnemonic."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The <important> tag is missing, which is a structural requirement."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'makes the day more concrete' is a weak translation of 'визуально понятным процессом'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The last sentence 'mark any activity...' should ideally start with a capital letter for consistency, though it follows a paragraph break."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/control_death_diagnostic.json",
+          "lang": "en",
+          "key": "/death/screen_1/texts",
+          "ru": "Каждый из нас рано или поздно сталкивается с утратой близкого человека. Смерть — это тяжелое испытание, которое накрывает болью и тягостью, словно мощная волна.\n\nСлёзы, печаль и глубокие чувства — естественная реакция на потерю. Эти переживания помогают нам прожить горе и снова находить силы жить дальше.\n\nИногда скорбь становится затяжной и может сопровождать человека годами. А иногда горе стремительно перерастает в глубокую депрессию.\n\nРассмотрим историю Анастасии, 29-летней девушки, которая столкнулась с тяжёлой депрессией после самоубийства младшего брата. Она обратилась к психотерапевту спустя несколько месяцев после трагедии.\n\nОсобенно мучительным фактором стало её убеждение, что она несёт ответственность за его смерть.\n\n<q author=\"Конфуций\">Нас могут покинуть те, кого мы любим, но они никогда не уйдут далеко, пока мы помним их.</q>\n\nНастя чувствовала, что оказалась перед неразрешимой и пугающей реальностью. Ей казалось, что она «заслужила» страдание и даже испытывала суицидальные мысли.\n\nЧувство вины — частый и тяжёлый спутник тех, кто потерял близкого, особенно если человек ушёл из жизни по собственной воле.\n\nМногие задаются вопросами: «Почему я не остановил этого? Почему не заметил вовремя?»\n\n<important>Даже опытные специалисты могут сталкиваться с такими мыслями, если их клиент совершает самоубийство: «Это действительно моя вина. Я должен был сказать что-то другое, спросить иначе, быть внимательнее. Я должен был предотвратить это. Я виноват!»</important>",
+          "oldText": "Sooner or later, each of us faces the loss of someone close. Death is a profound trial that can wash over us like a powerful wave of pain and heaviness.\n\nTears, sadness, and deep feelings are a natural response to loss. These experiences help us move through grief and find the strength to live on.\n\nSometimes grief becomes prolonged and can stay for years. At times, it can develop into major depression.\n\nConsider the story of Anastasia, a 29-year-old who fell into a deep depression after her younger brother died by suicide. She sought psychotherapy a few months after the tragedy.\n\nWhat tormented her most was the belief that she bore responsibility for his death.\n\nAnastasia felt she was facing an unresolvable and frightening reality. She believed she “deserved” to suffer and even had suicidal thoughts.\n\nGuilt is a common and heavy companion for those who have lost a loved one, especially when a person dies by suicide.\n\nMany find themselves asking: “Why didn’t I stop it? Why didn’t I notice in time?”\n\nEven experienced professionals may struggle with such thoughts if a client dies by suicide: “This really is my fault. I should have said something different, asked another question, paid closer attention. I should have prevented it. I’m to blame!”",
+          "newText": "Sooner or later, each of us faces the loss of a loved one. Death is a profound trial that can overwhelm you with pain and heaviness, like a powerful wave.\n\nTears, sadness, and deep emotions are natural reactions to loss. These experiences help us process grief and find the strength to keep moving forward.\n\nSometimes grief becomes prolonged and can stay with a person for years. At other times, it can rapidly escalate into deep depression.\n\nLet’s look at the story of Anastasia, a 29-year-old woman who faced severe depression after her younger brother’s suicide. She sought help from a psychologist a few months after the tragedy.\n\nA particularly painful factor was her belief that she was responsible for his death.\n\n<q author=\"Confucius\">Those we love may leave us, but they never go far as long as we remember them.</q>\n\nAnastasia felt as though she were facing an unsolvable and terrifying reality. She felt she “deserved” to suffer and even experienced suicidal thoughts.\n\nGuilt is a common and heavy companion for those who have lost a loved one, especially if the person passed away by their own choice.\n\nMany people ask themselves: “Why didn’t I stop this? Why didn’t I notice it in time?”\n\n<important>Even experienced professionals can struggle with such thoughts if a client dies by suicide: “It really is my fault. I should have said something else, asked differently, been more attentive. I should have prevented this. It’s my fault!”</important>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 94
+              },
+              "reason": "Translation A is more faithful to the original structure and tone. Translation B makes several significant omissions (the Confucius quote is missing entirely) and uses slightly less natural phrasing in the narrative sections.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire quote by Confucius was omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'fell into a deep depression' is okay, but 'faced severe depression' in A is a more professional way to describe the clinical onset in this context."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "In the sentence 'Sometimes grief becomes prolonged and can stay for years', the object 'with a person' is missing, making it feel slightly clipped compared to the original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B is much more complete and follows the source text more accurately, including the missing quote from Confucius. It also uses more natural, empathetic phrasing ('process grief', 'keep moving forward') and adheres better to the requested tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The entire quote from Confucius was omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'a 29-year-old who fell into a deep depression' is slightly less elegant than 'faced severe depression'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'passed away by their own choice' is a bit wordy compared to 'died by suicide', though it captures the nuance of the original."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

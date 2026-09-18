@@ -1,0 +1,607 @@
+{
+  "file": "relax.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/headers/nature",
+                "verdict": "ok",
+                "note": "Nature - корректно"
+              },
+              {
+                "path": "/headers/transport",
+                "verdict": "ok",
+                "note": "Transport - корректно"
+              },
+              {
+                "path": "/headers/appliances",
+                "verdict": "ok",
+                "note": "Appliances - корректно"
+              },
+              {
+                "path": "/headers/animals",
+                "verdict": "ok",
+                "note": "Animals - корректно"
+              },
+              {
+                "path": "/headers/environment",
+                "verdict": "ok",
+                "note": "Environment - корректно"
+              },
+              {
+                "path": "/headers/instruments",
+                "verdict": "ok",
+                "note": "Musical instruments - корректно"
+              },
+              {
+                "path": "/sounds/fire",
+                "verdict": "ok",
+                "note": "Fire - корректно"
+              },
+              {
+                "path": "/sounds/rain",
+                "verdict": "ok",
+                "note": "Rain - корректно"
+              },
+              {
+                "path": "/sounds/wave",
+                "verdict": "ok",
+                "note": "Waves - корректно"
+              },
+              {
+                "path": "/sounds/whales",
+                "verdict": "ok",
+                "note": "Whales - корректно"
+              },
+              {
+                "path": "/sounds/blizzard",
+                "verdict": "ok",
+                "note": "Blizzard - корректно"
+              },
+              {
+                "path": "/sounds/snow_steps",
+                "verdict": "ok",
+                "note": "Footsteps in snow - корректно"
+              },
+              {
+                "path": "/sounds/train",
+                "verdict": "ok",
+                "note": "Train - корректно"
+              },
+              {
+                "path": "/sounds/conditioner",
+                "verdict": "ok",
+                "note": "Air conditioner - корректно"
+              },
+              {
+                "path": "/sounds/plane",
+                "verdict": "ok",
+                "note": "Airplane - корректно"
+              },
+              {
+                "path": "/sounds/rain_roof",
+                "verdict": "issue",
+                "note": "Пропущен артикль перед roof"
+              },
+              {
+                "path": "/sounds/crickets",
+                "verdict": "ok",
+                "note": "Crickets - корректно"
+              },
+              {
+                "path": "/sounds/thunderstorm",
+                "verdict": "ok",
+                "note": "Thunderstorm - корректно"
+              },
+              {
+                "path": "/sounds/underwater",
+                "verdict": "ok",
+                "note": "Underwater - корректно"
+              },
+              {
+                "path": "/sounds/wolves",
+                "verdict": "ok",
+                "note": "Wolves - корректно"
+              },
+              {
+                "path": "/sounds/cuckoo",
+                "verdict": "ok",
+                "note": "Cuckoo - корректно"
+              },
+              {
+                "path": "/sounds/stream",
+                "verdict": "ok",
+                "note": "Stream - корректно"
+              },
+              {
+                "path": "/sounds/street",
+                "verdict": "ok",
+                "note": "Street - корректно"
+              },
+              {
+                "path": "/sounds/keyboard",
+                "verdict": "ok",
+                "note": "Keyboard - корректно"
+              },
+              {
+                "path": "/sounds/horses",
+                "verdict": "ok",
+                "note": "Horses - корректно"
+              },
+              {
+                "path": "/sounds/cat",
+                "verdict": "ok",
+                "note": "Cat - корректно"
+              },
+              {
+                "path": "/sounds/vacuum_cleaner",
+                "verdict": "ok",
+                "note": "Vacuum cleaner - корректно"
+              },
+              {
+                "path": "/sounds/waterfall",
+                "verdict": "ok",
+                "note": "Waterfall - корректно"
+              },
+              {
+                "path": "/sounds/seagulls",
+                "verdict": "ok",
+                "note": "Seagulls - корректно"
+              },
+              {
+                "path": "/sounds/frogs",
+                "verdict": "ok",
+                "note": "Frogs - корректно"
+              },
+              {
+                "path": "/sounds/clock",
+                "verdict": "ok",
+                "note": "Clock - корректно"
+              },
+              {
+                "path": "/sounds/drops",
+                "verdict": "ok",
+                "note": "Drops - корректно"
+              },
+              {
+                "path": "/sounds/bowl",
+                "verdict": "ok",
+                "note": "Bowl - корректно"
+              },
+              {
+                "path": "/sounds/harp",
+                "verdict": "ok",
+                "note": "Harp - корректно"
+              },
+              {
+                "path": "/sounds/bell",
+                "verdict": "ok",
+                "note": "Bell - корректно"
+              },
+              {
+                "path": "/sounds/hang",
+                "verdict": "issue",
+                "note": "Hang — это название инструмента, требует заглавной буквы или уточнения"
+              },
+              {
+                "path": "/sounds/hang_small",
+                "verdict": "issue",
+                "note": "Hang — название инструмента, требует заглавной"
+              },
+              {
+                "path": "/sounds/bee",
+                "verdict": "ok",
+                "note": "Bee - корректно"
+              },
+              {
+                "path": "/sounds/metro",
+                "verdict": "ok",
+                "note": "Metro - корректно"
+              },
+              {
+                "path": "/sounds/dolphin",
+                "verdict": "ok",
+                "note": "Dolphin - корректно"
+              },
+              {
+                "path": "/sounds/hran",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sounds/lava",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sounds/seal",
+                "verdict": "ok",
+                "note": "Перевод верный, Fur seal — точное название вида"
+              },
+              {
+                "path": "/sounds/crowd",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sounds/dove",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/sounds/rain_roof",
+                "fragment": "Rain on roof",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Отсутствует артикль",
+                "why": "В английском языке при описании конкретного звука (дождь по [этой] крыше) требуется артикль 'the' (Rain on the roof), иначе фраза звучит незавершенно."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/sounds/hang",
+                "fragment": "Hang",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Регистр названия инструмента",
+                "why": "Hang (ханг) — это имя собственное для конкретного музыкального инструмента, в заголовках/названиях звуков его стоит писать с большой буквы для единообразия с другими инструментами (Harp, Bell)."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/sounds/hang_small",
+                "fragment": "Small hang",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Регистр названия инструмента",
+                "why": "Аналогично: название инструмента Hang должно быть с заглавной буквы."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Grammatically correct for a specific sound effect context."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "merged",
+                "mergedInto": "c1-I3",
+                "rank": 2,
+                "note": "Both issues concern the capitalization of 'Hang' as a proper noun/instrument name."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Capitalization of 'Hang' is required for consistency with other instruments in the list."
+              }
+            ],
+            "notes": "The translation is generally accurate, but requires minor grammatical and stylistic adjustments regarding articles and capitalization for consistency.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/sounds/rain_roof",
+                "current": "Rain on roof",
+                "proposed": "Rain on the roof",
+                "alternatives": [
+                  "Rain on a roof"
+                ],
+                "rationale": "Добавление определенного артикля 'the' делает фразу грамматически естественной для описания конкретного звукового эффекта, как и указано в замечании."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 2,
+                "path": "/sounds/hang_small",
+                "current": "Small hang",
+                "proposed": "Small Hang",
+                "alternatives": [],
+                "rationale": "Согласно замечанию, название инструмента Hang должно писаться с заглавной буквы для единообразия с остальным списком (Harp, Bell) и соблюдения правил именования объектов."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/sounds/hang",
+                "current": "Hang",
+                "proposed": "Hang",
+                "alternatives": [],
+                "rationale": "В текущем переводе слово уже написано с большой буквы, что соответствует требованию. Правка не требуется, так как текущий вариант уже корректен."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "minor_edits",
+              "summary": "Перевод в целом качественный и точный. Основные правки касаются артикля в одной фразе и единообразия регистра для музыкального инструмента. После внесения этих мелких правок текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 23934,
+              "deliberate": 3066,
+              "recommend": 6450
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/sounds/rain_roof",
+              "from": "Rain on roof",
+              "to": "Rain on the roof"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/sounds/hang_small",
+              "from": "Small hang",
+              "to": "Small Hang"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I2",
+              "path": "/sounds/hang",
+              "reason": "правка уже применена"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/headers/nature",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/headers/transport",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/headers/appliances",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/headers/animals",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/headers/environment",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/headers/instruments",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/fire",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/rain",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/wave",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/whales",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/blizzard",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/snow_steps",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/train",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/conditioner",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/plane",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/rain_roof",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/crickets",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/thunderstorm",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/underwater",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/wolves",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/cuckoo",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/stream",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/street",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/keyboard",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/horses",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/cat",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/vacuum_cleaner",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/waterfall",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/seagulls",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/frogs",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/clock",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/drops",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/bowl",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/harp",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/bell",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/hang",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/hang_small",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/bee",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/metro",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/dolphin",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/sounds/hran",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sounds/lava",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sounds/seal",
+                "verdict": "ok",
+                "note": "Перевод верный, Fur seal — точное название вида"
+              },
+              {
+                "path": "/sounds/crowd",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sounds/dove",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен безупречно. Все термины соответствуют контексту (звуки природы, бытовые звуки, музыкальные инструменты), соблюден правильный регистр (Sentence case для заголовков и одиночных слов), отсутствуют кальки. Текст готов к публикации."
+            },
+            "timings": {
+              "issues": 18462,
+              "deliberate": 460,
+              "recommend": 1922
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

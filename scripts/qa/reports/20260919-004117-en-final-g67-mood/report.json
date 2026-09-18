@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T21:41:17.603Z",
+    "Метка": "en-final-g67-mood",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "texts/mood.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "texts/mood.json": {
+      "en": [
+        {
+          "file": "texts/mood.json",
+          "lang": "en",
+          "key": "/start/texts",
+          "ru": "Оцените своё состояние до и после выполнения упражнений КПТ. Регулярные оценки помогают замечать динамику и понимать, как вы продвигаетесь.\n\nВы можете выбирать удобный для себя формат. Мы предлагаем два варианта:\n\nСначала дайте оценку утром. В течение дня выполняйте упражнения, проводите эксперименты или работайте с терапевтом. Вечером повторите оценку, чтобы увидеть изменения.\n\nИли оценивайте самочувствие прямо перед началом работы в приложении или сессией с психологом, а вторую — сразу после завершения упражнений.\n\nОба способа одинаково полезны. Выберите тот, который подходит вам больше всего.",
+          "oldText": "Rate how you feel before and after doing CBT exercises. Regular check-ins help you notice changes over time and understand how you’re progressing.\n\nYou can choose the format that works best for you. We suggest two options:\n\nFirst, check in with yourself in the morning. During the day, do your exercises, run behavioral experiments, or work with your therapist. In the evening, rate your state again to see what has changed.\n\nOr you can rate your well-being right before you start working in the app or before a session with your psychologist, and then do a second check-in immediately after you finish the exercises.\n\nBoth approaches are equally helpful. Choose the one that feels most natural for you.",
+          "newText": "Rate how you feel before and after your CBT exercises. Regular check-ins help you notice progress and understand how you’re moving forward.\n\nYou can choose the format that works best for you. We suggest two options:\n\nFirst, do a check-in in the morning. Throughout the day, complete exercises, try new experiments, or work with a psychologist. In the evening, rate how you feel again to see changes.\n\nOr, rate your well-being right before you start working in the app or a session with a psychologist, and then again immediately after you finish your exercises.\n\nBoth ways are equally helpful. Choose the one that suits you best.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more concise, follows the UX guidelines perfectly, and uses the correct terminology ('psychologist' instead of 'therapist'). Translation B introduces unnecessary complexity and uses 'therapist', which contradicts the glossary.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'therapist' instead of the required 'psychologist'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Phrasing like 'check in with yourself' and 'rate your state' is slightly more wordy and less punchy than A's UX-friendly approach"
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'behavioral' to experiments, which wasn't in the original"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and flows better as a piece of supportive guidance. It uses natural phrasing like 'notice changes over time' and 'the one that feels most natural for you', whereas B feels slightly more repetitive and mechanical.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'try new experiments' is a bit clunky compared to the standard CBT term 'run behavioral experiments' or simply 'do experiments'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure in the fourth paragraph is slightly fragmented compared to the smoother flow in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/mood.json",
+          "lang": "en",
+          "key": "/finish/texts",
+          "ru": "Вы уже сделали первую оценку. Теперь попробуйте немного поддержать своё состояние и улучшить самочувствие.\n\nВы можете воспользоваться инструментами приложения или пройти сессию с психологом — выберите то, что будет для вас комфортно.\n\nКогда завершите, возвращайтесь сюда и ещё раз оцените своё состояние.\n\nЛучше всего сделать повторную оценку в течение дня, чтобы увидеть изменения.",
+          "oldText": "You’ve already completed your initial check-in. Now try to support yourself a little and gently improve how you’re feeling.\n\nYou can use the tools in the app or have a session with your psychologist — choose whatever feels most comfortable for you.\n\nWhen you’re done, come back here and evaluate your state once again.\n\nIt’s best to reassess later in the day to see how things have shifted.",
+          "newText": "You’ve already completed your first check-in. Now, try to support yourself and improve how you feel.\n\nYou can use the tools in the app or have a session with a psychologist — choose whatever feels most comfortable for you.\n\nOnce you’re done, come back here and rate how you feel again.\n\nIt’s best to re-evaluate your well-being throughout the day to see changes.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more natural and follows the UX guidelines perfectly. Translation B uses 'evaluate your state' and 'reassess', which sound overly clinical and heavy compared to the warm, supportive tone required.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'evaluate your state' and 'reassess' are too formal/clinical; 'how you feel' or 'rate your mood' is better for a supportive tone."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "'your psychologist' implies the user already has one, whereas the original 'с психологом' is more general."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'how things have shifted' is a bit wordy compared to the direct 'see changes'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 84
+              },
+              "reason": "Translation A sounds more natural and empathetic, using 'how you're feeling' and 'how things have shifted' which fits the 'understanding friend' tone. Translation B is slightly more clinical and repetitive.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'rate how you feel again' is a bit clunky compared to 'evaluate your state once again' or 'reassess'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'throughout the day' changes the nuance of 'в течение дня' (within the day/later in the day) to imply a continuous process, whereas the original suggests a single follow-up point."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/mood.json",
+          "lang": "en",
+          "key": "/start/h2",
+          "ru": "Ежедневная оценка самочувствия",
+          "oldText": "Daily Well-Being Check-In",
+          "newText": "Daily well-being check-in",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A correctly follows the 'sentence case' rule for UI elements as specified in the instructions, whereas Translation B uses Title Case, which is incorrect for this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a UI label"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "The original is a title/header. According to the style guide, titles can use Title Case, and 'Daily Well-Being Check-In' looks more professional and polished for a header than sentence case.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for a title, which is less common for main headers in this context compared to Title Case."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/mood.json",
+          "lang": "en",
+          "key": "/finishScore/texts",
+          "ru": "Этот показатель отражает, насколько продуктивно вы поработали в приложении — он учитывает несколько важных параметров.\n\nЧем выше итоговый результат, тем увереннее и быстрее вы продвигаетесь к улучшению своего психологического самочувствия.",
+          "oldText": "This metric reflects how productively you used the app — it takes several key factors into account.\n\nThe higher your final score, the more confidently and quickly you move toward better psychological well-being.",
+          "newText": "This score reflects how productively you’ve worked in the app — it takes several important parameters into account.\n\nThe higher your score, the more confidently and quickly you’re moving toward improving your mental well-being.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A follows the project's terminology guidelines perfectly, using 'mental well-being' instead of the more academic 'psychological well-being', and uses natural present perfect for the user's progress. Translation B uses 'metric' and 'factors', which sound slightly more clinical/dry, and fails to use the preferred term for well-being.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "used 'psychological well-being' instead of the required 'mental well-being'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "the phrasing 'how productively you used the app' is slightly less natural than 'how productively you've worked in the app' in this context"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A is more idiomatic and follows the project's terminology perfectly. Translation B uses 'parameters' (a bit too technical/clunky) and 'worked in the app' (a literal calque of the Russian 'поработали'), whereas 'used the app' is much more natural for a native speaker.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'worked in the app' is a literal translation of the Russian verb; 'used the app' is more natural."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'parameters' sounds slightly more technical/robotic than 'factors' in this context."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'mental well-being' instead of the preferred 'psychological well-being' for this specific context, though both are acceptable, A is more precise to the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/mood.json",
+          "lang": "en",
+          "key": "/finish/h2",
+          "ru": "Повторная оценка самочувствия",
+          "oldText": "Reassess Your Well-Being",
+          "newText": "Re-evaluate your well-being",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation A follows the required sentence case for UI elements, whereas Translation B incorrectly uses Title Case. Translation A also feels more natural for a recurring action in a mental health app.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of the required sentence case for UI strings"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation A follows the sentence case rule for UI elements and uses a more natural, punchy verb for a re-assessment action. Translation B uses a hyphenated verb which is slightly more formal/clunky and fails the sentence case requirement.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case; 'Re-evaluate' is slightly more academic than 'Reassess' in a UX context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/mood.json",
+          "lang": "en",
+          "key": "/finishScore/h2",
+          "ru": "Эффективность сегодня",
+          "oldText": "Today’s effectiveness",
+          "newText": "Today’s progress",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 75
+              },
+              "reason": "Translation A is a faithful and accurate rendering of the original. Translation B changes the meaning from 'effectiveness' to 'progress', which is a semantic shift.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The word 'progress' does not mean 'effectiveness'; it changes the core meaning of the phrase."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 60,
+                "new": 95
+              },
+              "reason": "In a mental health or productivity context, 'progress' is the natural way to describe how well someone is doing or achieving their goals. 'Effectiveness' sounds overly clinical, robotic, and is a literal translation (calque) of the Russian 'эффективность'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Uses a literal translation of 'эффективность' which sounds unnatural in a UX/app context; 'progress' or 'productivity' would be better."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

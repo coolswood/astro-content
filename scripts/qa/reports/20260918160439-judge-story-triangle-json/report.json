@@ -1,0 +1,442 @@
+{
+  "file": "story/triangle.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено энергично и точно."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, соблюден тон и терминология."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Терминология CBT соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Метафора передана хорошо."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Тон дружелюбный, как в оригинале."
+              },
+              {
+                "path": "/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Соблюдена терминология и ритм."
+              },
+              {
+                "path": "/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Адаптация под 'you' выполнена корректно."
+              },
+              {
+                "path": "/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Адаптация под 'you' выполнена корректно."
+              },
+              {
+                "path": "/screen_1/texts/16",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Гендерный диссонанс: в RU 'неудачница' (жен. род), в EN 'they' (нейтрально)."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/18",
+                "verdict": "ok",
+                "note": "Терминология (unhelpful) соблюдена."
+              },
+              {
+                "path": "/screen_2/texts/19",
+                "verdict": "ok",
+                "note": "Идиоматично."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, звучит естественно."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/14",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/",
+                "verdict": "issue",
+                "note": "Пропущен индекс в ключе (вероятно, /screen_4/texts/1), но в самом тексте есть ошибка: 'негативные мысли' переведены как 'unhelpful', что верно по глоссарию, но 'заменять более адаптивными' требует дополнения 'them' для грамматической полноты."
+              },
+              {
+                "path": "/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_2/texts/1",
+                "fragment": "They look happy, and I’m a failure.",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Потеря гендерной окраски",
+                "why": "В оригинале используется женский род («неудачница»), что важно для контекста примера (бывший партнёр). Использование 'they' делает персонажа гендерно-нейтральным, что технически допустимо в английском, но в данном конкретном примере теряется точность передачи образа, заданного в RU."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/screen_4/texts/",
+                "fragment": "replace them with more adaptive ones",
+                "type": "style",
+                "severity": "minor",
+                "problem": "В оригинале 'заменять более адаптивными' (пропущено дополнение), в английском 'replace them with more adaptive ones' — грамматически верно, но в контексте 'replace [X] with [Y]' в английском часто лучше звучит 'replace [X] with adaptive thoughts', хотя текущий вариант допустим. Однако, основная проблема здесь в самом ключе: он обрывается на 'texts/'.",
+                "why": "Техническая ошибка в ключе (missing index) и легкая стилистическая шероховатость."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The loss of gender specificity ('неудачница' vs 'failure') is a valid point for character consistency in a narrative example, though minor."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "rejected",
+                "note": "The stylistic suggestion is subjective and the current translation is perfectly natural. The 'missing index' in the path is a metadata error in the issue report, not a translation error."
+              }
+            ],
+            "notes": "The translation is of high quality and follows natural English patterns. The identified issues are either minor nuances or technical errors in the reporting itself.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/screen_2/texts/1",
+                "current": "Thought: “They look happy, and I’m a failure.”",
+                "proposed": "Thought: “They look happy, and I’m a failure.”",
+                "alternatives": [
+                  "Thought: “He looks happy, and I’m a failure.”",
+                  "Thought: “She looks happy, and I’m a failure.”"
+                ],
+                "rationale": "Замечание о потере гендерной окраски в 'неудачница' справедливо, однако в английском языке при использовании 'They' (в значении 'бывший партнер') невозможно однозначно вернуть женский род, не зная пола партнера. Поскольку в оригинале 'неудачница' относится к самой героине, а не к партнеру, текущий перевод 'I'm a failure' (я — неудачник/ница) уже является гендерно-нейтральным и точным по смыслу. Если же под 'неудачницей' подразумевался пол героини, то в английском 'I'm a failure' подходит идеально. Менять 'They' на 'He/She' нельзя, так как в оригинале пол партнера не указан. Оставляем текущий вариант как наиболее безопасный и естественный."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ (unhelpful, adaptive, cognitive behavioral therapy), выдержан теплый и поддерживающий тон, а грамматика и пунктуация соответствуют стандартам US English. Замечание по гендеру отклонено, так как текущий вариант 'I'm a failure' корректно передает суть, не создавая лишних сложностей с неопределенным полом партнера."
+            },
+            "timings": {
+              "issues": 45944,
+              "deliberate": 3882,
+              "recommend": 9539
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/screen_2/texts/1",
+              "reason": "правка уже применена"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

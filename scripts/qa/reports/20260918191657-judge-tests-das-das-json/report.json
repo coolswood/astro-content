@@ -1,0 +1,2134 @@
+{
+  "file": "tests/das/das.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 7,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "issue",
+                "note": "Mistranslation: 'сдавать позиции' переведено как 'lose my way' (потерять путь), что меняет смысл с потери контроля/успеха на потерю направления"
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "issue",
+                "note": "Mistranslation: 'расстройств' (disorders) переведено как 'distress' (страдание/дистресс). В контексте КПТ это разные вещи"
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология в норме"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла, термины корректны"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Научный термин переведен верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, Маслоу корректно"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, 'all-or-nothing' — канонично"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Термин 'locus of control' переведен верно"
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/27/fact",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/28/fact",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/30/fact",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/31/fact",
+                "verdict": "issue",
+                "note": "Слишком тяжеловесная конструкция 'addressing disorders' без уточнения"
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/33/fact",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/steps_description/34/fact",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/options/0",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/options/1",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/options/2",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/options/3",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/options/4",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Терминология соблюдена (unhelpful beliefs)"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/3",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/4",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/5",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/6",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/7",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/8",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/9",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/description/text/10",
+                "verdict": "ok",
+                "note": "Перевод корректный"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/19",
+                "fragment": "I will lose my way",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла",
+                "why": "Оригинал 'сдавать позиции' означает потерю прогресса, силы или контроля над ситуацией. 'Lose my way' означает 'сбиться с пути/потерять ориентиры', что является другой метафорой."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps/31",
+                "fragment": "get rid of distress",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена термина",
+                "why": "В оригинале 'расстройств' (disorders), что в контексте психологии имеет конкретное значение. 'Distress' — это эмоциональное состояние (страдание). Это критично для точности психообразовательного контента."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/steps_description/31/fact",
+                "fragment": "addressing disorders",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком общая и медицински-сухая формулировка",
+                "why": "Фраза 'addressing disorders' (работа с расстройствами) звучит слишком клинически и тяжело для статьи о самопомощи. В контексте 'управления стрессом' лучше использовать более мягкое 'managing mental health challenges' или 'dealing with emotional difficulties'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The metaphor 'lose my way' (getting lost) is indeed different from 'сдавать позиции' (losing ground/momentum)."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical terminology error: 'disorders' (clinical) vs 'distress' (emotional state). This affects the scientific accuracy of the text."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "merged",
+                "mergedInto": "c1-I2",
+                "rank": 3,
+                "note": "Both issues concern the terminology of 'disorders' in the same section; the stylistic concern is secondary to the semantic inaccuracy."
+              }
+            ],
+            "notes": "The translation suffers from significant terminology inaccuracies in psychological contexts, specifically regarding clinical terms vs. emotional states, which undermines the authority of the psychoeducational content.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/steps/19",
+                "current": "I feel that without high goals, I will lose my way",
+                "proposed": "I feel that without high goals, I will lose my momentum",
+                "alternatives": [
+                  "I feel that without high goals, I will lose ground",
+                  "I feel that without high goals, I will start to decline"
+                ],
+                "rationale": "Оригинал 'сдавать позиции' означает потерю прогресса или силы. 'Lose my way' — это потеря ориентиров (сбиться с пути), что меняет смысл. 'Lose my momentum' или 'lose ground' лучше передают идею потери темпа/устойчивости."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 1,
+                "path": "/steps/31",
+                "current": "There’s no point in trying to get rid of distress, as it’s an inevitable part of life",
+                "proposed": "There’s no point in trying to get rid of disorders, as they are an inevitable part of life",
+                "alternatives": [
+                  "There’s no point in trying to manage mental health challenges, as they are an inevitable part of life"
+                ],
+                "rationale": "В оригинале стоит 'расстройств' (disorders). 'Distress' — это страдание, а не клиническое состояние. Хотя 'disorders' звучит тяжело, для точности психообразовательного контента (CBT) важно сохранять терминологическую точность. Если мы хотим смягчить, лучше использовать 'mental health challenges', но 'distress' — это явная ошибка подмены понятия."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружены критические ошибки в терминологии, которые меняют психологический смысл утверждений (подмена 'расстройств' на 'страдание' и 'сдавать позиции' на 'сбиться с пути'). Необходимо исправить эти моменты, чтобы сохранить научную точность контента, прежде чем публиковать статью."
+            },
+            "timings": {
+              "issues": 69651,
+              "deliberate": 6452,
+              "recommend": 11714
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I2",
+              "path": "/steps/31",
+              "from": "There’s no point in trying to get rid of distress, as it’s an inevitable part of life",
+              "to": "There’s no point in trying to get rid of disorders, as they are an inevitable part of life"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/steps/19",
+              "from": "I feel that without high goals, I will lose my way",
+              "to": "I feel that without high goals, I will lose my momentum"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено точно и естественно"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "issue",
+                "note": "Mistranslation: 'сдавать позиции' переведено как 'lose momentum', что в контексте целей звучит как потеря темпа, а не потеря устойчивости/статуса"
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "issue",
+                "note": "Omission: потеряно слово 'повседневной' (everyday/daily)"
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "issue",
+                "note": "Addition: добавлено слово 'same' (the same areas), которого нет в оригинале"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология в порядке"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла и терминов"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Научный термин переведен верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод терминов (self-actualization) верный"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод терминологии (all-or-nothing) верный"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Термин (external locus of control) переведен верно"
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Естественно и точно"
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Терминология (codependency) верна"
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/27/fact",
+                "verdict": "ok",
+                "note": "Идиома spread too thin использована уместно"
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/28/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/30/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/31/fact",
+                "verdict": "issue",
+                "note": "Слишком тяжеловесная конструкция 'addressing disorders'"
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/33/fact",
+                "verdict": "ok",
+                "note": "Термин locus of control переведен верно"
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/steps_description/34/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/options/0",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/options/1",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/options/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/options/3",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/options/4",
+                "verdict": "ok",
+                "note": "Адаптация под шкалу Лайкерта"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Терминология (unhelpful beliefs) соблюдена"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/9",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/10",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/19",
+                "fragment": "I will lose my momentum",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Неверная передача идиоматического смысла",
+                "why": "В оригинале «сдавать позиции» в контексте высоких целей означает потерю устойчивости, достижений или статуса. 'Lose momentum' — это потеря темпа или инерции движения, что не совсем точно передает экзистенциальный страх потери достигнутого уровня."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps/31",
+                "fragment": "an inevitable part of life",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "Пропущено уточнение 'повседневной'",
+                "why": "В оригинале указано «повседневной жизни», что подчеркивает рутинность процесса. В английском стоит просто 'life'."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/steps_description/0/fact",
+                "fragment": "activates the same areas of the brain",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено слово 'same'",
+                "why": "В русском тексте нет указания на то, что это 'те же самые' зоны, которые активируются чем-то еще. Это небольшое смысловое усиление, которого нет в оригинале."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/steps_description/31/fact",
+                "fragment": "addressing disorders",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Канцелярит и неопределенность",
+                "why": "Фраза 'addressing disorders' звучит слишком медицински и размыто в контексте статьи о качестве жизни. В оригинале речь о 'работе над расстройствами', что в английском лучше передать через 'managing' или 'dealing with', чтобы не создавать впечатление, что пользователь должен сам лечить клинические диагнозы."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translation 'lose my momentum' shifts the meaning from losing ground/status to losing speed/pace."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "note": "Omission of 'everyday' (повседневной) slightly changes the nuance of the statement."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "rejected",
+                "note": "This is a natural stylistic addition in English to ensure the sentence flows logically; 'the same' is implied by the context of comparison."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The term 'addressing disorders' is indeed overly clinical and sounds like a medical directive rather than a lifestyle suggestion."
+              }
+            ],
+            "notes": "The translation is generally high quality, but there are minor issues with idiomatic precision and tone in the descriptive sections.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/19",
+                "current": "I feel that without high goals, I will lose my momentum",
+                "proposed": "I feel that without high goals, I will lose my footing",
+                "alternatives": [
+                  "I will lose my ground",
+                  "I will lose my standing"
+                ],
+                "rationale": "В контексте экзистенциального страха 'сдавать позиции' лучше всего передается идиомой 'lose my footing' (потерять устойчивость) или 'lose my ground'. 'Lose momentum' относится к скорости процесса, а не к статусу или устойчивости положения."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/steps/31",
+                "current": "There’s no point in trying to get rid of disorders, as they are an inevitable part of life",
+                "proposed": "There’s no point in trying to get rid of disorders, as they are an inevitable part of everyday life",
+                "alternatives": [],
+                "rationale": "Необходимо вернуть уточнение 'everyday', так как в оригинале акцент сделан именно на повседневности (рутине), а не на жизни в широком смысле."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 3,
+                "path": "/steps_description/31/fact",
+                "current": "Without working on stress management and addressing disorders, your quality of life can significantly decline, including worsening social connections and decreased productivity.",
+                "proposed": "Without working on stress management and managing your symptoms, your quality of life can significantly decline, including worsening social connections and decreased productivity.",
+                "alternatives": [
+                  "dealing with these issues",
+                  "managing these challenges"
+                ],
+                "rationale": "'Addressing disorders' звучит слишком клинически и официально. В контексте психообразования для широкой аудитории лучше использовать 'managing symptoms' или 'managing these issues', чтобы избежать медицинского директивного тона."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, с хорошим пониманием тона и терминологии. Основные риски связаны с мелкими смысловыми нюансами в идиомах и излишне клиническим тоном в некоторых местах. После внесения правок по идиоме 'lose my footing' и смягчению 'addressing disorders' текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 67624,
+              "deliberate": 6185,
+              "recommend": 13051
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/19",
+              "from": "I feel that without high goals, I will lose my momentum",
+              "to": "I feel that without high goals, I will lose my footing"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps/31",
+              "from": "There’s no point in trying to get rid of disorders, as they are an inevitable part of life",
+              "to": "There’s no point in trying to get rid of disorders, as they are an inevitable part of everyday life"
+            },
+            {
+              "id": "c3-I1",
+              "path": "/steps_description/31/fact",
+              "from": "Without working on stress management and addressing disorders, your quality of life can significantly decline, including worsening social connections and decreased productivity.",
+              "to": "Without working on stress management and managing your symptoms, your quality of life can significantly decline, including worsening social connections and decreased productivity."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/26",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/27",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/28",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/29",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/30",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/31",
+                "verdict": "issue",
+                "note": "mistranslation: 'расстройства' в контексте КПТ — это 'distress', а не 'disorders' (клинические диагнозы)"
+              },
+              {
+                "path": "/steps/32",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/33",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/34",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология верная"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "issue",
+                "note": "addition: добавлено слово 'same', которого нет в оригинале"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный, научный термин переведен верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный, 'validation' — отличная адаптация 'признания'"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, 'all-or-nothing' — каноничный термин"
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/19/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термин 'locus of control' соблюден"
+              },
+              {
+                "path": "/steps_description/20/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/21/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология в порядке."
+              },
+              {
+                "path": "/steps_description/24/fact",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, смысл сохранен."
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термины (codependency) верны."
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Естественный английский текст."
+              },
+              {
+                "path": "/steps_description/26/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/27/text",
+                "verdict": "ok",
+                "note": "Перевод точный, роль 'rescuer' передана верно."
+              },
+              {
+                "path": "/steps_description/27/fact",
+                "verdict": "ok",
+                "note": "Идиома 'spread too thin' использована уместно."
+              },
+              {
+                "path": "/steps_description/28/text",
+                "verdict": "ok",
+                "note": "Смысл передан полностью."
+              },
+              {
+                "path": "/steps_description/28/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/29/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/30/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/30/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/31/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/31/fact",
+                "verdict": "issue",
+                "note": "В оригинале 'расстройства' (множественное число), в переводе 'managing your symptoms' (управление симптомами) — это смысловая подмена."
+              },
+              {
+                "path": "/steps_description/32/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/33/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/33/fact",
+                "verdict": "ok",
+                "note": "Термин 'internal locus of control' использован верно."
+              },
+              {
+                "path": "/steps_description/34/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/34/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/options/0",
+                "verdict": "ok",
+                "note": "Адаптация шкалы Лайкерта (Strongly agree) верна."
+              },
+              {
+                "path": "/options/1",
+                "verdict": "ok",
+                "note": "Адаптация шкалы Лайкерта (Agree) верна."
+              },
+              {
+                "path": "/options/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/options/3",
+                "verdict": "ok",
+                "note": "Адаптация шкалы Лайкерта (Disagree) верна."
+              },
+              {
+                "path": "/options/4",
+                "verdict": "ok",
+                "note": "Адаптация шкалы Лайкерта (Strongly disagree) верна."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Терминология (unhelpful beliefs) соблюдена."
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps/31",
+                "fragment": "get rid of disorders",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "использование 'disorders' вместо 'distress'",
+                "why": "В оригинале 'расстройства' в данном контексте (как часть повседневной жизни) означает эмоциональный дискомфорт/страдания (distress). 'Disorders' в английском языке — это клинические диагнозы (например, anxiety disorder), что меняет смысл на медицинский, а не психологический."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps_description/0/fact",
+                "fragment": "activates the same areas",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "добавлено слово 'same'",
+                "why": "В оригинале 'активирует зоны мозга', в переводе 'активирует те же зоны мозга'. Это не критично, но является избыточным добавлением."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/steps_description/31/fact",
+                "fragment": "managing your symptoms",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена понятия: 'расстройства' (disorders) заменены на 'симптомы' (symptoms)",
+                "why": "В оригинале речь идет о работе с расстройствами (disorders), что является более широким и клинически точным понятием. 'Symptoms' — это лишь проявления, а не сами состояния."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical semantic error: 'disorders' implies clinical diagnoses, whereas the Russian 'расстройства' in this context refers to emotional distress/unhappiness."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translator changed 'disorders' to 'symptoms', which is a loss of scope and accuracy compared to the original."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "rejected",
+                "note": "This is a natural stylistic addition to ensure the sentence flows logically in English; it does not distort the meaning."
+              }
+            ],
+            "notes": "The translation suffers from significant terminological instability regarding the word 'расстройства', oscillating between clinical 'disorders' and vague 'symptoms', which creates a mismatch with the source intent.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps/31",
+                "current": "There’s no point in trying to get rid of disorders, as they are an inevitable part of everyday life",
+                "proposed": "There’s no point in trying to get rid of distress, as it is an inevitable part of everyday life",
+                "alternatives": [
+                  "There’s no point in trying to get rid of emotional distress, as it is an inevitable part of everyday life"
+                ],
+                "rationale": "В данном контексте 'расстройства' — это не клинические диагнозы (disorders), а эмоциональный дискомфорт. Использование 'disorders' звучит слишком медицински и неверно передает смысл 'повседневных переживаний'. 'Distress' — наиболее точный эквивалент для описания эмоционального состояния."
+              },
+              {
+                "id": "c3-I1",
+                "priority": 2,
+                "path": "/steps_description/31/fact",
+                "current": "Without working on stress management and managing your symptoms, your quality of life can significantly decline, including worsening social connections and decreased productivity.",
+                "proposed": "Without working on stress management and managing your distress, your quality of life can significantly decline, including worsening social connections and decreased productivity.",
+                "alternatives": [
+                  "Without working on stress management and addressing these difficulties, your quality of life can significantly decline, including worsening social connections and decreased productivity."
+                ],
+                "rationale": "Переводчик заменил 'расстройства' на 'symptoms' (симптомы), что сужает смысл. Однако, учитывая контекст статьи (где 'расстройства' — это не клинические диагнозы, а эмоциональные состояния), использование 'distress' или 'difficulties' будет точнее и ближе к логике предыдущего исправления."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая ошибка в понимании терминологии: слово 'расстройства' переведено как 'disorders' (клинические диагнозы), хотя по смыслу оригинала речь идет об эмоциональном дискомфорте (distress). Это создает ложное медицинское впечатление. Необходимо исправить оба упоминания, чтобы привести текст к единому и корректному психологическому стандарту."
+            },
+            "timings": {
+              "issues": 68289,
+              "deliberate": 6196,
+              "recommend": 12532
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/steps/31",
+              "from": "There’s no point in trying to get rid of disorders, as they are an inevitable part of everyday life",
+              "to": "There’s no point in trying to get rid of distress, as it is an inevitable part of everyday life"
+            },
+            {
+              "id": "c3-I1",
+              "path": "/steps_description/31/fact",
+              "from": "Without working on stress management and managing your symptoms, your quality of life can significantly decline, including worsening social connections and decreased productivity.",
+              "to": "Without working on stress management and managing your distress, your quality of life can significantly decline, including worsening social connections and decreased productivity."
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

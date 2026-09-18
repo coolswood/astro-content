@@ -1,0 +1,917 @@
+{
+  "file": "story/distortions/approval.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 7,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено хорошо, передает эмоциональный окрас"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл сохранен, терминология (core beliefs) верна"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественно звучит"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация разговорных фраз"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Идиома rollercoaster уместна"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно"
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "issue",
+                "note": "Стилистическая калька: 'feel good from' звучит неестественно"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Метафора передана верно"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Тег instagram в ru/en — норма"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "issue",
+                "note": "Стиль: использование 'we will look at' (мы посмотрим на) вместо более естественного для статьи/вступления перехода, а также 'stable' вместо более идиоматичного 'resilient' или 'strong' в контексте самооценки."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_1/texts/9",
+                "fragment": "Did you actually feel good from that “praise”?",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное сочетание глагола и предлога",
+                "weight": "В английском не говорят 'feel good from something'. Правильнее: 'Did you actually get any pleasure from that praise?' или 'Did that praise actually make you feel good?'"
+              },
+              {
+                "id": "c2-I1",
+                "path": "/screen_3/texts/11",
+                "fragment": "Next, we will look at specific practices",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Избыточная формальность и 'мыканье'",
+                "why": "Фраза 'we will look at' звучит как начало лекции. В англоязычных статьях по ментал-хелс лучше использовать более прямой переход или безличную конструкцию, чтобы не создавать дистанцию 'преподаватель — ученик'."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/screen_3/texts/11",
+                "fragment": "stable self-esteem",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Не совсем идиоматичный выбор прилагательного",
+                "why": "В контексте психологии и устойчивости личности чаще говорят 'resilient self-esteem' или 'strong self-esteem'. 'Stable' звучит технически, как характеристика химического соединения или платформы."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The phrasing 'feel good from' is indeed unidiomatic; 'get pleasure from' or 'feel good because of' would be more natural."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The tone is slightly too academic/lecturing for a mental health article; a more direct approach is preferred."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 4,
+                "related": [
+                  "c2-I1"
+                ],
+                "note": "Both issues relate to the same sentence. While 'stable' is understandable, 'resilient' is the standard psychological term for this context."
+              }
+            ],
+            "notes": "The translation is accurate and high-quality, but suffers from minor stylistic stiffness and slightly unidiomatic collocations in a few places.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/screen_1/texts/9",
+                "current": "Did you actually feel good from that “praise”?",
+                "proposed": "Did that “praise” actually make you feel good?",
+                "alternatives": [
+                  "Did you actually get any pleasure from that “praise”?",
+                  "Did you actually feel any satisfaction from that “praise”?"
+                ],
+                "rationale": "Вариант 'feel good from' — грамматически слабая калька. Предложенный вариант 'make you feel good' звучит максимально естественно и сохраняет разговорный, поддерживающий тон статьи, не уходя в излишнюю формальность 'get pleasure'."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/screen_3/texts/11",
+                "current": "Next, we will look at specific practices to help you apply these ideas and build stable self-esteem and self-respect.",
+                "proposed": "Next, here are some specific practices to help you apply these ideas and build resilient self-esteem and self-respect.",
+                "alternatives": [
+                  "Below are specific practices to help you apply these ideas and build strong self-esteem and self-respect.",
+                  "Next, we'll explore specific practices to help you apply these ideas and build resilient self-esteem and self-respect."
+                ],
+                "rationale": "Я объединил две правки в одну. 'Next, here are...' убирает дистанцию 'лектор-ученик' (избавляясь от 'we will look at'), а 'resilient' заменяет техническое 'stable' на профессиональный психологический термин, соответствующий духу статьи."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 3,
+                "path": "/screen_3/texts/11",
+                "current": "stable self-esteem",
+                "proposed": "resilient self-esteem",
+                "alternatives": [
+                  "strong self-esteem",
+                  "healthy self-esteem"
+                ],
+                "rationale": "В контексте психологии 'resilient' (жизнестойкий/устойчивый) — это канонический термин, в то время как 'stable' звучит слишком механически."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, смысл передан точно, терминология (core beliefs, self-validation) соблюдена. Основные замечания касаются стилистики: устранение легкой 'лекторской' дистанции и замена неидиоматичных сочетаний (feel good from) на более естественные для носителя. После внесения правок текст будет звучать как качественный контент от эксперта-друга."
+            },
+            "timings": {
+              "issues": 34701,
+              "deliberate": 4312,
+              "recommend": 12787
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/screen_3/texts/11",
+              "from": "Next, we will look at specific practices to help you apply these ideas and build stable self-esteem and self-respect.",
+              "to": "Next, here are some specific practices to help you apply these ideas and build resilient self-esteem and self-respect."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/screen_1/texts/9",
+              "reason": "цитата судьи не похожа на лист (сходство 21%)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено хорошо, передает эмоциональный окрас"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология (core beliefs) соблюдена"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественно для носителя"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация разговорных конструкций"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Идиома rollercoaster использована уместно"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Смысл сохранен"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Цитата переведена корректно"
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Сложная конструкция передана верно"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Метафора с дозой передана корректно"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный, идиоматичный, соответствует тону и терминологии. 'Resilient' хорошо передает 'устойчивую' в контексте самооценки."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/2",
+                "current": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved of, it’s terrible.”",
+                "proposed": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved, it’s terrible.”",
+                "alternatives": [
+                  "If I don't get approval, it's terrible."
+                ],
+                "rationale": "Удаление 'of' делает фразу более естественной. В английском 'being approved' (в значении получения одобрения) звучит чище, чем тяжеловесное 'being approved of'."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_1/texts/9",
+                "current": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that check is actually an act of self-approval.",
+                "proposed": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that is an act of self-approval.",
+                "alternatives": [],
+                "rationale": "Убираем лишнее 'check is actually', чтобы избежать повтора слова 'check' и сделать ритм предложения более уверенным и менее перегруженным."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/screen_3/texts/4",
+                "current": "When you worry that someone doesn’t like you, you overvalue their judgment and essentially surrender your right to your own perspective.",
+                "proposed": "When you worry that someone doesn’t like you, you overvalue their judgment and essentially surrender your right to your own judgment.",
+                "alternatives": [
+                  "surrender your own perspective"
+                ],
+                "rationale": "В контексте КПТ и статьи, где обсуждается 'суждение' (judgment/opinion), использование 'judgment' в конце звучит более терминологически точно и симметрично по отношению к 'overvalue their judgment'."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден теплый тон, правильно использована терминология (core beliefs, self-esteem) и нет кальки с русского. Основные правки касаются лишь легкой стилистической шлифовки для устранения избыточности и улучшения ритма в сложных предложениях."
+            },
+            "timings": {
+              "issues": 21852,
+              "deliberate": 946,
+              "recommend": 12536
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/2",
+              "from": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved of, it’s terrible.”",
+              "to": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved, it’s terrible.”"
+            },
+            {
+              "id": "I2",
+              "path": "/screen_1/texts/9",
+              "from": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that check is actually an act of self-approval.",
+              "to": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that is an act of self-approval."
+            },
+            {
+              "id": "I3",
+              "path": "/screen_3/texts/4",
+              "from": "When you worry that someone doesn’t like you, you overvalue their judgment and essentially surrender your right to your own perspective.",
+              "to": "When you worry that someone doesn’t like you, you overvalue their judgment and essentially surrender your right to your own judgment."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Передано хорошо, идиоматично"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл и тон сохранены"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Передано эмоционально"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Логика сохранена"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Цитата переведена верно"
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл на месте"
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Хорошо"
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Передано глубоко"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Метафора передана верно"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Тег instagram без изменений (норма)"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Хорошая адаптация риторических вопросов"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Хорошо"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Стиль хороший"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Норма"
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный, идиоматичный, терминология (self-esteem) и тон соответствуют заданным. Калька отсутствует."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_1/texts/2",
+                "current": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved, it’s terrible.”",
+                "proposed": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved, it’s awful.”",
+                "alternatives": [
+                  "it's unbearable",
+                  "it's a disaster"
+                ],
+                "rationale": "В контексте эмоциональных качелей и разговорного тона 'awful' звучит более естественно и эмоционально, чем 'terrible', которое может казаться слишком сухим или формальным."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_1/texts/9",
+                "current": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that is an act of self-approval.",
+                "proposed": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that is an act of self-validation.",
+                "alternatives": [],
+                "rationale": "В тексте выше (description) и в контексте психологии (CBT) для процесса подтверждения собственной ценности используется термин 'self-validation'. 'Self-approval' — это скорее 'самоодобрение' в бытовом смысле, тогда как 'self-validation' точнее передает смысл 'акта подтверждения своей значимости' в рамках статьи."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/screen_3/texts/4",
+                "current": "When you worry that someone doesn’t like you, you overvalue their judgment and essentially surrender your right to your own judgment.",
+                "proposed": "When you worry that someone doesn’t like you, you overvalue their judgment and essentially surrender your right to your own perspective.",
+                "alternatives": [
+                  "your own insight",
+                  "your own view"
+                ],
+                "rationale": "Избегаем тавтологии 'judgment ... judgment'. Замена второго слова на 'perspective' сохраняет смысл и делает предложение более ритмичным и профессиональным."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/screen_3/texts/6",
+                "current": "The reasons for depending on approval vary: bullying at school, the pressure of family expectations, the belief that “praise is good and its absence means guilt,” or painful relationship experiences.",
+                "proposed": "The reasons for depending on approval vary: bullying at school, the pressure of family expectations, the belief that “praise is good and its absence means I'm guilty,” or painful relationship experiences.",
+                "alternatives": [],
+                "rationale": "В оригинале 'её отсутствие — вина' подразумевает чувство вины человека. 'Its absence means guilt' звучит так, будто отсутствие похвалы само по себе является виной (абстрактно). 'Means I'm guilty' или 'means feeling guilty' точнее передает психологический смысл."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне: соблюден теплый тон, терминология (core beliefs, self-esteem) использована верно. Основные правки касаются устранения лексических повторов (judgment/judgment), уточнения психологических нюансов (validation vs approval) и улучшения естественности разговорных оборотов. Статья готова к публикации после внесения этих точечных правок."
+            },
+            "timings": {
+              "issues": 20314,
+              "deliberate": 895,
+              "recommend": 17928
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/screen_1/texts/2",
+              "from": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved, it’s terrible.”",
+              "to": "You might have caught yourself thinking: “If they didn’t praise me, something is wrong with me,” or “If I’m not being approved, it’s awful.”"
+            },
+            {
+              "id": "I2",
+              "path": "/screen_1/texts/9",
+              "from": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that is an act of self-approval.",
+              "to": "Did you actually feel good from that “praise”? Likely not. This is because, before your mood can improve, you instinctively check the external evaluation for authenticity—and that is an act of self-validation."
+            },
+            {
+              "id": "I4",
+              "path": "/screen_3/texts/6",
+              "from": "The reasons for depending on approval vary: bullying at school, the pressure of family expectations, the belief that “praise is good and its absence means guilt,” or painful relationship experiences.",
+              "to": "The reasons for depending on approval vary: bullying at school, the pressure of family expectations, the belief that “praise is good and its absence means I'm guilty,” or painful relationship experiences."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I3",
+              "path": "/screen_3/texts/4",
+              "reason": "осцилляция: это значение у листа уже было"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

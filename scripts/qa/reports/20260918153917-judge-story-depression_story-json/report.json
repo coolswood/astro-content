@@ -1,0 +1,368 @@
+{
+  "file": "story/depression_story.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено адекватно, передает смысл"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Терминология соблюдена, тон верный"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Соблюден вежливый тон психолога"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Терминология соблюдена (helpful)"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/title",
+                "current": "Alice’s Story: A Journey Through Depression",
+                "proposed": "Alice’s Story: Overcoming Depression",
+                "alternatives": [
+                  "Alice’s Story: A Path to Overcoming Depression"
+                ],
+                "rationale": "Оригинал «путь к преодолению» подразумевает движение к цели, а не просто путешествие сквозь состояние. Вариант 'A Journey Through Depression' звучит так, будто она просто проживает депрессию, а не борется с ней. 'Overcoming Depression' — более сильный и точный эквивалент."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_1/texts/4",
+                "current": "In school, Alice was an honor student, largely out of a desire to earn her mother’s approval, as good grades were her mother’s standard. Later, she graduated university with honors in marketing. Now 23, she is single and has no children. While searching for work and stability, she is seeing a psychologist for depression.",
+                "proposed": "In school, Alice was an honor student, largely out of a desire to earn her mother’s approval, for whom good grades were the norm. Later, she graduated university with honors in marketing. Now 23, she is single and has no children. Seeking work and stability, she is seeing a psychologist for depression.",
+                "alternatives": [],
+                "rationale": "В оригинале «для которой хорошие оценки были естественной нормой» — 'the norm' звучит естественнее, чем 'standard'. Также 'Seeking work' лучше передает динамику 'Ища работу', чем 'While searching'."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/screen_2/texts/6",
+                "current": "That I won’t be able to perform tasks well, and that making mistakes is very bad (intermediate belief).",
+                "proposed": "That I won’t be able to perform tasks well, and that making mistakes is very unhelpful (intermediate belief).",
+                "alternatives": [
+                  "That I won’t be able to perform tasks well, and that making mistakes is wrong (intermediate belief)."
+                ],
+                "rationale": "Согласно правилам проекта, мы избегаем морализаторских оценок 'good/bad' в контексте КПТ. 'Unhelpful' — каноничный термин для описания неадаптивных мыслей/убеждений."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/screen_3/texts/3",
+                "current": "Step by step, these changes will eventually help her transform her core beliefs, replacing them with more realistic and helpful ones.",
+                "proposed": "Step by step, these changes will help her transform her core beliefs, replacing them with more realistic and adaptive ones.",
+                "alternatives": [
+                  "Step by step, these changes will help her transform her core beliefs, replacing them with more realistic and helpful ones."
+                ],
+                "rationale": "В терминологии проекта 'adaptive' является прямой парой к 'unhelpful' (в контексте убеждений). Хотя 'helpful' допустимо, 'adaptive' звучит более профессионально и соответствует глоссарию для 'конструктивных убеждений'."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, он звучит естественно и соблюдает тон 'понимающего эксперта'. Основные правки касаются терминологической точности (замена 'bad' на 'unhelpful' согласно правилам КПТ) и более точной передачи смысла заголовка. После внесения этих правок текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 13920,
+              "deliberate": 822,
+              "recommend": 17362
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/title",
+              "from": "Alice’s Story: A Journey Through Depression",
+              "to": "Alice’s Story: Overcoming Depression"
+            },
+            {
+              "id": "I2",
+              "path": "/screen_1/texts/4",
+              "from": "In school, Alice was an honor student, largely out of a desire to earn her mother’s approval, as good grades were her mother’s standard. Later, she graduated university with honors in marketing. Now 23, she is single and has no children. While searching for work and stability, she is seeing a psychologist for depression.",
+              "to": "In school, Alice was an honor student, largely out of a desire to earn her mother’s approval, for whom good grades were the norm. Later, she graduated university with honors in marketing. Now 23, she is single and has no children. Seeking work and stability, she is seeing a psychologist for depression."
+            },
+            {
+              "id": "I4",
+              "path": "/screen_3/texts/3",
+              "from": "Step by step, these changes will eventually help her transform her core beliefs, replacing them with more realistic and helpful ones.",
+              "to": "Step by step, these changes will help her transform her core beliefs, replacing them with more realistic and adaptive ones."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I3",
+              "path": "/screen_2/texts/6",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: screen_2/texts/6)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Перевод точный, заголовок звучит естественно."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология (CBT, automatic thoughts, intermediate/core beliefs) соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, термины на месте."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Передано верно, стиль соответствует."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный окрас сохранен."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Хороший перевод, 'honor student' и 'graduated with honors' — правильные эквиваленты."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами в ru/en — норма."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Соблюден тон 'понимающего эксперта', вежливость 'please' в диалоге психолога допустима."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Термин 'automatic thought' использован верно."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Термин 'intermediate belief' использован верно."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Термин 'core belief' использован верно."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Использован правильный термин 'adaptive' вместо 'helpful' в контексте замены убеждений, что допустимо и даже профессионально."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Текст выполнен на очень высоком уровне. Переводчик отлично справился с соблюдением терминологии КПТ (core beliefs, intermediate beliefs, automatic thoughts) и выдержал теплый, поддерживающий тон, характерный для качественного англоязычного ментал-хелс контента. Все инструкции по стилистике (sentence case, использование contractions, отсутствие лишней вежливости) соблюдены. Рисков для публикации не обнаружено."
+            },
+            "timings": {
+              "issues": 14140,
+              "deliberate": 696,
+              "recommend": 2958
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

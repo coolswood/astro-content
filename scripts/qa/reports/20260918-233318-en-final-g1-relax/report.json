@@ -1,0 +1,486 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:33:18.705Z",
+    "Метка": "en-final-g1-relax",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "relax.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "relax.json": {
+      "en": [
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/vacuum_cleaner",
+          "ru": "Пылесос",
+          "oldText": "Vacuum Cleaner",
+          "newText": "Vacuum cleaner",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "According to the project's style guide, UI elements and labels should use sentence case (only the first word capitalized). Translation B follows this rule, whereas A uses Title Case.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a single-word label"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "According to the style guide, UI strings and labels should use sentence case (only the first word capitalized). Translation A follows this rule, while Translation B uses Title Case, which is incorrect for a simple noun label.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a single-word label"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/conditioner",
+          "ru": "Кондиционер",
+          "oldText": "Air Conditioner",
+          "newText": "Air conditioner",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "According to the project's style guide, UI elements and labels should use sentence case (only the first word capitalized). Translation B follows this rule, whereas A uses Title Case.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a single-word label"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "According to the project's style guide, UI elements and labels should use sentence case (only the first word capitalized) unless they are specific brand names or section titles. 'Air conditioner' follows this rule, whereas 'Air Conditioner' uses Title Case unnecessarily.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Incorrect capitalization (Title Case instead of sentence case for a general term/label)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/drops",
+          "ru": "Капли",
+          "oldText": "Dripping Water",
+          "newText": "Drops",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 95
+              },
+              "reason": "In the context of an app (likely a feature name or a metaphor), 'Drops' is the natural, concise noun. 'Dripping Water' sounds like a literal description of a physical process or a title of a nature documentary, which is unnatural for UI/UX.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Too literal and wordy; sounds like a description of an action rather than a name/label."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 100
+              },
+              "reason": "The original is a single noun 'Капли' (Drops), likely a title or a category. Translation A is a direct and accurate equivalent, whereas Translation B adds unnecessary words ('Water') and changes the noun to a gerund ('Dripping'), which is a mistranslation of the intent.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Changed a simple noun 'Drops' into a descriptive phrase 'Dripping Water'"
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'Water' which is not present in the original"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/rain_roof",
+          "ru": "Дождь по крыше",
+          "oldText": "Rain on the Roof",
+          "newText": "Rain on the roof",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 95
+              },
+              "reason": "As a title, 'Rain on the Roof' follows standard Title Case conventions, whereas 'Rain on the roof' looks like an unfinished sentence or a fragment.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Does not follow Title Case for a title/heading"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "Translation A follows the sentence case rule for titles/headers as specified in the instructions, whereas Translation B uses Title Case which is less standard for simple UI headers in this project.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a simple header"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/headers/instruments",
+          "ru": "Музыкальные инструменты",
+          "oldText": "Musical Instruments",
+          "newText": "Musical instruments",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "The original is a title/heading. According to the guidelines for titles, Title Case (A) is appropriate, whereas sentence case (B) is typically reserved for UI elements like buttons or list items.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for a heading, which is less standard for a main title/category name in this context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "According to the project guidelines, UI strings and labels should use sentence case (only the first word capitalized), whereas Translation B uses Title Case.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of the required sentence case for UI elements."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/metro",
+          "ru": "Метро",
+          "oldText": "Subway",
+          "newText": "Metro",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "For a US English market, 'Subway' is the most natural and common term for an underground transit system, whereas 'Metro' often feels more international or specific to certain cities.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "While 'Metro' is understood, 'Subway' is more idiomatic for the target US market."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "Since the target market is international (US English), 'Metro' is a universally understood term for rapid transit, whereas 'Subway' is specifically North American. However, without context, 'Metro' is the safer, more neutral choice for a global audience.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Subway is more regional (US) and might feel less 'international' than Metro in a global app context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/bowl",
+          "ru": "Чаша",
+          "oldText": "Singing Bowl",
+          "newText": "Bowl",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 40
+              },
+              "reason": "In the context of mental well-being and mindfulness, 'Чаша' almost certainly refers to a 'Singing Bowl'. Translation B is too literal and loses the specific meaning of the object.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The translation is too generic; 'Bowl' alone doesn't convey the intended meditative object."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 70,
+                "new": 100
+              },
+              "reason": "The original is a single word 'Чаша' without any modifiers. Translation A is a faithful, direct translation. Translation B adds 'Singing', which is an assumption not present in the source text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added 'Singing' which is not in the original text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/seal",
+          "ru": "Морской котик",
+          "oldText": "Seal",
+          "newText": "Fur seal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 70,
+                "new": 95
+              },
+              "reason": "The Russian term 'Морской котик' refers specifically to a fur seal, whereas 'Seal' is a generic term for all seals. Translation B is more accurate and precise.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The translation is too generic; 'Seal' loses the specific species identity of 'Морской котик'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 70,
+                "new": 100
+              },
+              "reason": "Translation A is precise and correctly identifies the specific species (Fur seal), whereas Translation B is too generic (Seal), losing the specific meaning of the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The specific identifier 'Морской котик' (Fur seal) is reduced to a general 'Seal', which is a different animal group."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "relax.json",
+          "lang": "en",
+          "key": "/sounds/snow_steps",
+          "ru": "Шаги по снегу",
+          "oldText": "Footsteps on Snow",
+          "newText": "Footsteps in snow",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Translation A uses Title Case, which is appropriate for a title/heading, and the preposition 'on' is more natural for footsteps appearing on the surface of the snow. Translation B uses lowercase and 'in', which is grammatically possible but less idiomatic for a title.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Lowercase 'snow' in a title and the preposition 'in' make it feel less like a formal heading compared to A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "Translation A follows the sentence case rule for titles/labels and uses the more natural preposition 'in snow' for tracks left in the substance. Translation B incorrectly capitalizes 'Snow' and uses 'on', which sounds slightly less idiomatic for tracks embedded in the snow.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Incorrect capitalization of 'Snow' (should be sentence case) and less natural preposition 'on'."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

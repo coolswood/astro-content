@@ -1,0 +1,1983 @@
+{
+  "file": "story/depression/label_lawyer_lazy.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 7,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/label/title",
+                "verdict": "ok",
+                "note": "Переведено хорошо, передает смысл"
+              },
+              {
+                "path": "/label/description",
+                "verdict": "ok",
+                "note": "Естественный английский текст"
+              },
+              {
+                "path": "/label/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/label/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Цитата адаптирована корректно"
+              },
+              {
+                "path": "/label/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Метафора передана точно"
+              },
+              {
+                "path": "/label/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en"
+              },
+              {
+                "path": "/label/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/question",
+                "verdict": "issue",
+                "note": "Mistranslation: в оригинале 'наименее соответствует', в переводе 'best contradicts' (лучше всего противоречит). Это меняет логику вопроса"
+              },
+              {
+                "path": "/label/test/answers/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/description",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий, терминология соблюдена."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод терминов (prosecutor, labeling) корректен."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Цитата передана верно."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Стиль естественный."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/title",
+                "verdict": "issue",
+                "note": "Стиль заголовка: слишком буквально, не звучит как заголовок статьи."
+              },
+              {
+                "path": "/lazy/description",
+                "verdict": "ok",
+                "note": "Хороший, плавный перевод."
+              },
+              {
+                "path": "/lazy/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, метафора сохранена."
+              },
+              {
+                "path": "/lazy/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, лаконичный."
+              },
+              {
+                "path": "/lazy/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон поддерживающий."
+              },
+              {
+                "path": "/lazy/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Хорошая передача метафоры 'switches off'."
+              },
+              {
+                "path": "/lazy/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/lazy/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно."
+              },
+              {
+                "path": "/lazy/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/lazy/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, эмоциональный окрас сохранен."
+              },
+              {
+                "path": "/lazy/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/label/test/question",
+                "fragment": "Which of the following statements best contradicts the main idea of this chapter?",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажена логика вопроса",
+                "why": "Оригинал спрашивает, какое утверждение 'наименее соответствует' (least matches/is least consistent with) идее. Перевод 'best contradicts' (лучше всего противоречит) превращает вопрос в поиск прямого антипода, что в тестах на понимание текста является другой задачей. Это может запутать пользователя при выборе ответа."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/lazy/title",
+                "fragment": "Awakening Will: Why Depression Leads to Apathy",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Калька с русского синтаксиса",
+                "why": "Фраза 'Awakening Will' звучит неестественно для заголовка статьи. В английском языке в таких случаях лучше использовать 'The Awakening of Will' или перефразировать, например, 'The Will to Act: Why Depression Leads to Apathy'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation 'best contradicts' changes the logic from 'least consistent with' to 'direct opposite', which alters the test's cognitive task."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The phrasing is a literal calque; 'Awakening Will' lacks the necessary article or prepositional structure to sound natural in an English title."
+              }
+            ],
+            "notes": "The translation is generally high-quality and accurate, but contains one significant logical error in a test question and one stylistic awkwardness in a title.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/label/test/question",
+                "current": "Which of the following statements best contradicts the main idea of this chapter?",
+                "proposed": "Which of the following statements is least consistent with the main idea of this chapter?",
+                "alternatives": [
+                  "Which of the following statements least aligns with the main idea of this chapter?",
+                  "Which of the following statements is least related to the main idea of this chapter?"
+                ],
+                "rationale": "Оригинал «наименее соответствует» требует передачи смысла «least consistent with» или «least aligns with». Вариант «best contradicts» (лучше всего противоречит) меняет тип вопроса с проверки соответствия на поиск прямого логического отрицания, что методически неверно для теста на понимание."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/lazy/title",
+                "current": "Awakening Will: Why Depression Leads to Apathy",
+                "proposed": "Awakening the Will: Why Depression Leads to Apathy",
+                "alternatives": [
+                  "The Awakening of Will: Why Depression Leads to Apathy",
+                  "Reclaiming Your Will: Why Depression Leads to Apathy"
+                ],
+                "rationale": "В английских заголовках существительное 'Will' (в значении воля) в таком контексте требует артикля или уточнения. 'Awakening Will' звучит как технический термин или калька. 'Awakening the Will' — наиболее естественный и близкий к оригиналу вариант."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, с хорошим пониманием тона и терминологии КПТ. Основные риски связаны с логикой тестового вопроса (изменение смысла) и стилистической шероховатостью в заголовке. После исправления этих двух моментов текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 67175,
+              "deliberate": 4909,
+              "recommend": 11130
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/label/test/question",
+              "from": "Which of the following statements best contradicts the main idea of this chapter?",
+              "to": "Which of the following statements is least consistent with the main idea of this chapter?"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/lazy/title",
+              "from": "Awakening Will: Why Depression Leads to Apathy",
+              "to": "Awakening the Will: Why Depression Leads to Apathy"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/label/title",
+                "verdict": "ok",
+                "note": "Переведено хорошо, передает смысл"
+              },
+              {
+                "path": "/label/description",
+                "verdict": "ok",
+                "note": "Смысл сохранен, стиль естественный"
+              },
+              {
+                "path": "/label/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Точный перевод"
+              },
+              {
+                "path": "/label/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Цитата передана верно"
+              },
+              {
+                "path": "/label/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Атрибуты instagram сохранены, это норма"
+              },
+              {
+                "path": "/label/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/question",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/test/answers/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/label/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/title",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/lawyer/description",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий, терминология соблюдена."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, смысл передан верно."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод терминов (prosecutor, labeling) корректен."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Стиль соответствует оригиналу."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод лаконичный и верный."
+              },
+              {
+                "path": "/lawyer/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/title",
+                "verdict": "ok",
+                "note": "Заголовок звучит естественно."
+              },
+              {
+                "path": "/lazy/description",
+                "verdict": "ok",
+                "note": "Хороший нарративный стиль."
+              },
+              {
+                "path": "/lazy/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lazy/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, смысл передан."
+              },
+              {
+                "path": "/lazy/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно."
+              },
+              {
+                "path": "/lazy/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный, 'insidious' — отличный выбор для 'коварный'."
+              },
+              {
+                "path": "/lazy/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан, 'overwhelming' уместно."
+              },
+              {
+                "path": "/lazy/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод цитаты корректен."
+              },
+              {
+                "path": "/lazy/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, 'from the sidelines' — хорошая идиома."
+              },
+              {
+                "path": "/lazy/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, 'sentencing yourself' передает метафору."
+              },
+              {
+                "path": "/lazy/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, гендерная нейтральность соблюдена через 'I'."
+              },
+              {
+                "path": "/lazy/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/label/screen_1/texts/4",
+                "current": "<li>Doing something for themselves — selfish</li>",
+                "proposed": "<li>Doing something for yourself — selfish</li>",
+                "alternatives": [
+                  "Doing something for oneself — selfish"
+                ],
+                "rationale": "В оригинале «для себя» (singular/generic). В контексте списка примеров, где предыдущий пункт «Опоздал на встречу» (он/она), использование 'themselves' допустимо, но 'yourself' лучше звучит в UX-тексте, обращенном к пользователю, либо нейтральное 'oneself'. Однако, учитывая, что это примеры-ярлыки, 'yourself' или 'oneself' точнее передают суть 'сделал что-то для себя'."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/label/screen_1/texts/7",
+                "current": "<li>Got fired — a failure</li>",
+                "proposed": "<li>Got fired — a loser</li>",
+                "alternatives": [
+                  "Got fired — a failure"
+                ],
+                "rationale": "В оригинале «неудачник». Хотя 'failure' — это часто про ситуацию, 'loser' — это именно ярлык на личность (person), что лучше соответствует теме статьи о навешивании ярлыков. Но 'failure' также допустим. Выбираю 'loser' для усиления эффекта 'ярлыка'."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/label/screen_1/texts/9",
+                "current": "But as adults, we are capable of looking broader and analyzing a situation rather than jumping to conclusions based on a single episode.",
+                "proposed": "But as adults, we are capable of seeing the bigger picture and analyzing a situation rather than jumping to conclusions based on a single episode.",
+                "alternatives": [
+                  "But as adults, we can look more broadly..."
+                ],
+                "rationale": "«Смотреть шире» в контексте восприятия лучше всего передается идиомой 'see the bigger picture'. 'Looking broader' звучит немного тяжеловесно и менее естественно для носителя."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден тон «понимающего эксперта», правильно использована терминология КПТ (overgeneralizations, cognitive distortions подразумеваются в контексте) и соблюдены правила UX. Есть пара моментов с естественностью идиом и согласованием местоимений в примерах. Основные риски отсутствуют."
+            },
+            "timings": {
+              "issues": 58285,
+              "deliberate": 2013,
+              "recommend": 19848
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/label/screen_1/texts/4",
+              "from": "<li>Doing something for themselves — selfish</li>",
+              "to": "<li>Doing something for yourself — selfish</li>"
+            },
+            {
+              "id": "I2",
+              "path": "/label/screen_1/texts/7",
+              "from": "<li>Got fired — a failure</li>",
+              "to": "<li>Got fired — a loser</li>"
+            },
+            {
+              "id": "I3",
+              "path": "/label/screen_1/texts/9",
+              "from": "But as adults, we are capable of looking broader and analyzing a situation rather than jumping to conclusions based on a single episode.",
+              "to": "But as adults, we are capable of seeing the bigger picture and analyzing a situation rather than jumping to conclusions based on a single episode."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/label/title",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл заголовка."
+              },
+              {
+                "path": "/label/description",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, звучит естественно."
+              },
+              {
+                "path": "/label/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/label/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно."
+              },
+              {
+                "path": "/label/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Метафора передана хорошо."
+              },
+              {
+                "path": "/label/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Тег instagram с атрибутами — норма для en."
+              },
+              {
+                "path": "/label/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/question",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/test/answers/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/label/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/lawyer/description",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Цитата переведена верно"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lawyer/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lazy/title",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lazy/description",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lazy/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lazy/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lazy/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lazy/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод хороший"
+              },
+              {
+                "path": "/lazy/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, смысл сохранен."
+              },
+              {
+                "path": "/lazy/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, звучит естественно."
+              },
+              {
+                "path": "/lazy/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный, 'insidious' — отличный выбор для 'коварный'."
+              },
+              {
+                "path": "/lazy/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/lazy/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно."
+              },
+              {
+                "path": "/lazy/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла."
+              },
+              {
+                "path": "/lazy/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, 'sentencing yourself' — удачная метафора."
+              },
+              {
+                "path": "/lazy/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, гендерная нейтральность соблюдена."
+              },
+              {
+                "path": "/lazy/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lazy/screen_4/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/label/screen_1/texts/7",
+                "current": "Got fired — a loser",
+                "proposed": "Got fired — a failure",
+                "alternatives": [
+                  "Got fired — a loser"
+                ],
+                "rationale": "В контексте статьи о 'ярлыках' (labeling) и когнитивных искажениях, 'failure' звучит более психологично и менее сленгово, чем 'loser', при этом точно передавая смысл 'неудачник' как категориальный ярлык."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/label/screen_3/texts/1",
+                "current": "<h2>“Stripping Away Labels”</h2>",
+                "proposed": "<h2>“Unlabeling”</h2>",
+                "alternatives": [
+                  "<h2>Removing Labels</h2>"
+                ],
+                "rationale": "Для заголовка упражнения 'Stripping Away Labels' слишком длинно и тяжеловесно. 'Unlabeling' — более современный, лаконичный и естественный вариант для UX/названий техник."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/lawyer/screen_1/texts/2",
+                "current": "The prosecutor is your inner critic, which has long been labeling you as a “failure,” “weak,” or “to blame for everything.”",
+                "proposed": "The prosecutor is your inner critic, which has long been labeling you as a “failure,” “weak,” or “guilty.”",
+                "alternatives": [],
+                "rationale": "Фраза 'to blame for everything' грамматически верна, но в контексте судебной аналогии (prosecutor/defense) использование прилагательного 'guilty' (виновный) гораздо сильнее и точнее передает суть обвинения."
+              },
+              {
+                "id": "I4",
+                "priority": 4,
+                "path": "/lawyer/screen_2/texts/8",
+                "current": "Making mistakes is part of being human. They don’t define a person’s entire identity or prove they are incompetent.",
+                "proposed": "Making mistakes is part of being human. They don’t define who you are or prove you are incompetent.",
+                "alternatives": [
+                  "They don't define your entire identity"
+                ],
+                "rationale": "Переход от 'a person' к 'you' делает текст более личным и поддерживающим (Tone of Voice), что критично для психологического контента. 'Define who you are' звучит более естественно, чем 'define a person's entire identity'."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, выдержан поддерживающий тон и правильный регистр. Основные правки касаются стилистической шлифовки (замена сленгового 'loser' на более уместный 'failure' в контексте ярлыков) и усиления метафоры судебного процесса в технике 'Адвокат'."
+            },
+            "timings": {
+              "issues": 63495,
+              "deliberate": 2110,
+              "recommend": 17224
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/label/screen_3/texts/1",
+              "from": "<h2>“Stripping Away Labels”</h2>",
+              "to": "<h2>“Unlabeling”</h2>"
+            },
+            {
+              "id": "I3",
+              "path": "/lawyer/screen_1/texts/2",
+              "from": "Imagine you are in a courtroom. The prosecutor is your inner critic, which has long been labeling you as a “failure,” “weak,” or “to blame for everything.”",
+              "to": "The prosecutor is your inner critic, which has long been labeling you as a “failure,” “weak,” or “guilty.”"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/label/screen_1/texts/7",
+              "reason": "валидация листа: теги — потеряны: <li> </li> (нет в: label/screen_1/texts/7)"
+            },
+            {
+              "id": "I4",
+              "path": "/lawyer/screen_2/texts/8",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: lawyer/screen_2/texts/8)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

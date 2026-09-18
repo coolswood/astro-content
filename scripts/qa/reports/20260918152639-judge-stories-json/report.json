@@ -1,0 +1,157 @@
+{
+  "file": "stories.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/activity/0/subtitle",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный, артикли на месте."
+              },
+              {
+                "path": "/activity/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/activity/1/subtitle",
+                "verdict": "ok",
+                "note": "Перевод точный, em dash использован верно."
+              },
+              {
+                "path": "/activity/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/coping/0/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (unhelpful attitudes) и тон соблюдены."
+              },
+              {
+                "path": "/coping/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/coping/1/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (unhelpful beliefs, coping cards) верна."
+              },
+              {
+                "path": "/coping/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/daybook/0/subtitle",
+                "verdict": "ok",
+                "note": "Перевод естественный, 'daily entries' — хороший UX."
+              },
+              {
+                "path": "/daybook/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/daybook/1/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (AI assistant) верна."
+              },
+              {
+                "path": "/daybook/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/diary/0/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (automatic thoughts, helpful/adaptive) соблюдена."
+              },
+              {
+                "path": "/diary/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/diary/1/subtitle",
+                "verdict": "ok",
+                "note": "Перевод точный, 'journal' вместо 'diary' — верно."
+              },
+              {
+                "path": "/diary/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/diary/2/subtitle",
+                "verdict": "ok",
+                "note": "Перевод естественный, 'use the journal' — хорошая адаптация."
+              },
+              {
+                "path": "/diary/2/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/intermediate/0/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (intermediate beliefs) верна."
+              },
+              {
+                "path": "/intermediate/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/intermediate/1/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (unhelpful beliefs, coping cards) верна."
+              },
+              {
+                "path": "/intermediate/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              },
+              {
+                "path": "/intermediate/2/subtitle",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/intermediate/2/img",
+                "verdict": "ok",
+                "note": "Путь к изображению корректен."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Соблюдены все правила Tone of Voice (теплота, использование сокращений), корректно использована терминология КПТ (unhelpful beliefs, automatic thoughts, coping cards, intermediate beliefs) и соблюден Sentence case. Текст звучит естественно для носителя и не содержит калек с русского языка."
+            },
+            "timings": {
+              "issues": 12935,
+              "deliberate": 501,
+              "recommend": 2294
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

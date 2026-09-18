@@ -1,0 +1,82 @@
+{
+  "file": "texts/about_us.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/h2",
+                "verdict": "ok",
+                "note": "Заголовок переведен корректно, соответствует стилю."
+              },
+              {
+                "path": "/texts/0",
+                "verdict": "ok",
+                "note": "Тон дружелюбный, сокращения уместны, смысл передан точно."
+              },
+              {
+                "path": "/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный, передает личную историю без канцелярита."
+              },
+              {
+                "path": "/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология (psychologists) соблюдена."
+              },
+              {
+                "path": "/texts/3",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, грамматика и времена (Present Perfect) верны."
+              },
+              {
+                "path": "/texts/4",
+                "verdict": "ok",
+                "note": "Перевод естественный, передает теплоту оригинала."
+              },
+              {
+                "path": "/texts/5",
+                "verdict": "ok",
+                "note": "Смысл передан точно, нет лишней вежливости."
+              },
+              {
+                "path": "/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный, идиома 'financial cushion' уместна."
+              },
+              {
+                "path": "/texts/7",
+                "verdict": "ok",
+                "note": "Терминология 'mental well-being' соблюдена, тон соответствует бренду."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Текст переведен на очень высоком уровне. Соблюден теплый, поддерживающий тон «понимающего друга», использованы правильные термины (mental well-being, psychologists) и естественные для носителя конструкции. Все рекомендации по стилистике (сокращения, em dash, отсутствие лишней вежливости) выполнены. Рисков для публикации не обнаружено."
+            },
+            "timings": {
+              "issues": 9250,
+              "deliberate": 659,
+              "recommend": 2952
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
