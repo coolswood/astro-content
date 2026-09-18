@@ -1,0 +1,1136 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T10:56:54.744Z",
+    "Метка": "en-b3-verif-okr",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD~1",
+    "Файлы": "tests/okr.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 7,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "a4b1791ebbc7f608e45e9add25437bef463f001c"
+  },
+  "results": {
+    "tests/okr.json": {
+      "en": [
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/result/extreme/title",
+          "ru": "Выраженные признаки ОКР",
+          "oldText": "Pronounced OCD symptoms",
+          "newText": "Significant OCD signs",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "In a clinical or psychological context, 'symptoms' is the standard term for manifestations of a disorder, whereas 'signs' is less idiomatic here. 'Pronounced' is also a more natural colocation for symptoms than 'significant' in this specific context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Using 'signs' instead of 'symptoms' sounds slightly less professional in a mental health context."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "While 'significant' is grammatically correct, 'pronounced' better captures the nuance of 'выраженные'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 82
+              },
+              "reason": "In a clinical or psychological context, 'symptoms' is the standard term for manifestations of a disorder, whereas 'signs' often refers to observable physical indicators. 'Pronounced' is a more natural and professional collocation for symptoms than 'significant' in this specific context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Using 'signs' instead of 'symptoms' is less common in mental health descriptions; 'significant' is acceptable but 'pronounced' sounds more idiomatic for describing the intensity of symptoms."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/variants/3",
+          "ru": "Почти всегда удается\n\nЧасто справляюсь\n\nИногда получается\n\nЯ редко могу от них отмахнуться\n\nВообще не могу сопротивляться",
+          "oldText": "I can resist them almost all the time\n\nI manage to resist them quite often\n\nSometimes I can\n\nI can rarely push them away\n\nI can’t resist them at all",
+          "newText": "I almost always succeed\n\nI often manage\n\nI succeed sometimes\n\nI can rarely brush them off\n\nI can't resist them at all",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 92
+              },
+              "reason": "Translation B is much more natural and avoids the repetitive 'I can' structure used in A. B also uses more idiomatic expressions like 'brush them off' which fits the context of intrusive thoughts better than 'push them away'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Repetitive sentence structure ('I can...') makes it sound like a translation rather than natural English; 'push them away' is less idiomatic than 'brush them off' in this context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 88
+              },
+              "reason": "Translation A follows the structure and rhythm of the original much more closely, whereas Translation B introduces unnecessary repetition of the verb 'resist' and changes the meaning of the first line (making it about resistance rather than success).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The first line 'I can resist them almost all the time' is the opposite of the original meaning 'Почти всегда удается' (which implies succeeding in managing/coping, not resisting)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'resist' makes the text feel heavy and unnatural compared to the concise Russian original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The third line 'Sometimes I can' is too vague and loses the sense of 'it works out/I succeed' present in the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/1/text",
+          "ru": "Около 50% людей с ОКР сообщают, что их навязчивые мысли и компульсии значительно мешают повседневной жизни, включая работу, учебу и социальные взаимодействия.",
+          "oldText": "Around 50% of people with OCD report that their intrusive thoughts and compulsions significantly interfere with everyday life, including work, study and social interactions.",
+          "newText": "About 50% of people with OCD report that their intrusive thoughts and compulsions significantly interfere with daily life, including work, school, and social interactions.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Both translations are excellent and follow CBT terminology perfectly. Translation A is slightly better because 'daily life' is a more natural, idiomatic collocation in this context than 'everyday life', and 'school' is a more standard way to refer to educational settings in general US English compared to 'study'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Everyday life' is acceptable but 'daily life' sounds more natural here; 'study' as a noun for the educational process is slightly less idiomatic than 'school' in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B uses more natural, idiomatic English for the context ('daily life' instead of 'everyday life' and 'school' instead of 'study').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'everyday life' is acceptable but 'daily life' is more common in this context; 'study' as a noun for the activity of being a student is less natural than 'school' or 'studies'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/variants/0",
+          "ru": "Их нет вообще\n\nМеньше часа\n\nОт 1 до 3 часов\n\nОт 3 до 8 часов\n\nБольше 8 часов",
+          "oldText": "They don’t occur at all\n\nLess than an hour\n\n1–3 hours\n\n3–8 hours\n\nMore than 8 hours",
+          "newText": "None\n\nLess than an hour\n\n1 to 3 hours\n\n3 to 8 hours\n\nMore than 8 hours",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is concise and follows UX best practices for selection lists, whereas B is overly wordy and uses a heavy grammatical structure ('They don’t occur at all') that feels unnatural for a simple option.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The first line is too long and conversational for a UI list; 'None' is the standard UX pattern."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses en dashes for ranges, which is fine, but the verbosity of the first line makes the whole set feel inconsistent."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation B is concise and follows UX best practices for selection options. Translation A is overly wordy and sounds like a full sentence, which is unnatural for a list of options.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'They don’t occur at all' is too heavy and formal for a UI selection; 'None' is the standard way to express this in English UX."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/5/fact",
+          "ru": "Менее 5% людей с ОКР совершают навязчивые действия более 8 часов в день, что серьезно мешает их повседневной жизни.",
+          "oldText": "Fewer than 5% of people with OCD perform compulsive actions for more than 8 hours a day, but when this happens it severely disrupts daily life.",
+          "newText": "Fewer than 5% of people with OCD perform compulsive actions for more than 8 hours a day, which seriously interferes with their daily life.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation B is a direct and accurate reflection of the original sentence structure and meaning. Translation A introduces an unnecessary conditional clause ('but when this happens') that changes the logic of the statement.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'but when this happens', which makes the sentence more wordy and slightly alters the causal flow of the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is a precise, faithful, and natural rendering of the original sentence. Translation B introduces an unnecessary conditional structure ('but when this happens') that changes the meaning from a factual statement about a specific group to a general observation about a condition.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The phrase 'but when this happens' implies that the 8-hour threshold is an occasional event, whereas the original describes a persistent state for that 5% of people."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The addition of 'it' makes the sentence wordier and less direct than the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/4/fact",
+          "ru": "Антидепрессанты, такие как СИОЗС, часто помогают людям с ОКР уменьшить интенсивность навязчивых мыслей и улучшить контроль над ними.",
+          "oldText": "Antidepressants such as SSRIs often help people with OCD reduce the intensity of intrusive thoughts and improve their ability to manage them.",
+          "newText": "Antidepressants, such as SSRIs, often help people with OCD reduce the intensity of intrusive thoughts and improve their ability to manage them.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 95
+              },
+              "reason": "Both translations are excellent and accurate, but Translation A is slightly better for a digital interface/article as it avoids unnecessary commas around 'such as', which improves reading flow.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The commas around 'such as SSRIs' create a parenthetical interruption that is grammatically correct but slightly slows down the rhythm compared to the smoother version A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 98
+              },
+              "reason": "Both translations are excellent and follow all CBT terminology guidelines. Translation A is slightly better due to the use of commas to set off the non-restrictive appositive 'such as SSRIs', which is more grammatically standard in formal/educational English.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/5/text",
+          "ru": "Наиболее распространенные навязчивые действия включают частое мытье рук, многократную проверку замков и бытовых приборов, а также повторяющиеся действия, такие как касание определенных объектов или повторение определенных слов и фраз.",
+          "oldText": "The most common compulsive actions include frequent handwashing, repeatedly checking locks and household appliances, and repeated behaviours such as touching certain objects or repeating specific words or phrases.",
+          "newText": "Common compulsive actions include frequent hand washing, repeatedly checking locks and appliances, and repetitive behaviors like touching certain objects or repeating specific words and phrases.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 86
+              },
+              "reason": "Translation A is more precise and maintains the formal yet accessible tone of the original. Translation B omits 'The most' (the superlative), which changes the nuance of the statement.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted 'The most' (Наиболее распространенные), which weakens the definitive nature of the original sentence."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Hand washing is typically written as one word (handwashing) in modern English UX/medical contexts."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more concise and natural for a mental health context. Translation B is slightly wordy ('household appliances', 'repeated behaviours') and uses British spelling ('behaviours'), whereas the target market is US English.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses British spelling 'behaviours' instead of US 'behaviors'; 'household appliances' is slightly more redundant than 'appliances' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/4/text",
+          "ru": "Только около 10-20% людей с ОКР сообщают, что могут в основном контролировать свои навязчивые мысли.",
+          "oldText": "Only about 10–20% of people with OCD report that they are mostly able to control their intrusive thoughts.",
+          "newText": "Only about 10–20% of people with OCD report that they can mostly control their intrusive thoughts.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "Translation A uses 'are mostly able to control', which sounds more natural and professional in a clinical/educational context than the slightly clunky 'can mostly control' in Translation B.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The placement of 'mostly' between 'can' and 'control' is grammatically acceptable but feels less idiomatic for a formal psychological statement than the construction in A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Translation A is more concise and natural for a professional psychological context. Translation B is grammatically correct but slightly wordier due to the 'are able to' construction, which is less direct than the simple modal 'can'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "slightly wordy construction 'are mostly able to' instead of the more direct 'can mostly'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/variants/1",
+          "ru": "Никак, живу как обычно\n\nЕдва заметно\n\nНемного усложняют жизнь, но я справляюсь\n\nЗначительно мешают, приходится менять привычки\n\nПолностью перевернули мою жизнь",
+          "oldText": "Not at all, I live as usual\n\nBarely noticeable\n\nThey make life a bit harder, but I manage\n\nThey interfere a lot, I have to change my habits\n\nThey have completely turned my life upside down",
+          "newText": "Not at all, I live as usual\n\nHardly noticeable\n\nThey make life a bit harder, but I'm managing\n\nThey interfere significantly, forcing me to change my habits\n\nThey've completely turned my life upside down",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A is more idiomatic and flows better, especially with the use of the present continuous 'I'm managing' to reflect the ongoing process of coping. Translation B feels slightly more fragmented and uses 'interfere a lot', which is less sophisticated than 'interfere significantly'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'interfere a lot, I have to change my habits' is a bit clunky compared to the more cohesive structure in A."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'I manage' sounds a bit more static and less natural in this context than 'I'm managing'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation B sounds more natural and idiomatic for a mental health app. The use of 'Hardly noticeable' is more common than 'Barely noticeable' in this context, and 'I'm managing' conveys the ongoing process of coping better than the static 'I manage'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Barely noticeable' is grammatically fine but slightly less idiomatic here than 'Hardly noticeable'; 'I manage' sounds a bit stiff compared to the continuous 'I'm managing'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'They interfere a lot, I have to...' is a bit clunky (comma splice) compared to the more sophisticated 'forcing me to...' in B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/1/fact",
+          "ru": "Частые и продолжительные навязчивые мысли могут вызывать физическое истощение и проблемы со здоровьем, такие как головные боли, проблемы с пищеварением и хроническую усталость.",
+          "oldText": "Frequent and prolonged intrusive thoughts can lead to physical exhaustion and health problems such as headaches, digestive issues and chronic fatigue.",
+          "newText": "Frequent and prolonged intrusive thoughts can lead to exhaustion and health issues, such as headaches, digestive problems, and chronic fatigue.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more polished and follows standard English punctuation rules (using the Oxford comma for clarity in a list). Translation B lacks a necessary comma before 'such as' and omits the Oxford comma, making the list feel slightly less professional.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing comma before 'such as' and missing Oxford comma in the list."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Translation A is more precise and follows the original structure perfectly. Translation B omits the adjective 'physical' before 'exhaustion', which changes the nuance of the original text.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "omitted 'physical' (физическое) before exhaustion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/result/extreme/text",
+          "ru": "Ваши ответы могут говорить о том, что навязчивые мысли и ритуалы заметно влияют на повседневную жизнь и эмоциональное состояние. Вы можете чувствовать сильную тревогу, если не удаётся выполнить привычные действия, и это может вызывать значительный стресс. В таких случаях обращение за профессиональной помощью может стать важным шагом к улучшению самочувствия и снижению напряжения. Поддержка действительно существует, и вы можете получить её.",
+          "oldText": "Your answers suggest that intrusive thoughts and rituals may significantly affect your daily life and emotional state. You might feel strong anxiety if you cannot carry out familiar actions, and this can be a major source of stress. In such cases, reaching out for professional help can be an important step towards feeling better and reducing tension. Support is available, and you do not have to go through this alone.",
+          "newText": "Your answers may suggest that intrusive thoughts and rituals significantly affect your daily life and emotional state. You may feel intense anxiety if you're unable to perform certain actions, which can cause significant stress. In such cases, seeking professional help can be an important step toward improving your well-being and reducing tension. Support is available, and you can reach out for it.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and emotionally resonant, especially in the final sentence where it uses a natural English expression ('you do not have to go through this alone') instead of a literal translation. Translation B is grammatically correct but feels slightly more clinical and repetitive.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The final sentence 'you can reach out for it' is a bit clunky and literal compared to the more supportive tone of A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'certain actions' is a slight deviation from 'привычные действия' (familiar actions)."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more precise and maintains the cautious, professional tone of the original ('may suggest' vs 'suggest'). Translation B adds a phrase ('you do not have to go through this alone') that is not in the source text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "The phrase 'you do not have to go through this alone' is a creative addition not present in the original text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The placement of 'may' in the first sentence is slightly less natural than in A; 'suggest that... may' is a better way to express possibility in English."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/7/text",
+          "ru": "Навязчивые действия часто сопровождаются сильными негативными эмоциями, такими как тревога, вина, стыд и разочарование. Эти эмоции могут значительно усиливать общий дискомфорт и чувство подавленности.",
+          "oldText": "Compulsive actions are often accompanied by strong negative emotions such as anxiety, guilt, shame and frustration. These feelings can significantly increase overall distress and a sense of being overwhelmed.",
+          "newText": "Compulsive actions are often accompanied by strong negative emotions, such as anxiety, guilt, shame, and frustration. These emotions can significantly increase overall discomfort and feelings of being overwhelmed.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A uses 'distress', which is much more idiomatic and natural in a mental health context than 'discomfort'. It also avoids the repetitive use of 'emotions' by using 'feelings' in the second sentence, creating a better flow.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'discomfort' sounds slightly clinical or physical rather than psychological, and the repetition of 'emotions' makes the text feel less polished."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more polished and follows standard English punctuation rules (Oxford comma), whereas B feels slightly less natural due to the word choice 'distress' in this specific context and the lack of a comma before 'such as'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing comma before 'such as' makes the sentence slightly harder to read; 'distress' is acceptable but 'discomfort' is a more direct and natural fit for the original 'дискомфорт'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps_description/9/fact",
+          "ru": "Практики осознанности и медитации могут помочь улучшить контроль над ритуалами, способствуя снижению тревожности и улучшению общего психического состояния.",
+          "oldText": "Mindfulness and meditation practices can help improve control over rituals by reducing anxiety and supporting overall mental health.",
+          "newText": "Mindfulness and meditation practices can help improve control over rituals by reducing anxiety and supporting overall mental well-being.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 98
+              },
+              "reason": "Translation B uses the project-mandated term 'mental well-being' instead of the more generic 'mental health', which aligns perfectly with the provided glossary and tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'mental health' instead of the preferred 'mental well-being'"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Both translations are excellent and follow the guidelines, but 'mental well-being' is the preferred term in the project glossary for 'психическое состояние' to avoid the more clinical/medical tone of 'mental health'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'mental health' instead of the preferred 'mental well-being' for describing a state of being."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/variants/9",
+          "ru": "Полностью под моим контролем\n\nБольшей частью контролирую\n\nИногда могу управлять ими\n\nПочти не контролирую\n\nСовсем не могу контролировать",
+          "oldText": "Completely under my control\n\nMostly under my control\n\nSometimes I can manage them\n\nI barely control them\n\nI can’t control them at all",
+          "newText": "Under my full control\n\nMostly under control\n\nI can manage them sometimes\n\nI have almost no control\n\nI have no control at all",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more concise and follows the natural rhythm of a Likert scale used in psychological assessments. Translation B feels slightly more wordy and repetitive due to the frequent use of 'I'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The repetition of 'under my control' and 'I' makes the scale feel less like a professional assessment and more like a list of sentences."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A is more natural and consistent for a scale of control. Translation B suffers from awkward phrasing ('Under my full control') and inconsistent grammatical structures.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The first line 'Under my full control' sounds slightly unnatural compared to the standard 'Completely under my control'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The second line 'Mostly under control' lacks the possessive 'my', creating an inconsistency with the rest of the scale."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/variants/8",
+          "ru": "Почти всегда могу удержаться\n\nДовольно часто справляюсь\n\nИногда могу отказаться от них\n\nРедко удается избежать\n\nВообще не могу сопротивляться",
+          "oldText": "I can almost always hold back\n\nI manage to resist quite often\n\nSometimes I can choose not to do them\n\nI rarely manage to avoid them\n\nI can’t resist them at all",
+          "newText": "I can almost always resist\n\nI can manage quite often\n\nI can sometimes resist them\n\nI rarely manage to avoid them\n\nI can't resist them at all",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A is more consistent and uses more natural, concise phrasing for a scale of frequency. Translation B introduces 'choose not to do them', which is a clunky and unnecessary addition that deviates from the original's concise structure.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The third line 'Sometimes I can choose not to do them' is wordy and less natural than a direct translation of 'отказаться от них'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Hold back' in the first line is slightly less precise than 'resist' in this context of resisting urges/behaviors."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 75
+              },
+              "reason": "Translation A is much more natural and idiomatic; Translation B contains a major grammatical error ('I can manage quite often') and lacks necessary objects for the verbs.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'I can manage quite often' is an incomplete thought in English; 'manage' requires an object or a following infinitive."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "In the third line, 'resist them' is needed to maintain clarity, whereas B just says 'resist' without an object."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/variants/6",
+          "ru": "Никак, все как обычно\n\nЕле заметно\n\nНемного усложняют, но не критично\n\nСильно мешают, меняю из-за них свои планы\n\nЖизнь изменилась до неузнаваемости",
+          "oldText": "Not at all, everything is as usual\n\nBarely noticeable\n\nThey make things a bit harder, but not too much\n\nThey interfere a lot, I change my plans because of them\n\nMy life has changed beyond recognition",
+          "newText": "Not at all, everything is as usual\n\nBarely noticeable\n\nThey make things a bit harder, but it's not critical\n\nThey interfere a lot, I change my plans because of them\n\nMy life has changed beyond recognition",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more accurate to the original text. Translation B introduces an addition/slight mistranslation in the third line by replacing 'not critical' with 'not too much', which changes the nuance of the scale.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "The phrase 'not too much' is a deviation from the original 'не критично' (not critical/not a critical issue)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 85
+              },
+              "reason": "Translation A sounds more natural and idiomatic for a user interface. Translation B uses 'not critical', which is a direct calque from the Russian 'не критично' and sounds slightly too formal/clinical for this context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'it's not critical' is a bit heavy/formal compared to the more natural 'not too much' or 'not a big deal' in English UX."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/variants/7",
+          "ru": "Вообще не беспокоюсь\n\nЧуть-чуть некомфортно\n\nЗаметно неприятно, но жить можно\n\nСильный дискомфорт, это меня подавляет\n\nПостоянное ощущение сильного дискомфорта",
+          "oldText": "I’m not bothered at all\n\nA little uncomfortable\n\nClearly unpleasant, but still manageable\n\nStrong discomfort, it feels overwhelming\n\nA constant feeling of intense discomfort",
+          "newText": "Not worried at all\n\nA little uncomfortable\n\nNoticeably unpleasant, but manageable\n\nStrong discomfort, it's overwhelming\n\nA constant feeling of intense discomfort",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B sounds more natural and idiomatic for a mental health app. The use of 'I’m not bothered' and 'it feels overwhelming' provides a more human, supportive tone compared to the slightly more clinical or abrupt phrasing in A.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The first line 'Not worried at all' is a bit abrupt; 'I'm not bothered at all' or 'I don't feel worried at all' flows better in a self-report context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A captures the nuance of emotional state ('bothered') much better than B, which uses 'worried' (anxiety-specific). A also maintains a more natural flow for a mood-tracking interface.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Using 'Not worried' for 'Вообще не беспокоюсь' is too narrow; 'bothered' or 'unsettled' is better for general discomfort/annoyance levels."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The omission of 'it's' in 'it's overwhelming' makes it slightly more clipped/staccato than the more natural A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/range/normal",
+          "ru": "Нормальное состояние",
+          "oldText": "Normal state",
+          "newText": "Normal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 95
+              },
+              "reason": "In a UX/UI context, 'Normal state' sounds like a technical or medical status report (e.g., a system state or a physiological state), whereas 'Normal' is the natural, concise way to describe a baseline mood or condition.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Sounds like a technical/system status rather than a natural description of a person's state."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "In a mental health app context, 'Normal' is the standard, concise way to describe a state or mood. 'Normal state' sounds overly clinical and redundant in English UX.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Unnecessarily wordy and sounds like a literal translation of 'состояние' (state)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/result/light/text",
+          "ru": "Иногда у вас могут появляться повторяющиеся мысли или желание перепроверить что-то, особенно в стрессовых ситуациях. Такие проявления не являются постоянными и обычно не нарушают привычный ритм жизни. Вам удаётся сохранять контроль над этими импульсами и адаптироваться к повседневным задачам. Если некоторые мысли или действия начинают вызывать тревогу, мягкие техники саморегуляции могут помочь поддерживать эмоциональный баланс.",
+          "oldText": "From time to time you may notice recurring thoughts or an urge to double-check something, especially in stressful situations. These experiences are not constant and usually do not disrupt your usual rhythm of life. You are generally able to keep these impulses under control and manage day-to-day tasks. If some thoughts or actions start to make you feel more anxious, gentle self-regulation techniques can help you maintain emotional balance.",
+          "newText": "You may occasionally experience repetitive thoughts or the urge to recheck something, especially in stressful situations. These occurrences aren't constant and usually don't disrupt your daily rhythm. You manage to maintain control over these impulses and adapt to daily tasks. If certain thoughts or actions begin to cause anxiety, gentle self-regulation techniques can help maintain your emotional balance.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more concise, uses natural contractions (aren't, don't), and flows better as a supportive expert text. Translation B feels slightly more wordy and formal ('rhythm of life', 'make you feel more anxious').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'rhythm of life' is a bit cliché/heavy compared to 'daily rhythm', and 'make you feel more anxious' is less elegant than 'cause anxiety'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 86
+              },
+              "reason": "Translation A sounds more natural and empathetic, using 'notice' and 'manage' in a way that fits the 'understanding expert' tone. Translation B feels slightly more clinical and repetitive (e.g., 'daily rhythm' vs 'daily tasks').",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'You manage to maintain control' is a bit heavy/clunky compared to the smoother 'You are generally able to keep... control' in A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The transition between 'daily rhythm' and 'daily tasks' is slightly less fluid than in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/okr.json",
+          "lang": "en",
+          "key": "/steps",
+          "ru": "Как долго в течение дня продолжаются навязчивые мысли?\n\nКак навязчивые мысли влияют на ваш повседневный ритм?\n\nНасколько сильно вас беспокоят эти мысли?\n\nЛегко ли вам противостоять навязчивым мыслям?\n\nМожете ли вы контролировать свои навязчивые мысли?\n\nКак часто вы совершаете навязчивые действия (проверка телефона без надобности, мытье рук и т.д.)?\n\nКак эти действия влияют на вашу жизнь?\n\nКак вы себя чувствуете из-за этих действий?\n\nУдается ли вам сопротивляться выполнению ритуалов?\n\nНасколько хорошо вы контролируете свои ритуалы?",
+          "oldText": "How long do your intrusive thoughts last during the day?\n\nHow do intrusive thoughts affect your daily routine?\n\nHow much do these thoughts bother you?\n\nHow easy is it for you to resist intrusive thoughts?\n\nHow well can you control your intrusive thoughts?\n\nHow often do you engage in compulsive actions (such as checking your phone for no reason, washing your hands repeatedly, etc.)?\n\nHow do these actions affect your life?\n\nHow do these actions make you feel?\n\nHow well are you able to resist performing rituals?\n\nHow well do you control your rituals?",
+          "newText": "How long do your intrusive thoughts last during the day?\n\nHow do these intrusive thoughts affect your daily routine?\n\nHow much distress do these thoughts cause you?\n\nHow easy is it for you to resist intrusive thoughts?\n\nAre you able to control your intrusive thoughts?\n\nHow often do you perform compulsive actions (e.g., checking your phone unnecessarily, washing your hands, etc.)?\n\nHow do these actions affect your life?\n\nHow do these actions make you feel?\n\nAre you able to resist performing rituals?\n\nHow well can you control your rituals?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more consistent and follows the original structure more closely. Translation B introduces unnecessary word changes (e.g., 'distress' instead of 'bother') and slightly alters the nuance of the questions.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'distress' is a bit more clinical/heavy than the original 'беспокоят' (bother)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Changing 'Can you...' to 'Are you able to...' in several places makes the tone slightly more formal/stiff than the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more precise and follows the original structure more closely. Translation B introduces unnecessary additions (like 'repeatedly') and slightly alters the nuance of the questions.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'repeatedly' to hand washing, which wasn't in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'How well can you control...' in the 5th question is a slight shift from the original 'Can you control...' (Можете ли вы...)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
