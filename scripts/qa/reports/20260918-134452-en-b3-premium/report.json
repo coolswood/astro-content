@@ -1,0 +1,968 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T10:44:52.883Z",
+    "Метка": "en-b3-premium",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "texts/premium.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "8b5b94950329db2cb35cf00c251ee0fc00dc888f"
+  },
+  "results": {
+    "texts/premium.json": {
+      "en": [
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/7/description",
+          "ru": "Добавляйте изображения к своим заметкам, чтобы передавать эмоции и контекст точнее. Все фото будут синхронизированы между устройствами и, при необходимости, доступны вашему психологу.",
+          "oldText": "Add images to your notes to convey emotions and context more precisely. All photos are synced across your devices and, if you choose, can be shared with your psychologist.",
+          "newText": "Add images to your entries to convey emotions and context more accurately. All photos will be synced across your devices and, if needed, can be shared with your psychologist.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B uses the correct project terminology ('entries' instead of 'notes') and follows the original tense and nuance ('will be synced' and 'if needed') more accurately.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'notes' instead of the standard 'entries' for journal records."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Changed 'if necessary' to 'if you choose', which slightly alters the tone from functional necessity to user preference."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A uses the correct terminology ('entries' instead of 'notes') and maintains the future tense ('will be synced') which accurately reflects the original intent. Translation B uses 'notes', which is a less precise term for journal entries in this context, and 'are synced', which sounds slightly more static than the intended functional promise.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "uses 'notes' instead of the standard 'entries' for journal records"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "uses 'if you choose' instead of 'if needed', slightly changing the nuance of necessity"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/3/description",
+          "ru": "Мы используем современные технологии распознавания речи с анализом эмоций. Приложение расставит знаки препинания и структурирует текст, чтобы он выглядел аккуратно. Получайте готовые записи в несколько раз быстрее, чем при вводе вручную.",
+          "oldText": "We use advanced speech recognition with emotion analysis. The app adds punctuation and structures your text so it looks neat and clear. Get complete entries several times faster than typing by hand.",
+          "newText": "We use advanced speech recognition technology with emotion analysis. The app automatically adds punctuation and structures your text to keep it neat, allowing you to create entries much faster than typing manually.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 86
+              },
+              "reason": "Translation A is punchier, more direct, and follows the UX principle of brevity. Translation B is slightly wordy and uses a heavy 'allowing you to' construction which feels less like a modern app and more like a manual.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'allowing you to create entries' is a bit wordy/clunky for a feature description; 'typing manually' is slightly redundant compared to 'typing by hand' or just 'typing'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation A is more fluid and professional, using a natural 'allowing you to...' construction that connects the features to the user benefit. Translation B feels slightly choppy and uses 'Get complete entries', which is a bit clunky compared to the more idiomatic 'create entries'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure is a bit fragmented (choppy rhythm) compared to the smooth flow of A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/terms/texts",
+          "ru": "Для подписок на 3 и 12 месяцев предусмотрен пробный период на 3 дня. После его завершения сумма, соответствующая выбранному периоду, будет списана автоматически.\n\nОплачивая подписку впервые, вы подтверждаете согласие на последующие автоматические списания средств согласно выбранному тарифу, пока подписка не будет отменена.\n\nВы можете отменить подписку в любой момент на этой странице. Если это сделать до окончания пробного периода, средства списаны не будут.\n\nПри отмене продления подписки до конца пробного периода доступ к платным функциям прекращается сразу.\n\nЕсли вы отменяете подписку после списания средств, доступ к платным функциям сохраняется до окончания оплаченного периода.\n\nВозврат средств после оплаты подписки на 1, 3 или 12 месяцев возможен в следующих случаях:\n\n1. Средства были списаны из-за технической ошибки с нашей стороны.\n\n2. Оплата была совершена мошенниками без вашего согласия.\n\nВ остальных случаях после завершения пробного периода возврат средств за подписку на 1, 3 или 12 месяцев не предусмотрен.\n\nЕсли у вас возникнут трудности, вы всегда можете обратиться к нам через форму обратной связи на странице \"Профиль\".",
+          "oldText": "Subscriptions for 3 and 12 months include a 3-day trial period. After the trial period ends, the corresponding amount for the selected period will be automatically charged.\n\nBy making the first payment, you agree to further automatic charges according to your chosen plan until you cancel it.\n\nYou can cancel your subscription at any time on this page. If you cancel the subscription before the trial period ends, no money will be charged from your card.\n\nIf you cancel the subscription renewal before the trial period ends, you will immediately lose access to the premium features.\n\nIf you cancel the subscription renewal after making a payment, you will retain access to the premium features until the end of the paid subscription period.\n\nRefunds for a paid period of 1, 3, or 12 months are possible in the following cases:\n\n1. The charge was made due to a technical error on our side.\n\n2. Your card was used fraudulently.\n\nIn all other cases, after the trial period ends and a payment is made for 1, 3, or 12 months, refunds are not provided.\n\nIf you encounter any issues, you can always contact us via the feedback form in the app on the 'Profile' page.",
+          "newText": "A 3-day trial period is provided for 3-month and 12-month subscriptions. Once the trial ends, the amount corresponding to your chosen plan will be charged automatically.\n\nBy making your first subscription payment, you agree to subsequent automatic charges according to your chosen plan until the subscription is canceled.\n\nYou can cancel your subscription at any time on this page. If you cancel before the trial period ends, you will not be charged.\n\nIf you cancel your subscription renewal before the end of the trial period, access to Premium features will end immediately.\n\nIf you cancel your subscription after a payment has been processed, you will retain access to Premium features until the end of the paid period.\n\nRefunds for 1, 3, or 12-month subscriptions are only possible in the following cases:\n\n1. The charge was due to a technical error on our part.\n\n2. The payment was made fraudulently without your consent.\n\nIn all other cases, refunds for 1, 3, or 12-month subscriptions are not provided after the trial period ends.\n\nIf you encounter any issues, you can always reach out to us via the feedback form on the \"Profile\" page.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is more professional, concise, and follows the UX guidelines perfectly. Translation B contains several clunky phrases ('no money will be charged from your card') and a significant mistranslation regarding the cancellation logic in the fifth paragraph.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The original says 'If you cancel after payment, access is retained'. B says 'If you cancel the subscription renewal after making a payment...', which changes the logic of the sentence and makes it confusing."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'no money will be charged from your card' is too wordy and informal for a legal/subscription notice; 'you will not be charged' is the standard UX pattern."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'premium features' (lowercase) instead of the brand-specific 'Premium features' (capitalized) as per the glossary/context."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "In point 2, 'without your consent' is omitted, which is a key legal qualifier in the original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation B is more concise, professional, and follows the UX guidelines better. It uses 'Premium' (capitalized as per instructions) and avoids wordy, slightly unnatural phrases like 'no money will be charged from your card' found in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'no money will be charged from your card' is a bit clunky/wordy for UX; 'you will not be charged' is more natural."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'in the app' which was not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'premium features' instead of the brand-aligned 'Premium features'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'after a payment has been processed' is slightly more formal than the original, but fits the legal/subscription context well."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/last/title",
+          "ru": "Также будут доступны следующие функции:",
+          "oldText": "You also get access to the following features:",
+          "newText": "The following features are also available:",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A is a direct, professional, and standard way to introduce a list of features in a UI/UX context. Translation B is slightly more wordy and adds a sense of 'getting access' which isn't explicitly in the source.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Slightly more verbose than necessary for a standard feature list introduction."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation A uses a more engaging, user-centric tone ('You get access'), which fits the 'understanding friend' persona, whereas B is a passive, dry, and somewhat robotic construction.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Passive voice makes the text feel like a dry manual rather than a warm app interface."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/2/title",
+          "ru": "Безопасность персональных данных",
+          "oldText": "Personal data security",
+          "newText": "Data privacy and security",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A is the standard, idiomatic way to express this concept in English (Data privacy and security). Translation B is grammatically correct but sounds slightly more like a technical specification rather than a user-facing heading.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Lacks the 'privacy' aspect which is implied in the Russian 'Безопасность персональных данных' in a legal/UX context, and sounds slightly less natural as a heading."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "While A is a literal translation, B is the standard, idiomatic way to express this concept in English-speaking markets (Data privacy and security).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Sounds slightly more like a direct translation from Russian; 'Data privacy' is a more natural pairing with 'security' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/0/description",
+          "ru": "Заполнять дневник автоматических мыслей порой бывает непросто. Наша система рекомендаций поможет вам в этом: подскажет, поддержит и аккуратно направит, чтобы избежать ошибок. Так работа с мыслями станет понятнее и комфортнее.",
+          "oldText": "Keeping an automatic thought diary can sometimes be challenging. Our AI recommendation system offers gentle prompts, supports you and guides you around common pitfalls so that working with your thoughts becomes clearer and more comfortable.",
+          "newText": "Keeping an automatic thought journal can sometimes be challenging. Our recommendation system is here to help—offering guidance and support to help you navigate your thoughts more clearly and comfortably.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B is much more natural and follows the 'understanding friend' tone, whereas A is wordy and uses clunky phrasing like 'guides you around common pitfalls'. B also correctly uses the project-standard term 'journal' instead of 'diary'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'diary' instead of the required 'journal'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'guides you around common pitfalls' is a heavy, non-idiomatic construction; 'offers gentle prompts' is also a bit wordy for this context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 92
+              },
+              "reason": "Translation A is much more natural and follows the 'supportive friend' tone, whereas B is wordy and uses 'diary' instead of the required 'journal'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'diary' instead of the project-standard 'journal'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'guides you around common pitfalls' is a bit clunky and literal compared to the smoother A."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'AI' which was not in the original text."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/4/description",
+          "ru": "Ваши записи надёжно зашифрованы и хранятся на сервере. Это позволяет вам работать с дневником на разных устройствах и иметь доступ к своим данным всегда и везде.",
+          "oldText": "Your entries are securely encrypted and stored on our server. This lets you work with your diary on different devices and have access to your data anytime, anywhere.",
+          "newText": "Your entries are securely encrypted and stored on our server. This allows you to use your journal on different devices and access your data anytime, anywhere.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B follows the project glossary by using 'journal' instead of 'diary' and uses more professional, natural phrasing ('allows you to use' vs 'lets you work with').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'diary' instead of the required 'journal'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Work with your diary' sounds slightly unnatural/clunky compared to 'use your journal'"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 98
+              },
+              "reason": "Translation A follows the project glossary by using 'journal' instead of 'diary' and uses more natural phrasing ('use your journal' vs 'work with your diary').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'diary' instead of the required 'journal'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'work with your journal' is a bit clunky compared to 'use your journal'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/0/title",
+          "ru": "AI рекомендации при заполнении дневника",
+          "oldText": "AI guidance for your thought diary",
+          "newText": "AI-powered journaling guidance",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation A uses professional, idiomatic UX terminology ('AI-powered') and follows the project's glossary ('journaling'). Translation B is clunky, uses 'thought diary' (which is not a standard term), and sounds like a literal translation from Russian.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'thought diary' instead of the standard 'journal' or 'thought record'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrasing 'guidance for your thought diary' is unnatural and wordy for a UI header."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation B uses the idiomatic 'AI-powered' and the standard term 'journaling', whereas Translation A uses 'thought diary', which is a clunky, non-standard calque of the Russian 'дневник мыслей'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'thought diary' instead of the standard 'journal' or 'journaling'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'guidance for your... diary' sounds unnatural compared to 'journaling guidance'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/6/description",
+          "ru": "Мы собрали большую базу знаний по психологическому благополучию и продолжаем её расширять. Читайте статьи без ограничений и открывайте новые способы заботиться о себе каждый день.",
+          "oldText": "We’ve built a rich knowledge base on psychological well-being and keep expanding it. Read articles without limits and discover new ways to take care of yourself every day.",
+          "newText": "We have built an extensive knowledge base on mental well-being and are constantly expanding it. Read unlimited articles and discover new ways to practice self-care every day.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation B uses the project-standard term 'mental well-being' and more natural, idiomatic phrasing ('unlimited articles', 'practice self-care'). Translation A uses 'psychological well-being', which is slightly too academic for this context, and 'without limits' sounds a bit clunky.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "used 'psychological well-being' instead of the preferred 'mental well-being'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Read articles without limits' is less idiomatic than 'Read unlimited articles'"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A follows the project's terminology guidelines perfectly, using 'mental well-being' instead of the more academic 'psychological well-being'. It also uses more natural, idiomatic phrasing ('unlimited articles' vs 'articles without limits').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "used 'psychological well-being' instead of the preferred 'mental well-being'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'articles without limits' sounds slightly clunky compared to 'unlimited articles'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/7/title",
+          "ru": "Добавление изображений к записям",
+          "oldText": "Attach images to your entries",
+          "newText": "Add images to your entries",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation B is a direct and natural translation of the original action. Translation A uses 'Attach', which is grammatically correct but implies a different UX pattern (like an email attachment) rather than the simple act of adding content to a journal entry.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The verb 'Attach' is slightly less natural for a journal entry context than 'Add' or 'Include'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Translation A uses the more natural and standard UX term 'Add' for this context, whereas 'Attach' sounds slightly more technical/formal (like email attachments).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Attach' is grammatically correct but less common for a friendly, modern app interface than 'Add'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/4/title",
+          "ru": "Синхронизация между всеми устройствами",
+          "oldText": "Sync across all your devices",
+          "newText": "Sync across all devices",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "Translation A is more natural for a user-facing interface as it uses the possessive 'your', creating a more personal and engaging tone. Translation B is grammatically correct but sounds slightly more clinical or generic.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 100
+              },
+              "reason": "Translation A is more concise and follows standard UX patterns for feature descriptions. Translation B adds 'your', which is grammatically correct but slightly more wordy for a UI label.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "unnecessary addition of 'your' for a brief UI string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/2/description",
+          "ru": "Вы можете установить пароль на вход в приложение, а ваши данные будут дополнительно зашифрованы. Это обеспечивает высокий уровень защиты и гарантирует, что доступ к вашим записям будет только у вас.",
+          "oldText": "You can set a password to enter the app, and your data is additionally encrypted. This provides a high level of protection and ensures that only you have access to your entries.",
+          "newText": "You can set a passcode to enter the app, and your data is further protected by encryption. This ensures a high level of security, guaranteeing that your entries remain accessible only to you.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more direct, natural, and follows the UX principle of simplicity. Translation B is slightly wordy and uses a heavy, passive construction ('protected by encryption') which feels less like a modern app interface.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'guaranteeing that your entries remain accessible only to you' is unnecessarily long and heavy for a security notice."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B is more direct, natural, and follows the original structure more closely without unnecessary wordiness. Translation A's phrasing 'guaranteeing that your entries remain accessible only to you' is slightly clunky and shifts the focus to accessibility rather than access control.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'guaranteeing that your entries remain accessible only to you' is a bit wordy and less punchy than the original's intent."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/3/title",
+          "ru": "AI-распознавание речи",
+          "oldText": "AI-powered speech recognition",
+          "newText": "AI voice recognition",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation A uses the more professional and standard industry term 'speech recognition', whereas B uses 'voice recognition', which is slightly more colloquial. A also correctly captures the nuance of 'AI-powered' for 'AI-распознавание'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Voice recognition' is acceptable but 'speech recognition' is the standard technical term for processing spoken language."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation B uses the more natural and professional 'AI-powered' construction, which is standard for tech products. Translation A is grammatically correct but sounds slightly more like a literal translation or a raw label.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "A bit blunt/clipped; lacks the polished feel of 'AI-powered' typical for modern UX."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/5/description",
+          "ru": "Тесты созданы при участии профессиональных психологов и сопровождаются понятными пояснениями. Они помогут лучше понять себя и отслеживать изменения в состоянии со временем.",
+          "oldText": "Our tests are developed with input from professional psychologists and come with clear explanations. They help you understand yourself better and track changes in your state over time.",
+          "newText": "Our tests are developed with professional psychologists and include clear explanations. They will help you understand yourself better and track changes in your mental well-being over time.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more idiomatic and follows the project's terminology guidelines, specifically using 'mental well-being' instead of the literal and awkward 'state'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'state' instead of the preferred 'mental well-being' or 'mood' for describing psychological condition."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'come with' is slightly more casual/colloquial than 'include', though not a mistake; however, 'state' makes the sentence feel less professional."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 86
+              },
+              "reason": "Translation A is more natural and idiomatic. Translation B's phrase 'developed with professional psychologists' sounds like they were the subjects of the tests, whereas 'with input from' in A correctly conveys their participation/consultation.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'developed with professional psychologists' is ambiguous and sounds like the psychologists were the ones being developed or were the test subjects; 'with input from' or 'in collaboration with' is much better."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'They will help' is slightly more formal/predictive than the more direct 'They help' used in A, which fits the 'understanding friend' tone better."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/last/advantages",
+          "ru": "Экспорт данных в формате CSV\n\nАвтосинхронизация данных с психологом\n\nТаймер для расслабляющих звуков\n\nЗащита от повышения цены на подписку",
+          "oldText": "Data export in CSV format\n\nAutomatic data sync with your psychologist\n\nTimer for relaxing sounds\n\nProtection against subscription price increases",
+          "newText": "Export data as a CSV file\n\nAutomatic data sync with your psychologist\n\nTimer for relaxing sounds\n\nPrice protection for your subscription",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 94
+              },
+              "reason": "Translation B uses more natural, concise English phrasing for a UI context, particularly in the first and last items. Translation A is slightly more wordy and formal (e.g., 'in CSV format' vs 'as a CSV file').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'Data export in CSV format' is a bit heavy/clunky for a feature list compared to 'Export data as a CSV file'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Protection against subscription price increases' is grammatically correct but sounds overly long and bureaucratic for a benefit list."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation A uses more natural, concise UX patterns (e.g., 'Export data as...' instead of 'Data export in...'). Translation B's last line is too wordy and sounds like a literal translation of a legal clause rather than a feature benefit.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The first line is slightly heavy/formal for a feature list; 'Data export in CSV format' is less punchy than 'Export data as a CSV file'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The last line 'Protection against subscription price increases' is overly long and clunky for a UI/feature list; 'Price protection' is the standard way to express this concept."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/premium.json",
+          "lang": "en",
+          "key": "/list/1/description",
+          "ru": "Делитесь своими переживаниями с нашим AI, и он поможет взглянуть на ситуацию под новым углом. Искусственный интеллект предложит поддерживающие рекомендации и покажет когнитивные искажения, чтобы вы могли работать с ними более эффективно.",
+          "oldText": "Share your experiences with our AI, and it will help you look at your situation from a fresh perspective. The system will offer supportive recommendations and highlight cognitive distortions so you can work with them more effectively.",
+          "newText": "Share your experiences with our AI to gain a fresh perspective. The AI provides supportive recommendations and identifies cognitive distortions, helping you work through them more effectively.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation A is more concise, flows better, and avoids the repetitive 'The system will...' structure found in B. It uses a more natural, professional tone for a mental health app.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'The system' feels a bit cold and robotic compared to the warmer 'The AI' or simply starting with the action."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure is slightly wordy and less punchy than A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more idiomatic and follows the 'expert friend' tone better by using active, concise verbs. Translation A uses 'The system', which sounds cold and robotic, violating the warm tone requirement.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'The system' is too formal/mechanical for a supportive AI assistant."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure is slightly more wordy than necessary for a modern UX/app context."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
