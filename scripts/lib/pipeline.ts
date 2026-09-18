@@ -23,7 +23,7 @@ import { loadGlossary } from './glossary-utils.js';
 import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
-import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes } from './tag-reconcile.js';
+import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes, normalizeTypographicQuotesEn } from './tag-reconcile.js';
 import { stripIcuConstructs } from './validation.js';
 import { buildSubtree } from './tree.js';
 import type { AIProvider, ProviderType } from './types.js';
@@ -1086,6 +1086,14 @@ export async function runPipeline(
   const normalizedQuotes = normalizeTagQuotes(draft);
   if (normalizedQuotes > 0) {
     console.warn(`⚠️ [tags] кавычки атрибутов нормализованы в ${normalizedQuotes} листах`);
+  }
+
+  // Текстовые кавычки en — типографские (модель нарушает style.txt despite prompt).
+  if (targetLocale.toLowerCase() === 'en') {
+    const typographic = normalizeTypographicQuotesEn(draft);
+    if (typographic > 0) {
+      console.warn(`⚠️ [quotes] текстовые кавычки приведены к типографским в ${typographic} листах`);
+    }
   }
 
   // Финальный скан задвоений: последняя сетка независимо от того, через какую

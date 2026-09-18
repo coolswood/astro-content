@@ -151,3 +151,34 @@ describe('normalizeTagQuotes — кавычки атрибутов к двойн
     expect(data.d[0]).toBe('<activitylink id="DzseWuFv2t">');
   });
 });
+
+describe('normalizeTypographicQuotesEn', () => {
+  const { normalizeTypographicQuotesEn } = require('../scripts/lib/tag-reconcile.js');
+
+  test('прямые кавычки → типографские парные', () => {
+    const data = { a: 'The "achievement race" is real', b: ['Say "no" to stigma'] };
+    expect(normalizeTypographicQuotesEn(data)).toBe(2);
+    expect(data.a).toBe('The “achievement race” is real');
+    expect(data.b[0]).toBe('Say “no” to stigma');
+  });
+
+  test('апострофы → ’, цитаты в одну шпацию → ‘ ’', () => {
+    const data = { s: "You don't know 'best' yet" };
+    normalizeTypographicQuotesEn(data);
+    expect(data.s).toBe('You don’t know ‘best’ yet');
+  });
+
+  test('кавычки внутри тегов не трогаются', () => {
+    const data = { s: '<q author="A. Ivanov">He said "go"</q> and <instagram ids="123">' };
+    normalizeTypographicQuotesEn(data);
+    expect(data.s).toContain('author="A. Ivanov"');
+    expect(data.s).toContain('<instagram ids="123">');
+    expect(data.s).toContain('said “go”');
+  });
+
+  test('нечётное число кавычек вне тегов — лист пропускается', () => {
+    const data = { s: 'Broken " quote here' };
+    expect(normalizeTypographicQuotesEn(data)).toBe(0);
+    expect(data.s).toBe('Broken " quote here');
+  });
+});

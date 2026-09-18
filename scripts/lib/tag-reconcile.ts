@@ -178,6 +178,51 @@ export function normalizeTagQuotes(data: any): number {
 }
 
 /**
+ * Типографские кавычки в тексте en-локали (правило style.txt): “ ” для
+ * цитат, ’ для апострофов. Модель регулярно даёт прямые " и ' несмотря
+ * на промпт, поэтому нормализуем механически. Кавычки внутри тегов
+ * (<q author="...">) не трогаются; листья с нечётным числом " вне тегов
+ * пропускаются (риск неверной парности). Мутирует data, возвращает число
+ * исправленных листьев.
+ */
+export function normalizeTypographicQuotesEn(data: any): number {
+  let changed = 0;
+  const convert = (text: string): string => {
+    const parts = text.split(/(<[^>]*>)/);
+    const outside = parts.filter((_, i) => i % 2 === 0).join('');
+    if ((outside.match(/"/g) || []).length % 2 !== 0) return text;
+    let open = true;
+    const next = parts
+      .map((part, i) => {
+        if (i % 2 === 1) return part; // тег — как есть
+        let s = part.replace(/"/g, () => (open = !open) ? '”' : '“');
+        s = s.replace(/(?<![A-Za-z])'([^']+)'(?![A-Za-z])/g, '‘$1’'); // цитаты в ‘ ’
+        return s.replace(/'/g, '’'); // остальные ' — апострофы
+      })
+      .join('');
+    return next;
+  };
+  const walk = (node: any): any => {
+    if (typeof node === 'string') {
+      const next = convert(node);
+      if (next !== node) changed++;
+      return next;
+    }
+    if (Array.isArray(node)) {
+      for (let i = 0; i < node.length; i++) node[i] = walk(node[i]);
+      return node;
+    }
+    if (node && typeof node === 'object') {
+      for (const k of Object.keys(node)) node[k] = walk(node[k]);
+      return node;
+    }
+    return node;
+  };
+  walk(data);
+  return changed;
+}
+
+/**
  * Конвенция платформы: встраиваемый пост Instagram рендерится только для
  * ru и en; в остальных локалях <instagram> обязан быть ПУСТЫМ тегом.
  * Промптовое правило модель регулярно нарушает, копируя тег из оригинала
