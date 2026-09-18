@@ -230,7 +230,10 @@ function guardChain(
   if (base.arbValueBefore === oldText) return { ...base, verdict: 'noop', reason: 'значение уже идентично OLD' };
 
   // (b) валидация OLD-текста против ru-листа (как у основного конвейера).
-  const leafIssues: ValidationIssue[] = validateTranslation(lang, { [key]: ruText }, { [key]: oldText });
+  // Ключ без ведущего слэша: norm() в валидаторе нормализует только ru-сторону,
+  // слэш в ключе перевода даёт фантомные «потеряны/лишние ключи».
+  const bareKey = key.replace(/^\//, '');
+  const leafIssues: ValidationIssue[] = validateTranslation(lang, { [bareKey]: ruText }, { [bareKey]: oldText });
   if (leafIssues.length > 0) {
     const msg = leafIssues.map((i) => `${i.path}: ${i.message}`).join('; ');
     return { ...base, verdict: 'skip', reason: `валидация не пройдена — ${msg}` };
@@ -378,27 +381,77 @@ async function runContentMode(args: Args, report: ReportFile, lang: string): Pro
     const pairs = report.results[file][lang] ?? [];
     const decisions: Decision[] = [];
     const mergedLeaves: Leaves = {};
+    // Юниты сравнения бывают и ЛИСТЬЯМИ, и ГРУППАМИ (например «/testExpired» —
+    // массив сообщений, «/screen_1/texts»). flattenLeaves содержит только
+    // строковые листья, поэтому пару разворачиваем во все листья под её путём;
+    // группа переносится только ЦЕЛИКОМ: вердикт судьи дан юниту, частичный
+    // мердж смешал бы два варианта внутри оцениваемого фрагмента.
+    const collectUnder = (leaves: Leaves, prefix: string): Leaves => {
+      const out: Leaves = {};
+      for (const [p, v] of Object.entries(leaves)) {
+        if (p === prefix || p.startsWith(prefix + '/')) out[p] = v;
+      }
+      return out;
+    };
     for (const p of pairs) {
       if (!(p.status === 'judged' && p.stable && p.stableWinner === 'old')) continue;
       const key = p.key; // уже в нотации flattenLeaves (со слэшем)
-      const oldText = oldLeaves[key];
-      // (content) OLD-текст из git сверяется с тем, что судил eval.
-      if (typeof oldText === 'string' && oldText !== p.oldText) {
+
+      const oldUnder = collectUnder(oldLeaves, key);
+      const ruUnder = collectUnder(ruLeaves, key);
+      const targetUnder = collectUnder(targetLeaves, key);
+      const base = { file, scores: scoresOf(p), judgeReason: p.passes.find((x) => x.ok)?.reason ?? '' };
+      if (Object.keys(oldUnder).length === 0) {
+        decisions.push({ ...base, key, verdict: 'skip', reason: 'пути нет в источнике OLD', arbValueBefore: '', mergeTo: '' });
+        continue;
+      }
+      if (Object.keys(ruUnder).length === 0) {
+        decisions.push({ ...base, key, verdict: 'skip', reason: 'пути нет в ru-каноне', arbValueBefore: '', mergeTo: '' });
+        continue;
+      }
+      if (Object.keys(targetUnder).length === 0) {
+        decisions.push({ ...base, key, verdict: 'skip', reason: 'пути нет в цели', arbValueBefore: '', mergeTo: '' });
+        continue;
+      }
+
+      // (content) OLD-текст группы сверяется с тем, что судил eval.
+      // Текст группы в отчёте — значения листьев, склеенные '\n\n' (см. qa.ts);
+// порядок — документный (порядок вставки flattenLeaves).
+      const oldJoined = Object.keys(oldUnder)
+        .map((k) => oldUnder[k])
+        .join('\n\n');
+      if (oldJoined !== p.oldText) {
         decisions.push({
-          file,
+          ...base,
           key,
           verdict: 'skip',
           reason: 'текст OLD в git не совпадает с pair.oldText из отчёта (базлайн изменился?)',
-          arbValueBefore: String(targetLeaves[key] ?? ''),
-          mergeTo: oldText,
-          scores: scoresOf(p),
-          judgeReason: p.passes.find((x) => x.ok)?.reason ?? '',
+          arbValueBefore: '',
+          mergeTo: oldJoined,
         });
         continue;
       }
-      const d = guardChain(file, key, targetLeaves[key], oldText, ruLeaves[key], lang, p);
-      if (d.verdict === 'apply') mergedLeaves[key] = d.mergeTo;
-      decisions.push(d);
+
+      // Листовые решения (одиночный ключ — вырожденный случай группы из одного).
+      const leafKeys = Object.keys(oldUnder).sort();
+      const leafDecisions = leafKeys.map((k) =>
+        guardChain(file, k, targetUnder[k], oldUnder[k], ruUnder[k], lang, p),
+      );
+      const blocking = leafDecisions.find((d) => d.verdict === 'skip');
+      if (blocking) {
+        // Группа целиком не проходит — applies конвертируем в skip с причиной.
+        for (const d of leafDecisions) {
+          if (d.verdict === 'apply') {
+            d.verdict = 'skip';
+            d.reason = `группа \`${key}\` переносится только целиком — лист не прошёл: ${blocking.key}: ${blocking.reason}`;
+          }
+        }
+      } else {
+        for (const d of leafDecisions) {
+          if (d.verdict === 'apply') mergedLeaves[d.key] = d.mergeTo;
+        }
+      }
+      decisions.push(...leafDecisions);
     }
     allDecisions.push(...decisions);
     const appliedHere = decisions.filter((d) => d.verdict === 'apply').length;

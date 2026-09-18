@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T05:51:18.618Z",
+    "Метка": "en-content-verif-coping",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "story/coping.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 44,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "431bd08c6c487840271a919950ac699dadad71e1"
+  },
+  "results": {
+    "story/coping.json": {
+      "en": [
+        {
+          "file": "story/coping.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Копинг-карточки — простой, но очень действенный инструмент когнитивно-поведенческой терапии. Они помогают справляться со стрессом, по-новому смотреть на трудные ситуации и поддерживать себя в моменты сомнений. Эти небольшие «напоминания» возвращают чувство уверенности и помогают двигаться к эмоциональному росту. Исследуйте свои мысли, находите опору внутри себя и шаг за шагом приходите к более спокойной и устойчивой жизни.",
+          "oldText": "Coping cards are a simple yet highly effective tool in Cognitive Behavioral Therapy (CBT). They help you manage stress, see difficult situations from a new angle, and support yourself in moments of doubt. These small reminders restore confidence and keep you moving toward emotional growth. Explore your thoughts, find your grounding, and take steady steps toward a calmer, more resilient life.",
+          "newText": "Coping cards are a simple yet highly effective tool in cognitive behavioral therapy (CBT). They help you manage stress, see difficult situations in a new light, and support yourself during moments of doubt. These small reminders restore your confidence and help you move toward emotional growth. Explore your thoughts, find your inner strength, and take steps towards a calmer, more resilient life.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 90
+              },
+              "reason": "Translation A is more idiomatic and flows better as a piece of psychoeducation. 'Find your grounding' is a much more natural and professional way to express 'находить опору' in a mental health context than the literal 'find your inner strength'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'help you move toward' is slightly weaker and more wordy than 'keep you moving toward' in A, which better captures the continuous nature of the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A follows the project's capitalization rules (sentence case for CBT) and uses more natural, idiomatic phrasing. Translation B fails on capitalization and uses 'find your grounding', which is a slightly awkward way to translate 'находить опору внутри себя' in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Capitalized 'Cognitive Behavioral Therapy' in the middle of a sentence, violating sentence case rules."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'find your grounding' sounds slightly unnatural compared to 'find your inner strength' or 'find your footing'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/coping.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Копинг-карточки — ещё один тихий, но очень мощный инструмент когнитивно-поведенческой терапии.\n\n<h2>Что такое копинг-карточки?</h2>\n\nКопинг-карточки — это метод КПТ, который помогает справляться с негативными мыслями и стрессовыми моментами, поддерживая более здоровое восприятие происходящего.\n\n<instagram ids=\"18069727405892654,18286022239251359\">\n\n<h2>Это своего рода «памятка», подсказывающая, как заменить деструктивные убеждения на поддерживающие и вернуть уверенность в себе.</h2>\n\nПочему стоит использовать копинг-карточки?\n\nСнижение тревожности: копинг-карточки помогают быстро восстановить спокойствие, когда эмоции накрывают слишком сильно.\n\nПоддержка в трудные моменты: в минуты сомнений они становятся голосом поддержки, напоминая о вашей силе и ресурсах.\n\nРазвитие самосознания: записывая свои мысли и реакции, вы лучше понимаете, что запускает эмоции и как на них влиять.\n\nПростота и доступность: интерфейс нашего приложения понятен и удобен, поэтому создавать карточки легко и комфортно.\n\n<q author=\"Аарон Бек\">Вы можете страдать, если выбираете иррациональные убеждения, но вы можете не страдать, если выбираете рациональные.</q>",
+          "oldText": "Coping cards are another quiet yet powerful CBT tool.\n\nWhat are coping cards?\n\nCoping cards are a CBT method that helps you work with unhelpful thoughts and stressful moments by supporting a healthier interpretation of what’s happening.\n\nThey’re like prompts that show how to replace unhelpful beliefs with supportive ones and regain confidence.\n\nWhy use coping cards?\n\nReducing anxiety: coping cards help you quickly restore calm when emotions feel overwhelming.\n\nSupport in hard moments: when doubts arise, they become a voice of encouragement, reminding you of your strengths and resources.\n\nDeveloping self-awareness: by writing down your thoughts and reactions, you gain a clearer understanding of what triggers your emotions and how to influence them.\n\nSimplicity and accessibility: our app’s interface is clear and intuitive, so creating cards is easy.\n\nSimple and accessible: our intuitive interface makes creating your cards easy and comfortable.\n\n<q author='Aaron Beck'>You may suffer if you choose irrational beliefs, but you need not suffer if you choose rational ones.</q>",
+          "newText": "Coping cards are another quiet but incredibly powerful tool in cognitive behavioral therapy (CBT).\n\n<h2>What are coping cards?</h2>\n\nCoping cards are a CBT method that helps you manage unhelpful thoughts and stressful moments by supporting a more balanced perspective on what’s happening.\n\n<instagram ids=\"18069727405892654,18286022239251359\">\n\n<h2>They act as a kind of \"memo,\" showing you how to replace unhelpful beliefs with adaptive ones and regain your confidence.</h2>\n\nWhy use coping cards?\n\nReduce anxiety: coping cards help you quickly regain calm when emotions feel overwhelming.\n\nSupport in difficult moments: in times of doubt, they become a supportive voice, reminding you of your strength and resources.\n\nDevelop self-awareness: by recording your thoughts and reactions, you’ll better understand what triggers your emotions and how to manage them.\n\nSimple and accessible: our app’s interface is intuitive and easy to use, making it comfortable to create your cards.\n\n<q author=\"Aaron Beck\">You may suffer if you choose irrational beliefs, but you may not suffer if you choose rational ones.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B follows the glossary and CBT terminology much more accurately (using 'adaptive' instead of 'supportive' for beliefs, and 'balanced perspective' instead of 'interpretation'). It also correctly handles the full term introduction for CBT and maintains a better professional yet warm tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'supportive ones' for beliefs; 'adaptive' is the required term per glossary."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added an extra sentence 'Simple and accessible...' which seems to be a duplicate/fragment of the previous line."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of the Beck quote 'you need not suffer' is slightly more archaic/formal than the original's 'you can' (you may not)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'memo' is a bit literal for 'памятка', but acceptable in context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Translation A is much more polished and follows all UX/CBT guidelines. Translation B has a major structural error (repetition of the last point) and uses less natural phrasing.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "The last section is repeated twice with slightly different wording."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Using gerunds (Reducing, Developing) for list headers is less punchy for UX than the imperative/noun form used in A."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'supportive ones' instead of the preferred 'adaptive ones' for beliefs."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/coping.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Давайте посмотрим на несколько примеров, чтобы лучше понять принцип замены деструктивных мыслей.\n\n<h2>Пример 1</h2>\n\nДеструктивная мысль: «Я не справлюсь с этим проектом, я недостаточно хорош».\n\nКонструктивная замена: «Я уже справлялся с трудными задачами раньше. У меня есть знания и ресурсы, чтобы завершить и эту».\n\n<h2>Пример 2</h2>\n\nДеструктивная мысль: «Все будут смеяться надо мной, если я скажу что-то глупое».\n\nКонструктивная замена: «Ошибаться может каждый. Я учусь, и общение — это возможность расти и развиваться».\n\n<instagram ids=\"18069727405892654,18286022239251359\">\n\n<h2>Пример 3</h2>\n\nДеструктивная мысль: «Ничто не изменится, жизнь всегда будет такой».\n\nКонструктивная замена: «Изменения происходят постепенно. Даже маленькие шаги приводят к большим результатам».\n\n<h2>Вывод</h2>\n\nКопинг-карточки — это мощный и мягкий способ управлять мыслями и эмоциями.\n\nОни помогают восстановить связь с рациональным, спокойным взглядом на ситуацию и противостоять негативным убеждениям.\n\nИспользуя их, вы лучше понимаете себя и свои реакции на стресс.\n\nНачните создавать свои карточки уже сегодня и сделайте первый шаг к более спокойной, уверенной и устойчивой жизни.",
+          "oldText": "Let’s look at a few examples to see how to replace unhelpful thoughts.\n\nExample 1\n\nUnhelpful thought: “I won’t manage this project; I’m not good enough.”\n\nConstructive replacement: “I’ve handled tough tasks before. I have the knowledge and resources to complete this one too.”\n\nExample 2\n\nUnhelpful thought: “Everyone will laugh at me if I say something silly.”\n\nConstructive replacement: “Everyone makes mistakes. I’m learning, and conversations are a chance to grow and develop.”\n\nExample 3\n\nUnhelpful thought: “Nothing will change; life will always be like this.”\n\nConstructive replacement: “Change happens gradually. Even small steps lead to big results.”\n\nTakeaway\n\nCoping cards are a gentle yet powerful way to work with thoughts and emotions.\n\nThey help you reconnect with a calm, rational view of the situation and counter unhelpful beliefs.\n\nBy using them, you’ll get to know yourself and your stress responses better.\n\nStart creating your cards today and take the first step toward a calmer, more confident, and more resilient life.\n\nStart creating your cards today and take the first step toward a calmer, more confident, and more resilient life.",
+          "newText": "Let’s look at a few examples to better understand how to replace unhelpful thoughts.\n\n<h2>Example 1</h2>\n\nUnhelpful thought: \"I won’t be able to handle this project; I’m not good enough.\"\n\nAdaptive replacement: \"I’ve handled difficult tasks before. I have the knowledge and resources to finish this one, too.\"\n\n<h2>Example 2</h2>\n\nUnhelpful thought: \"Everyone will laugh at me if I say something stupid.\"\n\nAdaptive replacement: \"Anyone can make a mistake. I’m learning, and social interaction is an opportunity to grow.\"\n\n<instagram ids=\"18069727405892654,18286022239251359\">\n\n<h2>Example 3</h2>\n\nUnhelpful thought: \"Nothing will ever change; life will always be like this.\"\n\nAdaptive replacement: \"Changes happen gradually. Even small steps lead to big results.\"\n\n<h2>Conclusion</h2>\n\nCoping cards are a powerful and gentle way to manage your thoughts and emotions.\n\nThey help you reconnect with a rational, calm perspective and stand up to unhelpful beliefs.\n\nBy using them, you’ll gain a deeper understanding of yourself and how you respond to stress.\n\nStart creating your cards today and take the first step toward a calmer, more confident, and more resilient life.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation B is superior because it uses the correct terminology ('Adaptive replacement') as per the project glossary and maintains the original HTML structure and tags. Translation A also has a repetitive error at the end, duplicating the final sentence.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost all HTML tags (h2, instagram) which are part of the source structure."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "The final sentence is duplicated at the end of the text."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'общение' as 'social interaction' is slightly more formal than the original, but fits the context well."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A follows the project's terminology perfectly (using 'Adaptive replacement' which aligns with 'adaptive belief' and 'adaptive response') and maintains the HTML structure. Translation B fails to include the HTML tags, uses 'Constructive replacement' (not in the glossary), and has a repetitive error at the end.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing HTML tags (h2) present in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "'Constructive replacement' should be 'Adaptive replacement' to match the 'adaptive' terminology used elsewhere in the project."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The last sentence is duplicated at the end of the text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Takeaway' is a bit informal for a header compared to 'Conclusion', though acceptable; however, the loss of tags is the main issue."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/coping.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Копинг-карточка: маленький помощник для больших перемен",
+          "oldText": "Coping Cards: A Small Helper for Big Changes",
+          "newText": "Coping cards: small tools for big changes",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation A follows the sentence case rule for titles and maintains the warm, supportive 'helper' metaphor from the original. Translation B uses 'tools', which is a slight shift in tone, and fails to use sentence case correctly for a title.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses lowercase 'cards' in a title and replaces the personified 'helper' with the more clinical 'tools'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more idiomatic and natural for a title/subtitle structure. Translation B uses 'A Small Helper', which sounds slightly childish and literal (calque from 'маленький помощник'), whereas 'small tools' in A sounds professional and fits the CBT context better.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'A Small Helper' feels a bit too literal and lacks the punchy, professional tone of a mental health app."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case for the whole phrase, whereas A follows a more standard subtitle rhythm."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/coping.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "<h2>Как это работает?</h2>\n\nКогда вы замечаете деструктивную мысль, копинг-карточка помогает заменить её на более реалистичную и поддерживающую.\n\nПоначалу это может требовать немного практики, но со временем вы научитесь замечать негативные мысли быстрее и менять их на более конструктивные.\n\nНапример, если появляется мысль: «Я никогда не смогу достичь своих целей», её можно заменить на: «Мне бывает трудно, но у меня есть план, и я могу идти вперёд даже маленькими шагами».\n\nТакой подход помогает не только иначе смотреть на ситуацию, но и вдохновляет действовать.\n\nРегулярно пересматривайте и обновляйте свои карточки.\n\nНаши чувства и мысли меняются, поэтому важно, чтобы карточки соответствовали вашим текущим потребностям.\n\n<important>Если какая-то негативная мысль уже потеряла силу или вы справились с трудностью, обновите карточку и запишите новое поддерживающее убеждение.</important>\n\nВ нашем приложении вы легко сможете редактировать существующие карточки и создавать новые.\n\nСо временем копинг-карточки становятся не просто инструментом против негативных мыслей, а вашим личным путеводителем в процессе саморазвития и эмоционального роста.",
+          "oldText": "How does it work?\n\nWhen you notice an unhelpful thought, a coping card helps you replace it with something more realistic and supportive.\n\nAt first this may take some practice, but over time you’ll spot negative thoughts faster and shift them to more constructive ones.\n\nFor example, if the thought appears: “I’ll never achieve my goals,” you can replace it with: “Things can be hard, but I have a plan, and I can move forward even in small steps.”\n\nThis approach not only changes how you see the situation—it also motivates action.\n\nReview and update your cards regularly.\n\nYour feelings and thoughts change, so it’s important that your cards match your current needs.\n\nIf a negative thought has lost its power or you’ve worked through a difficulty, update the card and write a new supportive belief.\n\nIn our app, you can easily edit existing cards and create new ones.\n\nOver time, coping cards become more than a tool for working with negative thoughts—they become your personal guide in growth and emotional development.",
+          "newText": "<h2>How does it work?</h2>\n\nWhen you notice an unhelpful thought, a coping card helps you replace it with one that is more realistic and supportive.\n\nIt might take a little practice at first, but over time you’ll learn to notice unhelpful thoughts faster and shift them toward more adaptive ones.\n\nFor example, if you think, \"I’ll never reach my goals,\" you can replace it with: \"It’s hard right now, but I have a plan, and I can keep moving forward, even with small steps.\"\n\nThis approach doesn't just help you see the situation differently—it inspires you to take action.\n\nReview and update your cards regularly.\n\nOur feelings and thoughts change, so it’s important that your cards reflect your current needs.\n\n<important>If an unhelpful thought has lost its power or you’ve overcome a challenge, update the card and write a new adaptive belief.</important>\n\nIn our app, you can easily edit existing cards and create new ones.\n\nOver time, coping cards become more than just a tool against unhelpful thoughts—they become your personal guide for self-development and emotional growth.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is superior because it adheres strictly to the project's CBT terminology (using 'adaptive' instead of 'constructive' and 'unhelpful' instead of 'negative') and maintains the required HTML tags. It also sounds more natural and idiomatic for a mental health app.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing HTML tags <h2> and <important> present in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'constructive' instead of the preferred 'adaptive' for beliefs/responses."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'negative thoughts' where 'unhelpful' is the preferred project term for a non-judgmental tone."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 98
+              },
+              "reason": "Translation A is superior because it strictly adheres to the project's CBT terminology (using 'adaptive' instead of 'constructive' or 'supportive' for beliefs) and maintains the correct HTML structure. Translation B fails to include the <important> tags and uses less precise terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing <important> tags around the key instruction."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'constructive' and 'supportive belief' instead of the required 'adaptive belief'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'if the thought appears' is slightly less natural than 'if you think' or 'if a thought arises'."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
