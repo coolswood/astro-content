@@ -151,6 +151,56 @@ function decrement2(map: Map<string, number>, key: string, n: number): void {
 const INSTAGRAM_ATTR_LOCALES = new Set(['ru', 'en']);
 
 /**
+ * Восстанавливает per-locale ids в <instagram ids="…"> из прежнего перевода
+ * целевого файла: посты Instagram заводятся ПОД ЛОКАЛЬ (легаси en ссылается
+ * на англоязычные посты), а модель при переводе копирует тег из ru-канона
+ * дословно — вместе с русскими ids. Сопоставление — по порядку появления
+ * тега в файле; при нехватке легаси-ids лишние теги не трогаются.
+ * Мутирует translated, возвращает число исправленных листьев.
+ */
+export function restoreInstagramIds(lang: string, translated: any, legacy: any): number {
+  const lc = lang.toLowerCase();
+  if (!INSTAGRAM_ATTR_LOCALES.has(lc) || lc === 'ru') return 0;
+  const legacyIds: string[] = [];
+  const collect = (node: any): void => {
+    if (typeof node === 'string') {
+      for (const m of node.matchAll(/<instagram\s+ids="?(\d+)"?/g)) legacyIds.push(m[1]);
+    } else if (Array.isArray(node)) {
+      for (const v of node) collect(v);
+    } else if (node && typeof node === 'object') {
+      for (const v of Object.values(node)) collect(v);
+    }
+  };
+  collect(legacy);
+  if (legacyIds.length === 0) return 0;
+  let i = 0;
+  let changed = 0;
+  const walk = (node: any): any => {
+    if (typeof node === 'string') {
+      const next = node.replace(/(<instagram\s+ids=")(\d+)(")/g, (m, open: string, _id: string, close: string) => {
+        if (i >= legacyIds.length) return m;
+        const id = legacyIds[i++];
+        if (id === _id) return m;
+        return `${open}${id}${close}`;
+      });
+      if (next !== node) changed++;
+      return next;
+    }
+    if (Array.isArray(node)) {
+      for (let k = 0; k < node.length; k++) node[k] = walk(node[k]);
+      return node;
+    }
+    if (node && typeof node === 'object') {
+      for (const k of Object.keys(node)) node[k] = walk(node[k]);
+      return node;
+    }
+    return node;
+  };
+  walk(translated);
+  return changed;
+}
+
+/**
  * Нормализует кавычки значений атрибутов тегов: модель даёт вперемешку
  * author='…' и author="…" (конвенция проекта — двойные). Мутирует data,
  * возвращает число исправленных листьев.

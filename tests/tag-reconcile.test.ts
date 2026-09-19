@@ -182,3 +182,32 @@ describe('normalizeTypographicQuotesEn', () => {
     expect(data.s).toBe('Broken " quote here');
   });
 });
+
+describe('restoreInstagramIds', () => {
+  const { restoreInstagramIds } = require('../scripts/lib/tag-reconcile.js');
+
+  test('ru-ids заменяются на легаси en по порядку появления', () => {
+    const cur = { a: '<instagram ids="111">x', b: ['<instagram ids="222">y'] };
+    const legacy = { a: '<instagram ids="900001">x', b: ['<instagram ids="900002">y'] };
+    expect(restoreInstagramIds('en', cur, legacy)).toBe(2);
+    expect(cur.a).toContain('ids="900001"');
+    expect(cur.b[0]).toContain('ids="900002"');
+  });
+
+  test('ru — источник, не чинится; пустой легаси — no-op', () => {
+    const cur = { a: '<instagram ids="111">' };
+    expect(restoreInstagramIds('ru', cur, { a: '<instagram ids="800001">' })).toBe(0);
+    expect(cur.a).toContain('111');
+    expect(restoreInstagramIds('en', cur, { a: 'no tags here' })).toBe(0);
+    expect(cur.a).toContain('111');
+  });
+
+  test('легаси короче текущего — лишние теги не трогаются; чужие локали — no-op', () => {
+    const cur = { a: '<instagram ids="111">', b: '<instagram ids="222">' };
+    const legacy = { a: '<instagram ids="900001">' };
+    expect(restoreInstagramIds('en', cur, legacy)).toBe(1);
+    expect(cur.a).toContain('900001');
+    expect(cur.b).toContain('222');
+    expect(restoreInstagramIds('de', cur, legacy)).toBe(0);
+  });
+});
