@@ -183,31 +183,56 @@ describe('normalizeTypographicQuotesEn', () => {
   });
 });
 
-describe('restoreInstagramIds', () => {
-  const { restoreInstagramIds } = require('../scripts/lib/tag-reconcile.js');
+describe('reconcileInstagramTags', () => {
+  const { reconcileInstagramTags } = require('../scripts/lib/tag-reconcile.js');
 
-  test('ru-ids заменяются на легаси en по порядку появления', () => {
-    const cur = { a: '<instagram ids="111">x', b: ['<instagram ids="222">y'] };
-    const legacy = { a: '<instagram ids="900001">x', b: ['<instagram ids="900002">y'] };
-    expect(restoreInstagramIds('en', cur, legacy)).toBe(2);
-    expect(cur.a).toContain('ids="900001"');
-    expect(cur.b[0]).toContain('ids="900002"');
+  test('ids заменяются на легаси-en по пути (включая списки-карусели)', () => {
+    const cur = { a: '<instagram ids="111,222">x' };
+    const legacy = { '/a': '<instagram ids="333">' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(1);
+    expect(cur.a).toBe('<instagram ids="333">');
   });
 
-  test('ru — источник, не чинится; пустой легаси — no-op', () => {
-    const cur = { a: '<instagram ids="111">' };
-    expect(restoreInstagramIds('ru', cur, { a: '<instagram ids="800001">' })).toBe(0);
-    expect(cur.a).toContain('111');
-    expect(restoreInstagramIds('en', cur, { a: 'no tags here' })).toBe(0);
-    expect(cur.a).toContain('111');
+  test('тег, которого нет в легаси, удаляется из массива', () => {
+    const cur = { texts: ['before', '<instagram ids="111">', 'after'] };
+    const legacy = { '/texts/0': 'before', '/texts/1': 'after' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(1);
+    expect(cur.texts).toEqual(['before', 'after']);
   });
 
-  test('легаси короче текущего — лишние теги не трогаются; чужие локали — no-op', () => {
-    const cur = { a: '<instagram ids="111">', b: '<instagram ids="222">' };
-    const legacy = { a: '<instagram ids="900001">' };
-    expect(restoreInstagramIds('en', cur, legacy)).toBe(1);
-    expect(cur.a).toContain('900001');
-    expect(cur.b).toContain('222');
-    expect(restoreInstagramIds('de', cur, legacy)).toBe(0);
+  test('легаси-тег, отсутствующий в переводе, вставляется на свой индекс', () => {
+    const cur = { texts: ['a', 'b'] };
+    const legacy = { '/texts/0': 'a', '/texts/1': '<instagram ids="333">', '/texts/2': 'b' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(1);
+    expect(cur.texts).toEqual(['a', '<instagram ids="333">', 'b']);
+  });
+
+  test('ru — источник (no-op); чужая локаль — no-op; пустой легаси — удаляет теги', () => {
+    const ru = { a: '<instagram ids="111">' };
+    expect(reconcileInstagramTags('ru', ru, { '/a': '<instagram ids="999">' })).toBe(0);
+    expect(ru.a).toContain('111');
+    const de = { a: '<instagram ids="111">' };
+    expect(reconcileInstagramTags('de', de, { '/a': '<instagram ids="999">' })).toBe(0);
+    const en = { a: '<instagram ids="111">' };
+    expect(reconcileInstagramTags('en', en, {})).toBe(1);
+    expect(en.a).toBeUndefined();
+  });
+
+  test('вставка и удаление в одном массиве — по убыванию индекса', () => {
+    const cur = { texts: ['a', '<instagram ids="111">', 'b'] };
+    const legacy = { '/texts/0': 'a', '/texts/1': 'b', '/texts/2': '<instagram ids="999">' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(2);
+    expect(cur.texts).toEqual(['a', 'b', '<instagram ids="999">']);
+  });
+});
+
+describe('reconcileInstagramTags — регресс дублирования', () => {
+  const { reconcileInstagramTags } = require('../scripts/lib/tag-reconcile.js');
+
+  test('тег уже на месте с тем же значением — повторный прогон не вставляет дубликат', () => {
+    const cur = { texts: ['a', '<instagram ids="900001">', 'b'] };
+    const legacy = { '/texts/0': 'a', '/texts/1': '<instagram ids="900001">', '/texts/2': 'b' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(0);
+    expect(cur.texts).toEqual(['a', '<instagram ids="900001">', 'b']);
   });
 });

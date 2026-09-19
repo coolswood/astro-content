@@ -62,7 +62,7 @@ import {
 } from './lib/validation.js';
 import { judgeFile } from './lib/judge.js';
 import { restoreMediaPaths, sourceLeavesForLang } from './lib/media-paths.js';
-import { restoreInstagramIds } from './lib/tag-reconcile.js';
+import { reconcileInstagramTags } from './lib/tag-reconcile.js';
 import {
   flattenLeaves,
   buildSubtree,
@@ -364,13 +364,13 @@ async function translateWithRetries(
       };
       guardMediaPaths();
 
-      // Instagram-ids — per-locale (легаси en ссылается на англоязычные
-      // посты): модель копирует тег из ru-канона с русскими ids. Чинится
-      // из fallback-перевода (состояние целевого файла до прогона).
+      // Instagram-теги — per-locale (легаси en ведёт англоязычные посты):
+      // набор тегов en согласуется с состоянием файла до прогона — замена
+      // ids, удаление ru-тегов, которых в en не было, вставка en-тегов.
       {
-        const igFixes = restoreInstagramIds(lang, result, fallbackLeaves ?? {});
+        const igFixes = reconcileInstagramTags(lang, result, fallbackLeaves ?? {});
         if (igFixes > 0) {
-          console.warn(`   🛠 [${lang}] восстановлены instagram-ids из легаси: ${igFixes} листьев`);
+          console.warn(`   🛠 [${lang}] instagram-теги согласованы с легаси: ${igFixes} листьев`);
         }
       }
 

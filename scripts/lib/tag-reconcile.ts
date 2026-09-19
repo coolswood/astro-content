@@ -150,53 +150,125 @@ function decrement2(map: Map<string, number>, key: string, n: number): void {
 /** Локали, которым разрешены атрибуты у <instagram ids="…">. Остальным — пустой тег. */
 const INSTAGRAM_ATTR_LOCALES = new Set(['ru', 'en']);
 
+/** Похожа ли строка на тег <instagram …> (ids допускают список через запятую). */
+export function isInstagramTag(v: unknown): boolean {
+  return typeof v === 'string' && /<instagram[\s>]/.test(v.trim());
+}
+
 /**
- * Восстанавливает per-locale ids в <instagram ids="…"> из прежнего перевода
- * целевого файла: посты Instagram заводятся ПОД ЛОКАЛЬ (легаси en ссылается
- * на англоязычные посты), а модель при переводе копирует тег из ru-канона
- * дословно — вместе с русскими ids. Сопоставление — по порядку появления
- * тега в файле; при нехватке легаси-ids лишние теги не трогаются.
- * Мутирует translated, возвращает число исправленных листьев.
+ * Локали с СОБСТВЕННЫМ набором instagram-тегов, независимым от ru-канона:
+ * en заводит англоязычные посты, которых в ru может не быть (и наоборот).
  */
-export function restoreInstagramIds(lang: string, translated: any, legacy: any): number {
-  const lc = lang.toLowerCase();
-  if (!INSTAGRAM_ATTR_LOCALES.has(lc) || lc === 'ru') return 0;
-  const legacyIds: string[] = [];
-  const collect = (node: any): void => {
-    if (typeof node === 'string') {
-      for (const m of node.matchAll(/<instagram\s+ids="?(\d+)"?/g)) legacyIds.push(m[1]);
-    } else if (Array.isArray(node)) {
-      for (const v of node) collect(v);
-    } else if (node && typeof node === 'object') {
-      for (const v of Object.values(node)) collect(v);
-    }
-  };
-  collect(legacy);
-  if (legacyIds.length === 0) return 0;
-  let i = 0;
+export function instagramIndependent(lang: string): boolean {
+  const lc = (lang || '').toLowerCase();
+  return lc !== 'ru' && INSTAGRAM_ATTR_LOCALES.has(lc);
+}
+
+function pathSegs(p: string): (string | number)[] {
+  return p
+    .split('/')
+    .slice(1)
+    .map((s) => (/^\d+$/.test(s) ? Number(s) : s));
+}
+
+function parentArrayOf(root: any, p: string): any[] | null {
+  const c = containerOf(root, p);
+  return Array.isArray(c) ? c : null;
+}
+
+/** Контейнер (массив или объект), в котором лежит лист по пути p. */
+function containerOf(root: any, p: string): any {
+  const segs = pathSegs(p);
+  let node = root;
+  for (const s of segs.slice(0, -1)) {
+    node = node?.[s as any];
+    if (node == null) return null;
+  }
+  return node;
+}
+
+function lastIndex(p: string): number {
+  const last = p.split('/').pop() ?? '';
+  return /^\d+$/.test(last) ? Number(last) : -1;
+}
+
+function setByPath(root: any, p: string, value: string): boolean {
+  const segs = pathSegs(p);
+  let node = root;
+  for (const s of segs.slice(0, -1)) {
+    node = node?.[s as any];
+    if (node == null) return false;
+  }
+  const last = segs[segs.length - 1];
+  if (node == null || (node as any)[last as any] === undefined) return false;
+  (node as any)[last as any] = value;
+  return true;
+}
+
+/**
+ * Восстанавливает per-locale набор тегов <instagram> целевой локали из
+ * прежнего перевода: посты Instagram заводятся ПОД ЛОКАЛЬ (легаси en
+ * ссылается на англоязычные посты), а модель копирует теги из ru-канона
+ * дословно. Согласование по ПУТЯМ (структуры обоих файлов выровнены по
+ * одному ru-канону):
+ *   1) тег есть в обоих — значение берётся из легаси целиком (ids — свои);
+ *   2) тег в translated, которого нет в легаси на этом пути — удаляется;
+ *   3) легаси-тег, отсутствующий в translated — вставляется в массив-родитель.
+ * Вставки/удаления внутри одного массива применяются по убыванию индекса,
+ * чтобы сдвиги не портили ещё не применённые адреса. Мутирует translated,
+ * возвращает число изменённых листьев.
+ */
+export function reconcileInstagramTags(lang: string, translated: any, legacyLeaves: Leaves): number {
+  if (!instagramIndependent(lang)) return 0;
+  const legacyTags = new Map<string, string>();
+  for (const [p, v] of Object.entries(legacyLeaves)) {
+    if (isInstagramTag(v)) legacyTags.set(p, v);
+  }
+  const cur = flattenLeaves(translated);
+  const curTags = new Set(Object.keys(cur).filter((p) => isInstagramTag(cur[p])));
+
   let changed = 0;
-  const walk = (node: any): any => {
-    if (typeof node === 'string') {
-      const next = node.replace(/(<instagram\s+ids=")(\d+)(")/g, (m, open: string, _id: string, close: string) => {
-        if (i >= legacyIds.length) return m;
-        const id = legacyIds[i++];
-        if (id === _id) return m;
-        return `${open}${id}${close}`;
-      });
-      if (next !== node) changed++;
-      return next;
+  // 1) Замена: путь есть с обеих сторон — значение берём из легаси целиком.
+  //    (путь остаётся в curTags: цикл вставок ниже не должен «воткнуть» дубликат)
+  for (const [p, v] of legacyTags) {
+    if (curTags.has(p)) {
+      if (cur[p] !== v && setByPath(translated, p, v)) changed++;
     }
-    if (Array.isArray(node)) {
-      for (let k = 0; k < node.length; k++) node[k] = walk(node[k]);
-      return node;
+  }
+
+  // 2) Удаления (теги translated, которых нет в легаси): сначала они —
+  //    в легаси-координатах вставок, чтобы индексы не поехали. Убывание
+  //    индекса внутри одного контейнера.
+  for (const p of curTags) {
+    if (legacyTags.has(p)) continue;
+    const segs = pathSegs(p);
+    const last = segs[segs.length - 1];
+    const container = containerOf(translated, p);
+    if (container == null) continue;
+    if (Array.isArray(container) && typeof last === 'number') container.splice(last, 1);
+    else delete (container as any)[last as any];
+    changed++;
+  }
+
+  // 3) Вставки легаси-тегов (массивы-родители), по убыванию индекса.
+  type ArrayOp = { index: number; value: string };
+  const perArray = new Map<any[], ArrayOp[]>();
+  for (const [p, v] of legacyTags) {
+    if (curTags.has(p)) continue; // уже на месте (заменён или не тронут)
+    const arr = parentArrayOf(translated, p);
+    const idx = lastIndex(p);
+    if (!arr || idx < 0 || idx > arr.length) continue;
+    const ops = perArray.get(arr) ?? [];
+    ops.push({ index: idx, value: v });
+    perArray.set(arr, ops);
+  }
+  for (const [arr, ops] of perArray) {
+    ops.sort((a, b) => b.index - a.index); // по убыванию: сдвиги не портят адреса
+    for (const op of ops) {
+      arr.splice(op.index, 0, op.value);
+      changed++;
     }
-    if (node && typeof node === 'object') {
-      for (const k of Object.keys(node)) node[k] = walk(node[k]);
-      return node;
-    }
-    return node;
-  };
-  walk(translated);
+  }
   return changed;
 }
 

@@ -242,3 +242,24 @@ describe('невалидные токены и несущие пробелы', (
     expect(issues.some((i) => i.message.includes('невалидные плейсхолдер-токены'))).toBe(true);
   });
 });
+
+describe('validateTranslation — instagram у независимых локалей', () => {
+  test('en: тег удалён из середины массива — хвост не даёт фантомных потерь', () => {
+    const ru = { '/texts/0': 'Один', '/texts/1': '<instagram ids="111">', '/texts/2': 'Два' };
+    const en = { texts: ['One', 'Two'] };
+    expect(validateTranslation('en', ru, en)).toEqual([]);
+  });
+
+  test('en: свой тег, которого нет в ru — не «лишний ключ»', () => {
+    const ru = { '/texts/0': 'Один' };
+    const en = { texts: ['One', '<instagram ids="999">'] };
+    expect(validateTranslation('en', ru, en)).toEqual([]);
+  });
+
+  test('не-ru локаль по-прежнему требует паритета тегов', () => {
+    const ru = { '/texts/0': 'Один', '/texts/1': '<instagram ids="111">' };
+    const de = { texts: ['Eins'] };
+    const issues = validateTranslation('de', ru, de);
+    expect(issues.length).toBeGreaterThan(0);
+  });
+});

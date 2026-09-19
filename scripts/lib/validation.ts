@@ -19,6 +19,7 @@
 import { flattenLeaves, type Leaves } from './tree.js';
 import { validateValue } from './lang-codes.js';
 import { expectedMediaPath, isMediaPath } from './media-paths.js';
+import { instagramIndependent, isInstagramTag } from './tag-reconcile.js';
 
 export interface ValidationIssue {
   path: string;
@@ -142,6 +143,55 @@ function diffMultiset(a: string[], b: string[]): string[] {
 }
 
 /**
+ * Восстанавливает дерево из плоской карты листьев (пути со слэшем).
+ * Числовые сегменты трактуются как массивы — для «уплотнённого» вида этого
+ * достаточно: сравниваются позиции, а не типы контейнеров оригинала.
+ */
+function treeFromLeaves(leaves: Leaves): any {
+  const root: any = {};
+  for (const p of Object.keys(leaves)) {
+    const segs = p.replace(/^\//, '').split('/');
+    let node = root;
+    for (let i = 0; i < segs.length - 1; i++) {
+      const s = segs[i];
+      if (node[s] == null) node[s] = /^\d+$/.test(segs[i + 1]) ? [] : {};
+      node = node[s];
+    }
+    const last = segs[segs.length - 1];
+    if (Array.isArray(node) && /^\d+$/.test(last)) {
+      const idx = Number(last);
+      while (node.length < idx) node.push(undefined);
+      node[idx] = leaves[p];
+    } else {
+      node[last] = leaves[p];
+    }
+  }
+  return root;
+}
+
+/**
+ * Вырезает instagram-теги из дерева с уплотнением массивов: элемент-тег
+ * исчезает, последующие индексы сдвигаются. Для «уплотнённого» вида
+ * независимых локалей (en) — сравнение с ru без фантомных сдвигов.
+ */
+function stripInstagramCompact(tree: any): any {
+  if (Array.isArray(tree)) {
+    return tree
+      .filter((v) => !isInstagramTag(v) && v !== undefined)
+      .map((v) => (v != null && typeof v === 'object' ? stripInstagramCompact(v) : v));
+  }
+  if (tree && typeof tree === 'object') {
+    const out: any = {};
+    for (const [k, v] of Object.entries(tree)) {
+      if (isInstagramTag(v)) continue;
+      out[k] = v != null && typeof v === 'object' ? stripInstagramCompact(v) : v;
+    }
+    return out;
+  }
+  return tree;
+}
+
+/**
  * Валидирует переведённый объект против ru-листьев. Возвращает список проблем
  * (пустой = всё хорошо). Ожидается, что вызывающий уже снял обёртку
  * ({lang: {...}} для keys-режима) и @-мета.
@@ -159,8 +209,13 @@ export function validateTranslation(
     for (const k of Object.keys(m)) out[k.replace(/^\//, '')] = m[k];
     return out;
   };
-  const ru = norm(ruLeaves);
-  const outLeaves = norm(flattenLeaves(translated));
+  // Для независимых локалей (en) сравниваются «уплотнённые» виды без
+  // instagram-тегов: набор постов у en свой (легаси), а удаление/вставка
+  // элемента массива сдвигает индексы последующих листьев — прямое
+  // сравнение путей даёт фантомные потери по всему хвосту массива.
+  const independent = instagramIndependent(lang);
+  const ru = norm(independent ? flattenLeaves(stripInstagramCompact(treeFromLeaves(ruLeaves))) : ruLeaves);
+  const outLeaves = norm(flattenLeaves(independent ? stripInstagramCompact(translated) : translated));
 
   // 1. Совпадение ключей.
   const ruPaths = Object.keys(ru);
@@ -257,6 +312,7 @@ export function validateTranslation(
     const v = outLeaves[p];
     if (typeof v === 'string' && v.trim() !== '') gotTags.push(...extractTagSignatures(v));
   }
+  // Для независимых локалей (en) instagram-теги уже вырезаны из видов выше.
   if (!multisetEqual(expectedTags, gotTags)) {
     const lost = diffMultiset(expectedTags, gotTags);
     const extra = diffMultiset(gotTags, expectedTags);
