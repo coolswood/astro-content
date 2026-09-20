@@ -181,3 +181,31 @@ describe('инцидент ja-2026 — end-to-end мини-репро', () => {
     }
   });
 });
+
+describe('realignIdArrays — recovery-форма с дырками (buildSubtree)', () => {
+  test('массив с holes от buildSubtree не роняет обход и join', async () => {
+    const { buildSubtree } = await import('../scripts/lib/tree.js');
+    // Инцидент-репро: recovery по 2 потерянным записям — buildSubtree строит
+    // массив ИНДЕКСНЫМ присваиванием: позиции 0..138 — holes, не null.
+    const doc = {
+      content: Array.from({ length: 5 }, (_, i) => ({ id: `id${i}`, translation: `Q${i}` })),
+    };
+    const lostSubtree = buildSubtree(doc, ['/content/3/translation', '/content/4/translation']);
+    expect(lostSubtree.content).toHaveLength(5);
+    expect(Object.keys(lostSubtree.content)).toEqual(['3', '4']); // дырки, не null
+    // Ответ модели в числовой форме — обход не должен падать (TypeError
+    // «undefined is not an object (evaluating '[k, v]')» до фикса).
+    const recovered = { content: { 3: { translation: '訳3' }, 4: { translation: '訳4' } } };
+    expect(() => realignIdArrays(lostSubtree, recovered)).not.toThrow();
+    // Источник с id в потерянных записях: join работает и по дырчатому массиву.
+    const lostWithIds = buildSubtree(doc, [
+      '/content/3/id', '/content/3/translation',
+      '/content/4/id', '/content/4/translation',
+    ]);
+    const rec2 = { content: [{ id: 'id4', translation: '訳4' }, { id: 'id3', translation: '訳3' }] };
+    const reports = realignIdArrays(lostWithIds, rec2);
+    // повторный прогон на новом ответе — тоже не падает
+    expect(() => realignIdArrays(lostWithIds, { content: [{ id: 'id4', translation: '訳4' }] })).not.toThrow();
+    expect(reports[0]!.realigned).toBe(2); // обе записи пришли не на своих индексах
+  });
+});

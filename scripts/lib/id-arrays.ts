@@ -24,9 +24,12 @@ export interface IdArrayReport {
   unknownIds: string[];
 }
 
-/** Элементы массива: настоящий массив или объект с числовыми ключами 0..n. */
+/** Элементы массива: настоящий массив или объект с числовыми ключами 0..n.
+ *  Дырки (holes) нормализуются в явные null: buildSubtree строит разреженные
+ *  массивы индексным присваиванием, и без нормализации map/push по дыркам
+ *  просаживаются undefined. */
 function itemsOf(node: any): any[] | null {
-  if (Array.isArray(node)) return node;
+  if (Array.isArray(node)) return Array.from(node, (v) => (v === undefined ? null : v));
   if (node && typeof node === 'object') {
     const keys = Object.keys(node);
     if (keys.length > 0 && keys.every((k) => /^\d+$/.test(k))) {
@@ -90,8 +93,13 @@ export function realignIdArrays(source: any, draft: any): IdArrayReport[] {
       return; // вложенные id-массивы внутри записей не поддерживаем (в проекте нет)
     }
     if (src && typeof src === 'object' && drf && typeof drf === 'object') {
-      const isArray = Array.isArray(src);
-      const entries = isArray ? src.map((v, i) => [String(i), v] as const) : Object.entries(src);
+      // Итерация через forEach: buildSubtree строит разреженные массивы
+      // ИНДЕКСНЫМ присваиванием (cur[139] = …) — позиции 0..138 остаются
+      // дырками (holes), а не null; map/for-of по дыркам отдают undefined, и
+      // деструктуризация падает. forEach дырки пропускает.
+      const entries: [string, any][] = [];
+      if (Array.isArray(src)) src.forEach((v, i) => entries.push([String(i), v]));
+      else for (const e of Object.entries(src)) entries.push(e);
       for (const [k, v] of entries) {
         const next = Array.isArray(drf) ? drf[Number(k)] : drf[k];
         if (next !== undefined) walk(v, next, prefix ? `${prefix}/${k}` : k);
