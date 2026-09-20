@@ -1,0 +1,4813 @@
+{
+  "file": "questions.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": false,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/0/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/1/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/1/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/2/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/2/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/3/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/3/translation",
+                "verdict": "ok",
+                "note": "Использованы правильные арабские кавычки"
+              },
+              {
+                "path": "/4/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/4/translation",
+                "verdict": "ok",
+                "note": "Термин AI переведен верно"
+              },
+              {
+                "path": "/5/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/5/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/6/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/6/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/7/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/7/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/8/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/8/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/9/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/9/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/10/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/10/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/11/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/11/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/12/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/12/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/13/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/13/translation",
+                "verdict": "ok",
+                "note": "Использован верный термин 'практика благодарности'"
+              },
+              {
+                "path": "/14/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/14/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/15/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/15/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/16/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/16/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/17/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/17/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/18/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/18/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/19/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/19/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/20/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/20/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон соответствует"
+              },
+              {
+                "path": "/21/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/21/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный"
+              },
+              {
+                "path": "/22/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/22/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/23/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/23/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/24/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/24/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/25/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/25/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/26/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/26/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/27/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/27/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/28/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/28/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/29/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/29/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/30/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/30/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, грамматика условия верна"
+              },
+              {
+                "path": "/31/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/31/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/32/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/32/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/33/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/33/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/34/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/34/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/35/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/35/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/36/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/36/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/37/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/37/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/38/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/38/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/39/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/39/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/40/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/40/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, тон нейтральный"
+              },
+              {
+                "path": "/41/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/41/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/42/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/42/translation",
+                "verdict": "ok",
+                "note": "использована верная терминология (الامتنان)"
+              },
+              {
+                "path": "/43/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/43/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/44/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/44/translation",
+                "verdict": "ok",
+                "note": "использованы правильные кавычки «»"
+              },
+              {
+                "path": "/45/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/45/translation",
+                "verdict": "ok",
+                "note": "перевод точный, стиль естественный"
+              },
+              {
+                "path": "/46/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/46/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/47/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/47/translation",
+                "verdict": "ok",
+                "note": "перевод точный, передает смысл 'наиболее благодарным' через 'امتنان شديد'"
+              },
+              {
+                "path": "/48/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/48/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/49/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/49/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/50/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/50/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/51/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/51/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/52/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/52/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/53/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/53/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/54/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/54/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/55/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/55/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/56/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/56/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/57/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/57/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/58/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/58/translation",
+                "verdict": "ok",
+                "note": "перевод точный, 'цените наиболее высоко' передано через 'تعتز بها أكثر من غيرها' (естественно)"
+              },
+              {
+                "path": "/59/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/59/translation",
+                "verdict": "ok",
+                "note": "перевод точный, использована верная терминология (المشاعر)"
+              },
+              {
+                "path": "/60/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/60/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/61/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/61/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/62/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/62/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/63/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/63/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/64/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/64/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/65/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/65/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/66/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/66/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/67/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/67/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/68/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/68/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/69/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/69/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/70/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/70/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/71/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/71/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/72/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/72/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/73/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/73/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/74/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/74/translation",
+                "verdict": "issue",
+                "note": "критическая ошибка: текст подменен на вопрос из следующего пункта"
+              },
+              {
+                "path": "/75/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/75/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/76/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/76/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/77/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/77/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/78/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/78/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/79/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/79/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/80/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/80/translation",
+                "verdict": "ok",
+                "note": "перевод точный, естественный"
+              },
+              {
+                "path": "/81/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/81/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/82/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/82/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/83/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/83/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/84/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/84/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/85/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/85/translation",
+                "verdict": "ok",
+                "note": "использован верный термин العافية النفسية"
+              },
+              {
+                "path": "/86/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/86/translation",
+                "verdict": "ok",
+                "note": "перевод точный, добавлено 'на вашу жизнь' для естественности, что допустимо"
+              },
+              {
+                "path": "/87/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/87/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/88/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/88/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/89/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/89/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/90/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/90/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/91/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/91/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/92/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/92/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/93/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/93/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/94/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/94/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/95/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/95/translation",
+                "verdict": "ok",
+                "note": "перевод точный, 'чувство счастья' — хорошая транскреация"
+              },
+              {
+                "path": "/96/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/96/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/97/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/97/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/98/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/98/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/99/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/99/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/100/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/100/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно, звучит естественно"
+              },
+              {
+                "path": "/101/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/101/translation",
+                "verdict": "ok",
+                "note": "хорошая адаптация"
+              },
+              {
+                "path": "/102/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/102/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/103/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/103/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/104/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/104/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/105/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/105/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/106/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/106/translation",
+                "verdict": "ok",
+                "note": "хорошая транскреация 'молодого я'"
+              },
+              {
+                "path": "/107/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/107/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/108/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/108/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/109/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/109/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/110/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/110/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/111/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/111/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/112/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/112/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/113/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/113/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/114/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/114/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/115/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/115/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/116/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/116/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/117/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/117/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/118/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/118/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/119/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/119/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/120/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/120/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/121/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/121/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/122/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/122/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/123/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/123/translation",
+                "verdict": "ok",
+                "note": "термин 'всемирный базовый доход' переведен корректно"
+              },
+              {
+                "path": "/124/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/124/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/125/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/125/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/126/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/126/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/127/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/127/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/128/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/128/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/129/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/129/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/130/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/130/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/131/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/131/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/132/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/132/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/133/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/133/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/134/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/134/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/135/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/135/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/136/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/136/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/137/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/137/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/138/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/138/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/139/id",
+                "verdict": "ok",
+                "note": "id match"
+              },
+              {
+                "path": "/139/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/140/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/140/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно, звучит естественно"
+              },
+              {
+                "path": "/141/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/141/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/142/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/142/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/143/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/143/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/144/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/144/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/145/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/145/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/146/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/146/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/147/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/147/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/148/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/148/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно, добавлена естественная для арабского конструкция 'идея прощения'"
+              },
+              {
+                "path": "/149/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/149/translation",
+                "verdict": "ok",
+                "note": "терминология (депрессия) соблюдена, смысл точен"
+              },
+              {
+                "path": "/150/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/150/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/151/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/151/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              },
+              {
+                "path": "/152/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/152/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно, терминология (убеждения) соблюдена"
+              },
+              {
+                "path": "/153/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/153/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c4-I1",
+                "path": "/74/translation",
+                "fragment": "ما هو موقفك من فكرة فقدان الخصوصية الشخصية في العالم المعاصر؟",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Текст перевода полностью не соответствует русскому оригиналу",
+                "why": "В оригинале вопрос о жизненной миссии («Что вы считаете своей жизненной миссией?»), а в переводе — вопрос о потере приватности, который относится к следующему пункту (75). Это вводит пользователя в заблуждение."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation for item 74 is a complete mismatch; it contains the text intended for item 75, leaving the original meaning (life mission) lost."
+              }
+            ],
+            "notes": "The translation quality is generally high, but there is a critical structural error where the content of one item was shifted into another, causing a loss of meaning for the user.",
+            "recommendations": [
+              {
+                "id": "c4-I1",
+                "priority": 1,
+                "path": "/74/translation",
+                "current": "ما هو موقفك من فكرة فقدان الخصوصية الشخصية في العالم المعاصر؟",
+                "proposed": "ما هي رسالتك في الحياة؟",
+                "alternatives": [
+                  "ما هي مهمتك في الحياة؟",
+                  "ما الذي تعتبره رسالتك في هذه الحياة؟"
+                ],
+                "rationale": "В оригинале вопрос о жизненной миссии («Что вы считаете своей жизненной миссией?»), а в текущем переводе ошибочно указан текст из следующего пункта про приватность. Вариант «ما هي رسالتك في الحياة؟» наиболее естественно и глубоко передает смысл «жизненной миссии» в арабском языке."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая ошибка: пункт 74 содержит текст, предназначенный для пункта 75, что полностью искажает смысл вопроса о жизненной миссии. Остальной текст выглядит качественным, но из-за этой грубой ошибки (дублирования и потери смысла) требуется обязательная правка перед публикацией."
+            },
+            "timings": {
+              "issues": 146445,
+              "deliberate": 4956,
+              "recommend": 10347
+            }
+          },
+          "applied": [
+            {
+              "id": "c4-I1",
+              "path": "/74/translation",
+              "from": "ما هو موقفك من فكرة فقدان الخصوصية الشخصية في العالم المعاصر؟",
+              "to": "ما هي رسالتك في الحياة؟"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/0/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/1/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/1/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/2/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/2/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/3/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/3/translation",
+                "verdict": "ok",
+                "note": "Использованы правильные кавычки «»"
+              },
+              {
+                "path": "/4/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/4/translation",
+                "verdict": "ok",
+                "note": "Термин AI переведен верно"
+              },
+              {
+                "path": "/5/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/5/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/6/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/6/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/7/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/7/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/8/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/8/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/9/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/9/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/10/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/10/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/11/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/11/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/12/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/12/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/13/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/13/translation",
+                "verdict": "ok",
+                "note": "Использована верная терминология (ممارسة الامتنان)"
+              },
+              {
+                "path": "/14/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/14/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/15/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/15/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/16/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/16/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/17/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/17/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/18/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/18/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/19/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/19/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/20/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/20/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон соответствует"
+              },
+              {
+                "path": "/21/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/21/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный"
+              },
+              {
+                "path": "/22/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/22/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/23/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/23/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/24/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/24/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/25/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/25/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/26/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/26/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/27/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/27/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/28/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/28/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/29/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/29/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/30/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/30/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, грамматика условия верна"
+              },
+              {
+                "path": "/31/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/31/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/32/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/32/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/33/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/33/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/34/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/34/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/35/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/35/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/36/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/36/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/37/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/37/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/38/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/38/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/39/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/39/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/40/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/40/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, тон нейтральный"
+              },
+              {
+                "path": "/41/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/41/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/42/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/42/translation",
+                "verdict": "ok",
+                "note": "использована верная терминология (الامتنان)"
+              },
+              {
+                "path": "/43/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/43/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/44/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/44/translation",
+                "verdict": "ok",
+                "note": "использованы правильные арабские кавычки «»"
+              },
+              {
+                "path": "/45/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/45/translation",
+                "verdict": "ok",
+                "note": "перевод точный, стиль естественный"
+              },
+              {
+                "path": "/46/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/46/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/47/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/47/translation",
+                "verdict": "ok",
+                "note": "перевод точный, добавлено усиление (شديد) для передачи контекста, что допустимо"
+              },
+              {
+                "path": "/48/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/48/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/49/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/49/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/50/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/50/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/51/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/51/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/52/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/52/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/53/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/53/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/54/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/54/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/55/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/55/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/56/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/56/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/57/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/57/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/58/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/58/translation",
+                "verdict": "ok",
+                "note": "перевод точный, передает нюанс 'наиболее высоко' через 'أكثر من غيرها'"
+              },
+              {
+                "path": "/59/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/59/translation",
+                "verdict": "ok",
+                "note": "перевод точный, использована верная терминология (المشاعر)"
+              },
+              {
+                "path": "/60/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/60/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/61/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/61/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/62/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/62/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/63/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/63/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, 'мнение большинства' — хорошая адаптация"
+              },
+              {
+                "path": "/64/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/64/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/65/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/65/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/66/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/66/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/67/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/67/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/68/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/68/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/69/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/69/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/70/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/70/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/71/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/71/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/72/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/72/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/73/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/73/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/74/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/74/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/75/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/75/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/76/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/76/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/77/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/77/translation",
+                "verdict": "issue",
+                "note": "стилистическая калька: 'отношения между людьми' звучит тяжеловесно"
+              },
+              {
+                "path": "/78/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/78/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/79/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/79/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/80/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/80/translation",
+                "verdict": "ok",
+                "note": "Перевод точный и естественный"
+              },
+              {
+                "path": "/81/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/81/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/82/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/82/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/83/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/83/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/84/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/84/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/85/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/85/translation",
+                "verdict": "ok",
+                "note": "Использован верный термин 'العافية النفسية'"
+              },
+              {
+                "path": "/86/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/86/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, добавлено 'на вашу жизнь' для естественности, что допустимо"
+              },
+              {
+                "path": "/87/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/87/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/88/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/88/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/89/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/89/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/90/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/90/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/91/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/91/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/92/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/92/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/93/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/93/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/94/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/94/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/95/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/95/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, 'الشعور بالسعادة' — хорошая адаптация"
+              },
+              {
+                "path": "/96/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/96/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/97/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/97/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/98/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/98/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/99/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/99/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/100/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/100/translation",
+                "verdict": "ok",
+                "note": "смысл передан точно, звучит естественно"
+              },
+              {
+                "path": "/101/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/101/translation",
+                "verdict": "ok",
+                "note": "хорошая адаптация 'борьба' -> 'как вы справляетесь'"
+              },
+              {
+                "path": "/102/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/102/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/103/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/103/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/104/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/104/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/105/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/105/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/106/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/106/translation",
+                "verdict": "ok",
+                "note": "хорошая транскреация 'молодому я'"
+              },
+              {
+                "path": "/107/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/107/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/108/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/108/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/109/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/109/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/110/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/110/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/111/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/111/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/112/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/112/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/113/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/113/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/114/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/114/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/115/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/115/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/116/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/116/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/117/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/117/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/118/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/118/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/119/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/119/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/120/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/120/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/121/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/121/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/122/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/122/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/123/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/123/translation",
+                "verdict": "ok",
+                "note": "термин 'всемирный базовый доход' переведен корректно"
+              },
+              {
+                "path": "/124/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/124/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/125/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/125/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/126/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/126/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/127/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/127/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/128/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/128/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/129/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/129/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/130/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/130/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/131/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/131/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/132/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/132/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/133/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/133/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/134/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/134/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/135/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/135/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/136/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/136/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/137/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/137/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/138/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/138/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/139/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/139/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/140/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/140/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/141/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/141/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/142/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/142/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/143/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/143/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/144/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/144/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/145/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/145/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/146/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/146/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/147/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/147/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/148/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/148/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/149/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/149/translation",
+                "verdict": "ok",
+                "note": "terminology ok (الاكتئاب)"
+              },
+              {
+                "path": "/150/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/150/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/151/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/151/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/152/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/152/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/153/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/153/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c4-I1",
+                "path": "/77/translation",
+                "fragment": "العلاقات بين الأشخاص",
+                "type": "style",
+                "severity": "minor",
+                "problem": "избыточная тяжеловесность (калька)",
+                "why": "Фраза 'العلاقات بين الأشخاص' (отношения между людьми) грамматически верна, но в арабском языке для обозначения межличностных отношений естественнее использовать термин 'العلاقات الاجتماعية' или просто 'العلاقات' в контексте вопроса. Текущий вариант звучит как прямой перевод русского синтаксиса."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The phrase is a literal translation of 'межличностных отношений'. While understandable, 'العلاقات الاجتماعية' or 'العلاقات الإنسانية' is much more natural in Arabic for this context."
+              }
+            ],
+            "notes": "The translation is of high quality and accurate, with only one minor stylistic issue regarding a literalism in a specific phrase.",
+            "recommendations": [
+              {
+                "id": "c4-I1",
+                "priority": 1,
+                "path": "/77/translation",
+                "current": "ما هي المبادئ المهمة للحفاظ على العلاقات بين الأشخاص؟",
+                "proposed": "ما هي المبادئ المهمة للحفاظ على العلاقات الإنسانية؟",
+                "alternatives": [
+                  "ما هي المبادئ المهمة للحفاظ على العلاقات الاجتماعية؟",
+                  "ما هي المبادئ المهمة للحفاظ على العلاقات؟"
+                ],
+                "rationale": "Текущий вариант 'العلاقات بين الأشخاص' является калькой с русского 'межличностные отношения'. Для арабского языка в контексте ценностей и принципов гораздо естественнее использовать 'العلاقات الإنسانية' (человеческие отношения) или 'العلاقات الاجتماعية' (социальные отношения). Вариант 'العلاقات الإنسانية' лучше всего передает глубину вопроса."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология, тон поддерживающий и профессиональный, а грамматика безупречна. Единственная правка касается стилистической естественности одной фразы, которая звучала как калька. В остальном текст готов к публикации."
+            },
+            "timings": {
+              "issues": 137148,
+              "deliberate": 4746,
+              "recommend": 10112
+            }
+          },
+          "applied": [
+            {
+              "id": "c4-I1",
+              "path": "/77/translation",
+              "from": "ما هي المبادئ المهمة للحفاظ على العلاقات بين الأشخاص؟",
+              "to": "ما هي المبادئ المهمة للحفاظ على العلاقات الإنسانية؟"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/0/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/1/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/1/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/2/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/2/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/3/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/3/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, кавычки «» использованы правильно"
+              },
+              {
+                "path": "/4/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/4/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, термин AI на месте"
+              },
+              {
+                "path": "/5/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/5/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/6/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/6/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/7/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/7/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/8/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/8/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/9/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/9/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/10/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/10/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/11/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/11/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/12/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/12/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/13/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/13/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, термин 'практика благодарности' использован согласно глоссарию"
+              },
+              {
+                "path": "/14/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/14/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/15/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/15/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/16/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/16/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/17/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/17/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/18/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/18/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/19/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/19/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/20/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/20/translation",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон нейтральный"
+              },
+              {
+                "path": "/21/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/21/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология корректная"
+              },
+              {
+                "path": "/22/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/22/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/23/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/23/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный синтаксис"
+              },
+              {
+                "path": "/24/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/24/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/25/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/25/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/26/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/26/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/27/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/27/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/28/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/28/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/29/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/29/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/30/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/30/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, грамматика условия верна"
+              },
+              {
+                "path": "/31/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/31/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/32/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/32/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/33/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/33/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/34/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/34/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/35/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/35/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/36/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/36/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/37/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/37/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/38/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/38/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/39/id",
+                "verdict": "ok",
+                "note": "ID check"
+              },
+              {
+                "path": "/39/translation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/40/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/40/translation",
+                "verdict": "ok",
+                "note": "перевод точный, тон соблюден"
+              },
+              {
+                "path": "/41/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/41/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/42/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/42/translation",
+                "verdict": "ok",
+                "note": "перевод точный, термин 'благодарность' использован верно"
+              },
+              {
+                "path": "/43/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/43/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/44/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/44/translation",
+                "verdict": "ok",
+                "note": "перевод точный, кавычки «» использованы верно"
+              },
+              {
+                "path": "/45/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/45/translation",
+                "verdict": "ok",
+                "note": "перевод точный, естественный синтаксис"
+              },
+              {
+                "path": "/46/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/46/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/47/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/47/translation",
+                "verdict": "ok",
+                "note": "перевод точный, передает смысл 'наиболее благодарным' через 'сильное чувство благодарности'"
+              },
+              {
+                "path": "/48/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/48/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/49/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/49/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/50/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/50/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/51/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/51/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/52/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/52/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/53/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/53/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/54/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/54/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/55/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/55/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/56/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/56/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/57/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/57/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/58/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/58/translation",
+                "verdict": "ok",
+                "note": "перевод точный, удачная передача 'цените наиболее высоко' через 'اعتز بها أكثر من غيرها'"
+              },
+              {
+                "path": "/59/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/59/translation",
+                "verdict": "ok",
+                "note": "перевод точный, термин 'эмоции' (مشاعر) использован верно"
+              },
+              {
+                "path": "/60/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/60/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/61/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/61/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/62/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/62/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/63/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/63/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, 'мнение большинства' — хорошая адаптация"
+              },
+              {
+                "path": "/64/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/64/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/65/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/65/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/66/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/66/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/67/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/67/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/68/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/68/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/69/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/69/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/70/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/70/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/71/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/71/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/72/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/72/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/73/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/73/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/74/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/74/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/75/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/75/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/76/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/76/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/77/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/77/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/78/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/78/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/79/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/79/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/80/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/80/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, звучит естественно"
+              },
+              {
+                "path": "/81/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/81/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/82/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/82/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/83/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/83/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/84/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/84/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/85/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/85/translation",
+                "verdict": "ok",
+                "note": "терминология «عافيتك النفسية» соответствует глоссарию"
+              },
+              {
+                "path": "/86/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/86/translation",
+                "verdict": "ok",
+                "note": "добавлено «на вашу жизнь» (على حياتك), но это уместная трансекреация для естественности"
+              },
+              {
+                "path": "/87/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/87/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/88/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/88/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/89/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/89/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/90/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/90/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/91/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/91/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/92/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/92/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/93/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/93/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/94/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/94/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/95/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/95/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, добавлено «чувство счастья» для естественности"
+              },
+              {
+                "path": "/96/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/96/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/97/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/97/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/98/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/98/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/99/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/99/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/100/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/100/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, звучит естественно"
+              },
+              {
+                "path": "/101/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/101/translation",
+                "verdict": "ok",
+                "note": "перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/102/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/102/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/103/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/103/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/104/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/104/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/105/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/105/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/106/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/106/translation",
+                "verdict": "ok",
+                "note": "хорошая трансекреация, смысл сохранен"
+              },
+              {
+                "path": "/107/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/107/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/108/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/108/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/109/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/109/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/110/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/110/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/111/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/111/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/112/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/112/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/113/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/113/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/114/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/114/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/115/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/115/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/116/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/116/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/117/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/117/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/118/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/118/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/119/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/119/translation",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/120/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/120/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/121/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/121/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/122/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/122/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/123/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/123/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/124/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/124/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/125/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/125/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/126/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/126/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/127/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/127/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/128/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/128/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/129/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/129/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/130/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/130/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/131/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/131/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/132/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/132/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/133/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/133/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/134/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/134/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/135/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/135/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/136/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/136/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/137/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/137/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/138/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/138/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/139/id",
+                "verdict": "ok",
+                "note": "id check"
+              },
+              {
+                "path": "/139/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно"
+              },
+              {
+                "path": "/140/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/140/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/141/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/141/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/142/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/142/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/143/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/143/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/144/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/144/translation",
+                "verdict": "issue",
+                "note": "grammatical error in verb usage"
+              },
+              {
+                "path": "/145/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/145/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/146/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/146/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/147/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/147/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/148/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/148/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/149/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/149/translation",
+                "verdict": "ok",
+                "note": "terminology and naturalness ok"
+              },
+              {
+                "path": "/150/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/150/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/151/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/151/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/152/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/152/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/153/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/153/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c8-I1",
+                "path": "/144/translation",
+                "fragment": "تجذبك أو تنفرك",
+                "type": "style",
+                "severity": "major",
+                "problem": "неправильное использование глагола в контексте",
+                "why": "Глагол تنفر (tanfiru) — это непереходный глагол (intransitive), означающий «чувствовать отвращение/отчуждение». Он не может принимать прямое дополнение (объект «культура»). Нельзя сказать «культура отталкивает тебя» через этот глагол в такой конструкции. Нужно либо использовать «تثير نفورك» (вызывает твое отвращение), либо другой глагол, например «تنفّر منها»."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c8-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The verb تنفر is intransitive in this context and cannot take a direct object like 'aspects of culture'. The translation incorrectly implies the aspects are doing the repelling directly to the person without the necessary preposition or a causative construction."
+              }
+            ],
+            "notes": "The translation is overall of high quality, but there is a grammatical error regarding verb transitivity in one instance.",
+            "recommendations": [
+              {
+                "id": "c8-I1",
+                "priority": 1,
+                "path": "/144/translation",
+                "current": "ما هي جوانب الثقافة المعاصرة التي تجذبك أو تنفرك؟",
+                "proposed": "ما هي جوانب الثقافة المعاصرة التي تجذبك أو تثير نفورك؟",
+                "alternatives": [
+                  "ما هي جوانب الثقافة المعاصرة التي تستهويك أو تنفر منها؟"
+                ],
+                "rationale": "Глагол تنفر является непереходным и требует предлога (تنفّر منها), чтобы означать «отталкивать/вызывать отвращение». Вариант «تثير نفورك» (вызывает твое отвращение) грамматически правилен и лучше всего передает смысл оригинала «отталкивают» в контексте объектов (аспектов культуры)."
+              }
+            ],
+            "overall": {
+              "score": 98,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне, соблюдены все правила терминологии и стилистики. Единственная ошибка — грамматическая неточность в использовании непереходного глагола в вопросе про культуру. После исправления текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 130606,
+              "deliberate": 3885,
+              "recommend": 7810
+            }
+          },
+          "applied": [
+            {
+              "id": "c8-I1",
+              "path": "/144/translation",
+              "from": "ما هي جوانب الثقافة المعاصرة التي تجذبك أو تنفرك؟",
+              "to": "ما هي جوانب الثقافة المعاصرة التي تجذبك أو تثير نفورك؟"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
