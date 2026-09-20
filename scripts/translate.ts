@@ -279,11 +279,18 @@ function collectProblemPaths(
   issues: ValidationIssue[],
 ): string[] {
   const paths = new Set<string>();
+  // Единое пространство ключей — БЕЗ ведущего слэша: sentLeaves контент-режима
+  // несёт «/0/translation», а плоская карта результата и пути замечаний —
+  // «0/translation». Раньше сверка slashed↔bare браковала ВСЕ листья
+  // («потеряны»), кап добивки превышался и любая ошибка валидации вела
+  // к полному ретраю файла вместо точечного ремонта.
+  const sent: Record<string, string> = {};
+  for (const k of Object.keys(sentLeaves)) sent[k.replace(/^\//, '')] = sentLeaves[k]!;
   const flatRaw = flattenLeaves(result);
   const flat: Record<string, unknown> = {};
   for (const k of Object.keys(flatRaw)) flat[k.replace(/^\//, '')] = flatRaw[k];
   const hasTagIssue = issues.some((i) => i.path === '(файл)' && i.message.includes('теги'));
-  for (const [p, ru] of Object.entries(sentLeaves)) {
+  for (const [p, ru] of Object.entries(sent)) {
     const tr = flat[p];
     if (typeof tr !== 'string' || !tr.trim()) {
       paths.add(p); // потерянные или пустые
@@ -299,7 +306,7 @@ function collectProblemPaths(
   for (const group of findDuplicateGroups(lang, sentLeaves, result)) {
     for (const p of group.paths) paths.add(p);
   }
-  return [...paths].filter((p) => p in sentLeaves);
+  return [...paths].filter((p) => p in sent);
 }
 
 /** Один прогон конвейера с ретраями и валидацией. Возвращает листья перевода или null. */
@@ -433,8 +440,12 @@ async function translateWithRetries(
             for (let pass = 1; pass <= 2 && !repairedClean && targets.length > 0; pass++) {
               console.log(`   🩹 Точечная добивка (проход ${pass}): листьев ${targets.length} — ${short(targets)}`);
               try {
+                // ru-значения — по bare-ключу (targets без слэша, sentLeaves
+                // контент-режима — со слэшом).
+                const sentBare: Record<string, string> = {};
+                for (const k of Object.keys(sentLeaves)) sentBare[k.replace(/^\//, '')] = sentLeaves[k]!;
                 const subPayload = buildTreeFromPaths(
-                  Object.fromEntries(targets.map((p) => [p, sentLeaves[p] ?? ''])),
+                  Object.fromEntries(targets.map((p) => [p, sentBare[p] ?? ''])),
                 );
                 const { data: subData } = await runPipeline(ctx.client, prompts, subPayload, lang, {
                   sourceLocale: ctx.cfg.sourceLocale,
@@ -484,8 +495,12 @@ async function translateWithRetries(
                 )
               : undefined;
             try {
+              // ru-значения — по bare-ключу (stuck без слэша, sentLeaves
+              // контент-режима — со слэшом; UI-режим и так bare).
+              const sentBare: Record<string, string> = {};
+              for (const k of Object.keys(sentLeaves)) sentBare[k.replace(/^\//, '')] = sentLeaves[k]!;
               const anonPayload = Object.fromEntries(
-                stuck.map((p) => [anonMap.get(p)!, sentLeaves[p] ?? '']),
+                stuck.map((p) => [anonMap.get(p)!, sentBare[p] ?? '']),
               );
               console.log(
                 `   🫥 Анонимный прогон: ${stuck.length} застрявших ключей нейтрализованы — ${short(stuck)}`,
