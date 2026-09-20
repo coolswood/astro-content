@@ -1,0 +1,157 @@
+{
+  "file": "stories.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/activity/0/subtitle",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон поддерживающий."
+              },
+              {
+                "path": "/activity/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению (технический элемент)."
+              },
+              {
+                "path": "/activity/1/subtitle",
+                "verdict": "ok",
+                "note": "Перевод естественный, смысл сохранен."
+              },
+              {
+                "path": "/activity/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/coping/0/subtitle",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/coping/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/coping/1/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (деструктивные убеждения, копинг-карточки) верная."
+              },
+              {
+                "path": "/coping/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/daybook/0/subtitle",
+                "verdict": "ok",
+                "note": "Перевод хороший, глагольные конструкции естественны."
+              },
+              {
+                "path": "/daybook/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/daybook/1/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (ИИ, записи/ввод) соблюдена."
+              },
+              {
+                "path": "/daybook/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/diary/0/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (автоматические мысли, адаптивные) верная."
+              },
+              {
+                "path": "/diary/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/diary/1/subtitle",
+                "verdict": "ok",
+                "note": "Использован правильный термин для дневника (دفتر الأفكار التلقائية)."
+              },
+              {
+                "path": "/diary/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/diary/2/subtitle",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/diary/2/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/intermediate/0/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (промежуточные убеждения) верная."
+              },
+              {
+                "path": "/intermediate/0/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/intermediate/1/subtitle",
+                "verdict": "ok",
+                "note": "Терминология (деструктивные убеждения, копинг-карточки) верная."
+              },
+              {
+                "path": "/intermediate/1/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              },
+              {
+                "path": "/intermediate/2/subtitle",
+                "verdict": "ok",
+                "note": "Смысл и терминология соблюдены."
+              },
+              {
+                "path": "/intermediate/2/img",
+                "verdict": "ok",
+                "note": "Путь к изображению."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Соблюдена вся терминология (когнитивные искажения, деструктивные убеждения, адаптивность, копинг-карточки), соблюден поддерживающий тон и правила обращения (мужской род как стандарт). Текст звучит естественно для носителя и не содержит калек с русского."
+            },
+            "timings": {
+              "issues": 18561,
+              "deliberate": 698,
+              "recommend": 3459
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
