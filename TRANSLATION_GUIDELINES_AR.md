@@ -18,19 +18,19 @@
 
 **🚨 CRITICAL IMPORTANT RULE:**
 
-**Cognitive distortions → `التحريفات المعرفية`** ✅
-**NOT `التشوهات المعرفية`** ❌
+**Cognitive distortions → `التشوّهات المعرفية`** ✅
+**NOT `التحريفات المعرفية`** ❌
 
-**Explanation:** In professional Arabic psychological literature for CBT, the term **"التحريفات المعرفية"** is accepted, not "التشوهات المعرفية". The term "التحريفات" accurately reflects the essence of cognitive errors as deviations from realistic thinking, while "التشوهات" sounds overly categorical.
+**Explanation (rev. 2026-09-20):** Termine anchoring follows the project's own corpus and UI, not external literature: the application (`diary_field_distortions`) and all texts of `ar/distortions.json` use **التشوّهات المعرفية** (singular — تشوّه معرفي, with shadda تشوّه). «التحريفات» does not occur in the corpus — do not use it. The full verified glossary: `scripts/prompts/ar/glossary.json` (50 terms, each anchored to UI keys and corpus counts).
 
 **Mandatory CBT Terms:**
 
 - **Automatic thoughts** → `الأفكار التلقائية`
-- **Cognitive distortions** → `التحريفات المعرفية` (important: not "التشوهات"!)
-- **Core beliefs** → `المعتقدات الأساسية`
+- **Cognitive distortions** → `التشوّهات المعرفية` (important: not "التحريفات"!)
+- **Core beliefs** → `المعتقدات الجوهرية` (in app UI strings: `معتقدات عميقة`)
 - **Intermediate beliefs** → `المعتقدات الوسيطة`
-- **Coping strategies** → `استراتيجيات المواجهة`
-- **Cognitive-behavioral therapy** → `العلاج المعرفي السلوكي`
+- **Coping cards** → `بطاقات التأقلم` (coping strategies — `استراتيجيات التأقلم`; not `المواجهة`)
+- **Cognitive-behavioral therapy** → `العلاج المعرفي السلوكي (CBT)`
 - **Adaptive response** → `الاستجابة التكيفية`
 
 **Psychiatric and Psychological Terms:**
@@ -40,9 +40,9 @@
 - **Bulimia** → `الشره المرضي`
 - **Obsessive-compulsive disorder (OCD)** → `اضطراب الوسواس القهري`
 - **Panic disorder** → `اضطراب الهلع`
-- **Social anxiety disorder** → `اضطراب القلق الاجتماعي`
+- **Social anxiety disorder** → `الرهاب الاجتماعي` (as in the corpus tests; `اضطراب القلق الاجتماعي` — 1 file only)
 - **Generalized anxiety disorder** → `اضطراب القلق المعمم`
-- **Attention deficit hyperactivity disorder (ADHD)** → `اضطراب نقص الانتباه مع فرط النشاط`
+- **Attention deficit hyperactivity disorder (ADHD)** → `اضطراب فرط الحركة وتشتت الانتباه` (as in the corpus; no ADHD abbreviation)
 
 ### 📋 Grammatical and Stylistic Rules
 
@@ -141,7 +141,7 @@
 4. **Incorrect CBT terminology**
 5. **Non-Arabic grammatical constructions**
 6. **Tautology** and redundancy
-7. **Using "التشوهات"** instead of "التحريفات" for cognitive distortions
+7. **Using "التحريفات"** instead of "التشوّهات" for cognitive distortions (the corpus and app UI use تشوّه, see glossary)
 
 ### 🎯 Specific Rules to Avoid Common Problems
 
@@ -170,7 +170,7 @@
 **5. Medical terminology:**
 
 - **Mistake:** `متلازمة نقص الانتباه` (incomplete name)
-- **Correct:** `اضطراب نقص الانتباه مع فرط النشاط (ADHD)`
+- **Correct:** `اضطراب فرط الحركة وتشتت الانتباه` (as in the corpus; ADHD abbreviation not used)
 
 #### ✅ Recommended Expressions
 
