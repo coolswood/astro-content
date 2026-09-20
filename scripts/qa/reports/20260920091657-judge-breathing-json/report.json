@@ -1,0 +1,494 @@
+{
+  "file": "breathing.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/calm/name",
+                "verdict": "ok",
+                "note": "Переведено как 'Спокойствие', что подходит по смыслу."
+              },
+              {
+                "path": "/calm/subtitle",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/calm/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон поддерживающий."
+              },
+              {
+                "path": "/calm/fullDescription",
+                "verdict": "issue",
+                "note": "Пропущено упоминание 'пульсации' (pulsation) в контексте выдоха."
+              },
+              {
+                "path": "/calm/final_text",
+                "verdict": "ok",
+                "note": "Переведено естественно."
+              },
+              {
+                "path": "/calm/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/calm/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/square/name",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/square/subtitle",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/square/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо, без кальки."
+              },
+              {
+                "path": "/square/fullDescription",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены."
+              },
+              {
+                "path": "/square/final_text",
+                "verdict": "ok",
+                "note": "Переведено естественно."
+              },
+              {
+                "path": "/square/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/square/phaseNames/hold",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/square/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/deep_relax/name",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/deep_relax/subtitle",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/deep_relax/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо."
+              },
+              {
+                "path": "/deep_relax/fullDescription",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/deep_relax/final_text",
+                "verdict": "ok",
+                "note": "Переведено хорошо."
+              },
+              {
+                "path": "/deep_relax/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/deep_relax/phaseNames/hold",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/deep_relax/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/reset/name",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/reset/subtitle",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/reset/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо."
+              },
+              {
+                "path": "/reset/fullDescription",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/reset/final_text",
+                "verdict": "ok",
+                "note": "Переведено хорошо."
+              },
+              {
+                "path": "/reset/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/reset/phaseNames/inhale_extra",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/reset/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/balance/name",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/balance/subtitle",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/balance/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо."
+              },
+              {
+                "path": "/balance/fullDescription",
+                "verdict": "ok",
+                "note": "Переведено хорошо."
+              },
+              {
+                "path": "/balance/final_text",
+                "verdict": "ok",
+                "note": "Переведено хорошо."
+              },
+              {
+                "path": "/balance/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/balance/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/calm/fullDescription",
+                "fragment": "يلي زفير لمدة 6 ثوانٍ مع تدفق عميق",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "Пропущено описание 'пульсации' (pulsation) выдоха.",
+                "why": "В оригинале указано 'с глубокой пульсацией', что важно для физиологического описания техники. Перевод 'تدفق عميق' (глубокий поток) меняет нюанс."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator replaced 'pulsation' (пульсация) with 'flow' (تدفق), which loses the specific physiological nuance of the breathing technique described in the source."
+              }
+            ],
+            "notes": "The translation is of high quality and follows the source closely, with only one minor nuance regarding physiological terminology being missed.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/calm/fullDescription",
+                "current": "يعتمد نمط التنفس «4-6» على دورات مدتها عشر ثوانٍ للتخلص السريع من التوتر. يبدأ بشهيق لمدة 4 ثوانٍ بسلاسة، يليه زفير لمدة 6 ثوانٍ مع تدفق عميق. يساعد هذا الزفير الممتد على تحفيز العصب الحائر، مما يؤدي إلى إبطاء نبضات القلب وتقليل مستويات الكورتيزول.",
+                "proposed": "يعتمد نمط التنفس «4-6» على دورات مدتها عشر ثوانٍ للتخلص السريع من التوتر. يبدأ بشهيق لمدة 4 ثوانٍ بسلاسة، يليه زفير لمدة 6 ثوانٍ مع نبضات عميقة. يساعد هذا الزفير الممتد على تحفيز العصب الحائر، مما يؤدي إلى إبطاء نبضات القلب وتقليل مستويات الكورتيزول.",
+                "alternatives": [
+                  "مع نبضات عميقة",
+                  "بإيقاع نابض وعميق"
+                ],
+                "rationale": "В оригинале важно указать на 'пульсацию' (pulsation), что в контексте дыхательных практик указывает на специфический ритм. 'تدفق' (поток) — это слишком плавное движение, лишающее текст физиологической точности. 'نبضات' лучше передает смысл пульсации."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден поддерживающий тон, использована правильная терминология и отличная структура предложений. Единственный нюанс — потеря важного физиологического нюанса (пульсации) в описании одной из техник. После исправления текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 23226,
+              "deliberate": 2719,
+              "recommend": 9915
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/calm/fullDescription",
+              "from": "يعتمد نمط التنفس «4-6» على دورات مدتها عشر ثوانٍ للتخلص السريع من التوتر. يبدأ بشهيق لمدة 4 ثوانٍ بسلاسة، يليه زفير لمدة 6 ثوانٍ مع تدفق عميق. يساعد هذا الزفير الممتد على تحفيز العصب الحائر، مما يؤدي إلى إبطاء نبضات القلب وتقليل مستويات الكورتيزول.",
+              "to": "يعتمد نمط التنفس «4-6» على دورات مدتها عشر ثوانٍ للتخلص السريع من التوتر. يبدأ بشهيق لمدة 4 ثوانٍ بسلاسة، يليه زفير لمدة 6 ثوانٍ مع نبضات عميقة. يساعد هذا الزفير الممتد على تحفيز العصب الحائر، مما يؤدي إلى إبطاء نبضات القلب وتقليل مستويات الكورتيزول."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/calm/name",
+                "verdict": "ok",
+                "note": "Переведено как 'Спокойствие/Тишина', смысл передан верно."
+              },
+              {
+                "path": "/calm/subtitle",
+                "verdict": "ok",
+                "note": "Переведено точно."
+              },
+              {
+                "path": "/calm/description",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, тон поддерживающий."
+              },
+              {
+                "path": "/calm/fullDescription",
+                "verdict": "issue",
+                "note": "Пропущено упоминание блокировки кортизола (в оригинале 'блокируя кортизол', в переводе 'снижая уровни кортизола')."
+              },
+              {
+                "path": "/calm/final_text",
+                "verdict": "ok",
+                "note": "Переведено естественно."
+              },
+              {
+                "path": "/calm/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/calm/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/square/name",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/square/subtitle",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/square/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо, сохранена метафора якоря."
+              },
+              {
+                "path": "/square/fullDescription",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены."
+              },
+              {
+                "path": "/square/final_text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/square/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/square/phaseNames/hold",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/square/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/deep_relax/name",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/deep_relax/subtitle",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/deep_relax/description",
+                "verdict": "ok",
+                "note": "Переведено хорошо, тон соблюден."
+              },
+              {
+                "path": "/deep_relax/fullDescription",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/deep_relax/final_text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/deep_relax/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/deep_relax/phaseNames/hold",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/deep_relax/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/name",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/subtitle",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/description",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/fullDescription",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/final_text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/phaseNames/inhale_extra",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/reset/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/balance/name",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/balance/subtitle",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/balance/description",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/balance/fullDescription",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/balance/final_text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/balance/phaseNames/inhale",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/balance/phaseNames/exhale",
+                "verdict": "ok",
+                "note": "Ок."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/calm/fullDescription",
+                "fragment": "مما يؤدي إلى إبطاء نبضات القلب وتقليل مستويات الكورتيزول",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Смягчение смысла: 'блокируя кортизол' переведено как 'снижая уровни кортизола'",
+                "why": "В оригинале используется более сильный глагол 'блокировать', что важно для описания физиологического эффекта практики."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "The translator used 'reducing levels' (تقليل مستويات) instead of 'blocking' (حظر/منع) to sound more natural and scientifically plausible in Arabic. 'Blocking cortisol' is a physiological exaggeration in the source; 'reducing levels' is a correct transcreation for a wellness context."
+              }
+            ],
+            "notes": "The translation is of high quality, maintaining a soothing and professional tone suitable for a meditation app. No critical errors were found.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высочайшем уровне. Тон выдержан в рамках поддерживающего и профессионального стиля, характерного для качественной литературы по самопомощи. Все термины (дыхание, фазы, физиологические процессы) переданы естественно. Замечание редактора по поводу «блокировки кортизола» было отклонено справедливо: переводчик применил грамотную транскреацию, заменив избыточно сильный глагол на научно корректный и естественный для арабского языка, что не искажает суть пользы практики, но делает текст более достоверным."
+            },
+            "timings": {
+              "issues": 24567,
+              "deliberate": 3569,
+              "recommend": 5037
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

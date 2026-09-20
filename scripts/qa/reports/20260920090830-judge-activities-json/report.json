@@ -1,0 +1,2085 @@
+{
+  "file": "activities.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 5,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/constants/tags/calm",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/constants/tags/mindfulness",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/constants/tags/meditation",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/constants/tags/perfectionism",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/constants/tags/procrastination",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/statement",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон поддерживающий"
+              },
+              {
+                "path": "/alkjnaNNasz/task/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/task/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/task/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/task/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/task/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/task/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/task/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/task/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/example/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/example/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/example/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/example/3",
+                "verdict": "ok",
+                "note": "Перевод корректен, соблюдено обращение к женщине"
+              },
+              {
+                "path": "/alkjnaNNasz/example/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/example/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/example/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/example/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/alkjnaNNasz/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/title",
+                "verdict": "issue",
+                "note": "Смещение акцента с 'состояния' на 'чувства'"
+              },
+              {
+                "path": "/asgNldsc/statement",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/description/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/description/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/description/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/task/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/task/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/task/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/task/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/task/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/task/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/task/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/asgNldsc/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/dfdzsWz4nJ/title",
+                "verdict": "ok",
+                "note": "Кратко и естественно"
+              },
+              {
+                "path": "/dfdzsWz4nJ/statement",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/dfdzsWz4nJ/description/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/dfdzsWz4nJ/description/1",
+                "verdict": "ok",
+                "note": "Естественный арабский синтаксис"
+              },
+              {
+                "path": "/dfdzsWz4nJ/description/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/dfdzsWz4nJ/example/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/example/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/example/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/statement",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/description/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/1",
+                "verdict": "issue",
+                "note": "Огромная ошибка: вместо перевода заголовков колонок вставлен текст инструкции"
+              },
+              {
+                "path": "/DzseWuFv2t/task/2",
+                "verdict": "issue",
+                "note": "Огромная ошибка: вместо перевода заголовка вставлен текст инструкции"
+              },
+              {
+                "path": "/DzseWuFv2t/task/3",
+                "verdict": "issue",
+                "note": "Огромная ошибка: вместо перевода заголовка вставлен текст инструкции"
+              },
+              {
+                "path": "/DzseWuFv2t/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/example/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/header/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/header/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/header/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/0/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/0/1",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/0/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/1/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/1/1",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/1/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/2/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/2/1",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/2/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный и естественный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/statement",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль поддерживающий."
+              },
+              {
+                "path": "/kdzYJ4njVJ/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/statement",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/lsafnanS3sf/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/0/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/0/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/1/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/1/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/2/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/2/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/3/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/3/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/expectations/0",
+                "verdict": "ok",
+                "note": "Смысл передан точно"
+              },
+              {
+                "path": "/lsafnanS3sf/expectations/1",
+                "verdict": "ok",
+                "note": "Смысл передан точно"
+              },
+              {
+                "path": "/lsafnanS3sf/expectations/2",
+                "verdict": "ok",
+                "note": "Смысл передан точно"
+              },
+              {
+                "path": "/lsvnnDSnsdl/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/statement",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/task/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/task/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/task/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/1",
+                "verdict": "ok",
+                "note": "Термин 'черно-белое мышление' использован верно"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/statement",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/description/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/description/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/description/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/task/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/task/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/task/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/header/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/header/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/header/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/0/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/0/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/0/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/1/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/1/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/1/2",
+                "verdict": "issue",
+                "note": "Добавлено 'мне' (personalization), чего нет в оригинале"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/2/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/2/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/2/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/naslSLnadfl/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/naslSLnadfl/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/statement",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/description/0",
+                "verdict": "issue",
+                "note": "Смысловое искажение: 'замедлиться' переведено как 'наслаждаться процессом'"
+              },
+              {
+                "path": "/sdfcgNldslm/description/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/asgNldsc/title",
+                "fragment": "انتبه إلى مشاعرك",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Перевод 'внутреннее состояние' как 'чувства'",
+                "why": "В оригинале 'внутреннее состояние' (الحالة الداخلية), что шире, чем просто 'чувства' (مشاعر). Хотя в контексте упражнения это допустимо, это небольшое отклонение от точности терминологии."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/DzseWuFv2t/task/1",
+                "fragment": "أفكار الناقد، التشوّه المعرفي، الرد العقلاني.",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "Вместо перевода заголовков колонок (Мысли критика, Когнитивная ошибка, Рациональный ответ) вставлен текст, который выглядит как перечисление или часть инструкции, хотя в оригинале это просто названия колонок.",
+                "why": "Это ломает структуру упражнения, так как пользователь видит не названия полей, а какой-то список."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/DzseWuFv2t/task/2",
+                "fragment": "1️⃣ في العمود الأول، دوّن جميع الأفكار الناقدة لذاتك التي تظهر عندما تشعر بالذنب، أو عدم الجدوى، أو عدم الرضا عن نفسك.",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "В поле, где должен быть перевод заголовка 'Когнитивная ошибка', вставлен целый абзац инструкции.",
+                "why": "Полная подмена смысла: заголовок таблицы заменен на длинное предложение."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/DzseWuFv2t/task/3",
+                "fragment": "من المهم تدوين الأفكار وليس المشاعر. على سبيل المثال، عبارة «أشعر بالسوء» لا يمكن دحضها لأن الشعور موجود بالفعل.",
+                "type": "mistranslation",
+                "severity": "critical",
+                "problem": "В поле, где должен быть перевод заголовка 'Рациональный ответ', вставлен текст пояснения.",
+                "why": "Полная подмена смысла: заголовок таблицы заменен на пояснительный текст."
+              },
+              {
+                "id": "c5-I1",
+                "path": "/naslSLnadfl/table/example/1/2",
+                "fragment": "تمنحني",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено местоимение 'мне' (me)",
+                "why": "В оригинале 'чистота приносит удовольствие' (общее утверждение), в переводе 'чистота приносит мне удовольствие' (субъективное)."
+              },
+              {
+                "id": "c5-I2",
+                "path": "/sdfcgNldslm/description/0",
+                "fragment": "والاستمتاع بعملية الأكل",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла: 'почувствовать процесс' заменено на 'наслаждаться процессом'",
+                "why": "В упражнениях на осознанность важно именно 'почувствовать' (ощутить), а 'наслаждение' — это уже результат или отдельный этап. Подмена действия меняет терапевтическую задачу."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Терминологическое упрощение, не критичное для понимания, но заметное."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c2-I2",
+                  "c2-I3"
+                ],
+                "note": "Критическая ошибка: вместо заголовков таблицы вставлен текст инструкций. Это ломает UI и логику упражнения."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c2-I1",
+                  "c2-I3"
+                ],
+                "note": "Критическая ошибка: заголовок таблицы заменен на инструкцию. Связано с I1 и I3 (одна и та же проблема структуры таблицы)."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c2-I1",
+                  "c2-I2"
+                ],
+                "note": "Критическая ошибка: заголовок таблицы заменен на пояснение. Связано с I1 и I2 (одна и та же проблема структуры таблицы)."
+              },
+              {
+                "id": "c5-I1",
+                "verdict": "rejected",
+                "note": "Транскреация: в арабском языке для естественности фразы в контексте личного опыта использование местоимения оправдано."
+              },
+              {
+                "id": "c5-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Смысловое искажение: замена нейтрального 'почувствовать' на оценочное 'наслаждаться' меняет фокус практики mindfulness."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "merged",
+                "mergedInto": "c2-I2",
+                "note": "Замечания касаются одной и той же проблемы: подмены заголовков таблицы текстом инструкций."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "merged",
+                "mergedInto": "c2-I1",
+                "note": "Замечания касаются одной и той же проблемы: подмены заголовков таблицы текстом инструкций."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "merged",
+                "mergedInto": "c2-I1",
+                "note": "Замечания касаются одной и той же проблемы: подмены заголовков таблицы текстом инструкций."
+              }
+            ],
+            "notes": "Критическая проблема в блоке упражнения с таблицей (подмена заголовков инструкциями) и серьезное смысловое искажение в блоке осознанного питания. Остальные замечания носят косметический характер.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/DzseWuFv2t/task/1",
+                "current": "أفكار الناقد، التشوّه المعرفي، الرد العقلاني.",
+                "proposed": "أفكار الناقد",
+                "alternatives": [
+                  "أفكار الناقد"
+                ],
+                "rationale": "В оригинале это заголовок первой колонки («Мысли критика»), а не перечисление всех заголовков. Текущий вариант ломает структуру таблицы в интерфейсе."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 1,
+                "path": "/DzseWuFv2t/task/2",
+                "current": "1️⃣ في العمود الأول، دوّن جميع الأفكار الناقدة لذاتك التي تظهر عندما تشعر بالذنب، أو عدم الجدوى، أو عدم الرضا عن نفسك.",
+                "proposed": "التشوّه المعرفي",
+                "alternatives": [
+                  "التشوّه المعرفي"
+                ],
+                "rationale": "Критическая ошибка: вместо перевода заголовка второй колонки («Когнитивная ошибка») вставлен текст инструкции. Нужно вернуть точный термин из глоссария."
+              },
+              {
+                "id": "c2-I3",
+                "priority": 1,
+                "path": "/DzseWuFv2t/task/3",
+                "current": "من المهم تدوين الأفكار وليس المشاعر. على سبيل المثال، عبارة «أشعر بالسوء» لا يمكن دحضها لأن الشعور موجود بالفعل.",
+                "proposed": "الرد العقلاني",
+                "alternatives": [
+                  "الرد العقلاني"
+                ],
+                "rationale": "Критическая ошибка: вместо заголовка третьей колонки («Рациональный ответ») вставлен пояснительный текст. Нужно вернуть точный термин."
+              },
+              {
+                "id": "c5-I2",
+                "priority": 2,
+                "path": "/sdfcgNldslm/description/0",
+                "current": "في إيقاع حياتنا المتسارع، غالباً ما نأكل بشكل آلي دون أن ندرك المذاق حقاً. يساعدك هذا التمرين على التمهل والاستمتاع بعملية الأكل.",
+                "proposed": "في إيقاع حياتنا المتسارع، غالباً ما نأكل بشكل آلي دون أن ندرك المذاق حقاً. يساعدك هذا التمرين على التمهل واستشعار عملية الأكل.",
+                "alternatives": [
+                  "والشعور بعملية الأكل"
+                ],
+                "rationale": "В практиках осознанности (mindfulness) важно «почувствовать/ощутить» (استشعار) процесс, а не сразу «наслаждаться» (الاستمتاع) им. Это меняет терапевтическую задачу упражнения."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/asgNldsc/title",
+                "current": "انتبه إلى مشاعرك",
+                "proposed": "انتبه إلى حالتك الداخلية",
+                "alternatives": [
+                  "انتبه إلى حالتك"
+                ],
+                "rationale": "Оригинал «внутреннее состояние» шире, чем просто «чувства». Использование «الحالة الداخلية» точнее передает смысл, хотя текущий вариант допустим в контексте."
+              }
+            ],
+            "overall": {
+              "score": 65,
+              "verdict": "major_edits",
+              "summary": "В статье обнаружены критические ошибки в блоке упражнения «Отпор внутреннему критику»: заголовки таблицы полностью заменены текстом инструкций, что делает невозможным использование интерфейса. Также есть смысловое искажение в упражнении по осознанному питанию. Требуется немедленная правка структуры таблицы и уточнение терминологии в практиках mindfulness."
+            },
+            "timings": {
+              "issues": 155678,
+              "deliberate": 21472,
+              "recommend": 39900
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/DzseWuFv2t/task/1",
+              "from": "أفكار الناقد، التشوّه المعرفي، الرد العقلاني.",
+              "to": "أفكار الناقد"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/DzseWuFv2t/task/2",
+              "from": "1️⃣ في العمود الأول، دوّن جميع الأفكار الناقدة لذاتك التي تظهر عندما تشعر بالذنب، أو عدم الجدوى، أو عدم الرضا عن نفسك.",
+              "to": "التشوّه المعرفي"
+            },
+            {
+              "id": "c2-I3",
+              "path": "/DzseWuFv2t/task/3",
+              "from": "من المهم تدوين الأفكار وليس المشاعر. على سبيل المثال، عبارة «أشعر بالسوء» لا يمكن دحضها لأن الشعور موجود بالفعل.",
+              "to": "الرد العقلاني"
+            },
+            {
+              "id": "c5-I2",
+              "path": "/sdfcgNldslm/description/0",
+              "from": "في إيقاع حياتنا المتسارع، غالباً ما نأكل بشكل آلي دون أن ندرك المذاق حقاً. يساعدك هذا التمرين على التمهل والاستمتاع بعملية الأكل.",
+              "to": "في إيقاع حياتنا المتسارع، غالباً ما نأكل بشكل آلي دون أن ندرك المذاق حقاً. يساعدك هذا التمرين على التمهل واستشعار عملية الأكل."
+            },
+            {
+              "id": "c1-I1",
+              "path": "/asgNldsc/title",
+              "from": "انتبه إلى مشاعرك",
+              "to": "انتبه إلى حالتك الداخلية"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/constants/tags/calm",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/constants/tags/mindfulness",
+                "verdict": "ok",
+                "note": "Термин верный"
+              },
+              {
+                "path": "/constants/tags/meditation",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/constants/tags/perfectionism",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/constants/tags/procrastination",
+                "verdict": "ok",
+                "note": "Термин верный"
+              },
+              {
+                "path": "/alkjnaNNasz/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/statement",
+                "verdict": "ok",
+                "note": "Смысл передан хорошо, тон поддерживающий"
+              },
+              {
+                "path": "/alkjnaNNasz/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/task/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки в оригинале заменены на арабские"
+              },
+              {
+                "path": "/alkjnaNNasz/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/task/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/task/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/task/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/example/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/example/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/example/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/example/3",
+                "verdict": "ok",
+                "note": "Верное использование женского рода для Анны"
+              },
+              {
+                "path": "/alkjnaNNasz/example/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/example/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/example/6",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден"
+              },
+              {
+                "path": "/alkjnaNNasz/example/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/alkjnaNNasz/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/statement",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/description/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/task/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/task/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/task/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/asgNldsc/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/dfdzsWz4nJ/title",
+                "verdict": "ok",
+                "note": "Кратко и естественно"
+              },
+              {
+                "path": "/dfdzsWz4nJ/statement",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/dfdzsWz4nJ/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/description/1",
+                "verdict": "ok",
+                "note": "Естественная арабская конструкция"
+              },
+              {
+                "path": "/dfdzsWz4nJ/description/2",
+                "verdict": "ok",
+                "note": "Хороший ритм, смысл сохранен"
+              },
+              {
+                "path": "/dfdzsWz4nJ/example/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/example/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/example/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/dfdzsWz4nJ/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/statement",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки верные"
+              },
+              {
+                "path": "/DzseWuFv2t/description/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/2",
+                "verdict": "ok",
+                "note": "Термин использован верно (التشوّه المعرفي)"
+              },
+              {
+                "path": "/DzseWuFv2t/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/5",
+                "verdict": "ok",
+                "note": "Перевод точный, передана логика 'не подлежит опровержению'"
+              },
+              {
+                "path": "/DzseWuFv2t/task/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/task/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/example/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/header/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/header/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/header/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/0/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/0/1",
+                "verdict": "ok",
+                "note": "Термин использован верно"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/0/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/1/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/1/1",
+                "verdict": "ok",
+                "note": "Термин использован верно"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/1/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/2/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/2/1",
+                "verdict": "ok",
+                "note": "Термин использован верно"
+              },
+              {
+                "path": "/DzseWuFv2t/table/example/2/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/DzseWuFv2t/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный и естественный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/statement",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль соответствует."
+              },
+              {
+                "path": "/kdzYJ4njVJ/description/0",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/0",
+                "verdict": "ok",
+                "note": "Терминология (автоматическая мысль) соблюдена."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/example/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/kdzYJ4njVJ/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/statement",
+                "verdict": "ok",
+                "note": "Терминология (депрессия, прокрастинация) соблюдена."
+              },
+              {
+                "path": "/lsafnanS3sf/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/description/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/task/0",
+                "verdict": "ok",
+                "note": "Дубликат описания, перевод корректен."
+              },
+              {
+                "path": "/lsafnanS3sf/task/1",
+                "verdict": "ok",
+                "note": "Дубликат описания, перевод корректен."
+              },
+              {
+                "path": "/lsafnanS3sf/task/2",
+                "verdict": "ok",
+                "note": "Дубликат описания, перевод корректен."
+              },
+              {
+                "path": "/lsafnanS3sf/task/3",
+                "verdict": "ok",
+                "note": "Дубликат описания, перевод корректен."
+              },
+              {
+                "path": "/lsafnanS3sf/task/4",
+                "verdict": "ok",
+                "note": "Дубликат описания, перевод корректен."
+              },
+              {
+                "path": "/lsafnanS3sf/task/5",
+                "verdict": "ok",
+                "note": "Дубликат описания, перевод корректен."
+              },
+              {
+                "path": "/lsafnanS3sf/task/6",
+                "verdict": "ok",
+                "note": "Дубликат описания, перевод корректен."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/lsafnanS3sf/table/header/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/0/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/0/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/1/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/1/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/2/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/2/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/3/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/table/example/3/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsafnanS3sf/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/statement",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/task/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/task/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/task/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/example/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/lsvnnDSnsdl/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/statement",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/description/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/description/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/description/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/task/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/task/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/task/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/header/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/header/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/header/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/0/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/0/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/0/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/1/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/1/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/1/2",
+                "verdict": "issue",
+                "note": "Добавлено 'мне' (personalization), которого нет в оригинале"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/2/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/2/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/naslSLnadfl/table/example/2/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно, хотя добавлено 'работы', это допустимая трансекреация"
+              },
+              {
+                "path": "/naslSLnadfl/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/naslSLnadfl/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/statement",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/description/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/task/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/expectations/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/expectations/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/sdfcgNldslm/expectations/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c5-I1",
+                "path": "/naslSLnadfl/table/example/1/2",
+                "fragment": "تمنحني شعوراً",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено местоимение 'мне' (تمنحني)",
+                "why": "В оригинале 'чистота приносит удовольствие' (общее утверждение), а в переводе 'чистота приносит мне удовольствие'. Это небольшое отклонение от нейтрального тона в сторону субъективного."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c5-I1",
+                "verdict": "rejected",
+                "rank": 1,
+                "note": "Это осознанная трансекреация. В арабском языке использование первого лица в примерах (в таблицах) делает текст более живым и естественным для пользователя, имитируя реальный дневник. Это не ошибка, а стилистический прием."
+              }
+            ],
+            "notes": "Замечаний не обнаружено; перевод выполнен на высоком уровне, с соблюдением контекстуальной адаптации.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком профессиональном уровне. Соблюдена вся терминология (КПТ, когнитивные искажения, осознанность), выдержан поддерживающий и эмпатичный тон, характерный для психологической помощи. Использование первого лица в примерах (как в случае с 'تمنحني') оправдано контекстом дневника и делает текст естественным для носителя. Типографика (арабские кавычки, запятые) соблюдена."
+            },
+            "timings": {
+              "issues": 134820,
+              "deliberate": 6373,
+              "recommend": 8412
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
