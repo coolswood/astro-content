@@ -205,6 +205,38 @@ lingo.dev) удалены — их заменил единый раннер.
   сохранены в `scripts/lib/providers/` с пометкой LEGACY, доступны через
   `--provider chatgpt|claude|gemini|mistral`, не развиваются.
 
+## Старшая модель по подписке (agy-шим, с 2026-09-20)
+
+`scripts/agy_proxy.py` (:8107, loopback) — заимствованный у ревью-лабы
+(`~/pr-agent-lab/agy_proxy.py`) механизм: OpenAI-совместимый `/v1`, роутинг по
+имени модели в теле запроса — `gemini-*`/`claude-*`/`gpt-oss-*` идут в agy CLI
+(облачный Gemini из ПОДПИСКИ Google, авторизация `~/.gemini/antigravity-cli`),
+всё остальное — насквозь к vLLM. `/v1/models` отдаёт upstream + подписочные
+модели, поэтому preflight проходит для любых имён. Принцип использования:
+старшая модель — КРИТИК, а не генератор (каждый вызов agy несёт ~12k input-
+токенов системного промпта агента; беречь лимиты = минимизировать ЧИСЛО вызовов):
+стадия review конвейера, слепой судья eval.ts, арбитраж коллегии — не MAIN/editor.
+
+```bash
+# запуск шима (зависимости — venv pr-agent-лабы):
+cd <repo> && uv run --project ~/pr-agent-lab/pr-agent python scripts/agy_proxy.py
+#   env: TRANSLATE_AGY_UPSTREAM=http://127.0.0.1:8000, TRANSLATE_AGY_PORT=8107
+
+# конвейер со старшей моделью на review (один endpoint на всё):
+bun scripts/translate.ts <файл> --langs de --full \
+  --endpoint http://127.0.0.1:8107/v1 --stage-model review=gemini-3.1-pro-high
+# слепой судья — старшей моделью:
+bun scripts/qa/eval.ts <файл> --old-dir <снапшот> --langs de \
+  --model gemini-3.1-pro-high --endpoint http://127.0.0.1:8107/v1
+```
+
+`--stage-model stage=имя[,…]` (стадии main/editor/review/fix; постоянный вариант —
+`stageModels` в translate.config.json). Нюансы: agy игнорирует
+temperature/max_tokens/response_format (jsonMode не работает — parseWithRepair
+компенсирует), семафор шима ×2, не-SUCCESS → HTTP 502 (стадия ретраится тем же
+путём; клиентского фолбэка на gemma пока нет). Подписочные модели: `agy models`
+(gemini-3.1-pro-high/low, gemini-3.8/3.7/3.6-flash, claude-*, gpt-oss-*).
+
 ## ⚠️ Лимит модели
 
 **К модели — не более `concurrency` (по умолчанию 6) одновременных запросов.**
@@ -336,7 +368,8 @@ apply → merge-winners.md. Итеративная схема: eval со све�
 
 ```
 scripts/translate.ts            единый раннер (контент + --ui)
-scripts/translate.config.json   конфиг (локали, endpoint, модель, psy-dir)
+scripts/translate.config.json   конфиг (локали, endpoint, модель, psy-dir, stageModels)
+scripts/agy_proxy.py            agy-шим :8107 (старшая модель по подписке + пасстру на vLLM)
 scripts/translation-state.json  закоммиченный state (per-key sha1 ru)
 scripts/prompts/                промпты + глоссарии (актив качества)
 scripts/lib/pipeline.ts         vLLM-клиент + 3 стадии + legacy-адаптер
