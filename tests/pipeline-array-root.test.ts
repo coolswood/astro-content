@@ -134,3 +134,52 @@ describe('runPipeline — чанкование документа-массива
     expect(data[0]).toEqual({ id: 'id0', translation: 'перевод /0/translation' });
   });
 });
+
+describe('runPipeline — editor на чанке-массиве', () => {
+  test('массив-ответ editor применяется к черновику-массиву', async () => {
+    // Разрезанный чанк записей — сам массив (без обёртки content); editor
+    // отвечает «полным документом»-массивом. Раньше parseStageObject браковал
+    // массив → правки стадии терялись («применено 0 правок» на каждом чанке).
+    const payload = Array.from({ length: 15 }, (_, i) => ({ id: `id${i}`, translation: `Вопрос ${i}` }));
+    const client: StageClient = {
+      name: 'fake',
+      async complete(req) {
+        if (req.system.includes('PROMPT:MAIN')) {
+          // Чанки-массивы отвечают в путях чанка (без /content-префикса);
+          // id — стабильные, эхаем как есть.
+          const asked = JSON.parse(req.user).paths ?? {};
+          const paths: Record<string, string> = {};
+          for (const [p, ru] of Object.entries(asked as Record<string, string>)) {
+            if (typeof ru !== 'string') continue;
+            const m = p.match(/^\/(\d+)\/id$/);
+            paths[p] = m ? `id${m[1]}` : `перевод ${m ? '' : p.split('/').pop()}`;
+          }
+          return JSON.stringify({ paths });
+        }
+        if (req.system.includes('PROMPT:EDITOR')) {
+          // Editor получает сам черновик (массив записей чанка; со 2-го чанка
+          // к нему добавлен КОНТЕКСТ-блок — срезаем): отвечаем «полным
+          // документом»-массивом с полировкой (суффикс ✎).
+          const head = req.user.slice(0, req.user.lastIndexOf(']') + 1);
+          const draft = JSON.parse(head);
+          const arr: any[] = Array.isArray(draft) ? draft : draft.content;
+          return JSON.stringify(
+            arr.map((it) =>
+              it == null ? null : { id: it.id, translation: `перевод ${Number(it.id.replace('id', ''))}✎` },
+            ),
+          );
+        }
+        if (req.system.includes('PROMPT:REVIEW')) return '{"issues":[]}';
+        return 'Все хорошо';
+      },
+    };
+    const { data } = await runPipeline(client, PROMPTS, payload, 'ja', {
+      mainPathMap: true,
+      chunkLeaves: 10, // 2 чанка-массива
+    });
+    expect(data).toHaveLength(15);
+    for (let i = 0; i < 15; i++) {
+      expect(data[i]).toEqual({ id: `id${i}`, translation: `перевод ${i}✎` });
+    }
+  });
+});

@@ -587,7 +587,10 @@ async function runStage<T>(
 async function parseStageObject(stage: string, raw: string): Promise<any> {
   if (isNoChangesMarker(raw)) return null;
   const parsed = await parseWithRepair<any>(raw);
-  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+  // Массив — легитимный «полный документ» для чанка-массива (записи
+  // questions.json): mergeSubset принимает массив-ответ по путям /N/….
+  // Для объектного payload массив-ответ даст 0 пересечений путей — no-op.
+  if (!parsed || typeof parsed !== 'object') {
     throw new Error(`неожиданный формат ответа: ${raw.slice(0, 120)}`);
   }
   return parsed;
