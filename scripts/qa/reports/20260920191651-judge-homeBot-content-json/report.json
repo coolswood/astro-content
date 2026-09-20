@@ -1,0 +1,313 @@
+{
+  "file": "homeBot/content.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/days/fist",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий, терминология соблюдена."
+              },
+              {
+                "path": "/days/third",
+                "verdict": "ok",
+                "note": "Терминология (الأفكار الهدّامة, الأخصائي النفسي) верна."
+              },
+              {
+                "path": "/days/fourth",
+                "verdict": "issue",
+                "note": "Пропущено слово Instagram в арабском тексте."
+              },
+              {
+                "path": "/days/fifth",
+                "verdict": "ok",
+                "note": "Перевод естественный, использование Premium в скобках уместно."
+              },
+              {
+                "path": "/days/eighth",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в RU 'я сделала' (жен. род), в AR 'أعددتُ' (нейтрально/муж. род). Однако, учитывая, что AI-помощник — это персонаж, важно проверить согласованность. Но главная проблема — пропуск фразы 'Берегите себя и своё состояние!' (в AR только 'اعتنِ بنفسك!')."
+              },
+              {
+                "path": "/days/tenth",
+                "verdict": "ok",
+                "note": "Кавычки «» использованы верно."
+              },
+              {
+                "path": "/appUpdated/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/appUpdated/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/appUpdated/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/appUpdated/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/appUpdated/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/appUpdated/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/neverUsed/0",
+                "verdict": "ok",
+                "note": "Терминология (إدخال) соблюдена."
+              },
+              {
+                "path": "/neverUsed/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/neverUsed/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/premiumThanks/content",
+                "verdict": "ok",
+                "note": "Перевод качественный."
+              },
+              {
+                "path": "/quote/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/quote/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/quote/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/quote/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/quote/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/quote/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/quote/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/readArticle/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/readArticle/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/readArticle/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/affirmation/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/affirmation/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон поддерживающий, грамматика корректна."
+              },
+              {
+                "path": "/affirmation/2",
+                "verdict": "ok",
+                "note": "Перевод точный, использование 'ضبط حالتك' уместно для 'внутреннего настроя'."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/days/fourth",
+                "fragment": "أنشأنا قناة على ، حيث",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Пропущено название социальной сети (Instagram).",
+                "why": "В оригинале указан Instagram-канал, в переводе после предлога 'на' стоит пустота, что делает предложение грамматически и логически неполным."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/days/eighth",
+                "fragment": "اعتنِ بنفسك!",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "Утеряна часть фразы 'и своё состояние'.",
+                "why": "Оригинал: 'Берегите себя и своё состояние!'. В переводе: 'Берегите себя!'. Потерян важный терапевтический акцент на состоянии."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical omission: the name of the social network is missing, leaving a grammatical gap in the sentence."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Minor omission: the translation omits the phrase 'and your state', which is part of the original therapeutic message."
+              }
+            ],
+            "notes": "The translation is generally high quality, but there is a critical error in the Instagram mention and a slight loss of nuance in the closing phrase of one segment.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/days/fourth",
+                "current": "لذلك، أنشأنا قناة على ، حيث نشرح الأمور المعقدة بلغة بسيطة ومفهومة.",
+                "proposed": "لذلك، أنشأنا قناة على إنستغرام، حيث نشرح الأمور المعقدة بلغة بسيطة ومفهومة.",
+                "alternatives": [
+                  "لذلك، أنشأنا قناة إنستغرام، حيث نشرح الأمور المعقدة بلغة بسيطة ومفهومة."
+                ],
+                "rationale": "В оригинале указан Instagram. В текущем переводе после предлога 'على' стоит пустота, что является критической ошибкой. Добавление 'إنستغرام' восстанавливает смысл и грамматическую целостность."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/days/eighth",
+                "current": "يمكنك الاستفادة من السعر الجديد حتى نهاية اليوم. اعتنِ بنفسك!",
+                "proposed": "يمكنك الاستفادة من السعر الجديد حتى نهاية اليوم. اعتنِ بنفسك وبحالتك!",
+                "alternatives": [
+                  "يمكنك الاستفادة من السعر الجديد حتى نهاية اليوم. اهتم بنفسك وبحالتك النفسية!"
+                ],
+                "rationale": "В оригинале есть важный акцент: 'Берегите себя и своё состояние'. Текущий вариант обрывается на 'Берегите себя'. Добавление 'وبحالتك' (и своим состоянием) возвращает терапевтическую полноту фразы."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В переводе обнаружены две ошибки: критическая пропуск названия соцсети (Instagram) и утеря части фразы в завершающем предложении. После внесения этих правок текст будет полностью соответствовать оригиналу и стандартам качества."
+            },
+            "timings": {
+              "issues": 30669,
+              "deliberate": 3195,
+              "recommend": 9854
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/days/fourth",
+              "reason": "цитата судьи не похожа на лист (сходство 31%)"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/days/eighth",
+              "reason": "цитата судьи не похожа на лист (сходство 20%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

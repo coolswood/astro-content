@@ -1,0 +1,119 @@
+{
+  "file": "homeBot/stats.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daysCommon/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              },
+              {
+                "path": "/daysCommon/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, естественный арабский."
+              },
+              {
+                "path": "/daysCommon/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysCommon/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysInRow/0",
+                "verdict": "ok",
+                "note": "Перевод точный, добавлена естественная для арабского фраза про практику."
+              },
+              {
+                "path": "/daysInRow/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysInRow/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysInRow/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysInRow/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysMissed/0",
+                "verdict": "issue",
+                "note": "Нарушение согласования рода: в русском 'Рада' (жен. род), в арабском 'يسعدني' (нейтрально), но в начале 'لم أرك' (я не видел тебя) — мужской род. Однако в контексте приложения, где AI-помощник может быть любого рода, использование мужского рода как стандартного допустимо, но есть нюанс с 'Рада' в оригинале. Проверяем на соответствие правилу 'мужской род как стандарт'."
+              },
+              {
+                "path": "/daysMissed/1",
+                "verdict": "ok",
+                "note": "Перевод очень хороший, 'مرت بلطف' — удачная адаптация 'были бережными'."
+              },
+              {
+                "path": "/daysMissed/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysMissed/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/daysMissed/0",
+                "fragment": "لم أرك",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Несоответствие рода в оригинале и переводе",
+                "why": "В русском оригинале используется женский род («Рада»), что указывает на персонализацию помощника как женщины. В арабском переводе используется мужской род («لم أرك» — я не видел). Согласно правилам, мужской род является стандартом для MSA, но если в приложении заложен женский образ, это может быть заметно. Однако, так как это первый проход, помечаем как minor, так как использование мужского рода как гендерно-нейтрального — это норма конвенции."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "The use of masculine form in MSA is the standard neutral convention. Since the persona's gender is not explicitly defined as female in the entire string set (only implied by one word in one string), switching to masculine is a correct linguistic choice for a general audience."
+              }
+            ],
+            "notes": "The translation is high quality and follows MSA conventions; the single issue raised regarding gender is a matter of stylistic choice rather than a translation error.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне, с соблюдением всех правил MSA и стилистики поддерживающего психолога. Все замечания по поводу рода были отклонены корректно: использование мужского рода как гендерно-нейтрального стандарта является правильным решением для панрегионального арабского языка. Текст звучит естественно, терминология и ритм соблюдены."
+            },
+            "timings": {
+              "issues": 21161,
+              "deliberate": 3385,
+              "recommend": 2893
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
