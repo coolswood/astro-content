@@ -1,0 +1,265 @@
+{
+  "file": "texts/daybook.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daybookRecommends/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология CBT соблюдена."
+              },
+              {
+                "path": "/daybookRecommends/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/daybookRecommends/texts/2",
+                "verdict": "ok",
+                "note": "Естественный арабский язык."
+              },
+              {
+                "path": "/daybookRecommends/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookRecommends/texts/4",
+                "verdict": "ok",
+                "note": "Термин 'деструктивные установки' переведен как 'المعتقدات الهدّامة' согласно глоссарию."
+              },
+              {
+                "path": "/daybookStart/texts/0",
+                "verdict": "ok",
+                "note": "Соблюдена терминология."
+              },
+              {
+                "path": "/daybookStart/texts/1",
+                "verdict": "ok",
+                "note": "Инсайт переведен как 'رؤى', что соответствует глоссарию."
+              },
+              {
+                "path": "/daybookStart/texts/2",
+                "verdict": "ok",
+                "note": "Короткая фраза переведена верно."
+              },
+              {
+                "path": "/daybookStart/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookStart/texts/4",
+                "verdict": "issue",
+                "note": "Использование кавычек-лапок вместо арабских «»."
+              },
+              {
+                "path": "/gptCbt/texts/0",
+                "verdict": "ok",
+                "note": "Терминология и тон соблюдены."
+              },
+              {
+                "path": "/gptCbt/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/gptCbt/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/gptCbtDream/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/gptCbtDream/texts/1",
+                "verdict": "ok",
+                "note": "Термин 'глубинные убеждения' переведен верно (المعتقدات الجوهرية)."
+              },
+              {
+                "path": "/gptCbtDream/texts/2",
+                "verdict": "ok",
+                "note": "Перевод качественный."
+              },
+              {
+                "path": "/mockGpt/consolation",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, перевод точный."
+              },
+              {
+                "path": "/mockGpt/solutions/0",
+                "verdict": "ok",
+                "note": "Конструктивное убеждение/комментарий передано верно."
+              },
+              {
+                "path": "/mockGpt/solutions/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/solutions/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/distortion",
+                "verdict": "ok",
+                "note": "Термин 'сверхобобщение' (التعميم المفرط) использован верно."
+              },
+              {
+                "path": "/mockGpt/negativeThought",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGpt/adaptiveResponse",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/common",
+                "verdict": "ok",
+                "note": "Стиль соответствует психотерапевтическому тексту."
+              },
+              {
+                "path": "/mockGptDream/symbols/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/symbols/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/symbols/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/desires",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/fears",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/middle",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/deep",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/conclusion",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/h2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/daybookStart/texts/4",
+                "fragment": "«أشعر أن الآخرين يرونني كشخص فاشل. لقد ارتكبت خطأً في العمل اليوم، وطلب مني مديري تصحيحه. بدا لي أسلوبه بارداً ومليئاً بالاستياء، وكأنه يعتقد حقاً أنني فاشل»",
+                "type": "other",
+                "severity": "minor",
+                "problem": "Использование западных кавычек-лапок вместо арабских «»",
+                "why": "Согласно правилам типографики для арабского языка, должны использоваться кавычки «»."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator used Western-style quotation marks instead of the correct Arabic guillemets (« ») required by Arabic typography rules."
+              }
+            ],
+            "notes": "The translation is of high quality, maintaining the psychological nuance and professional tone, with only a minor typographic error regarding quotation marks.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/daybookStart/texts/4",
+                "current": "«أشعر أن الآخرين يرونني كشخص فاشل. لقد ارتكبت خطأً في العمل اليوم، وطلب مني مديري تصحيحه. بدا لي أسلوبه بارداً ومليئاً بالاستياء، وكأنه يعتقد حقاً أنني فاشل»",
+                "proposed": "«أشعر أن الآخرين يرونني كشخص فاشل. لقد ارتكبت خطأً في العمل اليوم، وطلب مني مديري تصحيحه. بدا لي أسلوبه بارداً ومليئاً بالاستياء، وكأنه يعتقد حقاً أنني فاشل»",
+                "alternatives": [],
+                "rationale": "В текущем тексте уже использованы арабские кавычки «», поэтому правка не требуется. Замечание ошибочно, так как переводчик уже следовал правилам типографики."
+              }
+            ],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высочайшем уровне. Соблюдены все требования по терминологии (КПТ, инсайты, когнитивные искажения), соблюден поддерживающий тон и правила использования гендерно-нейтрального мужского рода. Типографика (арабские кавычки и запятые) соблюдена. Единственное замечание по кавычкам в `/daybookStart/texts/4` является ложным, так как в предоставленном тексте уже стоят правильные символы «»."
+            },
+            "timings": {
+              "issues": 24950,
+              "deliberate": 2240,
+              "recommend": 7665
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/daybookStart/texts/4",
+              "reason": "валидация листа: теги — потеряны: <i> </i> (нет в: daybookStart/texts/4)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
