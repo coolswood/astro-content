@@ -1,0 +1,800 @@
+{
+  "meta": {
+    "Дата": "2026-09-20T10:47:37.360Z",
+    "Метка": "stage-model-de-sociophobia",
+    "Сравнение": "NEW = рабочее дерево; OLD = --old-dir backups/de-stage-model-baseline",
+    "Файлы": "tests/sociophobia.json",
+    "Локали": "de",
+    "Сэмпл/файл": 15,
+    "Seed": 20260920,
+    "Min-chars": 0,
+    "Модель": "gemini-3.1-pro-high",
+    "Endpoint": "http://127.0.0.1:8107/v1",
+    "git HEAD": "418c535898ff6dbd7e9ac63ae32e3a50018d13c4"
+  },
+  "results": {
+    "tests/sociophobia.json": {
+      "de": [
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/result/mild/title",
+          "ru": "Умеренная социальная тревожность",
+          "oldText": "Moderate soziale Angst",
+          "newText": "Mäßige soziale Angst",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "tie",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 95
+              },
+              "reason": "Оба варианта грамматически и стилистически корректно передают степень выраженности симптома. В интерфейсах и результатах тестов слова «moderat» и «mäßig» используются одинаково часто и естественно (наряду с более клиническим «mittelgradig»).",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 96
+              },
+              "reason": "Оба перевода абсолютно корректны и звучат естественно. Слово «mäßig» традиционно используется в немецких психологических и медицинских шкалах для обозначения умеренной степени, а «moderat» выступает отличным и однозначным синонимом в данном контексте.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/2/text",
+          "ru": "Одним из ключевых аспектов социофобии является страх социальных взаимодействий с незнакомыми людьми. Это может проявляться в избегании контактов, стремлении быть незаметным и в чувстве неловкости или тревоги.",
+          "oldText": "Ein zentraler Aspekt der sozialen Phobie ist die Angst vor Interaktionen mit fremden Menschen. Dies kann sich durch das Vermeiden von Kontakten, das Bestreben, unauffällig zu bleiben, oder durch Gefühle von Unbehagen äußern.",
+          "newText": "Ein zentraler Aspekt der sozialen Phobie ist die Angst vor Interaktionen mit fremden Menschen. Dies kann sich durch das Vermeiden von Kontakten, das Bestreben, unauffällig zu bleiben, oder durch Gefühle von Unbehagen oder Angst äußern.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Перевод A точен и полностью передает смысл оригинала. В переводе B пропущен перевод слов «или тревоги» (oder Angst), что является грубой потерей смысла (omission).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "В конце предложения пропущен перевод фрагмента «или тревоги» (oder Angst)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 80,
+                "new": 96
+              },
+              "reason": "Перевод B полностью и точно передаёт смысл оригинала, тогда как вариант A содержит критическое упущение — в конце предложения потерян перевод слов «или тревоги».",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Пропущен перевод фрагмента «или тревоги» (oder Angst) в конце предложения."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/25/text",
+          "ru": "Люди с социофобией часто избегают телефонных разговоров в присутствии других людей из-за страха быть услышанными и оцененными. Они могут беспокоиться о том, как звучит их голос, о возможных ошибках в речи или о том, что их разговор вызовет негативную реакцию у окружающих.",
+          "oldText": "Menschen mit sozialer Phobie vermeiden oft Telefonate in Anwesenheit anderer, weil sie fürchten, gehört und bewertet zu werden. Sie machen sich vielleicht Sorgen darüber, wie ihre Stimme klingt, über mögliche Versprecher oder darüber, dass ihr Gespräch eine negative Reaktion bei den Mitmenschen auslösen könnte.",
+          "newText": "Menschen mit sozialer Phobie vermeiden oft Telefonate in Anwesenheit anderer, aus Angst, gehört und bewertet zu werden. Sie machen sich vielleicht Sorgen darüber, wie ihre Stimme klingt, über mögliche Fehler beim Sprechen oder darüber, dass ihr Gespräch eine negative Reaktion bei den Mitmenschen auslösen könnte.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 93
+              },
+              "reason": "Оба перевода высокого качества, однако вариант B выигрывает благодаря использованию очень естественного и емкого слова «Versprecher» для передачи «ошибок в речи», что звучит более по-немецки.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза «Fehler beim Sprechen» верна, но немного громоздка; слово «Versprecher» точнее и естественнее отражает речевые ошибки (оговорки)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 97,
+                "new": 92
+              },
+              "reason": "Перевод A написан более идиоматично (использует меткое слово «Versprecher») и безупречен пунктуационно, тогда как в B допущена лишняя запятая перед предложным оборотом.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Лишняя запятая перед 'aus Angst' (предложное дополнение не должно обособляться). Также 'Fehler beim Sprechen' грамматически верно, но звучит чуть тяжеловеснее, чем естественное 'Versprecher'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/38/text",
+          "ru": "Люди с социофобией часто предпочитают гулять в часы, когда на улице мало людей или их совсем нет. Это помогает им избежать социальных взаимодействий, которые могут вызывать тревогу и стресс.",
+          "oldText": "Menschen mit sozialer Phobie ziehen es oft vor, zu Zeiten spazieren zu gehen, wenn wenig oder gar keine Menschen auf der Straße sind. Dies hilft ihnen, soziale Interaktionen zu vermeiden, die Angst und Stress auslösen könnten.",
+          "newText": "Menschen mit sozialer Phobie gehen oft lieber spazieren, wenn wenig oder gar keine Menschen auf der Straße sind. Dies hilft ihnen, soziale Interaktionen zu vermeiden, die Angst und Stress auslösen könnten.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 96
+              },
+              "reason": "Перевод B звучит гораздо естественнее и легче благодаря использованию разговорной конструкции «lieber etwas tun» вместо тяжеловесного и громоздкого оборота «es vorziehen, zu tun».",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция «ziehen es oft vor, zu Zeiten spazieren zu gehen» — это структурная калька с русского; она звучит сухо и академично. Вариант B решает эту проблему."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 93
+              },
+              "reason": "Вариант А звучит гораздо естественнее благодаря использованию «lieber spazieren gehen». Вариант Б использует более формальную и тяжеловесную конструкцию «ziehen es vor, zu Zeiten spazieren zu gehen», которая копирует структуру русского оригинала.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Конструкция «ziehen es vor, zu Zeiten spazieren zu gehen» перегружена и звучит как калька с русского «предпочитают гулять в часы»."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/result/mild/text",
+          "ru": "Ваши ответы указывают на то, что в некоторых социальных ситуациях вы можете испытывать напряжение или неуверенность. Общение с незнакомыми людьми, выступления или внимание со стороны могут быть для вас стрессовыми. Это довольно распространённое состояние, и при поддержке и практике уверенность в себе может заметно укрепиться.",
+          "oldText": "Ihre Antworten deuten darauf hin, dass Sie in bestimmten sozialen Situationen Anspannung oder Unsicherheit verspüren können. Der Umgang mit fremden Menschen, Auftritte oder das Gefühl, im Mittelpunkt zu stehen, können für Sie stressig sein. Dies ist ein recht verbreiteter Zustand, und mit Unterstützung sowie gezielter Übung kann Ihr Selbstvertrauen spürbar gestärkt werden.",
+          "newText": "Ihre Antworten deuten darauf hin, dass Sie in bestimmten sozialen Situationen Anspannung oder Unsicherheit verspüren können. Der Umgang mit fremden Menschen, Auftritte oder das Gefühl, im Mittelpunkt zu stehen, können für Sie stressig sein. Dies ist ein recht verbreiteter Zustand; mit Unterstützung und gezielter Übung kann Ihr Selbstvertrauen spürbar gestärkt werden.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 95
+              },
+              "reason": "Оба перевода отличные, но вариант А читается чуть более естественно и тепло благодаря элегантному уходу от повтора союзов без использования канцелярских слов.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование союза «sowie» для ухода от повторения «und» делает фразу чуть более официальной и сухой, что слегка выбивается из поддерживающего тона."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 92
+              },
+              "reason": "Оба перевода практически идентичны, грамотны и хорошо передают оригинальный смысл. Разница заключается лишь в пунктуации и выборе союзов в последнем предложении, что не делает ни один из вариантов явно лучше другого.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Союз «sowie» может звучать слегка официально (канцелярски) для поддерживающего и эмпатичного текста."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Точка с запятой делает ритм предложения чуть более сухим и книжным, что немного отходит от разговорно-поддерживающего тона."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/35/text",
+          "ru": "Исследования показывают, что когнитивно-поведенческая терапия (КПТ) может быть очень эффективной в лечении социальной тревожности. КПТ помогает людям изменить негативные мысли и развить более позитивное отношение к социальным взаимодействиям.",
+          "oldText": "Studien zeigen, dass die Kognitive Verhaltenstherapie (KVT) bei der Behandlung von sozialer Angst sehr wirksam sein kann. Die KVT hilft Menschen dabei, negative Gedanken zu verändern und eine positivere Einstellung zu sozialen Interaktionen zu entwickeln.",
+          "newText": "Studien zeigen, dass die Kognitive Verhaltenstherapie (KVT) bei der Behandlung von sozialer Angst sehr effektiv sein kann. Die KVT hilft Menschen dabei, negative Gedanken zu verändern und eine positivere Einstellung zu sozialen Interaktionen zu entwickeln.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 95
+              },
+              "reason": "Оба перевода очень хороши и точны. Вариант A немного выигрывает за счет использования слова «wirksam», которое в терапевтическом контексте (оценка методов лечения) звучит более естественно и профессионально, чем «effektiv».",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование «effektiv» допустимо, но для описания действенности терапии и лекарств традиционно предпочтительнее «wirksam» (Wirksamkeit)."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 96
+              },
+              "reason": "Оба перевода почти идентичны и превосходны, но вариант B использует слово «wirksam», которое в медицинском и терапевтическом контексте звучит чуть более естественно и профессионально для описания действия терапии, чем «effektiv».",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Слово «effektiv» допустимо, но для описания успешного результата лечения носители чаще предпочитают «wirksam» (соответственно, Wirksamkeit)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/16/text",
+          "ru": "Психологи называют страх перед неизвестностью \"интолерантностью к неопределенности\". Это состояние может влиять не только на социальные ситуации, но и на принятие решений в целом.",
+          "oldText": "Psychologen bezeichnen die Angst vor dem Unbekannten als „Intoleranz gegenüber Unsicherheit“. Dieser Zustand kann sich nicht nur auf soziale Situationen auswirken, sondern auch auf die allgemeine Entscheidungsfindung.",
+          "newText": "Psychologen nennen die Angst vor dem Unbekannten „Intoleranz gegenüber Ungewissheit“. Dieser Zustand kann sich nicht nur auf soziale Situationen auswirken, sondern auch auf die allgemeine Entscheidungsfindung.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Оба перевода звучат естественно, но вариант B использует более точный и устоявшийся в психологии термин «Intoleranz gegenüber Ungewissheit» (Intolerance of Uncertainty).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Слово «Unsicherheit» менее точно, так как часто означает «неуверенность» или «небезопасность». Стандартный перевод термина — «Intoleranz gegenüber Ungewissheit» или «Ungewissheitsintoleranz»."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 93
+              },
+              "reason": "Die Formulierung „bezeichnen ... als“ ist für die Einführung von Fachbegriffen im Deutschen stilistisch eleganter als „nennen“. Zudem knüpft „Unsicherheit“ direkt an den in der Fachliteratur etablierten Begriff der „Unsicherheitsintoleranz“ an.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "„nennen“ (als direkte Übersetzung von „называют“) wirkt bei einer fachlichen Definition leicht umgangssprachlich im Vergleich zu „bezeichnen als“."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/7/fact",
+          "ru": "Техники активного слушания могут помочь людям чувствовать себя увереннее на совещаниях. Например, сосредоточение на слушании и подготовка вопросов или комментариев заранее могут помочь снизить тревогу и улучшить участие в обсуждениях.",
+          "oldText": "Techniken des aktiven Zuhörens können Ihnen helfen, sich in Meetings sicherer zu fühlen. Wenn Sie sich beispielsweise darauf konzentrieren zuzuhören und Fragen oder Kommentare im Voraus vorbereiten, kann dies helfen, die Angst zu senken und die Teilnahme an Diskussionen zu verbessern.",
+          "newText": "Techniken des aktiven Zuhörens können Ihnen helfen, sich in Meetings sicherer zu fühlen. Wenn Sie sich beispielsweise auf das Zuhören konzentrieren und Fragen oder Kommentare vorab vorbereiten, kann dies helfen, die Angst zu senken und die Teilnahme an Diskussionen zu verbessern.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 82
+              },
+              "reason": "Вариант B читается намного легче благодаря стройному синтаксису: использование «auf das Zuhören konzentrieren» позволяет четко связать глаголы «konzentrieren» и «vorbereiten». Вариант A путает читателя из-за отсутствия запятых вокруг инфинитивного оборота «zuzuhören». При этом оба варианта содержат стилистические кальки в конце предложения.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Неудачная структура «darauf konzentrieren zuzuhören und... vorbereiten» без обособления запятыми ломает ритм и запутывает чтение."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "«Angst senken» — неестественная лексическая сочетаемость (страх лучше «Angst abbauen» или «Angst reduzieren»)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "«Teilnahme an Diskussionen zu verbessern» — калька. Естественнее звучит «sich aktiver an Diskussionen zu beteiligen»."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "«Angst senken» — неестественная лексическая сочетаемость (лучше «Angst abbauen» или «Angst reduzieren»)."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "«Teilnahme an Diskussionen zu verbessern» — калька. Естественнее звучит «sich aktiver an Diskussionen zu beteiligen»."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 90
+              },
+              "reason": "Вариант А звучит более гладко благодаря естественной конструкции «auf das Zuhören konzentrieren», тогда как в В инфинитивный оборот без запятых («darauf konzentrieren zuzuhören») слегка сбивает ритм чтения. В обоих вариантах есть стилистическая тавтология (vorab/im Voraus vorbereiten), но в А синтаксис ровнее.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Плеоназм «vorab vorbereiten» (глагол уже содержит значение «заранее»), лучше просто «vorbereiten»."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Инфинитивная конструкция «darauf konzentrieren zuzuhören» без выделения запятыми ухудшает читаемость."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Плеоназм «im Voraus vorbereiten»."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/18/text",
+          "ru": "Страх перед телефонными звонками получил название \"телефонофобия\". Это явление становится все более распространенным в эпоху цифровых коммуникаций, когда люди привыкают к текстовому общению.",
+          "oldText": "Die Angst vor Telefonaten wird als „Telefonophobie“ bezeichnet. Dieses Phänomen tritt im Zeitalter der digitalen Kommunikation immer häufiger auf, da sich viele Menschen an die textbasierte Kommunikation gewöhnen.",
+          "newText": "Die Angst vor Telefonaten wird als „Telephonophobie“ bezeichnet. Dieses Phänomen wird im Zeitalter der digitalen Kommunikation immer häufiger, da sich viele Menschen an die textbasierte Kommunikation gewöhnen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Перевод B использует современное написание «Telefonophobie» и более естественную для немецкого языка лексическую сочетаемость («ein Phänomen tritt auf» вместо менее удачного «wird häufiger»).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Устаревшее написание слова телефон («Telephonophobie» вместо «Telefonophobie») и слегка неестественная конструкция «Phänomen wird häufiger» (лучше использовать глагол auftreten)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 89
+              },
+              "reason": "Variante A wählt mit „Telefonophobie“ die modernere, korrekte Schreibweise und nutzt mit „tritt auf“ eine für das Wort „Phänomen“ deutlich natürlichere Kollokation als Variante B.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Die veraltete Schreibweise „Telephonophobie“ (mit ph am Anfang) und die etwas direkter übersetzte, weniger elegante Formulierung „wird häufiger“ in Verbindung mit Phänomen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/4/fact",
+          "ru": "Исследования показывают, что около 15 миллионов американцев (примерно 7% населения США) страдают от социофобии, и значительная часть из них предпочитает избегать социальных ситуаций вне своих обязательных ролей.",
+          "oldText": "Studien zeigen, dass etwa 15 Millionen Amerikaner (ca. 7 % der US-Bevölkerung) an sozialer Phobie leiden, wobei ein erheblicher Teil es vorzieht, soziale Situationen außerhalb ihrer festen Rollen zu vermeiden.",
+          "newText": "Studien zeigen, dass etwa 15 Millionen Amerikaner (ca. 7 % der US-Bevölkerung) an sozialer Phobie leiden, wobei ein erheblicher Teil versucht, soziale Situationen außerhalb ihrer festen Rollen zu vermeiden.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Вариант B точно переводит глагол «предпочитает» (es vorzieht), в то время как вариант A заменяет его на «versucht» (пытается), что немного искажает изначальный смысл.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Глагол «предпочитает» неточно переведен как «versucht» (пытается) вместо «vorzieht»."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Перевод A точнее передает смысл оригинала благодаря глаголу «vorzieht» (предпочитает), в то время как вариант B использует «versucht» (пытается), что искажает исходный смысл.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Глагол «предпочитает» переведен как «versucht» (пытается), а не «vorzieht», что меняет заложенный в оригинале смысл."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/4",
+          "ru": "Почти никогда\n\nВремя от времени\n\nДовольно часто\n\nПочти всегда",
+          "oldText": "Fast nie\n\nVon Zeit zu Zeit\n\nHäufig\n\nFast immer",
+          "newText": "Fast nie\n\nVon Zeit zu Zeit\n\nZiemlich oft\n\nFast immer",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 95
+              },
+              "reason": "Перевод A точнее передает степень «довольно» с помощью слова «ziemlich», тогда как вариант B упрощает выражение до обычного «часто» (häufig), немного теряя оттенок оригинала.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Упущено слово «довольно», переведено просто как «часто» (häufig) вместо «ziemlich oft» или «ziemlich häufig»."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 96
+              },
+              "reason": "Вариант B точнее передает степень частоты благодаря слову «ziemlich» (довольно), тогда как вариант A использует более общее «Häufig» (часто), теряя оттенок оригинала.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Упущено слово «довольно», переведено просто как «часто» (Häufig)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/17/text",
+          "ru": "Страх перед перед незнакомой аудиторией называется \"социальной оценочной тревожностью\". Это сочетание страха негативной оценки и боязни новых ситуаций.",
+          "oldText": "Die Angst vor einem unbekannten Publikum wird als „soziale Bewertungsangst“ bezeichnet. Dies ist eine Kombination aus der Angst vor negativer Bewertung und der Furcht vor neuen Situationen.",
+          "newText": "Die Angst vor einem unbekannten Publikum wird als „soziale Bewertungsangst“ bezeichnet. Es ist eine Kombination aus der Angst vor negativer Bewertung und der Furcht vor neuen Situationen.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "medium",
+              "scores": {
+                "old": 96,
+                "new": 94
+              },
+              "reason": "Вариант B звучит чуть более связно: указательное местоимение «Dies» лучше отсылает к концепту из предыдущего предложения и стилистически элегантнее обходит конфликт с женским родом существительного (die Angst), чем безличное «Es».",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование «Es» для отсылки к понятию («die Angst» / «soziale Bewertungsangst») стилистически чуть слабее, чем «Dies» или «Das», так как может восприниматься как калька с английского «It is»."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "medium",
+              "scores": {
+                "old": 96,
+                "new": 94
+              },
+              "reason": "Оба перевода точны и звучат естественно. Вариант А немного лучше стилистически: указательное местоимение «Dies» плотнее связывает второе предложение с первым, точнее отсылая к только что введенному понятию.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Использование нейтрального «Es» делает связь с предыдущим предложением чуть менее выразительной, чем при использовании «Dies» или «Das»."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/6",
+          "ru": "Спокойно, это лишь чужое мнение\n\nНемного расстраиваюсь, но быстро забываю\n\nСильно переживаю, это может испортить мой день\n\nЭто может вызвать у меня сильную тревогу",
+          "oldText": "Ruhig, es ist ja nur die Meinung anderer\n\nIch bin etwas enttäuscht, aber ich vergesse es schnell wieder\n\nEs belastet mich sehr und kann meinen ganzen Tag ruinieren\n\nDas kann bei mir starke Angst auslösen",
+          "newText": "Ruhig, es ist nur die Meinung anderer\n\nIch bin etwas enttäuscht, aber ich vergesse es schnell wieder\n\nEs belastet mich sehr und kann meinen ganzen Tag ruinieren\n\nDas kann bei mir starke Angst auslösen",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 95
+              },
+              "reason": "Перевод B звучит чуть более естественно за счет добавления модальной частицы 'ja', которая характерна для живой немецкой речи (внутреннего монолога).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза 'es ist nur' грамматически верна, но 'es ist ja nur' звучит более непринужденно и естественно для данного формата (ответы в тесте/опросе)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 92
+              },
+              "reason": "Вариант А звучит естественнее в разговорно-психологическом контексте благодаря использованию модальной частицы «ja», которая отлично передает успокаивающий тон оригинала («это ведь всего лишь...»).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Первая фраза звучит грамматически верно, но чуть более сухо и менее естественно из-за отсутствия смягчающих модальных частиц."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/variants/32",
+          "ru": "Почти никогда\n\nИногда\n\nДовольно часто\n\nПочти всегда",
+          "oldText": "Fast nie\n\nManchmal\n\nZiemlich häufig\n\nFast immer",
+          "newText": "Fast nie\n\nManchmal\n\nZiemlich oft\n\nFast immer",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "tie",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 99
+              },
+              "reason": "Оба варианта отлично подходят для вариантов ответа в опроснике. Разница между «ziemlich häufig» и «ziemlich oft» минимальна, хотя «oft» звучит чуть лаконичнее и естественнее для UI.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 100
+              },
+              "reason": "Оба перевода абсолютно корректны и естественно звучат для элементов интерфейса (опросов или шкал частоты). Разница между «oft» и «häufig» в данном контексте ничтожна.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "tests/sociophobia.json",
+          "lang": "de",
+          "key": "/steps_description/36/text",
+          "ru": "Тревога перед сдачей экзамена на практические умения и навыки является распространенной проблемой, особенно среди людей с социофобией. Страх быть оцененным и возможность неудачи могут усиливать стресс и нервозность.",
+          "oldText": "Die Angst vor Prüfungen praktischer Fähigkeiten ist ein weit verbreitetes Problem, besonders bei Menschen mit sozialer Phobie. Die Furcht, bewertet zu werden, und die Angst vor dem Scheitern können Stress und Nervosität verstärken.",
+          "newText": "Die Angst vor praktischen Prüfungen ist ein weit verbreitetes Problem, insbesondere bei Menschen mit sozialer Phobie. Die Furcht, bewertet zu werden, und die Angst vor dem Scheitern können Stress und Nervosität verstärken.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Вариант А звучит гораздо естественнее благодаря использованию лаконичного и привычного для носителей «praktischen Prüfungen». Вариант В использует тяжеловесную кальку «Prüfungen praktischer Fähigkeiten», которая перегружает предложение и выдает перевод.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Фраза «Prüfungen praktischer Fähigkeiten» — тяжеловесная калька с русского; в немецком языке принято более компактное «praktische Prüfungen»."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 95
+              },
+              "reason": "Перевод B звучит естественнее благодаря использованию привычного немецкого словосочетания «praktischen Prüfungen», в то время как вариант А предлагает тяжеловесную кальку «Prüfungen praktischer Fähigkeiten».",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Фраза «Prüfungen praktischer Fähigkeiten» грамматически верна, но звучит канцелярски и неестественно; носители языка говорят «praktische Prüfungen»."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

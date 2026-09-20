@@ -1205,7 +1205,7 @@ async function main(): Promise<number> {
 
   console.log(`🌍 Режим: ${args.ui ? 'UI (cognitive_psy ARB)' : `контент src/i18n/ru/${args.fileArg}`}`);
   console.log(
-    `🔧 Провайдер: ${args.provider}${args.provider === 'vllm' ? ` (${cfg.endpoint}, модель ${args.model ?? cfg.model}, потоков ${concurrency}, приоритет ${requestPriority})` : ' (LEGACY CDP)'}`,
+    `🔧 Провайдер: ${args.provider}${args.provider === 'vllm' ? ` (${args.endpoint ?? cfg.endpoint}, модель ${args.model ?? cfg.model}, потоков ${concurrency}, приоритет ${requestPriority})` : ' (LEGACY CDP)'}`,
   );
   console.log(`🗣 Локали (${langs.length}): ${langs.join(', ')}`);
   const stageModelEntries = Object.entries(args.stageModels);
