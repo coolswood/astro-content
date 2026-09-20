@@ -102,7 +102,7 @@ async function loadConfig(): Promise<Config> {
     sourceLocale: file.sourceLocale ?? 'ru',
     targetLocales: file.targetLocales ?? null,
     psyDir: file.psyDir ?? '',
-    endpoint: file.endpoint ?? 'http://127.0.0.1:18000/v1',
+    endpoint: file.endpoint ?? 'http://127.0.0.1:8000/v1',
     model: file.model ?? 'google/gemma-4-26B-A4B-it',
     statePath: file.statePath ?? 'scripts/translation-state.json',
     retries: file.retries ?? 2,

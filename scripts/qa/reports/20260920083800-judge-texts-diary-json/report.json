@@ -1,0 +1,1265 @@
+{
+  "file": "texts/diary.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": false,
+      "totalApplied": 7,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология соблюдена, синтаксис хороший."
+              },
+              {
+                "path": "/info/body",
+                "verdict": "issue",
+                "note": "Смешение понятий 'ощущения' и 'эмоции' в переводе."
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Перевод адекватен."
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (когнитивные искажения, адаптивный ответ, конструктивное убеждение) верна."
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Терминология (AI-помощник) соблюдена."
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "issue",
+                "note": "Подмена 'физических ощущений' на 'эмоции' в арабском тексте."
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "issue",
+                "note": "Калька конструкции 'иметь склонность' (لدي ميل), что звучит неестественно."
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "issue",
+                "note": "mistranslation: 'пропуск' (skipping) переведено как 'преодоление/обход' (تجاوز), что меняет смысл на 'как обойти мысль'"
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "перевод точный, соблюден женский род (أفكر) в контексте 'Я должна'"
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "перевод точный, соблюден женский род (متأكدة)"
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "issue",
+                "note": "terminology: 'ключевые мысли' в контексте КПТ здесь — это автоматические мысли, но перевод 'جوهرية' (core/fundamental) отсылает к 'глубинным убеждениям' (core beliefs), что создает путаницу с термином المعتقدات الجوهرية"
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "issue",
+                "note": "terminology: повторное использование 'جوهرية' вместо контекстуального смысла 'ключевых' (важных) мыслей, что путает пользователя с термином 'глубинные убеждения'"
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "перевод точный"
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "issue",
+                "note": "mistranslation: 'связь с автоматическими мыслями' переведено как 'связь убеждений с автоматическими мыслями'. В оригинале нет слова 'убеждения' в заголовке, хотя смысл понятен, это addition"
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "терминология 'المعتقدات الوسيطة' верна"
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "перевод точный, терминология верна"
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "перевод точный, стиль естественный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/info/body",
+                "fragment": "ما هي المشاعر المزعجة التي شعرت بها تحديدًا؟",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "В оригинале спрашивается про 'неприятные реакции' (ощущения в теле), а в переводе — про 'неприятные чувства' (эмоции).",
+                "why": "В контексте КПТ важно разделять телесные ощущения (sensations) и эмоции (emotions). Подмена ощущений эмоциями искажает терапевтический процесс."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/analysis/hint/3",
+                "fragment": "ما هي المشاعر والأحاسيس الجسدية التي شعرت بها؟",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "В оригинале 'эмоции и физические ощущения', в переводе 'эмоции и телесные ощущения'.",
+                "why": "Хотя это близко, в оригинале акцент на разделении эмоционального и физического. В арабском 'المشاعر' (эмоции) и 'الأحاسيس الجسدية' (физические ощущения) — это ок, но стоит следить за точностью терминов в подсказках."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/automaticAnalysis/3/wrong",
+                "fragment": "لدي ميل للاعتقاد بأن",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Калька с русского 'имею склонность'.",
+                "why": "Конструкция 'لدي ميل' является тяжеловесной и звучит как прямой перевод. Носитель скорее скал бы 'أميل إلى الاعتقاد' или 'أشعر بميل'."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/automaticAnalysis/4/title",
+                "fragment": "تجاوز الفكرة التلقائية",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Слово 'تجاوز' означает 'преодоление', 'обход' или 'переход через'. В оригинале 'Пропуск' (как ошибка или действие по пропуску шага).",
+                "why": "Это меняет смысл инструкции: вместо констатации ошибки 'Пропуск мысли', пользователь видит 'Как обойти мысль'."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/automaticAnalysis/5/title",
+                "fragment": "تجاهل الأفكار الجوهرية",
+                "type": "terminology",
+                "severity": "major",
+                "problem": "Использование 'الجوهرية' (core/fundamental).",
+                "why": "В глоссарии 'Глубинные убеждения' — это 'المعتقدات الجوهرية'. Использование этого прилагательного к 'мыслям' (الأفكار) создает терминологический конфликт, заставляя пользователя думать о глубинных убеждениях, а не о важных/ключевых автоматических мыслях."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/automaticAnalysis/5/description",
+                "fragment": "الاعتراف بالأفكار الجوهرية",
+                "type": "terminology",
+                "severity": "major",
+                "problem": "Снова использование 'الجوهرية' в отношении мыслей.",
+                "why": "Аналогично предыдущему: это вводит в заблуждение относительно иерархии когнитивных конструкций (мысли vs убеждения)."
+              },
+              {
+                "id": "c2-I4",
+                "path": "/smer/h2",
+                "fragment": "ربط المعتقدات بالأفكار التلقائية",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено слово 'убеждения' (المعتقدات).",
+                "why": "В оригинале 'Установите связь с автоматическими мыслями'. Хотя по смыслу это подразумевается, в заголовке это лишнее утяжеление, которого нет в источнике."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical error: substituting physical sensations with emotions in a CBT context undermines the therapeutic distinction between body and mind."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Significant semantic shift: 'تجاوز' implies overcoming/bypassing rather than the error of 'skipping' a step."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "mergedInto": "c2-I3",
+                "related": [
+                  "c2-I3"
+                ],
+                "note": "Terminology conflict: using 'core' (الجوهرية) for thoughts creates confusion with 'core beliefs' (المعتقدات الجوهرية). Both issues are resolved by changing the adjective to 'key/important'."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "confirmed",
+                "rank": 3,
+                "related": [
+                  "c2-I2"
+                ],
+                "note": "Terminology conflict: same as I2; 'core' is reserved for beliefs in CBT terminology."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "rejected",
+                "note": "The translation 'الأحاسيس الجسدية' is a valid and natural way to express 'физические ощущения' in Arabic; no mistranslation occurred."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 5,
+                "note": "Stylistic issue: 'لدي ميل' is a heavy calque of the Russian structure; a more natural verbal construction is preferred."
+              },
+              {
+                "id": "c2-I4",
+                "verdict": "rejected",
+                "note": "Transcreation: while 'убеждения' isn't explicitly in the RU header, the section is about intermediate beliefs (المعتقدات الوسيطة), so adding it provides necessary context for the user."
+              }
+            ],
+            "notes": "The translation is generally high-quality, but contains critical terminological errors in the CBT framework (confusing sensations with emotions and thoughts with core beliefs) and a semantic error in the instructions that could mislead the user.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/info/body",
+                "current": "ما هي المشاعر المزعجة التي شعرت بها تحديدًا؟",
+                "proposed": "ما هي ردود الفعل المزعجة التي شعرت بها في جسدك تحديدًا؟",
+                "alternatives": [
+                  "ما هي الأحاسيس المزعجة التي شعرت بها تحديدًا؟"
+                ],
+                "rationale": "В оригинале речь идет о телесных реакциях (ощущениях), а не об эмоциях. Использование 'المشاعر' (эмоции) вместо 'ردود الفعل الجسدية' (телесные реакции) — грубая ошибка в контексте КПТ, так как это разные уровни анализа."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/automaticAnalysis/4/title",
+                "current": "تجاوز الفكرة التلقائية",
+                "proposed": "إغفال الفكرة التلقائية",
+                "alternatives": [
+                  "عدم تسجيل الفكرة التلقائية"
+                ],
+                "rationale": "'تجاوز' означает 'преодоление' или 'обход', что звучит как позитивное действие. 'إغفال' точнее передает смысл 'пропуска' или 'упущения' шага/мысли."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 3,
+                "path": "/automaticAnalysis/5/title",
+                "current": "تجاهل الأفكار الجوهرية",
+                "proposed": "تجاهل الأفكار الرئيسية",
+                "alternatives": [
+                  "تجاهل الأفكار الهامة"
+                ],
+                "rationale": "Слово 'الجوهرية' зарезервировано для 'Глубинных убеждений' (المعتقدات الجوهرية). Применение его к мыслям создает терминологическую путаницу. 'الرئيسية' (ключевые) — безопасный и точный вариант."
+              },
+              {
+                "id": "c2-I3",
+                "priority": 3,
+                "path": "/automaticAnalysis/5/description",
+                "current": "الاعتراف بالأفكار الجوهرية",
+                "proposed": "الاعتراف بالأفكار الرئيسية",
+                "alternatives": [
+                  "الاعتراف بالأفكار الهامة"
+                ],
+                "rationale": "Аналогично предыдущему замечанию: замена 'الجوهرية' на 'الرئيسية' устраняет риск смешения автоматических мыслей с глубинными убеждениями."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 5,
+                "path": "/automaticAnalysis/3/wrong",
+                "current": "لدي ميل للاعتقاد بأن",
+                "proposed": "أميل إلى الاعتقاد بأن",
+                "alternatives": [
+                  "لدي نزعة للاعتقاد بأن"
+                ],
+                "rationale": "Устранение тяжеловесной кальки 'لدي ميل' (имею склонность) в пользу естественной глагольной конструкции 'أميل إلى' (склонен/склоняюсь)."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружены критические ошибки, искажающие терапевтический смысл (подмена телесных ощущений эмоциями и использование термина 'глубинные' по отношению к мыслям). Также есть семантическая ошибка в слове 'пропуск'. Необходимо исправить терминологию, чтобы не вводить пользователя в заблуждение относительно иерархии когнитивных конструкций."
+            },
+            "timings": {
+              "issues": 49517,
+              "deliberate": 13145,
+              "recommend": 21695
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/automaticAnalysis/4/title",
+              "from": "تجاوز الفكرة التلقائية",
+              "to": "إغفال الفكرة التلقائية"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/automaticAnalysis/5/title",
+              "from": "تجاهل الأفكار الجوهرية",
+              "to": "تجاهل الأفكار الرئيسية"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/automaticAnalysis/3/wrong",
+              "from": "لدي ميل للاعتقاد بأن رأيي ليس له قيمة",
+              "to": "أميل إلى الاعتقاد بأن"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/info/body",
+              "reason": "цитата судьи не похожа на лист (сходство 40%)"
+            },
+            {
+              "id": "c2-I3",
+              "path": "/automaticAnalysis/5/description",
+              "reason": "цитата судьи не похожа на лист (сходство 18%)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует MSA."
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология (الفكرة التلقائية) соблюдена, синтаксис естественный."
+              },
+              {
+                "path": "/info/body",
+                "verdict": "issue",
+                "note": "Смешение понятий 'ощущения' и 'эмоции' в переводе."
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (استجابة تكيفية, معتقد بنّاء) соблюдена."
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Терминология (مساعد الذكاء الاصطناعي) соблюдена."
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "critical",
+                "note": "Оборванная фраза, потерян смысл."
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "ok",
+                "note": "Перевод точный, термин 'автоматическая мысль' соблюден."
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "Перевод соответствует контексту 'неправильной' мысли."
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "Перевод точный, женский род соблюден (لستُ متأكدة)."
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "ok",
+                "note": "Смысл передан хорошо, стиль поддерживающий."
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "issue",
+                "note": "Mistranslation: в оригинале 'связь с мыслями', в переводе 'связь убеждений с мыслями'."
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "Терминология 'промежуточные убеждения' соблюдена."
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует MSA."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/info/body",
+                "fragment": "ما هي المشاعر المزعجة التي شعرت بها تحديدًا؟",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена 'ощущений в теле' на 'эмоции'",
+                "why": "В оригинале спрашивается про физические ощущения (ощущения в теле), а в переводе используется слово المشاعر (эмоции/чувства). Это разные категории в КПТ."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/automaticAnalysis/3/wrong",
+                "fragment": "أميل إلى الاعتقاد بأن",
+                "type": "omission",
+                "severity": "critical",
+                "problem": "Фраза обрывается",
+                "why": "В переводе отсутствует вторая часть предложения. Оригинал: 'Я имею склонность полагать, что моё мнение не имеет значения'. Перевод: 'Я склонен верить, что...' (и всё)."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/smer/h2",
+                "fragment": "ربط المعتقدات بالأفكار التلقائية",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Добавлено слово 'убеждения' (المعتقدات), которого нет в заголовке оригинала.",
+                "why": "Оригинал говорит 'Установите связь с автоматическими мыслями'. Перевод же звучит как 'Свяжите убеждения с автоматическими мыслями'. Это меняет фокус действия в заголовке."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translator confused physical sensations (أحاسيس جسدية) with emotions (مشاعر) in the question, which is a conceptual error in CBT context."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical omission: the sentence is truncated, leaving the user with an incomplete thought."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The translation adds 'beliefs' (المعتقدات) to the heading, which changes the original instruction's scope."
+              }
+            ],
+            "notes": "The translation is generally high quality, but contains one critical truncation and two significant conceptual/terminological inaccuracies in key CBT sections.",
+            "recommendations": [
+              {
+                "id": "c1-I2",
+                "priority": 1,
+                "path": "/automaticAnalysis/3/wrong",
+                "current": "أميل إلى الاعتقاد بأن",
+                "proposed": "أميل إلى الاعتقاد بأن رأيي ليس له قيمة",
+                "alternatives": [
+                  "أميل إلى الاعتقاد بأن رأيي لا يهم",
+                  "لدي ميل للاعتقاد بأن رأيي غير مهم"
+                ],
+                "rationale": "В текущем варианте фраза обрывается на союзе 'что', что является критической ошибкой. Предложенный вариант полностью восстанавливает смысл оригинала 'моё мнение не имеет значения', сохраняя при этом сложный, характерный для 'запутанных формулировок' стиль."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/info/body",
+                "current": "ما هي المشاعر المزعجة التي شعرت بها تحديدًا؟",
+                "proposed": "ما هي الأحاسيس المزعجة التي شعرت بها في جسدك تحديدًا؟",
+                "alternatives": [
+                  "ما هي التفاعلات المزعجة التي شعرت بها في جسدك؟"
+                ],
+                "rationale": "В оригинале акцент на 'ощущениях в теле'. Использование المشاعر (эмоции) вместо الأحاسيس (ощущения) — это концептуальная ошибка в контексте КПТ. Новый вариант возвращает фокус на физиологию."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/smer/h2",
+                "current": "ربط المعتقدات بالأفكار التلقائية",
+                "proposed": "أوجد صلة بالأفكار التلقائية",
+                "alternatives": [
+                  "اربط بين الأفكار التلقائية وبين ما تشعر به"
+                ],
+                "rationale": "Оригинал 'Установите связь с автоматическими мыслями' не содержит слова 'убеждения'. Добавление المعتقدات (убеждения) в заголовок неоправданно расширяет тему. Вариант 'أوجد صلة' более точно передает инструкцию к действию."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружены критические ошибки: обрыв предложения в одном из примеров и подмена терминов (эмоции вместо телесных ощущений), что недопустимо для терапевтического приложения. Также есть смысловые искажения в заголовках. Необходимо исправить эти моменты перед публикацией."
+            },
+            "timings": {
+              "issues": 36441,
+              "deliberate": 4003,
+              "recommend": 11335
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I2",
+              "path": "/automaticAnalysis/3/wrong",
+              "from": "أميل إلى الاعتقاد بأن",
+              "to": "أميل إلى الاعتقاد بأن رأيي ليس له قيمة"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/smer/h2",
+              "from": "ربط المعتقدات بالأفكار التلقائية",
+              "to": "أوجد صلة بالأفكار التلقائية"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/info/body",
+              "reason": "цитата судьи не похожа на лист (сходство 40%)"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология соблюдена, синтаксис хороший."
+              },
+              {
+                "path": "/info/body",
+                "verdict": "issue",
+                "note": "Смешение понятий 'ощущения' и 'эмоции'."
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (адаптивный ответ, конструктивное убеждение) верна."
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Терминология (AI-помощник) верна."
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "issue",
+                "note": "Смешение 'эмоций' и 'ощущений' в арабском переводе."
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "ok",
+                "note": "Перевод точный, термин 'автоматическая мысль' соблюден."
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "Перевод соответствует контексту 'неправильной' мысли."
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "Перевод точный, женский род соблюден (соответствует оригиналу)."
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "ok",
+                "note": "Перевод адекватен."
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "ok",
+                "note": "Смысл передан хорошо, нет кальки."
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "issue",
+                "note": "Стилистическая калька 'найти связь' (أوجد صلة), звучит неестественно для заголовка."
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "Терминология 'промежуточные убеждения' соблюдена."
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "Терминология 'автоматические мысли' и 'искажения' соблюдена."
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "Смысл и термины переданы верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/info/body",
+                "fragment": "ما هي المشاعر المزعجة التي شعرت بها تحديدًا؟",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Подмена 'ощущений' на 'эмоции'",
+                "why": "В оригинале спрашивается про 'неприятные реакции' (ощущения в теле), а в переводе используется 'المشاعر' (эмоции). В контексте КПТ важно разделять эмоции (чувства) и соматические ощущения (ощущения в теле)."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/analysis/hint/3",
+                "fragment": "ما هي المشاعر والأحاسيس الجسدية التي شعرت بها؟",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Тавтология/избыточность",
+                "why": "Использование 'المشاعر' (эмоции) и 'الأحاسيس الجسدية' (физические ощущения) в одном вопросе допустимо, но звучит тяжеловесно. Однако главная проблема здесь в том, что 'المشاعر' — это эмоции, а оригинал про 'эмоции и физические ощущения'. Здесь перевод верен по смыслу, но требует проверки на естественность ритма."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/smer/h2",
+                "fragment": "أوجد صلة بالأفكار التلقائية",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественная конструкция",
+                "why": "Фраза 'أوجد صلة' (найти связь/установить связь) является калькой с русского/английского. В арабском языке в контексте психологии и анализа лучше использовать более естественные глаголы, например, 'ربط' (связать) или 'استكشاف العلاقة' (исследовать связь)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Критическая ошибка в терминологии КПТ: 'المشاعر' означает эмоции, тогда как оригинал требует 'ощущений в теле' (الأحاسيس الجسدية)."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c1-I1"
+                ],
+                "note": "Замечание подтверждается. Хотя перевод точен по смыслу, он страдает от избыточности. Решение проблемы терминологии в I1 (разделение эмоций и ощущений) поможет сделать фразу более естественной."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Стилистическая калька. 'أوجد صلة' звучит неестественно; лучше использовать 'اربط بين...'."
+              }
+            ],
+            "notes": "Перевод в целом качественный и точный, однако выявлены серьезные терминологические неточности в области психологии (смешение эмоций и телесных ощущений) и стилистические кальки, снижающие естественность звучания.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/info/body",
+                "current": "ما هي المشاعر المزعجة التي شعرت بها تحديدًا؟",
+                "proposed": "ما هي ردود الفعل المزعجة التي شعرت بها تحديدًا؟",
+                "alternatives": [
+                  "ما هي الأحاسيس المزعجة التي شعرت بها تحديدًا؟"
+                ],
+                "rationale": "В оригинале речь идет о 'неприятных реакциях' (в теле), а 'المشاعر' означает 'эмоции'. Использование 'ردود الفعل' (реакции) точнее передает смысл оригинала и разделяет эмоции и телесные ощущения, что критически важно для КПТ."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/analysis/hint/3",
+                "current": "ما هي المشاعر والأحاسيس الجسدية التي شعرت بها؟",
+                "proposed": "ما هي المشاعر والأحاسيس الجسدية التي مررت بها؟",
+                "alternatives": [
+                  "ما هي المشاعر والأحاسيس الجسدية التي اختبرتها؟"
+                ],
+                "rationale": "Чтобы избежать тавтологии 'شعرت بها' (чувствовал) после 'المشاعر' (чувства), лучше использовать глагол 'مررت بها' (через которые прошел) или 'اختبرتها' (испытал). Это делает ритм фразы более естественным для носителя."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 3,
+                "path": "/smer/h2",
+                "current": "أوجد صلة بالأفكار التلقائية",
+                "proposed": "اربط بين معتقداتك والأفكار التلقائية",
+                "alternatives": [
+                  "استكشف العلاقة بين معتقداتك والأفكار التلقائية"
+                ],
+                "rationale": "Конструкция 'أوجد صلة' — это калька. В арабском языке для установления связи между концептами в психологии естественнее использовать глагол 'اربط' (свяжи) или 'استكشف العلاقة' (исследуй связь). Поскольку заголовок подразумевает связь убеждений и мыслей, вариант с 'اربط' наиболее точен и лаконичен."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология (КПТ) соблюдена. Основные риски связаны с путаницей между 'эмоциями' и 'телесной реакцией' в одном из ключевых блоков, а также с легкими стилистическими кальками. После внесения правок текст будет звучать профессионально и естественно."
+            },
+            "timings": {
+              "issues": 43865,
+              "deliberate": 7173,
+              "recommend": 14135
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I2",
+              "path": "/analysis/hint/3",
+              "from": "ما هي المشاعر والأحاسيس الجسدية التي شعرت بها؟",
+              "to": "ما هي المشاعر والأحاسيس الجسدية التي مررت بها؟"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/smer/h2",
+              "from": "أوجد صلة بالأفكار التلقائية",
+              "to": "اربط بين معتقداتك والأفكار التلقائية"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/info/body",
+              "reason": "цитата судьи не похожа на лист (сходство 40%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
