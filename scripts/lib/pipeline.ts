@@ -1189,14 +1189,23 @@ export async function runPipeline(
       `⚠️ [recovery] потеряны ключи (${lost.length}/${srcKeys.length}): ${lost.slice(0, 3).join(', ')} — доперевод точечно`,
     );
     let remaining = lost;
+    const docFlatAll = flattenAll(doc);
     for (let pass = 1; pass <= 2 && remaining.length > 0; pass++) {
       const lostSubtree = buildSubtree(doc, remaining);
+      const lostFlat: Record<string, string> = {};
+      for (const p of remaining) {
+        const v = docFlatAll[p];
+        if (typeof v === 'string') lostFlat[p] = v;
+      }
       const recText = await client.complete({
-        system: prompts.main,
+        system: prompts.main + MAIN_PATHS_ADDENDUM,
         user: JSON.stringify({
           sourceLocale,
           targetLocale,
-          data: lostSubtree,
+          // Формат — path-map (как MAIN): разреженное дерево с null-паддингом
+          // (data: [null×136, {запись}]) модель читает плохо и регулярно
+          // возвращает 0 пересечений — плоская карта потерянных путей надёжнее.
+          paths: lostFlat,
           ...(filterMetaByPayload(opts.meta, lostSubtree)
             ? { meta: filterMetaByPayload(opts.meta, lostSubtree) }
             : {}),
@@ -1209,9 +1218,10 @@ export async function runPipeline(
       if (recovered && typeof recovered === 'object' && !Array.isArray(recovered) && 'data' in recovered) {
         recovered = recovered.data;
       }
-      // Модель, привыкшая к path-map, отвечает recovery картой путей —
-      // принимаем её, но только если ВСЕ пути карты указывают на потерянные
-      // листья: иначе это обычный документ, где «paths» — легитимный ключ.
+      // Модель, привыкшая к path-map, отвечает recovery картой путей.
+      // Запрос теперь сам в формате path-map, поэтому принимаем карту и
+      // ЧАСТИЧНО (мердж применит только существующие пути скелета), и с
+      // bare-ключами (без ведущего '/') — нормализуем к каноническим путям.
       if (
         recovered &&
         typeof recovered === 'object' &&
@@ -1221,10 +1231,15 @@ export async function runPipeline(
         !Array.isArray(recovered.paths)
       ) {
         const lostSet = new Set(remaining);
-        const mapPaths = Object.keys(recovered.paths);
-        const allLost =
-          mapPaths.length > 0 && mapPaths.every((p) => lostSet.has(p.startsWith('/') ? p : `/${p}`));
-        if (allLost) recovered = buildTreeFromPaths(recovered.paths);
+        const entries = Object.entries(recovered.paths as Record<string, unknown>).filter(
+          ([, v]) => typeof v === 'string' && v.trim() !== '',
+        ) as [string, string][];
+        const anyLost = entries.some(([p]) => lostSet.has(p.startsWith('/') ? p : `/${p}`));
+        if (entries.length > 0 && anyLost) {
+          recovered = buildTreeFromPaths(
+            Object.fromEntries(entries.map(([p, v]) => [p.startsWith('/') ? p : `/${p}`, v])),
+          );
+        }
       }
       if (!recovered || typeof recovered !== 'object') {
         throw new Error(`потеряны ключи: ${remaining.slice(0, 5).join(', ')} (recovery не распарсился)`);

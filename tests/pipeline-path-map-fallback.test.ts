@@ -50,8 +50,15 @@ describe('runPipeline — неполная карта path-map', () => {
       seenUsers.push(user);
       const wrapped = JSON.parse(user);
       if (wrapped.paths) {
-        // 1 из 4 путей отсутствует — 25%.
-        return JSON.stringify({ paths: { '/a': 'Alpha', '/b': 'Beta', '/c': 'Gamma' } });
+        const keys = Object.keys(wrapped.paths);
+        if (keys.length > 1) {
+          // MAIN: 1 из 4 путей отсутствует — 25%.
+          return JSON.stringify({ paths: { '/a': 'Alpha', '/b': 'Beta', '/c': 'Gamma' } });
+        }
+        // Recovery: запрос — плоская карта только потерянных путей (раньше
+        // шло разреженное дерево data с null-паддингом).
+        expect(keys).toEqual(['/d']);
+        return JSON.stringify({ paths: { '/d': 'Delta' } });
       }
       return JSON.stringify({ data: { d: 'Delta' } });
     });
