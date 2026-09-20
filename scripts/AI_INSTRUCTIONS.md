@@ -218,16 +218,16 @@ lingo.dev) удалены — их заменил единый раннер.
 стадия review конвейера, слепой судья eval.ts, арбитраж коллегии — не MAIN/editor.
 
 ```bash
-# запуск шима (зависимости — venv pr-agent-лабы):
+# Шим — постоянный user-сервис astro-agy-shim (запускается при загрузке бокса):
+systemctl --user status astro-agy-shim         # health: curl -s :8107/health
+journalctl --user -u astro-agy-shim            # лог вызовов (модель, время, токены)
+# ручной запуск (если сервис снят; зависимости — venv pr-agent-лабы):
 cd <repo> && uv run --project ~/pr-agent-lab/pr-agent python scripts/agy_proxy.py
-#   env: TRANSLATE_AGY_UPSTREAM=http://127.0.0.1:8000, TRANSLATE_AGY_PORT=8107
 
-# конвейер со старшей моделью на review (один endpoint на всё):
-bun scripts/translate.ts <файл> --langs de --full \
-  --endpoint http://127.0.0.1:8107/v1 --stage-model review=gemini-3.1-pro-high
-# слепой судья — старшей моделью:
-bun scripts/qa/eval.ts <файл> --old-dir <снапшот> --langs de \
-  --model gemini-3.1-pro-high --endpoint http://127.0.0.1:8107/v1
+# НАРРАТИВЫ — старшая модель на review (endpoint по умолчанию уже шим, см. конфиг):
+bun scripts/translate.ts <файл> --stage-model review=gemini-3.1-pro-low
+# слепой судья — старшей моделью (для замеров качества):
+bun scripts/qa/eval.ts <файл> --old-dir <снапшот> --langs de --model gemini-3.1-pro-high
 ```
 
 `--stage-model stage=имя[,…]` (стадии main/editor/review/fix; постоянный вариант —
@@ -250,6 +250,10 @@ vLLM запущен с `--scheduling-policy priority`, где *меньше = р
 5.4с — дефолт 6, для фоновой ночной работы можно `--concurrency 8`.
 
 ## Туннель к модели
+
+Дефолтный endpoint (с 2026-09-20) — agy-шим `http://127.0.0.1:8107/v1` (gemma
+пасстру на vLLM :8000); прямой путь к vLLM — `--endpoint http://127.0.0.1:8000/v1`.
+Туннель ниже нужен только для запуска раннера С ДРУГОЙ МАШИНЫ:
 
 ```bash
 ssh -f -N -L 18000:127.0.0.1:8000 \
@@ -274,6 +278,12 @@ bun scripts/translate.ts story/automatic.json --langs ja,ko
 bun scripts/translate.ts story --concurrency 3        # 3 параллельных запроса (по умолчанию)
 bun scripts/translate.ts story --concurrency 1        # осторожно, как раньше — по одному
 bun scripts/translate.ts story --priority 0           # приоритет как у всех (по умолчанию 10, фон)
+
+# НАРРАТИВЫ (story/, texts/) — политика 2026-09-20: review-стадия на старшей
+# модели (омиссии ловит, канарейки: 9:0 и 15:4; тест-шкалы/UI — БЕЗ неё, там паритет):
+bun scripts/translate.ts story/start.json --stage-model review=gemini-3.1-pro-low
+#   бюджетный вариант для больших партий: review=gemini-3.8-flash-low (5с/436 out
+#   против 43с/11k, качество 74%≈79%, изредка зависает — ретраи проламывают)
 
 # Доперевести/обновить интерфейс cognitive_psy
 bun scripts/translate.ts --ui
