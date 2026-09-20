@@ -24,6 +24,7 @@ import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
 import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes, normalizeTypographicQuotesEn } from './tag-reconcile.js';
+import { realignIdArrays } from './id-arrays.js';
 import { stripIcuConstructs } from './validation.js';
 import { buildSubtree } from './tree.js';
 import type { AIProvider, ProviderType } from './types.js';
@@ -1063,6 +1064,22 @@ export async function runPipeline(
   }
   let draft: any = skeleton;
 
+  // Стабильные id записей (questions.json): модель может потерять запись
+  // массива и сместить хвост — все пути на месте, но переводы стоят под
+  // чужими id (инцидент ja-2026: 500 на /questions/random). Выравнивание
+  // join'ом по значению id; потерянные записи остаются пустыми заглушками
+  // и уходят в recovery ниже, дубли/чужие id отбрасываются.
+  for (const r of realignIdArrays(doc, draft)) {
+    const touched =
+      r.realigned || r.missingIds.length || r.duplicateIds.length || r.unknownIds.length;
+    if (touched) {
+      console.warn(
+        `🛠 [ids] ${r.arrayPath || '(корень)'}: выровнено ${r.realigned}, потеряно ${r.missingIds.length}` +
+          ` (${r.missingIds.slice(0, 3).join(', ')}), дубли ${r.duplicateIds.length}, чужие ${r.unknownIds.length}`,
+      );
+    }
+  }
+
   // Контроль тегов: пул тегов перевода не должен превышать пул оригинала.
   // Смещение тега в другой элемент — норма транскреации (не трогается);
   // выдуманные моделью теги срезаются механически с сохранением текста.
@@ -1193,6 +1210,18 @@ export async function runPipeline(
       }
       if (!recovered || typeof recovered !== 'object') {
         throw new Error(`потеряны ключи: ${remaining.slice(0, 5).join(', ')} (recovery не распарсился)`);
+      }
+      // Recovery-ответ выравнивается по id так же, как основной draft:
+      // мини-payload тоже массив записей, и сдвиг в нём так же невидим
+      // для сверки путей.
+      for (const r of realignIdArrays(lostSubtree, recovered)) {
+        const touched =
+          r.realigned || r.missingIds.length || r.duplicateIds.length || r.unknownIds.length;
+        if (touched) {
+          console.warn(
+            `🛠 [ids][recovery] ${r.arrayPath || '(корень)'}: выровнено ${r.realigned}, потеряно ${r.missingIds.length}, дубли ${r.duplicateIds.length}, чужие ${r.unknownIds.length}`,
+          );
+        }
       }
       // Контейнер в draft КОРОЧЕ потерянного индекса (модель срезала хвост
       // массива), а mergeSubset по дизайну не растит массивы («длины массивов
