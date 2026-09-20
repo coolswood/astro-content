@@ -29,6 +29,13 @@
  *   --limit-keys N            канарейка: перевести N ключей, равномерно по канону
  *                             (ui-режим; сэмпл покрывает весь файл, не одну зону)
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
+ *   --stage-model stage=NAME[,stage=NAME]
+ *                             пер-стадийная модель (main/editor/review/fix):
+ *                             запросы стадии уходят с этим именем модели.
+ *                             Требует мульти-модельный endpoint, роутящий по
+ *                             имени в теле (agy-шим scripts/agy_proxy.py:8107 —
+ *                             старший Gemini из подписки для «критических»
+ *                             стадий, bulk остаётся на локальной gemma)
  *
  * Требует поднятого туннеля к vLLM (для провайдера vllm):
  *   ssh -f -N -L 18000:127.0.0.1:8000 coolswood@192.168.31.18
@@ -50,6 +57,7 @@ import {
   mergeSubset,
   buildTreeFromPaths,
   type StageClient,
+  type StageModelMap,
 } from './lib/pipeline.js';
 import { MAX_REPAIR_GROUPS, repairDuplicateGroups } from './lib/duplicate-repair.js';
 import { TranslationState, type ScopeState } from './lib/state.js';
@@ -87,6 +95,13 @@ interface Config {
   psyDir: string;
   endpoint: string;
   model: string;
+  /**
+   * Пер-стадийные override'ы модели (мульти-модельный endpoint — agy-шим
+   * scripts/agy_proxy.py роутит по имени модели в теле запроса). Пример:
+   * {"review": "gemini-3.1-pro-high"} — стадия review на старшей модели,
+   * остальной bulk на модели `model`. CLI --stage-model перекрывает по ключам.
+   */
+  stageModels: StageModelMap;
   statePath: string;
   retries: number;
   requestTimeoutMs: number;
@@ -104,6 +119,7 @@ async function loadConfig(): Promise<Config> {
     psyDir: file.psyDir ?? '',
     endpoint: file.endpoint ?? 'http://127.0.0.1:8000/v1',
     model: file.model ?? 'google/gemma-4-26B-A4B-it',
+    stageModels: sanitizeStageModels(file.stageModels, 'translate.config.json'),
     statePath: file.statePath ?? 'scripts/translation-state.json',
     retries: file.retries ?? 2,
     requestTimeoutMs: file.requestTimeoutMs ?? 600_000,
@@ -143,6 +159,8 @@ interface Args {
   mainPathMap: boolean;
   /** Канарейка: ограничить перевод N ключами, равномерно по каноническому порядку (ui). */
   limitKeys?: number;
+  /** Пер-стадийные модели (CLI --stage-model поверх конфига). */
+  stageModels: StageModelMap;
 }
 
 function parseBoolFlag(raw: string | undefined, defaultValue: boolean): boolean {
@@ -159,6 +177,37 @@ function parseRetries(raw: string | undefined): number {
   if (raw === undefined) return Number.NaN;
   const n = parseInt(raw, 10);
   return Number.isNaN(n) ? Number.NaN : n;
+}
+
+const STAGE_NAMES = ['main', 'editor', 'review', 'fix'] as const;
+
+/** Карта «стадия → модель» из объекта конфига: неизвестные стадии — warning. */
+function sanitizeStageModels(raw: unknown, where: string): StageModelMap {
+  const out: StageModelMap = {};
+  if (!raw || typeof raw !== 'object') return out;
+  for (const [stage, model] of Object.entries(raw as Record<string, unknown>)) {
+    if (!(STAGE_NAMES as readonly string[]).includes(stage)) {
+      console.warn(`⚠️ ${where}: неизвестная стадия «${stage}» (нужна одна из ${STAGE_NAMES.join('/')}) — игнорирую.`);
+      continue;
+    }
+    if (typeof model === 'string' && model.trim()) out[stage as keyof StageModelMap] = model.trim();
+  }
+  return out;
+}
+
+/** Карта «стадия → модель» из CLI: список stage=имя через запятую. */
+function parseStageModelPairs(raw: string, where: string): StageModelMap {
+  const joined: Record<string, string> = {};
+  for (const part of raw.split(',')) {
+    if (!part.trim()) continue;
+    const eq = part.indexOf('=');
+    if (eq === -1) {
+      console.warn(`⚠️ ${where}: «${part}» без '=' (формат stage=имя) — игнорирую.`);
+      continue;
+    }
+    joined[part.slice(0, eq).trim()] = part.slice(eq + 1).trim();
+  }
+  return sanitizeStageModels(joined, where);
 }
 
 function parseIntFlag(raw: string | undefined): number | undefined {
@@ -212,6 +261,9 @@ function parseArgs(): Args {
     // монотонно-повторяющиеся секции могут зациклить генерацию.
     mainPathMap: parseBoolFlag(flags['main-path-map'], !parseBoolFlag(flags['no-main-path-map'], false)),
     limitKeys: parseIntFlag(flags['limit-keys']),
+    stageModels: flags['stage-model']
+      ? parseStageModelPairs(flags['stage-model'], '--stage-model')
+      : {},
   };
 }
 
@@ -340,6 +392,7 @@ async function translateWithRetries(
         chunkLeaves: ctx.args.chunkLeaves,
         mainPathMap: ctx.args.mainPathMap,
         meta,
+        stageModels: ctx.args.stageModels,
       });
 
       // ui-режим: модель может эхом вернуть обёртку {lang: {key: val}} —
@@ -453,6 +506,7 @@ async function translateWithRetries(
                   context,
                   mainPathMap: ctx.args.mainPathMap,
                   meta: subMeta,
+                  stageModels: ctx.args.stageModels,
                 });
                 mergeSubset(result, subData, `repair${pass > 1 ? `-${pass}` : ''}`);
               } catch (e) {
@@ -514,6 +568,7 @@ async function translateWithRetries(
                 // максимально чистый: нейтральный ключ + ru-текст + мета.
                 mainPathMap: ctx.args.mainPathMap,
                 meta: anonMeta,
+                stageModels: ctx.args.stageModels,
               });
               // Маппинг назад: item_N → оригинальный путь/ключ.
               const flatAnon = flattenLeaves(anonData);
@@ -1133,6 +1188,8 @@ async function runUi(ctx: RunCtx): Promise<number> {
 async function main(): Promise<number> {
   const cfg = await loadConfig();
   const args = parseArgs();
+  // Пер-стадийные модели: CLI --stage-model перекрывает конфиг по ключам.
+  args.stageModels = { ...cfg.stageModels, ...args.stageModels };
   const retries = Number.isNaN(args.retries) ? cfg.retries : args.retries;
   const concurrency = Math.max(1, args.concurrency ?? cfg.concurrency);
   const requestPriority = args.priority ?? cfg.requestPriority;
@@ -1148,9 +1205,13 @@ async function main(): Promise<number> {
 
   console.log(`🌍 Режим: ${args.ui ? 'UI (cognitive_psy ARB)' : `контент src/i18n/ru/${args.fileArg}`}`);
   console.log(
-    `🔧 Провайдер: ${args.provider}${args.provider === 'vllm' ? ` (${cfg.endpoint}, модель ${args.model ?? cfg.model}, потоков ${concurrency}, приоритет ${requestPriority})` : ' (LEGACY CDP)'}`,
+    `🔧 Провайдер: ${args.provider}${args.provider === 'vllm' ? ` (${args.endpoint ?? cfg.endpoint}, модель ${args.model ?? cfg.model}, потоков ${concurrency}, приоритет ${requestPriority})` : ' (LEGACY CDP)'}`,
   );
   console.log(`🗣 Локали (${langs.length}): ${langs.join(', ')}`);
+  const stageModelEntries = Object.entries(args.stageModels);
+  if (stageModelEntries.length > 0) {
+    console.log(`🧠 Пер-стадийные модели: ${stageModelEntries.map(([s, m]) => `${s}=${m}`).join(', ')}`);
+  }
   if (args.dryRun) console.log('🔍 DRY-RUN: только анализ — модель не вызывается, файлы не меняются.');
   if (args.full) console.log('♻️ Режим --full: переводим всё заново, игнорируя инкрементальность.');
 

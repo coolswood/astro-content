@@ -205,6 +205,38 @@ lingo.dev) удалены — их заменил единый раннер.
   сохранены в `scripts/lib/providers/` с пометкой LEGACY, доступны через
   `--provider chatgpt|claude|gemini|mistral`, не развиваются.
 
+## Старшая модель по подписке (agy-шим, с 2026-09-20)
+
+`scripts/agy_proxy.py` (:8107, loopback) — заимствованный у ревью-лабы
+(`~/pr-agent-lab/agy_proxy.py`) механизм: OpenAI-совместимый `/v1`, роутинг по
+имени модели в теле запроса — `gemini-*`/`claude-*`/`gpt-oss-*` идут в agy CLI
+(облачный Gemini из ПОДПИСКИ Google, авторизация `~/.gemini/antigravity-cli`),
+всё остальное — насквозь к vLLM. `/v1/models` отдаёт upstream + подписочные
+модели, поэтому preflight проходит для любых имён. Принцип использования:
+старшая модель — КРИТИК, а не генератор (каждый вызов agy несёт ~12k input-
+токенов системного промпта агента; беречь лимиты = минимизировать ЧИСЛО вызовов):
+стадия review конвейера, слепой судья eval.ts, арбитраж коллегии — не MAIN/editor.
+
+```bash
+# Шим — постоянный user-сервис astro-agy-shim (запускается при загрузке бокса):
+systemctl --user status astro-agy-shim         # health: curl -s :8107/health
+journalctl --user -u astro-agy-shim            # лог вызовов (модель, время, токены)
+# ручной запуск (если сервис снят; зависимости — venv pr-agent-лабы):
+cd <repo> && uv run --project ~/pr-agent-lab/pr-agent python scripts/agy_proxy.py
+
+# НАРРАТИВЫ — старшая модель на review (endpoint по умолчанию уже шим, см. конфиг):
+bun scripts/translate.ts <файл> --stage-model review=gemini-3.1-pro-low
+# слепой судья — старшей моделью (для замеров качества):
+bun scripts/qa/eval.ts <файл> --old-dir <снапшот> --langs de --model gemini-3.1-pro-high
+```
+
+`--stage-model stage=имя[,…]` (стадии main/editor/review/fix; постоянный вариант —
+`stageModels` в translate.config.json). Нюансы: agy игнорирует
+temperature/max_tokens/response_format (jsonMode не работает — parseWithRepair
+компенсирует), семафор шима ×2, не-SUCCESS → HTTP 502 (стадия ретраится тем же
+путём; клиентского фолбэка на gemma пока нет). Подписочные модели: `agy models`
+(gemini-3.1-pro-high/low, gemini-3.8/3.7/3.6-flash, claude-*, gpt-oss-*).
+
 ## ⚠️ Лимит модели
 
 **К модели — не более `concurrency` (по умолчанию 6) одновременных запросов.**
@@ -218,6 +250,10 @@ vLLM запущен с `--scheduling-policy priority`, где *меньше = р
 5.4с — дефолт 6, для фоновой ночной работы можно `--concurrency 8`.
 
 ## Туннель к модели
+
+Дефолтный endpoint (с 2026-09-20) — agy-шим `http://127.0.0.1:8107/v1` (gemma
+пасстру на vLLM :8000); прямой путь к vLLM — `--endpoint http://127.0.0.1:8000/v1`.
+Туннель ниже нужен только для запуска раннера С ДРУГОЙ МАШИНЫ:
 
 ```bash
 ssh -f -N -L 18000:127.0.0.1:8000 \
@@ -242,6 +278,12 @@ bun scripts/translate.ts story/automatic.json --langs ja,ko
 bun scripts/translate.ts story --concurrency 3        # 3 параллельных запроса (по умолчанию)
 bun scripts/translate.ts story --concurrency 1        # осторожно, как раньше — по одному
 bun scripts/translate.ts story --priority 0           # приоритет как у всех (по умолчанию 10, фон)
+
+# НАРРАТИВЫ (story/, texts/) — политика 2026-09-20: review-стадия на старшей
+# модели (омиссии ловит, канарейки: 9:0 и 15:4; тест-шкалы/UI — БЕЗ неё, там паритет):
+bun scripts/translate.ts story/start.json --stage-model review=gemini-3.1-pro-low
+#   бюджетный вариант для больших партий: review=gemini-3.8-flash-low (5с/436 out
+#   против 43с/11k, качество 74%≈79%, изредка зависает — ретраи проламывают)
 
 # Доперевести/обновить интерфейс cognitive_psy
 bun scripts/translate.ts --ui
@@ -336,7 +378,8 @@ apply → merge-winners.md. Итеративная схема: eval со све�
 
 ```
 scripts/translate.ts            единый раннер (контент + --ui)
-scripts/translate.config.json   конфиг (локали, endpoint, модель, psy-dir)
+scripts/translate.config.json   конфиг (локали, endpoint, модель, psy-dir, stageModels)
+scripts/agy_proxy.py            agy-шим :8107 (старшая модель по подписке + пасстру на vLLM)
 scripts/translation-state.json  закоммиченный state (per-key sha1 ru)
 scripts/prompts/                промпты + глоссарии (актив качества)
 scripts/lib/pipeline.ts         vLLM-клиент + 3 стадии + legacy-адаптер
