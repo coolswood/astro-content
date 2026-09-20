@@ -1,0 +1,4954 @@
+{
+  "file": "questions.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ja",
+      "converged": false,
+      "totalApplied": 12,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/0/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/1/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/1/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/2/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/2/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/3/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/3/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/4/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/4/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/5/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/5/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/6/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/6/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/7/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/7/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/8/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/8/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/9/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/9/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/10/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/10/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/11/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/11/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/12/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/12/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/13/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/13/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/14/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/14/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/15/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/15/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/16/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/16/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/17/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/17/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/18/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/18/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/19/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/19/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/20/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/20/translation",
+                "verdict": "ok",
+                "note": "Смысл передан точно, вежливый стиль"
+              },
+              {
+                "path": "/21/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/21/translation",
+                "verdict": "ok",
+                "note": "Естественная адаптация вопроса"
+              },
+              {
+                "path": "/22/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/22/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, тон вежливый"
+              },
+              {
+                "path": "/23/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/23/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, звучит естественно"
+              },
+              {
+                "path": "/24/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/24/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'уверенности в себе' через 'jibun-rashisa'"
+              },
+              {
+                "path": "/25/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/25/translation",
+                "verdict": "ok",
+                "note": "Удачное добавление пояснения в скобках для ясности"
+              },
+              {
+                "path": "/26/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/26/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, вежливо"
+              },
+              {
+                "path": "/27/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/27/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, тон наставника"
+              },
+              {
+                "path": "/28/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/28/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, звучит философски и естественно"
+              },
+              {
+                "path": "/29/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/29/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, вежливо"
+              },
+              {
+                "path": "/30/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/30/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, грамматически верно"
+              },
+              {
+                "path": "/31/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/31/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, классический вопрос"
+              },
+              {
+                "path": "/32/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/32/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'отношения к неудачам' через 'mukiaitteiru' (встречаться лицом к лицу/проживать)"
+              },
+              {
+                "path": "/33/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/33/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, терминология корректна"
+              },
+              {
+                "path": "/34/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/34/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, звучит естественно"
+              },
+              {
+                "path": "/35/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/35/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, вежливо"
+              },
+              {
+                "path": "/36/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/36/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, стандартная фраза"
+              },
+              {
+                "path": "/37/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/37/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, вежливо"
+              },
+              {
+                "path": "/38/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/38/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, хороший уровень вежливости"
+              },
+              {
+                "path": "/39/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/39/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, звучит естественно"
+              },
+              {
+                "path": "/40/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/40/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/41/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/41/translation",
+                "verdict": "ok",
+                "note": "good transcreation (yarigai)"
+              },
+              {
+                "path": "/42/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/42/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/43/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/43/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/44/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/44/translation",
+                "verdict": "ok",
+                "note": "natural use of brackets"
+              },
+              {
+                "path": "/45/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/45/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/46/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/46/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/47/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/47/translation",
+                "verdict": "issue",
+                "note": "omission: 'and for what' (за что) is missing"
+              },
+              {
+                "path": "/48/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/48/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/49/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/49/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/50/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/50/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/51/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/51/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/52/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/52/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/53/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/53/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/54/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/54/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/55/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/55/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/56/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/56/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/57/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/57/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/58/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/58/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/59/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/59/translation",
+                "verdict": "issue",
+                "note": "style: sounds like a direct translation/calque of the Russian structure"
+              },
+              {
+                "path": "/60/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/60/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно, вежливый стиль соблюден"
+              },
+              {
+                "path": "/61/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/61/translation",
+                "verdict": "ok",
+                "note": "Естественная формулировка"
+              },
+              {
+                "path": "/62/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/62/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, смысл сохранен"
+              },
+              {
+                "path": "/63/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/63/translation",
+                "verdict": "ok",
+                "note": "Естественно и точно"
+              },
+              {
+                "path": "/64/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/64/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, тон мягкий"
+              },
+              {
+                "path": "/65/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/65/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, звучит естественно"
+              },
+              {
+                "path": "/66/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/66/translation",
+                "verdict": "issue",
+                "note": "Смысл искажен: в оригинале вопрос о том, какой совет дают, а в переводе — о том, что хотят сказать"
+              },
+              {
+                "path": "/67/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/67/translation",
+                "verdict": "ok",
+                "note": "Точно и вежливо"
+              },
+              {
+                "path": "/68/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/68/translation",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/69/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/69/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация (心がけています)"
+              },
+              {
+                "path": "/70/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/70/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, хотя фраза сложная, она звучит по-японски"
+              },
+              {
+                "path": "/71/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/71/translation",
+                "verdict": "ok",
+                "note": "Смысл передан, но чуть более обобщенно (есть ли привычки vs какие привычки)"
+              },
+              {
+                "path": "/72/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/72/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/73/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/73/translation",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/74/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/74/translation",
+                "verdict": "ok",
+                "note": "Точно и вежливо"
+              },
+              {
+                "path": "/75/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/75/translation",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/76/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/76/translation",
+                "verdict": "ok",
+                "note": "Естественно"
+              },
+              {
+                "path": "/77/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/77/translation",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/78/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/78/translation",
+                "verdict": "issue",
+                "note": "Использование 'Anata' (Вы) в вопросе, что звучит отстраненно/неуклюже"
+              },
+              {
+                "path": "/79/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/79/translation",
+                "verdict": "ok",
+                "note": "Точно"
+              },
+              {
+                "path": "/80/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/80/translation",
+                "verdict": "ok",
+                "note": "natural transcreation"
+              },
+              {
+                "path": "/81/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/81/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/82/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/82/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/83/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/83/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/84/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/84/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/85/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/85/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/86/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/86/translation",
+                "verdict": "issue",
+                "note": "addition: added 'way of thinking' which isn't in the original"
+              },
+              {
+                "path": "/87/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/87/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/88/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/88/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/89/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/89/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/90/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/90/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/91/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/91/translation",
+                "verdict": "issue",
+                "note": "mistranslation: changed 'forgive' to 'unacceptable behavior'"
+              },
+              {
+                "path": "/92/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/92/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/93/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/93/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/94/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/94/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/95/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/95/translation",
+                "verdict": "issue",
+                "note": "style: uses 'anata' which is discouraged"
+              },
+              {
+                "path": "/96/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/96/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/97/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/97/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/98/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/98/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/99/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/99/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/100/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/100/translation",
+                "verdict": "ok",
+                "note": "natural transcreation"
+              },
+              {
+                "path": "/101/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/101/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/102/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/102/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/103/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/103/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/104/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/104/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/105/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/105/translation",
+                "verdict": "issue",
+                "note": "direct use of 'anata' is discouraged in the guidelines"
+              },
+              {
+                "path": "/106/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/106/translation",
+                "verdict": "ok",
+                "note": "natural transcreation"
+              },
+              {
+                "path": "/107/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/107/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/108/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/108/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/109/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/109/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/110/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/110/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/111/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/111/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/112/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/112/translation",
+                "verdict": "ok",
+                "note": "natural transcreation"
+              },
+              {
+                "path": "/113/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/113/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/114/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/114/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/115/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/115/translation",
+                "verdict": "issue",
+                "note": "direct use of 'anata' is discouraged in the guidelines"
+              },
+              {
+                "path": "/116/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/116/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/117/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/117/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/118/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/118/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/119/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/119/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/120/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/120/translation",
+                "verdict": "ok",
+                "note": "Смысл передан точно, вежливый стиль соблюден"
+              },
+              {
+                "path": "/121/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/121/translation",
+                "verdict": "ok",
+                "note": "Естественная формулировка"
+              },
+              {
+                "path": "/122/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/122/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'идеи о технологиях' в 'внедрение технологий'"
+              },
+              {
+                "path": "/123/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/123/translation",
+                "verdict": "ok",
+                "note": "Термин 'ベーシックインカム' уместен"
+              },
+              {
+                "path": "/124/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/124/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/125/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/125/translation",
+                "verdict": "ok",
+                "note": "Естественно для японского языка"
+              },
+              {
+                "path": "/126/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/126/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/127/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/127/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'люди, которые отличаются' через 'ценности и взгляды'"
+              },
+              {
+                "path": "/128/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/128/translation",
+                "verdict": "ok",
+                "note": "Использование скобок для пояснения термина допустимо"
+              },
+              {
+                "path": "/129/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/129/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/130/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/130/translation",
+                "verdict": "ok",
+                "note": "Стиль вежливый, смысл сохранен"
+              },
+              {
+                "path": "/131/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/131/translation",
+                "verdict": "ok",
+                "note": "Естественная формулировка"
+              },
+              {
+                "path": "/132/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/132/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/133/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/133/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/134/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/134/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/135/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/135/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/136/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/136/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/137/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/137/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/138/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/138/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/139/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/139/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/140/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/140/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/141/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/141/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/142/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/142/translation",
+                "verdict": "ok",
+                "note": "natural phrasing, added 'interest' for flow"
+              },
+              {
+                "path": "/143/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/143/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/144/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/144/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/145/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/145/translation",
+                "verdict": "ok",
+                "note": "natural phrasing, slight adaptation of 'get rid of' to 'how do you cope when attacked by'"
+              },
+              {
+                "path": "/146/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/146/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/147/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/147/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/148/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/148/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/149/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/149/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/150/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/150/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/151/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/151/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/152/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/152/translation",
+                "verdict": "ok",
+                "note": "natural phrasing, 'beliefs' translated as 'values' (価値観) which is more natural in this context"
+              },
+              {
+                "path": "/153/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/153/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c3-I1",
+                "path": "/47/translation",
+                "fragment": "最も感謝を感じたのはどのような時でしたか？",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущено 'за что' (за что вы чувствовали благодарность)",
+                "why": "В оригинале вопрос состоит из двух частей: 'когда' и 'за что'. В переводе оставлено только 'когда', что делает вопрос неполным."
+              },
+              {
+                "id": "c3-I2",
+                "path": "/59/translation",
+                "fragment": "強い感情を呼び起こした本や映画は何ですか？",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Звучит как калька с русского синтаксиса",
+                "why": "Конструкция 'что вызвало эмоции — это [предмет]?' (〜は何ですか？) в японском языке звучит несколько тяжеловесно и по-книжному. Более естественно было бы спросить: 'Какие книги или фильмы вызвали у вас сильные эмоции?' через конструкцию '〜はどのような本や映画ですか？' или перефразировать через опыт."
+              },
+              {
+                "id": "c4-I1",
+                "path": "/66/translation",
+                "fragment": "どのようなことを伝えたいですか？",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Смысл вопроса изменен: 'Что вы хотите сказать?' вместо 'Какой совет вы даете?'",
+                "why": "Оригинал спрашивает о действии (давать совет), перевод спрашивает о намерении/содержании речи (что хотите сказать), что меняет фокус вопроса."
+              },
+              {
+                "id": "c4-I2",
+                "path": "/78/translation",
+                "fragment": "あなたにとって",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование местоимения 'あなた' (anata)",
+                "why": "Согласно правилам Tone of Voice, прямое обращение 'anata' звучит неестественно и отстраненно. В данном контексте лучше перефразировать, опустив местоимение."
+              },
+              {
+                "id": "c5-I1",
+                "path": "/86/translation",
+                "fragment": "考え方にどのような影響を与えましたか？",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено «на образ мышления» (考え方に)",
+                "why": "В оригинале просто «влияние чтение», без уточнения на образ мышления. Хотя это звучит естественно, это небольшое отклонение от текста."
+              },
+              {
+                "id": "c5-I2",
+                "path": "/91/translation",
+                "fragment": "他人のどのような振る舞いを、最も受け入れがたいと感じますか？",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Смысл изменен с «простить» на «принять/терпеть поведение»",
+                "why": "Оригинал спрашивает о том, что человеку трудно *простить* (forgive), а перевод спрашивает о том, какое поведение человеку трудно *принять/терпеть* (unacceptable). Это разные психологические аспекты."
+              },
+              {
+                "id": "c5-I3",
+                "path": "/95/translation",
+                "fragment": "あなたにとって",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование местоимения «あなた» (anata)",
+                "why": "Согласно правилам Tone of Voice, следует избегать прямого обращения «anata», так как это может звучать отстраненно или неестественно. Лучше перефразировать без него."
+              },
+              {
+                "id": "c6-I1",
+                "path": "/105/translation",
+                "fragment": "あなたにとって",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование местоимения 'anata'",
+                "why": "Согласно правилам Tone of Voice, прямое обращение 'anata' часто звучит неестественно или отстраненно. В японском языке лучше перефразировать предложение, опустив местоимение."
+              },
+              {
+                "id": "c6-I2",
+                "path": "/115/translation",
+                "fragment": "あなたにとって",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование местоимения 'anata'",
+                "why": "Согласно правилам Tone of Voice, прямое обращение 'anata' часто звучит неестественно или отстраненно. В японском языке лучше перефразировать предложение, опустив местоимение."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Omission of 'for what' (за что) changes the question's completeness."
+              },
+              {
+                "id": "c5-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Mistranslation: 'forgive' vs 'unacceptable behavior' is a significant semantic shift."
+              },
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Mistranslation: changes the focus from giving advice to the content of speech."
+              },
+              {
+                "id": "c4-I2",
+                "verdict": "merged",
+                "mergedInto": "c6-I1",
+                "rank": 4,
+                "note": "Style issue regarding 'anata' usage."
+              },
+              {
+                "id": "c5-I1",
+                "verdict": "rejected",
+                "note": "Transcreation: adding 'way of thinking' makes the sentence sound natural in Japanese without changing the core meaning."
+              },
+              {
+                "id": "c5-I3",
+                "verdict": "merged",
+                "mergedInto": "c6-I1",
+                "rank": 4,
+                "note": "Style issue regarding 'anata' usage."
+              },
+              {
+                "id": "c6-I1",
+                "verdict": "merged",
+                "mergedInto": "c4-I2",
+                "rank": 4,
+                "note": "Consolidated all 'anata' style complaints."
+              },
+              {
+                "id": "c6-I2",
+                "verdict": "merged",
+                "mergedInto": "c6-I1",
+                "rank": 4,
+                "note": "Consolidated all 'anata' style complaints."
+              },
+              {
+                "id": "c3-I2",
+                "verdict": "rejected",
+                "note": "Style: The construction is acceptable for a formal questionnaire; not a critical error."
+              },
+              {
+                "id": "c5-I3",
+                "verdict": "merged",
+                "mergedInto": "c6-I1",
+                "rank": 4,
+                "note": "Style issue regarding 'anata' usage."
+              }
+            ],
+            "notes": "The translation has several critical semantic errors (omissions and mistranslations) that affect the logic of the questions, alongside repetitive stylistic issues with the pronoun 'anata'.",
+            "recommendations": [
+              {
+                "id": "c3-I1",
+                "priority": 1,
+                "path": "/47/translation",
+                "current": "これまでの人生で、最も感謝を感じたのはどのような時でしたか？",
+                "proposed": "これまでの人生で、最も感謝を感じたのはどのような時で、何に対してでしたか？",
+                "alternatives": [
+                  "これまでの人生で、最も感謝を感じたのはどのような時で、その理由は何ですか？",
+                  "これまでの人生で、何に対して最も感謝を感じましたか？また、それはどのような時でしたか？"
+                ],
+                "rationale": "В оригинале есть два компонента: 'когда' и 'за что'. Текущий перевод полностью игнорирует 'за что', что делает вопрос неполным. Предложенный вариант восстанавливает обе части, сохраняя вежливый тон."
+              },
+              {
+                "id": "c5-I2",
+                "priority": 2,
+                "path": "/91/translation",
+                "current": "他人のどのような振る舞いを、最も受け入れがたいと感じますか？",
+                "proposed": "他人のどのような振る舞いを、最も許しがたいと感じますか？",
+                "alternatives": [
+                  "他人のどのようなことを、最も許すのが難しいと感じますか？"
+                ],
+                "rationale": "Критическая ошибка смысла. Оригинал про 'прощение' (forgive), а перевод про 'неприемлемость/невозможность принять' (unacceptable). В японском языке '許しがたい' (yurushigatai) точно передает смысл 'трудно простить'."
+              },
+              {
+                "id": "c4-I1",
+                "priority": 3,
+                "path": "/66/translation",
+                "current": "他の人にアドバイスをするとき、どのようなことを伝えたいですか？",
+                "proposed": "他の人にどのようなアドバイスをすることが多いですか？",
+                "alternatives": [
+                  "他の人に、どのような助言を与えていますか？"
+                ],
+                "rationale": "Текущий перевод меняет фокус с действия (какой совет вы даете) на намерение (что вы хотите сказать). Вариант 'どのようなアドバイスをすることが多いですか？' более естественно передает суть вопроса о привычном поведении пользователя."
+              },
+              {
+                "id": "c4-I2",
+                "priority": 4,
+                "path": "/78/translation",
+                "current": "あなたにとって、インスピレーションの源となるものは何ですか？",
+                "proposed": "インスピレーションの源となるものは何ですか？",
+                "alternatives": [
+                  "何がインスピレーションの源になっていますか？"
+                ],
+                "rationale": "Согласно правилам Tone of Voice, прямое обращение 'anata' (あなた) избыточно и звучит отстраненно. Удаление местоимения делает фразу естественной для японского языка."
+              },
+              {
+                "id": "c5-I3",
+                "priority": 4,
+                "path": "/95/translation",
+                "current": "あなたにとって「幸せ」とは何ですか？これまでの人生で、心から幸せだと感じたのはどのような時でしたか？",
+                "proposed": "「幸せ」とは、どのようなものだと考えていますか？これまでの人生で、心から幸せだと感じたのはどのような時でしたか？",
+                "alternatives": [
+                  "「幸せ」とは何でしょうか？これまでの人生で、心から幸せだと感じたのはどのような時でしたか？"
+                ],
+                "rationale": "Удаление 'anata' (あなた) для соблюдения естественности и вежливости. Перефразирование через 'どのようなものだと考えていますか' звучит более глубоко и подходит для темы счастья."
+              },
+              {
+                "id": "c6-I1",
+                "priority": 4,
+                "path": "/105/translation",
+                "current": "あなたにとって、「友情」とはどのようなものですか？",
+                "proposed": "「友情」とは、どのようなものですか？",
+                "alternatives": [
+                  "「友情」について、どのようなイメージをお持ちですか？"
+                ],
+                "rationale": "Удаление 'anata' для соответствия правилам естественности и избегания прямого обращения."
+              },
+              {
+                "id": "c6-I2",
+                "priority": 4,
+                "path": "/115/translation",
+                "current": "あなたにとって、「豊かに生きる」とはどういうことだと思いますか？",
+                "proposed": "「豊かに生きる」とは、どういうことだと思いますか？",
+                "alternatives": [
+                  "「豊かに生きる」とは、どのようなことだと考えていますか？"
+                ],
+                "rationale": "Удаление 'anata' для улучшения ритма и естественности текста."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе обнаружены серьезные смысловые ошибки (mistranslations), касающиеся ключевых понятий 'прощение' и 'совет', что критично для психологического приложения. Также требуется массовая чистка текста от местоимения 'anata' для соответствия японскому этикету и естественности речи. После внесения правок текст станет качественным."
+            },
+            "timings": {
+              "issues": 155454,
+              "deliberate": 12196,
+              "recommend": 29151
+            }
+          },
+          "applied": [
+            {
+              "id": "c3-I1",
+              "path": "/47/translation",
+              "from": "これまでの人生で、最も感謝を感じたのはどのような時でしたか？",
+              "to": "これまでの人生で、最も感謝を感じたのはどのような時で、何に対してでしたか？"
+            },
+            {
+              "id": "c5-I2",
+              "path": "/91/translation",
+              "from": "他人のどのような振る舞いを、最も受け入れがたいと感じますか？",
+              "to": "他人のどのような振る舞いを、最も許しがたいと感じますか？"
+            },
+            {
+              "id": "c4-I1",
+              "path": "/66/translation",
+              "from": "他の人にアドバイスをするとき、どのようなことを伝えたいですか？",
+              "to": "他の人にどのようなアドバイスをすることが多いですか？"
+            },
+            {
+              "id": "c4-I2",
+              "path": "/78/translation",
+              "from": "あなたにとって、インスピレーションの源となるものは何ですか？",
+              "to": "インスピレーションの源となるものは何ですか？"
+            },
+            {
+              "id": "c5-I3",
+              "path": "/95/translation",
+              "from": "あなたにとって「幸せ」とは何ですか？これまでの人生で、心から幸せだと感じたのはどのような時でしたか？",
+              "to": "「幸せ」とは、どのようなものだと考えていますか？これまでの人生で、心から幸せだと感じたのはどのような時でしたか？"
+            },
+            {
+              "id": "c6-I1",
+              "path": "/105/translation",
+              "from": "あなたにとって、「友情」とはどのようなものですか？",
+              "to": "「友情」とは、どのようなものですか？"
+            },
+            {
+              "id": "c6-I2",
+              "path": "/115/translation",
+              "from": "あなたにとって、「豊かに生きる」とはどういうことだと思いますか？",
+              "to": "「豊かに生きる」とは、どういうことだと思いますか？"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/0/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/1/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/1/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/2/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/2/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/3/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/3/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/4/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/4/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/5/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/5/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/6/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/6/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/7/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/7/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/8/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/8/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/9/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/9/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/10/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/10/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/11/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/11/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/12/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/12/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/13/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/13/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/14/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/14/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/15/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/15/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/16/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/16/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/17/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/17/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/18/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/18/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/19/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/19/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/20/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/20/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/21/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/21/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/22/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/22/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/23/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/23/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/24/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/24/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/25/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/25/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/26/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/26/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/27/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/27/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/28/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/28/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/29/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/29/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/30/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/30/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/31/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/31/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/32/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/32/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/33/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/33/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/34/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/34/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/35/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/35/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/36/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/36/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/37/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/37/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/38/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/38/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/39/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/39/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/40/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/40/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/41/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/41/translation",
+                "verdict": "ok",
+                "note": "natural transcreation"
+              },
+              {
+                "path": "/42/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/42/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/43/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/43/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/44/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/44/translation",
+                "verdict": "issue",
+                "note": "use of 'anata' is discouraged"
+              },
+              {
+                "path": "/45/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/45/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/46/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/46/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/47/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/47/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/48/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/48/translation",
+                "verdict": "issue",
+                "note": "use of 'anata' is discouraged"
+              },
+              {
+                "path": "/49/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/49/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/50/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/50/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/51/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/51/translation",
+                "verdict": "issue",
+                "note": "use of 'anata' is discouraged"
+              },
+              {
+                "path": "/52/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/52/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/53/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/53/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/54/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/54/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/55/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/55/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/56/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/56/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/57/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/57/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/58/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/58/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/59/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/59/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/60/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/60/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/61/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/61/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/62/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/62/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/63/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/63/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/64/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/64/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/65/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/65/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/66/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/66/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/67/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/67/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/68/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/68/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/69/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/69/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/70/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/70/translation",
+                "verdict": "issue",
+                "note": "The translation is a bit too wordy and heavy, sounds slightly like a direct translation of a complex Russian sentence structure."
+              },
+              {
+                "path": "/71/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/71/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/72/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/72/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/73/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/73/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/74/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/74/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/75/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/75/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/76/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/76/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/77/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/77/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/78/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/78/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/79/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/79/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/80/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/80/translation",
+                "verdict": "ok",
+                "note": "natural transcreation"
+              },
+              {
+                "path": "/81/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/81/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/82/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/82/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/83/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/83/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/84/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/84/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/85/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/85/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/86/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/86/translation",
+                "verdict": "issue",
+                "note": "addition: added 'way of thinking' which isn't in the original"
+              },
+              {
+                "path": "/87/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/87/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/88/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/88/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/89/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/89/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/90/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/90/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/91/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/91/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/92/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/92/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/93/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/93/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/94/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/94/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/95/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/95/translation",
+                "verdict": "ok",
+                "note": "natural and polite"
+              },
+              {
+                "path": "/96/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/96/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/97/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/97/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/98/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/98/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/99/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/99/translation",
+                "verdict": "ok",
+                "note": "natural transcreation"
+              },
+              {
+                "path": "/100/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/100/translation",
+                "verdict": "ok",
+                "note": "Natural transcreation: 'Tell us about...' instead of 'What is...'"
+              },
+              {
+                "path": "/101/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/101/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/102/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/102/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/103/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/103/translation",
+                "verdict": "ok",
+                "note": "Natural transcreation"
+              },
+              {
+                "path": "/104/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/104/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/105/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/105/translation",
+                "verdict": "ok",
+                "note": "Uses correct brackets 「 」"
+              },
+              {
+                "path": "/106/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/106/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/107/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/107/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/108/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/108/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/109/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/109/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/110/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/110/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/111/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/111/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/112/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/112/translation",
+                "verdict": "ok",
+                "note": "Good transcreation: 'parts you are proud of' instead of 'aspects you value'"
+              },
+              {
+                "path": "/113/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/113/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/114/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/114/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/115/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/115/translation",
+                "verdict": "ok",
+                "note": "Good transcreation: 'living richly' instead of 'true art of living'"
+              },
+              {
+                "path": "/116/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/116/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/117/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/117/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/118/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/118/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/119/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/119/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/120/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/120/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/121/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/121/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/122/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/122/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/123/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/123/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/124/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/124/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/125/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/125/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/126/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/126/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/127/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/127/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/128/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/128/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/129/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/129/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/130/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/130/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/131/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/131/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/132/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/132/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/133/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/133/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/134/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/134/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/135/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/135/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/136/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/136/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/137/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/137/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/138/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/138/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/139/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/139/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/140/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/140/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing for 'what meaning do friends have'"
+              },
+              {
+                "path": "/141/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/141/translation",
+                "verdict": "ok",
+                "note": "Natural translation"
+              },
+              {
+                "path": "/142/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/142/translation",
+                "verdict": "ok",
+                "note": "Good adaptation of 'worry' to 'anxiety/interest'"
+              },
+              {
+                "path": "/143/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/143/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/144/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/144/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/145/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/145/translation",
+                "verdict": "ok",
+                "note": "Good adaptation of 'get rid of' to 'how do you cope'"
+              },
+              {
+                "path": "/146/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/146/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/147/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/147/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/148/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/148/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/149/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/149/translation",
+                "verdict": "ok",
+                "note": "Natural and empathetic"
+              },
+              {
+                "path": "/150/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/150/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/151/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/151/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/152/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/152/translation",
+                "verdict": "ok",
+                "note": "Good adaptation of 'beliefs' to 'values' (価値観) in this context"
+              },
+              {
+                "path": "/153/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/153/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c3-I1",
+                "path": "/44/translation",
+                "fragment": "あなたにとって",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование местоимения 'anata'",
+                "why": "Согласно правилам Tone of Voice, прямое обращение 'anata' часто звучит неестественно или отстраненно. В японском языке лучше перефразировать предложение, чтобы опустить местоимение."
+              },
+              {
+                "id": "c3-I2",
+                "path": "/48/translation",
+                "fragment": "あなたの人生に",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование местоимения 'anata'",
+                "why": "Прямое использование 'anata' (ваша жизнь) избыточно и может звучать слишком формально или отстраненно. Лучше использовать '人生において' или просто '人生に'."
+              },
+              {
+                "id": "c3-I3",
+                "path": "/51/translation",
+                "fragment": "あなたにとって",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование местоимения 'anata'",
+                "why": "Местоимение 'anata' делает вопрос слишком прямолинейным. В контексте глубоких философских вопросов лучше опустить его для более мягкого и естественного звучания."
+              },
+              {
+                "id": "c4-I1",
+                "path": "/70/translation",
+                "fragment": "周囲の人から見て、あなたのどのようなところが「人間として素晴らしい」と思わせるのでしょうか？",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Heavy, explanatory syntax",
+                "why": "The sentence structure mirrors the Russian 'Что делает вас... в глазах окружающих?' too closely, resulting in a long, slightly clunky question. While grammatically correct, a more natural Japanese way to ask this would be more concise, e.g., '周囲の人から、どのような人間だと思われていますか？' or similar."
+              },
+              {
+                "id": "c5-I1",
+                "path": "/86/translation",
+                "fragment": "読書は、考え方にどのような影響を与えましたか？",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено «на образ мышления» (考え方に)",
+                "why": "В оригинале просто «влияние чтения на вас». Хотя в японском это звучит естественно, это небольшое отступление от точности оригинала."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Direct use of 'anata' is stylistically weak in Japanese; omitting it is more natural."
+              },
+              {
+                "id": "c3-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Direct use of 'anata' is stylistically weak in Japanese; omitting it is more natural."
+              },
+              {
+                "id": "c3-I3",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Direct use of 'anata' is stylistically weak in Japanese; omitting it is more natural."
+              },
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "The translation is a bit wordy due to mirroring the Russian syntax, though it remains understandable."
+              },
+              {
+                "id": "c5-I1",
+                "verdict": "rejected",
+                "note": "This is a valid transcreation. Adding 'thought patterns' (考え方に) makes the abstract Russian 'influence on you' concrete and natural in Japanese."
+              }
+            ],
+            "notes": "The translation is of high quality and natural, with minor stylistic issues regarding pronoun usage and slightly heavy syntax in one instance. The perceived 'addition' in I5 is actually a necessary localization for clarity.",
+            "recommendations": [
+              {
+                "id": "c3-I1",
+                "priority": 1,
+                "path": "/44/translation",
+                "current": "あなたにとって「家」とは、どのような意味を持つ場所ですか？",
+                "proposed": "「家」とは、どのような意味を持つ場所ですか？",
+                "alternatives": [
+                  "「家」という言葉には、どのような意味を込めていますか？"
+                ],
+                "rationale": "Удаление 'anata ni totte' делает вопрос более естественным и менее навязчивым, что соответствует правилам японского этикета и Tone of Voice."
+              },
+              {
+                "id": "c3-I2",
+                "priority": 2,
+                "path": "/48/translation",
+                "current": "あなたの人生に最も影響を与えた本は何ですか？その理由も教えてください。",
+                "proposed": "人生に最も影響を与えた本は何ですか？その理由も教えてください。",
+                "alternatives": [
+                  "これまでの人生で、最も影響を受けた本は何ですか？"
+                ],
+                "rationale": "Удаление 'anata no' избавляет от избыточности и делает фразу более плавной. Вариант с 'kore made no' также хорош, но текущий текст требует минимальной правки."
+              },
+              {
+                "id": "c3-I3",
+                "priority": 3,
+                "path": "/51/translation",
+                "current": "あなたにとって「真実」とは、何を意味しますか？",
+                "proposed": "「真実」とは、何を意味しますか？",
+                "alternatives": [
+                  "「真実」とは、どのようなものだと考えていますか？"
+                ],
+                "rationale": "Прямое обращение 'anata' в философских вопросах звучит слишком резко. Опущение местоимения делает вопрос более глубоким и деликатным."
+              },
+              {
+                "id": "c4-I1",
+                "priority": 4,
+                "path": "/70/translation",
+                "current": "周囲の人から見て、あなたのどのようなところが「人間として素晴らしい」と思わせるのでしょうか？",
+                "proposed": "周囲の人から、どのような人間だと思われていますか？",
+                "alternatives": [
+                  "周囲の人には、どのような人だと思われていると感じますか？"
+                ],
+                "rationale": "Текущий вариант — тяжеловесная калька с русского. Предложенный вариант звучит гораздо естественнее для носителя, сохраняя смысл 'что в вас видят окружающие'."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, с хорошим пониманием контекста и терминологии. Основные замечания касаются избыточного использования местоимения 'anata' и тяжеловесных синтаксических конструкций, которые выдают кальку с русского. После внесения правок текст будет звучать полностью аутентично."
+            },
+            "timings": {
+              "issues": 150427,
+              "deliberate": 10500,
+              "recommend": 16134
+            }
+          },
+          "applied": [
+            {
+              "id": "c3-I1",
+              "path": "/44/translation",
+              "from": "あなたにとって「家」とは、どのような意味を持つ場所ですか？",
+              "to": "「家」とは、どのような意味を持つ場所ですか？"
+            },
+            {
+              "id": "c3-I2",
+              "path": "/48/translation",
+              "from": "あなたの人生に最も影響を与えた本は何ですか？その理由も教えてください。",
+              "to": "人生に最も影響を与えた本は何ですか？その理由も教えてください。"
+            },
+            {
+              "id": "c3-I3",
+              "path": "/51/translation",
+              "from": "あなたにとって「真実」とは、何を意味しますか？",
+              "to": "「真実」とは、何を意味しますか？"
+            },
+            {
+              "id": "c4-I1",
+              "path": "/70/translation",
+              "from": "周囲の人から見て、あなたのどのようなところが「人間として素晴らしい」と思わせるのでしょうか？",
+              "to": "周囲の人から、どのような人間だと思われていますか？"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/0/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/1/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/1/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/2/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/2/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/3/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/3/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/4/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/4/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/5/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/5/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/6/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/6/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/7/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/7/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/8/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/8/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/9/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/9/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/10/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/10/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/11/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/11/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/12/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/12/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/13/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/13/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/14/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/14/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/15/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/15/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/16/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/16/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/17/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/17/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/18/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/18/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/19/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/19/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/20/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/20/translation",
+                "verdict": "ok",
+                "note": "смысл передан верно, тон вежливый"
+              },
+              {
+                "path": "/21/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/21/translation",
+                "verdict": "ok",
+                "note": "хорошая адаптация, звучит естественно"
+              },
+              {
+                "path": "/22/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/22/translation",
+                "verdict": "ok",
+                "note": "смысл передан, вежливый стиль"
+              },
+              {
+                "path": "/23/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/23/translation",
+                "verdict": "ok",
+                "note": "смысл передан, естественная фраза"
+              },
+              {
+                "path": "/24/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/24/translation",
+                "verdict": "ok",
+                "note": "хорошая адаптация 'уверенность в себе' через '自分らしさや自信'"
+              },
+              {
+                "path": "/25/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/25/translation",
+                "verdict": "ok",
+                "note": "удачная адаптация с пояснением в скобках"
+              },
+              {
+                "path": "/26/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/26/translation",
+                "verdict": "ok",
+                "note": "смысл передан, вежливо"
+              },
+              {
+                "path": "/27/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/27/translation",
+                "verdict": "ok",
+                "note": "смысл передан, естественный тон"
+              },
+              {
+                "path": "/28/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/28/translation",
+                "verdict": "ok",
+                "note": "смысл передан, философский вопрос звучит корректно"
+              },
+              {
+                "path": "/29/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/29/translation",
+                "verdict": "ok",
+                "note": "смысл передан, вежливо"
+              },
+              {
+                "path": "/30/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/30/translation",
+                "verdict": "ok",
+                "note": "смысл передан, грамматически верно"
+              },
+              {
+                "path": "/31/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/31/translation",
+                "verdict": "ok",
+                "note": "смысл передан, естественная форма"
+              },
+              {
+                "path": "/32/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/32/translation",
+                "verdict": "ok",
+                "note": "хорошая адаптация 'отношение к неудачам' через '向き合っていますか'"
+              },
+              {
+                "path": "/33/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/33/translation",
+                "verdict": "ok",
+                "note": "смысл передан, терминология корректна"
+              },
+              {
+                "path": "/34/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/34/translation",
+                "verdict": "ok",
+                "note": "смысл передан, звучит естественно"
+              },
+              {
+                "path": "/35/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/35/translation",
+                "verdict": "ok",
+                "note": "смысл передан, вежливо"
+              },
+              {
+                "path": "/36/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/36/translation",
+                "verdict": "ok",
+                "note": "смысл передан, стандартная фраза"
+              },
+              {
+                "path": "/37/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/37/translation",
+                "verdict": "ok",
+                "note": "смысл передан, вежливо"
+              },
+              {
+                "path": "/38/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/38/translation",
+                "verdict": "ok",
+                "note": "смысл передан, хороший уровень вежливости"
+              },
+              {
+                "path": "/39/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/39/translation",
+                "verdict": "ok",
+                "note": "смысл передан, звучит естественно"
+              },
+              {
+                "path": "/40/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/40/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/41/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/41/translation",
+                "verdict": "ok",
+                "note": "good transcreation, 'yarigai' fits well"
+              },
+              {
+                "path": "/42/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/42/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/43/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/43/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/44/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/44/translation",
+                "verdict": "ok",
+                "note": "uses correct brackets"
+              },
+              {
+                "path": "/45/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/45/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/46/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/46/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/47/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/47/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/48/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/48/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/49/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/49/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/50/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/50/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/51/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/51/translation",
+                "verdict": "ok",
+                "note": "uses correct brackets"
+              },
+              {
+                "path": "/52/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/52/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/53/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/53/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/54/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/54/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/55/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/55/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/56/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/56/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/57/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/57/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/58/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/58/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/59/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/59/translation",
+                "verdict": "ok",
+                "note": "natural"
+              },
+              {
+                "path": "/60/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/60/translation",
+                "verdict": "ok",
+                "note": "natural polite phrasing"
+              },
+              {
+                "path": "/61/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/61/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/62/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/62/translation",
+                "verdict": "ok",
+                "note": "good adaptation of 'personal qualities' to 'strengths'"
+              },
+              {
+                "path": "/63/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/63/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/64/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/64/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/65/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/65/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/66/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/66/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/67/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/67/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/68/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/68/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/69/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/69/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/70/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/70/translation",
+                "verdict": "issue",
+                "note": "mistranslation: the meaning shifted from 'what makes you a real person' to 'how do others perceive you'"
+              },
+              {
+                "path": "/71/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/71/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/72/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/72/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/73/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/73/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/74/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/74/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/75/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/75/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/76/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/76/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/77/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/77/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/78/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/78/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/79/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/79/translation",
+                "verdict": "ok",
+                "note": "natural phrasing"
+              },
+              {
+                "path": "/100/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/100/translation",
+                "verdict": "ok",
+                "note": "Natural transcreation: 'Tell us about...' instead of literal 'What is...'"
+              },
+              {
+                "path": "/101/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/101/translation",
+                "verdict": "ok",
+                "note": "Natural and polite"
+              },
+              {
+                "path": "/102/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/102/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/103/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/103/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/104/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/104/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/105/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/105/translation",
+                "verdict": "ok",
+                "note": "Good use of brackets"
+              },
+              {
+                "path": "/106/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/106/translation",
+                "verdict": "ok",
+                "note": "Natural transcreation"
+              },
+              {
+                "path": "/107/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/107/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/108/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/108/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/109/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/109/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/110/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/110/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/111/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/111/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/112/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/112/translation",
+                "verdict": "ok",
+                "note": "Good transcreation: 'Your journey so far' instead of literal 'aspects of achievements'"
+              },
+              {
+                "path": "/113/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/113/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/114/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/114/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/115/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/115/translation",
+                "verdict": "ok",
+                "note": "Good transcreation: 'Living richly' is a better cultural fit than 'True art of living'"
+              },
+              {
+                "path": "/116/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/116/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/117/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/117/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/118/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/118/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/119/id",
+                "verdict": "ok",
+                "note": "ID unchanged"
+              },
+              {
+                "path": "/119/translation",
+                "verdict": "ok",
+                "note": "Natural phrasing"
+              },
+              {
+                "path": "/120/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/120/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/121/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/121/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/122/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/122/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/123/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/123/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/124/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/124/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/125/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/125/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/126/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/126/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/127/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/127/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/128/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/128/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/129/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/129/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/130/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/130/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/131/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/131/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/132/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/132/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/133/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/133/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/134/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/134/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/135/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/135/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/136/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/136/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/137/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/137/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/138/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/138/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/139/id",
+                "verdict": "ok",
+                "note": "id matches"
+              },
+              {
+                "path": "/139/translation",
+                "verdict": "ok",
+                "note": "natural translation"
+              },
+              {
+                "path": "/140/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/140/translation",
+                "verdict": "ok",
+                "note": "Естественный перевод вопроса о друзьях"
+              },
+              {
+                "path": "/141/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/141/translation",
+                "verdict": "ok",
+                "note": "Перевод точный и вежливый"
+              },
+              {
+                "path": "/142/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/142/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация: добавлено 'интерес', что делает вопрос естественнее"
+              },
+              {
+                "path": "/143/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/143/translation",
+                "verdict": "ok",
+                "note": "Смысл передан верно через 'трудный опыт'"
+              },
+              {
+                "path": "/144/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/144/translation",
+                "verdict": "ok",
+                "note": "Естественная формулировка"
+              },
+              {
+                "path": "/145/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/145/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация: 'когда нападают мысли' звучит естественнее, чем 'как избавляетесь'"
+              },
+              {
+                "path": "/146/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/146/translation",
+                "verdict": "ok",
+                "note": "Использование кавычек 「 」 уместно"
+              },
+              {
+                "path": "/147/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/147/translation",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/148/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/148/translation",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/149/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/149/translation",
+                "verdict": "ok",
+                "note": "Перевод корректен, тон мягкий"
+              },
+              {
+                "path": "/150/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/150/translation",
+                "verdict": "ok",
+                "note": "Хорошая адаптация через 'состояние'"
+              },
+              {
+                "path": "/151/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/151/translation",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/152/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/152/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, 'ценности' (価値観) — отличная адаптация 'убеждений' в данном контексте"
+              },
+              {
+                "path": "/153/id",
+                "verdict": "ok",
+                "note": "id unchanged"
+              },
+              {
+                "path": "/153/translation",
+                "verdict": "ok",
+                "note": "Перевод точный, 'переломные моменты' (転換点) — хорошая адаптация"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c4-I1",
+                "path": "/70/translation",
+                "fragment": "周囲の人から、どのような人間だと思われていますか？",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Смысл вопроса изменен с внутреннего качества/сущности человека на внешнее восприятие окружающими.",
+                "why": "Оригинал «Что делает вас настоящим человеком...» спрашивает о внутреннем факторе, определяющем человечность/достоинство. Перевод «Каким человеком вас считают окружающие?» переводит фокус на социальное мнение, что меняет суть философского вопроса."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c4-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation shifts the focus from the essence of being human (internal) to social perception (external), fundamentally altering the philosophical intent of the question."
+              }
+            ],
+            "notes": "The translation is overall high quality and natural, with the exception of one major semantic shift in item 70.",
+            "recommendations": [
+              {
+                "id": "c4-I1",
+                "priority": 1,
+                "path": "/70/translation",
+                "current": "周囲の人から、どのような人間だと思われていますか？",
+                "proposed": "人間としての真の価値を形作っているものは何だと思いますか？",
+                "alternatives": [
+                  "「人間らしさ」とは、何によって決まるものだと思いますか？",
+                  "周囲から見て、あなたを「人間として素晴らしい」と思わせるものは何でしょうか？"
+                ],
+                "rationale": "Текущий перевод («Каким человеком вас считают окружающие?») полностью уводит вопрос в плоскость социального мнения, тогда как оригинал («Что делает вас настоящим человеком...») — это философский вопрос о внутренней сути и достоинстве. Предложенный вариант возвращает фокус на внутренние качества, определяющие человеческую сущность, сохраняя при этом вежливый тон."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на очень высоком уровне: соблюден вежливый стиль (Desu/Masu), терминология соответствует стандартам ментального здоровья, а фразы звучат естественно. Единственная критическая ошибка была найдена в вопросе №70, где фокус сместился с внутренней сути человека на внешнее мнение окружающих. После исправления этого момента текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 119222,
+              "deliberate": 4547,
+              "recommend": 10417
+            }
+          },
+          "applied": [
+            {
+              "id": "c4-I1",
+              "path": "/70/translation",
+              "from": "周囲の人から、どのような人間だと思われていますか？",
+              "to": "人間としての真の価値を形作っているものは何だと思いますか？"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
