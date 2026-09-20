@@ -648,7 +648,12 @@ function chunkPayload(node: any, max: number, prefix: string[] = []): PayloadChu
   const entries: [string, any][] = isArray
     ? node.map((v, i) => [String(i), v] as [string, any])
     : Object.entries(node);
-  if (entries.length <= 1) return [{ prefix, subtree: node }];
+  // Единственный child НЕ повод вернуть узел целиком: докрутился сюда —
+  // узел больше max, а единственный child сам переполнен (иначе вернулись бы
+  // выше), цикл ниже рекурсивно разрежет его. Bail здесь отдавал документ-
+  // массив в обёртке {content: […]} одним чанком на сотни листьев — чанкование
+  // на questions.json не работало вообще (инцидент ja-2026 шёл одним запросом
+  // на 308 путей).
   const chunks: PayloadChunk[] = [];
   let bin: Record<string, any> = {};
   let binLeaves = 0;
@@ -737,7 +742,13 @@ async function runStagesOnce(
           user: JSON.stringify({
             sourceLocale: o.sourceLocale,
             targetLocale,
-            paths: flattenAll(payload),
+            // null-позиции разреженного чанка — не переводимые листья:
+            // в запрос их не отправляем и в сверке полноты не ждём (иначе
+            // каждый разреженный чанк гарантированно фейлил path-map >30%
+            // «потерь» и уходил в документный фолбэк).
+            paths: Object.fromEntries(
+              Object.entries(flattenAll(payload)).filter(([, v]) => v != null),
+            ),
             ...(chunkMeta ? { meta: chunkMeta } : {}),
             ...(o.context && Object.keys(o.context).length > 0 ? { context: o.context } : {}),
           }),
@@ -766,7 +777,11 @@ async function runStagesOnce(
     if (!map || typeof map !== 'object') {
       throw new Error(`MAIN(paths): не удалось распарсить карту путей: ${draftText.slice(0, 200)}`);
     }
-    const expected = flattenAll(payload);
+    // null-позиции разреженного чанка не запрашивались — полнота считается
+    // по ним же (см. построение запроса выше).
+    const expected = Object.fromEntries(
+      Object.entries(flattenAll(payload)).filter(([, v]) => v != null),
+    );
     const clean: Record<string, string> = {};
     const missing: string[] = [];
     // Толерантность к модели, теряющей ведущий '/' в пути: совпадение по

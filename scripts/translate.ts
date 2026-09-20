@@ -545,6 +545,7 @@ async function translateWithRetries(
     } catch (e: any) {
       lastError = e;
       console.warn(`   ⚠️ Ошибка конвейера ${lang} (попытка ${attempt}): ${e?.message ?? e}`);
+      if (e?.stack) console.warn(`   ${e.stack.split('\n').slice(0, 6).join('\n   ')}`);
     }
   }
 

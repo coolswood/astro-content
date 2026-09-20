@@ -96,3 +96,41 @@ describe('mergeSubset — массив-ответ для документа-ма
     expect(out).toEqual(['EINS', 'zwei', 'drei']);
   });
 });
+
+/**
+ * Регрессия чанкования документа-массива (инцидент ja-2026): bail на
+ * «единственном child» в chunkPayload отдавал обёртку {content: […]} одним
+ * чанком на сотни листьев — вопросы шли одним path-map запросом на 308 путей,
+ * где модель теряла пути и смещала массив. Теперь единственный переполненный
+ * child рекурсивно режется.
+ */
+describe('runPipeline — чанкование документа-массива в обёртке content', () => {
+  test('массив 30 записей (60 листьев) при chunk-leaves 20 режется на чанки', async () => {
+    const payload = Array.from({ length: 30 }, (_, i) => ({ id: `id${i}`, translation: `В.${i}` }));
+    let mainCalls = 0;
+    const answered = new Set<string>();
+    const client = stubMain((user) => {
+      mainCalls++;
+      // Запрос path-map несёт объект «путь → ru-строка» (null — разреженные
+      // позиции чанка, их не спрашиваем). Отвечаем ровно на запрошенные пути;
+      // id — стабильные идентификаторы, модель обязана эхнуть их как есть.
+      const asked = JSON.parse(user).paths ?? {};
+      const paths: Record<string, string> = {};
+      for (const [p, ru] of Object.entries(asked as Record<string, string>)) {
+        if (typeof ru !== 'string') continue;
+        const m = p.match(/^\/(\d+)\/id$/);
+        paths[p] = m ? `id${m[1]}` : 'перевод ' + p;
+        answered.add(p);
+      }
+      return JSON.stringify({ paths });
+    });
+    const { data } = await runPipeline(client, PROMPTS, payload, 'de', {
+      mainPathMap: true,
+      chunkLeaves: 20,
+    });
+    expect(mainCalls).toBeGreaterThan(1); // НЕ один чанк на весь документ
+    expect(answered.size).toBe(60);
+    expect(data).toHaveLength(30);
+    expect(data[0]).toEqual({ id: 'id0', translation: 'перевод /0/translation' });
+  });
+});
