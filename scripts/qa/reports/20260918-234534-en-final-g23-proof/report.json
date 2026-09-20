@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:45:34.669Z",
+    "Метка": "en-final-g23-proof",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/proof.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/proof.json": {
+      "en": [
+        {
+          "file": "story/proof.json",
+          "lang": "en",
+          "key": "/test/question",
+          "ru": "Выберите неверное утверждение — КПТ …",
+          "oldText": "Choose the incorrect statement — CBT …",
+          "newText": "Which of the following statements about CBT is incorrect?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation B is a natural, idiomatic way to phrase a multiple-choice question in English, whereas Translation A is a clunky, literal calque of the Russian imperative.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The imperative 'Choose the incorrect statement' sounds like a direct command from a manual rather than a natural test question; it lacks the flow expected in English-language assessments."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is a natural, idiomatic way to phrase a multiple-choice question in English. Translation B is a literal, clunky calque of the Russian structure that sounds unnatural in an educational or testing context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The use of the em dash to connect the instruction to the subject is a Russian syntactic pattern; in English, 'Which of the following...' is the standard way to frame such questions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/proof.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "В этой статье мы говорим о научных доказательствах эффективности когнитивно-поведенческой терапии (КПТ) в лечении депрессии, тревожных расстройств, ПТСР и панических атак. Также подчёркиваем важность работы с профессионалами и рассматриваем ситуации, когда одной КПТ может быть недостаточно.",
+          "oldText": "This article looks at the scientific evidence for the effectiveness of cognitive-behavioral therapy (CBT) in treating depression, anxiety disorders, PTSD, and panic attacks. It also emphasizes the importance of working with professionals and explains when CBT alone may not be enough.",
+          "newText": "In this article, we discuss the scientific evidence supporting the effectiveness of cognitive behavioral therapy (CBT) in treating depression, anxiety disorders, PTSD, and panic attacks. We also emphasize the importance of working with professionals and explore situations where CBT alone may not be enough.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B sounds more natural for an English-language article by using 'This article looks at' instead of the slightly more formal/academic 'In this article, we discuss'. B also flows better by avoiding the repetitive 'We' structure.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The 'In this article, we discuss' construction is grammatically correct but feels slightly more like a translation from Russian than a native English editorial style."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A sounds more natural for an English-language article by using 'This article looks at' instead of the slightly more repetitive 'In this article, we discuss'. It follows the principle of avoiding unnecessary 'we' and uses a more professional, streamlined flow.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'In this article, we discuss...' is a bit more wordy and follows the Russian sentence structure more closely than necessary for a native-sounding English text."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/proof.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Путь КПТ к признанию был далеко не простым и уж точно не стремительным.\n\nНа ранних этапах теорию Бека критиковали фрейдисты и другие коллеги — её называли «поверхностной» и сомневались в эффективности из-за отсутствия достаточной научной базы. Против выступали даже фармацевтические компании, видевшие в успешной терапии конкуренцию для психотропных препаратов.\n\n<instagram ids=\"17865581481340000,17842768092554638\">\n\nПотребовалось время, исследования и весомые данные, чтобы КПТ получила свою доказательную платформу.\n\nПоворотным стал 1977 год: исследования Бека показали, что КПТ помогает пациентам с депрессией эффективнее, чем имипрамин — один из самых мощных антидепрессантов того времени.\n\nС тех пор прошло много лет, и сейчас существует более 200 крупных исследований, подтверждающих эффективность КПТ в самых разных ситуациях.",
+          "oldText": "CBT’s path to recognition was anything but simple or fast.\n\nIn the early days, Beck’s theory was criticized by Freudians and many other colleagues — it was called “superficial”, and people doubted its effectiveness because there wasn’t enough scientific data yet. Even pharmaceutical companies spoke out against it, seeing effective psychotherapy as competition for psychotropic drugs.\n\nIt took time, research, and solid data for CBT to build its evidence base.\n\nA turning point came in 1977: Beck’s studies showed that CBT helped people with depression more effectively than imipramine, one of the most powerful antidepressants of that time.\n\nMany years have passed since then, and today there are more than 200 major studies confirming the effectiveness of CBT in a wide range of situations.",
+          "newText": "CBT’s journey to recognition was far from easy, and certainly not rapid.\n\nIn its early stages, Beck’s theory was criticized by Freudians and other colleagues—it was labeled “superficial,” and its effectiveness was questioned due to a lack of sufficient scientific grounding. Even pharmaceutical companies opposed it, seeing successful therapy as competition for psychotropic drugs.\n\n<instagram ids=\"17865581481340000,17842768092554638\">\n\nIt took time, research, and substantial data for CBT to establish its evidence-based foundation.\n\n1977 was a turning point: Beck’s research showed that CBT helped patients with depression more effectively than imipramine—one of the most powerful antidepressants of that time.\n\nMany years have passed since then, and today there are more than 200 major studies confirming the effectiveness of CBT in a wide variety of situations.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more sophisticated and flows like a professional article, using precise vocabulary ('scientific grounding', 'establish its evidence-based foundation') that fits the historical/scientific context. Translation B is slightly more repetitive and uses more basic, 'translated-sounding' structures.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'anything but simple or fast' is a bit colloquial for this historical narrative compared to A's more elegant structure."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'people doubted its effectiveness because there wasn't enough scientific data yet' is wordy and less professional than 'its effectiveness was questioned due to a lack of sufficient scientific grounding'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more sophisticated and better suited for an article/narrative. It uses more precise academic and professional vocabulary (e.g., 'scientific grounding', 'establish its evidence-based foundation') while maintaining a smooth, natural flow.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'anything but simple or fast' is a bit colloquial for this context, and 'people doubted' is slightly weaker than 'its effectiveness was questioned'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The Instagram placeholder was omitted in the text block."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/proof.json",
+          "lang": "en",
+          "key": "/test/answers",
+          "ru": "Доказала свою эффективность во множестве научных экспериментов\n\nПодходит для людей с депрессией, тревогой, паническими атаками\n\nЛечит тяжёлые психические расстройства лучше медикаментов\n\nСталкивалась с недоверием в начале своего существования",
+          "oldText": "has proven its effectiveness in many scientific studies\n\nis suitable for people with depression, anxiety, and panic attacks\n\ntreats severe mental disorders better than medication\n\nfaced skepticism in the early days of its existence",
+          "newText": "It has proven its effectiveness in numerous scientific experiments\n\nIt is suitable for people with depression, anxiety, and panic attacks\n\nIt treats severe mental disorders better than medication\n\nIt faced skepticism in its early stages",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Translation A is more natural for a list of features/benefits, avoiding the repetitive and heavy use of 'It' at the start of every line. It also uses 'studies' which is more idiomatic in this context than 'experiments'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'It' at the beginning of each line makes it feel like a list of disconnected sentences rather than a cohesive feature list."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'in its early stages' is slightly more clinical/abstract than the more natural 'in the early days of its existence' or simply 'early on'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A provides complete, grammatically sound sentences which are necessary for a professional tone. Translation B suffers from missing subjects (omission), making it feel like a fragmented list of notes rather than polished copy.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing subjects at the beginning of every sentence makes the text feel incomplete and unpolished for a professional context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/proof.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Мы поговорили о том, где КПТ действительно эффективна. Теперь важно честно отметить, где её возможностей может быть недостаточно.\n\nПри тяжёлых психических расстройствах, таких как шизофрения или биполярное расстройство, одной КПТ, как правило, недостаточно — требуется медикаментозная поддержка и наблюдение врача.\n\nИ помните:\n\nНе ставьте себе диагноз самостоятельно — только специалист может оценить состояние объективно.\n\nВсегда консультируйтесь с профессионалом. Ваше психическое здоровье — важная часть вашей жизни, и оно заслуживает внимательного и заботливого отношения.",
+          "oldText": "We’ve talked about where CBT is truly effective. Now it’s important to be honest about where its possibilities may not be enough.\n\nFor severe mental disorders such as schizophrenia or bipolar disorder, CBT alone is usually not enough — medication and medical supervision are needed.\n\nAnd remember:\n\nDon’t diagnose yourself — only a specialist can assess your condition objectively.\n\nAlways consult a professional. Your mental health is an important part of your life, and it deserves careful, compassionate attention.",
+          "newText": "We have discussed where CBT is truly effective. Now, it is important to note where its capabilities may fall short.\n\nFor severe mental disorders, such as schizophrenia or bipolar disorder, CBT alone is usually not enough—medication and medical supervision are typically required.\n\nAnd remember:\n\nAvoid self-diagnosing—only a specialist can objectively assess your condition.\n\nAlways consult a professional. Your mental well-being is a vital part of your life, and it deserves attentive and caring treatment.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A sounds more professional and polished, using better collocations like 'capabilities may fall short' and 'attentive and caring treatment'. Translation B feels slightly more repetitive and uses less idiomatic phrasing ('possibilities may not be enough').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'possibilities may not be enough' is a bit clunky compared to 'capabilities may fall short'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'Don't diagnose yourself' is grammatically fine but 'Avoid self-diagnosing' in A sounds more like a professional recommendation."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 84
+              },
+              "reason": "Translation A sounds more natural and follows the 'understanding friend' tone with appropriate contractions. Translation B feels slightly more formal/academic and uses 'treatment' in a way that sounds a bit clinical for this context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Use of 'We have discussed' and 'it is' instead of contractions makes the tone too formal for a supportive app."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The word 'treatment' in the final sentence sounds a bit more like medical procedure than the warm 'attention' intended in the original."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'mental well-being' which is good, but 'mental health' in A is also perfectly acceptable and fits the flow here."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/proof.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Вот лишь несколько примеров, показывающих, что КПТ работает при различных психологических трудностях:\n\n<li>Депрессия: исследование Тада Джуда и коллег (2012) показало, что после 14–16 сеансов КПТ улучшение наблюдалось у 40–60% пациентов. Более того, терапия снижала риск рецидива на 50–60% в долгосрочной перспективе.</li>\n\n<li>Тревожные расстройства: данные Нортона и коллег (2018) показали эффективность в 46–66% случаев при генерализованной тревоге, а эффект сохранялся длительное время.</li>\n\n<li>ПТСР: исследование Шнайдера и коллег (2014) показало значимое улучшение у 60–72% пациентов с посттравматическим стрессовым расстройством; эффект также сохранялся в долгосрочной перспективе.</li>\n\n<li>Панические атаки: исследование Барлоу и коллег (2017) показало снижение частоты и силы панических атак у 60–75% пациентов. Улучшения были стабильными.</li>\n\n<q author=\"Иоганн Вольфганг Гёте\">Говорят, что числа правят миром. Нет, они только показывают, как правят миром.</q>",
+          "oldText": "Here are just a few examples showing that CBT works for different psychological difficulties:\n\nDepression: a study by Thad Judd and colleagues (2012) found that after 14–16 CBT sessions, 40–60% of patients showed improvement. Moreover, therapy reduced the risk of relapse by 50–60% in the long term.\n\nAnxiety disorders: data from Norton and colleagues (2018) showed effectiveness in 46–66% of cases of generalized anxiety, with effects that were maintained over time.\n\nPTSD: a study by Schneider and colleagues (2014) showed significant improvement in 60–72% of people with post-traumatic stress disorder, and the benefits persisted in the long term.\n\nPanic attacks: a study by Barlow and colleagues (2017) found reduced frequency and intensity of panic attacks in 60–75% of patients, with stable improvements over time.",
+          "newText": "Here are just a few examples showing that CBT works for various psychological challenges:\n\n<li>Depression: A study by Tad Jude and colleagues (2012) showed that after 14–16 sessions, improvement was observed in 40–60% of patients. Furthermore, the therapy reduced the risk of relapse by 50–60% in the long term.</li>\n\n<li>Anxiety disorders: Data from Norton and colleagues (2018) showed effectiveness in 46–66% of cases for generalized anxiety, with long-lasting effects.</li>\n\n<li>PTSD: A study by Schneider and colleagues (2014) showed significant improvement in 60–72% of patients with post-traumatic stress disorder (PTSD); the effect was also long-lasting.</li>\n\n<li>Panic attacks: A study by Barlow and colleagues (2017) showed a reduction in the frequency and intensity of panic attacks in 60–75% of patients. The improvements were stable.</li>\n\n<q author=\"Johann Wolfgang von Goethe\">They say that numbers rule the world. No, they only show how the world is ruled.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation A is superior because it preserves the original HTML structure (li tags) and correctly follows the instruction to introduce the PTSD acronym upon first mention. Translation B loses the list structure and fails to include the Goethe quote entirely.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire quote by Goethe was omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The HTML list tags (<li>) were removed, changing the document structure."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'difficulties' instead of 'challenges', though both are acceptable, 'challenges' in A sounds slightly more natural in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Translation B is superior because it preserves the original HTML structure (li tags) and includes the Goethe quote, which Translation A completely omitted. Translation B also follows the instruction to introduce the PTSD acronym upon first mention.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The entire Goethe quote and the HTML list tags were omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'psychological difficulties' instead of 'challenges', though both are acceptable, 'challenges' sounds slightly more natural in this context."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

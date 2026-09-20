@@ -1,0 +1,1303 @@
+{
+  "file": "tests/anxiety.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Идиома передана верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, смысл сохранен"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "issue",
+                "note": "Несоответствие терминологии в заголовке (severe vs pronounced)."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "issue",
+                "note": "Несоответствие терминологии (severe vs pronounced)."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/range/severe",
+                "fragment": "Pronounced anxiety",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование 'Pronounced' вместо 'Severe'",
+                "why": "В оригинале 'Тяжелое тревожное расстройство'. В контексте шкалы и других элементов (extreme) логичнее использовать 'Severe', чтобы сохранить единообразие терминологии уровней тяжести."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/result/severe/title",
+                "fragment": "Pronounced anxiety",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование 'Pronounced' вместо 'Severe'",
+                "why": "В оригинале 'Выраженное тревожное состояние'. Хотя 'Pronounced' допустимо, для консистентности с уровнем 'Extreme' и общепринятой шкалой тяжести (mild/moderate/severe/extreme) лучше использовать 'Severe'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "merged",
+                "mergedInto": "c2-I2",
+                "rank": 1,
+                "note": "Both issues address the same terminology inconsistency (Pronounced vs Severe) for the same level of anxiety. I2 is the more specific instance (title)."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator used 'Pronounced' for both the range and the result title. While 'pronounced' is a valid synonym for 'выраженное', in a clinical/assessment scale context, 'Severe' is the standard term to maintain consistency with 'Mild' and 'Extreme'."
+              }
+            ],
+            "notes": "The translation is of high quality and medically sound, with only minor terminology inconsistencies in the severity scale levels.",
+            "recommendations": [
+              {
+                "id": "c2-I2",
+                "priority": 1,
+                "path": "/result/severe/title",
+                "current": "Pronounced anxiety",
+                "proposed": "Severe anxiety",
+                "alternatives": [
+                  "Severe anxiety state"
+                ],
+                "rationale": "Для медицинских и психологических шкал (mild, moderate, severe, extreme) 'Severe' является каноническим стандартом. 'Pronounced' звучит слишком описательно и менее профессионально в контексте результатов теста. Также это обеспечивает консистентность с уровнем 'Extreme'."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/range/severe",
+                "current": "Pronounced anxiety",
+                "proposed": "Severe anxiety",
+                "alternatives": [],
+                "rationale": "Аналогично предыдущему пункту: для обеспечения единообразия терминологии во всем интерфейсе (шкала уровней тяжести) необходимо использовать 'Severe'."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден теплый тон, правильно использована терминология КПТ и соблюдены правила UX. Основная правка касается консистентности шкалы тяжести состояний (замена 'Pronounced' на 'Severe'), что критично для профессионального вида психологического теста. В остальном текст звучит естественно и грамотно."
+            },
+            "timings": {
+              "issues": 50208,
+              "deliberate": 5482,
+              "recommend": 7831
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I2",
+              "path": "/result/severe/title",
+              "from": "Pronounced anxiety",
+              "to": "Severe anxiety"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/range/severe",
+              "from": "Pronounced anxiety",
+              "to": "Severe anxiety"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Идиома передана верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, смысл сохранен"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "issue",
+                "note": "Несоответствие оригиналу: в RU 'Выраженное состояние', в EN 'Severe anxiety' (уже было в range/severe)."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/result/severe/title",
+                "fragment": "Severe anxiety",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Несоответствие заголовка оригиналу",
+                "why": "В оригинале «Выраженное тревожное состояние», в переводе — «Severe anxiety». Хотя это близко по смыслу, в структуре теста это может запутать, так как выше (в /range/severe) уже использовалось «Severe anxiety» для «Тяжелое тревожное расстройство». Стоит придерживаться нюанса оригинала (например, 'Pronounced anxiety state')."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation loses the nuance of 'Выраженное состояние' (Pronounced/Marked state) and creates terminological inconsistency with the 'Severe anxiety' used in the range scale."
+              }
+            ],
+            "notes": "The translation is overall high quality and accurate, with the only issue being a slight loss of nuance in a heading that leads to repetitive terminology.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/result/severe/title",
+                "current": "Severe anxiety",
+                "proposed": "Pronounced anxiety state",
+                "alternatives": [
+                  "Marked anxiety state",
+                  "Pronounced anxiety"
+                ],
+                "rationale": "В оригинале используется «Выраженное тревожное состояние», что отличается от «Тяжелое расстройство» (Severe anxiety disorder) в шкале. Вариант 'Pronounced anxiety state' точнее передает нюанс 'выраженности' и сохраняет терминологическую дистанцию между уровнями тяжести, предотвращая путаницу с категорией 'Severe' в списке диапазонов."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне: соблюден теплый тон, корректно использована КПТ-терминология и соблюдены правила написания (sentence case, contractions). Основная проблема — небольшая терминологическая коллизия в заголовках результатов, где один и тот же английский термин 'Severe' используется для разных русских понятий ('Тяжелое' и 'Выраженное'). После исправления этого нюанса текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 38391,
+              "deliberate": 3150,
+              "recommend": 7912
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/result/severe/title",
+              "from": "Severe anxiety",
+              "to": "Pronounced anxiety state"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соответствует"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Идиома передана верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, смысл сохранен"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "issue",
+                "note": "Стиль: калька с русского, звучит неестественно для заголовка."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "Атрибуты отсутствуют, что является нормой для этой локали."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/result/severe/title",
+                "fragment": "Pronounced anxiety state",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественный заголовок",
+                "why": "Фраза «Pronounced anxiety state» звучит как медицинское описание в протоколе, а не как заголовок результата теста. В английском языке для обозначения состояния лучше использовать просто «Pronounced anxiety» или «High anxiety levels». Слово «state» здесь избыточно и создает тяжеловесный, «переводной» ритм."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The term 'state' is indeed redundant in a title and makes it sound like a clinical observation rather than a user-facing result. 'Pronounced anxiety' or 'High anxiety' would be more natural."
+              }
+            ],
+            "notes": "The translation is of high quality and follows the source closely; only one minor stylistic issue was identified in the results section.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/result/severe/title",
+                "current": "Pronounced anxiety state",
+                "proposed": "Pronounced anxiety",
+                "alternatives": [
+                  "High anxiety",
+                  "Elevated anxiety"
+                ],
+                "rationale": "Слово 'state' избыточно для заголовка и делает фразу похожей на клинический диагноз из медицинской карты. 'Pronounced anxiety' звучит более естественно для пользователя, сохраняя при этом серьезность состояния."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, выдержан поддерживающий тон и правильно использованы сокращения. Единственная мелкая стилистическая правка касается избыточности в заголовке одного из результатов. Статья полностью готова к публикации после внесения этой правки."
+            },
+            "timings": {
+              "issues": 39306,
+              "deliberate": 2222,
+              "recommend": 4475
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/result/severe/title",
+              "reason": "осцилляция: это значение у листа уже было"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

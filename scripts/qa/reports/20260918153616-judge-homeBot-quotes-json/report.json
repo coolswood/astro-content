@@ -1,0 +1,624 @@
+{
+  "file": "homeBot/quotes.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/0/text",
+                "verdict": "ok",
+                "note": "Перевод цитаты Манделы выполнен в хорошем стиле, хотя и с небольшим изменением лица (we вместо you), что допустимо для афоризма."
+              },
+              {
+                "path": "/0/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/1/text",
+                "verdict": "ok",
+                "note": "Смысл и тон сохранены."
+              },
+              {
+                "path": "/1/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/2/text",
+                "verdict": "ok",
+                "note": "Классический перевод Ницше."
+              },
+              {
+                "path": "/2/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/3/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/3/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/4/text",
+                "verdict": "ok",
+                "note": "Транскреация стихотворения Дикинсон, звучит естественно."
+              },
+              {
+                "path": "/4/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/5/text",
+                "verdict": "ok",
+                "note": "Естественная английская фраза."
+              },
+              {
+                "path": "/5/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/6/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/6/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/7/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/7/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/8/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/8/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/9/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/9/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/10/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/10/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/11/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/11/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/12/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/12/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/13/text",
+                "verdict": "ok",
+                "note": "Идиоматично (bottled up)."
+              },
+              {
+                "path": "/13/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/14/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/14/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/15/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл сохранены."
+              },
+              {
+                "path": "/15/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/16/text",
+                "verdict": "ok",
+                "note": "Вариант перевода Дикинсон, звучит хорошо."
+              },
+              {
+                "path": "/16/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/17/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/17/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/18/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/18/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/19/text",
+                "verdict": "issue",
+                "note": "Mistranslation: 'how small it may seem' вместо 'how little it may seem' (в контексте значимости/масштаба)."
+              },
+              {
+                "path": "/19/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный, идиоматичный"
+              },
+              {
+                "path": "/20/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно"
+              },
+              {
+                "path": "/21/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/21/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/22/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/22/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно"
+              },
+              {
+                "path": "/23/text",
+                "verdict": "ok",
+                "note": "Красивая трансекреация, смысл сохранен"
+              },
+              {
+                "path": "/23/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/24/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/24/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/25/text",
+                "verdict": "ok",
+                "note": "Идиоматично"
+              },
+              {
+                "path": "/25/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/26/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/26/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/27/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/27/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/28/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/28/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/29/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/29/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/30/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/30/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/31/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/31/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/32/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/32/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/33/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/33/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/34/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/34/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/35/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/35/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/36/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/36/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/37/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/37/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/38/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/38/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/39/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/39/author",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/40/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, идиоматично."
+              },
+              {
+                "path": "/40/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/41/text",
+                "verdict": "ok",
+                "note": "Классическая цитата, перевод точный."
+              },
+              {
+                "path": "/41/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/42/text",
+                "verdict": "ok",
+                "note": "Смысл и ритм сохранены."
+              },
+              {
+                "path": "/42/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/43/text",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, звучит естественно."
+              },
+              {
+                "path": "/43/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/44/text",
+                "verdict": "ok",
+                "note": "Естественный английский язык."
+              },
+              {
+                "path": "/44/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/45/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/45/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/46/text",
+                "verdict": "ok",
+                "note": "Перевод точный, сохранена структура."
+              },
+              {
+                "path": "/46/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/47/text",
+                "verdict": "ok",
+                "note": "Смысл передан, грамматика верна."
+              },
+              {
+                "path": "/47/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/48/text",
+                "verdict": "ok",
+                "note": "Идиоматично (stroke of luck)."
+              },
+              {
+                "path": "/48/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/49/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/49/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/50/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/50/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/51/text",
+                "verdict": "ok",
+                "note": "Тон и смысл соблюдены."
+              },
+              {
+                "path": "/51/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/52/text",
+                "verdict": "ok",
+                "note": "Перевод точный, сохранена глубина."
+              },
+              {
+                "path": "/52/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              },
+              {
+                "path": "/53/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/53/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/54/text",
+                "verdict": "ok",
+                "note": "Перевод точный, идиоматичный."
+              },
+              {
+                "path": "/54/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/55/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/55/author",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/56/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/56/author",
+                "verdict": "ok",
+                "note": "Имя переведено верно."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/19/text",
+                "fragment": "no matter how small it may seem",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Использование 'small' вместо 'little'",
+                "why": "В контексте 'насколько мало это может показаться' (о значении или вкладе), носители чаще используют 'how little it may seem'. 'Small' обычно относится к физическому размеру."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "rejected",
+                "rank": 1,
+                "note": "This is a matter of stylistic preference rather than a mistranslation. In English, 'how small it may seem' is perfectly idiomatic when referring to the scale or significance of an action/thing, and 'little' is not strictly required."
+              }
+            ],
+            "notes": "The translation is of high quality; the single identified issue is a stylistic nuance rather than a linguistic error.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "The translation is of exceptionally high quality. It captures the poetic and philosophical essence of the quotes while maintaining idiomatic English. The reviewer's note regarding 'small' vs 'little' was correctly rejected, as 'how small it may seem' is perfectly natural in this context to describe scale or significance. The text is ready for publication."
+            },
+            "timings": {
+              "issues": 68485,
+              "deliberate": 2970,
+              "recommend": 2833
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

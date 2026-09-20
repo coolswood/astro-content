@@ -1,82 +1,82 @@
 {
   "info": {
-    "event": "Start by identifying the trigger that brought up difficult emotions or thoughts. A trigger can be anything — from a major event to something very small, or even just a fleeting thought.",
-    "thought": "An automatic thought appears in response to an event and sets off a wave of emotions. These emotions can intensify and generate new negative thoughts, creating a vicious cycle. To keep it from growing, try to notice the automatic thought as early as possible and write it down.",
-    "body": "Recall the moment the trigger appeared and pay attention to your body. What exactly did you feel physically? Which unpleasant sensations did you notice?",
-    "behavior": "How did you behave after these emotions appeared? What did you do — or, on the contrary, what did you avoid doing?",
-    "response": "When you notice an automatic thought, it’s important to look at it carefully. Such thoughts often contain cognitive distortions and logical errors. Your task is to find a rational, more realistic response and turn it into a supportive belief.",
-    "conclusion": "Describe the conclusions you came to: did your emotional state change, how do you now see this situation, and what would you like to try next time in similar circumstances?",
-    "comparison": "Write down the arguments that support the automatic thought and those that contradict it. This will help you evaluate it more objectively and see the situation from a broader perspective."
+    "event": "Let’s start by identifying the trigger that caused these unpleasant emotions or thoughts. A trigger can be a significant event, a tiny occurrence, or even a single passing thought.",
+    "thought": "An automatic thought arises in response to an event and triggers a wave of emotions. These can intensify and spawn new unhelpful thoughts, creating a vicious cycle. To stop it from growing, try to catch the automatic thought as early as possible and write it down.",
+    "body": "Recall the moment the trigger occurred and pay attention to your bodily sensations. What specific physical reactions did you feel?",
+    "behavior": "How did you behave after these emotions surfaced? What did you do, or perhaps, what did you avoid doing?",
+    "response": "When you notice an automatic thought, it’s important to examine it closely. Often, these thoughts contain cognitive distortions. Your goal is to find a rational, more realistic response and form a helpful belief.",
+    "conclusion": "Describe your conclusions: has your emotional state changed, how do you view the situation now, and what would you like to try differently next time?",
+    "comparison": "Write down the arguments that support the automatic thought and those that contradict it. This will help you evaluate it objectively and see the situation from a broader perspective."
   },
   "stepper": {
     "event": "I made a mistake on a task at work",
-    "thought": "I feel like I make mistakes often, and because of that people around me treat me badly",
-    "body": "I felt my heart start racing and a heaviness in my chest",
-    "behavior": "I abruptly shut the door and walked out",
-    "response": "Everyone makes mistakes — they’re a natural part of work and learning. One error doesn’t define me as a professional or as a person. I can’t know for sure what others actually think, and my assumptions about their attitude may be much harsher than reality.",
-    "conclusion": "If a similar situation happens again, I’ll try not to jump to conclusions about other people’s reactions. If I’m unsure, I can clarify the situation directly instead of guessing. I’ll also create a short checklist to review tasks before submitting them, so I can feel more confident and reduce the likelihood of similar mistakes."
+    "thought": "I feel like I make mistakes often, and because of that, people treat me poorly",
+    "body": "I felt my heart racing and a heaviness in my chest",
+    "behavior": "I slammed the door and walked away",
+    "response": "Everyone makes mistakes; it’s part of the work process. I can’t know what others are actually thinking, and my assumptions might be inaccurate",
+    "conclusion": "If this happens again, I’ll try not to jump to conclusions about how others are reacting. I’ll also create a task checklist to boost my confidence and reduce the likelihood of similar mistakes"
   },
   "analysis": {
     "description": [
-      "Turn journaling from a routine task into a creative, engaging process. Instead of simply listing events, try telling the story of your day as a short narrative.",
-      "AI will support you by analysing your story and suggesting the optimal way to fill in the diary, selecting suitable categories and fields.",
-      "You can always edit and add to what AI suggests so that your entry stays as personal and accurate as possible.",
-      "Your text will be saved in the diary, so it won’t disappear after the analysis and will always be available to you.",
-      "AI makes working with your thoughts not only useful but also inspiring, turning journaling into a space for self-expression and self-care."
+      "Turn journaling from a routine task into a creative and engaging process. Instead of just listing events, try telling the story of your day like a short narrative.",
+      "The AI assistant is here to support you: it will analyze your story and suggest the best way to fill in your journal by selecting the most appropriate categories and fields.",
+      "You can always edit or add to the AI’s suggestions to ensure your entry remains as personal and accurate as possible.",
+      "Your text will be saved in your journal, so it won’t disappear after the analysis and will always be available to you.",
+      "The AI makes working through your thoughts not only helpful but also inspiring, turning journaling into a space for self-expression and self-care."
     ],
     "hint": [
-      "Describe the event, your feelings and your thoughts. In your story, try to include:",
-      "What happened",
-      "Which automatic thought came up",
-      "Which emotions and physical sensations you experienced",
-      "Your adaptive response to this automatic thought",
-      "What conclusion you drew from this situation"
+      "Describe the event, your feelings, and your thoughts. In your story, try to mention:",
+      "What event occurred",
+      "What automatic thought arose",
+      "What emotions and physical sensations you experienced",
+      "Your adaptive response to the automatic thought",
+      "What conclusion you drew from the situation"
     ]
   },
   "automaticAnalysis": [
     {
       "title": "Recording emotions instead of thoughts",
-      "description": "Feelings cannot be refuted in an adaptive response and should be recorded in a separate step.",
+      "description": "You can’t disprove or change emotions themselves using an adaptive response. We log emotions separately; here, it’s important to capture the specific thought that triggered the feeling.",
       "wrong": "I feel anxious",
       "right": "I think I won’t be able to cope"
     },
     {
-      "title": "Vague formulations",
-      "description": "An automatic thought may be recorded too generally.",
+      "title": "Too vague",
+      "description": "Sometimes a thought is recorded too broadly, making it hard to understand what exactly is causing the distress. It’s better to be specific.",
       "wrong": "Everything is bad",
-      "right": "I think my colleagues consider me incompetent"
+      "right": "I think my colleagues view me as incompetent"
     },
     {
       "title": "Recording facts instead of interpretations",
-      "description": "It is important to note your attitude toward the event. The fact of the event was recorded in the previous step.",
+      "description": "At this step, it’s important to reflect your interpretation of what happened, rather than the fact itself. We’ve already recorded the event earlier.",
       "wrong": "I was late for work",
-      "right": "Now my boss will think I’m irresponsible"
+      "right": "Now my boss might think I’m irresponsible"
     },
     {
-      "title": "Too complex and confusing formulation",
-      "description": "Thoughts should be recorded simply and clearly; otherwise, it will be difficult to provide an adaptive response.",
+      "title": "Complex or confusing phrasing",
+      "description": "It’s better to write down thoughts in simple, clear words. This makes it easier to formulate an adaptive, supportive response.",
       "wrong": "I tend to believe that my opinion doesn’t matter",
       "right": "My opinion doesn’t matter to anyone"
     },
     {
-      "title": "Skipping the automatic thought",
-      "description": "Some people immediately record alternative thoughts or responses to automatic thoughts.",
-      "wrong": "I must think positively",
-      "right": "I’m not sure I can handle it"
+      "title": "Skipping an automatic thought",
+      "description": "Sometimes it feels easier to jump straight to positive affirmations. But it’s important to first notice and record the automatic thought so you can work through it later.",
+      "wrong": "I should think positively",
+      "right": "I’m not sure I can handle this"
     },
     {
       "title": "Ignoring key thoughts",
-      "description": "Sometimes people only record thoughts that seem more acceptable, ignoring key or painful automatic thoughts.",
-      "wrong": "I’m a bit worried about the future",
-      "right": "I’ll never succeed"
+      "description": "Sometimes we only record milder thoughts to avoid the most painful ones. However, acknowledging key thoughts is what truly helps you understand yourself.",
+      "wrong": "I’m a little anxious about the future",
+      "right": "I’ll never be successful"
     }
   ],
   "smer": {
-    "h2": "Establish a Connection with Automatic Thoughts",
+    "h2": "Identify the link to your automatic thoughts",
     "texts": [
-      "Intermediate beliefs are rules based on which we perceive reality.",
-      "Distorted beliefs lead to destructive thoughts, which we call automatic thoughts.",
-      "In this section, you can establish a connection between these concepts for further exploration."
+      "Intermediate beliefs are the rules and assumptions through which we perceive the world around us.",
+      "When these beliefs become distorted, they can trigger automatic thoughts—often harsh and self-critical.",
+      "In this section, you can connect your beliefs and automatic thoughts to understand them more deeply and begin working toward change."
     ]
   }
 }

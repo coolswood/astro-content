@@ -1,0 +1,645 @@
+{
+  "file": "tests/eat.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "issue",
+                "note": "Использование устаревшего термина 'anorexia nervosa' вместо современного подхода или просто 'anorexia' в контексте описания, хотя в медицине это допустимо, но в психообразовании лучше избегать ярлыков, если это не диагноз. Однако главная проблема — 'anorexia nervosa' здесь звучит как калька. Но важнее: 'anorexia nervosa' — это и есть анорексия. В русском 'анорексия нервоза' — это тоже калька. Проблема в терминологии."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "issue",
+                "note": "Снова 'anorexia nervosa'. В тексте 'анорексия нервоза' — это калька с английского, которая в русском языке считается устаревшей/избыточной. В английском лучше использовать просто 'anorexia'."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "issue",
+                "note": "Снова 'anorexia nervosa'"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: 'intrusive control' звучит неестественно, в оригинале 'навязчивый контроль' (obsessive/compulsive)."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/low",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/middle",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/range/high",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон поддерживающий, артикли и сокращения на месте."
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Перевод точный, соответствует контексту."
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Хороший идиоматичный перевод, тон соблюден."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "issue",
+                "note": "Пропущено слово 'компульсивным' (binge eating vs binge eating disorder/compulsive binge eating)."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/0/text",
+                "fragment": "anorexia nervosa",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование полного латинского названия в научно-популярном тексте",
+                "why": "В современном англоязычном психообразовании для широкой аудитории чаще используется просто 'anorexia'. 'Anorexia nervosa' звучит излишне академично для приложения."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/steps_description/1/text",
+                "fragment": "anorexia nervosa",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование полного латинского названия",
+                "why": "Аналогично: для tone of voice 'understanding friend' лучше использовать 'anorexia'."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/steps_description/4/text",
+                "fragment": "anorexia nervosa",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование полного латинского названия",
+                "why": "Аналогично: избыточная академичность."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/14/text",
+                "fragment": "intrusive control over eating",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неудачное сочетание слов",
+                "why": "В английском языке 'intrusive' обычно относится к мыслям (intrusive thoughts). Когда речь идет о чрезмерном, навязчивом контроле, лучше использовать 'compulsive control' или 'obsessive control', чтобы это звучало естественно для носителя и соответствовало психологическому контексту."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/description/text/0",
+                "fragment": "restrictive eating, and binge eating",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "пропущено уточнение 'компульсивным'",
+                "why": "В оригинале указано 'компульсивным перееданием'. Хотя 'binge eating' часто используется как синоним, в клиническом контексте (EAT-26) важно разделение, и потеря уточнения делает перевод менее точным относительно оригинала."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Terminology issue: 'anorexia nervosa' is indeed more clinical than the preferred 'anorexia' for a friendly app tone."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Terminology issue: same as I1."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "Terminology issue: same as I1."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Style issue: 'intrusive control' is a non-standard collocation; 'compulsive' or 'obsessive' is better."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Omission: missing 'compulsive' (компульсивным) which is a specific clinical term in the source."
+              }
+            ],
+            "notes": "The translation is of high quality, but suffers from slight over-formalization in terminology and one clinical omission in the description.",
+            "recommendations": [
+              {
+                "id": "c3-I1",
+                "priority": 1,
+                "path": "/description/text/0",
+                "current": "restrictive eating, and binge eating",
+                "proposed": "restrictive eating, and compulsive binge eating",
+                "alternatives": [
+                  "restrictive eating, and binge eating disorder"
+                ],
+                "rationale": "В оригинале указано «компульсивным перееданием». В контексте теста EAT-26 важно сохранить точность терминологии, так как 'binge eating' может восприниматься как процесс, а 'compulsive binge eating' — как конкретный симптом/расстройство, упомянутое в источнике."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/steps_description/14/text",
+                "current": "intrusive control over eating",
+                "proposed": "compulsive control over eating",
+                "alternatives": [
+                  "obsessive control over eating"
+                ],
+                "rationale": "Слово 'intrusive' в английском языке устойчиво сочетается с мыслями (intrusive thoughts), но не с контролем. Для описания навязчивого поведения в психологии лучше использовать 'compulsive' или 'obsessive'."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 3,
+                "path": "/steps_description/0/text",
+                "current": "anorexia nervosa",
+                "proposed": "anorexia",
+                "alternatives": [],
+                "rationale": "Согласно Tone of Voice (understanding friend), использование полного латинского названия 'anorexia nervosa' звучит слишком академично. 'Anorexia' — более естественный вариант для научно-популярного текста в приложении."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 3,
+                "path": "/steps_description/1/text",
+                "current": "anorexia nervosa",
+                "proposed": "anorexia",
+                "alternatives": [],
+                "rationale": "Аналогично предыдущему: упрощение до 'anorexia' делает текст менее формальным и более дружелюбным."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 3,
+                "path": "/steps_description/4/text",
+                "current": "anorexia nervosa",
+                "proposed": "anorexia",
+                "alternatives": [],
+                "rationale": "Аналогично предыдущему: упрощение до 'anorexia' соответствует стилистике приложения."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология в целом соответствует стандартам КПТ. Основные правки касаются снижения академичности (замена 'anorexia nervosa' на 'anorexia') и исправления нетипичного словосочетания 'intrusive control'. Также необходимо вернуть уточнение 'compulsive' в описании теста для точности передачи оригинала."
+            },
+            "timings": {
+              "issues": 67316,
+              "deliberate": 8865,
+              "recommend": 18501
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c3-I1",
+              "path": "/description/text/0",
+              "reason": "цитата судьи не похожа на лист (сходство 12%)"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/14/text",
+              "reason": "цитата судьи не похожа на лист (сходство 13%)"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/0/text",
+              "reason": "цитата судьи не похожа на лист (сходство 8%)"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/steps_description/1/text",
+              "reason": "цитата судьи не похожа на лист (сходство 8%)"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/steps_description/4/text",
+              "reason": "цитата судьи не похожа на лист (сходство 6%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

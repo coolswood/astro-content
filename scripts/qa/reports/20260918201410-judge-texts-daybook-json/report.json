@@ -1,0 +1,826 @@
+{
+  "file": "texts/daybook.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 9,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daybookRecommends/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/daybookRecommends/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая транскреация (get the most out of)."
+              },
+              {
+                "path": "/daybookRecommends/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/daybookRecommends/texts/3",
+                "verdict": "ok",
+                "note": "Грамматически и стилистически верно."
+              },
+              {
+                "path": "/daybookRecommends/texts/4",
+                "verdict": "ok",
+                "note": "Термин unhelpful beliefs использован верно."
+              },
+              {
+                "path": "/daybookStart/texts/0",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/daybookStart/texts/1",
+                "verdict": "ok",
+                "note": "Естественный английский язык."
+              },
+              {
+                "path": "/daybookStart/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookStart/texts/3",
+                "verdict": "ok",
+                "note": "Кратко и по делу."
+              },
+              {
+                "path": "/daybookStart/texts/4",
+                "verdict": "ok",
+                "note": "Перевод эмоционально точен."
+              },
+              {
+                "path": "/gptCbt/texts/0",
+                "verdict": "ok",
+                "note": "Стиль и терминология в норме."
+              },
+              {
+                "path": "/gptCbt/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/gptCbt/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/gptCbtDream/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/gptCbtDream/texts/1",
+                "verdict": "ok",
+                "note": "Термин core beliefs использован верно."
+              },
+              {
+                "path": "/gptCbtDream/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGpt/consolation",
+                "verdict": "ok",
+                "note": "Хороший, поддерживающий тон."
+              },
+              {
+                "path": "/mockGpt/solutions/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGpt/solutions/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGpt/solutions/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGpt/distortion",
+                "verdict": "ok",
+                "note": "Термин overgeneralization использован верно."
+              },
+              {
+                "path": "/mockGpt/negativeThought",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGpt/adaptiveResponse",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/common",
+                "verdict": "ok",
+                "note": "Перевод точный, хороший ритм."
+              },
+              {
+                "path": "/mockGptDream/symbols/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/symbols/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/symbols/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/transfer/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/transfer/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/transfer/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/desires",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/fears",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/middle",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/deep",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGptDream/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daybookShare/h2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daybookShare/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daybookShare/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daybookShare/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mockGpt/consolation",
+                "current": "Sometimes we give more weight to other people’s words and reactions than they deserve. Mistakes at work happen to everyone and don’t define your value as a professional or as a person. You have achievements, strengths, and experiences that speak to your competence.",
+                "proposed": "Sometimes we give more weight to other people’s words and reactions than they deserve. Mistakes at work happen to everyone and don’t reflect your value as a professional or as a person. You have achievements, strengths, and experiences that speak to your professional and personal worth.",
+                "alternatives": [
+                  "...don't define your worth...",
+                  "...speak to your competence and character."
+                ],
+                "rationale": "В оригинале «не отражают нашу ценность» (don't reflect your value). Вариант 'define' допустим, но 'reflect' точнее. Также в конце оригинала «профессиональной и личной состоятельности» — 'competence' слишком узко, лучше использовать 'worth' или 'value', чтобы передать глубину смысла."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/mockGpt/solutions/0",
+                "current": "Try to distinguish constructive feedback about your work from a judgment of your character. It’s possible your boss was simply focusing on the task, which is a natural part of the workflow.",
+                "proposed": "Try to distinguish constructive feedback about your work from a judgment of your personality. It’s possible your boss was simply focusing on the task, which is a natural part of the work process.",
+                "alternatives": [
+                  "...judgment of who you are...",
+                  "...part of the work process."
+                ],
+                "rationale": "«Оценка личности» в контексте КПТ и психологии лучше передавать как 'judgment of your personality' или 'personal judgment'. 'Character' звучит слишком морализаторски. 'Workflow' — это технический термин (процесс выполнения задачи), а в оригинале «рабочий процесс» в более широком смысле, лучше 'work process'."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/mockGpt/solutions/2",
+                "current": "Work on supporting your own self-esteem. The more confident you feel, the easier it will be to take feedback without feeling personally criticized.",
+                "proposed": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling personally attacked.",
+                "alternatives": [
+                  "...strengthening your self-esteem...",
+                  "...without feeling it is a personal criticism."
+                ],
+                "rationale": "«Работать над поддержкой» — в английском 'building' или 'strengthening' self-esteem звучит естественнее, чем 'supporting'. 'Personally criticized' — грамматически верно, но 'feeling personally attacked' — более идиоматичное описание эмоциональной реакции в данном контексте."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден тон «понимающего эксперта», использована правильная терминология КПТ и соблюдены правила UX. Основные правки касаются нюансов лексической сочетаемости (collocations) и более точной передачи оттенков смысла в разделах с психологической поддержкой (mockGpt), чтобы избежать излишней техничности (workflow) или узкого значения слов (competence)."
+            },
+            "timings": {
+              "issues": 26879,
+              "deliberate": 972,
+              "recommend": 15956
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/mockGpt/consolation",
+              "from": "Sometimes we give more weight to other people’s words and reactions than they deserve. Mistakes at work happen to everyone and don’t define your value as a professional or as a person. You have achievements, strengths, and experiences that speak to your competence.",
+              "to": "Sometimes we give more weight to other people’s words and reactions than they deserve. Mistakes at work happen to everyone and don’t reflect your value as a professional or as a person. You have achievements, strengths, and experiences that speak to your professional and personal worth."
+            },
+            {
+              "id": "I2",
+              "path": "/mockGpt/solutions/0",
+              "from": "Try to distinguish constructive feedback about your work from a judgment of your character. It’s possible your boss was simply focusing on the task, which is a natural part of the workflow.",
+              "to": "Try to distinguish constructive feedback about your work from a judgment of your personality. It’s possible your boss was simply focusing on the task, which is a natural part of the work process."
+            },
+            {
+              "id": "I3",
+              "path": "/mockGpt/solutions/2",
+              "from": "Work on supporting your own self-esteem. The more confident you feel, the easier it will be to take feedback without feeling personally criticized.",
+              "to": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling personally attacked."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daybookRecommends/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология CBT соблюдена."
+              },
+              {
+                "path": "/daybookRecommends/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация (get the most out of)."
+              },
+              {
+                "path": "/daybookRecommends/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/daybookRecommends/texts/3",
+                "verdict": "ok",
+                "note": "Грамматически и стилистически верно."
+              },
+              {
+                "path": "/daybookRecommends/texts/4",
+                "verdict": "ok",
+                "note": "Термин unhelpful beliefs использован верно."
+              },
+              {
+                "path": "/daybookStart/texts/0",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/daybookStart/texts/1",
+                "verdict": "ok",
+                "note": "Естественный английский текст."
+              },
+              {
+                "path": "/daybookStart/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookStart/texts/3",
+                "verdict": "ok",
+                "note": "Коротко и ясно."
+              },
+              {
+                "path": "/daybookStart/texts/4",
+                "verdict": "ok",
+                "note": "Передача эмоций и тона верная."
+              },
+              {
+                "path": "/gptCbt/texts/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/gptCbt/texts/1",
+                "verdict": "ok",
+                "note": "Стиль соответствует UX."
+              },
+              {
+                "path": "/gptCbt/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/gptCbtDream/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/gptCbtDream/texts/1",
+                "verdict": "ok",
+                "note": "Термин core beliefs использован верно."
+              },
+              {
+                "path": "/gptCbtDream/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/mockGpt/consolation",
+                "verdict": "ok",
+                "note": "Хороший, поддерживающий тон."
+              },
+              {
+                "path": "/mockGpt/solutions/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/solutions/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/solutions/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/distortion",
+                "verdict": "ok",
+                "note": "Термин overgeneralization использован верно."
+              },
+              {
+                "path": "/mockGpt/negativeThought",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/adaptiveResponse",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/common",
+                "verdict": "ok",
+                "note": "Стиль статьи выдержан."
+              },
+              {
+                "path": "/mockGptDream/symbols/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/symbols/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/symbols/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/desires",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/fears",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/middle",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/deep",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/conclusion",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/h2",
+                "verdict": "ok",
+                "note": "Sentence case соблюден."
+              },
+              {
+                "path": "/daybookShare/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mockGpt/solutions/2",
+                "current": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling personally attacked.",
+                "proposed": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling like it is a personal attack.",
+                "alternatives": [
+                  "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling personally criticized.",
+                  "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling it is a personal criticism."
+                ],
+                "rationale": "В оригинале «без ощущения личной критики». Текущий вариант «without feeling personally attacked» (без ощущения, что на тебя напали) звучит слишком агрессивно и эмоционально для контекста рабочих замечаний. Вариант с «personal attack» или «personal criticism» ближе к смыслу и сохраняет профессиональный тон."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/mockGpt/distortion",
+                "current": "Selected due to overgeneralization, applying a single instance (a mistake at work) to your overall self-perception (“everyone thinks I’m a failure”).",
+                "proposed": "Selected due to overgeneralization: applying a single instance (a mistake at work) to your overall self-perception (“everyone thinks I’m a failure”).",
+                "alternatives": [],
+                "rationale": "Замена запятой на двоеточие после «overgeneralization» делает структуру предложения грамматически более правильной для пояснительного контекста в английском языке."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/mockGptDream/transfer/2",
+                "current": "🌊 The intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are difficult to control.",
+                "proposed": "🌊 The intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are hard to control.",
+                "alternatives": [],
+                "rationale": "Минимальная правка для улучшения ритма. «Hard to control» звучит более естественно и менее формально, чем «difficult to control», что соответствует Tone of Voice (warm, supportive friend)."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология КПТ соблюдена (overgeneralization, core beliefs, unhelpful beliefs). Основные риски связаны с излишне резкими формулировками в блоке разбора ситуаций (personal attack), которые могут звучать слишком драматично для рабочего контекста. Рекомендуется смягчить эти моменты для соответствия поддерживающему тону приложения."
+            },
+            "timings": {
+              "issues": 20562,
+              "deliberate": 841,
+              "recommend": 12223
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/mockGpt/solutions/2",
+              "from": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling personally attacked.",
+              "to": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling like it is a personal attack."
+            },
+            {
+              "id": "I2",
+              "path": "/mockGpt/distortion",
+              "from": "Selected due to overgeneralization, applying a single instance (a mistake at work) to your overall self-perception (“everyone thinks I’m a failure”).",
+              "to": "Selected due to overgeneralization: applying a single instance (a mistake at work) to your overall self-perception (“everyone thinks I’m a failure”)."
+            },
+            {
+              "id": "I3",
+              "path": "/mockGptDream/transfer/2",
+              "from": "🌊 The intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are difficult to control.",
+              "to": "🌊 The intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are hard to control."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daybookRecommends/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология CBT соблюдена."
+              },
+              {
+                "path": "/daybookRecommends/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая транскреация (get the most out of)."
+              },
+              {
+                "path": "/daybookRecommends/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/daybookRecommends/texts/3",
+                "verdict": "ok",
+                "note": "Грамматически верно, смысл сохранен."
+              },
+              {
+                "path": "/daybookRecommends/texts/4",
+                "verdict": "ok",
+                "note": "Термин unhelpful beliefs использован верно."
+              },
+              {
+                "path": "/daybookStart/texts/0",
+                "verdict": "ok",
+                "note": "Соответствует оригиналу."
+              },
+              {
+                "path": "/daybookStart/texts/1",
+                "verdict": "ok",
+                "note": "Естественный английский текст."
+              },
+              {
+                "path": "/daybookStart/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookStart/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookStart/texts/4",
+                "verdict": "ok",
+                "note": "Перевод эмоционально точен."
+              },
+              {
+                "path": "/gptCbt/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/gptCbt/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/gptCbt/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/gptCbtDream/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/gptCbtDream/texts/1",
+                "verdict": "ok",
+                "note": "Термин core beliefs использован верно."
+              },
+              {
+                "path": "/gptCbtDream/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/consolation",
+                "verdict": "ok",
+                "note": "Хороший, поддерживающий тон."
+              },
+              {
+                "path": "/mockGpt/solutions/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/solutions/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/solutions/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/distortion",
+                "verdict": "ok",
+                "note": "Термин overgeneralization использован верно."
+              },
+              {
+                "path": "/mockGpt/negativeThought",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGpt/adaptiveResponse",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/common",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/symbols/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/symbols/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/symbols/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/transfer/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/desires",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/fears",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/middle",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/deep",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/mockGptDream/conclusion",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/h2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daybookShare/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/mockGpt/solutions/2",
+                "current": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling like it is a personal attack.",
+                "proposed": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling like it is a personal criticism.",
+                "alternatives": [
+                  "without feeling personally criticized",
+                  "without feeling it is a personal attack"
+                ],
+                "rationale": "В оригинале «без ощущения личной критики». 'Personal attack' звучит слишком агрессивно и драматично для контекста рабочих замечаний, в то время как 'personal criticism' точнее передает смысл и сохраняет поддерживающий тон."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/mockGptDream/transfer/2",
+                "current": "🌊 The intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are hard to control.",
+                "proposed": "🌊 An intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are hard to control.",
+                "alternatives": [],
+                "rationale": "Добавление неопределенного артикля 'An' делает предложение грамматически естественным для описания образа в начале предложения."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/mockGptDream/desires",
+                "current": "A desire to better understand deep emotions and find inner clarity and stability.",
+                "proposed": "A desire to better understand deep emotions, find inner clarity, and gain stability.",
+                "alternatives": [
+                  "A desire to better understand deep emotions and find inner clarity and resilience."
+                ],
+                "rationale": "В оригинале «обрести... устойчивость». В контексте психологии 'stability' — это состояние, а 'resilience' (психологическая устойчивость/гибкость) — это более качественный термин для описания способности справляться с трудностями. Однако, если придерживаться 'stability', то лучше перечислить через запятую для ритма."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдены все правила CBT-терминологии, тон дружелюбный и поддерживающий, а грамматика практически безупречна. Основные правки касаются нюансов сочетаемости слов (attack vs criticism) и ритмики предложений. Статья готова к публикации после внесения мелких правок."
+            },
+            "timings": {
+              "issues": 19881,
+              "deliberate": 650,
+              "recommend": 11271
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/mockGpt/solutions/2",
+              "from": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling like it is a personal attack.",
+              "to": "Work on building your self-esteem. The more confident you feel, the easier it will be to take feedback without feeling like it is a personal criticism."
+            },
+            {
+              "id": "I2",
+              "path": "/mockGptDream/transfer/2",
+              "from": "🌊 The intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are hard to control.",
+              "to": "🌊 An intensifying sea storm may reflect rising emotions and distress, as well as a fear of facing things that are hard to control."
+            },
+            {
+              "id": "I3",
+              "path": "/mockGptDream/desires",
+              "from": "A desire to better understand deep emotions and find inner clarity and stability.",
+              "to": "A desire to better understand deep emotions, find inner clarity, and gain stability."
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

@@ -96,3 +96,90 @@ describe('mergeSubset — массив-ответ для документа-ма
     expect(out).toEqual(['EINS', 'zwei', 'drei']);
   });
 });
+
+/**
+ * Регрессия чанкования документа-массива (инцидент ja-2026): bail на
+ * «единственном child» в chunkPayload отдавал обёртку {content: […]} одним
+ * чанком на сотни листьев — вопросы шли одним path-map запросом на 308 путей,
+ * где модель теряла пути и смещала массив. Теперь единственный переполненный
+ * child рекурсивно режется.
+ */
+describe('runPipeline — чанкование документа-массива в обёртке content', () => {
+  test('массив 30 записей (60 листьев) при chunk-leaves 20 режется на чанки', async () => {
+    const payload = Array.from({ length: 30 }, (_, i) => ({ id: `id${i}`, translation: `В.${i}` }));
+    let mainCalls = 0;
+    const answered = new Set<string>();
+    const client = stubMain((user) => {
+      mainCalls++;
+      // Запрос path-map несёт объект «путь → ru-строка» (null — разреженные
+      // позиции чанка, их не спрашиваем). Отвечаем ровно на запрошенные пути;
+      // id — стабильные идентификаторы, модель обязана эхнуть их как есть.
+      const asked = JSON.parse(user).paths ?? {};
+      const paths: Record<string, string> = {};
+      for (const [p, ru] of Object.entries(asked as Record<string, string>)) {
+        if (typeof ru !== 'string') continue;
+        const m = p.match(/^\/(\d+)\/id$/);
+        paths[p] = m ? `id${m[1]}` : 'перевод ' + p;
+        answered.add(p);
+      }
+      return JSON.stringify({ paths });
+    });
+    const { data } = await runPipeline(client, PROMPTS, payload, 'de', {
+      mainPathMap: true,
+      chunkLeaves: 20,
+    });
+    expect(mainCalls).toBeGreaterThan(1); // НЕ один чанк на весь документ
+    expect(answered.size).toBe(60);
+    expect(data).toHaveLength(30);
+    expect(data[0]).toEqual({ id: 'id0', translation: 'перевод /0/translation' });
+  });
+});
+
+describe('runPipeline — editor на чанке-массиве', () => {
+  test('массив-ответ editor применяется к черновику-массиву', async () => {
+    // Разрезанный чанк записей — сам массив (без обёртки content); editor
+    // отвечает «полным документом»-массивом. Раньше parseStageObject браковал
+    // массив → правки стадии терялись («применено 0 правок» на каждом чанке).
+    const payload = Array.from({ length: 15 }, (_, i) => ({ id: `id${i}`, translation: `Вопрос ${i}` }));
+    const client: StageClient = {
+      name: 'fake',
+      async complete(req) {
+        if (req.system.includes('PROMPT:MAIN')) {
+          // Чанки-массивы отвечают в путях чанка (без /content-префикса);
+          // id — стабильные, эхаем как есть.
+          const asked = JSON.parse(req.user).paths ?? {};
+          const paths: Record<string, string> = {};
+          for (const [p, ru] of Object.entries(asked as Record<string, string>)) {
+            if (typeof ru !== 'string') continue;
+            const m = p.match(/^\/(\d+)\/id$/);
+            paths[p] = m ? `id${m[1]}` : `перевод ${m ? '' : p.split('/').pop()}`;
+          }
+          return JSON.stringify({ paths });
+        }
+        if (req.system.includes('PROMPT:EDITOR')) {
+          // Editor получает сам черновик (массив записей чанка; со 2-го чанка
+          // к нему добавлен КОНТЕКСТ-блок — срезаем): отвечаем «полным
+          // документом»-массивом с полировкой (суффикс ✎).
+          const head = req.user.slice(0, req.user.lastIndexOf(']') + 1);
+          const draft = JSON.parse(head);
+          const arr: any[] = Array.isArray(draft) ? draft : draft.content;
+          return JSON.stringify(
+            arr.map((it) =>
+              it == null ? null : { id: it.id, translation: `перевод ${Number(it.id.replace('id', ''))}✎` },
+            ),
+          );
+        }
+        if (req.system.includes('PROMPT:REVIEW')) return '{"issues":[]}';
+        return 'Все хорошо';
+      },
+    };
+    const { data } = await runPipeline(client, PROMPTS, payload, 'ja', {
+      mainPathMap: true,
+      chunkLeaves: 10, // 2 чанка-массива
+    });
+    expect(data).toHaveLength(15);
+    for (let i = 0; i < 15; i++) {
+      expect(data[i]).toEqual({ id: `id${i}`, translation: `перевод ${i}✎` });
+    }
+  });
+});

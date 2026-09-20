@@ -1,0 +1,633 @@
+{
+  "file": "tests/bipolar.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Передано верно, идиоматично"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/variants/yes",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/no",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Использован верный термин 'pressured speech'"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Использован верный термин 'flight of ideas'"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Передано верно"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл соблюдены, сокращения уместны"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод точный, 'overall well-being' — хороший выбор"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/steps_description/4/text",
+                "current": "Pressured speech is frequently seen during the manic phase of bipolar disorder. This isn’t just speaking faster; it’s an increase in the number of words spoken in a given time. Sometimes speech becomes so rapid that others struggle to keep up, which can cause communication difficulties.",
+                "proposed": "Pressured speech is frequently seen during the manic phase of bipolar disorder. This isn’t just about speaking faster; it’s an increase in the volume of words spoken in a given time. Sometimes speech becomes so rapid that others struggle to keep up, which can cause communication difficulties.",
+                "alternatives": [
+                  "This isn't just about speaking faster; it's an increase in the rate of speech."
+                ],
+                "rationale": "Добавлено 'about' для естественности (speaking faster — это процесс, а 'not just about' — это характеристика явления). Замена 'number of words' на 'volume of words' или 'rate of speech' звучит более профессионально в контексте медицины, но 'number of words' допустимо. Выбрана минимальная правка для сохранения ритма."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/steps_description/10/text",
+                "current": "Research indicates that changes in neurotransmitter levels during manic episodes, particularly dopamine and serotonin, can influence sexual behavior. These neurotransmitters play a key role in regulating mood and sexual drive.",
+                "proposed": "Research indicates that changes in neurotransmitter levels during manic episodes, particularly dopamine and serotonin, can influence sexual behavior. These neurotransmitters play a key role in regulating mood and sexual desire.",
+                "alternatives": [
+                  "sexual interest"
+                ],
+                "rationale": "В контексте психообразования и медицины 'sexual desire' или 'libido' звучит более естественно, чем 'sexual drive', хотя 'drive' не является ошибкой. Однако, учитывая, что в шаге 10 используется 'libido', 'desire' — отличный вариант для статьи."
+              },
+              {
+                "id": "I3",
+                "priority": 3,
+                "path": "/steps_description/10/fact",
+                "current": "Marilyn Monroe, whose life and career were marked by personal scandals, is believed to have suffered from bipolar disorder. Her behavior, including in her sexual life, often became a subject of public scrutiny and speculation.",
+                "proposed": "Marilyn Monroe, whose life and career were marked by personal scandals, is believed to have suffered from bipolar disorder. Her behavior, including her sex life, often became a subject of public scrutiny and speculation.",
+                "alternatives": [
+                  "including her sexuality"
+                ],
+                "rationale": "Фраза 'including in her sexual life' — грамматически тяжеловесная калька. 'Including her sex life' — идиоматичный и естественный вариант для английского языка."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден профессиональный тон, терминология КПТ и психиатрии (manic/hypomanic, pressured speech, flight of ideas) использована корректно. Есть несколько мелких стилистических шероховатостей (кальки с русского в конструкциях 'including in...'), которые стоит поправить для достижения уровня 'native speaker'."
+            },
+            "timings": {
+              "issues": 24751,
+              "deliberate": 1216,
+              "recommend": 16290
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/steps_description/4/text",
+              "from": "Pressured speech is frequently seen during the manic phase of bipolar disorder. This isn’t just speaking faster; it’s an increase in the number of words spoken in a given time. Sometimes speech becomes so rapid that others struggle to keep up, which can cause communication difficulties.",
+              "to": "Pressured speech is frequently seen during the manic phase of bipolar disorder. This isn’t just about speaking faster; it’s an increase in the volume of words spoken in a given time. Sometimes speech becomes so rapid that others struggle to keep up, which can cause communication difficulties."
+            },
+            {
+              "id": "I2",
+              "path": "/steps_description/10/text",
+              "from": "Research indicates that changes in neurotransmitter levels during manic episodes, particularly dopamine and serotonin, can influence sexual behavior. These neurotransmitters play a key role in regulating mood and sexual drive.",
+              "to": "Research indicates that changes in neurotransmitter levels during manic episodes, particularly dopamine and serotonin, can influence sexual behavior. These neurotransmitters play a key role in regulating mood and sexual desire."
+            },
+            {
+              "id": "I3",
+              "path": "/steps_description/10/fact",
+              "from": "Marilyn Monroe, whose life and career were marked by personal scandals, is believed to have suffered from bipolar disorder. Her behavior, including in her sexual life, often became a subject of public scrutiny and speculation.",
+              "to": "Marilyn Monroe, whose life and career were marked by personal scandals, is believed to have suffered from bipolar disorder. Her behavior, including her sex life, often became a subject of public scrutiny and speculation."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Переведено хорошо, передает смысл и тон"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/variants/yes",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/variants/no",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Переведено точно, соблюден тон"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Использован верный термин 'pressured speech'"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Использован верный термин 'flight of ideas'"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Переведено точно"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл соблюдены, сокращения уместны"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод хороший, терминология соблюдена"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод хороший, 'overall well-being' — корректная адаптация"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология (mania/depression) верна"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод точный, 'No' в кавычках соответствует кнопке"
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "The translation is excellent. It adheres to all CBT terminology standards (e.g., 'racing thoughts', 'flight of ideas', 'manic/hypomanic phases'), maintains a supportive and professional tone, and uses correct US English conventions. The use of contractions (you're, don't, isn't) is consistent with the target UX style, and the clinical descriptions are handled with the necessary nuance to avoid making direct diagnostic promises. No changes are required."
+            },
+            "timings": {
+              "issues": 27775,
+              "deliberate": 1213,
+              "recommend": 3894
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

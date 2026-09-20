@@ -1,0 +1,113 @@
+{
+  "file": "tests/constants.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/bdi",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sdvg",
+                "verdict": "ok",
+                "note": "Использована общепринятая аббревиатура"
+              },
+              {
+                "path": "/anxiety",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/eat",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/irritation",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/burnout",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/okr",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/impostor",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/bipolar",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/sociophobia",
+                "verdict": "issue",
+                "note": "Sociophobia — это калька, в англоязычной практике чаще используют Social anxiety"
+              },
+              {
+                "path": "/hopelessness",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              },
+              {
+                "path": "/acceptance",
+                "verdict": "ok",
+                "note": "Перевод верный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/sociophobia",
+                "fragment": "Social anxiety",
+                "type": "style",
+                "severity": "minor",
+                "problem": "В оригинале 'Социофобия', в переводе 'Social anxiety'",
+                "why": "Хотя 'Social anxiety' — более естественный термин для англоязычного рынка, это не ошибка, а скорее адаптация. Однако, если мы стремимся к точности терминологии, 'Social phobia' — прямой эквивалент, но 'Social anxiety' звучит мягче и современнее. В данном контексте это допустимая трансекреация, но я помечаю это как minor, так как перевод изменил слово, хотя и в лучшую сторону."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "note": "This is a conscious transcreation. 'Social anxiety' is the standard contemporary term in English-speaking clinical and social contexts, whereas 'Social phobia' sounds dated. The meaning is preserved and improved for the target audience."
+              }
+            ],
+            "notes": "The translation is highly accurate and uses natural, modern terminology. No critical issues found.",
+            "recommendations": [],
+            "overall": {
+              "score": 100,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на высоком уровне с учётом современных стандартов англоязычного психообразования. Использование 'Social anxiety' вместо 'Social phobia' является верной транскреацией, так как термин 'Social phobia' считается устаревшим. Все остальные термины соответствуют принятой терминологии."
+            },
+            "timings": {
+              "issues": 8387,
+              "deliberate": 1819,
+              "recommend": 2042
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

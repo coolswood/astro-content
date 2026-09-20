@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T04:57:04.093Z",
+    "Метка": "en-content-merge-auto",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 7897e0c~1",
+    "Файлы": "story/automatic.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 5,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "0307be282788e1af23069326cb8b79fe5b339e0f"
+  },
+  "results": {
+    "story/automatic.json": {
+      "en": [
+        {
+          "file": "story/automatic.json",
+          "lang": "en",
+          "key": "/test/answers",
+          "ru": "Устойчивые и фундаментальные убеждения\n\nУстановки, предопределенные нам от рождения\n\nМысли, которые невозможно изменить\n\nОтрывочные, многочисленные мысли, возникающие непроизвольно",
+          "oldText": "Stable and fundamental\n\nPredetermined from birth\n\nImpossible to change\n\nFragmentary and numerous; they arise involuntarily",
+          "newText": "Core and fundamental beliefs\n\nAttitudes predetermined from birth\n\nThoughts that are impossible to change\n\nFleeting, numerous thoughts that arise involuntarily",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 95
+              },
+              "reason": "Translation A is a high-quality, professional translation that preserves the structure and meaning of the original. Translation B suffers from severe omissions, losing the subject of almost every line, and fails to follow the grammatical structure of the source.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "Missing the main nouns (beliefs, attitudes, thoughts) in almost every line, turning them into fragments that lose the original meaning."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The use of a semicolon in the last line is unnatural for a list of definitions/titles."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 95
+              },
+              "reason": "Translation B correctly identifies the subject (beliefs, attitudes, thoughts) which is essential for clarity, whereas Translation A omits the nouns entirely, leaving only adjectives. Translation B also uses 'Fleeting' instead of 'Fragmentary', which is much more idiomatic for describing thoughts in a CBT context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The nouns (beliefs, attitudes, thoughts) are missing, making the text a list of adjectives without subjects."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The use of a semicolon in the last line is unnatural for a list of headings/bullet points."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Эта статья погружает вас в мир «автоматических мыслей» — невидимых спутников наших эмоций в когнитивно-поведенческой терапии (КПТ). Возвращаясь к метафоре яблоневого дерева, мы исследуем, как рождаются наши мгновенные реакции. На ярком примере из жизни мы покажем, почему чужой опыт заставляет нас по-разному оценивать одни и те же события, и докажем, что вы способны управлять этим процессом.",
+          "oldText": "This article introduces the idea of “automatic thoughts” in Cognitive Behavioral Therapy (CBT). We use the image of an apple tree to explain the hierarchy of beliefs behind our quick emotional reactions, and show how life experience shapes our first thoughts and feelings.",
+          "newText": "This article dives into the world of automatic thoughts—the invisible companions of our emotions in cognitive behavioral therapy (CBT). Returning to the metaphor of an apple tree, we’ll explore how our instant reactions are born. Using a vivid real-life example, we’ll show why different life experiences cause us to interpret the same events differently, and prove that you can learn to manage this process.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 96
+              },
+              "reason": "Translation A is a faithful and high-quality transcreation that preserves the original's tone, structure, and all key metaphors. Translation B is a significant omission, cutting out the entire final sentence and the specific 'vivid example' promise, while also adding unrequested technical concepts like 'hierarchy of beliefs'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The entire final sentence about the real-life example and the user's ability to manage the process is missing."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Introduces 'hierarchy of beliefs', which is not in the original text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is more clinical and dry compared to the warm, engaging original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 96
+              },
+              "reason": "Translation B is a high-quality transcreation that preserves the original's tone, imagery, and structure, whereas Translation A is a significant simplification that omits key metaphors and the empowering closing sentiment.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Omitted the 'invisible companions' metaphor, the 'vivid real-life example' mention, and the concluding promise of empowerment."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is too dry and academic compared to the warm, engaging original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Давайте проведем небольшой мысленный эксперимент.\n\nВообразите: вы сидите в уютном кресле кинотеатра, свет гаснет, вы ждете начала фильма.\n\nВнезапно женщина в ряду перед вами резко вскакивает и звонко бьет по лицу сидящего рядом мужчину.\n\nСитуация шокирующая и напряженная. Попробуйте отследить, какая мысль первой пронеслась бы в вашей голове и что бы вы почувствовали?\n\nПоскольку мы не знаем вашу личную историю, нам сложно предсказать вашу точную реакцию.\n\nПоэтому давайте заглянем в мысли двух зрителей, которые по нашему сценарию сидят справа и слева от вас.\n\nСлева сидит женщина, которая в прошлом пережила болезненный опыт домашнего насилия. Вот как отзовется эта сцена в ней:\n\n<stepper automatic=\"Какой ужас... Наверное, дома ей за это страшно достанется.\" emotions=\"Печаль, липкий страх, отчаяние.\" behavior=\"Сжимается в кресле, с трудом сдерживает слезы.\">\n\nА справа — молодой мужчина, который совсем недавно прошел через тяжелый, скандальный развод:\n\n<stepper automatic=\"Вот неадекватная! Не могла до дома дотерпеть, обязательно скандалить при всех?!\" emotions=\"Гнев, острое раздражение.\" behavior=\"Сжимает кулаки, чувствует прилив жара.\">\n\nСобытие одно — пощечина в кинотеатре. Но эмоции полярны, потому что каждый зритель смотрит на сцену через уникальные очки своего жизненного опыта.\n\nИменно такие мгновенные, словно выстрел, оценки происходящего мы и называем автоматическими мыслями.",
+          "oldText": "Let’s try a thought experiment.\n\nImagine you’re sitting in a movie theater, waiting for the film to start.\n\nSuddenly, a woman in the row ahead jumps up and slaps the man next to her.\n\nIt’s a sharp, emotionally charged situation. Imagine what automatic thoughts might flare up for you—and what feelings you’d experience.\n\nWe can’t know your personal history or predict your exact reaction.\n\nSo let’s imagine two people sitting beside you.\n\nOn your left is a woman in her forties who has experienced domestic violence in the past. Here’s what her internal reaction might look like:\n\nOn your right is a young man who has recently gone through a long, difficult divorce.\n\nAs you can see, the same event triggers very different emotions in different people, because each of us views the world through the lens of our own experience.\n\nThese fast, involuntary reactions are what we call automatic thoughts.",
+          "newText": "Let’s try a little thought experiment.\n\nImagine this: you’re sitting in a cozy cinema seat, the lights go down, and you’re waiting for the movie to start.\n\nSuddenly, a woman in the row in front of you stands up abruptly and sharply slaps the man sitting next to her.\n\nThe situation is shocking and tense. Try to trace what thought would flash through your mind first, and how you would feel.\n\nSince we don’t know your personal history, it’s difficult to predict your exact reaction.\n\nSo, let’s look at the thoughts of two spectators sitting to your right and left in this scenario.\n\nOn the left sits a woman who has experienced domestic violence in the past. Here is how this scene resonates with her:\n\n<stepper automatic=\"How terrifying... She’ll probably be in so much trouble when she gets home.\" emotions=\"Sadness, sticky fear, despair.\" behavior=\"Cringes in her seat, struggling to hold back tears.\">\n\nAnd on the right is a young man who has recently gone through a difficult, high-profile divorce:\n\n<stepper automatic=\"She’s so irrational! Couldn’t she have waited until she got home instead of making a scene in front of everyone?!\" emotions=\"Anger, sharp irritation.\" behavior=\"Clenches his fists, feels a surge of heat.\">\n\nThe event is the same—a slap in a movie theater. But the emotions are polar opposites because each spectator views the scene through the unique lens of their own life experience.\n\nThese instant, lightning-fast evaluations of what is happening are exactly what we call automatic thoughts.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation A is a faithful, high-quality rendering that preserves the narrative flow, the specific imagery, and the exact structure of the original text. Translation B introduces significant omissions and hallucinations (adding 'in her forties', removing the stepper components entirely) which makes it unsuitable for this content.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire stepper component structure (automatic thoughts, emotions, behavior) is missing, which is the core of the exercise."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added 'in her forties' which is not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The text is overly condensed, losing the 'storytelling' tone of the original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 94
+              },
+              "reason": "Translation B is a faithful and high-quality rendering of the original text, preserving the narrative flow, the specific imagery, and the technical stepper content. Translation A is a heavy condensation that omits significant portions of the text (the actual thoughts and behaviors in the steppers), which is a critical failure for this type of content.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire content of the <stepper> tags (the automatic thoughts, emotions, and behaviors) was completely omitted, which destroys the educational purpose of the example."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is too summarized and loses the 'storytelling' feel of the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "en",
+          "key": "/test/question",
+          "ru": "Автоматические мысли — это...",
+          "oldText": "Automatic thoughts are:",
+          "newText": "Automatic thoughts are...",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "Translation A correctly preserves the open-ended, conversational nature of the original ellipsis, whereas Translation B replaces it with a colon, which changes the tone from a narrative introduction to a formal list header.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Replacing the ellipsis with a colon changes the intended rhythm and tone of the sentence."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "Translation B preserves the punctuation of the original, which is crucial for maintaining the tone of an introductory lead-in. Translation A replaces the ellipsis with a colon, which changes the stylistic intent.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Replaced ellipsis with a colon, losing the original's trailing/introductory tone"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Возникает закономерный вопрос: почему же в одной и той же ситуации мы выдаем такие разные автоматические реакции?\n\nИ значит ли это, что при каждом неприятном событии мы обречены на падение в воронку негатива и депрессии?\n\nАбсолютно нет.\n\nАвтоматические мысли фонят в голове абсолютно у каждого человека на планете, но они далеко не всегда перерастают в психологическую проблему.\n\nСекрет в том, что эти мимолетные мысли рождаются не в пустоте. Они связаны с нашими более глубокими внутренними установками.\n\nТак же, как яблоки не висят в воздухе, а питаются от ветвей, ствола и невидимых корней, наши автоматические реакции неразрывно опираются на наши промежуточные и базовые убеждения.",
+          "oldText": "Why, then, do different people think differently in the very same situation?\n\nDoes that mean that whenever something unpleasant happens, we’re doomed to a vicious cycle of thoughts and emotions that leads to depression?\n\nNot at all.\n\nAlthough everyone has automatic thoughts, they don’t always cause psychological difficulties.\n\nThe thoughts that arise are linked to deeper beliefs and internal assumptions.\n\nJust as fruits don’t exist apart from the branches, trunk, and roots of a tree, our automatic thoughts rest on intermediate and core beliefs.",
+          "newText": "A logical question arises: why do we have such different automatic reactions in the exact same situation?\n\nAnd does this mean that with every unpleasant event, we are doomed to fall into a spiral of negativity and depression?\n\nAbsolutely not.\n\nAutomatic thoughts hum in the background of everyone’s mind, but they don’t always turn into a psychological problem.\n\nThe secret is that these fleeting thoughts are not born in a vacuum. They are connected to our deeper internal beliefs.\n\nJust as apples don’t hang in mid-air but draw nourishment from the branches, the trunk, and the roots, our automatic reactions are inextricably linked to our intermediate and core beliefs.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 95
+              },
+              "reason": "Translation B is much closer to the original's structure, tone, and imagery. Translation A significantly simplifies the text, losing the specific metaphors (apples, vacuum, humming) and the nuance of the author's voice.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost the 'apples' metaphor, replacing it with generic 'fruits'; lost the 'born in a vacuum' phrase; lost the 'humming' nuance of thoughts."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "The first sentence changes 'why do we have different reactions' to 'why do different people think differently', which shifts the focus from the mechanism to the people."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The flow is a bit too clipped and simplified compared to the reflective, narrative tone of the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 95
+              },
+              "reason": "Translation A is a high-quality transcreation that preserves the author's voice, rhythm, and specific metaphors (apples, humming thoughts) while using idiomatic English. Translation B is too reductive, loses the poetic imagery of the original, and makes several omissions.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost the specific 'apples' metaphor, replacing it with generic 'fruits'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost the 'humming in the background' imagery (фонят), which is key to the tone."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "The first sentence changes the meaning from 'why do we have different reactions' to 'why do people think differently'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The flow is somewhat choppy and lacks the narrative 'hook' present in the original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Автоматические мысли: какие плоды зреют в саду вашего сознания?",
+          "oldText": "Automatic Thoughts: What’s Growing in the Garden of Your Mind?",
+          "newText": "Automatic thoughts: what’s ripening in the garden of your mind?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation A follows the sentence case rule for titles/headers and uses a more evocative, idiomatic verb ('ripening') that preserves the original metaphor of 'fruits ripening'. Translation B uses Title Case, which is less appropriate for this context, and 'growing' is a weaker, more generic verb.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case; 'growing' is less precise than 'ripening' for the 'fruits' metaphor."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation A uses Title Case, which is appropriate for a headline/article title, and uses 'Growing', which is a more natural and idiomatic way to express the metaphor in English than the literal 'ripening'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for a title and 'ripening' sounds slightly clunky/literal in this metaphorical context compared to 'growing'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/automatic.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Из предыдущей главы мы выяснили главное: наши мысли — это невидимые дирижеры наших эмоций и телесных реакций.\n\nТеперь, опираясь на этот фундамент, давайте познакомимся с тем явлением, с которым нам предстоит работать на практике каждый день.\n\nЧтобы наглядно показать, как устроено наше мышление в КПТ, мы снова обратимся к образу дерева.\n\n<instagram ids=\"17875886496204232,18059186534522759\">\n\nПредставьте раскидистую яблоню. Она символизирует ваше сознание. На ее ветвях висят плоды: одни наливные и сладкие, другие — надкусанные или подгнившие.\n\nЭти яблоки на ветвях — и есть ваши мысли.\n\nВ психологии их называют «автоматическими». Они вспыхивают в голове мгновенно, словно рефлекс, не требуя от вас абсолютно никаких усилий.\n\nОни проносятся так быстро и их так много, что мы воспринимаем их как фоновый шум, даже не замечая, как они диктуют нам настроение.\n\n<q author=\"Эпиктет\">Не события, а наши мнения о них — вот что делает нас счастливыми или несчастными.</q>",
+          "oldText": "From the previous chapter, we already know that our thoughts affect our emotions and physical reactions.\n\nNow, building on the basics, let’s turn to what we’ll work with in practice.\n\nWe thought about how best to illustrate the hierarchy of beliefs in CBT and concluded that a tree is the clearest image.\n\nPicture an apple tree in front of you. It represents your mind. On its branches hang fruits—some bright and ripe, others bruised or spoiled.\n\nThe fruits on this tree are your thoughts.\n\nIn CBT, these thoughts are called “automatic” because they appear quickly, almost imperceptibly, and without conscious effort.\n\nThere are so many of them—and they’re so fleeting—that we often don’t even notice them appear.",
+          "newText": "From the previous chapter, we’ve learned the most important thing: our thoughts are the invisible conductors of our emotions and physical reactions.\n\nNow, building on this foundation, let’s get acquainted with the phenomenon we’ll be working with in practice every day.\n\nTo clearly illustrate how thinking works in CBT, we’ll return once more to the image of a tree.\n\n<instagram ids=\"17875886496204232,18059186534522759\">\n\nImagine a sprawling apple tree. It symbolizes your mind. Hanging from its branches are fruits: some are ripe and sweet, while others are bruised or rotting.\n\nThese apples on the branches are your thoughts.\n\nIn psychology, they are called “automatic.” They flash in your head instantly, like a reflex, requiring no effort at all.\n\nThey pass by so quickly and there are so many of them that we often perceive them as background noise, not even noticing how they dictate our mood.\n\n<q author=\"Epictetus\">It is not events that disturb us, but our opinions about them.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 96
+              },
+              "reason": "Translation B is a faithful and idiomatic rendering that preserves the metaphor, tone, and structure of the original. Translation A significantly alters the text, adding information not present in the source (hierarchy of beliefs) and omitting key imagery (conductors, background noise, the Epictetus quote).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing the Epictetus quote and the 'background noise' metaphor."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added 'hierarchy of beliefs' which is not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Lost the 'invisible conductors' metaphor, which is central to the text's tone."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Simplified 'physical reactions' to 'physical reactions' (though 'bodily' is closer, 'physical' is acceptable, but the overall loss of nuance is the issue)."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 96
+              },
+              "reason": "Translation A is a faithful, high-quality rendering that preserves the original's metaphors, tone, and structure. Translation B introduces significant hallucinations (adding 'hierarchy of beliefs') and omissions (losing the Epictetus quote and the specific description of the apples).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added 'We thought about how best to illustrate the hierarchy of beliefs', which is not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The Epictetus quote is completely missing."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The description of how thoughts dictate mood is lost."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The flow is disjointed compared to the original's narrative rhythm."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

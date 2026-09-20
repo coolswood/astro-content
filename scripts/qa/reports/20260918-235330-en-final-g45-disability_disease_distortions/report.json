@@ -1,0 +1,1277 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:53:30.243Z",
+    "Метка": "en-final-g45-disability_disease_distortions",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/depression/disability_disease_distortions.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/depression/disability_disease_distortions.json": {
+      "en": [
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/distortions/test/answers",
+          "ru": "Состояние психологического здоровья, которое нельзя изменить\n\nПоложительные мыслительные паттерны, которые помогают справиться с депрессией\n\nИррациональные убеждения и мысли, которые усугубляют депрессивное состояние\n\nФизические симптомы, возникающие в результате депрессии",
+          "oldText": "A psychological condition that cannot be changed\n\nPositive thinking patterns that help with depression\n\nIrrational beliefs and thoughts that worsen depressive states\n\nPhysical symptoms resulting from depression",
+          "newText": "A state of mental health that cannot be changed\n\nPositive thinking patterns that help cope with depression\n\nIrrational beliefs and thoughts that worsen a depressive state\n\nPhysical symptoms that arise as a result of depression",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Translation B is more concise and idiomatic for a professional mental health context. Translation A uses 'mental health' in a way that sounds slightly unnatural when paired with 'cannot be changed', whereas 'psychological condition' is a standard clinical term.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'A state of mental health that cannot be changed' is a bit wordy and less idiomatic than 'A psychological condition'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'worsen a depressive state' is grammatically fine but 'worsen depressive states' (as in B) sounds more natural for a general description."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B is more idiomatic and follows the project's terminology guidelines (mental health instead of psychological condition). It also uses a more natural verb phrase 'help cope with' compared to the slightly clunky 'help with' in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'psychological condition' instead of the preferred 'mental health' (психологическое здоровье)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'help with depression' is a bit weak/informal compared to 'help cope with'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'depressive states' (plural) sounds slightly less natural here than the singular 'depressive state' or just 'depression'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/distortions/title",
+          "ru": "Преобразование мышления: Путь к избавлению от депрессии через понимание когнитивных искажений",
+          "oldText": "Reframing Your Thoughts: Easing Depression by Understanding Cognitive Distortions",
+          "newText": "Reframing Your Thinking: Overcoming Depression by Understanding Cognitive Distortions",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B uses 'Overcoming depression', which is a much more natural and standard collocation for this context than 'Easing depression'. 'Reframing your thinking' also sounds more idiomatic for a title about cognitive processes.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Easing depression' sounds a bit weak and less professional for a title about a transformative process; 'Overcoming' is the standard term."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A uses 'Overcoming Depression', which is a much stronger and more natural collocation for a title about a transformative journey than 'Easing Depression'. 'Thinking' also better captures the broad concept of 'мышление' in a psychological context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Easing depression' sounds a bit weak for a title about a 'path to overcoming' something; 'thoughts' is slightly more narrow than 'thinking'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/test/question",
+          "ru": "Какая когнитивная ошибка преобладала в мышлении Анны?",
+          "oldText": "Which cognitive distortion was most prominent in Anna’s thinking?",
+          "newText": "Which cognitive distortion was most prevalent in Anna’s thinking?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 95
+              },
+              "reason": "Both translations are grammatically correct and use the correct CBT terminology. However, 'prevalent' is a more natural and standard collocation when discussing the frequency or dominance of a cognitive distortion in a person's thought patterns.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Prominent' is acceptable but slightly less idiomatic than 'prevalent' in this specific psychological context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "Both are grammatically correct, but 'prominent' sounds more natural and idiomatic in a psychological context when describing a pattern of thinking. 'Prevalent' often refers to how widespread a phenomenon is within a population, rather than how noticeable a specific trait is in an individual.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disease/screen_1/texts",
+          "ru": "Что происходит с человеком, узнавшим о своем тяжелом, возможно смертельном заболевании? Многие люди сталкиваются с подобными испытаниями, однако объяснить здоровому человеку, что они чувствуют, представляется крайне сложной задачей.\n\n<q author=\"Жюль Ренар\">Ваша болезнь не определяет вас. Ваша сила и отвага в борьбе с ней - вот что вас определяет.</q>\n\nИстории о людях, столкнувшихся с серьезными заболеваниями, часто лежат в основе романов или фильмов. В кинематографе такие сюжеты могут обрести комедийные формы, но в реальности все гораздо сложнее.\n\nНезависимо от тяжести и продолжительности болезни, \"смертельный приговор\" всегда действует как взрыв или удар молнии.\n\nЧеловек, узнавший о своем смертельном диагнозе, может столкнуться с реактивной депрессией. Реактивная депрессия — это быстро развивающееся психическое расстройство, возникающее на фоне травматических событий или сильного стресса.\n\nПри таком состоянии больной постоянно испытывает страх, тревогу, апатию к окружающему, плохое настроение, усталость, неуверенность в себе, суицидальные мысли, а также сталкивается с проблемами со сном и аппетитом.\n\n<important>Многие заболевания кардинально меняют образ жизни человека. Некогда здоровый и активный любитель путешествий и природы может в одночасье стать инвалидом, не способным подняться с кровати.</important>\n\nВ таком состоянии он не может самостоятельно добраться до туалета или принять душ, не говоря уже о простой прогулке.\n\nБолее того, осознание того, сколько времени и сил тратят его родственники на уход, заставляет его чувствовать себя бременем.",
+          "oldText": "What happens to a person who learns they have a severe, possibly terminal illness? Many people face trials like these, yet explaining to someone healthy what they feel can be extremely difficult.\n\nStories of people confronting serious illness often form the basis of novels or films. On screen such plots may take on comedic tones, but in real life everything is far more complex.\n\nRegardless of a disease’s severity or duration, a “death sentence” can feel like an explosion or a bolt of lightning.\n\nA person who receives a terminal diagnosis may develop reactive depression — a rapidly developing mental health condition arising in response to traumatic events or severe stress.\n\nIn this state a person may experience fear, anxiety, apathy toward their surroundings, low mood, fatigue, self-doubt, suicidal thoughts, and disturbances in sleep and appetite.\n\nMany illnesses radically change one’s way of life. Someone who was once healthy and active, who loved travel and the outdoors, can become bedridden overnight.\n\nIn such a state, they may be unable to get to the bathroom or take a shower without help, let alone go for a simple walk.\n\nMoreover, realizing how much time and effort loved ones spend on caregiving can make a person feel like a burden.",
+          "newText": "What happens to a person when they learn they have a serious, potentially life-threatening illness? Many people face such trials, yet explaining what they feel to someone who is healthy can seem like an incredibly difficult task.\n\n<q author=\"Jules Renard\">Your illness does not define you. It is your strength and courage in facing it that defines you.</q>\n\nStories of people facing serious illness are often the basis for novels or films. In cinema, these plots might take a comedic form, but in reality, things are much more complex.\n\nRegardless of the severity or duration of the illness, a “terminal diagnosis” always hits like an explosion or a lightning strike.\n\nA person facing a terminal diagnosis may experience reactive depression. Reactive depression is a rapidly developing mental health condition that arises in response to traumatic events or intense stress.\n\nIn this state, a person may constantly experience fear, anxiety, apathy, low mood, fatigue, insecurity, and suicidal thoughts, as well as issues with sleep and appetite.\n\n<important>Many illnesses fundamentally change a person’s lifestyle. Someone who was once a healthy, active lover of travel and nature can overnight become unable to get out of bed.</important>\n\nIn such a state, they may be unable to use the bathroom or take a shower independently, let alone go for a simple walk.\n\nMoreover, realizing how much time and energy their loved ones must spend on their care can make them feel like a burden.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more polished and follows the source structure more faithfully, especially regarding the important block which B significantly condensed. A's flow is more natural for a long-form article.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted the <important> tag/block structure, merging it into the text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'can feel like an explosion' is slightly weaker than 'hits like an explosion' in conveying the impact of the original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B is much more complete, including the missing quote from Jules Renard which is a significant omission in A. B also follows the tone and flow of a high-quality English article more naturally.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire quote by Jules Renard was omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The 'important' tag/block was not preserved, though this might be a formatting issue, it's a loss of structural intent."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'смертельный приговор' as 'death sentence' is fine, but B's 'terminal diagnosis' in that context feels slightly more clinical/natural for the flow, though A's 'bolt of lightning' is a bit more literal than B's 'lightning strike'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'lover of travel and nature' is slightly clunky compared to 'loved travel and the outdoors' in A, but B is superior due to completeness."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/screen_3/texts",
+          "ru": "Конечно, искажение, которое привело Анну к эмоциональным страданиям и депрессии – это мысленный фильтр.\n\nОна зацикливалась на том, что было ей недоступно, игнорируя при этом множество возможностей для совместных занятий с мужем. Это объясняет ее ощущение пустоты и безрадостности.\n\nРешение оказалось удивительно простым: вместе с психологом они составили список всего, что Анна и Роман могли бы делать вместе.\n\nТаким образом, вместо того чтобы фокусироваться только на том, что они не могли делать, они начали видеть возможности для совместного времяпрепровождения. Давайте рассмотрим их диалог:\n\n<dialog psy=\"true\">Итак, Анна, чем вы с супругом занимаетесь или могли бы заниматься вместе?</dialog>\n\n<dialog>Ну, мы по-прежнему наслаждаемся компанией друг друга. Мы ходим ужинать вместе, и мы большая поддержка и опора друг для друга.</dialog>\n\n<dialog psy=\"true\">Замечательно, а что еще?</dialog>\n\n<dialog>Мы иногда катаемся на машине по городу или можем съездить загород, играем в настольные игры, смотрим фильмы, читаем и обсуждаем книги, зовем друзей в гости и вместе готовим обед.</dialog>\n\n<dialog psy=\"true\">Видите, менее чем за минуту вы перечислили уже пять вещей, которые можете делать вместе. Предположим, я дал вам задание до следующей сессии, чтобы вы продолжили список. Как думаете, сколько пунктов у вас получится добавить?</dialog>\n\n<dialog>Я думаю, что очень много. Наверное, я могла бы придумать то, чем мы никогда раньше еще не занимались. Может быть, что-то необычное, например, прыжки с парашютом.</dialog>\n\n<dialog psy=\"true\">Все верно, конечно. Возможно, вы могли бы добавить больше экстремальных занятий. Имейте в виду, что вы с супругом могли бы вместе делать многое из того, от чего отказались, сразу посчитав это невозможным.</dialog>\n\n<dialog psy=\"true\">Например, вы сказали, что не можете поехать на море и спокойно ходить на пляж, и упомянули, насколько сильно хотели бы поплавать. А может, вам все-таки спланировать поездку и выбрать более уединенное место, чтобы не чувствовать себя неловко?</dialog>\n\n<dialog psy=\"true\">Если бы я был на пляже и увидел вас с Романом, его физическая инвалидность меня бы никак не смутила. Что вы думаете?</dialog>\n\n<dialog>Я удивлена, но сейчас эта мысль не кажется такой невозможной. Мне кажется, что это вполне реально, и я чувствую большой прилив сил и вдохновения от этих мыслей.</dialog>",
+          "oldText": "Indeed, the distortion driving Anna’s suffering and depression was the mental filter.\n\nShe fixated on what was unavailable to her, while overlooking many possibilities for shared activities with her husband. This explains her sense of emptiness and joylessness.\n\nThe solution turned out to be surprisingly simple: together with her therapist, they made a list of everything Anna and Roman could do together.\n\nInstead of focusing only on what they couldn’t do, they began to notice opportunities for shared time. Let’s look at their dialogue:\n\nSo, Anna, what do you and your husband do—or could you do—together?\n\nWell, we still enjoy each other’s company. We go out to dinner, and we’re a big source of support for one another.\n\nWonderful. What else?\n\nSometimes we drive around the city or take short trips out of town, play board games, watch movies, read and discuss books, invite friends over, and cook together.\n\nSee? In less than a minute you’ve listed five things you can do together. Suppose I gave you homework to continue the list before our next session—how many more items do you think you could add?\n\nI think a lot. I could probably come up with things we’ve never tried before. Maybe something unusual—like a tandem skydive.\n\nExactly. You could certainly add more adventurous ideas. Keep in mind that you and your husband might be able to do many of the things you dismissed as impossible.\n\nFor example, you said you can’t go to the seaside and walk the beach, and you mentioned how much you’d like to swim. What if you planned a trip and chose a quieter place so you wouldn’t feel self-conscious?\n\nIf I were at the beach and saw you and Roman, his physical disability wouldn’t bother me in the least. What do you think?\n\nI’m surprised, but that thought doesn’t feel impossible anymore. It actually seems realistic—and I feel a surge of energy and inspiration.",
+          "newText": "Of course, the cognitive distortion that led to Anna’s emotional suffering and depression was a mental filter.\n\nShe fixated on what was unavailable to her, while ignoring many opportunities to do things together with her husband. This explains her sense of emptiness and joylessness.\n\nThe solution turned out to be surprisingly simple: together with her psychologist, she made a list of everything Anna and Roman could do together.\n\nIn this way, instead of focusing only on what they couldn’t do, they began to see opportunities for spending time together. Let’s look at their dialogue:\n\n<dialog psy=\"true\">So, Anna, what do you and your husband do, or could do, together?</dialog>\n\n<dialog>Well, we still enjoy each other’s company. We go out to dinner together, and we are a great support for one another.</dialog>\n\n<dialog psy=\"true\">Wonderful, what else?</dialog>\n\n<dialog>Sometimes we drive around the city or go out to the countryside, play board games, watch movies, read and discuss books, invite friends over, and cook lunch together.</dialog>\n\n<dialog psy=\"true\">You see, in less than a minute, you’ve already listed five things you can do together. Let’s say I gave you an assignment to continue this list before our next session. How many more items do you think you could add?</dialog>\n\n<dialog>I think a lot. I could probably think of things we’ve never done before. Maybe something unusual, like skydiving.</dialog>\n\n<dialog psy=\"true\">That’s right, of course. You might be able to add more extreme activities. Keep in mind that you and your husband could do many of the things you gave up on simply because you assumed they were impossible.</dialog>\n\n<dialog psy=\"true\">For example, you said you couldn’t go to the seaside and walk on the beach, but you also mentioned how much you wanted to go swimming. Perhaps you could plan a trip and choose a more secluded spot so you don’t feel self-conscious?</dialog>\n\n<dialog psy=\"true\">If I were at the beach and saw you and Roman, his physical disability wouldn’t bother me at all. What do you think?</dialog>\n\n<dialog>I’m surprised, but that thought doesn’t seem so impossible now. It feels quite realistic, and I feel a great surge of energy and inspiration from these thoughts.</dialog>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 82
+              },
+              "reason": "Translation A is much more idiomatic and flows like a natural English narrative. It avoids the clunky 'In this way' and 'Of course' openings found in B, and uses better phrasing like 'adventurous ideas' instead of 'extreme activities'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The opening 'Of course' is a literal translation of 'Конечно' that sounds unnatural in this context; 'Indeed' or starting directly is better."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'In this way' is a bit heavy/clunky for a smooth transition."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The dialogue tags and structure feel slightly more like a translation than a natural conversation compared to A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is much more accurate to the source text and follows the technical requirements. Translation B fails to include the mandatory <dialog> tags, uses 'therapist' instead of the required 'psychologist', and makes several stylistic choices that deviate from the original meaning (e.g., 'tandem skydive' instead of 'skydiving').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "Missing all <dialog> tags which are part of the source structure."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'therapist' instead of 'psychologist' as per glossary."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Added 'tandem' to skydiving, which wasn't in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The flow is slightly more 'creative' than the original, losing some of the directness of the dialogue."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disease/screen_2/texts",
+          "ru": "Ольге было 39 лет, когда ее жизнь кардинально изменилась из-за подозрения на рак.\n\nЖизнь словно остановилась: она ощутила себя отрезанной от привычной реальности. Все прежние страхи и тревоги показались мелкими и незначительными по сравнению с ужасом, который внезапно обрушился на нее.\n\nКогда подтвердились худшие опасения, это стало ударом для Ольги и ее семьи, подобным взрыву гранаты.\n\n<instagram ids=\"17996126909739388\">\n\nВ последующие месяцы физическая слабость погрузила ее в еще большее уныние.\n\nВсе усложнялось не столько физическим дискомфортом от болезни и химиотерапии, сколько необходимостью отказаться от привычной деятельности, имевшей для нее большое значение.\n\nОльга не могла заниматься домашними делами как раньше (эти задачи взял на себя муж), пришлось отказаться от любимой работы, хобби и долгих прогулок с друзьями.\n\n<important>Несмотря на реальность проблем Ольги, следует ли считать ее депрессию неизбежной?</important>\n\nВ ходе работы с психологом были выявлены автоматические мысли и негативные убеждения, которые беспокоили ее:\n\n<li>Я не вношу вклад в общество</li>\n\n<li>Я не добиваюсь успехов в карьере</li>\n\n<li>Я не могу участвовать в активных развлечениях</li>\n\n<li>Я стала бременем для своего мужа</li>\n\nЭти мысли вызывали грусть, гнев, разочарование и чувство вины, аналогично мыслям физически здоровых людей, страдающих депрессией.\n\nДепрессия была вызвана не столько опухолью, сколько негативным отношением, подрывавшим уверенность в собственной ценности. Связывая личную ценность с достижениями, Ольга подвергала себя страданиям.\n\nРак для нее означал: \"Твое время прошло! Ты больше ничего не стоишь!\".",
+          "oldText": "Olga was 39 when her life changed dramatically due to a suspected cancer diagnosis.\n\nLife seemed to stop: she felt cut off from her familiar reality. All her previous fears and worries felt small compared to the terror that suddenly descended.\n\nWhen the worst fears were confirmed, it hit Olga and her family like a blast.\n\nIn the months that followed, physical weakness pushed her into even deeper despair.\n\nWhat made things hardest was not only the physical discomfort of illness and chemotherapy, but having to give up activities that mattered deeply to her.\n\nOlga could no longer manage the household as before (her husband took over those tasks); she had to step back from her favorite work, hobbies, and long walks with friends.\n\nGiven the reality of Olga’s challenges, should her depression be considered inevitable?\n\nIn therapy, automatic thoughts and negative beliefs that troubled her came to light:\n\nI’m not contributing to society\n\nI’m not achieving anything in my career\n\nI can’t take part in active leisure\n\nI’ve become a burden to my husband\n\nThese thoughts triggered sadness, anger, disappointment, and guilt — similar to the thoughts of physically healthy people who experience depression.\n\nHer depression was driven less by the tumor itself and more by a negative stance that undermined her sense of worth. By tying her value to achievements, Olga set herself up for suffering.\n\nFor her, cancer seemed to say: “Your time is up! You’re worth nothing now!”",
+          "newText": "Olga was 39 years old when her life changed drastically due to a cancer scare.\n\nIt felt as if life had come to a standstill; she felt cut off from her familiar reality. All her previous fears and anxieties seemed trivial and insignificant compared to the horror that had suddenly descended upon her.\n\nWhen her worst fears were confirmed, it hit Olga and her family like a grenade blast.\n\n<instagram ids=\"17996126909739388\">\n\nIn the months that followed, physical weakness plunged her into even deeper despondency.\n\nEverything was made harder not just by the physical discomfort of the illness and chemotherapy, but by the need to give up activities that had been deeply meaningful to her.\n\nOlga could no longer manage household chores as she once did (her husband took these over), and she had to give up her beloved work, hobbies, and long walks with friends.\n\n<important>Given the reality of Olga’s situation, should her depression be considered inevitable?</important>\n\nThrough her work with a psychologist, she identified the automatic thoughts and unhelpful beliefs that were troubling her:\n\n<li>I am not contributing to society</li>\n\n<li>I am not succeeding in my career</li>\n\n<li>I can no longer participate in active leisure</li>\n\n<li>I have become a burden to my husband</li>\n\nThese thoughts triggered sadness, anger, frustration, and guilt—similar to the thoughts of physically healthy people experiencing depression.\n\nThe depression was caused not so much by the tumor itself, but by a negative mindset that undermined her sense of self-worth. By linking her personal value to her achievements, Olga was causing herself unnecessary suffering.\n\nTo her, cancer meant: “Your time is up! You are worth nothing now!”.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 86
+              },
+              "reason": "Translation A is much more natural and follows the 'warm expert' tone guidelines, using contractions and idiomatic phrasing. Translation B feels slightly more formal and heavy (e.g., 'despondency', 'participate in active leisure'), which is less suitable for a supportive narrative.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'despondency' and 'anxieties' which feel slightly more academic/heavy than the natural 'despair' and 'worries' in A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The list items use 'I am' instead of contractions, making the internal monologue feel less personal and more stiff."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'unhelpful beliefs' (good) but the overall sentence structure is more 'translated' than A's 'came to light'."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed the Instagram placeholder present in the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation A is superior because it adheres strictly to the required CBT terminology (unhelpful beliefs) and maintains a more professional, narrative flow. Translation B uses 'negative beliefs' (which is okay, but 'unhelpful' is the project standard) and 'negative stance' (less idiomatic than 'mindset' in this context), and it omits the 'grenade' metaphor which was present in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted 'grenade' from 'like a grenade blast', reducing the impact of the metaphor."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'negative beliefs' instead of the project-standard 'unhelpful beliefs'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'negative stance' is a bit clunky compared to 'negative mindset'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/screen_1/texts",
+          "ru": "Физические ограничения представляют собой одну из категорий проблем, которые воспринимаются как \"реальные\".\n\nЛюди, сталкивающиеся с разнообразными ограничениями из-за возраста или инвалидности, например, после ампутации конечности, часто опасаются, что это повлияет на их способность испытывать счастье.\n\nИнвалидность – это огромный стресс для человека. Особенно когда все произошло внезапно, допустим, вследствие несчастного случая на дороге.\n\nВ этот момент человек сталкивается с фактом утраты: например, из-за перелома позвоночника он больше не сможет ходить.\n\nОбычная жизнь, привычная картина мира – все может сломаться и исчезнуть в одночасье, вместо этого появляется боль, страх, растерянность.\n\n<instagram ids=\"18310324171200503,18379331125125720\">\n\nПроцесс адаптации к новым жизненным обстоятельствам сопровождается переживанием различных эмоций и состояний, которые психологи условно делят на несколько стадий: отрицание, депрессия, принятие и так далее.\n\nНекоторые люди могут \"застревать\" на одном этапе на годы, не находя сил перейти к следующему, в то время как другие могут \"пропустить\" некоторые стадии.\n\nКроме того, что каждый пострадавший человек воспринимает свои физические недостатки по-разному, многое также зависит и от близких людей, окружающих его, от той помощи, которая будет ему оказана, и еще от массы факторов.\n\n<important>Друзья и родственники обычно проявляют понимание и сочувствие, считая это подходящей реакцией. Однако подобная поддержка может иметь и противоположный эффект.</important>\n\nЭмоциональные страдания зачастую вызваны не физическими ограничениями, а искажениями в мышлении.\n\nВ такой ситуации сострадание может произвести нежелательный эффект, усиливая у пострадавшего жалость к себе и отчаяние, а также подкрепляя убеждение, что человек с инвалидностью обречен испытывать меньше радости и удовлетворения от жизни, чем другие.\n\nИ наоборот, когда пострадавший и его близкие учатся исправлять искажения в своем мышлении, они часто обретают более полноценную и радостную эмоциональную жизнь.",
+          "oldText": "Physical limitations are often seen as problems that feel undeniably “real.”\n\nPeople who face various limitations due to age or disability—for instance, after an amputation—often fear that this will limit their capacity for happiness.\n\nDisability is an enormous stressor—especially when it happens suddenly, as after a road accident.\n\nIn that moment a person confronts loss: a spinal fracture, for example, may mean they can no longer walk.\n\nEveryday life—the familiar picture of the world—can shatter in an instant, replaced by pain, fear, and confusion.\n\nAdapting to new life circumstances comes with a range of emotions and states that psychologists often describe in stages such as denial, depression, acceptance, and so on.\n\nSome people may get “stuck” in one stage for years, while others may “skip” certain stages.\n\nAlongside each person’s unique way of perceiving their limitations, much also depends on loved ones, the support available, and other factors.\n\nFriends and family typically respond with understanding and compassion, which seems appropriate. However, such support can, at times, have the opposite effect.\n\nEmotional suffering is often fueled less by the physical limitations themselves and more by cognitive distortions.\n\nIn such cases, compassion can unintentionally intensify self-pity and despair, reinforcing the belief that a person with a disability is destined to experience less joy and satisfaction than others.\n\nConversely, when a person and their loved ones learn to correct distorted thinking, they often regain a fuller, more joyful emotional life.",
+          "newText": "Physical limitations are one category of problems perceived as “real”.\n\nPeople facing various limitations due to age or disability—for example, after an amputation—often fear that these changes will prevent them from experiencing happiness.\n\nDisability is a massive stressor. This is especially true when it happens suddenly, such as following a road accident.\n\nIn that moment, a person faces the reality of loss: for instance, a spinal cord injury might mean they can no longer walk.\n\nA normal life and a familiar worldview can shatter overnight, replaced by pain, fear, and confusion.\n\n<instagram ids=\"18310324171200503,18379331125125720\">\n\nThe process of adapting to new life circumstances involves various emotions and states, which psychologists often divide into stages: denial, depression, acceptance, and so on.\n\nSome people may “get stuck” in one stage for years, lacking the strength to move to the next, while others might “skip” certain stages entirely.\n\nBeyond the fact that every individual perceives their physical limitations differently, much also depends on their loved ones, the support they receive, and many other factors.\n\n<important>Friends and relatives usually show understanding and sympathy, believing this is the right response. However, such support can sometimes have the opposite effect.</important>\n\nEmotional suffering is often caused not by physical limitations themselves, but by cognitive distortions.\n\nIn these situations, compassion can sometimes backfire, intensifying self-pity and despair, and reinforcing the belief that a person with a disability is destined to experience less joy and satisfaction in life than others.\n\nConversely, when those affected and their loved ones learn to work through these distortions, they often find a more fulfilling and joyful emotional life.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is superior because it follows the CBT terminology guidelines perfectly (using 'work through these distortions' instead of 'correct distorted thinking') and maintains a more professional, polished narrative flow. It also handles the 'important' tag content with better nuance.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'correct distorted thinking' instead of the more idiomatic and professional 'work through distortions' or 'address distortions'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'limit their capacity for happiness' is slightly less natural than 'prevent them from experiencing happiness' in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and flows like a high-quality English article. It avoids the slightly clunky, literal structures found in B (e.g., 'one category of problems perceived as...'). A also uses more natural phrasing like 'fueled less by... and more by' and 'capacity for happiness'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The opening sentence is a bit heavy and literal ('one category of problems perceived as')."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'the reality of loss' is a bit redundant compared to the more direct 'confronts loss' in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/description",
+          "ru": "В статье исследуется влияние физических ограничений на эмоциональное благополучие человека, подчеркивая роль когнитивных искажений в восприятии собственных возможностей. Через историю Анны, которая столкнулась с депрессией после инвалидности мужа, показывается путь к эмоциональному восстановлению через когнитивно-поведенческую терапию и переосмысление жизненных ценностей. Статья завершается размышлением о важности сосредоточения на возможностях, а не на ограничениях, призывая читателей переоценить свои взгляды на счастье и самореализацию.",
+          "oldText": "This article explores how physical limitations affect emotional well-being, highlighting how cognitive distortions shape our sense of capability. Through the story of Anna—who faced depression after her husband’s disability—it traces a path toward emotional recovery using Cognitive Behavioral Therapy and a reevaluation of life values. The article closes by shifting the focus from limitations to possibilities, inviting readers to rethink what happiness and self-realization can look like.",
+          "newText": "This article explores how physical limitations affect mental well-being, highlighting the role of cognitive distortions in how we perceive our own abilities. Through the story of Anna, who experienced depression after her husband became disabled, we see the path to emotional recovery through cognitive behavioral therapy (CBT) and a shift in life values. The article concludes with a reflection on the importance of focusing on possibilities rather than limitations, encouraging readers to re-evaluate their views on happiness and self-fulfillment.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B follows the project's terminology guidelines perfectly (mental well-being, CBT introduction, self-fulfillment) and sounds more natural for an article summary. Translation A uses 'emotional well-being' where the glossary suggests 'mental well-being' for general states, and its phrasing 'what happiness... can look like' is slightly more colloquial/vague than the professional tone of B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'emotional well-being' instead of 'mental well-being' as per glossary guidelines for general well-being; failed to introduce the CBT acronym properly."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The ending 'what happiness and self-realization can look like' is a bit wordy compared to the more elegant 'self-fulfillment'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more precise and follows the project's terminology guidelines perfectly, specifically using 'mental well-being' and providing the correct CBT abbreviation format. Translation B uses 'emotional well-being' (which is fine, but A is more aligned with the glossary) and 'self-realization', which sounds slightly more like a direct translation from Russian than the more natural 'self-fulfillment' in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'emotional well-being' instead of the preferred 'mental well-being' for the general concept."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Self-realization' is a bit of a calque; 'self-fulfillment' is more idiomatic in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/distortions/screen_3/texts",
+          "ru": "Важно научиться замечать свои иррациональные мысли и понимать, к какому типу когнитивных искажений они относятся.\n\nЭто поможет распознавать деструктивные паттерны на ранних этапах, не позволяя им укорениться.\n\nСуществует множество когнитивных искажений, и мы собрали самые важные из них на отдельной странице дневника автоматических мыслей.\n\nМы рекомендуем перейти к этому разделу и познакомиться с каждым из искажений подробнее — включать весь материал сюда было бы слишком объёмно.\n\nПрочитайте описания и примеры диалогов, показывающие, как эти искажения проявляются в реальной жизни.\n\nПостарайтесь заметить, встречаются ли подобные убеждения в ваших собственных мыслях, и начните мягко заменять их более реалистичными и поддерживающими.\n\nТема когнитивных искажений настолько значима, что в следующих главах мы разберём самые распространённые из них подробнее.",
+          "oldText": "It’s important to notice your irrational thoughts and identify which cognitive distortions they reflect.\n\nThis helps you catch unhelpful patterns early, before they take root.\n\nThere are many distortions, and we’ve gathered the key ones on a dedicated page in the Automatic Thoughts Diary.\n\nWe recommend visiting that section to review each distortion in more detail—adding everything here would be too much for this page.\n\nRead the descriptions and sample dialogues that show how these distortions play out in real life.\n\nSee whether similar beliefs show up in your own thinking, and begin gently replacing them with more realistic, supportive alternatives.\n\nBecause cognitive distortions are so central, in the next chapters we’ll explore the most common ones in depth.",
+          "newText": "It is important to learn how to notice your irrational thoughts and understand which type of cognitive distortion they belong to.\n\nThis will help you recognize unhelpful patterns early on, preventing them from taking root.\n\nThere are many cognitive distortions, and we have gathered the most important ones on a dedicated page in your automatic thought journal.\n\nWe recommend heading to that section to learn about each distortion in more detail—including all the material here would be too overwhelming.\n\nRead the descriptions and dialogue examples to see how these distortions manifest in real life.\n\nTry to notice if similar beliefs appear in your own thoughts, and begin to gently replace them with more realistic and helpful ones.\n\nThe topic of cognitive distortions is so significant that in the following chapters, we will dive deeper into the most common ones.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 82
+              },
+              "reason": "Translation A sounds much more natural and follows the UX guidelines for a 'supportive friend' tone, using contractions and idiomatic phrasing. Translation B is too formal and contains a terminology error regarding the journal name.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'automatic thought journal' instead of the required 'Automatic Thoughts Diary' (or 'thought record' context), though 'journal' is okay, the phrasing is less polished than A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Avoided contractions (It is, we have, we will), making the tone feel too academic/stiff for a mental health app."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'The topic... is so significant' is a bit heavy/clunky compared to A's 'Because... are so central'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A follows the project's glossary perfectly (automatic thought journal, unhelpful patterns) and maintains a professional yet warm tone. Translation B fails on key terminology by using 'Automatic Thoughts Diary' instead of the required 'automatic thought journal' and uses 'distortions' without the full term in one instance.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'Automatic Thoughts Diary' instead of the mandatory 'automatic thought journal'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'too much for this page' is slightly less idiomatic than 'too overwhelming' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/distortions/screen_1/texts",
+          "ru": "В предыдущих главах мы уже подробно говорили о том, насколько распространены симптомы депрессии и как она влияет на нашу жизнь. Возможно, у вас появлялся вопрос: почему я чувствую себя так плохо? Почему будущее кажется безнадёжным? Давайте вместе попробуем найти ответ.\n\nКогнитивно-поведенческая терапия внесла огромный вклад в понимание природы депрессии. Сегодня мы знаем: негативные эмоции во многом возникают как следствие искажённого, пессимистичного восприятия себя, мира и будущего.\n\nКогда человек переживает депрессию, его внимание словно настраивается на негатив: он чаще замечает плохие события, нейтральные трактует в неблагоприятном ключе, а хорошие — обесценивает или не замечает.\n\n<q author=\"Уильям Джеймс\">Самое большое открытие моего поколения — это то, что человек, изменив свои внутренние установки, может изменить и внешние аспекты своей жизни.</q>",
+          "oldText": "In previous chapters, we discussed how common depressive symptoms are and how they affect daily life. You may have wondered: Why do I feel so bad? Why does the future seem hopeless? Let’s look for answers together.\n\nCognitive Behavioral Therapy has greatly advanced our understanding of depression. We now know that negative emotions often arise from distorted, pessimistic views of oneself, the world, and the future.\n\nDuring depression, attention is tuned to the negative: you notice setbacks more, interpret neutral events in unfavorable ways, and downplay or overlook the positive.",
+          "newText": "In previous chapters, we’ve discussed how common depression symptoms are and how they impact our lives. You might have wondered: why do I feel so bad? Why does the future seem so hopeless? Let’s try to find the answer together.\n\nCognitive behavioral therapy (CBT) has contributed immensely to our understanding of the nature of depression. Today, we know that negative emotions often arise as a result of a distorted, pessimistic perception of oneself, the world, and the future.\n\nWhen someone experiences depression, their attention seems to tune into the negative: they notice bad events more often, interpret neutral ones in an unfavorable light, and either discount or overlook the good ones.\n\n<q author=\"William James\">The greatest discovery of my generation is that a person, by changing their internal attitudes, can change the external aspects of their life.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is much more polished, follows all CBT terminology guidelines, and maintains the warm, supportive tone of the original. Translation B feels slightly more fragmented and misses the quote entirely.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire William James quote is missing."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'Cognitive Behavioral Therapy' without the required (CBT) abbreviation on first mention."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The shift from 'During depression' (impersonal) to 'you notice' (personal) is slightly jarring compared to the consistent 'they' in A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 96
+              },
+              "reason": "Translation B follows all professional guidelines: it correctly introduces the CBT acronym, uses the canonical 'discount the positive' (discounting) logic, and maintains a warmer, more natural flow. Translation A is slightly too dry and misses the required CBT terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'downplay' instead of the canonical 'discount the positive' (discounting) for 'обесценивает'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed the introduction of the 'CBT' acronym required by the guidelines."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'how they affect daily life' is a bit more generic than the original 'how it affects our lives'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disease/screen_3/texts",
+          "ru": "Когда Ольга вместе с психологом составляла график своей личной «ценности» от момента рождения и до предполагаемой смерти, она увидела, что ее личная ценность оставалась неизменной, держась на уровне 85% по условной шкале от 0 до 100%.\n\nПсихолог также предложил ей оценить свою продуктивность за аналогичный период времени.\n\nОна изобразила кривую, показывающую, что ее продуктивность была низкой в детстве, достигла пика в зрелости и затем снизилась к настоящему моменту.\n\nПосле этого у Ольги произошло осознание. Во-первых, даже когда из-за болезни ее продуктивность упала, она продолжала вносить вклад в себя и свою семью через множество малых, но важных и ценных действий.\n\nТолько черно-белое мышление могло подтолкнуть ее к мысли, что ее вклад равен нулю.\n\nВо-вторых, и что куда более важно, она осознала, что ее личная ценность была неизменной и устойчивой; она являлась данностью, не зависящей от достижений.\n\n<important>Это понимание позволило ей осознать, что она не должна «заслуживать» свою человеческую ценность и что, будучи ослабленной, она остается такой же ценной.</important>\n\nОсознание данного факта значительно уменьшило депрессивные проявления. Это не избавило ее от опухоли, болей и физических страданий, но восстановило ее уязвленную самооценку и существенно изменило ее эмоциональное состояние.\n\n<q author=\"Ник Вуйчич\">Болезнь не может украсть вашу надежду, если вы не позволите ей этого.</q>",
+          "oldText": "Together with her psychologist, Olga plotted a graph of her personal “worth” from birth through an estimated end of life — and saw that her inherent value remained steady at about 85% on an arbitrary scale from 0 to 100.\n\nThe psychologist then suggested she rate her productivity over the same time span.\n\nShe drew a curve showing low productivity in childhood, a peak in adulthood, and a decline up to the present moment.\n\nThis led to two insights. First, even when illness reduced her productivity, she was still contributing to herself and her family through many small, meaningful actions.\n\nOnly all-or-nothing thinking could push her to conclude that her contribution was zero.\n\nSecond — and even more important — she realized her personal worth had been constant and resilient; it was a given, independent of achievements.\n\nThis understanding showed her she didn’t need to “earn” her human value, and that even in a weakened state she remained just as worthy.\n\nRecognizing this significantly reduced her depressive symptoms. It didn’t remove the tumor, pain, or physical suffering, but it restored her wounded self-esteem and substantially shifted her emotional state.",
+          "newText": "When Olga and her psychologist mapped out her personal “value” from birth to her projected lifespan, she saw that her inherent value remained unchanged, staying at 85% on a scale of 0 to 100%.\n\nThe psychologist also suggested she rate her productivity over a similar period.\n\nShe drew a curve showing that her productivity was low in childhood, peaked during adulthood, and then declined toward the present.\n\nThis led to an insight for Olga. First, she realized that even though her productivity had dropped due to illness, she continued to contribute to herself and her family through many small but important and valuable actions.\n\nOnly black-and-white thinking could have pushed her to believe that her contribution was zero.\n\nSecond, and more importantly, she realized that her personal value was constant and stable; it was an inherent truth, independent of her achievements.\n\n<important>This understanding allowed her to realize that she doesn’t have to “earn” her human worth, and that even while weakened, she remains just as valuable.</important>\n\nRealizing this fact significantly reduced her depressive symptoms. It didn’t remove the tumor, the pain, or the physical suffering, but it restored her wounded self-esteem and substantially changed her emotional state.\n\n<q author=\"Nick Vujicic\">Illness cannot steal your hope unless you let it.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more faithful to the original structure and includes the quote by Nick Vujicic, which was present in the source but omitted in B. A also follows the CBT terminology and tone perfectly.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire quote by Nick Vujicic at the end of the text is missing."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'all-or-nothing thinking' which is correct, but 'black-and-white thinking' in A is also perfectly acceptable and closer to the Russian 'черно-белое'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 84
+              },
+              "reason": "Translation A is much more idiomatic and flows like a professional English narrative. It avoids the clunky 'When Olga and her psychologist...' structure and uses superior vocabulary ('plotted a graph', 'all-or-nothing thinking', 'meaningful actions'). Translation B feels like a direct translation from Russian, especially with 'black-and-white thinking' (which is okay, but 'all-or-nothing' is more natural here) and the repetitive 'realized/realizing' structure.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The sentence structure is heavy and follows the Russian syntax too closely (e.g., 'When Olga and her psychologist mapped out...')."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'important and valuable actions' is slightly redundant in English compared to the more elegant 'meaningful actions' in A."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "While 'black-and-white thinking' is used, 'all-or-nothing thinking' is the more standard clinical term in English for this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/screen_2/texts",
+          "ru": "Например, Анна – 35-летняя замужняя мать двоих детей, которая начала испытывать симптомы депрессии примерно в то время, когда правую ногу ее мужа парализовало из-за травмы позвоночника.\n\nВ течение пяти лет она искала способы облегчить свое усиливающееся отчаяние, включая амбулаторное и стационарное лечение, антидепрессанты и электрошоковую терапию, но безрезультатно.\n\nКогда Анна обратилась за помощью к когнитивно-поведенческому терапевту, она уже была в тяжелой депрессии и считала, что ее проблемы неразрешимы.\n\nВ слезах она рассказывала о разочаровании, которое испытала, пытаясь справиться со сниженной мобильностью мужа: «Каждый раз, когда я вижу, что другие пары делают то, чего мы не можем, мне становится невыносимо грустно.\n\nЯ смотрю на семьи, которые вместе гуляют, путешествуют, катаются на велосипедах, и мне от этого больно. Нам с Ромой было бы невероятно трудно делать что-то такое.\n\nА они считают это вполне естественным и обычным, как и мы раньше. Так хотелось бы делать то же самое, но мы уже не можем».\n\nБезусловно, мы не можем отрицать, что проблема Анны и Романа более чем реальна, ведь они с мужем действительно не могут делать многое из того, что способны делать большинство из нас.\n\nТо же самое можно сказать о стариках, а также о слепых, глухих, людях с ампутированными конечностями и людях с многими другими физическими ограничениями.\n\nНа самом деле, если так подумать, у всех нас есть какие-либо ограничения. Значит ли это, что все мы должны быть глубоко несчастными?\n\n<q author=\"Ник Вуйчич\">В жизни много всего такого, что гораздо хуже отсутствия рук и ног. Страх — одна из таких позиций. Невозможно жить полной жизнью, если каждое ваше решение определяется страхом.</q>",
+          "oldText": "Consider Anna, a 35-year-old married mother of two, who began experiencing symptoms of depression around the time her husband’s right leg was paralyzed due to a spinal injury.\n\nFor five years she sought relief from her growing despair—through outpatient and inpatient care, antidepressants, and electroconvulsive therapy—without success.\n\nBy the time Anna turned to a CBT therapist, she was in a severe depression and believed her problems were unsolvable.\n\nThrough tears she described the disappointment she felt trying to cope with her husband’s reduced mobility: “Every time I see other couples doing things we can’t, I feel unbearably sad.\n\nI watch families who walk together, travel, ride bikes—and it hurts. For us, doing any of that would be incredibly difficult.\n\nAnd they treat it as natural and ordinary, just like we used to. I wish we could do the same, but we can’t anymore.”\n\nOf course, we can’t deny that Anna and Roman’s problem is real: there truly are many things they can no longer do that most of us can.\n\nThe same can be said of many older adults, as well as people who are blind or deaf, people with amputations, and many others with physical limitations.\n\nIn fact, if you think about it, all of us have some limitations. Does that mean we should all be profoundly unhappy?",
+          "newText": "Take Anna, for example—a 35-year-old married mother of two, who began experiencing symptoms of depression around the time her husband’s right leg was paralyzed due to a spinal injury.\n\nFor five years, she searched for ways to ease her growing despair, including outpatient and inpatient treatment, antidepressants, and even electroconvulsive therapy, but to no avail.\n\nBy the time Anna sought help from a cognitive behavioral therapist, she was already in a deep depression and felt her problems were unsolvable.\n\nThrough tears, she spoke about the frustration of trying to cope with her husband’s reduced mobility: \"Every time I see other couples doing things we can't, it becomes unbearably sad.\n\nI watch families walking together, traveling, or riding bikes, and it hurts. It would be incredibly difficult for Roma and me to do those things.\n\nThey see it as perfectly natural and normal, just like we used to. I want so much to do the same, but we just can't.\"\n\nOf course, we cannot deny that Anna and Roma’s problem is very real; they truly cannot do many of the things most of us can.\n\nThe same applies to the elderly, as well as to those who are blind, deaf, have amputations, or face many other physical limitations.\n\nIn fact, if you think about it, we all have some limitations. Does that mean we should all be deeply unhappy?\n\n<q author=\"Nick Vujicic\">There are many things in life that are much worse than not having arms and legs. Fear is one of them. It is impossible to live life to the fullest if every decision you make is driven by fear.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation A is much more idiomatic and flows like a professional English narrative. Translation B contains several 'translationese' markers and awkward phrasing, particularly in the dialogue and the description of the husband's name.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "In the dialogue, 'it becomes unbearably sad' is a weak, non-idiomatic construction compared to 'I feel unbearably sad'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Roma and me' is grammatically acceptable in some contexts but 'For us' or 'It would be difficult for us' is much smoother in this narrative flow."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'The elderly' can sometimes sound slightly clinical or impersonal compared to 'older adults' in a warm, supportive context."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'cannot' instead of 'can't' in the penultimate paragraph feels slightly too formal for the established warm tone."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more faithful to the original text's structure and tone, especially in the dialogue and the quote. Translation B makes several stylistic choices that slightly alter the meaning (e.g., 'disappointment' instead of 'frustration', 'Roman' instead of 'Roma' in the dialogue) and uses 'CBT therapist' which, while correct, is less smooth in this narrative context than the full term used in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Used 'disappointment' for 'разочарование' in the context of coping, whereas 'frustration' (used in A) is the much more natural idiomatic fit for the struggle of coping with mobility issues."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Changed 'Roma' to 'Roman' in the quote; while Roman is the full name, the original uses the diminutive 'Рома', which adds to the intimacy of the personal story."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'there truly are many things they can no longer do' is a bit wordy compared to the more direct 'they truly cannot do' in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/distortions/test/question",
+          "ru": "Какой из следующих пунктов наилучшим образом описывает понятие \"когнитивные искажения\" в контексте депрессии?",
+          "oldText": "Which option best describes “cognitive distortions” in the context of depression?",
+          "newText": "Which of the following best describes the concept of “cognitive distortions” in the context of depression?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more precise and follows the original structure more closely, including the phrase 'the concept of'. Translation A is slightly too casual for a formal test question, though it is grammatically correct.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing 'of the following' and 'the concept of', which makes it feel a bit clipped compared to the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 98
+              },
+              "reason": "Translation A is more precise and maintains the formal structure of the original question, including the word 'concept'. Translation B is slightly more casual and omits 'concept', which changes the nuance of the inquiry.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted 'the concept of' (понятие), making the sentence slightly less precise for a psychological test context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/test/answers",
+          "ru": "Чтение мыслей\n\nМысленный фильтр\n\nМожно было бы\n\nДолженствование",
+          "oldText": "Mind reading\n\nMental filter\n\n“Could have” thinking\n\n“Should” statements",
+          "newText": "Mind reading\n\nMental filter\n\nPossibility\n\n“Should” statements",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 65
+              },
+              "reason": "Translation A correctly uses the established CBT terminology for cognitive distortions. Translation B fails significantly on the third item, replacing a specific cognitive distortion with a generic noun.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The term 'Possibility' does not convey the meaning of 'Можно было бы' (the tendency to ruminate on what could have been) in a CBT context; it lacks the necessary nuance of a cognitive pattern."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Lost the nuance of the 'could have' pattern by using a single abstract noun."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 80
+              },
+              "reason": "Translation B correctly captures the nuance of 'Можно было бы' as a cognitive distortion pattern ('Could have' thinking), whereas Translation A uses a generic noun 'Possibility' which loses the psychological context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The term 'Possibility' is too vague and does not function as a label for a cognitive distortion; it sounds like a random noun rather than a psychological concept."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/distortions/description",
+          "ru": "В этой статье мы рассматриваем, как когнитивные искажения способствуют развитию и поддержанию депрессии, и почему понимание этих механизмов так важно. Мы предлагаем практичные способы распознавания и изменения негативных мыслительных паттернов, которые помогают улучшать эмоциональное состояние. Погружаясь глубже в тему когнитивных искажений, вы делаете важный шаг на пути к восстановлению и укреплению психического здоровья.",
+          "oldText": "This article explains how cognitive distortions contribute to the onset and maintenance of depression—and why understanding these mechanisms matters. We offer practical ways to spot and shift negative thinking patterns that can improve how you feel. By looking more closely at cognitive distortions, you take an important step toward healing and strengthening your mental health.",
+          "newText": "In this article, we explore how cognitive distortions contribute to the development and maintenance of depression, and why understanding these mechanisms is so vital. We offer practical ways to recognize and change negative thinking patterns to help improve your mental well-being. By diving deeper into the topic of cognitive distortions, you are taking an important step toward recovery and strengthening your mental well-being.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation B sounds much more natural and idiomatic for an English-speaking reader, using better verbs like 'spot and shift' instead of the more clinical 'recognize and change'. It also avoids the repetitive use of 'mental well-being' found in A.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'mental well-being' in two consecutive sentences makes the text feel heavy."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'you are taking an important step' is slightly more wordy than the more direct 'you take' or 'you're taking'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 86
+              },
+              "reason": "Translation A sounds much more natural and idiomatic for a high-quality English article. It avoids the repetitive use of 'mental well-being' found in B and uses more engaging verbs like 'spot and shift' instead of the slightly more clinical 'recognize and change'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'mental well-being' in two consecutive sentences makes the rhythm clunky."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'diving deeper into the topic of' is a bit wordy/cliché compared to the more direct 'looking more closely at' or 'delving into'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/title",
+          "ru": "Как пережить физические ограничения?",
+          "oldText": "How to Cope with Physical Limitations",
+          "newText": "How to cope with physical limitations?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation A follows the standard UX/Title Case convention for headings, whereas Translation B uses sentence case with a question mark, which is less common for article titles in this context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Use of sentence case and a question mark in a title is less professional for a heading/article title compared to Title Case."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A follows the sentence case rule for questions, whereas Translation B uses Title Case, which is inappropriate for a question/heading in this context according to the style guide.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a question"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disability/screen_4/texts",
+          "ru": "Некоторые люди могут не верить, что такую трудную проблему можно решить или что депрессия, подобная той, что испытывала Анна, может исчезнуть после работы с мыслями и убеждениями.\n\nТем не менее, в конце терапии Анна отметила полное исчезновение негативных эмоций и сказала, что чувствует себя лучше, чем за последние несколько лет.\n\nДля поддержания прогресса ей, конечно, придется усердно трудиться над собой и дальше, работать с мыслями, менять привычки мышления, но она готова и хочет, а это самое главное при работе с депрессией.\n\n<important>Важно понимать, что мы не обесцениваем физические ограничения, ни в коем случае. Но мы понимаем сами и хотим, чтобы понимали и вы, насколько важно в этих трудных обстоятельствах учиться фокусироваться на том, что вы способны делать, вместо того чтобы сосредотачиваться на вещах, которые вы не можете делать.</important>\n\nНапример, представьте, что вы очень хотите полететь на Луну.\n\nЕсли бы вы все время думали о том, что вероятность полететь на Луну крайне мала, ведь вы, как минимум, не астронавт, у вас недостаточно хорошее здоровье для этого, недостаточно денег, вы уже не так молоды, то скорее всего, вас бы это очень сильно разочаровывало.\n\nОднако есть много других вещей, которые вы можете делать, и если сосредоточиться на них, то вы будете чувствовать себя более счастливыми.",
+          "oldText": "Some people may doubt that such a difficult problem can be addressed—or that depression like Anna’s could lift after working with thoughts and beliefs.\n\nNevertheless, by the end of therapy Anna reported that the negative emotions had fully subsided and said she felt better than she had in years.\n\nTo maintain progress, she will of course need to keep working—challenging thoughts and reshaping thinking habits—but she’s willing and motivated, which is crucial in treating depression.\n\nIt’s important to understand that we do not minimize physical limitations—far from it. Rather, we recognize how vital it is, in these difficult circumstances, to learn to focus on what you can do instead of what you can’t.\n\nFor example, imagine you very much want to fly to the Moon.\n\nIf you constantly dwell on how unlikely it is—since you’re not an astronaut, your health isn’t perfect, you don’t have the funds, you’re not that young anymore—you’ll likely feel deeply discouraged.\n\nAnd yet there are many other things you can do. By focusing on them, you’ll feel happier.",
+          "newText": "Some people might not believe that such a difficult problem can be solved, or that depression like Anna’s can lift after working on thoughts and beliefs.\n\nNevertheless, by the end of therapy, Anna noted that her negative emotions had completely vanished, and she said she felt better than she had in years.\n\nTo maintain this progress, she will, of course, need to continue working hard on herself—working through her thoughts and changing her thinking habits—but she is ready and willing, which is the most important part of treating depression.\n\n<important>It is important to understand that we are by no means dismissing physical limitations. However, we understand—and we want you to understand—how vital it is in these difficult circumstances to learn to focus on what you are capable of doing, rather than concentrating on what you cannot do.</important>\n\nFor example, imagine you really want to fly to the Moon.\n\nIf you constantly thought about how unlikely it is that you’ll fly to the Moon—since you aren’t an astronaut, your health isn’t good enough, you don’t have enough money, or you aren’t as young as you used to be—it would likely leave you feeling very frustrated.\n\nHowever, there are many other things you can do, and if you focus on them, you will feel much happier.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 84
+              },
+              "reason": "Translation A is much more idiomatic and flows like a professional English article. It avoids the repetitive 'working/working' and 'understand/understand' structures found in B, using more sophisticated phrasing like 'subsided' and 'reshaping thinking habits'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive phrasing: 'working hard on herself—working through her thoughts' and 'understand—and we want you to understand'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The conditional structure in the Moon example is slightly clunky compared to the more natural 'If you constantly dwell...' in A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more faithful to the original structure and tone, especially in the important disclaimer section. Translation B takes too many liberties with the phrasing, resulting in a loss of the 'we' perspective in the disclaimer and a slightly more fragmented rhythm in the final paragraphs.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "In the <important> section, B removes the 'we' (we recognize how vital it is...), which changes the supportive 'expert friend' tone of the original to a more detached observation."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'your health isn't perfect' is a slight deviation from 'not good enough' (недостаточно хорошее здоровье), though acceptable in transcreation."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The final paragraph is a bit too clipped compared to the original's flowing structure."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/disease/description",
+          "ru": "Статья исследует эмоциональные и психологические испытания, с которыми сталкиваются люди после получения тяжелого диагноза, подчеркивая сложность передачи их переживаний здоровым людям. Она рассказывает историю Ольги, чья жизнь резко меняется после подозрения на рак, и как она борется с депрессией и утратой смысла жизни через работу с психологом. В итоге, Ольга приходит к осознанию неизменной личной ценности и важности мелких достижений, что помогает ей восстановить самооценку и изменить эмоциональное состояние, несмотря на физические страдания.",
+          "oldText": "This article examines the emotional and psychological challenges people face after receiving a serious diagnosis, highlighting how hard it can be to convey these experiences to people who are healthy. It tells the story of Olga, whose life changed abruptly after a suspected cancer diagnosis, and how she grappled with depression and loss of meaning through work with a psychologist. In the end, Olga recognizes her inherent self-worth and the importance of small accomplishments, which helps restore her self-esteem and shift her emotional state despite physical suffering.",
+          "newText": "This article explores the emotional and psychological challenges people face after receiving a serious diagnosis, highlighting how difficult it can be to communicate these experiences to others. It tells the story of Olga, whose life changed drastically following a cancer scare, and how she worked through depression and a loss of meaning with the help of a psychologist. Ultimately, Olga came to realize her inherent personal value and the importance of small achievements, which helped her rebuild her self-esteem and shift her emotional state despite her physical suffering.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is much more idiomatic and flows naturally. Translation B contains a clunky, literal translation of 'здоровым людям' as 'people who are healthy', which sounds unnatural in English, and uses 'suspected cancer diagnosis' instead of the more natural 'cancer scare'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "the phrase 'people who are healthy' is a literal translation of 'здоровым людям' and sounds unnatural; 'healthy people' or 'others' would be better"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "the shift to present tense ('recognizes', 'helps') in the final sentence is inconsistent with the past tense used in the rest of the narrative"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more idiomatic and flows better for a narrative article. It uses more natural phrasing like 'cancer scare' and 'worked through depression' compared to the slightly clunkier 'suspected cancer diagnosis' and 'grappled with' in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'people who are healthy' is a bit wordy and literal; 'others' or 'healthy individuals' would be smoother."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Suspected cancer diagnosis' is slightly redundant/heavy compared to the idiomatic 'cancer scare'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/disability_disease_distortions.json",
+          "lang": "en",
+          "key": "/distortions/screen_2/texts",
+          "ru": "В основе депрессивного состояния почти всегда лежат устойчивые негативные убеждения и искажённые способы мышления.\n\nЭти иррациональные мысли можно систематизировать. Так появились понятия, которые мы называем \"когнитивными искажениями\".\n\n<instagram ids=\"18478233460028362\">\n\nКогнитивные искажения проявляются по-разному. Например:\n\nЧеловек делает глобальные выводы на основе единичных событий: одна ошибка воспринимается как доказательство полной некомпетентности, одна неудача — как знак того, что успех невозможен. «У меня ничего не получится», «Я ни на что не способен» — частые мысли при депрессии.\n\nЛюди также склонны к мрачным прогнозам, заранее убеждая себя, что будущее неизбежно будет плохим. «Я уже обращался к психологу, и это не помогло — значит, ничего и никогда не поможет», «Я всегда буду один и несчастен».\n\nПри таком внутреннем диалоге очень трудно сохранять хорошее настроение и ощущение надежды.\n\n<important>Но есть важная, поддерживающая новость: именно ваши мысли могут стать ключом к облегчению симптомов. Научившись замечать и менять негативные убеждения, вы сможете влиять на своё настроение и состояние.</important>",
+          "oldText": "At the core of depression, you’ll almost always find entrenched negative beliefs and distorted thinking styles.\n\nThese irrational thoughts can be grouped into categories known as “cognitive distortions.”\n\nCognitive distortions show up in many ways. For example:\n\nA person draws sweeping conclusions from single events: one mistake is taken as proof of total incompetence; one setback as a sign that success is impossible. “Nothing will work out for me,” “I’m incapable.” These are common thoughts in depression.\n\nPeople also lean toward gloomy predictions, convincing themselves in advance that the future will inevitably be bad. “I tried therapy and it didn’t help—so nothing ever will,” “I’ll always be alone and unhappy.”\n\nWith an inner dialogue like this, it’s hard to sustain hope or a stable mood.\n\nHere’s the encouraging part: your thoughts can be a key to relief. By learning to notice and shift negative beliefs, you can influence your mood and overall state.",
+          "newText": "At the core of a depressive state, there are almost always persistent unhelpful beliefs and distorted ways of thinking.\n\nThese irrational thoughts can be categorized. This is how we arrived at the concept of “cognitive distortions.”\n\n<instagram ids=\"18478233460028362\">\n\nCognitive distortions manifest in different ways. For example:\n\nA person makes broad conclusions based on single events: one mistake is perceived as proof of total incompetence, and one failure is seen as a sign that success is impossible. “I’ll never succeed” or “I’m useless” are common thoughts during depression.\n\nPeople are also prone to grim predictions, convincing themselves in advance that the future will inevitably be bad. “I’ve already seen a psychologist and it didn’t help—so nothing ever will,” or “I’ll always be alone and unhappy.”\n\nWith this kind of internal dialogue, it is very difficult to maintain a good mood or a sense of hope.\n\n<important>But there is supportive news: your thoughts can be the key to relieving your symptoms. By learning to notice and change unhelpful beliefs, you can influence your mood and well-being.</important>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 94
+              },
+              "reason": "Translation A is more precise and adheres better to the project's terminology and tone. Translation B makes several risky liberties that deviate from the original meaning and the required CBT terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'negative beliefs' instead of the preferred 'unhelpful beliefs' used in A, though 'negative' is acceptable, 'unhelpful' is the project standard."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Translates 'обращался к психологу' as 'tried therapy', which is a significant leap in meaning."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Here’s the encouraging part' is a bit more informal/journalistic than the original 'But there is important, supportive news'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Misses the 'important' aspect of the news in the final paragraph."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A sounds much more natural and idiomatic for an English-speaking reader. It avoids the heavy, clinical phrasing of B (e.g., 'depressive state', 'manifest in different ways') and uses a warmer, more engaging tone ('Here’s the encouraging part') that fits the 'understanding expert' persona. Translation B suffers from several 'translationese' markers and slightly clunky structures.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'depressive state' is a bit clinical/heavy compared to 'depression'; 'manifest in different ways' is a common translation-style cliché."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'This is how we arrived at the concept' is wordy and sounds like a textbook rather than a supportive guide."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'It is very difficult' (no contraction) feels too formal for this context."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,699 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T11:46:33.357Z",
+    "Метка": "en-b4-omnipotence",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "story/distortions/omnipotence.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "59773e25fd9cb826f3e71e3a543930f97721ad28"
+  },
+  "results": {
+    "story/distortions/omnipotence.json": {
+      "en": [
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/exercise/screen_1/texts",
+          "ru": "Иногда люди называют персонализацию «манией величия», но это не про ощущение силы или значимости.\n\nПерсонализация — это когда кажется, что происходящее вокруг связано с вами, даже если доказательств этому нет.\n\nВнутри это часто ощущается не как власть, а как тревога: будто все смотрят, оценивают и ждут от вас идеального поведения.\n\n<q author=\"Марк Аврелий\">Все, что мы слышим, — это мнение, а не факт. Все, что мы видим, — это взгляд, а не истина.</q>\n\nЧтобы выйти из этого паттерна, важно учиться замечать реальные причины событий, а не автоматически винить себя.\n\nКогда мы принимаем ответственность за то, что вне нашего контроля, мы перегружаем себя и создаём почву для чувства вины и усталости.\n\n<li>Первый шаг — наблюдение. Замечайте, когда в голове появляется мысль: «Это моя вина», хотя фактов мало или их нет.</li>\n\n<li>Спрашивайте себя: «Я действительно повлияла на эту ситуацию? Или это просто мысль, а не факт?»</li>\n\n<li>Попробуйте рассматривать и другие объяснения происходящего. Например: «Она не поздоровалась. Возможно, она расстроена, торопится или занята мыслями — это может быть никак не связано со мной».</li>",
+          "oldText": "Sometimes people mistakenly refer to the belief in personalization as “megalomania”.\n\nHowever, this does not necessarily indicate illusions of grandeur, but rather reflects a worldview in which a person prone to personalization places themselves at the center of the universe: all events seem personally connected to them.\n\nInternally, this is not experienced as a sense of immense power or strength, but as constant pressure, attention from others, and hidden hostility.\n\n<q author=\"Marcus Aurelius\">Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.</q>\n\nTo overcome this harmful style of thinking, it’s important to identify the true causes of the problems that have arisen.\n\nInstead of blaming yourself for things that are beyond your control and, consequently, feeling guilty towards the entire world, focus on analyzing the situation.\n\n<li>Start with self-observation. The first step to reducing personalization is awareness, as with any other irrational thinking. Pay close attention to your thoughts and reactions to events. Notice when you tend to take responsibility for something that is actually beyond your control.</li>\n\n<li>Then, try to identify other factors that could have influenced the situation for which you took responsibility. For example: “Is it really true that I am solely to blame for this argument? What other factors and circumstances could have played a role?”</li>\n\n<li>Consider possible reasons for other people’s behavior that are unrelated to your actions. Try to put yourself in their shoes and understand what might have influenced their reaction. For example, what else could have caused their mood or behavior?</li>",
+          "newText": "Sometimes people call personalization “grandiosity,” but it’s not about feeling powerful or important.\n\nPersonalization is when it feels like everything happening around you is connected to you, even when there is no evidence for it.\n\nInternally, this often feels less like power and more like anxiety — as if everyone is watching, judging, and expecting you to behave perfectly.\n\n<q author=\"Marcus Aurelius\">Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.</q>\n\nTo break this pattern, it’s important to learn how to notice the actual causes of events rather than automatically blaming yourself.\n\nWhen we take responsibility for things beyond our control, we overload ourselves and create a breeding ground for guilt and exhaustion.\n\n<li>The first step is observation. Notice when the thought “It’s my fault” pops into your head, even when there are few or no facts to support it.</li>\n\n<li>Ask yourself: “Did I really influence this situation? Or is this just a thought, not a fact?”</li>\n\n<li>Try considering other explanations for what is happening. For example: “She didn’t say hello. Maybe she’s upset, in a hurry, or lost in thought — it might have nothing to do with me.”</li>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 98
+              },
+              "reason": "Translation A is a near-perfect, idiomatic rendering of the original that respects the tone, structure, and CBT terminology. Translation B is a massive hallucination/re-write: it adds significant amounts of text not present in the original, changes the meaning of several sentences, and fails to follow the source structure.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "critical",
+                  "note": "Added entire paragraphs and sentences that do not exist in the original (e.g., 'places themselves at the center of the universe', 'feeling guilty towards the entire world')."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Translated 'мания величия' as 'megalomania' (too clinical/heavy) and 'персонализация' as 'belief in personalization', whereas A correctly uses 'grandiosity' and 'personalization'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone is much more academic and wordy, losing the 'understanding friend' vibe of the original."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 98
+              },
+              "reason": "Translation B is a near-perfect adaptation that maintains the warm, supportive tone and the exact structure of the original. Translation A is a heavy, academic rewrite that adds significant amounts of information not present in the source, making it feel like a different article entirely.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added entire sentences and complex explanations (e.g., 'places themselves at the center of the universe', 'hidden hostility') that are not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone is overly formal and clinical ('mistakenly refer to', 'consequently'), violating the 'understanding friend' persona."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Used 'megalomania' instead of a more natural way to express the comparison, and changed the core meaning of the examples in the list."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/exercise/screen_3/texts",
+          "ru": "Несколько упражнений, которые могут помочь:\n\n<h2>Взгляд со стороны</h2>\n\nПредставьте, что подруга рассказывает вам такую же ситуацию. Что бы вы ей сказали? Как бы вы поддержали её? Точно так же можно поддержать и себя.\n\n<h2>Фраза «если бы…»</h2>\n\nДополняйте мысль: «Если бы я действительно была во всем ответственна, это значило бы…».\n\nНапример: «…что я могу контролировать чувства других», или «…что я читаю мысли», или «…что я отвечаю за все события вокруг».\n\n<important>Замечая абсурдность этих фантазий, легче вернуть реальный взгляд на ситуацию.</important>\n\nСо временем такие упражнения помогают мягко отделять реальные факты от автоматической вины.\n\nПомните: быть внимательной к событиям — это ценно. Но это не значит, что вы обязаны отвечать за всё.\n\nОсвобождаясь от персонализации, вы возвращаете себе больше легкости, пространства и внутреннего спокойствия.",
+          "oldText": "You can also use the following exercises to work on your belief:\n\n<h2>Applying an External Perspective</h2>\n\nImagine a friend tells you that his colleague didn’t greet him in the morning. How would you react? What would you say to him? What advice would you give? This will help you distance yourself from your own emotions and look at the situation more objectively.\n\n<h2>Continue the phrase “if I were really...”</h2>\n\nTry to finish the following sentence: “If I were really responsible for this, it would mean that...”\n\nFor example: “If I were really responsible for the project’s failure, it would mean that I could control all the participants and prevent any mistakes.” But in reality, many factors are beyond your control.\n\n<important>“If I were really responsible for my friend being upset with me, it would mean that I could read his mind and guess his desires.” But that is impossible.</important>\n\nCompleting the “if I were really...” phrase will help you analyze your responsibility and realize that you can’t always control everything that happens.\n\nBy using these simple techniques, you can rid yourself of negative thoughts and free yourself from the feeling that you are responsible for everything.\n\nRemember that you are not the center of the universe and don’t have to be responsible for all the events around you. It’s better to focus your energy on solving problems and creating a happier and more harmonious life.",
+          "newText": "A few exercises that may help:\n\n<h2>A New Perspective</h2>\n\nImagine a friend is telling you about the same situation. What would you say to them? How would you support them? You can offer that same support to yourself.\n\n<h2>The “What if...” Phrase</h2>\n\nComplete the thought: “If I were truly responsible for everything, it would mean...\"\n\nFor example: “...that I can control how others feel,” or “...that I can read minds,” or “...that I am responsible for every event around me.”\n\n<important>By noticing how absurd these fantasies are, it becomes easier to return to a realistic view of the situation.</important>\n\nOver time, these exercises help you gently separate real facts from automatic guilt.\n\nRemember: being mindful of what happens is valuable. But that doesn’t mean you are responsible for everything.\n\nBy letting go of personalization, you regain more lightness, space, and inner peace.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 45,
+                "new": 96
+              },
+              "reason": "Translation A is a faithful, high-quality translation that respects the original text's structure, tone, and meaning. Translation B is a complete hallucination/rewrite: it introduces entirely new examples (colleagues, projects) that were never in the source, changes the core message, and fails as a translation.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The translator completely replaced the original content with new, unrelated examples (colleagues, project failure) instead of translating the source."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added significant amounts of text and advice not present in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone shifts from a supportive guide to a more didactic/preachy tone ('you are not the center of the universe')."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 55,
+                "new": 98
+              },
+              "reason": "Translation B is a faithful, professional, and idiomatic translation that adheres to all CBT terminology and tone guidelines. Translation A is a complete hallucination; it replaces the original text with entirely different examples (colleagues, project failure) and adds significant amounts of unsolicited advice and content not present in the source.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "critical",
+                  "note": "The translator added entirely new scenarios (colleagues, project failure) and advice that were not in the original text."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The core examples and the structure of the exercises were completely changed, losing the original meaning."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone becomes overly preachy ('you are not the center of the universe') which violates the 'understanding friend' tone guide."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/exercise/screen_2/texts",
+          "ru": "Поможет серия вопросов:\n\n<li>Должна ли я действительно винить себя?</li>\n\n<li>Было ли это под моим контролем?</li>\n\n<li>За что именно я могу отвечать? И где проходит граница моей ответственности?</li>\n\n<li>Какие другие причины могли повлиять на ситуацию?</li>\n\nПример:\n\nВы пришли на работу, а коллега не поздоровалась. Автоматическая мысль: «Наверное, я что-то сделала не так».\n\n<q author=\"Эпиктет\">Не вещи тревожат людей, а их взгляды на вещи.</q>\n\nТеперь включаем анализ:\n\n<li>Она могла не заметить меня, задуматься, не выспаться, спешить или переживать за что-то свое.</li>\n\n<li>Я не могу знать точную причину без прямого разговора.</li>\n\n<li>Если даже у неё плохое настроение, это может быть связано с множеством факторов, не со мной.</li>\n\n<li>Раз нет фактов, нет и оснований для вины.</li>\n\nМы не можем контролировать всё. Иногда лучший шаг — отпустить и позволить миру идти своим ходом.",
+          "oldText": "Use the following questions for analysis:\n\n<li>Do I need to blame myself for what happened?</li>\n\n<li>Was I in a position to control this?</li>\n\n<li>Am I really responsible for everything? Or just part of the problem? Which part exactly?</li>\n\n<li>What other reasons might there be for this problem?</li>\n\nExample:\n\nImagine a situation: you arrive at work, and your colleague doesn’t greet you. Immediately, a thought arises: “I did something wrong. It seems she doesn’t like me. Maybe I said something wrong yesterday, or I didn’t greet her, and now she’s holding it against me.”\n\n<q author=\"Epictetus\">People are not disturbed by things, but by their views on them.</q>\n\nAnalyze your thoughts using the above questions and write down alternative rational responses:\n\n<li>Perhaps she didn’t greet me because she didn’t sleep well, simply forgot, was lost in thought, or greeted me earlier, and I didn’t notice.</li>\n\n<li>Most likely, her possible bad state and the fact that she didn’t greet me have nothing to do with my behavior. I can only prove otherwise if I ask her directly. The most likely explanation: she didn’t sleep well, something happened in the morning, or she simply forgot.</li>\n\n<li>I’m not sure if she was sad, but even if she was, there are many reasons for her state that may have nothing to do with me. Even if she is upset because of me, she should tell me about it; otherwise, I can’t understand the situation for sure.</li>\n\n<li>Since I don’t know for certain whether the reason is related to my actions, I will not feel guilty about it.</li>\n\nRemember that we cannot control everything in life. Sometimes we just need to accept what happens and not try to explain everything through our own mistakes.",
+          "newText": "A series of questions can help:\n\n<li>Should I really be blaming myself?</li>\n\n<li>Was this within my control?</li>\n\n<li>What exactly am I responsible for? Where is the boundary of my responsibility?</li>\n\n<li>What other reasons could have influenced the situation?</li>\n\nExample:\n\nYou arrive at work, and a colleague doesn’t say hello. Automatic thought: “I must have done something wrong.”\n\n<q author=\"Epictetus\">People are not disturbed by things, but by the views they take of them.</q>\n\nNow, let’s analyze it:\n\n<li>She might not have noticed me, been lost in thought, been sleep-deprived, been in a hurry, or been worried about something else.</li>\n\n<li>I can’t know the exact reason without a direct conversation.</li>\n\n<li>Even if she is in a bad mood, it could be due to many factors that have nothing to do with me.</li>\n\n<li>Since there are no facts, there is no basis for guilt.</li>\n\nWe can’t control everything. Sometimes the best step is to let go and let things take their course.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 96
+              },
+              "reason": "Translation B is a faithful, concise, and natural translation that adheres to the original structure and tone. Translation A suffers from massive 'additions' (hallucinating extra sentences in the example and analysis sections) which significantly deviates from the source and ruins the UX flow.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "critical",
+                  "note": "Added a large amount of text in the 'Example' and 'Analyze' sections that was not in the original (e.g., 'It seems she doesn’t like me...', 'I can only prove otherwise if I ask her directly')."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone becomes overly wordy and loses the punchy, supportive 'expert friend' feel of the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 96
+              },
+              "reason": "Translation A is a faithful, professional, and idiomatic translation that respects the original text's structure and tone. Translation B is a massive hallucination/re-write: it adds significant amounts of new content (the 'she doesn't like me' part), changes the meaning of the questions, and completely alters the structure of the analysis section, which is a critical error.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "critical",
+                  "note": "Added a large amount of text in the example and analysis sections that was not in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The questions and analysis points were heavily rephrased, losing the original's concise and direct nature."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone becomes wordy and repetitive, deviating from the 'expert friend' UX standard."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/exercise/title",
+          "ru": "Выход из ловушки «Все из-за меня»",
+          "oldText": "The Escape from the Trap of “It’s All My Fault”",
+          "newText": "Breaking the “It’s all my fault” trap",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 98
+              },
+              "reason": "Translation A is punchy, idiomatic, and follows the standard English style for article titles or headers. Translation B is overly wordy and sounds like a literal translation of the Russian noun-heavy structure.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too many prepositions ('from the trap of') makes it heavy and less engaging for a reader."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation B is more idiomatic and punchy for a title, using a dynamic gerund ('Breaking') instead of the heavy noun phrase ('The Escape from') used in A. B also follows sentence case more naturally for a modern article title.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Sounds a bit too formal and heavy ('The Escape from the Trap of...') compared to natural English editorial style."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Виноват всегда я? Иллюзия всемогущества",
+          "oldText": "Is It Always My Fault? The Illusion of Omnipotence",
+          "newText": "Is it always my fault? The illusion of omnipotence",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 85
+              },
+              "reason": "Translation A correctly uses Title Case for the headline, which is the standard for article titles in English. Translation B uses sentence case, which is less common for a standalone title/headline of this nature.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for a title, which makes it look more like a sentence than a headline."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A follows the sentence case rule for titles/headings as specified in the instructions, whereas Translation B uses Title Case, which is less appropriate for this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for the heading"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "<h2>Откуда появляется персонализация?</h2>\n\nЭтот тип убеждений формируется ещё в детстве.\n\nИзвестно, что мышление детей эгоцентрично, а значит, ребёнок искренне считает себя причиной всего происходящего вокруг.\n\nНапример, для детей трёх-четырёх лет совершенно нормально считать, что солнце встаёт, потому что они проснулись, и садится, когда им пора спать.\n\nОднако многие взрослые, вырастая, всё ещё используют элементы эгоцентрического мышления в повседневной жизни.\n\nСемейное или общественное давление может заставить человека считать себя ответственным за благополучие других. Например, ребёнок, вынужденный заботиться о своих родителях уже в раннем возрасте.\n\nПроблемы с самооценкой могут быть как следствием, так и причиной подобных убеждений.\n\n<important>Люди с низкой самооценкой часто склонны к персонализации. Они могут считать, что не достойны того, чтобы к ним относились хорошо, и поэтому приписывают негативные события своим действиям или недостаткам.</important>\n\nТравматический опыт в прошлом также может способствовать персонализации. В раннем возрасте велика вероятность искажения мышления ребёнка и убеждения, что всё происходящее зависит от него.\n\nНапример, если человек в детстве часто слышал от родителей фразы «ты во всём виноват» или «ты никогда ничего не делаешь правильно», он может потом носить этот «ярлык» всю жизнь, приписывая все негативные события своей вине.\n\nВ некоторых культурах принято брать на себя ответственность за всё, что происходит вокруг. Это может привести к тому, что люди будут склонны к персонализации, даже если они не виноваты в происходящем.\n\nКакими бы ни были причины формирования убеждений, мы можем менять своё мышление на любом этапе жизни, если у нас есть мотивация.\n\nВ следующей главе мы, как обычно, рассмотрим основные рекомендации по работе с верой в собственное всемогущество.\n\n<q author=\"Михаил Булгаков\">Нельзя винить себя за всё, если ты не считаешь себя всемогущим.</q>",
+          "oldText": "<h2>Where does personalization come from?</h2>\n\nThis type of belief begins to form in childhood.\n\nIt is well known that children’s thinking is egocentric — a child sincerely believes they are the cause of everything that happens around them.\n\nFor a three- or four-year-old, it is completely normal to think that the sun rises because they woke up and sets because it is time for them to go to bed.\n\nHowever, many adults continue to use elements of this egocentric thinking in everyday life.\n\nFamily or social pressure can push someone to feel responsible for other people’s well-being. For example, a child who has to take care of their parents from an early age.\n\nLow self-esteem can be both a consequence and a cause of these beliefs.\n\n<important>People with low self-esteem are often prone to personalization. They may believe they do not deserve to be treated well and therefore attribute negative events to their own actions or flaws.</important>\n\nTraumatic experiences in the past can also contribute to personalization. In early childhood, thinking is especially vulnerable to distortions, and a child can easily come to believe that everything depends on them.\n\nFor example, if someone often heard from their parents, “It’s all your fault,” or “You never do anything right,” they may carry this label for life, blaming themselves for every negative event.\n\nIn some cultures, people are encouraged to take responsibility for everything that happens around them. This can make them more prone to personalization, even when they are not actually at fault.\n\nWhatever the reasons behind these beliefs, we can change our thinking at any point in life if we are motivated to do so.\n\nIn the next chapter, as usual, we will look at key recommendations for working with the belief in your own omnipotence.\n\n<q author=\"Mikhail Bulgakov\">You cannot blame yourself for everything unless you secretly believe you are all-powerful.</q>",
+          "newText": "<h2>Where does personalization come from?</h2>\n\nThis type of belief often forms during childhood.\n\nIt is well known that children’s thinking is egocentric, meaning a child sincerely believes they are the cause of everything happening around them.\n\nFor example, for three- or four-year-olds, it is perfectly normal to believe that the sun rises because they woke up and sets when it is time for them to sleep.\n\nHowever, many adults still carry elements of egocentric thinking into their daily lives.\n\nFamily or social pressure can also lead a person to feel responsible for the well-being of others — for instance, a child who is forced to care for their parents at an early age.\n\nSelf-esteem issues can be both a cause and a consequence of such beliefs.\n\n<important>People with low self-esteem are often prone to personalization. They may feel they don’t deserve to be treated well, and therefore attribute negative events to their own actions or flaws.</important>\n\nPast traumatic experiences can also contribute to personalization. In early childhood, there is a high likelihood of developing distorted thinking and the belief that everything happening depends on them.\n\nFor example, if a person frequently heard phrases like “it’s all your fault” or “you never do anything right” from their parents, they might carry that “label” for the rest of their lives, attributing all negative events to their own guilt.\n\nIn some cultures, it is common to take responsibility for everything happening around you. This can lead people to be prone to personalization, even when they are not at fault for what is happening.\n\nRegardless of how these beliefs were formed, we can change our thinking at any stage of life if we have the motivation.\n\nIn the next chapter, as usual, we will look at key recommendations for working with the belief in one’s own omnipotence.\n\n<q author=\"Mikhail Bulgakov\">You cannot blame yourself for everything if you do not consider yourself omnipotent.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and flows better as a narrative text. It handles the Bulgakov quote with much more natural English phrasing, whereas B's version is a bit stiff and literal. A also uses better sentence structures for the psychological explanations.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The quote translation 'if you do not consider yourself omnipotent' is grammatically correct but sounds like a textbook; A's 'unless you secretly believe you are all-powerful' captures the literary essence much better."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'attributing all negative events to their own guilt' is slightly less natural than A's 'blaming themselves for every negative event'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 94
+              },
+              "reason": "Translation A is more polished and follows the source text's structure and tone more accurately. Translation B makes several stylistic choices that feel slightly less natural or deviate from the original meaning (e.g., 'unless you secretly believe' in the quote is a significant departure from the original 'if you do not consider yourself').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The Bulgakov quote 'unless you secretly believe' adds a layer of 'secrecy' not present in the original 'if you do not consider yourself'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'thinking is especially vulnerable to distortions' is a bit more academic/heavy than the original Russian."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The transition 'For a three- or four-year-old' is slightly less smooth than A's 'For three- or four-year-olds'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "В любой ситуации, каким бы ни был результат — причина этому я.\n\nНе успел на поезд — долго собирался. Люди напротив в метро смеются — наверняка надо мной. У партнёра нет настроения — значит, я сделал что-то не так.\n\nЗнакомо?\n\nЕсли да, то мы имеем дело с убеждением о собственном всемогуществе.\n\nКаждый из нас в той или иной степени сталкивался с персонализацией.\n\n<important>Это коварная психологическая ловушка, заставляющая вас чувствовать себя центром вселенной и брать на себя ответственность за многое из происходящего вокруг.</important>\n\nВы убеждены, что люди вокруг реагируют исключительно на вас, что их действия, мысли и чувства целиком зависят от ваших поступков, хотя на самом деле всё это не подлежит вашему контролю.\n\nНо вы мучаетесь, осуждая себя и испытывая гнетущее чувство вины.\n\nКак ни парадоксально, убеждение в собственном всемогуществе и всесилии ограничивает вас, погружая в тревогу и снижая эффективность.\n\nКак проявляется персонализация?\n\n<li>«Всё из-за меня»: Вы склонны верить, что всё, что происходит в жизни, — результат ваших собственных действий. Неважно, хорошее это или плохое, вы принимаете на себя всю ответственность.</li>\n\n<li>«Всё вокруг меня»: Вы убеждены, что окружающие постоянно думают о вас, обсуждают, замечают все ваши ошибки и недостатки.</li>\n\n<li>«Я виноват»: Чувство вины становится постоянным спутником, независимо от реальных причин событий.</li>",
+          "oldText": "In any situation, whatever the outcome, it must somehow be my doing.\n\nMissed the train — I must have taken too long getting ready. People sitting across from me on the subway are laughing — they must be laughing at me. My partner is in a bad mood — I must have done something wrong.\n\nDoes that sound familiar?\n\nIf yes, then you may be dealing with a belief in your own omnipotence.\n\nEvery one of us encounters personalization to some degree.\n\n<important>It is a subtle psychological trap that makes you feel like the center of the universe and pushes you to take responsibility for much of what happens around you.</important>\n\nYou are convinced that people’s reactions are always about you, that their actions, thoughts, and feelings are entirely shaped by what you do, even though in reality these things are not under your control.\n\nYet you keep tormenting yourself, judging yourself, and carrying a heavy sense of guilt.\n\nParadoxically, this belief in your own omnipotence and limitless power actually constrains you, fueling anxiety and making you less effective.\n\nHow does personalization show up?\n\n<li>“It’s all because of me”: you tend to believe that everything that happens in life is the result of your own actions. It does not matter whether it is good or bad — you take full responsibility.</li>\n\n<li>“Everything revolves around me”: you are convinced that others are constantly thinking about you, talking about you, and noticing every single mistake and flaw.</li>\n\n<li>“It’s my fault”: a sense of guilt becomes your constant companion, no matter what actually caused the situation.</li>",
+          "newText": "In any situation, no matter the outcome — I am the cause.\n\nI missed my train — it’s because I took too long to get ready. People on the subway are laughing — they must be laughing at me. My partner is in a bad mood — I must have done something wrong.\n\nSound familiar?\n\nIf so, you may be dealing with a belief in your own omnipotence.\n\nWe have all experienced personalization to some degree.\n\n<important>It’s a subtle psychological trap that makes you feel like the center of the universe, forcing you to take responsibility for so much of what happens around you.</important>\n\nYou feel convinced that people are reacting solely to you, and that their actions, thoughts, and feelings depend entirely on your behavior, even though most of this is actually beyond your control.\n\nAs a result, you suffer, judging yourself and carrying a heavy sense of guilt.\n\nParadoxically, this belief in your own omnipotence actually limits you, plunging you into anxiety and reducing your effectiveness.\n\nHow does personalization manifest?\n\n<li>“It’s all because of me”: You tend to believe that everything happening in your life is a result of your own actions. Whether it’s good or bad, you take full responsibility.</li>\n\n<li>“It’s all about me”: You are convinced that people are constantly thinking about you, discussing you, or noticing all your mistakes and flaws.</li>\n\n<li>“It’s my fault”: Guilt becomes a constant companion, regardless of the actual reasons behind events.</li>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and captures the 'voice' of the original much better. Its rendering of the examples (e.g., 'it must somehow be my doing') feels like natural English storytelling, whereas B is slightly more literal and stiff. A also handles the list items with better flow.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'I am the cause' in the opening is a bit clunky/stiff compared to A's more natural 'it must somehow be my doing'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The transition 'As a result, you suffer' is a bit heavy-handed compared to the more seamless 'Yet you keep tormenting yourself' in A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 94
+              },
+              "reason": "Translation A is more idiomatic and flows better as a cohesive narrative. It uses natural phrasing like 'Sound familiar?' and 'It's all about me', whereas B feels slightly more fragmented and uses clunky constructions like 'omnipotence and limitless power' (redundant) and 'how does personalization show up' (less professional than 'manifest').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Redundancy in 'omnipotence and limitless power' which sounds unnatural in English."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'How does personalization show up?' is a bit too informal/colloquial for this context compared to 'manifest'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'Every one of us encounters...' is slightly more heavy-handed than the smoother 'We have all experienced...' in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/exercise/description",
+          "ru": "Статья объясняет, что такое персонализация — привычка воспринимать события как связанные лично с собой. Вы узнаете, почему это мышление вызывает ненужное чувство вины и тревогу, и как шаг за шагом развить более здоровый взгляд на ситуации. Представленные техники помогут мягко отделять факты от мыслей, уменьшить самокритику и почувствовать больше внутреннего спокойствия.",
+          "oldText": "The article examines the phenomenon of personalization—the tendency to perceive events as personally related to oneself. It discusses methods to reduce the negative consequences of such thinking, including self-observation and situational analysis. The author offers practical advice and exercises to improve mental well-being and free oneself from unnecessary guilt.",
+          "newText": "This article explains what personalization is — the habit of perceiving events as being personally connected to you. You’ll learn why this thinking pattern causes unnecessary guilt and anxiety, and how to step-by-step develop a more helpful perspective. The techniques provided will help you gently separate facts from thoughts, reduce self-criticism, and find more inner peace.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 98
+              },
+              "reason": "Translation B is a faithful and idiomatic rendering of the original text, maintaining the warm, supportive tone and all key points. Translation A is a significant omission/re-write, adding information not present in the original (self-observation, situational analysis) and losing the specific emotional benefits mentioned.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing the specific mention of anxiety, the step-by-step process, and the goal of separating facts from thoughts."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added specific methods (self-observation, situational analysis) that are not in the source text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is too academic/dry ('examines the phenomenon') compared to the original's supportive tone."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 96
+              },
+              "reason": "Translation A is a faithful, high-quality transcreation that follows all CBT terminology guidelines and maintains the warm, supportive tone of the original. Translation B is a significant hallucination/omission: it completely changes the content, adding information not present in the source (self-observation, situational analysis) and omitting the specific benefits mentioned (separating facts from thoughts, inner peace).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "Missed the entire second half of the original text regarding specific techniques and benefits."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added specific methods (self-observation, situational analysis) that were not in the source."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone shifted from a supportive 'you' to a dry, academic third-person description ('The article examines...', 'The author offers...')."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'personally related to oneself' which is more clunky than the idiomatic 'personally connected to you'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Например:\n\n<li>Представьте, что вы зашли в магазин, и на кассе продавец грубо вам ответил. Вместо того чтобы подумать, что у продавца мог быть плохой день или он просто грубиян, вы начинаете корить себя: «Наверное, я сказал или сделал что-то не так».</li>\n\n<li>На встречу с друзьями позвали знакомую, которая вам не нравится. Вы думаете, что они сделали это специально, чтобы показать, что вы лишняя и что они не хотят с вами общаться.</li>\n\n<li>«Если она не отвечает на мой звонок, значит, она обиделась на меня».</li>\n\n<li>Эти подростки смеются и переглядываются — наверняка обсуждают меня.</li>\n\n<important>При таком стиле мышления совершенно неважно, кто виноват на самом деле — вина всё равно ощущается как ваша. Как думаете, к чему это может привести? Конечно, к стрессу, апатии, тревожности, проблемам с самооценкой и даже к депрессии.</important>\n\nПочему персонализация опасна?\n\n<li>Излишняя самокритика: Люди могут склоняться к самокритике и вине за события, которые на самом деле не зависели от них.</li>\n\n<li>Стресс и тревога: Постоянное ощущение, что все проблемы из-за меня, вызывает хронический стресс и тревожность.</li>\n\n<li>Проблемы в отношениях: Люди, склонные к персонализации, могут неправильно интерпретировать поведение других, обижаясь и разрушая отношения.</li>\n\n<li>Искаженное восприятие реальности: Как и любое иррациональное убеждение, персонализация вводит вас в заблуждение, мешая трезво оценивать ситуацию и упуская из виду объективные факты и обстоятельства.</li>\n\n<li>Низкая самооценка: Постоянно обвиняя себя во всём, вы подрываете свою уверенность в себе.</li>\n\n<li>Позиция жертвы: Некоторые люди неосознанно стараются навредить себе, наказывая себя за выдуманные проступки. Они могут позволять другим пренебрежительно к ним относиться.</li>\n\n<q author=\"Вадим Зеланд\">Чувство вины обязательно порождает сценарий наказания, причём без ведома вашего сознания</q>",
+          "oldText": "For example:\n\n<li>Imagine you walk into a store and the cashier speaks to you rudely. Instead of thinking that they might be having a bad day or are simply rude, you start blaming yourself: “I must have said or done something wrong.”</li>\n\n<li>You meet up with friends, and they invite someone you do not like. You decide they did it on purpose to show that you are not welcome and that they do not really want to spend time with you.</li>\n\n<li>“If they are not answering my call, it means they are offended by something I did.”</li>\n\n<li>These teenagers are laughing and exchanging glances — they must be talking about me.</li>\n\n<important>With this thinking style, it does not really matter who is actually responsible — it always feels like you are. What do you think this leads to? Unsurprisingly, to stress, apathy, anxiety, problems with self-esteem, and even depression.</important>\n\nWhy is personalization harmful?\n\n<li>Excessive self-criticism: people may become overly self-critical and feel guilty about events that were never really under their control.</li>\n\n<li>Stress and anxiety: the constant sense that “everything is my fault” creates chronic stress and anxiety.</li>\n\n<li>Relationship problems: people who tend to personalize may misinterpret others’ behavior, feel hurt, and damage relationships.</li>\n\n<li>Distorted view of reality: like any irrational belief, personalization misleads you, keeps you from seeing the bigger picture, and makes you overlook objective facts and circumstances.</li>\n\n<li>Low self-esteem: when you keep blaming yourself for everything, you slowly undermine your confidence and self-worth.</li>\n\n<li>Victim position: some people unconsciously try to harm or punish themselves for imagined wrongdoings. They may even allow others to treat them disrespectfully.</li>\n\n<q author=\"Vadim Zeland\">Guilt almost inevitably gives rise to a script of punishment, and your conscious mind may not even know it is happening.</q>",
+          "newText": "For example:\n\n<li>Imagine you walk into a shop and the cashier is rude to you. Instead of thinking they might be having a bad day or are just an unkind person, you start blaming yourself: “I must have said or done something wrong.”</li>\n\n<li>An acquaintance you don’t like is invited to a gathering with your friends. You think they did this on purpose to show you that you aren’t wanted and that they don’t want to hang out with you.</li>\n\n<li>“If she isn’t answering my call, she must be mad at me.”</li>\n\n<li>Those teenagers are laughing and whispering — they must be talking about me.</li>\n\n<important>With this way of thinking, it doesn’t matter who is actually at fault — the guilt still feels like yours. Where do you think this leads? It leads to stress, apathy, anxiety, self-esteem issues, and even depression.</important>\n\nWhy is personalization dangerous?\n\n<li>Excessive self-criticism: You may lean toward self-criticism and blaming yourself for events that were actually out of your control.</li>\n\n<li>Stress and anxiety: The constant feeling that everything is your fault causes chronic stress and anxiety.</li>\n\n<li>Relationship issues: People prone to personalization may misinterpret the behavior of others, leading to resentment and damaged relationships.</li>\n\n<li>Distorted perception of reality: Like any irrational belief, personalization misleads you, making it hard to assess situations clearly and causing you to overlook objective facts and circumstances.</li>\n\n<li>Low self-esteem: By constantly blaming yourself for everything, you undermine your own confidence.</li>\n\n<li>Victim mentality: Some people try to harm themselves, often without being aware of it, by punishing themselves for imagined mistakes. They may even allow others to treat them poorly.</li>\n\n<q author=\"Vadim Zeland\">Guilt inevitably creates a scenario of punishment, often without your conscious awareness</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation A is much more idiomatic and follows the UX guidelines for a warm, supportive tone. It uses natural contractions (don't, isn't) and avoids the stiff, slightly academic phrasing found in B. Translation A also handles the CBT-related nuances and the quote more gracefully.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Avoids contractions (do not, it does not), making it feel more formal/stiff than the target 'understanding friend' tone."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of the quote is a bit wordy and less impactful than A."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "'Victim position' is a literal translation of 'позиция жертвы'; 'Victim mentality' (used in A) is the standard English idiom."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and maintains a better flow for a psychological article. It uses more natural phrasing like 'not welcome' and 'seeing the bigger picture'. Translation B has a few clunky spots, such as 'An acquaintance... is invited' (passive/awkward) and 'Victim mentality' (which is common, but 'Victim position' or 'playing the victim' fits the context of a cognitive state better, though B's 'mentality' is acceptable). A's handling of the quote is also more elegant.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The second bullet point is phrased awkwardly compared to the original and A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'переглядываются' as 'whispering' is a slight shift in meaning from 'exchanging glances'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The quote translation is a bit more literal/stiff than A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/omnipotence.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Эта статья исследует психологическое явление персонализации — убеждение, что вы являетесь причиной всего происходящего вокруг. В тексте раскрываются механизмы этого мышления, его негативные последствия, такие как стресс, тревожность, низкая самооценка и проблемы в отношениях. Также рассматриваются причины формирования такого убеждения, начиная с детства и влияния культурных норм. В заключение приводятся рекомендации по преодолению персонализации и освобождению от чувства необоснованной вины.",
+          "oldText": "This article explores the psychological phenomenon of personalization—the belief that you are the cause of everything that happens around you. It explains how this thinking style works and how it leads to stress, anxiety, low self-esteem, and difficulties in relationships. The article also looks at where this belief comes from, starting with childhood experiences and cultural influences, and offers recommendations for overcoming personalization and freeing yourself from unnecessary guilt.",
+          "newText": "This article explores the psychological phenomenon of personalization — the belief that you are the cause of everything happening around you. It examines the mechanisms of this thinking pattern and its negative consequences, such as stress, anxiety, low self-esteem, and relationship issues. It also looks at the roots of this belief, from childhood influences to cultural norms. Finally, it offers recommendations on how to overcome personalization and free yourself from unfounded guilt.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more professional and follows the stylistic requirements for an article (better flow and rhythm). Translation B feels slightly more repetitive and uses 'unnecessary guilt' instead of the more accurate 'unfounded guilt'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence structure is a bit repetitive ('It explains... how it leads... The article also looks... and offers...') compared to the smoother flow of A."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Using 'unnecessary guilt' instead of 'unfounded guilt' (необоснованная вина) slightly shifts the nuance from 'lack of basis' to 'not needed'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more idiomatic and professional, using superior vocabulary like 'mechanisms', 'thinking pattern', and 'roots'. Translation A is slightly more repetitive and uses 'unnecessary guilt', which is a weaker choice than 'unfounded guilt' for a psychological context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'how this thinking style works' is a bit more colloquial/simple compared to the more professional 'mechanisms of this thinking pattern' in B."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'unnecessary guilt' instead of 'unfounded guilt', which is a more precise translation of 'необоснованной'."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

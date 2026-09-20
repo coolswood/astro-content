@@ -1,0 +1,208 @@
+{
+  "file": "story/useful.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Перевод точный, термин unhelpful beliefs использован верно."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология (core belief, mental well-being) соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный английский, термины на месте."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация вопроса."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Пример переведен корректно."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Идиоматично."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный, 'switch on' — хорошая адаптация."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Естественный тон."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Терминология (automatic thoughts, intermediate beliefs, core beliefs) соблюдена идеально."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Терминология соблюдена, смысл передан верно."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Цитата переведена корректно."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Определение дано верно."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный, 'reinforce' — верный термин."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Терминология (CBT) и смысл соблюдены."
+              }
+            ],
+            "issues": [],
+            "reviewed": [],
+            "notes": "замечаний не поступало",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_2/texts/8",
+                "current": "In this case, work becomes a coping strategy for John (we’ll discuss coping strategies in future chapters).",
+                "proposed": "In this case, work becomes a coping strategy for John (we’ll discuss coping strategies in the following chapters).",
+                "alternatives": [
+                  "In this case, work becomes a coping strategy for John (we’ll discuss coping strategies in later chapters)."
+                ],
+                "rationale": "В оригинале «в следующих главах». Вариант «in future chapters» звучит слишком обобщенно (как «в будущем вообще»), тогда как «in the following chapters» или «in later chapters» точнее передает структуру книги/курса."
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/screen_3/texts/2",
+                "current": "This is unhelpful because any significant setback at work — a failed project, a career delay, or a job loss — can sharply trigger John’s core belief of inadequacy, which he experiences as an “internal apocalypse.”",
+                "proposed": "This is unhelpful because any significant setback at work — a failed project, a career delay, or a job loss — can sharply trigger John’s core belief of inadequacy, which feels like an “internal apocalypse.”",
+                "alternatives": [
+                  "...which he experiences as an “internal apocalypse.”"
+                ],
+                "rationale": "Вариант «which he experiences as» грамматически верен, но «which feels like» звучит более естественно и менее академично для статьи в приложении, сохраняя эмоциональный вес оригинала («переживается как»). Однако, учитывая, что текущий вариант не является ошибкой, это скорее стилистическая шлифовка. Если придерживаться правила минимальной правки, текущий вариант допустим, но 'feels like' лучше попадает в Tone of Voice."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Соблюдены все правила терминологии КПТ (core belief, intermediate belief, unhelpful), выдержан теплый и поддерживающий тон, правильно использованы артикли и пунктуация (em dash). Текст читается естественно, как написанный носителем. Рекомендована лишь одна минимальная правка для точности передачи контекста глав."
+            },
+            "timings": {
+              "issues": 15009,
+              "deliberate": 730,
+              "recommend": 10310
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/screen_3/texts/2",
+              "from": "This is unhelpful because any significant setback at work — a failed project, a career delay, or a job loss — can sharply trigger John’s core belief of inadequacy, which he experiences as an “internal apocalypse.”",
+              "to": "This is unhelpful because any significant setback at work — a failed project, a career delay, or a job loss — can sharply trigger John’s core belief of inadequacy, which feels like an “internal apocalypse.”"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/screen_2/texts/8",
+              "reason": "цитата судьи не похожа на лист (сходство 40%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

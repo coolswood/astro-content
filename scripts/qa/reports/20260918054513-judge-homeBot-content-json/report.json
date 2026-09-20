@@ -1,0 +1,1029 @@
+{
+  "file": "homeBot/content.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/days/fist",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный, терминология CBT (CBT) соблюдена."
+              },
+              {
+                "path": "/days/third",
+                "verdict": "ok",
+                "note": "Терминология (unhelpful thoughts, psychologist) верна."
+              },
+              {
+                "path": "/days/fourth",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/days/fifth",
+                "verdict": "ok",
+                "note": "Терминология (Premium, trial period) соблюдена."
+              },
+              {
+                "path": "/days/eighth",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, ошибки нет."
+              },
+              {
+                "path": "/days/tenth",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/appUpdated/0",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/1",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/2",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/3",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/4",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/5",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/neverUsed/0",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/neverUsed/1",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/neverUsed/2",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/premiumThanks/content",
+                "verdict": "ok",
+                "note": "Тон и терминология верны."
+              },
+              {
+                "path": "/quote/0",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/quote/1",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/quote/2",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/quote/3",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/quote/4",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/quote/5",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/quote/6",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/readArticle/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/readArticle/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/readArticle/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/testExpired/0",
+                "verdict": "ok",
+                "note": "Терминология (test results) верна."
+              },
+              {
+                "path": "/testExpired/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/testExpired/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/testExpired/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/testExpired/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/testExpired/5",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/header/0",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/1",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/2",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/3",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/4",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/5",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/6",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/affirmation/0",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              },
+              {
+                "path": "/affirmation/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон дружелюбный, использование em dash корректно."
+              },
+              {
+                "path": "/affirmation/2",
+                "verdict": "issue",
+                "note": "Слишком тяжеловесная конструкция 'inner mindset', калька с 'внутреннего настроя'."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/neverUsed/0",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Опечатка в плейсхолдере",
+                "why": "Вместо 'diary' (дневник) написано 'dairy' (молочные продукты). Это сломает отображение имени раздела."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/neverUsed/1",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Опечатка в плейсхолдере",
+                "why": "Вместо 'diary' (дневник) написано 'dairy' (молочные продукты)."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/neverUsed/2",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Опечатка в плейсхолдере",
+                "why": "Вместо 'diary' (дневник) написано 'dairy' (молочные продукты)."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/affirmation/2",
+                "fragment": "for your inner mindset",
+                "type": "style",
+                "severity": "minor",
+                "problem": "heavy phrasing / unnatural collocation",
+                "why": "Фраза 'inner mindset' звучит избыточно и неестественно для носителя. В английском 'mindset' — это уже устойчивое понятие, добавление 'inner' создает тяжеловесную конструкцию, характерную для кальки с русского."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical typo in placeholder: 'dairy' instead of 'diary'."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "rank": 1,
+                "note": "Duplicate of I1 (same typo in different path)."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "rank": 1,
+                "note": "Duplicate of I1 (same typo in different path)."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Stylistic issue: 'inner mindset' is redundant/unnatural."
+              }
+            ],
+            "notes": "The translation contains a critical error in placeholders (dairy/diary) across multiple paths, which must be fixed to avoid nonsensical UI text. A minor stylistic redundancy was also noted.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/neverUsed/0",
+                "current": "You haven’t made any entries in your <b>{dairy}</b> yet. Perhaps today is a good time to start. To find an approach that truly works for you, it helps to try different methods.",
+                "proposed": "You haven’t made any entries in your <b>{diary}</b> yet. Perhaps today is a good time to start. To find an approach that truly works for you, it helps to try different methods.",
+                "alternatives": [],
+                "rationale": "Исправление критической опечатки в плейсхолдере: 'dairy' (молочные продукты) заменено на 'diary' (дневник). Это касается всех путей с этим плейсхолдером."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 1,
+                "path": "/neverUsed/1",
+                "current": "I noticed you haven’t left any entries in your <b>{dairy}</b> yet. Today is a great day to take that first step. Try different ways — it’s easier to find what works best for you that way.",
+                "proposed": "I noticed you haven’t left any entries in your <b>{diary}</b> yet. Today is a great day to take that first step. Try different ways — it’s easier to find what works best for you that way.",
+                "alternatives": [],
+                "rationale": "Исправление критической опечатки в плейсхолдере: 'dairy' на 'diary'."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 1,
+                "path": "/neverUsed/2",
+                "current": "Your <b>{dairy}</b> is currently empty. Make your first entry today and experiment with different techniques to find the ones that suit you best.",
+                "proposed": "Your <b>{diary}</b> is currently empty. Make your first entry today and experiment with different techniques to find the ones that suit you best.",
+                "alternatives": [],
+                "rationale": "Исправление критической опечатки в плейсхолдере: 'dairy' на 'diary'."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/affirmation/2",
+                "current": "I’d like to suggest this affirmation for your inner mindset.",
+                "proposed": "I’d like to suggest this affirmation to help set your mindset.",
+                "alternatives": [
+                  "I’d like to suggest this affirmation for your mindset.",
+                  "I’d like to suggest this affirmation to help you find your focus."
+                ],
+                "rationale": "Фраза 'inner mindset' — избыточная калька. 'Mindset' уже подразумевает внутренние установки. Вариант 'to help set your mindset' звучит более естественно и соответствует тону 'помощника-эксперта'."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В тексте обнаружена критическая опечатка в плейсхолдере {dairy} (молочные продукты вместо дневника), которая повторяется в нескольких путях; её необходимо исправить на {diary}. Также есть небольшая стилистическая шероховатость в блоке аффирмаций. В остальном тон и терминология соответствуют стандартам."
+            },
+            "timings": {
+              "issues": 29569,
+              "deliberate": 4585,
+              "recommend": 13596
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/affirmation/2",
+              "from": "I’d like to suggest this affirmation for your inner mindset.",
+              "to": "I’d like to suggest this affirmation to help set your mindset."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/neverUsed/0",
+              "reason": "валидация листа: плейсхолдеры — потеряны: {dairy}; лишние: {diary}"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/neverUsed/1",
+              "reason": "валидация листа: плейсхолдеры — потеряны: {dairy}; лишние: {diary}"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/neverUsed/2",
+              "reason": "валидация листа: плейсхолдеры — потеряны: {dairy}; лишние: {diary}"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/days/fist",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный, терминология CBT соблюдена."
+              },
+              {
+                "path": "/days/third",
+                "verdict": "ok",
+                "note": "Перевод хороший, 'unhelpful thoughts' — верный термин."
+              },
+              {
+                "path": "/days/fourth",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/days/fifth",
+                "verdict": "ok",
+                "note": "Терминология (Premium, trial period) верна."
+              },
+              {
+                "path": "/days/eighth",
+                "verdict": "ok",
+                "note": "Перевод эмоционально адекватный, 'mental well-being' на месте."
+              },
+              {
+                "path": "/days/tenth",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/appUpdated/0",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/1",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/2",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/3",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/4",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/5",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/neverUsed/0",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/neverUsed/1",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/neverUsed/2",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/premiumThanks/content",
+                "verdict": "ok",
+                "note": "Тон и терминология соблюдены."
+              },
+              {
+                "path": "/quote/0",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/1",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/2",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/3",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/4",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/5",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/6",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/readArticle/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/readArticle/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/readArticle/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/testExpired/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/testExpired/1",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/testExpired/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/testExpired/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/testExpired/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/testExpired/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/header/0",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/1",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/2",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/3",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/4",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/5",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/6",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/affirmation/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/affirmation/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон дружелюбный, использование em dash корректно."
+              },
+              {
+                "path": "/affirmation/2",
+                "verdict": "issue",
+                "note": "В оригинале есть вежливое 'Вам', в переводе оно опущено, но это соответствует правилам (you/your), однако 'suggest this affirmation' звучит немного тяжеловесно по сравнению с естественным 'suggest an affirmation'."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/neverUsed/0",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Typo in placeholder",
+                "why": "The placeholder is written as '{dairy}' (молочные продукты) instead of '{diary}' (дневник). This will cause a spelling error in the UI."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/neverUsed/1",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Typo in placeholder",
+                "why": "The placeholder is written as '{dairy}' (молочные продукты) instead of '{diary}' (дневник). This will cause a spelling error in the UI."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/neverUsed/2",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Typo in placeholder",
+                "why": "The placeholder is written as '{dairy}' (молочные продукты) instead of '{diary}' (дневник). This will cause a spelling error in the UI."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/affirmation/2",
+                "fragment": "I’d like to suggest this affirmation",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Стилистическая тяжеловесность",
+                "why": "Конструкция 'suggest this affirmation' грамматически верна, но в контексте поддержки и дружелюбного тона носитель скорее использовал бы 'I'd like to suggest an affirmation' или 'Here is an affirmation'. Однако это не критично."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical typo in placeholder: 'dairy' (молочные продукты) instead of 'diary' (дневник)."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "rank": 1,
+                "note": "Duplicate of I1 (same typo in different path)."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "rank": 1,
+                "note": "Duplicate of I1 (same typo in different path)."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Minor stylistic heaviness, but acceptable for a formal/supportive AI tone."
+              }
+            ],
+            "notes": "The translation is high quality, but there is a critical technical error in the placeholders (dairy vs diary) that must be fixed to avoid embarrassing UI text.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/neverUsed/0",
+                "current": "You haven’t made any entries in your <b>{dairy}</b> yet. Perhaps today is a good time to start. To find an approach that truly works for you, it helps to try different methods.",
+                "proposed": "You haven’t made any entries in your <b>{diary}</b> yet. Perhaps today is a good time to start. To find an approach that truly works for you, it helps to try different methods.",
+                "alternatives": [],
+                "rationale": "Исправлена критическая опечатка в плейсхолдере: 'dairy' (молочные продукты) заменено на 'diary' (дневник). Это касается всех путей /neverUsed/0, 1, 2."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 1,
+                "path": "/neverUsed/1",
+                "current": "I noticed you haven’t left any entries in your <b>{dairy}</b> yet. Today is a great day to take that first step. Try different ways — it’s easier to find what works best for you that way.",
+                "proposed": "I noticed you haven’t left any entries in your <b>{diary}</b> yet. Today is a great day to take that first step. Try different ways — it’s easier to find what works best for you that way.",
+                "alternatives": [],
+                "rationale": "Исправлена критическая опечатка в плейсхолдере: 'dairy' (молочные продукты) заменено на 'diary' (дневник)."
+              },
+              {
+                "id": "c1-I3",
+                "priority": 1,
+                "path": "/neverUsed/2",
+                "current": "Your <b>{dairy}</b> is currently empty. Make your first entry today and experiment with different techniques to find the ones that suit you best.",
+                "proposed": "Your <b>{diary}</b> is currently empty. Make your first entry today and experiment with different techniques to find the ones that suit you best.",
+                "alternatives": [],
+                "rationale": "Исправлена критическая опечатка в плейсхолдере: 'dairy' (молочные продукты) заменено на 'diary' (дневник)."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/affirmation/2",
+                "current": "I’d like to suggest this affirmation to help set your mindset.",
+                "proposed": "I’d like to suggest an affirmation to help set your mindset.",
+                "alternatives": [
+                  "Here is an affirmation to help set your mindset."
+                ],
+                "rationale": "Текущий вариант 'suggest this affirmation' звучит немного тяжеловесно. Использование 'an affirmation' или 'Here is...' звучит более естественно и дружелюбно для AI-ассистента, соответствуя Tone of Voice."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Основная проблема — критическая опечатка в плейсхолдере {dairy} вместо {diary}, которая превращает 'дневник' в 'молочные продукты'. Также есть небольшая стилистическая шероховатость в блоке аффирмаций. После исправления опечаток текст готов к публикации."
+            },
+            "timings": {
+              "issues": 27886,
+              "deliberate": 4696,
+              "recommend": 13176
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/affirmation/2",
+              "from": "I’d like to suggest this affirmation to help set your mindset.",
+              "to": "I’d like to suggest an affirmation to help set your mindset."
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/neverUsed/0",
+              "reason": "валидация листа: плейсхолдеры — потеряны: {dairy}; лишние: {diary}"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/neverUsed/1",
+              "reason": "валидация листа: плейсхолдеры — потеряны: {dairy}; лишние: {diary}"
+            },
+            {
+              "id": "c1-I3",
+              "path": "/neverUsed/2",
+              "reason": "валидация листа: плейсхолдеры — потеряны: {dairy}; лишние: {diary}"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/days/fist",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный, терминология CBT соблюдена."
+              },
+              {
+                "path": "/days/third",
+                "verdict": "ok",
+                "note": "Термин unhelpful thoughts использован верно, стиль естественный."
+              },
+              {
+                "path": "/days/fourth",
+                "verdict": "ok",
+                "note": "Перевод хороший, смысл передан."
+              },
+              {
+                "path": "/days/fifth",
+                "verdict": "ok",
+                "note": "Соблюдены правила написания Premium и trial period."
+              },
+              {
+                "path": "/days/eighth",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, терминология mental well-being верна."
+              },
+              {
+                "path": "/days/tenth",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/appUpdated/0",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/1",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/2",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/3",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/4",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/appUpdated/5",
+                "verdict": "ok",
+                "note": "Коротко и естественно."
+              },
+              {
+                "path": "/neverUsed/0",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/neverUsed/1",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/neverUsed/2",
+                "verdict": "issue",
+                "note": "Опечатка в плейсхолдере: dairy вместо diary."
+              },
+              {
+                "path": "/premiumThanks/content",
+                "verdict": "ok",
+                "note": "Тон и терминология соблюдены."
+              },
+              {
+                "path": "/quote/0",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/1",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/2",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/3",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/4",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/5",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/quote/6",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/readArticle/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/readArticle/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/readArticle/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/testExpired/1",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/testExpired/2",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/testExpired/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/testExpired/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/header/0",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/1",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/2",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/3",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/4",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/5",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/header/6",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/affirmation/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/affirmation/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон дружелюбный, использование em dash корректно."
+              },
+              {
+                "path": "/affirmation/2",
+                "verdict": "ok",
+                "note": "Транскреация удачная, вежливое 'предлагаю Вам' адаптировано под естественный английский без лишнего 'please'."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/neverUsed/0",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Опечатка в плейсхолдере",
+                "why": "В английском языке 'dairy' означает 'молочные продукты', в то время как 'diary' означает 'дневник'. Это критическая ошибка, так как плейсхолдер не будет отображаться правильно или будет выглядеть нелепо."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/neverUsed/1",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Опечатка в плейсхолдере",
+                "why": "В английском языке 'dairy' означает 'молочные продукты', в то время как 'diary' означает 'дневник'. Это критическая ошибка, так как плейсхолдер не будет отображаться правильно или будет выглядеть нелепо."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/neverUsed/2",
+                "fragment": "{dairy}",
+                "type": "other",
+                "severity": "critical",
+                "problem": "Опечатка в плейсхолдере",
+                "why": "В английском языке 'dairy' означает 'молочные продукты', в то время как 'diary' означает 'дневник'. Это критическая ошибка, так как плейсхолдер не будет отображаться правильно или будет выглядеть нелепо."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical typo: 'dairy' (молочные продукты) instead of 'diary' (дневник)."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "note": "Duplicate of the same typo in the same placeholder across different paths."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "note": "Duplicate of the same typo in the same placeholder across different paths."
+              }
+            ],
+            "notes": "The translation contains a critical spelling error in the placeholder name ('dairy' vs 'diary') which affects the core functionality and meaning of the diary feature.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/neverUsed/0",
+                "current": "You haven’t made any entries in your <b>{dairy}</b> yet.",
+                "proposed": "You haven’t made any entries in your <b>{diary}</b> yet.",
+                "alternatives": [],
+                "rationale": "Исправлена критическая опечатка в плейсхолдере: 'dairy' (молочные продукты) заменено на 'diary' (дневник). Это касается всех путей с данным плейсхолдером."
+              }
+            ],
+            "overall": {
+              "score": 75,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена критическая ошибка в плейсхолдере: использование 'dairy' (молочные продукты) вместо 'diary' (дневник). Это делает фразы бессмысленными и непрофессиональными. Необходимо исправить плейсхолдер во всех ключах, где он используется. В остальном перевод качественный и соответствует Tone of Voice."
+            },
+            "timings": {
+              "issues": 26871,
+              "deliberate": 4573,
+              "recommend": 5675
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/neverUsed/0",
+              "reason": "цитата судьи не похожа на лист (сходство 32%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

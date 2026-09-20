@@ -151,3 +151,88 @@ describe('normalizeTagQuotes — кавычки атрибутов к двойн
     expect(data.d[0]).toBe('<activitylink id="DzseWuFv2t">');
   });
 });
+
+describe('normalizeTypographicQuotesEn', () => {
+  const { normalizeTypographicQuotesEn } = require('../scripts/lib/tag-reconcile.js');
+
+  test('прямые кавычки → типографские парные', () => {
+    const data = { a: 'The "achievement race" is real', b: ['Say "no" to stigma'] };
+    expect(normalizeTypographicQuotesEn(data)).toBe(2);
+    expect(data.a).toBe('The “achievement race” is real');
+    expect(data.b[0]).toBe('Say “no” to stigma');
+  });
+
+  test('апострофы → ’, цитаты в одну шпацию → ‘ ’', () => {
+    const data = { s: "You don't know 'best' yet" };
+    normalizeTypographicQuotesEn(data);
+    expect(data.s).toBe('You don’t know ‘best’ yet');
+  });
+
+  test('кавычки внутри тегов не трогаются', () => {
+    const data = { s: '<q author="A. Ivanov">He said "go"</q> and <instagram ids="123">' };
+    normalizeTypographicQuotesEn(data);
+    expect(data.s).toContain('author="A. Ivanov"');
+    expect(data.s).toContain('<instagram ids="123">');
+    expect(data.s).toContain('said “go”');
+  });
+
+  test('нечётное число кавычек вне тегов — лист пропускается', () => {
+    const data = { s: 'Broken " quote here' };
+    expect(normalizeTypographicQuotesEn(data)).toBe(0);
+    expect(data.s).toBe('Broken " quote here');
+  });
+});
+
+describe('reconcileInstagramTags', () => {
+  const { reconcileInstagramTags } = require('../scripts/lib/tag-reconcile.js');
+
+  test('ids заменяются на легаси-en по пути (включая списки-карусели)', () => {
+    const cur = { a: '<instagram ids="111,222">x' };
+    const legacy = { '/a': '<instagram ids="333">' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(1);
+    expect(cur.a).toBe('<instagram ids="333">');
+  });
+
+  test('тег, которого нет в легаси, удаляется из массива', () => {
+    const cur = { texts: ['before', '<instagram ids="111">', 'after'] };
+    const legacy = { '/texts/0': 'before', '/texts/1': 'after' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(1);
+    expect(cur.texts).toEqual(['before', 'after']);
+  });
+
+  test('легаси-тег, отсутствующий в переводе, вставляется на свой индекс', () => {
+    const cur = { texts: ['a', 'b'] };
+    const legacy = { '/texts/0': 'a', '/texts/1': '<instagram ids="333">', '/texts/2': 'b' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(1);
+    expect(cur.texts).toEqual(['a', '<instagram ids="333">', 'b']);
+  });
+
+  test('ru — источник (no-op); чужая локаль — no-op; пустой легаси — удаляет теги', () => {
+    const ru = { a: '<instagram ids="111">' };
+    expect(reconcileInstagramTags('ru', ru, { '/a': '<instagram ids="999">' })).toBe(0);
+    expect(ru.a).toContain('111');
+    const de = { a: '<instagram ids="111">' };
+    expect(reconcileInstagramTags('de', de, { '/a': '<instagram ids="999">' })).toBe(0);
+    const en = { a: '<instagram ids="111">' };
+    expect(reconcileInstagramTags('en', en, {})).toBe(1);
+    expect(en.a).toBeUndefined();
+  });
+
+  test('вставка и удаление в одном массиве — по убыванию индекса', () => {
+    const cur = { texts: ['a', '<instagram ids="111">', 'b'] };
+    const legacy = { '/texts/0': 'a', '/texts/1': 'b', '/texts/2': '<instagram ids="999">' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(2);
+    expect(cur.texts).toEqual(['a', 'b', '<instagram ids="999">']);
+  });
+});
+
+describe('reconcileInstagramTags — регресс дублирования', () => {
+  const { reconcileInstagramTags } = require('../scripts/lib/tag-reconcile.js');
+
+  test('тег уже на месте с тем же значением — повторный прогон не вставляет дубликат', () => {
+    const cur = { texts: ['a', '<instagram ids="900001">', 'b'] };
+    const legacy = { '/texts/0': 'a', '/texts/1': '<instagram ids="900001">', '/texts/2': 'b' };
+    expect(reconcileInstagramTags('en', cur, legacy)).toBe(0);
+    expect(cur.texts).toEqual(['a', '<instagram ids="900001">', 'b']);
+  });
+});

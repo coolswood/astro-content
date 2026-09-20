@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:48:53.926Z",
+    "Метка": "en-final-g23-useful",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/useful.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/useful.json": {
+      "en": [
+        {
+          "file": "story/useful.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Говоря о «пользе» иррациональных убеждений, всё сложнее, чем кажется на первый взгляд — давайте разберёмся.\n\nИногда может показаться, что такие убеждения подталкивают к достижениям; однако это скорее распространённое заблуждение, чем реальность.\n\nДля ясности вспомним три уровня: автоматические мысли, промежуточные убеждения и глубинные убеждения.\n\nПредставим, у молодого человека по имени Джон есть глубинное убеждение: «Я ни на что не способен», а промежуточное — «Я всегда должен быть успешным».\n\nС одной стороны, звучит неплохо: стремление к успеху — достойная цель, если это гибкое желание, а не жёсткое правило.\n\nМожно подумать, что такое убеждение полезно: будто бы оно усилит мотивацию, приведёт к достижениям и целеустремлённости.\n\nРабота тогда кажется сверхважной и будто несёт одни плюсы.\n\nНо давайте посмотрим глубже.\n\nЕсли это действительно жёсткое промежуточное убеждение, а не просто желание, оно, скорее всего, окажется деструктивным, потому что укоренено в глубинной установке о собственной несостоятельности. В таком случае работа для Джона становится копинг-стратегией (о копинг-стратегиях мы поговорим в следующих главах).\n\n<q author=\"Лев Толстой\">Так как человек может только любить или ненавидеть свою работу, он должен видеть её последствия. Трудоголики же просто забывают, что существуют не для работы, а работа — для них.</q>",
+          "oldText": "When we talk about the “benefit” of irrational beliefs, things are more complicated than they seem at first glance — let’s unpack this.\n\nSometimes it looks as if these beliefs push us toward achievements; however, this is more of a common illusion than reality.\n\nTo clarify, let’s recall the three levels: automatic thoughts, intermediate beliefs, and core beliefs.\n\nImagine a young man named John whose core belief is: “I’m not capable of anything”, and whose intermediate belief is: “I must always be successful.”\n\nOn the surface, it doesn’t sound so bad: striving for success is a good goal if it’s a flexible desire rather than a rigid rule.\n\nIt’s easy to assume that such a belief is helpful: as if it boosts motivation, leads to achievements and determination.\n\nWork then seems extremely important and appears to bring only advantages.\n\nBut let’s look deeper.\n\nIf this is truly a rigid intermediate belief and not just a preference, it will most likely turn out to be destructive, because it is rooted in a core belief of personal inadequacy. In this case, work becomes a coping strategy for John (we’ll talk more about coping strategies in the next chapters).",
+          "newText": "When it comes to the “usefulness” of unhelpful beliefs, things are more complex than they appear at first glance — let’s dive in.\n\nIt might sometimes seem like these beliefs drive achievement, but this is more of a common misconception than a reality.\n\nTo clarify, let’s recall the three levels: automatic thoughts, intermediate beliefs, and core beliefs.\n\nImagine a young man named John who has a core belief: “I am incapable,” and an intermediate belief: “I must always be successful.”\n\nOn one hand, it sounds okay: striving for success is a worthy goal if it’s a flexible desire rather than a rigid rule.\n\nYou might think such a belief is helpful, as if it would boost motivation, drive achievement, and increase purpose.\n\nIn this view, work seems incredibly important and appears to bring only benefits.\n\nBut let’s look deeper.\n\nIf this is truly a rigid intermediate belief rather than just a desire, it will likely prove to be unhelpful because it is rooted in a core belief of inadequacy. In this case, work becomes a coping strategy for John (we’ll discuss coping strategies in future chapters).\n\n<q author=\"Leo Tolstoy\">Since a person can only love or hate their work, they must see its consequences. Workaholics simply forget that they do not exist for work, but work exists for them.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation A is much more idiomatic and follows the project's terminology guidelines perfectly. It uses 'unhelpful beliefs' instead of the literal 'irrational beliefs' (which is less aligned with the project's soft tone) and correctly uses 'unhelpful' to describe the belief's effect. Translation B uses 'destructive', which is a bit heavy, and 'illusion', which is less natural than 'misconception'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'irrational beliefs' instead of the preferred 'unhelpful beliefs' context; uses 'destructive' instead of 'unhelpful'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'push us toward achievements' is slightly clunky compared to 'drive achievement'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The quote translation is a bit more literal and less fluid than A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 84
+              },
+              "reason": "Translation A is more faithful to the original text's structure and terminology. Translation B makes a significant terminology error by replacing 'irrational beliefs' with 'unhelpful beliefs' in the very first sentence, which changes the clinical nuance of the opening. A also handles the quote more naturally.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'unhelpful beliefs' instead of 'irrational beliefs' in the opening; while 'unhelpful' is used for 'деструктивные' later, the opening specifically refers to the concept of irrationality."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'increase purpose' is a bit clunky compared to 'leads to determination'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The Tolstoy quote was omitted entirely, though it was present in the source."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/useful.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Коротко: копинг-стратегия — это способ реагировать на стресс через мысли, чувства или поведение.\n\n<important>Проще говоря, Джон стремится быть успешным (промежуточное убеждение), чтобы не чувствовать себя «неспособным» (глубинное убеждение). Фокус на работе становится способом избежать болезненного самоощущения.</important>\n\nЭто деструктивно, потому что любая серьёзная сложность на работе — провал проекта, задержка в карьере или увольнение — может резко столкнуть Джона с глубинным убеждением о собственной несостоятельности, что переживается как «внутренний апокалипсис».\n\nПоследствия — ухудшение состояния, апатия, саморазрушающее поведение и даже депрессия.\n\nТеперь потенциальные «плюсы» уже не выглядят убедительно, правда?\n\nВыходит, убеждение «Я всегда должен быть успешным» скорее вредно: ошибки неизбежны, а при такой жёсткости каждая из них будет «доказывать» глубинную несостоятельность и ещё сильнее её закреплять.\n\nВажно помнить: убеждение — это идея, которую можно переосмыслить и сделать более полезной. Это заметно улучшает качество жизни — и именно этому учит когнитивно-поведенческая терапия.",
+          "oldText": "In short, a coping strategy is a way of responding to stress through thoughts, feelings, or behavior.\n\nIn simple terms, John strives to be successful (an intermediate belief) so that he doesn’t have to feel “incapable” (his core belief). Focusing on work becomes a way to avoid a painful sense of self.\n\nThis is destructive, because any serious setback at work — a failed project, career stagnation, or being fired — can abruptly confront John with his core belief of inadequacy, which feels like an “inner apocalypse”.\n\nThe consequences may include a sharp decline in mood, apathy, self-destructive behavior, or even depression.\n\nNow those supposed “benefits” don’t look very convincing anymore, do they?\n\nSo the belief “I must always be successful” is more harmful than helpful: mistakes are inevitable, and with such rigidity each one will “prove” his core inadequacy and reinforce it even further.\n\nIt is important to remember: a belief is an idea that can be re-examined and made more helpful. This significantly improves quality of life — and this is exactly what cognitive-behavioral therapy teaches.",
+          "newText": "In short: a coping strategy is a way of responding to stress through your thoughts, feelings, or behavior.\n\n<important>To put it simply, John strives to be successful (an intermediate belief) so that he doesn’t have to feel “incapable” (a core belief). Focusing on work becomes a way to avoid a painful sense of self.</important>\n\nThis is unhelpful because any significant setback at work — a failed project, a career delay, or a job loss — can sharply trigger John’s core belief of inadequacy, which feels like an “internal apocalypse.”\n\nThe consequences include worsening mental well-being, apathy, self-destructive behavior, and even depression.\n\nNow, those potential “benefits” don’t look so convincing, do they?\n\nIt turns out the belief “I must always be successful” is actually unhelpful: mistakes are inevitable, and with such rigidity, every mistake will “prove” his inadequacy and reinforce it even further.\n\nIt’s important to remember: a belief is just an idea that can be re-examined and made more helpful. This significantly improves your quality of life — and that is exactly what cognitive behavioral therapy (CBT) teaches you.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is much more natural and follows all the stylistic guidelines, especially regarding the 'warm expert' tone and the use of contractions. Translation B feels slightly more formal and clunky in places (e.g., 'being fired' vs 'job loss', 'inner apocalypse' vs 'internal apocalypse').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The tone is a bit too stiff for a supportive app; lacks the natural use of contractions (It is vs It's)."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'destructive' instead of the preferred 'unhelpful' for beliefs/strategies, though 'destructive' is acceptable in a general sense."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'being fired' is a bit blunt/harsh compared to the more professional 'job loss'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation B follows the project's specific terminology and tone guidelines much more closely, particularly regarding 'unhelpful' instead of 'destructive' and 'mental well-being' instead of 'decline in mood'. It also correctly introduces the CBT acronym.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'destructive' instead of the preferred 'unhelpful' for beliefs/strategies; used 'decline in mood' instead of 'mental well-being'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Did not introduce the 'CBT' acronym upon first mention of cognitive-behavioral therapy."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/useful.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "В предыдущих главах мы уделяли много внимания деструктивным мыслям и убеждениям. Это закономерно: именно они заметно ухудшают эмоции, поведение и общее самочувствие.\n\nОтсюда возникает вопрос: действительно ли все убеждения вредны, могут ли какие-то из них приносить пользу?\n\nЧаще всего негативные убеждения активируются в стрессовой ситуации, в подавленном состоянии или при депрессии, а также при событиях, которые вроде бы подтверждают эти убеждения.\n\nНапример, если у человека есть убеждение «Я ни на что не способен», то после провала на экзамене или замечания начальника оно, вероятно, активируется.\n\nТогда человек начинает воспринимать происходящее через призму этого убеждения, даже если такой взгляд нелогичен и не соответствует фактам.\n\nОднако это не значит, что все убеждения одинаково плохи и лишены пользы.\n\nВ менее напряжённых обстоятельствах или в более ресурсном состоянии может «включаться» и поддерживающее убеждение, например: «Я достаточно способен».\n\nПоэтому на вопрос «Все ли убеждения вредны?» ответ — нет, не все.",
+          "oldText": "In previous chapters we talked a lot about destructive thoughts and beliefs. And for good reason: they significantly worsen our emotions, behavior, and overall well-being.\n\nThis raises a question: are all beliefs really harmful, or can some of them actually be useful?\n\nMost often, negative beliefs are activated in stressful situations, during low mood or depression, and in events that seem to “confirm” these beliefs.\n\nFor example, if someone holds the belief “I’m not capable of anything”, then after failing an exam or receiving criticism from a manager, this belief is likely to get triggered.\n\nThe person begins to interpret what is happening through the lens of this belief, even if that outlook is illogical and doesn’t match the facts.\n\nHowever, this doesn’t mean that all beliefs are equally bad or completely useless.\n\nIn less stressful circumstances or when we have more inner resources, a more supportive belief may “switch on” instead, such as: “I’m capable enough.”\n\nSo if we ask, “Are all beliefs harmful?” the answer is: no, not all of them.",
+          "newText": "In previous chapters, we’ve focused heavily on unhelpful thoughts and beliefs. This makes sense: they are the ones that significantly impact your emotions, behavior, and overall well-being.\n\nThis raises a question: are all beliefs harmful, or can some of them actually be helpful?\n\nMost often, unhelpful beliefs are triggered by stressful situations, low moods, or depression, as well as by events that seem to confirm them.\n\nFor example, if someone holds the belief “I am incapable,” it will likely be triggered after failing an exam or receiving criticism from a boss.\n\nThe person then begins to view everything through the lens of that belief, even if that perspective is illogical or doesn’t align with the facts.\n\nHowever, this doesn’t mean that all beliefs are equally bad or useless.\n\nIn less stressful circumstances or when you’re feeling more resilient, a helpful belief might “switch on,” such as: “I am capable enough.”\n\nSo, to answer the question “Are all beliefs harmful?” — the answer is no, not all of them.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A follows the project's terminology guidelines perfectly (using 'unhelpful' instead of 'destructive' or 'negative') and maintains a much more natural, professional flow. Translation B uses 'destructive' and 'negative', which are less aligned with the preferred 'unhelpful' tone, and its phrasing is slightly more clunky.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'destructive' and 'negative' instead of the preferred 'unhelpful' for beliefs."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Phrasing like 'during low mood' is slightly unidiomatic compared to 'low moods' or 'feeling low'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'when we have more inner resources' is a bit of a calque from the Russian 'в более ресурсном состоянии'; 'feeling more resilient' in A is much more natural for a native speaker."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B follows the project's terminology guidelines perfectly, using 'unhelpful' instead of 'destructive'. It also sounds more natural and professional for a mental health context, using 'resilient' and 'helpful' effectively.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'destructive' instead of the preferred 'unhelpful' for beliefs."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'during low mood' is slightly less idiomatic than 'low moods' or 'feeling low' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/useful.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Статья рассматривает влияние иррациональных убеждений на психоэмоциональное состояние. На примере Джона, который стремится к успеху из-за глубинной уверенности в собственной несостоятельности, показано, как такие убеждения превращаются в деструктивные копинг-стратегии. Автор подчёркивает важность осознавать и пересматривать убеждения, чтобы повышать качество жизни.",
+          "oldText": "This article looks at how irrational beliefs affect our emotional state. Using the example of John, who strives for success because of a deep conviction of his own inadequacy, it shows how such beliefs turn into destructive coping strategies. The author emphasizes how important it is to become aware of and reconsider our beliefs in order to improve quality of life.",
+          "newText": "This article explores how unhelpful beliefs affect your mental well-being. Using the example of John, who strives for success due to a core belief of inadequacy, we see how such beliefs can turn into unhelpful coping strategies. The author emphasizes the importance of noticing and re-examining your beliefs to improve your quality of life.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B follows the project's specific terminology (unhelpful beliefs, mental well-being) and uses a more natural, engaging tone. Translation A uses 'irrational beliefs' and 'emotional state', which are more academic/literal and less aligned with the 'understanding friend' tone and the provided glossary.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'irrational beliefs' instead of 'unhelpful beliefs' and 'emotional state' instead of 'mental well-being'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'it shows how' is a bit clunky compared to the more active 'we see how' in B."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Translation A follows all CBT terminology guidelines (unhelpful beliefs, core belief, mental well-being) and uses a natural, engaging tone. Translation B uses outdated/non-standard terms like 'irrational beliefs' and 'destructive coping strategies', and its phrasing is clunky and academic.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'irrational beliefs' instead of 'unhelpful beliefs' and 'destructive' instead of 'unhelpful' as per project guidelines."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'emotional state' instead of 'mental well-being'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The construction 'it shows how' is a bit weak/clunky compared to the active 'we see how' or direct phrasing."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/useful.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Могут ли иррациональные убеждения быть полезны?",
+          "oldText": "Can Irrational Beliefs Ever Be Helpful?",
+          "newText": "Can unhelpful beliefs actually be useful?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 75
+              },
+              "reason": "Translation A correctly captures the tone and structure of the original question. Translation B uses 'unhelpful beliefs' which, while part of our glossary for 'unhelpful/adaptive', creates a logical redundancy/clash with 'useful' in this specific sentence structure, making it sound awkward.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrasing 'unhelpful beliefs actually be useful' is semantically clunky and repetitive; it lacks the punch of the original question."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A follows the project's specific terminology guidelines by using 'unhelpful beliefs' instead of the outdated/non-standard 'irrational beliefs'. It also correctly uses sentence case for a question.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Uses 'Irrational Beliefs' instead of the required 'unhelpful beliefs'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case for a question, which is less common for article headers in this UX style compared to sentence case"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

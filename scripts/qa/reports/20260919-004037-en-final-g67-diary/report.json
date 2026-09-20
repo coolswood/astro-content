@@ -1,0 +1,1132 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T21:40:37.111Z",
+    "Метка": "en-final-g67-diary",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "texts/diary.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "texts/diary.json": {
+      "en": [
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/4/right",
+          "ru": "Я не уверена, что справлюсь",
+          "oldText": "I’m not sure I can handle it",
+          "newText": "I’m not sure I can handle this",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "tie",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 100
+              },
+              "reason": "Both translations are perfect, natural, and idiomatic. The choice between 'it' and 'this' is purely stylistic and depends on the specific context of what is being handled, but neither is incorrect.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "tie",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 100
+              },
+              "reason": "Both translations are perfect, natural, and idiomatic. The choice between 'this' and 'it' is purely stylistic and depends on whether the speaker is referring to a specific situation (this) or a general burden (it).",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/5/description",
+          "ru": "Иногда мы записываем только более мягкие мысли, избегая самых болезненных. Но именно признание ключевых мыслей помогает лучше разобраться в себе.",
+          "oldText": "Sometimes people only record thoughts that seem more acceptable, ignoring key or painful automatic thoughts.",
+          "newText": "Sometimes we only record milder thoughts to avoid the most painful ones. However, acknowledging key thoughts is what truly helps you understand yourself.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 95
+              },
+              "reason": "Translation B is much closer to the original's tone and structure, maintaining the 'we' perspective and the supportive nuance. Translation A introduces 'people' (changing the subject) and adds 'automatic', which is an assumption not present in the source text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "Changed 'we' to 'people', losing the personal connection of the original."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'automatic' to thoughts, which is not in the source."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The second sentence about the importance of acknowledging key thoughts is completely missing/merged incorrectly."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 92
+              },
+              "reason": "Translation A is a faithful and natural rendition of the original, maintaining the flow and the 'understanding friend' tone. Translation B is an oversimplification that omits the second sentence entirely and introduces unrequested terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The entire second sentence regarding the importance of acknowledging key thoughts is missing."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'automatic' which, while contextually relevant to CBT, is an addition not present in the source text."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/smer/h2",
+          "ru": "Установите связь с автоматическими мыслями",
+          "oldText": "Establish a Connection with Automatic Thoughts",
+          "newText": "Identify the link to your automatic thoughts",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Translation A uses a more natural, action-oriented verb ('Identify') and follows the sentence case rule for UI. Translation B is overly formal ('Establish a Connection'), uses Title Case incorrectly for a UI instruction, and lacks the necessary article/possessive before 'automatic thoughts'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Uses Title Case instead of sentence case"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Sounds overly formal/stilted ('Establish a Connection')"
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing article or possessive before 'automatic thoughts'"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Translation A is a literal, heavy calque of the Russian 'установите связь', which sounds unnatural in a mental health context. Translation B uses 'identify the link', which is much more idiomatic and aligns with the goal of cognitive behavioral therapy.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Sounds like a technical manual for hardware rather than a psychological exercise; 'Establish a connection' is too formal and stiff."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/1/right",
+          "ru": "Я думаю, что мои коллеги считают меня некомпетентной",
+          "oldText": "I think my colleagues consider me incompetent",
+          "newText": "I think my colleagues view me as incompetent",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Translation A is more direct and natural for a personal thought. Translation B, while grammatically correct, is slightly more formal/detached due to the 'view me as' construction.",
+              "issues": []
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 95
+              },
+              "reason": "Both translations are grammatically correct, but 'view me as' sounds more natural and idiomatic in a psychological/reflective context than 'consider me'.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/2/description",
+          "ru": "На этом шаге важно отразить вашу интерпретацию произошедшего, а не сам факт. Событие мы уже зафиксировали ранее.",
+          "oldText": "It is important to note your attitude toward the event. The fact of the event was recorded in the previous step.",
+          "newText": "At this step, it’s important to reflect your interpretation of what happened, rather than the fact itself. We’ve already recorded the event earlier.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation B is much more natural and follows the 'understanding friend' tone, using contractions and active voice. Translation A feels stiff, uses 'attitude' which is a slight mistranslation of 'interpretation', and sounds like a manual rather than a supportive app.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Stiff, formal construction ('It is important to...') and unnatural phrasing ('The fact of the event was recorded')."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "'Attitude' is not a precise equivalent for 'интерпретация' in a CBT context; 'interpretation' is the standard term."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Translation A is much more natural and follows the 'understanding friend' tone, whereas B is stiff and uses 'attitude' which is a mistranslation of 'интерпретация' in a CBT context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Using 'attitude' instead of 'interpretation' changes the CBT meaning; 'attitude' refers to a long-term disposition, while 'interpretation' refers to the specific cognitive process of evaluating an event."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'The fact of the event was recorded' is heavy and sounds like a technical log rather than a supportive guide."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/3/wrong",
+          "ru": "Я имею склонность полагать, что моё мнение не имеет значения",
+          "oldText": "I tend to believe that my opinion doesn’t matter",
+          "newText": "I have a tendency to believe that my opinion does not matter",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation B is more natural and idiomatic for a mental health context, using the common 'I tend to' construction and a contraction. Translation A is grammatically correct but feels slightly heavy and formal due to 'I have a tendency to' and the lack of a contraction.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Slightly wordy and formal ('I have a tendency to' vs 'I tend to') and lacks the conversational tone of a contraction ('does not' vs 'doesn't')."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation A is more natural and idiomatic for a mental health context, using a smooth verb phrase instead of the heavy noun-based construction in B. It also correctly uses the contraction 'doesn't', which aligns with the app's tone of voice.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'I have a tendency to' is slightly wordy and formal (clunky) compared to the more natural 'I tend to'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Avoids contractions ('does not'), making the tone feel more stiff and less like a 'supportive friend'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/1/description",
+          "ru": "Иногда мысль записывается очень обобщённо, и тогда сложно понять, что именно вызывает переживание. Лучше конкретизировать.",
+          "oldText": "An automatic thought may be recorded too generally.",
+          "newText": "Sometimes a thought is recorded too broadly, making it hard to understand what exactly is causing the distress. It’s better to be specific.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 95
+              },
+              "reason": "Translation A is a complete and accurate rendering of the original text, maintaining the tone and meaning. Translation B is a severe omission, losing more than half of the original message.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire second sentence and the core explanation of why specificity is needed are missing."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 40,
+                "new": 95
+              },
+              "reason": "Translation B is a complete and accurate translation that preserves the full meaning, tone, and structure of the original. Translation A is a severe omission, losing more than half of the original text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire second sentence and the causal clause of the first sentence are missing."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/info/comparison",
+          "ru": "Запишите аргументы, которые поддерживают автоматическую мысль, и те, которые ей противоречат. Это поможет объективно оценить ее и увидеть ситуацию шире.",
+          "oldText": "Write down the arguments that support the automatic thought and those that contradict it. This will help you evaluate it more objectively and see the situation from a broader perspective.",
+          "newText": "Write down the arguments that support the automatic thought and those that contradict it. This will help you evaluate it objectively and see the situation from a broader perspective.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 98
+              },
+              "reason": "Both translations are excellent and follow all CBT terminology and stylistic guidelines. Translation A is slightly better as it avoids the unnecessary addition of 'more' (addition), which isn't present in the original and can subtly imply that the previous evaluation was subjective.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "added 'more' before 'objectively', which is not in the original"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 94
+              },
+              "reason": "Translation A is slightly better because 'evaluate it more objectively' more accurately captures the nuance of the Russian 'объективно оценить ее' in the context of a process of improvement, whereas B is also correct but slightly more abrupt.",
+              "issues": []
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/info/event",
+          "ru": "Начнем с определения триггера, который вызвал неприятные эмоции или мысли. Триггером может стать как значимое, так и очень маленькое событие или даже одна всплывшая мысль.",
+          "oldText": "Start by identifying the trigger that brought up difficult emotions or thoughts. A trigger can be anything — from a major event to something very small, or even just a fleeting thought.",
+          "newText": "Let’s start by identifying the trigger that caused these unpleasant emotions or thoughts. A trigger can be a significant event, a tiny occurrence, or even a single passing thought.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation A sounds much more natural and idiomatic for a mental health app. The use of 'anything — from... to...' is a perfect way to convey the range described in the original, whereas B feels a bit more like a literal translation.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'a tiny occurrence' is slightly clunky compared to the more natural 'something very small' or 'a minor event'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The structure is a bit repetitive and lacks the smooth flow of a native speaker's narrative."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more precise and follows the original structure more closely while remaining idiomatic. Translation B introduces an unnecessary em dash and slightly changes the phrasing of the second sentence.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'anything — from...' is a bit more conversational/loose than the original, which is a direct definition."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/3/title",
+          "ru": "Сложная и запутанная формулировка",
+          "oldText": "Too complex and confusing formulation",
+          "newText": "Complex or confusing phrasing",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation B is much more natural and idiomatic for a UI/UX context. Translation A sounds like a literal translation from Russian and uses 'formulation', which is heavy and unnatural in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The use of 'formulation' is a calque; 'phrasing' or 'wording' is much more natural for describing a sentence or thought."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Starting with 'Too' adds an unnecessary judgmental tone not present in the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation A is concise and natural for a UI/label context. Translation B is wordy, uses 'formulation' which sounds like a translation from Russian, and adds 'Too' which isn't in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'Too' which changes the nuance from a description to a judgment"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'Formulation' is a common calque from Russian; 'phrasing' is much more natural in English"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/4/title",
+          "ru": "Пропуск автоматической мысли",
+          "oldText": "Skipping the automatic thought",
+          "newText": "Skipping an automatic thought",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "In the context of a UI action or a heading, the indefinite article (or no article) is more natural when referring to the general concept of skipping a thought. Translation B's use of 'the' implies a specific, previously mentioned thought, which is less likely for a generic header.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Use of the definite article 'the' makes it sound like a specific thought is being skipped, rather than the general action/category."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "In English, when referring to a single instance of a concept in a UI context, the indefinite article 'an' is more natural and less heavy than the gerund-led construction with 'the'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Using 'the' implies a specific, previously mentioned thought, whereas 'an' is the standard way to describe the action of skipping any single thought."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/2/right",
+          "ru": "Теперь начальник может подумать, что я безответственная",
+          "oldText": "Now my boss will think I’m irresponsible",
+          "newText": "Now my boss might think I’m irresponsible",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation B accurately captures the nuance of 'может' (might/may), whereas Translation A uses 'will', which implies certainty and changes the meaning from possibility to a prediction of fact.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The word 'will' removes the uncertainty expressed by 'может' in the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "Translation A accurately captures the nuance of 'может' (might/may), expressing possibility, whereas Translation B changes the meaning to a certain future event (will).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The original expresses possibility (might), but the translation expresses certainty (will)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/smer/texts",
+          "ru": "Промежуточные убеждения — это правила и установки, через которые мы воспринимаем окружающий мир.\n\nКогда такие убеждения искажаются, они могут порождать автоматические мысли, часто резкие и критичные по отношению к себе.\n\nВ этом разделе вы можете связать свои убеждения и автоматические мысли, чтобы затем глубже разобраться в них и начать работу над изменениями.",
+          "oldText": "Intermediate beliefs are rules based on which we perceive reality.\n\nDistorted beliefs lead to destructive thoughts, which we call automatic thoughts.\n\nIn this section, you can establish a connection between these concepts for further exploration.",
+          "newText": "Intermediate beliefs are the rules and assumptions through which we perceive the world around us.\n\nWhen these beliefs become distorted, they can trigger automatic thoughts—often harsh and self-critical.\n\nIn this section, you can connect your beliefs and automatic thoughts to understand them more deeply and begin working toward change.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 65,
+                "new": 98
+              },
+              "reason": "Translation A is a perfect, idiomatic, and professional translation that follows all CBT terminology guidelines and maintains the supportive tone. Translation B is overly reductive, loses significant meaning (omission), and uses non-standard terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost the description of automatic thoughts being 'harsh and self-critical'."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive thoughts' instead of the canonical 'automatic thoughts' as the primary term, and failed to use the required 'rules and assumptions' pair."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrasing 'rules based on which we perceive reality' is clunky and less natural than A."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The final sentence is too vague and loses the actionable intent of 'working toward change'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 96
+              },
+              "reason": "Translation B is a perfect professional rendering that follows all CBT terminology guidelines and maintains the warm, supportive tone. Translation A is too reductive, omits significant parts of the original meaning, and uses non-standard terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing 'assumptions' (установки), 'harsh and self-critical' (резкие и критичные), and the goal of 'working toward change' (работа над изменениями)."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Uses 'destructive thoughts' instead of the required 'automatic thoughts' as the primary term, and misses the nuance of the connection."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'rules based on which we perceive reality' is slightly clunky compared to the idiomatic B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/info/body",
+          "ru": "Вспомните момент возникновения триггера и обратите внимание на ощущения в теле. Какие именно неприятные реакции вы ощущали?",
+          "oldText": "Recall the moment the trigger appeared and pay attention to your body. What exactly did you feel physically? Which unpleasant sensations did you notice?",
+          "newText": "Recall the moment the trigger occurred and pay attention to your bodily sensations. What specific physical reactions did you feel?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 78
+              },
+              "reason": "Translation A is more natural and follows the original structure more closely. Translation B suffers from an omission (the second sentence is missing) and uses the heavy, slightly clinical 'bodily sensations'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The second sentence of the original ('Какие именно неприятные реакции вы ощущали?') is completely missing."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'bodily sensations' sounds overly clinical/academic compared to the warm, supportive tone required."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 95
+              },
+              "reason": "Translation A is concise, professional, and follows the natural flow of a CBT exercise. Translation B is wordy, repetitive, and adds an extra sentence not present in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "major",
+                  "note": "Added an extra sentence 'Which unpleasant sensations did you notice?' which is redundant and not in the source."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'What exactly did you feel physically?' is slightly clunky compared to the more natural 'What specific physical reactions did you feel?' in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/info/response",
+          "ru": "Когда вы замечаете автоматическую мысль, важно внимательно ее рассмотреть. Часто такие мысли содержат когнитивные искажения и логические ошибки. Ваша задача найти рациональный, более реалистичный ответ и сформировать поддерживающую установку.",
+          "oldText": "When you notice an automatic thought, it’s important to look at it carefully. Such thoughts often contain cognitive distortions and logical errors. Your task is to find a rational, more realistic response and turn it into a supportive belief.",
+          "newText": "When you notice an automatic thought, it’s important to examine it closely. Often, these thoughts contain cognitive distortions. Your goal is to find a rational, more realistic response and form a helpful belief.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 94
+              },
+              "reason": "Translation B uses more professional and idiomatic CBT terminology ('examine it closely' instead of 'look at it', and 'helpful belief' instead of 'supportive belief'). It also avoids the slightly clunky 'turn it into' in favor of the more natural 'form'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'look at it carefully' is a bit basic/colloquial for this context; 'supportive belief' is less standard than 'helpful belief' in CBT."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "omitted 'logical errors' (though in English CBT, 'cognitive distortions' often covers this, so it's a stylistic choice, but technically an omission)."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more idiomatic and follows the project's terminology guidelines perfectly. Translation B uses 'logical errors' (redundant with distortions) and 'turn it into', which sounds clunky compared to the professional tone of A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'look at it carefully' is slightly more basic/colloquial than the professional 'examine it closely'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'turn it into a supportive belief' is a bit wordy and less precise than 'form a helpful belief'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The addition of 'logical errors' is redundant in a CBT context when 'cognitive distortions' is already used, though it follows the Russian text literally."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/1/title",
+          "ru": "Слишком общая формулировка",
+          "oldText": "Vague formulations",
+          "newText": "Too vague",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation B is more natural and concise for a UI context, whereas A sounds slightly more formal and academic.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The plural 'formulations' and the noun-heavy structure feel a bit more like a textbook than a quick UI feedback/label."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is concise and idiomatic for a UI error or feedback message. Translation B sounds like a formal heading or a fragment of a sentence, which is less natural for this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses a plural noun 'formulations' which makes it sound like a category title rather than a specific feedback on a single item."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/stepper/body",
+          "ru": "Я почувствовала учащённое сердцебиение и тяжесть в груди",
+          "oldText": "I felt my heart start racing and a heaviness in my chest",
+          "newText": "I felt my heart racing and a heaviness in my chest",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 98
+              },
+              "reason": "Translation B is more direct and natural for describing a physical sensation. Translation A adds 'start', which introduces an unnecessary temporal element not present in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The addition of 'start' makes the sentence slightly wordier and less immediate than the original sensation."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Translation A is more direct and idiomatic for describing a physical sensation. Translation B adds 'start', which creates a slight unnecessary temporal delay that isn't present in the original Russian.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The addition of 'start' makes the sentence slightly wordier and less punchy than the original sensation description."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/4/description",
+          "ru": "Иногда хочется сразу перейти к позитивным утверждениям. Но важно сначала заметить и записать автоматическую мысль, чтобы затем можно было её проработать.",
+          "oldText": "Some people immediately record alternative thoughts or responses to automatic thoughts.",
+          "newText": "Sometimes it feels easier to jump straight to positive affirmations. But it’s important to first notice and record the automatic thought so you can work through it later.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 30,
+                "new": 98
+              },
+              "reason": "Translation B is a perfect, idiomatic, and accurate rendering of the original text, following all CBT terminology and tone guidelines. Translation A is a complete mistranslation (hallucination) that introduces entirely different meaning not present in the source.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The translation completely changes the meaning: instead of talking about the desire to jump to positive affirmations, it talks about people recording alternative thoughts, which is not in the original text."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 0,
+                "new": 98
+              },
+              "reason": "Translation A is a perfect, idiomatic, and accurate rendering of the original text, following all CBT terminology and tone guidelines. Translation B is a complete hallucination/omission that describes a completely different concept not present in the source.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire meaning of the original text is lost; the translation describes a different process entirely."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/2/title",
+          "ru": "Запись факта вместо интерпретации",
+          "oldText": "Recording facts instead of interpretations",
+          "newText": "Recording a fact instead of an interpretation",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation A uses the plural form, which is more natural for a general concept or a heading in English. Translation B sounds overly specific and slightly clunky due to the singular indefinite articles.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Singular 'a fact instead of an interpretation' sounds less like a general principle and more like a specific instruction for one instance, making it less idiomatic for a heading."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "In English, when discussing concepts or general practices, the plural form sounds much more natural and idiomatic. Translation A sounds like a literal translation of the Russian singular structure, whereas B follows standard English patterns for describing a cognitive technique.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Singular 'a fact' and 'an interpretation' sounds slightly clunky and overly specific for a general heading/instruction."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "texts/diary.json",
+          "lang": "en",
+          "key": "/automaticAnalysis/5/wrong",
+          "ru": "Я немного тревожусь о будущем",
+          "oldText": "I’m a bit worried about the future",
+          "newText": "I’m a little anxious about the future",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B uses 'anxious', which is the precise term for 'тревожусь' in a mental health context, whereas 'worried' is more colloquial and less specific to the clinical/emotional state of anxiety.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "While natural, 'worried' is a slightly weaker match for the specific emotional state of 'тревога' (anxiety) compared to 'anxious'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 98
+              },
+              "reason": "Translation A uses 'anxious', which is the precise clinical and UX term for 'тревога' in a CBT context, whereas 'worried' is more colloquial and less aligned with the app's psychological focus.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "uses 'worried' instead of the preferred 'anxious' for 'тревога'"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

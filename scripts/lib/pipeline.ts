@@ -23,7 +23,8 @@ import { loadGlossary } from './glossary-utils.js';
 import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
-import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes } from './tag-reconcile.js';
+import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes, normalizeTypographicQuotesEn } from './tag-reconcile.js';
+import { realignIdArrays } from './id-arrays.js';
 import { stripIcuConstructs } from './validation.js';
 import { buildSubtree } from './tree.js';
 import type { AIProvider, ProviderType } from './types.js';
@@ -586,7 +587,10 @@ async function runStage<T>(
 async function parseStageObject(stage: string, raw: string): Promise<any> {
   if (isNoChangesMarker(raw)) return null;
   const parsed = await parseWithRepair<any>(raw);
-  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+  // Массив — легитимный «полный документ» для чанка-массива (записи
+  // questions.json): mergeSubset принимает массив-ответ по путям /N/….
+  // Для объектного payload массив-ответ даст 0 пересечений путей — no-op.
+  if (!parsed || typeof parsed !== 'object') {
     throw new Error(`неожиданный формат ответа: ${raw.slice(0, 120)}`);
   }
   return parsed;
@@ -647,7 +651,12 @@ function chunkPayload(node: any, max: number, prefix: string[] = []): PayloadChu
   const entries: [string, any][] = isArray
     ? node.map((v, i) => [String(i), v] as [string, any])
     : Object.entries(node);
-  if (entries.length <= 1) return [{ prefix, subtree: node }];
+  // Единственный child НЕ повод вернуть узел целиком: докрутился сюда —
+  // узел больше max, а единственный child сам переполнен (иначе вернулись бы
+  // выше), цикл ниже рекурсивно разрежет его. Bail здесь отдавал документ-
+  // массив в обёртке {content: […]} одним чанком на сотни листьев — чанкование
+  // на questions.json не работало вообще (инцидент ja-2026 шёл одним запросом
+  // на 308 путей).
   const chunks: PayloadChunk[] = [];
   let bin: Record<string, any> = {};
   let binLeaves = 0;
@@ -736,7 +745,13 @@ async function runStagesOnce(
           user: JSON.stringify({
             sourceLocale: o.sourceLocale,
             targetLocale,
-            paths: flattenAll(payload),
+            // null-позиции разреженного чанка — не переводимые листья:
+            // в запрос их не отправляем и в сверке полноты не ждём (иначе
+            // каждый разреженный чанк гарантированно фейлил path-map >30%
+            // «потерь» и уходил в документный фолбэк).
+            paths: Object.fromEntries(
+              Object.entries(flattenAll(payload)).filter(([, v]) => v != null),
+            ),
             ...(chunkMeta ? { meta: chunkMeta } : {}),
             ...(o.context && Object.keys(o.context).length > 0 ? { context: o.context } : {}),
           }),
@@ -765,7 +780,11 @@ async function runStagesOnce(
     if (!map || typeof map !== 'object') {
       throw new Error(`MAIN(paths): не удалось распарсить карту путей: ${draftText.slice(0, 200)}`);
     }
-    const expected = flattenAll(payload);
+    // null-позиции разреженного чанка не запрашивались — полнота считается
+    // по ним же (см. построение запроса выше).
+    const expected = Object.fromEntries(
+      Object.entries(flattenAll(payload)).filter(([, v]) => v != null),
+    );
     const clean: Record<string, string> = {};
     const missing: string[] = [];
     // Толерантность к модели, теряющей ведущий '/' в пути: совпадение по
@@ -1063,6 +1082,22 @@ export async function runPipeline(
   }
   let draft: any = skeleton;
 
+  // Стабильные id записей (questions.json): модель может потерять запись
+  // массива и сместить хвост — все пути на месте, но переводы стоят под
+  // чужими id (инцидент ja-2026: 500 на /questions/random). Выравнивание
+  // join'ом по значению id; потерянные записи остаются пустыми заглушками
+  // и уходят в recovery ниже, дубли/чужие id отбрасываются.
+  for (const r of realignIdArrays(doc, draft)) {
+    const touched =
+      r.realigned || r.missingIds.length || r.duplicateIds.length || r.unknownIds.length;
+    if (touched) {
+      console.warn(
+        `🛠 [ids] ${r.arrayPath || '(корень)'}: выровнено ${r.realigned}, потеряно ${r.missingIds.length}` +
+          ` (${r.missingIds.slice(0, 3).join(', ')}), дубли ${r.duplicateIds.length}, чужие ${r.unknownIds.length}`,
+      );
+    }
+  }
+
   // Контроль тегов: пул тегов перевода не должен превышать пул оригинала.
   // Смещение тега в другой элемент — норма транскреации (не трогается);
   // выдуманные моделью теги срезаются механически с сохранением текста.
@@ -1086,6 +1121,14 @@ export async function runPipeline(
   const normalizedQuotes = normalizeTagQuotes(draft);
   if (normalizedQuotes > 0) {
     console.warn(`⚠️ [tags] кавычки атрибутов нормализованы в ${normalizedQuotes} листах`);
+  }
+
+  // Текстовые кавычки en — типографские (модель нарушает style.txt despite prompt).
+  if (targetLocale.toLowerCase() === 'en') {
+    const typographic = normalizeTypographicQuotesEn(draft);
+    if (typographic > 0) {
+      console.warn(`⚠️ [quotes] текстовые кавычки приведены к типографским в ${typographic} листах`);
+    }
   }
 
   // Финальный скан задвоений: последняя сетка независимо от того, через какую
@@ -1146,14 +1189,23 @@ export async function runPipeline(
       `⚠️ [recovery] потеряны ключи (${lost.length}/${srcKeys.length}): ${lost.slice(0, 3).join(', ')} — доперевод точечно`,
     );
     let remaining = lost;
+    const docFlatAll = flattenAll(doc);
     for (let pass = 1; pass <= 2 && remaining.length > 0; pass++) {
       const lostSubtree = buildSubtree(doc, remaining);
+      const lostFlat: Record<string, string> = {};
+      for (const p of remaining) {
+        const v = docFlatAll[p];
+        if (typeof v === 'string') lostFlat[p] = v;
+      }
       const recText = await client.complete({
-        system: prompts.main,
+        system: prompts.main + MAIN_PATHS_ADDENDUM,
         user: JSON.stringify({
           sourceLocale,
           targetLocale,
-          data: lostSubtree,
+          // Формат — path-map (как MAIN): разреженное дерево с null-паддингом
+          // (data: [null×136, {запись}]) модель читает плохо и регулярно
+          // возвращает 0 пересечений — плоская карта потерянных путей надёжнее.
+          paths: lostFlat,
           ...(filterMetaByPayload(opts.meta, lostSubtree)
             ? { meta: filterMetaByPayload(opts.meta, lostSubtree) }
             : {}),
@@ -1166,9 +1218,10 @@ export async function runPipeline(
       if (recovered && typeof recovered === 'object' && !Array.isArray(recovered) && 'data' in recovered) {
         recovered = recovered.data;
       }
-      // Модель, привыкшая к path-map, отвечает recovery картой путей —
-      // принимаем её, но только если ВСЕ пути карты указывают на потерянные
-      // листья: иначе это обычный документ, где «paths» — легитимный ключ.
+      // Модель, привыкшая к path-map, отвечает recovery картой путей.
+      // Запрос теперь сам в формате path-map, поэтому принимаем карту и
+      // ЧАСТИЧНО (мердж применит только существующие пути скелета), и с
+      // bare-ключами (без ведущего '/') — нормализуем к каноническим путям.
       if (
         recovered &&
         typeof recovered === 'object' &&
@@ -1178,13 +1231,30 @@ export async function runPipeline(
         !Array.isArray(recovered.paths)
       ) {
         const lostSet = new Set(remaining);
-        const mapPaths = Object.keys(recovered.paths);
-        const allLost =
-          mapPaths.length > 0 && mapPaths.every((p) => lostSet.has(p.startsWith('/') ? p : `/${p}`));
-        if (allLost) recovered = buildTreeFromPaths(recovered.paths);
+        const entries = Object.entries(recovered.paths as Record<string, unknown>).filter(
+          ([, v]) => typeof v === 'string' && v.trim() !== '',
+        ) as [string, string][];
+        const anyLost = entries.some(([p]) => lostSet.has(p.startsWith('/') ? p : `/${p}`));
+        if (entries.length > 0 && anyLost) {
+          recovered = buildTreeFromPaths(
+            Object.fromEntries(entries.map(([p, v]) => [p.startsWith('/') ? p : `/${p}`, v])),
+          );
+        }
       }
       if (!recovered || typeof recovered !== 'object') {
         throw new Error(`потеряны ключи: ${remaining.slice(0, 5).join(', ')} (recovery не распарсился)`);
+      }
+      // Recovery-ответ выравнивается по id так же, как основной draft:
+      // мини-payload тоже массив записей, и сдвиг в нём так же невидим
+      // для сверки путей.
+      for (const r of realignIdArrays(lostSubtree, recovered)) {
+        const touched =
+          r.realigned || r.missingIds.length || r.duplicateIds.length || r.unknownIds.length;
+        if (touched) {
+          console.warn(
+            `🛠 [ids][recovery] ${r.arrayPath || '(корень)'}: выровнено ${r.realigned}, потеряно ${r.missingIds.length}, дубли ${r.duplicateIds.length}, чужие ${r.unknownIds.length}`,
+          );
+        }
       }
       // Контейнер в draft КОРОЧЕ потерянного индекса (модель срезала хвост
       // массива), а mergeSubset по дизайну не растит массивы («длины массивов

@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:44:54.448Z",
+    "Метка": "en-final-g23-positive",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/positive.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/positive.json": {
+      "en": [
+        {
+          "file": "story/positive.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Позитивное мышление — это не про КПТ!",
+          "oldText": "Positive Thinking Is Not What CBT Is About!",
+          "newText": "Positive thinking isn’t CBT!",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A captures the nuance of 'это не про...' (it's not about...) much more naturally and idiomatically for an article title. Translation B is a bit too blunt and sounds like a direct, slightly clunky translation of the Russian structure.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Too literal/blunt; lacks the conversational 'it's not about' nuance of the original."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is punchy, idiomatic, and perfectly captures the informal, provocative tone of the original. Translation B is wordy, heavy, and sounds like a clunky literal translation of the Russian structure.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Too wordy and lacks the impact of the original; sounds unnatural for a headline/hook."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/positive.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Статья объясняет различия между позитивным мышлением и когнитивно-поведенческой терапией (КПТ). В отличие от простого «думай о хорошем», КПТ работает с когнитивными искажениями и помогает менять поведение адаптивно и реалистично. Такой подход опирается на факты и анализ, что делает его эффективным в работе с эмоциями и сложными жизненными ситуациями.",
+          "oldText": "This article explains the difference between positive thinking and cognitive-behavioral therapy (CBT). Unlike simply “thinking positive”, CBT works with cognitive distortions and helps you change your behavior in an adaptive and realistic way. This approach relies on facts and analysis, which makes it effective for dealing with emotions and difficult life situations.",
+          "newText": "This article explains the difference between positive thinking and cognitive behavioral therapy (CBT). Unlike simply “thinking positive,” CBT works with cognitive distortions to help you change your behavior in an adaptive and realistic way. This approach relies on facts and analysis, making it effective for managing emotions and navigating complex life situations.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more idiomatic and flows better, using 'managing emotions' and 'navigating complex life situations' which sounds much more natural for a mental health article than the literal phrasing in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'which makes it effective for dealing with...' is slightly clunky and more 'translated' in feel compared to the more fluid B."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and flows better, using 'managing emotions' and 'navigating complex life situations' which sounds more professional and natural for a mental health article. Translation B uses slightly more clunky phrasing ('dealing with', 'difficult life situations').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Punctuation error: the comma should be outside the quotation marks in US English, but the phrasing 'dealing with' is also less sophisticated than 'managing'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'difficult life situations' is a bit generic compared to the more polished 'complex life situations'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/positive.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Вы можете спросить: значит, нужно просто всегда думать о хорошем? Закрыть глаза на проблемы, окружить себя «радужным заборчиком» и повторять: «всё хорошо, всё отлично»?\n\nСовсем нет!\n\nСвязь КПТ с позитивным мышлением примерно как у компьютерной мыши с полевой: звучит похоже, но по сути — разные миры.\n\n<instagram ids=\"17989730018777362,17969665067953975\">\n\nДавайте точнее: у этих подходов есть общая мысль — наше восприятие влияет на эмоции и выборы. На этом сходство заканчивается.\n\nПозитивное мышление призывает мыслить позитивно; КПТ — мыслить рационально и адаптивно, проверять идеи фактами и корректировать их.\n\nЧувствуете разницу?",
+          "oldText": "You might ask: so do I just need to constantly think about good things? Close my eyes to problems, build a little “rainbow fence” around myself and repeat: “Everything is fine, everything is great”?\n\nAbsolutely not!\n\nThe connection between CBT and positive thinking is about the same as between a computer mouse and a field mouse: they sound similar, but in reality they belong to completely different worlds.\n\nTo be more precise: these approaches share one basic idea — our perception affects our emotions and choices. And that’s where the similarities end.\n\nPositive thinking urges us to think positively; CBT teaches us to think rationally and adaptively, to test our ideas against facts and adjust them.\n\nFeel the difference?",
+          "newText": "You might ask: so, should I just always think positively? Should I ignore my problems, surround myself with a “rainbow fence,” and keep repeating, “everything is fine, everything is great”?\n\nNot at all!\n\nThe connection between CBT and positive thinking is a bit like the connection between a computer mouse and a field mouse: they sound similar, but they are entirely different worlds.\n\n<instagram ids=\"17989730018777362,17969665067953975\">\n\nTo be more precise: these approaches share one core idea—our perception influences our emotions and choices. That is where the similarity ends.\n\nPositive thinking encourages you to think positively; CBT encourages you to think rationally and adaptively, testing your ideas against facts and adjusting them.\n\nDo you feel the difference?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and flows better as a piece of engaging content. It uses more natural phrasing like 'testing your ideas against facts' and 'That is where the similarity ends'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'think about good things' is a bit clunky compared to 'think positively'. 'Urges us' is slightly more aggressive than the original 'призывает'. 'Feel the difference?' without 'Do you' is acceptable in casual text but A's version is more polished for an article."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and flows better as a piece of narrative content. Translation B feels slightly more repetitive and formal (e.g., 'the connection between... is a bit like the connection between...').",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive structure in the mouse analogy ('the connection... is a bit like the connection...')."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'That is where the similarity ends' is slightly more stiff than the more natural 'And that’s where the similarities end' in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/positive.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Позитивное мышление — это умение не падать духом и видеть хорошее в любой ситуации, искренне веря, что всё к лучшему.\n\nКогнитивно-поведенческая терапия нацелена на распознавание и коррекцию когнитивных искажений (непродуктивных мыслей и убеждений) и последующее изменение поведения.\n\nЕсли граница всё ещё расплывчата, уточним: позитивное мышление предлагает искать хорошее в любых обстоятельствах — навык полезный, но опасный, когда превращается в жёсткое правило «думай только позитивно».\n\nРеальность включает боль, грусть, неудачи и разочарования — и это часть жизни. Признавать сложное не значит быть «негативным».\n\nКогда мы механически заменяем любое «плохое» на «хорошее», из уравнения исчезает реальность — получается медвежья услуга.\n\n<q author=\"Стивен Фрисен\">Позитивное мышление позволяет делать все вещи неправильно, думая, что вы делаете их правильно.</q>",
+          "oldText": "Positive thinking is the ability to keep your spirits up and see the good in any situation, genuinely believing that everything happens for the best.\n\nCognitive-behavioral therapy is aimed at identifying and correcting cognitive distortions (unhelpful thoughts and beliefs) and then changing behavior.\n\nIf the line between them still feels blurry, let’s clarify: positive thinking suggests looking for the good in any circumstances — a useful skill, but a risky one when it turns into a rigid rule of “think only positive thoughts”.\n\nReality includes pain, sadness, failure, and disappointment — and that’s part of life. Acknowledging what’s hard doesn’t mean you’re being “negative”.\n\nWhen we mechanically replace everything “bad” with something “good”, reality drops out of the equation — and we end up doing ourselves a disservice.",
+          "newText": "Positive thinking is the ability to stay upbeat and see the good in any situation, sincerely believing that everything will turn out for the best.\n\nCognitive behavioral therapy aims to recognize and correct cognitive distortions (unhelpful thoughts and beliefs) and subsequently change behavior.\n\nIf the line still feels blurry, let’s clarify: positive thinking suggests looking for the good in any circumstance—a useful skill, but a dangerous one if it turns into a rigid rule to “only think positively.”\n\nReality includes pain, sadness, failure, and disappointment—and that is simply part of life. Acknowledging difficult things doesn’t make you “negative.”\n\nWhen we mechanically replace every “bad” thought with a “good” one, we lose touch with reality—and that does more harm than good.\n\n<q author=\"Stephen Friesen\">Positive thinking allows you to do everything wrong while thinking you’re doing it right.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and flows better as a cohesive article. It uses more natural phrasing like 'lose touch with reality' and 'does more harm than good' instead of the slightly clunky 'reality drops out of the equation' or 'doing ourselves a disservice' in B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'reality drops out of the equation' is a bit literal/clunky compared to 'lose touch with reality'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'медвежья услуга' as 'doing ourselves a disservice' is correct, but 'does more harm than good' in A feels more natural in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and flows better as a cohesive narrative. Translation B contains a slight mistranslation in the final paragraph ('does more harm than good' vs 'disservice') and feels slightly more fragmented.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'does more harm than good' is a bit cliché compared to the more precise 'doing ourselves a disservice' which matches the Russian 'медвежья услуга' better in this context."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'every 'bad' thought with a 'good' one' adds words ('thought') not present in the original, making it slightly less punchy than A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/positive.json",
+          "lang": "en",
+          "key": "/test/answers",
+          "ru": "Позитивное мышление и КПТ фокусируются на поиске позитивного в каждой жизненной ситуации\n\nПозитивное мышление и КПТ оба фокусируются на изменении поведения, а не мышления\n\nПозитивное мышление предлагает заменять все негативные мысли на позитивные, в то время как КПТ фокусируется на анализе и коррекции когнитивных искажений\n\nКПТ предлагает искать хорошее в каждой жизненной ситуации, тогда как позитивное мышление фокусируется на анализе реальности",
+          "oldText": "Positive thinking and CBT both focus on looking for the positive in every life situation\n\nPositive thinking and CBT both focus on changing behavior rather than thinking\n\nPositive thinking suggests replacing all negative thoughts with positive ones, whereas CBT focuses on analyzing and correcting cognitive distortions\n\nCBT encourages you to look for the good in every life situation, whereas positive thinking focuses on analyzing reality",
+          "newText": "Both positive thinking and CBT focus on finding the positive in every life situation.\n\nBoth positive thinking and CBT focus on changing behavior rather than thinking.\n\nPositive thinking suggests replacing all negative thoughts with positive ones, while CBT focuses on analyzing and correcting cognitive distortions.\n\nCBT suggests looking for the good in every life situation, while positive thinking focuses on analyzing reality.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 90
+              },
+              "reason": "Translation A is slightly more natural and idiomatic for an educational/article context. The use of 'encourages you' in the fourth sentence is a better stylistic choice for the target tone than the repetitive 'suggests' in B.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'suggests' and 'while' makes the rhythm feel a bit flat compared to A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more consistent and follows a clean, professional rhythm. Translation B introduces unnecessary 'whereas' and 'encourages you' which, while not wrong, makes the text feel slightly more wordy and less direct than the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Inconsistent use of 'whereas' vs 'while' and the addition of 'you' in the last sentence adds unnecessary wordiness compared to the concise original."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/positive.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Приведём пример:\n\nПредставьте неприятное событие: потеря работы, болезнь или тяжёлое расставание — ситуации, где боль реальна.\n\nПодход позитивного мышления предложит подменить переживания оптимистичными формулами вроде: «Не думай о плохом, всё обязательно будет хорошо!»\n\nКПТ же предлагает сначала отследить негативные мысли, проверить их на соответствие фактам, рассмотреть подтверждения и опровержения — и только затем заменить их более рациональными и адаптивными.\n\nНапример: «Я не знаю наверняка, что всё будет хорошо — как и того, что всё будет плохо. Есть минимум три сценария: худший, лучший и наиболее реалистичный. Я продумaю шаги для каждого, подготовлюсь к худшему и буду надеяться на лучшее».\n\nРазница в подходе ощущается, правда?\n\nТехника рассмотрения трёх сценариев — очень рабочий инструмент. Ей мы посвятим следующую главу!\n\nСмотря на события с разных сторон, уходя от дихотомии «всё или ничего» и делая мышление более рациональным (а не просто «позитивным»), мы лучше справляемся с эмоциями и задачами реальной жизни.",
+          "oldText": "Let’s look at an example:\n\nImagine something difficult happens: you lose your job, get ill, or go through a painful breakup — situations where the pain is very real.\n\nThe positive-thinking approach will suggest replacing your feelings with optimistic formulas like: “Don’t think about the bad stuff, everything will definitely be fine!”\n\nCBT, on the other hand, invites you to first notice your negative thoughts, check how well they fit the facts, look at evidence for and against them — and only then replace them with more rational and adaptive ones.\n\nFor example: “I don’t know for sure that everything will be fine — just as I don’t know for sure that everything will go wrong. There are at least three scenarios: the worst, the best, and the most realistic. I’ll think through my steps for each one, prepare for the worst, and hope for the best.”\n\nYou can feel the difference in approach, right?\n\nThe three-scenario technique is a very practical tool. We’ll devote the next chapter to it!\n\nBy looking at events from different angles, stepping away from the “all-or-nothing” mindset, and making our thinking more rational (rather than simply “positive”), we cope better with our emotions and with real-life challenges.",
+          "newText": "Let’s look at an example:\n\nImagine an unpleasant event: losing a job, an illness, or a difficult breakup—situations where the pain is very real.\n\nA positive thinking approach might suggest replacing your feelings with optimistic formulas like: “Don’t think about the bad stuff, everything is bound to be fine!”\n\nCBT, however, suggests first tracking your negative thoughts, checking them against the facts, looking at evidence for and against them, and only then replacing them with more rational and adaptive ones.\n\nFor example: “I don’t know for sure that everything will be fine—just as I don’t know for sure that everything will be terrible. There are at least three scenarios: the worst, the best, and the most realistic. I’ll plan my steps for each, prepare for the worst, and hope for the best.”\n\nYou can feel the difference in approach, right?\n\nThe “three scenarios” technique is a very effective tool. We’ll dedicate our next chapter to it!\n\nBy looking at events from different angles, moving away from all-or-nothing thinking, and making our thoughts more rational (rather than just “positive”), we manage our emotions and real-life tasks much better.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 89,
+                "new": 96
+              },
+              "reason": "Translation A is more polished and idiomatic. It uses better phrasing like 'everything is bound to be fine' and 'manage our emotions', whereas B feels slightly more translated. A also correctly uses the em dash without spaces, which is more standard for high-quality English prose in this context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'check how well they fit the facts' is a bit wordy compared to the more natural 'checking them against the facts'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of spaces around the em dash is less common in professional US English publishing than the closed em dash used in A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A sounds more natural and flows like a well-written English article. Translation B has several minor stylistic issues, such as 'an illness' (unnatural in this context) and 'manage our emotions... much better' (clunky compared to A's 'cope better').",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'an illness' sounds slightly unnatural in a list of events; 'losing a job' or 'getting sick' is better."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'manage our emotions and real-life tasks much better' is a bit wordy and less idiomatic than 'cope better with our emotions and real-life challenges'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/positive.json",
+          "lang": "en",
+          "key": "/test/question",
+          "ru": "Какое утверждение наиболее точно описывает различие между позитивным мышлением и КПТ?",
+          "oldText": "Which statement best describes the difference between positive thinking and CBT?",
+          "newText": "Which statement most accurately describes the difference between positive thinking and CBT?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "While both are grammatically correct, 'best describes' is the idiomatic standard for multiple-choice questions or comparative assessments in English. 'Most accurately describes' sounds slightly more formal and heavy.",
+              "issues": []
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "Translation A is more idiomatic and natural for a native speaker; 'best describes' is the standard way to phrase such questions in English, whereas 'most accurately describes' sounds slightly more formal and heavy.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "slightly wordy/formal compared to the natural 'best describes'"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

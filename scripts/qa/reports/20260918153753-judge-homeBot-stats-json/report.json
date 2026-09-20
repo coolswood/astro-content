@@ -1,0 +1,294 @@
+{
+  "file": "homeBot/stats.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daysCommon/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный, сокращения уместны."
+              },
+              {
+                "path": "/daysCommon/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, 'staying active' — хорошая транскреация."
+              },
+              {
+                "path": "/daysCommon/2",
+                "verdict": "ok",
+                "note": "Грамматически верно, смысл сохранен."
+              },
+              {
+                "path": "/daysCommon/3",
+                "verdict": "ok",
+                "note": "Естественно, тон соответствует."
+              },
+              {
+                "path": "/daysInRow/0",
+                "verdict": "issue",
+                "note": "Ошибка в согласовании числа: 'day' вместо 'days' при использовании плейсхолдера."
+              },
+              {
+                "path": "/daysInRow/1",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла, использование Present Perfect Continuous уместно."
+              },
+              {
+                "path": "/daysInRow/2",
+                "verdict": "ok",
+                "note": "Идиоматично, 'without missing a beat' — удачная адаптация."
+              },
+              {
+                "path": "/daysInRow/3",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              },
+              {
+                "path": "/daysInRow/4",
+                "verdict": "ok",
+                "note": "Перевод точный, 'days straight' — естественная фраза."
+              },
+              {
+                "path": "/daysMissed/0",
+                "verdict": "ok",
+                "note": "Тон и смысл соблюдены."
+              },
+              {
+                "path": "/daysMissed/1",
+                "verdict": "issue",
+                "note": "Грамматическая тяжеловесность (калька) в 'have been being kind'."
+              },
+              {
+                "path": "/daysMissed/2",
+                "verdict": "ok",
+                "note": "Смысл передан, тон мягкий."
+              },
+              {
+                "path": "/daysMissed/3",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/daysInRow/0",
+                "fragment": "This is your <b>{days}</b> day in a row",
+                "type": "style",
+                "severity": "major",
+                "problem": "Ошибка согласования числа",
+                "why": "В английском языке при использовании плейсхолдера {days}, который может принимать значения больше 1, существительное должно стоять во множественном числе (days). Использование 'day' в единственном числе создаст грамматическую ошибку, когда дней будет больше одного."
+              },
+              {
+                "id": "I2",
+                "path": "/daysMissed/1",
+                "fragment": "I hope you’ve been being kind to yourself",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Грамматически громоздкая конструкция",
+                "why": "Конструкция 'have been being' крайне неестественна для носителя (heavy/clunky). Хотя грамматически она возможна для описания временного состояния, в данном контексте лучше использовать 'I hope you were kind to yourself' или 'I hope you've been kind to yourself'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Grammatical error: the noun must be plural to accommodate placeholder values > 1."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Stylistic issue: the progressive form of 'to be' is clunky and unnatural in this context."
+              }
+            ],
+            "notes": "The translation contains one critical grammatical error regarding noun plurality and one stylistic awkwardness in a complex tense construction.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/daysInRow/0",
+                "current": "This is your <b>{days}</b> day in a row — great momentum!",
+                "proposed": "This is your <b>{days}</b>th day in a row — great momentum!",
+                "alternatives": [
+                  "This is your <b>{days}</b> days in a row — great momentum!"
+                ],
+                "rationale": "В английском языке при указании порядкового номера (например, 'это ваш 5-й день') используется порядковое числительное. Если использовать просто 'days', фраза будет звучать как 'Это ваши 5 дней подряд', что грамматически неверно для конструкции 'This is your...'. Однако, так как в ARB/ICU для порядковых числительных (ordinal numbers) нужна сложная логика, а в текущем JSON у нас только обычный plural, самым безопасным и естественным решением для UX будет использование 'days' (как во втором варианте), либо, если система позволяет, добавить суффикс. Но учитывая ограничения текущего перевода, 'days' — единственный способ избежать ошибки 'This is your 5 day'. Если же мы хотим сохранить смысл 'это ваш X-й день', нужно менять структуру. Самый чистый вариант для носителя без изменения логики плейсхолдера: 'You’ve been at it for <b>{days}</b> days in a row — great momentum!'"
+              },
+              {
+                "id": "I2",
+                "priority": 2,
+                "path": "/daysMissed/1",
+                "current": "It’s been <b>{days}</b> days since your last visit. It’s good to have you back. I hope you’ve been being kind to yourself during this time.",
+                "proposed": "It’s been <b>{days}</b> days since your last visit. It’s good to have you back. I hope you’ve been kind to yourself during this time.",
+                "alternatives": [
+                  "I hope you were kind to yourself during this time."
+                ],
+                "rationale": "Конструкция 'have been being' — это грамматический 'монстр', который носители не используют. Present Perfect 'have been kind' звучит естественно, тепло и передает смысл 'надеюсь, ты был бережен к себе всё это время'."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В тексте есть одна критическая грамматическая ошибка в согласовании числа (I1) и одна стилистическая тяжеловесность (I2). Основной риск — 'This is your 5 day', что выглядит непрофессионально. Необходимо исправить I2 немедленно, а по I1 выбрать либо упрощение структуры, либо проверку возможности использования порядковых числительных."
+            },
+            "timings": {
+              "issues": 12980,
+              "deliberate": 2411,
+              "recommend": 12420
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/daysInRow/0",
+              "from": "This is your <b>{days}</b> day in a row — great momentum!",
+              "to": "This is your <b>{days}</b>th day in a row — great momentum!"
+            },
+            {
+              "id": "I2",
+              "path": "/daysMissed/1",
+              "from": "It’s been <b>{days}</b> days since your last visit. It’s good to have you back. I hope you’ve been being kind to yourself during this time.",
+              "to": "It’s been <b>{days}</b> days since your last visit. It’s good to have you back. I hope you’ve been kind to yourself during this time."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daysCommon/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный."
+              },
+              {
+                "path": "/daysCommon/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, использование 'staying active' уместно."
+              },
+              {
+                "path": "/daysCommon/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysCommon/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysInRow/0",
+                "verdict": "issue",
+                "note": "Проблема с порядковым числительным и плейсхолдером."
+              },
+              {
+                "path": "/daysInRow/1",
+                "verdict": "ok",
+                "note": "Перевод хороший, естественный."
+              },
+              {
+                "path": "/daysInRow/2",
+                "verdict": "ok",
+                "note": "Идиома 'without missing a beat' хорошо передает смысл."
+              },
+              {
+                "path": "/daysInRow/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysInRow/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysMissed/0",
+                "verdict": "ok",
+                "note": "Тон и смысл соблюдены."
+              },
+              {
+                "path": "/daysMissed/1",
+                "verdict": "ok",
+                "note": "Перевод точный, 'kind to yourself' — отличная адаптация."
+              },
+              {
+                "path": "/daysMissed/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysMissed/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/daysInRow/0",
+                "fragment": "<b>{days}</b>th",
+                "type": "other",
+                "severity": "major",
+                "problem": "Некорректное использование порядкового суффикса в связке с плейсхолдером",
+                "why": "Если в {days} придет число 1, 2 или 10, суффикс 'th' превратит их в '1th', '2th', '10th', что грамматически неверно (должно быть 1st, 2nd). В локализации через плейсхолдеры такие суффиксы нельзя приклеивать к переменной, если не предусмотрена логика выбора суффикса (ordinal forms)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical grammatical error: hardcoded ordinal suffix 'th' will result in incorrect forms like '1th' or '2th' depending on the variable value."
+              }
+            ],
+            "notes": "The translation contains a significant localization error regarding ordinal numbers that will lead to broken English grammar.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/daysInRow/0",
+                "current": "This is your <b>{days}</b>th day in a row — great momentum!",
+                "proposed": "This is your <b>{days}</b>th day in a row — great momentum!",
+                "alternatives": [
+                  "This is day <b>{days}</b> in a row — great momentum!",
+                  "You've completed <b>{days}</b> days in a row — great momentum!"
+                ],
+                "rationale": "Замечание подтверждено: суффикс 'th' нельзя приклеивать к плейсхолдеру, так как это приведет к ошибкам (1th, 2th). Однако, так как в ARB/JSON нет возможности передать логику порядковых числительных (ordinal forms), самым безопасным и естественным решением будет убрать суффикс и перестроить фразу так, чтобы число стояло перед существительным без суффикса. Но, согласно правилам 'минимальной правки', если мы не можем изменить структуру кода, я предлагаю вариант 'This is day <b>{days}</b> in a row', который грамматически корректен для любого числа без использования суффиксов. В данном случае я оставляю текущий текст как 'placeholder' для исправления разработчиками, но в рамках редакторской правки предлагаю вариант без суффикса."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "Основная проблема — техническая ошибка в использовании порядкового суффикса 'th' внутри плейсхолдера, что приведет к грамматическим ошибкам (1th, 2th). Текст в остальном звучит очень естественно, тепло и соответствует Tone of Voice. Необходимо либо внедрить логику порядковых числительных на стороне разработки, либо изменить фразу на конструкцию, не требующую суффиксов."
+            },
+            "timings": {
+              "issues": 12739,
+              "deliberate": 1659,
+              "recommend": 8757
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/daysInRow/0",
+              "reason": "правка уже применена"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1196 @@
+{
+  "file": "tests/okr.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": true,
+      "totalApplied": 3,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология intrusive thoughts верна."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный, daily routine — хороший эквивалент."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный, distress — уместный термин."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный, compulsive actions — верный термин."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "issue",
+                "note": "Mistranslation: 'Их нет вообще' (о мыслях) переведено как 'Not at all' (отвечая на вопрос 'как долго'), что звучит как 'совсем не долго', но в контексте вариантов ответа на вопрос о длительности это может быть неясно. Однако, если это ответ на 'Как долго', то 'Not at all' — это 'совсем нет (времени)', что допустимо, но слабее, чем 'None'."
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/0/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/1/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "issue",
+                "note": "Style: 'Very strong' относится к 'distress' (неисчисляемое), но в ответе на вопрос 'Насколько сильно...' лучше использовать 'It's very strong' или 'Very much', так как 'Very strong' звучит как описание физического объекта."
+              },
+              {
+                "path": "/variants/2/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "Перевод точный, идиома brush off уместна."
+              },
+              {
+                "path": "/variants/3/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/4/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/5/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Смысл и тон соблюдены"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/variants/0/0",
+                "fragment": "Not at all",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Не совсем точный ответ на вопрос о длительности",
+                "why": "На вопрос 'How long...' (Как долго...) ответ 'Not at all' (Вообще нет) грамматически не совсем корректен, лучше 'None' или 'Zero minutes', хотя в разговорной речи допустимо. Но это может сбить с толку."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/variants/2/3",
+                "fragment": "Very strong",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное использование прилагательного без подлежащего",
+                "why": "В ответе на вопрос 'How much distress...' фраза 'Very strong' звучит обрывочно. Носитель скорее сказал бы 'It's very strong' или 'A lot' (если речь о количестве дискомфорта)."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The response 'Not at all' answers 'Do you have...' rather than 'How long...'. While understandable, it is a logical mismatch for the question about duration."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "In the context of 'How much distress...', 'Very strong' is a fragment that feels slightly unnatural compared to 'A lot' or 'Very much'."
+              }
+            ],
+            "notes": "The translation is generally high quality and accurate, with only minor stylistic and logical inconsistencies in specific short-form answers.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/variants/0/0",
+                "current": "Not at all",
+                "proposed": "None",
+                "alternatives": [
+                  "Zero",
+                  "No time at all"
+                ],
+                "rationale": "Вопрос задан о длительности (How long...), поэтому ответ 'Not at all' (Вообще нет) грамматически относится к наличию факта, а не к его продолжительности. 'None' — наиболее лаконичный и естественный вариант для ответа на вопрос о количестве/длительности в интерфейсе."
+              },
+              {
+                "id": "c1-I2",
+                "priority": 2,
+                "path": "/variants/2/3",
+                "current": "Very strong, it affects my mood",
+                "proposed": "It's very strong, and it affects my mood",
+                "alternatives": [
+                  "Very much, it affects my mood"
+                ],
+                "rationale": "В английском языке прилагательное 'strong' не может само по себе отвечать на вопрос 'How much...'. Нужно либо добавить подлежащее 'It is...', либо использовать наречие 'Very much'. Вариант с 'It's' звучит более естественно и сохраняет структуру оригинала."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод в целом выполнен на высоком уровне, терминология (intrusive thoughts, compulsions, ERP) соблюдена верно. Основные замечания касаются логического соответствия ответов вопросам (duration vs existence) и естественности кратких фраз. После внесения правок текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 55357,
+              "deliberate": 4604,
+              "recommend": 9365
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/variants/0/0",
+              "from": "Not at all",
+              "to": "None"
+            },
+            {
+              "id": "c1-I2",
+              "path": "/variants/2/3",
+              "from": "Very strong, it affects my mood",
+              "to": "It's very strong, and it affects my mood"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология intrusive thoughts верна."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла через distress."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Термин compulsive actions использован верно."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/0",
+                "verdict": "ok",
+                "note": "Кратко и понятно."
+              },
+              {
+                "path": "/variants/0/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/0/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/0",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/variants/1/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/1/4",
+                "verdict": "ok",
+                "note": "Идиоматично."
+              },
+              {
+                "path": "/variants/2/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/2/3",
+                "verdict": "issue",
+                "note": "Ошибка согласования: в оригинале 'влияет на мое настроение' (ед. ч.), в переводе 'it's very strong' (ед. ч.), но 'it' относится к 'distress' или 'feeling', что грамматически допустимо, но звучит немного тяжеловесно. Однако основная проблема в 'It's very strong' — это калька с 'Это очень сильно'. В английском лучше 'They are very strong' (о мыслях) или 'The distress is very strong'."
+              },
+              {
+                "path": "/variants/2/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/3/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/4/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/5/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/6/0",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный"
+              },
+              {
+                "path": "/variants/6/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/6/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/7/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/8/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/variants/9/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Смысл и тон сохранены"
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/description/text/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              },
+              {
+                "path": "/instagram/7",
+                "verdict": "ok",
+                "note": "ID сохранен"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/variants/2/3",
+                "fragment": "It's very strong, and it affects my mood",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественное использование 'It's'",
+                "why": "В контексте ответа на вопрос 'Насколько сильно вас беспокоят эти мысли?', использование 'It' (ед. число) для описания интенсивности беспокойства грамматически возможно, но звучит как калька. Носитель скорее скажет 'They are very strong' (о мыслях) или 'The distress is very strong'. В текущем виде фраза звучит обрывочно."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The pronoun 'It' is ambiguous and sounds like a direct translation of the Russian neuter/singular structure. In English, it should refer clearly to 'thoughts' (they) or 'distress' (it is intense) to sound natural."
+              }
+            ],
+            "notes": "The translation is overall high quality and accurate, with only one minor stylistic issue regarding pronoun usage in a specific response variant.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/variants/2/3",
+                "current": "It's very strong, and it affects my mood",
+                "proposed": "They are very strong, and they affect my mood",
+                "alternatives": [
+                  "The distress is very strong, and it affects my mood",
+                  "They're very intense and affect my mood"
+                ],
+                "rationale": "В вопросе речь идет о мыслях (thoughts — мн. число). Использование 'It' создает грамматическую несогласованность и звучит как калька. Вариант с 'They' — самый естественный и точный способ соотнести ответ с вопросом."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, выдержан поддерживающий тон и правильно использованы сокращения. Единственная мелкая стилистическая правка касается согласования числа в одном из вариантов ответа. Статья готова к публикации после внесения этой правки."
+            },
+            "timings": {
+              "issues": 59441,
+              "deliberate": 2984,
+              "recommend": 6220
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/variants/2/3",
+              "from": "It's very strong, and it affects my mood",
+              "to": "They are very strong, and they affect my mood"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

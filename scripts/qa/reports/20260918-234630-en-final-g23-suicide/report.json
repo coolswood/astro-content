@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:46:30.375Z",
+    "Метка": "en-final-g23-suicide",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/suicide.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/suicide.json": {
+      "en": [
+        {
+          "file": "story/suicide.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Мысли о нежелании жить — это не признак слабости, «бракованности» или проигрыша. В них нечего стыдиться.\n\nЛюди оказываются у этой черты по разным причинам, но их часто объединяет одно: невыносимая, удушающая душевная боль. Когда она становится бесконечной, смерть начинает казаться единственным способом выдохнуть.\n\nИногда это крик об избавлении от страданий или тяжелое, искаженное желание «перестать быть обузой» для любимых. Поймите: это говорит отчаяние, а не реальная оценка того, насколько вы ценны и нужны.\n\nПсихология подтверждает: главный катализатор — это абсолютное чувство безнадежности. Когда депрессия искажает восприятие, мир сужается до черной точки, а будущее кажется заколоченным наглухо.\n\n<instagram ids=\"17890431177343955\">\n\nНо самое важное, что нужно осознать: безнадежность и отчаяние — это симптомы вашей болезни, а не объективная реальность.\n\nРешение сдаться всегда держится на иллюзии, что «лучше уже никогда не будет». Но разве это факт? Есть ли у депрессии реальные доказательства того, что эта темнота — навсегда?",
+          "oldText": "Suicidal thoughts are not a sign of weakness or “defectiveness”. You do not need to be ashamed of them.\n\nPeople arrive at such thoughts in different ways, but they are often united by one thing — unbearable emotional pain that makes death seem like the only relief.\n\nSometimes death appears as a way to end suffering or “stop being a burden” to loved ones. This is a state of despair, not a clear and fair assessment of your worth.\n\nResearch shows that the key factor is a sense of hopelessness. When perception is distorted, the world feels like solid darkness and the future seems closed.\n\nIt is important to remember: hopelessness and despair are symptoms of depression, not reality itself.\n\nThe decision to end one’s life is held up by the belief that nothing can ever get better. But is that really true? Is there any solid evidence that things will definitely stay the same?",
+          "newText": "Thoughts of not wanting to live are not a sign of weakness, being “broken,” or losing. There is no shame in them.\n\nPeople reach this edge for many different reasons, but they are often united by one thing: unbearable, suffocating emotional pain. When it feels endless, death can start to seem like the only way to breathe.\n\nSometimes it is a cry for relief from suffering, or a heavy, distorted desire to “stop being a burden” to loved ones. Please understand: this is despair speaking, not a true assessment of how valuable and needed you are.\n\nPsychology confirms that the main catalyst is an absolute sense of hopelessness. When depression distorts perception, the world narrows down to a single black dot, and the future feels completely shut tight.\n\n<instagram ids=\"17890431177343955\">\n\nBut the most important thing to realize is this: hopelessness and despair are symptoms of your condition, not objective reality.\n\nThe decision to give up is often built on the illusion that “it will never get better.” But is that a fact? Does depression have any real evidence that this darkness is permanent?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Translation B captures the emotional depth, rhythm, and specific metaphors of the original text (suffocating pain, black dot, shut tight) much more effectively. Translation A is too clinical and loses the 'empathetic friend' tone, while also omitting several key descriptive elements.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missed the 'suffocating' (удушающая) and 'black dot' (черная точка) metaphors, which are crucial for the emotional impact."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone is too dry and clinical ('Suicidal thoughts', 'Research shows') compared to the warm, supportive original."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "The final sentence 'things will definitely stay the same' is a weak paraphrase of the original's existential question about the darkness being permanent."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'your condition' is a good way to handle 'вашей болезни' in a non-stigmatizing way, though 'illness' or 'depression' would also work."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 92
+              },
+              "reason": "Translation A is much closer to the original's structure and emotional nuance, maintaining the 'expert friend' tone. Translation B takes too many liberties, simplifying the text to the point of losing its poetic and empathetic impact, and makes several stylistic errors.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The original says 'thoughts of not wanting to live', while B uses 'Suicidal thoughts', which is a much heavier, more clinical term that changes the tone."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "B omits the vivid metaphor 'suffocating' (удушающая) and the 'black dot' (черная точка) imagery, which are crucial for the text's impact."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'The decision to end one's life' is overly formal/clinical compared to the original's more personal 'Решение сдаться'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The ending 'things will definitely stay the same' is a weak, non-idiomatic way to translate the original's existential question about the darkness being permanent."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/suicide.json",
+          "lang": "en",
+          "key": "/screen_4/texts",
+          "ru": "В отдельном разделе мы подробно разберем, как именно работать с депрессией с опорой на КПТ, в том числе — как обезоруживать суицидальные мысли.\n\nМы стараемся разжечь в вас искру желания жить, но стать настоящим проводником из темноты сможет только специалист.\n\nЕсли вы чувствуете, что стоите на краю, — пожалуйста, не ждите. Обратитесь к врачу, психотерапевту или на линию экстренной помощи прямо сейчас (при прямой угрозе немедленно звоните в экстренные службы).\n\n<q author=\"Томас Фуллер\">Самое тёмное время ночи наступает непосредственно перед рассветом.</q>\n\nДаже если у вас нет возможности оплатить сессии, во многих странах и городах есть центры, где помогают анонимно, бесплатно и без промедления. Сделать первый шаг — значит выбрать жизнь.\n\nМы понимаем, как страшно и тяжело заговорить об этом. Но именно профессионал поможет вам устоять в этот шторм и научит находить точку опоры внутри себя.\n\nМы верим: с поддержкой вы сможете шаг за шагом отстроить заново теплое, бережное и сильное отношение к себе и этому миру.\n\nЖизнь бывает суровой, и тяжелые периоды случаются у многих. Но этот мир огромен и красив, а ваша жизнь — абсолютная ценность. Пожалуйста, помните об этом: ради этого мира стоит жить!",
+          "oldText": "We will devote a separate section to working with depression through CBT, including ways of coping with suicidal thoughts.\n\nWe are doing our best to support your will to live, but real, personal help can only be provided by a professional.\n\nIf you are on the edge, get in touch with a doctor, psychologist or crisis service immediately (if there is an immediate threat to your life, call emergency numbers).\n\nEven if paid sessions are not an option, in many countries there are centers that offer free and prompt help. The first step is already a movement toward life.\n\nWe understand: making that step can feel incredibly hard. But a specialist is exactly the person who can help you weather the storm and teach you tools that will support you afterwards.\n\nWe believe that with the help of CBT you can gradually build a warmer and more resilient attitude toward yourself and the world.\n\nLiving is not easy, and many people go through very hard periods. But the world is vast and beautiful, and your life is priceless. Please remember this: this world is worth staying for!",
+          "newText": "In a separate section, we will go into detail on how to work through depression using CBT, including how to manage suicidal thoughts.\n\nWe aim to spark a desire to live within you, but only a professional can truly guide you out of the darkness.\n\nIf you feel like you are standing on the edge — please, do not wait. Reach out to a doctor, a psychotherapist, or a crisis hotline right now (if there is an immediate threat, call emergency services immediately).\n\n<q author=\"Thomas Fuller\">The darkest hour is just before the dawn.</q>\n\nEven if you cannot afford private sessions, many countries and cities have centers that offer anonymous, free, and immediate help. Taking the first step means choosing life.\n\nWe understand how terrifying and difficult it is to speak up about this. But a professional is there to help you weather this storm and teach you how to find your footing again.\n\nWe believe that with support, you can step by step rebuild a warm, kind, and strong relationship with yourself and the world.\n\nLife can be harsh, and difficult periods happen to many. But this world is vast and beautiful, and your life is of absolute value. Please, remember this: the world is worth living in!",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Translation A is much more idiomatic and captures the emotional, supportive tone of the original. Translation B feels disjointed, uses clunky phrasing ('support your will to live'), and misses the poetic nuance of the closing sentences.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'support your will to live' sounds clinical and slightly unnatural compared to the original's metaphor."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The translation of the quote and the final sentence ('worth staying for') are weaker and less impactful than A's versions."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed the 'anonymous' aspect of the help centers mentioned in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'The first step is already a movement toward life' is a very awkward way to translate 'Сделать первый шаг — значит выбрать жизнь'."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'psychologist' instead of 'psychotherapist', which changes the nuance of the medical advice provided."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 94
+              },
+              "reason": "Translation B captures the emotional depth, the poetic tone, and the specific metaphors of the original much more effectively. Translation A feels somewhat clinical and loses several key nuances (the quote, the specific imagery of 'sparking a desire', and the 'kindness' in the relationship with oneself).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The quote by Thomas Fuller is completely missing."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'The first step is already a movement toward life' is a bit clunky and loses the punch of the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'бережное отношение' as 'resilient attitude' misses the 'gentle/kind' aspect of the original."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'psychologist' instead of 'psychotherapist' which was in the original, though both are professionals."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/suicide.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Раз уж мы исследуем лабиринты негативного мышления и депрессии, нам предстоит остановиться у самой трудной, но жизненно важной темы — мыслей о суициде.\n\nИскренне надеемся, что эта бездна вам незнакома. Но если смерть когда-либо казалась единственным выходом из темноты — в прошлом или прямо сейчас, — мы здесь, чтобы поддержать вас и поговорить об этом бережно и честно.\n\nПо данным Всемирной организации здравоохранения, ежегодно с этой трагедией сталкивается огромное количество людей. И это только те случаи, о которых мы знаем.\n\nСтатистика сурова: за всю историю человечества потери от суицидов сопоставимы с жертвами войн. Эти цифры ранят, но они кричат об одном: масштабы этой боли колоссальны, и тех, кому сейчас так же тяжело, очень много.\n\n<important>Депрессия играет здесь ключевую роль. Огромная доля трагедий происходит именно на фоне депрессивных расстройств, когда риск не выдержать боли возрастает многократно.</important>\n\nМы говорим об этом не для того, чтобы напугать. Мы хотим разрушить стену молчания. Многие прячут свою боль из-за стыда, думая: «Я один такой», хотя помощь действительно рядом.",
+          "oldText": "Since we’re talking about negative thinking, irrational beliefs and depression, we can’t ignore another difficult but important topic — suicide.\n\nWe are sincerely glad if this has never affected you. And if at some point — now or in the past — death has seemed like the only way out, we want to support you and talk about it calmly.\n\nAccording to WHO (the World Health Organization), a very large number of suicides are committed every year worldwide. And these are only the official figures.\n\nSome researchers suggest that, over the course of history, deaths by suicide may be comparable in number to losses in wars. These numbers are hard to take in, but they show the scale of the problem and how many people are affected.\n\nDepression plays a major role here: a significant share of suicides is committed by people with depressive disorders; in such a state, the risk increases many times over.\n\nWe share these facts not to frighten you, but to remind you: you are not alone. Many people stay silent out of shame and the feeling that “no one else feels this way”, even though help is close by.",
+          "newText": "Since we are exploring the labyrinths of negative thinking and depression, we must pause at the most difficult yet vital topic — suicidal thoughts.\n\nWe sincerely hope you have never experienced this abyss. But if death has ever felt like the only way out of the darkness — whether in the past or right now — we are here to support you, and we want to talk about it with care and honesty.\n\nAccording to the World Health Organization, a vast number of people face this tragedy every year. And those are only the cases we know about.\n\nThe statistics are harsh: throughout human history, suicide losses have been comparable to war casualties. These numbers are painful, but they scream one thing: the scale of this pain is colossal, and so many people are going through the same struggle.\n\n<important>Depression plays a key role here. A huge portion of these tragedies occurs alongside depressive disorders, when the risk of being unable to endure the pain increases manifold.</important>\n\nWe aren’t telling you this to frighten you. We want to break the silence. Many people hide their pain out of shame, thinking, “I’m the only one,” even though help is truly within reach.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Translation B captures the emotional weight, the specific metaphors (labyrinths, abyss, darkness), and the solemn tone of the original much more effectively. Translation A is too clinical and loses the 'empathetic friend' voice, while also making several mistranslations (e.g., 'sincerely glad' instead of 'sincerely hope').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The phrase 'We are sincerely glad if this has never affected you' is a major tonal error; the original is 'We sincerely hope', and 'glad' sounds inappropriately cheerful for such a heavy topic."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation is too simplified and loses the poetic/narrative quality of the original (e.g., 'talking about negative thinking' vs 'exploring the labyrinths')."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed the nuance of 'carefully and honestly' (бережно и честно), replacing it with just 'calmly'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'a very large number of suicides are committed' is a bit clunky/passive compared to the more natural flow in B."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 94
+              },
+              "reason": "Translation A perfectly captures the emotional weight, the 'empathetic friend' tone, and the literary metaphors (labyrinths, abyss, darkness) of the original. Translation B is much flatter, loses the poetic nuance, and introduces inaccuracies (e.g., 'irrational beliefs' which wasn't in the text, and 'official figures' instead of 'cases we know about').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'irrational beliefs' which is not in the source."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "'these are only the official figures' changes the meaning of 'cases we know about' (which implies underreporting, not just official vs unofficial)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The tone is too clinical and loses the 'warm, supportive' requirement; it feels like a dry report rather than a compassionate guide."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed the 'breaking the wall of silence' metaphor, replacing it with a generic 'remind you: you are not alone'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/suicide.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Когда внутри все болит, невозможно представить себе светлое завтра. В такие моменты советы вроде «просто думай о хорошем» звучат как обесценивание и лишь усугубляют чувство вины.\n\nВы ни в чем не виноваты. Разум словно увяз в густой трясине. Эта боль абсолютно реальна, и у нас нет тумблера, чтобы просто «выключить» чувства по щелчку.\n\nНо попробуйте на мгновение допустить одну мысль: эта непроглядная тьма — лишь грязные, темные очки, которые надела на вас депрессия. Они безжалостно искажают картину мира.\n\nДержитесь за эту мысль, как за спасительный канат: любые стекла можно отмыть. Тьма рассеивается, а вы — это нечто гораздо большее, чем ваши сегодняшние переживания.\n\nИ это не просто слова утешения. Когнитивно-поведенческая терапия (КПТ) — это доказанный, работающий метод, который применяют во всем мире, чтобы помогать людям безопасно проходить через кризисы.\n\n<important>Глобальные исследования подтверждают: КПТ не просто дает временное облегчение, она ощутимо снижает риск возвращения суицидальных мыслей и дает четкий план действий, когда кажется, что выхода нет.</important>\n\nДа, этот путь потребует от вас сил. Но КПТ вкладывает в ваши руки реальные, понятные инструменты, благодаря которым ни одно ваше усилие не пропадет впустую.",
+          "oldText": "When the pain is intense, it is hard to imagine a different life. Phrases like “just think positive” feel dismissive and only add guilt.\n\nYou are not to blame. It may feel as if your mind is stuck in a swamp. The pain is real, and you cannot simply flip a switch and “stop feeling”.\n\nTry, just for a moment, to imagine that this total darkness is like dirty lenses on a pair of glasses: they distort what you see.\n\nHold on to this thought like a thin thread: the darkness can be thinned out, and you are more than what you are going through right now.\n\nThis is not just empty reassurance: CBT’s effectiveness is supported by research, and it is used worldwide to reduce the risk of repeated attempts and to help people get through crises.\n\nReview studies show that CBT helps lower the rate of relapse and makes the steps out of the dead end clearer and more structured.\n\nYes, effort will be needed, but CBT offers clear tools and a step-by-step framework so that this effort is not wasted.",
+          "newText": "When everything hurts inside, it is impossible to imagine a brighter tomorrow. In moments like these, advice like “just think positive” can feel invalidating and only worsens the sense of guilt.\n\nYou are not to blame for anything. It can feel as if your mind is stuck in thick mud. This pain is absolutely real, and there is no switch to simply “turn off” your feelings at the click of a button.\n\nBut try, just for a moment, to entertain one thought: this impenetrable darkness is merely a pair of dark, distorted glasses that depression has placed on you. They ruthlessly distort your view of the world.\n\nHold onto that thought like a lifeline: any lenses can be cleaned. The darkness will dissipate, and you are so much more than your current struggles.\n\nAnd these aren’t just comforting words. Cognitive behavioral therapy (CBT) is a proven, effective method used worldwide to help people navigate through crises safely.\n\n<important>Global research confirms: CBT doesn’t just provide temporary relief; it significantly reduces the risk of suicidal thoughts returning and provides a clear action plan for when it feels like there is no way out.</important>\n\nYes, this path will require strength. But CBT puts real, practical tools in your hands, helping ensure that your efforts lead to meaningful change.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 94
+              },
+              "reason": "Translation A is a high-quality, idiomatic, and emotionally resonant text that perfectly captures the 'understanding expert' tone. Translation B suffers from significant mistranslations (e.g., 'repeated attempts' instead of 'suicidal thoughts'), loss of key metaphors, and a much drier, less supportive tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "critical",
+                  "note": "The original mentions 'suicidal thoughts' (суицидальных мыслей), but B translates this as 'repeated attempts' (повторные попытки), which is a dangerous clinical distinction."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "major",
+                  "note": "The metaphor 'спасительный канат' (lifeline) is translated as 'thin thread', which completely reverses the supportive meaning of the original."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The core metaphor of 'dark, distorted glasses' (грязные, темные очки) is significantly weakened and loses its impact."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'the darkness can be thinned out' is unnatural in English; 'dissipate' in A is much better."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The text feels more like a clinical summary than a supportive narrative, losing the 'warm friend' tone required."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 72,
+                "new": 95
+              },
+              "reason": "Translation B is a high-quality transcreation that preserves the emotional depth, metaphors, and specific CBT terminology of the original. Translation A suffers from significant omissions (missing the core 'suicidal thoughts' mention in the important block), loss of key metaphors (swamp/mud, lifeline/thread), and a much flatter, less empathetic tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The most critical part of the text—the mention of suicidal thoughts—is completely omitted and replaced with 'repeated attempts', which changes the clinical and emotional meaning."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The metaphors are weakened: 'thin thread' instead of 'lifeline' (спасительный канат), and 'swamp' instead of 'thick mud' (густая трясина)."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'dismissive' instead of the more clinically accurate 'invalidating' for 'обесценивание' in a mental health context."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The sentence about depression being the cause of the 'dark glasses' is heavily simplified, losing the 'depression' subject entirely."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/suicide.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Статья поднимает тему депрессии и суицидальных мыслей, приводит понятные цифры и объясняет, как они связаны. Рассказывает о роли когнитивно-поведенческой терапии (КПТ) в преодолении таких кризисов, подчёркивает важность обращения к специалистам и доступность бесплатной психологической помощи. Текст поддерживает и напоминает о ценности жизни и необходимости беречь надежду.",
+          "oldText": "This article touches on depression and suicidal thoughts, offering clear numbers and explaining how they are connected. It describes the role of cognitive behavioral therapy (CBT) in getting through such crises, emphasizes the importance of seeking professional help, and reminds readers that free psychological support is often available. The text offers support and gently reminds you of the value of life and the importance of holding on to hope.",
+          "newText": "This article addresses depression and suicidal thoughts, providing statistics and explaining their connection. It discusses the role of cognitive behavioral therapy (CBT) in navigating such crises, emphasizes the importance of seeking professional help, and highlights the availability of free psychological support. The text is supportive, reminding readers of the value of life and the importance of holding onto hope.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more professional and idiomatic, using 'addresses' and 'navigating' which fit the tone of a psychological article better than 'touches on' or 'getting through'. It also avoids the slightly repetitive 'reminds... reminds' structure found in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'touches on' is a bit weak for such a serious topic; 'getting through' is slightly more colloquial than the desired expert-friend tone."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 84,
+                "new": 96
+              },
+              "reason": "Translation A is more professional and idiomatic, using precise verbs like 'addresses' and 'highlights'. Translation B is slightly weaker due to the vague 'touches on' and the unnecessary addition of 'often' which wasn't in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'touches on' is less authoritative than 'addresses' for a serious topic like depression."
+                },
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "'often available' adds a qualifier ('often') that is not present in the original Russian text."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'offering clear numbers' sounds slightly less natural than 'providing statistics'."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

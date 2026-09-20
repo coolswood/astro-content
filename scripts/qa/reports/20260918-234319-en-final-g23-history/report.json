@@ -1,0 +1,474 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:43:19.497Z",
+    "Метка": "en-final-g23-history",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/history.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/history.json": {
+      "en": [
+        {
+          "file": "story/history.json",
+          "lang": "en",
+          "key": "/test/answers",
+          "ru": "Призывает принять свой недуг как данность\n\nПредлагает опровергать свои негативные убеждения и заменять их на более адекватные\n\nФокусируется преимущественно на травмах детства\n\nДекларирует, что чувство \"злость\" не существует",
+          "oldText": "It urges people to accept their condition as fate\n\nIt encourages people to challenge their negative beliefs and replace them with more accurate ones\n\nIt focuses mainly on childhood trauma\n\nIt claims that the feeling of “anger” does not exist",
+          "newText": "It encourages accepting one’s condition as unchangeable\n\nIt suggests challenging negative beliefs and replacing them with more adaptive ones\n\nIt focuses primarily on childhood trauma\n\nIt claims that the feeling of anger does not exist",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A is more concise and professional, avoiding the repetitive 'people' used in B. It also uses the correct CBT term 'adaptive' instead of 'accurate'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'people' makes the text feel less like a professional summary and more like a simple description."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'accurate' instead of the preferred CBT term 'adaptive'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Accept as fate' is a bit too dramatic/poetic compared to the neutral 'as unchangeable' or 'as a given'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation B uses the correct CBT terminology ('adaptive' instead of 'accurate') and sounds more natural. Translation A's use of 'as fate' is a heavy, non-idiomatic calque of 'как данность'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'accurate' instead of the canonical 'adaptive' for beliefs."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'as fate' is an unnatural way to express 'as a given/unchangeable reality' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/history.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Давайте аккуратно заглянем в прошлое и разберёмся, кто стоял у истоков когнитивно-поведенческой терапии и при чём здесь Зигмунд Фрейд — имя, без которого история психологии немыслима.\n\nМы не будем уходить в подробные даты и факты.\n\nЕсли после этого обзора захочется узнать больше деталей — всегда можно открыть Википедию или профильные источники.\n\nАарон Бек, будущая звезда психологии, родился в 1921 году.\n\n<instagram ids=\"18032337608630276\">\n\nВ детстве он был застенчивым, часто болел и очень боялся врачей (иронично, согласитесь).\n\nОднако вместо того чтобы отступать перед страхами, он решил посмотреть им в лицо: поступил в Йель на медицинский факультет, а затем выбрал психиатрию.\n\n«Клин клином вышибают», — мог подумать юный Аарон, преодолевая страх крови и проводя часы в операционной.\n\nСначала Бек, как и многие психиатры того времени, занимался психоанализом.\n\nНо вскоре он заметил: бесконечно искать истоки в детском опыте — всё равно что искать ключи под фонарём, потому что там светлее, а не потому, что вы их там потеряли.\n\nБеку были ближе точность, проверяемость и данные, а не абстрактные построения.\n\nТакой уважаемый и известный человек, как Фрейд, не нуждается в представлении, но напомним базовые принципы психоанализа:\n\nОсновное внимание уделяется бессознательным процессам и переживаниям детства.\n\nПсихоаналитики исследуют прошлые травмы, конфликты и динамику отношений, чтобы понять их влияние на текущие трудности.\n\n<q author=\"Роберт Орбен\">Психоанализ — это когда платишь 35 долларов в час, чтобы жаловаться на себя.</q>",
+          "oldText": "Let’s take a gentle look back in time and see who stood at the origins of cognitive behavioral therapy and what Sigmund Freud has to do with it – a name without which the history of psychology is hard to imagine.\n\nWe won’t dive into exact dates or long lists of facts.\n\nIf, after this overview, you want more specifics, you can always look it up on Wikipedia or in specialized sources.\n\nAaron Beck, the future star of psychology, was born in 1921.\n\nAs a child, he was shy, often ill, and very afraid of doctors (which is quite ironic).\n\nInstead of backing away from his fears, he chose to face them: he entered Yale Medical School and then chose psychiatry.\n\n“Fight fire with fire,” young Aaron might have thought as he worked through his fear of blood and spent hours in the operating room.\n\nAt first, like many psychiatrists of his time, Beck practiced psychoanalysis.\n\nBut soon he noticed that endlessly searching for roots in childhood experiences was like looking for your keys under a streetlamp just because it is brighter there, not because that is where you dropped them.\n\nBeck was drawn to precision, testable hypotheses, and data rather than abstract constructs.\n\nA figure as well-known and influential as Freud hardly needs an introduction, but let’s recall the basic principles of psychoanalysis:\n\nThe main focus is on unconscious processes and childhood experiences.\n\nPsychoanalysts explore past traumas, conflicts, and relationship dynamics to understand how they shape current difficulties.",
+          "newText": "Let’s take a gentle look back at the past to understand who stood at the origins of cognitive behavioral therapy and how Sigmund Freud—a name indispensable to the history of psychology—fits into the story.\n\nWe won’t get bogged down in detailed dates and facts.\n\nIf this overview leaves you wanting more detail, you can always look it up on Wikipedia or in specialized sources.\n\nAaron Beck, a future star of psychology, was born in 1921.\n\n<instagram ids=\"18032337608630276\">\n\nAs a child, he was shy, often fell ill, and was very afraid of doctors (ironic, wouldn’t you agree?).\n\nHowever, instead of retreating from his fears, he decided to face them head-on: he attended Yale Medical School and later chose psychiatry.\n\n“Fight fire with fire,” young Aaron might have thought as he overcame his fear of blood and spent hours in the operating room.\n\nInitially, like many psychiatrists of that time, Beck practiced psychoanalysis.\n\nBut he soon realized that searching endlessly for roots in childhood experiences was like looking for your keys under a streetlight—not because you lost them there, but because that’s where the light is.\n\nBeck was drawn to precision, verifiability, and data, rather than abstract constructs.\n\nA figure as respected and famous as Freud needs no introduction, but let’s recap the basic principles of psychoanalysis:\n\nThe primary focus is on unconscious processes and childhood experiences.\n\nPsychoanalysts explore past traumas, conflicts, and relationship dynamics to understand their influence on current difficulties.\n\n<q author=\"Robert Orben\">Psychoanalysis is when you pay $35 an hour to complain about yourself.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and flows much better as a narrative piece. It uses superior phrasing like 'fits into the story' and 'get bogged down', whereas B feels slightly more literal and clunky in several places.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'what Sigmund Freud has to do with it' is a bit informal/colloquial compared to the more elegant 'fits into the story' in A."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The parenthetical '(which is quite ironic)' is weaker than A's '(ironic, wouldn’t you agree?)' which better captures the conversational tone of the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The streetlight metaphor in B is slightly wordier and less punchy than A's version."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 96
+              },
+              "reason": "Translation B is much more idiomatic and captures the conversational, engaging tone of the original. It handles the parenthetical 'ironic, wouldn't you agree?' and the 'streetlight' metaphor with much better rhythm and flow than A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The parenthetical '(which is quite ironic)' is a bit flat compared to the original's engaging tone."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The streetlight metaphor is slightly wordy and less punchy than B."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed the Instagram placeholder and the Orben quote, though this might be a formatting issue in the snippet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/history.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Свободный формат беседы: клиент рассказывает о мыслях и чувствах, а терапевт помогает интерпретировать возможные бессознательные мотивы.\n\nПроцесс может быть длительным — иногда на годы.\n\nПредполагается, что значительная часть наших действий обусловлена бессознательными процессами, часто связанными с подавленными желаниями и конфликтами.\n\n«Великое заблуждение считать, будто корни психологических проблем необходимо искать в детских переживаниях, — писал Бек.\n\n— Намного важнее понимать, что происходит в настоящее время в жизни человека, как он воспринимает себя и окружающий мир, в каком ключе мыслит».\n\nПоследователи Фрейда считали, что депрессия — это результат гнева, направленного на себя.\n\nНо в 1960-х, работая с людьми, переживавшими депрессию, Бек заметил повторяющиеся негативные мысли — «я неудачник», «меня никто не любит», «мир — ужасное место».\n\n<q author=\"Стивен Холлон\">Аарон Бек взял столетнюю догму, обнаружил, что она не выдерживает критики, и создал нечто простое, надёжное и эффективное, поставив её на место. Он фактически спас психотерапию от самой себя.</q>\n\nЭти мысли, словно заевшая пластинка, заметно ухудшали качество жизни.\n\nОн спросил себя: а что, если эти мысли — не просто побочный эффект, а одна из ключевых причин страдания?\n\nВместо того чтобы ограничиваться обсуждением детских переживаний, Бек предложил попробовать изменить текущее мышление.\n\nБек провёл серию исследований, которые поддержали его гипотезу.\n\nОн разработал опросники и методы для выявления негативных автоматических мыслей, а затем — когнитивную терапию, обучающую распознавать и оспаривать эти установки.\n\nПозже к когнитивным техникам он добавил поведенческие методы — так сформировалась когнитивно-поведенческая терапия.\n\nБек предлагал сосредоточиться на актуальных убеждениях и интерпретациях повседневных событий, а не только на конфликтах детства.\n\nОн использовал практические упражнения, чтобы помочь людям замечать и менять деструктивные мысли.\n\nНапример, он рекомендовал вести дневники, где фиксируются негативные мысли и их последующий анализ.\n\nЭто помогало увидеть, как часто восприятие реальности бывает искажено и как это отражается на самочувствии.\n\nВ отличие от длительных курсов психоанализа, которые могли продолжаться годами, терапия у Бека обычно укладывалась в срок до 12 месяцев и показывала высокую эффективность.\n\nВ одном из интервью Бек признавался: «Отказавшись от метода Фрейда, я сразу ощутил тревогу за своё финансовое благополучие.\n\nПосле десяти сеансов клиенты говорили мне: „Доктор, спасибо!\n\nЯ стал по-другому смотреть на жизнь и иначе думать о себе и окружающих.\n\nЯ больше не нуждаюсь в вашей помощи!” — и, поблагодарив, уходили, а мои доходы снижались».\n\nТем не менее вскоре его тревога сменилась уверенностью: результаты говорили сами за себя.",
+          "oldText": "The format is an open-ended conversation: the client talks about their thoughts and feelings, and the therapist helps interpret possible unconscious motives.\n\nThe process can be very long — sometimes lasting for years.\n\nIt is assumed that a significant part of our behavior is driven by unconscious processes, often linked to repressed wishes and conflicts.\n\n“It is a great misconception to think that the roots of psychological problems must necessarily be sought in childhood experiences,” Beck wrote.\n\n“It is much more important to understand what is happening in a person’s life right now, how they see themselves and the world around them, and what patterns of thinking they use.”\n\nFollowers of Freud believed that depression is the result of anger turned against the self.\n\nBut in the 1960s, working with people with depression, Beck began to notice recurring negative thoughts such as “I’m a failure”, “Nobody loves me”, “The world is a terrible place.”\n\nThese thoughts, like a stuck record, were clearly making people’s lives worse.\n\nHe asked himself: what if these thoughts are not just a side effect, but one of the key causes of suffering?\n\nInstead of limiting the work to childhood experiences, Beck suggested trying to change the person’s current patterns of thinking.\n\nBeck conducted a series of studies that supported his hypothesis.\n\nHe developed questionnaires and methods to identify negative automatic thoughts, and then created cognitive therapy, which teaches people to recognize and challenge these beliefs.\n\nLater, he added behavioral techniques to these cognitive methods – and that is how cognitive behavioral therapy was formed.\n\nBeck proposed focusing on current beliefs and interpretations of everyday events rather than exclusively on childhood conflicts.\n\nHe used practical exercises to help people notice and change destructive thoughts.\n\nFor example, he recommended keeping diaries to record negative thoughts and then analyze them.\n\nThis made it easier to see how often our view of reality is distorted and how strongly that affects our well-being.\n\nUnlike long-term psychoanalysis that could go on for years, Beck’s therapy usually fit into about 12 months and showed strong results.\n\nIn one interview, Beck admitted: “After giving up Freud’s method, I immediately felt anxious about my financial security.\n\nAfter ten sessions, clients would say, ‘Doctor, thank you!\n\nI’ve started to see life differently and to think differently about myself and others.\n\nI don’t need your help anymore!’ – and, after thanking me, they would leave, and my income would drop.”\n\nHowever, his anxiety soon gave way to confidence: the results spoke for themselves.",
+          "newText": "Free-form conversation: the client shares their thoughts and feelings, while the therapist helps interpret potential unconscious motives.\n\nThe process can be long — sometimes lasting for years.\n\nIt is assumed that a significant part of our actions is driven by unconscious processes, often linked to suppressed desires and conflicts.\n\n“It is a great mistake to believe that the roots of psychological problems must be sought in childhood experiences,” Beck wrote.\n\n“It is far more important to understand what is happening in a person’s life right now, how they perceive themselves and the world around them, and how they think.”\n\nFollowers of Freud believed that depression was the result of anger directed inward.\n\nBut in the 1960s, while working with people experiencing depression, Beck noticed recurring negative thoughts — “I’m a failure,” “nobody loves me,” “the world is a terrible place.”\n\n<q author=\"Stephen Hollem\">Aaron Beck took a century-old dogma, found that it didn’t hold up to criticism, and created something simple, reliable, and effective, putting it in its place. He essentially saved psychotherapy from itself.</q>\n\nThese thoughts, like a broken record, significantly diminished their quality of life.\n\nHe asked himself: what if these thoughts aren’t just a side effect, but one of the key causes of suffering?\n\nInstead of limiting the discussion to childhood experiences, Beck suggested trying to change current thinking patterns.\n\nBeck conducted a series of studies that supported his hypothesis.\n\nHe developed questionnaires and methods to identify negative automatic thoughts, and then created cognitive therapy to teach people how to recognize and challenge these beliefs.\n\nLater, he added behavioral methods to these cognitive techniques — and thus, cognitive behavioral therapy (CBT) was born.\n\nBeck suggested focusing on current beliefs and interpretations of everyday events, rather than just on childhood conflicts.\n\nHe used practical exercises to help people notice and change unhelpful thoughts.\n\nFor example, he recommended keeping a journal to record negative thoughts and analyze them.\n\nThis helped people see how often their perception of reality was distorted and how that affected their mental well-being.\n\nUnlike long-term psychoanalysis, which could last for years, Beck’s therapy usually took up to 12 months and proved highly effective.\n\nI immediately felt anxious about my financial well-being.\n\nAfter ten sessions, clients would tell me, “Doctor, thank you!\n\nI’ve started looking at life differently and thinking about myself and others in a new way.\"\n\n“I don’t need your help anymore!” — they’d say, thank you, and leave, while my income continued to drop.\n\nHowever, his anxiety soon turned into confidence: the results spoke for themselves.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A is much more polished and follows the project's specific terminology (e.g., 'unhelpful thoughts', 'mental well-being'). It also handles the quote from Stephen Hollem, which was completely omitted in Translation B. Translation A's flow is more natural for a narrative article.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire quote by Stephen Hollem was omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'destructive thoughts' instead of the preferred 'unhelpful thoughts'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Phrasing like 'the format is an open-ended conversation' is slightly more wordy/clunky than A's direct approach."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B is much closer to the professional standards of the project. It correctly uses 'unhelpful thoughts' (per glossary), 'mental well-being', and 'journal'. It also correctly includes the missing quote from Stephen Hollem, which Translation A completely omitted. Translation B's flow is more idiomatic for a narrative article.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The entire quote by Stephen Hollem was omitted."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'destructive thoughts' instead of 'unhelpful thoughts'; 'diaries' instead of 'journal'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The transition in the interview section is slightly abrupt due to the removal of 'In one interview, Beck admitted', but it remains more accurate to the overall quality requirements."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/history.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Эта статья рассказывает об исторических корнях когнитивно-поведенческой терапии (КПТ), начиная с 1960-х годов и работы психолога Аарона Бека. Мы кратко освещаем ключевые аспекты КПТ в контексте времени, когда доминировал психоанализ, и приводим аргументы в пользу эффективности этого подхода.",
+          "oldText": "This article looks at the historical roots of cognitive behavioral therapy (CBT), starting in the 1960s with the work of psychologist Aaron Beck. We briefly outline the key features of CBT in the context of a time when psychoanalysis dominated, and highlight the evidence in favor of this approach.",
+          "newText": "This article explores the historical roots of cognitive behavioral therapy (CBT), starting from the 1960s and the work of psychologist Aaron Beck. We’ll highlight the key aspects of CBT in the context of an era dominated by psychoanalysis and present the arguments for why this approach is so effective.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A flows much more naturally for an English-speaking reader, using a more engaging tone ('explores', 'highlight', 'why this approach is so effective') that fits the 'expert friend' persona. Translation B feels slightly more academic and stilted ('looks at', 'briefly outline').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'a time when psychoanalysis dominated' is grammatically correct but less idiomatic than 'an era dominated by psychoanalysis'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 82
+              },
+              "reason": "Translation A is more professional, concise, and follows the 'expert friend' tone perfectly. Translation B is slightly wordy and uses 'so effective', which sounds a bit too informal and promotional for a psychoeducational article.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'arguments for why this approach is so effective' is a bit clunky and overly conversational compared to the original."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'We'll' (future tense) is less standard for an introductory paragraph than the present tense used in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/history.json",
+          "lang": "en",
+          "key": "/test/question",
+          "ru": "Чем подход КПТ отличается от психоанализа?",
+          "oldText": "How does CBT differ from psychoanalysis?",
+          "newText": "How does the CBT approach differ from psychoanalysis?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 90
+              },
+              "reason": "Translation A is more concise and idiomatic for a heading or a question. In English, 'CBT' already implies the approach, making 'the CBT approach' in B feel slightly redundant and wordy.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Redundant use of 'the ... approach' makes the sentence heavier than necessary for a natural English question."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation B is more concise and natural for a heading or a question. In English, 'CBT' is used as a proper noun/acronym that doesn't require the redundant 'approach' unless specifically contrasting methodologies in a formal academic paper.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'the CBT approach' is slightly wordy and sounds more like a translation of the Russian structure than a natural English question."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/history.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Как КПТ переосмыслила наше понимание психологии",
+          "oldText": "How CBT Transformed Our Understanding of Psychology",
+          "newText": "How CBT reshaped our understanding of psychology",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Translation A follows the sentence case rule for titles/headings as specified in the instructions, whereas Translation B uses Title Case. A also uses 'reshaped', which is a very natural and precise fit for the context of changing a paradigm.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of the required sentence case for headings."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "Translation A uses Title Case, which is appropriate for an article headline, and 'transformed' is a stronger, more idiomatic choice for a significant paradigm shift in science. Translation B uses sentence case and 'reshaped', which is acceptable but slightly less impactful for a title.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case instead of Title Case for a headline, and 'reshaped' is slightly weaker than 'transformed' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/history.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Когнитивная терапия, помогавшая людям быстрее преодолевать депрессию и находить практичные решения, сделала Бека достаточно известным, чтобы о материальном он мог беспокоиться меньше.\n\nМетод стремительно распространялся, и к началу 1990-х визит к когнитивному психологу стал таким же привычным, как занятия йогой.\n\nРазумеется, психоанализ и другие направления не исчезли.\n\nКаждый человек уникален, и один метод не подходит всем без исключения.\n\nМногие специалисты сегодня используют интегративный подход, сочетая элементы психоанализа с другими техниками.\n\nПри этом КПТ остаётся одним из самых исследованных и доказательных подходов.\n\nЕё применяют по всему миру, а фамилия Бека стала знаковой для специалистов.\n\nЕго идеи продолжают вдохновлять новое поколение терапевтов, помогающих людям справляться с внутренними конфликтами и выбирать более здоровые способы взаимодействия с миром.\n\nТеперь, зная немного больше об истории, приглашаем заинтересованных читателей углубиться дальше самостоятельно.\n\nА остальных — продолжить путь вместе с нами.\n\nМы искренне ценим КПТ (и это не просто слова).\n\nВ своей работе мы опираемся на научный подход: все техники основаны на проверенных данных.\n\nПоэтому следующий раздел посвящён доказательствам эффективности метода.\n\nГотовьтесь к цифрам!\n\nМы предупреждали!",
+          "oldText": "Cognitive therapy, which helped people overcome depression faster and find practical solutions, made Beck well-known enough that he could worry less about money.\n\nThe method spread quickly, and by the early 1990s, seeing a cognitive therapist had become almost as common as going to a yoga class.\n\nOf course, psychoanalysis and other approaches did not disappear.\n\nEvery person is unique, and no single method suits absolutely everyone.\n\nMany therapists today use an integrative approach, combining elements of psychoanalysis with other techniques.\n\nAt the same time, CBT remains one of the most thoroughly researched and evidence-based approaches.\n\nIt is used all over the world, and Beck’s name has become iconic among professionals.\n\nHis ideas continue to inspire new generations of therapists who help people deal with inner conflicts and choose healthier ways of relating to the world.\n\nNow that you know a bit more about the history, if you are curious, you can continue exploring it on your own.\n\nAnd for everyone else, we invite you to keep going together with us.\n\nWe genuinely value CBT (and that is not just a slogan).\n\nIn our work, we rely on a scientific approach: all techniques are grounded in solid evidence.\n\nThat is why the next section is devoted to proof of how effective this method is.\n\nGet ready for some numbers!\n\nYou have been warned!",
+          "newText": "Cognitive therapy helped people overcome depression faster and find practical solutions, making Beck so successful that he no longer had to worry about his finances.\n\nThe method spread rapidly, and by the early 1990s, seeing a cognitive psychologist had become as common as practicing yoga.\n\nOf course, psychoanalysis and other approaches didn’t disappear.\n\nEvery person is unique, and no single method works for everyone.\n\nToday, many specialists use an integrative approach, combining elements of psychoanalysis with other techniques.\n\nAt the same time, CBT remains one of the most researched and evidence-based approaches.\n\nIt is used all over the world, and Beck’s name has become iconic among specialists.\n\nHis ideas continue to inspire a new generation of therapists helping people navigate internal conflicts and find more helpful ways of interacting with the world.\n\nNow that you know a little more about the history, we invite those interested to dive deeper on their own.\n\nAnd the rest of you — to continue the journey with us.\n\nWe truly value CBT (and we don’t just say that).\n\nIn our work, we rely on a scientific approach: all techniques are based on proven data.\n\nThat’s why the next section is dedicated to evidence of the method’s efficacy.\n\nGet ready for some numbers!\n\nWe warned you!",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 94
+              },
+              "reason": "Translation B is more idiomatic and flows better as a narrative text. It uses more natural phrasing (e.g., 'worry about his finances' vs 'worry about money', 'navigate internal conflicts' vs 'deal with inner conflicts') and handles the transition to the reader more gracefully.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'and that is not just a slogan' is a bit clunky compared to the more natural 'and we don't just say that'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'if you are interested, you can continue exploring it on your own' is slightly wordy and less punchy than B's version."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'психолог' as 'psychologist' in the second paragraph is technically more accurate to the Russian 'психолог' than A's 'therapist', though both are acceptable in context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation A is much more idiomatic and follows the 'warm expert friend' tone perfectly. It uses natural contractions and avoids the clunky, slightly formal phrasing found in B. Translation A also correctly uses 'helpful' instead of 'healthier' for ways of interacting, aligning with CBT terminology guidelines.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'did not' and 'that is' instead of contractions, making it feel too formal/stiff for a supportive app context."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'healthier ways' instead of 'helpful ways', which slightly deviates from the CBT-specific instruction to avoid good/bad/healthy/unhealthy binaries."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'You have been warned!' sounds slightly more ominous/threatening than the playful 'We warned you!' in the original."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

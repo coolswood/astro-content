@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T05:35:02.248Z",
+    "Метка": "en-content-verif-distortions-key",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref HEAD",
+    "Файлы": "story/distortions/key.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 11,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "431bd08c6c487840271a919950ac699dadad71e1"
+  },
+  "results": {
+    "story/distortions/key.json": {
+      "en": [
+        {
+          "file": "story/distortions/key.json",
+          "lang": "en",
+          "key": "/title",
+          "ru": "Ключ к счастью: преодоление деструктивных убеждений",
+          "oldText": "The Key to Happiness: Overcoming Destructive Beliefs",
+          "newText": "The Key to Happiness: Overcoming Unhelpful Beliefs",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 80,
+                "new": 100
+              },
+              "reason": "Translation B uses the project-specific term 'unhelpful beliefs' as required by the glossary, whereas Translation A uses 'destructive,' which is not the approved terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive beliefs' instead of the mandatory 'unhelpful beliefs'"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "Translation A follows the project's specific terminology guidelines, using 'unhelpful beliefs' instead of the literal 'destructive beliefs'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'destructive beliefs' instead of the approved 'unhelpful beliefs' for a softer, non-judgmental tone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/key.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Настоящие изменения включают несколько важных компонентов:\n\n<li>Осознание причин эмоциональных трудностей и своей роли в формировании реакции на события.</li>\n\n<li>Понимание и работа с деструктивными убеждениями и автоматическими мыслями.</li>\n\n<li>Развитие уверенности в себе и здорового чувства собственного достоинства.</li>\n\n<li>Изучение того, как и почему сформировались ограничивающие убеждения.</li>\n\nУбеждения формируют наши ценности, цели, поведение, отношение к себе и восприятие происходящего. Например:\n\n<li>Если я ошибаюсь, значит, я не способен.</li>\n\n<li>Чтобы меня приняли, я должен всегда быть удобным.</li>\n\n<li>Если я не добился ничего значимого, меня нельзя любить.</li>\n\n<li>Просить о помощи — значит быть слабым.</li>\n\nИногда считается, что понимание своих глубинных причин требует исключительно долгой терапии, и даже годы работы не всегда дают полный ответ.\n\nОднако когнитивная терапия внесла огромный вклад в то, чтобы сделать этот процесс яснее и доступнее.\n\n<q author=\"Марша Лайнхан\">Улучшение начинается тогда, когда вы перестаёте пытаться стать кем-то ещё и выбираете быть лучшей версией себя.</q>",
+          "oldText": "Real change involves several important components:\n\n<li>Recognizing the reasons behind emotional difficulties and your own role in shaping your reactions to events.</li>\n\n<li>Understanding and working with destructive beliefs and automatic thoughts.</li>\n\n<li>Developing self-confidence and a healthy sense of self-worth.</li>\n\n<li>Exploring how and why limiting beliefs were formed.</li>\n\nBeliefs shape our values, goals, behavior, attitude toward ourselves, and how we interpret what happens around us. For example:\n\n<li>If I make a mistake, it means I am incapable.</li>\n\n<li>To be accepted, I must always be easy to deal with.</li>\n\n<li>If I have not achieved anything significant, I am not lovable.</li>\n\n<li>Asking for help means being weak.</li>\n\nThere is a common idea that understanding your deep-rooted issues always requires very long therapy, and that even years of work do not necessarily give a complete answer.\n\nHowever, cognitive therapy has made this process much clearer and more accessible.\n\n<q author=\"Marsha Linehan\">Change begins when you stop trying to become someone else and choose to be the best version of yourself.</q>",
+          "newText": "Real change involves several important components:\n\n<li>Recognizing the causes of emotional difficulties and your role in how you respond to events.</li>\n\n<li>Understanding and working through unhelpful beliefs and automatic thoughts.</li>\n\n<li>Developing self-confidence and a healthy sense of self-worth.</li>\n\n<li>Learning how and why limiting beliefs were formed.</li>\n\nBeliefs shape our values, goals, behavior, self-image, and how we perceive what is happening. For example:\n\n<li>\"If I make a mistake, it means I am incompetent.\"</li>\n\n<li>\"To be accepted, I must always be accommodating.\"</li>\n\n<li>\"If I haven't achieved anything significant, I am unlovable.\"</li>\n\n<li>\"Asking for help means being weak.\"</li>\n\nIt is sometimes thought that understanding your core beliefs requires exceptionally long-term therapy, and even years of work don't always provide a complete answer.\n\nHowever, cognitive therapy has made a huge contribution to making this process clearer and more accessible.\n\n<q author=\"Marsha Linehan\">Improvement begins when you stop trying to become someone else and choose to become the best version of yourself.</q>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B follows the project's specific CBT terminology (unhelpful beliefs, core beliefs) and uses more natural, sophisticated English for the examples (accommodating, incompetent, unlovable).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive beliefs' instead of the required 'unhelpful beliefs'."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'deep-rooted issues' instead of 'core beliefs' (глубинные причины/убеждения)."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'easy to deal with' is a bit colloquial/clunky for the 'удобным' concept in this context; 'accommodating' in B is better."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'it means I am incapable' is slightly less idiomatic than 'I am incompetent' or 'I am unlovable' in a psychological context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A follows the project's terminology guidelines perfectly, specifically using 'unhelpful beliefs' instead of the non-standard 'destructive beliefs'. It also captures the nuance of the quote more naturally and handles the examples with better idiomatic flow.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive beliefs' instead of the required 'unhelpful beliefs'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Easy to deal with' is a bit too colloquial/informal for the 'accommodating' nuance in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Deep-rooted issues' is a slight departure from the original focus on 'core reasons' (core beliefs context)."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missed the 'huge contribution' nuance in the final paragraph, simplifying it too much."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/key.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Наша цель — помочь вам разобраться в своих глубинных убеждениях, понять, в какие моменты вы особенно уязвимы, и научиться работать с этими установками, чтобы поддерживать эмоциональную устойчивость.\n\nОсознание убеждений позволяет увидеть, почему определённые ситуации вызывают болезненные переживания или повторяющиеся трудности.\n\n<important>Работа с убеждениями — важная часть личностного роста.</important>\n\nДля этого был разработан практичный инструмент — «Шкала дисфункциональных убеждений», созданная доктором Арлин Вайсман.\n\nИсследования Вайсман показали: даже когда негативные автоматические мысли временно ослабевают между депрессивными эпизодами, глубинные убеждения продолжают влиять на человека.\n\nЭто подтверждает, что убеждения могут быть своеобразным эмоциональным «фоном», который влияет на нас постоянно.\n\nИспользуя этот метод, вы сможете определить те ценности и установки, которые усиливают уязвимость к депрессии, тревоге и внутреннему напряжению.\n\nИменно они становятся вашей психологической ахиллесовой пятой — уязвимым местом, которое важно распознать.\n\n<instagram ids=\"17913482039999571,18007148795734144\">\n\nВ следующих главах мы подробнее рассмотрим эти убеждения и шаги, которые помогут вам формировать более реалистичное, гибкое и поддерживающее мышление, создающее основу для долгосрочного эмоционального благополучия.",
+          "oldText": "Our goal is to help you explore your core beliefs, understand when you are especially vulnerable, and learn how to work with these patterns so you can maintain emotional resilience.\n\nBecoming aware of your beliefs makes it easier to see why certain situations trigger painful feelings or recurring difficulties.\n\n<important>Working with beliefs is a crucial part of personal growth.</important>\n\nTo support this process, a practical tool was developed: the Dysfunctional Attitude Scale, created by Dr. Arlene Weissman.\n\nWeissman’s research showed that even when negative automatic thoughts temporarily weaken between depressive episodes, core beliefs continue to exert an influence.\n\nThis confirms that beliefs can act like an emotional background that affects us all the time.\n\nUsing this method, you can identify the values and attitudes that heighten your vulnerability to depression, anxiety, and inner tension.\n\nThese beliefs become your psychological Achilles’ heel—a sensitive point that is important to recognize.\n\n<instagram ids=\"18102494377465371\">\n\nIn the following chapters, we will take a closer look at these beliefs and outline steps that can help you develop more realistic, flexible, and supportive ways of thinking, creating a foundation for long-term emotional well-being.",
+          "newText": "Our goal is to help you understand your core beliefs, identify when you are particularly vulnerable, and learn to work with these patterns to maintain emotional resilience.\n\nRecognizing your beliefs allows you to see why certain situations trigger painful emotions or recurring difficulties.\n\n<important>Working with your beliefs is a vital part of personal growth.</important>\n\nTo help with this, a practical tool called the \"Unhelpful Beliefs Scale\" was developed by Dr. Arlene Weissman.\n\nWeissman’s research showed that even when negative automatic thoughts temporarily weaken between depressive episodes, core beliefs continue to influence a person.\n\nThis confirms that beliefs can act as a kind of emotional \"background\" that constantly affects us.\n\nBy using this method, you can identify the values and assumptions that increase your vulnerability to depression, anxiety, and internal tension.\n\nThese become your psychological Achilles' heel—a vulnerable spot that is important to recognize.\n\n<instagram ids=\"17913482039999571,18007148795734144\">\n\nIn the following chapters, we will look closer at these beliefs and the steps that will help you develop more realistic, flexible, and supportive thinking, creating a foundation for long-term mental well-being.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is superior because it adheres to the project's specific terminology (using 'Unhelpful Beliefs Scale' instead of the outdated 'Dysfunctional Attitude Scale') and maintains better consistency with the glossary. It also correctly preserves the Instagram ID from the original, whereas B changed it.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'Dysfunctional Attitude Scale' instead of the project-mandated 'Unhelpful Beliefs Scale' (and 'dysfunctional' is explicitly discouraged in the glossary)."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The Instagram ID was changed/incorrectly copied."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Used 'emotional well-being' instead of the preferred 'mental well-being' for the final conclusion."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 84
+              },
+              "reason": "Translation A is more professional and follows the established CBT terminology for the specific scale mentioned. Translation B uses 'Unhelpful Beliefs Scale', which is a literal translation of the Russian text but is not the correct name of the clinical instrument (Dysfunctional Attitude Scale).",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "The scale name is incorrectly translated; 'Dysfunctional Attitude Scale' is the standard clinical term for Weissman's tool."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The Instagram tag IDs were partially lost/changed compared to the original."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'influence a person' is slightly more detached/clinical than the smoother 'continue to exert an influence' or 'continue to affect us'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/key.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Когнитивно-поведенческая терапия показывает, что на пути к счастливой жизни часто стоят деструктивные убеждения — мысли и правила, в которые мы верим, иногда даже не осознавая этого.\n\nС ними сталкивается каждый человек в разные периоды жизни. Они могут усиливать тревогу, приводить к депрессии, паническим атакам, пищевым и тревожным расстройствам.\n\nБывают моменты, когда мы чувствуем себя уверенно и спокойно, будто трудности ушли. Но в другие периоды возвращается грусть, чувство одиночества или пустоты — и становится трудно поверить, что свет впереди вообще есть.\n\nКлючевое отличие временного облегчения от устойчивого улучшения качества жизни — изменение мышления и убеждений.\n\nВременное улучшение — это когда состояние стабилизируется лишь на время. Но сталкиваясь с очередным стрессом, мы вновь переживаем те же эмоции и мысли.\n\n<q author=\"Вирджиния Сатир\">Мы не видим вещи такими, какие они есть. Мы видим их такими, какие мы есть.</q>\n\nКажется, что проблема решена, но после нового вызова внутренние переживания возвращаются, и всё начинается заново.",
+          "oldText": "Cognitive Behavioral Therapy shows that, on the path to a happier life, we are often blocked by destructive beliefs—thoughts and rules we buy into, sometimes without even realizing it.\n\nEveryone encounters them at different points in life. They can intensify anxiety and contribute to depression, panic attacks, eating disorders, and various anxiety disorders.\n\nThere are moments when we feel confident and calm, as if the difficulties have faded into the background. At other times, sadness, loneliness, or a sense of emptiness return—and it becomes hard to believe there is any light ahead at all.\n\nThe key difference between temporary relief and a lasting improvement in quality of life lies in changes in our thinking and beliefs.\n\nTemporary improvement is when our condition stabilizes only for a while. But as soon as we face another stressor, we find ourselves going through the same emotions and thoughts again.\n\n<q author=\"Virginia Satir\">We do not see things as they are. We see them as we are.</q>\n\nIt may feel as though the problem has been solved, but when a new challenge appears, the inner struggle returns and the whole cycle starts over.",
+          "newText": "Cognitive behavioral therapy (CBT) shows that unhelpful beliefs—thoughts and rules we hold to be true, often without even realizing it—can stand in the way of a fulfilling life.\n\nEveryone encounters them at different stages of life. They can intensify anxiety and contribute to depression, panic attacks, or eating and anxiety disorders.\n\nThere are moments when we feel confident and calm, as if our difficulties have vanished. But in other periods, sadness, loneliness, or emptiness return—making it hard to believe there is any light ahead.\n\nThe key difference between temporary relief and a lasting improvement in quality of life is the transformation of your thinking and beliefs.\n\nTemporary improvement is when your state stabilizes only for a short time. But when faced with new stress, you experience the same emotions and thoughts all over again.\n\n<q author=\"Virginia Satir\">We don't see things as they are. We see them as we are.</q>\n\nIt may feel like the problem is solved, but when a new challenge arises, those inner struggles return, and everything starts from scratch.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 86,
+                "new": 95
+              },
+              "reason": "Translation B follows the project's terminology guidelines perfectly (using 'unhelpful beliefs' instead of 'destructive') and introduces the 'CBT' acronym upon first mention. It also feels more natural and idiomatic for a mental health context.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive beliefs' instead of the required 'unhelpful beliefs'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Failed to introduce the 'CBT' acronym on first mention."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'thoughts and rules we buy into' is a bit too informal/slangy for this context compared to 'hold to be true'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A follows all CBT terminology guidelines (using 'unhelpful beliefs' instead of 'destructive') and maintains a much more natural, professional, and empathetic tone. Translation B uses 'destructive beliefs' (against guidelines) and contains awkward phrasing like 'thoughts we buy into' and 'various anxiety disorders' which feels repetitive and unidiomatic.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive beliefs' instead of the required 'unhelpful beliefs'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'thoughts we buy into' is too colloquial for this context; 'on the path to a happier life' is a bit cliché compared to 'fulfilling life'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'various anxiety disorders' is redundant after mentioning anxiety earlier in the sentence."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/distortions/key.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Статья объясняет, как деструктивные убеждения влияют на наше восприятие себя и мира и мешают жить полноценно. Опираясь на принципы когнитивно-поведенческой терапии, мы рассматриваем разницу между временным облегчением и настоящими изменениями, которые происходят, когда мы переосмысливаем привычные мысли и глубинные убеждения. Также представлены инструменты, например «Шкала дисфункциональных убеждений», которые помогают распознавать и корректировать такие установки и формировать устойчивое эмоциональное благополучие.",
+          "oldText": "This article explains how destructive beliefs shape the way we see ourselves and the world, and how they get in the way of a fulfilling life. Drawing on the principles of Cognitive Behavioral Therapy (CBT), it explores the difference between temporary relief and real change that happens when we rethink our usual thoughts and core beliefs. It also introduces practical tools, such as the Dysfunctional Attitude Scale, that help identify and adjust these patterns and build lasting emotional well-being.",
+          "newText": "This article explains how unhelpful beliefs affect how we perceive ourselves and the world, preventing us from living fully. Based on the principles of cognitive behavioral therapy (CBT), we explore the difference between temporary relief and the real changes that occur when we reframe habitual thoughts and core beliefs. We also introduce tools, such as the \"Unhelpful Beliefs Scale,\" to help you recognize and correct these patterns and build lasting mental well-being.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 94
+              },
+              "reason": "Translation B follows the project's specific terminology guidelines (unhelpful beliefs, mental well-being) and uses more natural CBT-appropriate verbs like 'reframe'. Translation A uses 'destructive' and 'dysfunctional', which are less aligned with the requested 'unhelpful' tone and specific glossary terms.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive beliefs' instead of 'unhelpful beliefs' and 'Dysfunctional Attitude Scale' instead of the project's preferred 'unhelpful' terminology."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'emotional well-being' instead of 'mental well-being'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Used 'rethink' instead of the more professional 'reframe'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 96
+              },
+              "reason": "Translation A follows all glossary requirements, specifically using 'unhelpful beliefs' instead of the outdated/incorrect 'destructive' or 'dysfunctional' and 'mental well-being' instead of 'emotional well-being'. It also correctly handles the CBT terminology and tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive beliefs' instead of 'unhelpful beliefs' and 'Dysfunctional Attitude Scale' instead of the project-specific 'Unhelpful Beliefs Scale' (or at least failed to align with the 'unhelpful' preference)."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'emotional well-being' instead of 'mental well-being'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'how they get in the way of a fulfilling life' is slightly more wordy/clunky compared to A's 'preventing us from living fully'."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

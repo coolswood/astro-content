@@ -1,0 +1,1107 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:35:52.134Z",
+    "Метка": "en-final-g1-sitemap",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "sitemap.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "sitemap.json": {
+      "en": [
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/sdvdpsvGscfvw/description",
+          "ru": "Возможность заполнять дневники голосом.",
+          "oldText": "Fill out journals by voice.",
+          "newText": "The ability to record journal entries using your voice.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 92
+              },
+              "reason": "Translation B is much more natural and follows the UX standard for describing features. Translation A sounds like a direct, slightly clunky command rather than a description of a capability.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Sounds like a direct imperative command ('Fill out journals...') rather than a feature description ('The ability to...')."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'Fill out' which is more for forms; 'record entries' is more idiomatic for voice functionality."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 95
+              },
+              "reason": "Translation A is a polished, natural-sounding phrase that follows UX best practices for describing features. Translation B is a bit too literal and sounds like a clunky instruction rather than a feature description.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Sounds like a direct command/instruction rather than a feature description; 'by voice' is less idiomatic than 'using your voice' or 'via voice' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/iF6sKCdvfds/title",
+          "ru": "Промежуточные убеждения",
+          "oldText": "Intermediate Beliefs",
+          "newText": "Intermediate beliefs",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "The original is a title/heading. According to the style guide, titles should follow Title Case or Sentence case, but for a standalone section heading like 'Intermediate Beliefs', Title Case is the standard professional convention for English-speaking markets.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for a standalone heading, which is less common for major section titles in this context compared to Title Case."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 100
+              },
+              "reason": "According to the project guidelines, UI elements and section titles should use sentence case (only the first word capitalized), making A the correct choice.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of the required sentence case for UI/section titles."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/iF6sKverhdfd/description",
+          "ru": "Добавить ежедневную оценку состояния и график динамики, связанный с изменениями установок.",
+          "oldText": "Add a daily state rating and a trend chart linked to shifts in beliefs.",
+          "newText": "Add a daily check-in and a progress graph linked to changes in beliefs.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A uses 'daily check-in', which is the established UI term for 'ежедневная оценка состояния' in this project, making it much more natural for a user. Translation B uses 'state rating', which sounds like a literal translation (calque) and is not standard UX English.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "'daily state rating' is unnatural; 'daily check-in' is the correct term for this feature."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'trend chart' is acceptable, but 'progress graph' (in A) is more common for tracking personal improvement in mental health apps."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B uses 'daily check-in', which is the established UI term for mood/state tracking, and 'progress graph', which sounds more natural for a user-facing app than 'trend chart'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "uses 'state rating' instead of the standard 'check-in'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'trend chart' is slightly more clinical/analytical than the more user-friendly 'progress graph'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/iF6sKvevscdf1/description",
+          "ru": "Оценивать не только состояние до и после, но также эмоции и выполненные практики.",
+          "oldText": "Rate not only your state before/after, but also emotions and completed practices.",
+          "newText": "Rate not just your state before and after, but also your emotions and completed practices.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is grammatically complete and follows the natural flow of English. Translation B uses a slash ('before/after') and omits the possessive pronoun 'your', which makes it feel like a fragmented, low-quality UI string rather than a polished instruction.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'before/after' is too clipped for a supportive tone, and the omission of 'your' before 'emotions' makes the sentence feel unnatural."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing the possessive 'your' which is necessary for a natural 'expert friend' tone."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B is much more natural and follows English rhythm better. Translation A uses a slash (before/after) which feels like a technical note rather than a smooth sentence, and it lacks the necessary possessive pronoun 'your' for 'emotions', making it sound slightly clipped.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'before/after' is too telegraphic/technical for a supportive tone; 'not only... but also' is fine, but the lack of 'your' before 'emotions' makes it feel slightly ungrammatical/incomplete."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing the possessive 'your' before 'emotions', which is preferred in UX to make it personal."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/iF6sKCdvfds/description",
+          "ru": "Добавить возможность связывать автоматические мысли с убеждениями и строить карту убеждений.",
+          "oldText": "Link automatic thoughts to beliefs and build a belief map.",
+          "newText": "Add the ability to link automatic thoughts to beliefs and build a belief map.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation B is more concise and follows UX best practices for actions/buttons by using a direct imperative. Translation A includes 'Add the ability to', which is a wordy, heavy construction (calque of 'Добавить возможность') that sounds unnatural in a functional context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Wordy and indirect; 'Add the ability to' is unnecessary filler for a functional requirement or action."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "Translation A follows UX best practices by using a direct imperative, which is more concise and natural for a task or feature description. Translation B is a literal translation of the Russian 'Добавить возможность', which creates unnecessary wordiness (clutter) in English.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Wordy 'Add the ability to' construction is a common translationese/calque from Russian; in English UX, it is better to use the direct action."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/QWjMvNfKLw/description",
+          "ru": "Дать возможность добавлять несколько автоматических мыслей в одну запись, каждая с отдельной оценкой и альтернативным ответом.",
+          "oldText": "Allow several automatic thoughts in a single entry, each with its own rating and adaptive response.",
+          "newText": "Allow adding multiple automatic thoughts to a single entry, each with its own belief rating and adaptive response.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A is more precise and follows the CBT terminology guidelines perfectly, specifically using 'belief rating' instead of the vague 'rating'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Missing the verb 'adding' makes the sentence slightly less clear as a functional description, though it is understandable."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'rating' instead of the required 'belief rating'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is more precise and follows the project's terminology guidelines. It correctly uses 'belief rating' instead of the generic 'rating' and maintains the verb 'adding' from the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'rating' instead of the canonical 'belief rating'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted the verb 'adding' (добавлять), making the sentence slightly less direct."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/lkmvdsvdsfds/title",
+          "ru": "Изображения в ежедневнике",
+          "oldText": "Images in the Daily Journal",
+          "newText": "Images in the Journal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation B follows the project's glossary and UX standards, using the concise 'Journal' as established in the documentation. Translation A adds 'Daily', which is redundant and deviates from the standard naming convention.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Redundant use of 'Daily' when 'Journal' is the established term for the section."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "Translation A follows the project glossary perfectly, using 'Journal' for 'Ежедневник'. Translation B adds 'Daily', which is redundant and not present in the original.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'Daily' which is not in the source and makes the title wordier than necessary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/sdvdpsvGscfvw/title",
+          "ru": "Голосовой ввод",
+          "oldText": "Voice Input",
+          "newText": "Voice input",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "According to the project guidelines, UI strings should use sentence case (only the first word capitalized). Translation B follows this rule, whereas Translation A uses Title Case.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a UI label"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 100
+              },
+              "reason": "According to the project guidelines, UI strings must use sentence case (only the first word capitalized). Translation A follows this rule, while Translation B uses Title Case.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of the required sentence case for UI elements"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/W9mMGTmapW/title",
+          "ru": "Веб-версия",
+          "oldText": "Web Version",
+          "newText": "Web version",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 100
+              },
+              "reason": "According to the project's style guide, UI elements and labels should use sentence case (only the first word capitalized). Translation B follows this rule, whereas Translation A uses Title Case.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of the required sentence case for UI labels."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 100
+              },
+              "reason": "According to the project guidelines, UI strings should use sentence case (only the first word capitalized). Translation A follows this rule, while Translation B uses Title Case.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses Title Case instead of sentence case for a UI label"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/W9mMGTmapW/description",
+          "ru": "Создать веб-версию приложения. Было бы удобно вести дневник и с компьютера?",
+          "oldText": "Create a web version of the app. Would keeping a journal on your computer be convenient?",
+          "newText": "Create a web version of the app. Would it be convenient to keep a journal on your computer?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A uses a more natural, idiomatic gerund construction ('Would keeping... be convenient?') which sounds more like a native speaker's suggestion, whereas B uses a slightly more formal and 'translated' sounding dummy subject structure ('Would it be...').",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The 'Would it be convenient to...' construction is grammatically correct but feels slightly more stiff and textbook-like compared to the more fluid gerund form in A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more natural and follows the conversational, user-centric tone of the original. Translation B is grammatically correct but feels slightly more formal and heavy due to the gerund subject.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The structure 'Would keeping... be convenient?' is a bit more stiff/academic compared to the more natural 'Would it be convenient to...' used in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/sdvdNdbxdwQfb/description",
+          "ru": "Возможность свободного общения с ИИ: делиться переживаниями, получать поддержку и советы.",
+          "oldText": "Free-form conversations with AI: share what you’re going through and receive support and guidance.",
+          "newText": "Chat freely with an AI assistant to share your feelings, get support, and receive advice.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A is more elegant and professional, using the idiomatic 'share what you’re going through' which fits the supportive tone perfectly. Translation B feels slightly more repetitive ('share... get... and receive') and uses 'feelings', which is less nuanced than the original 'переживаниями' in this context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'share your feelings, get support, and receive advice' is a bit clunky and repetitive compared to the smoother rhythm of A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation B is much more idiomatic and natural for a mental health app, using 'share what you’re going through' instead of the slightly clinical 'share your feelings'. It also correctly captures the essence of 'свободное общение' as 'free-form conversations'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The structure 'Chat freely... to share' is a bit more instructional/imperative than the original noun phrase, and 'share your feelings' sounds slightly more generic/clinical than the nuanced 'переживания'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/rsoklcescfvwz/description",
+          "ru": "В конце дня AI сможет подводить итоги, делать выводы и давать рекомендации.",
+          "oldText": "At day’s end, AI can summarize, draw conclusions, and offer recommendations.",
+          "newText": "At the end of the day, the AI can summarize your day, provide insights, and offer recommendations.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 78,
+                "new": 95
+              },
+              "reason": "Translation A sounds natural and follows the UX tone of a 'helpful expert,' whereas B is overly clipped and sounds like a technical manual or a telegram.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'At day's end' is too poetic/literary for a modern app; 'At the end of the day' is the standard UX pattern."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing the article 'the' before AI, which makes it sound unnatural in this context."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The addition of 'your day' in A is a good transcreation that improves flow, while B's 'draw conclusions' is a bit heavy/academic compared to the more natural 'provide insights'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation B is more natural and idiomatic for a mental health app, using 'provide insights' instead of the literal 'draw conclusions'. It also adds 'your day' which improves flow and clarity for the user.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'At day's end' sounds slightly poetic or literary rather than modern UX/app style; 'At the end of the day' is more standard."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Draw conclusions' sounds a bit formal/academic compared to the warm tone of the app."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/sdvdNdbxdwQfb/title",
+          "ru": "Виртуальный психолог",
+          "oldText": "Virtual Therapist",
+          "newText": "Virtual psychologist",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 100
+              },
+              "reason": "The translation must strictly follow the glossary where 'психолог' is translated as 'psychologist'. Translation A uses 'therapist', which violates the project's specific terminology requirements.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'therapist' instead of the required 'psychologist'"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 100
+              },
+              "reason": "Translation A strictly follows the glossary requirement to use 'psychologist' instead of 'therapist'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'Therapist' instead of the required 'psychologist'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/ykRKsDopcp/description",
+          "ru": "Добавить шаг, в котором можно приводить аргументы «за» и «против» автоматической мысли.",
+          "oldText": "Add a step to list arguments “for” and “against” the automatic thought.",
+          "newText": "Add a step to list arguments “for” and “against” an automatic thought.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation A correctly uses the definite article 'the', referring to the specific automatic thought being processed in the context of the step. Translation B uses 'an', which sounds more generic and less natural for a UI instruction describing a specific process.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Use of indefinite article 'an' makes the instruction sound slightly detached from the specific thought the user is currently working with."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A uses the indefinite article 'an', which is more appropriate here as it refers to any arbitrary automatic thought in a general instruction. Translation B uses 'the', which implies a specific thought already mentioned, making it sound slightly less natural for a general UI instruction.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Use of the definite article 'the' makes the instruction sound like it refers to one specific thought rather than the concept of an automatic thought in general."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/eur8RglkH0/description",
+          "ru": "Добавить больше обучающих материалов: о работе с деструктивными мыслями, тревогой, РПП и другими состояниями.",
+          "oldText": "Add more educational content: working with unhelpful thoughts, anxiety, eating disorders (ED), and other conditions.",
+          "newText": "Add more educational materials: working with unhelpful thoughts, anxiety, eating disorders, and other conditions.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A is cleaner and follows the principle of not adding unnecessary information. Translation B introduces an abbreviation (ED) that was not present in the original, which violates the rule against additions.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added '(ED)' which is not in the source text"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "Translation A is superior because it uses 'educational content', which sounds more natural in a digital product context than 'educational materials', and correctly introduces the acronym (ED) for eating disorders, which is standard practice for clarity.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'educational materials' sounds slightly more academic/heavy than 'educational content' in a modern app context; lacks the acronym (ED) for eating disorders."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/sdvsdsdlwwQec/title",
+          "ru": "AI в ежедневнике",
+          "oldText": "AI in the Daily Journal",
+          "newText": "AI in the Journal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "The original 'ежедневник' refers to the product/section 'Journal'. Translation A adds 'Daily', which is redundant and not present in the source, whereas B is concise and follows the project's naming convention.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'Daily' which is not in the original and makes the title wordier than necessary"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A follows the project glossary and UI standards perfectly. Translation B adds 'Daily', which is an unnecessary addition not present in the original and deviates from the established 'Journal' terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'Daily' which is not in the source and makes the title wordier than necessary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/EauYpGQzAL/title",
+          "ru": "Копинг-карточки",
+          "oldText": "Coping Cards",
+          "newText": "Coping cards",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 90
+              },
+              "reason": "The original text is a title/heading. According to the style guide, headings should follow sentence case or title case, but in the context of a section name or feature, 'Coping Cards' (Title Case) is more appropriate for a UI element than 'Coping cards'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Lower case for the second word in a heading/title feels less like a formal section name in a mobile app context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Since 'Coping Cards' is a section title/feature name, Title Case is more appropriate for a header, whereas sentence case is typically reserved for UI labels and buttons.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for a heading, which is less standard for section titles in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/sdvdcarlwwQff/description",
+          "ru": "ИИ будет задавать вопросы, чтобы помочь вам выявить скрытую автоматическую мысль.",
+          "oldText": "AI will ask questions to help you uncover a hidden automatic thought.",
+          "newText": "The AI will ask questions to help you uncover hidden automatic thoughts.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 80,
+                "new": 95
+              },
+              "reason": "Translation A correctly uses the definite article 'The AI' and uses the plural 'automatic thoughts', which sounds more natural in English for this context. Translation B lacks the necessary article and uses a singular form that feels slightly clunky.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Missing the definite article 'The' before AI."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Singular 'a hidden automatic thought' sounds less natural than the plural in this instructional context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more precise because it maintains the singular form of 'automatic thought' used in the original. Translation B changes the number to plural, which is a slight deviation from the source.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "Changed singular 'automatic thought' to plural 'automatic thoughts'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/iFlct67Ldvkwq/title",
+          "ru": "Дневник благодарности",
+          "oldText": "Gratitude Journal",
+          "newText": "Gratitude journal",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 95
+              },
+              "reason": "In the context of a section title or a product feature, Title Case (A) is more appropriate for a header, whereas sentence case (B) is typically used for UI labels or list items. Since 'Дневник благодарности' functions as a standalone title, A is the standard choice.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for what is clearly a title/header"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 100,
+                "new": 85
+              },
+              "reason": "The original text is a section title/product name. According to the guidelines, product names and specific sections should use Title Case (e.g., 'Smart Journal'), making B the correct choice for a header.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses sentence case for a title that functions as a section/product name, which should be Title Case per guidelines."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "sitemap.json",
+          "lang": "en",
+          "key": "/rwdHy8lyCk/description",
+          "ru": "Добавить поддержку нейросетей, чтобы AI мог помогать анализировать мысли и давать персональные рекомендации.",
+          "oldText": "Add AI support so the assistant can help analyze thoughts and provide personalized recommendations.",
+          "newText": "Add AI support to help analyze thoughts and provide personalized recommendations.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation B is more concise and natural for a feature description or task. Translation A introduces 'the assistant' which is an addition not present in the original text (omission of the direct relationship between AI and the action).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'the assistant' which wasn't in the source; the original implies the AI itself performs the action."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation A is more concise and follows the UX principle of avoiding unnecessary words. Translation B introduces 'the assistant', which is an addition not present in the original text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "addition",
+                  "severity": "minor",
+                  "note": "Added 'the assistant' to clarify 'AI', which makes the sentence wordier than the original."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

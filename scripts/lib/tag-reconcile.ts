@@ -150,6 +150,128 @@ function decrement2(map: Map<string, number>, key: string, n: number): void {
 /** Локали, которым разрешены атрибуты у <instagram ids="…">. Остальным — пустой тег. */
 const INSTAGRAM_ATTR_LOCALES = new Set(['ru', 'en']);
 
+/** Похожа ли строка на тег <instagram …> (ids допускают список через запятую). */
+export function isInstagramTag(v: unknown): boolean {
+  return typeof v === 'string' && /<instagram[\s>]/.test(v.trim());
+}
+
+/**
+ * Локали с СОБСТВЕННЫМ набором instagram-тегов, независимым от ru-канона:
+ * en заводит англоязычные посты, которых в ru может не быть (и наоборот).
+ */
+export function instagramIndependent(lang: string): boolean {
+  const lc = (lang || '').toLowerCase();
+  return lc !== 'ru' && INSTAGRAM_ATTR_LOCALES.has(lc);
+}
+
+function pathSegs(p: string): (string | number)[] {
+  return p
+    .split('/')
+    .slice(1)
+    .map((s) => (/^\d+$/.test(s) ? Number(s) : s));
+}
+
+function parentArrayOf(root: any, p: string): any[] | null {
+  const c = containerOf(root, p);
+  return Array.isArray(c) ? c : null;
+}
+
+/** Контейнер (массив или объект), в котором лежит лист по пути p. */
+function containerOf(root: any, p: string): any {
+  const segs = pathSegs(p);
+  let node = root;
+  for (const s of segs.slice(0, -1)) {
+    node = node?.[s as any];
+    if (node == null) return null;
+  }
+  return node;
+}
+
+function lastIndex(p: string): number {
+  const last = p.split('/').pop() ?? '';
+  return /^\d+$/.test(last) ? Number(last) : -1;
+}
+
+function setByPath(root: any, p: string, value: string): boolean {
+  const segs = pathSegs(p);
+  let node = root;
+  for (const s of segs.slice(0, -1)) {
+    node = node?.[s as any];
+    if (node == null) return false;
+  }
+  const last = segs[segs.length - 1];
+  if (node == null || (node as any)[last as any] === undefined) return false;
+  (node as any)[last as any] = value;
+  return true;
+}
+
+/**
+ * Восстанавливает per-locale набор тегов <instagram> целевой локали из
+ * прежнего перевода: посты Instagram заводятся ПОД ЛОКАЛЬ (легаси en
+ * ссылается на англоязычные посты), а модель копирует теги из ru-канона
+ * дословно. Согласование по ПУТЯМ (структуры обоих файлов выровнены по
+ * одному ru-канону):
+ *   1) тег есть в обоих — значение берётся из легаси целиком (ids — свои);
+ *   2) тег в translated, которого нет в легаси на этом пути — удаляется;
+ *   3) легаси-тег, отсутствующий в translated — вставляется в массив-родитель.
+ * Вставки/удаления внутри одного массива применяются по убыванию индекса,
+ * чтобы сдвиги не портили ещё не применённые адреса. Мутирует translated,
+ * возвращает число изменённых листьев.
+ */
+export function reconcileInstagramTags(lang: string, translated: any, legacyLeaves: Leaves): number {
+  if (!instagramIndependent(lang)) return 0;
+  const legacyTags = new Map<string, string>();
+  for (const [p, v] of Object.entries(legacyLeaves)) {
+    if (isInstagramTag(v)) legacyTags.set(p, v);
+  }
+  const cur = flattenLeaves(translated);
+  const curTags = new Set(Object.keys(cur).filter((p) => isInstagramTag(cur[p])));
+
+  let changed = 0;
+  // 1) Замена: путь есть с обеих сторон — значение берём из легаси целиком.
+  //    (путь остаётся в curTags: цикл вставок ниже не должен «воткнуть» дубликат)
+  for (const [p, v] of legacyTags) {
+    if (curTags.has(p)) {
+      if (cur[p] !== v && setByPath(translated, p, v)) changed++;
+    }
+  }
+
+  // 2) Удаления (теги translated, которых нет в легаси): сначала они —
+  //    в легаси-координатах вставок, чтобы индексы не поехали. Убывание
+  //    индекса внутри одного контейнера.
+  for (const p of curTags) {
+    if (legacyTags.has(p)) continue;
+    const segs = pathSegs(p);
+    const last = segs[segs.length - 1];
+    const container = containerOf(translated, p);
+    if (container == null) continue;
+    if (Array.isArray(container) && typeof last === 'number') container.splice(last, 1);
+    else delete (container as any)[last as any];
+    changed++;
+  }
+
+  // 3) Вставки легаси-тегов (массивы-родители), по убыванию индекса.
+  type ArrayOp = { index: number; value: string };
+  const perArray = new Map<any[], ArrayOp[]>();
+  for (const [p, v] of legacyTags) {
+    if (curTags.has(p)) continue; // уже на месте (заменён или не тронут)
+    const arr = parentArrayOf(translated, p);
+    const idx = lastIndex(p);
+    if (!arr || idx < 0 || idx > arr.length) continue;
+    const ops = perArray.get(arr) ?? [];
+    ops.push({ index: idx, value: v });
+    perArray.set(arr, ops);
+  }
+  for (const [arr, ops] of perArray) {
+    ops.sort((a, b) => b.index - a.index); // по убыванию: сдвиги не портят адреса
+    for (const op of ops) {
+      arr.splice(op.index, 0, op.value);
+      changed++;
+    }
+  }
+  return changed;
+}
+
 /**
  * Нормализует кавычки значений атрибутов тегов: модель даёт вперемешку
  * author='…' и author="…" (конвенция проекта — двойные). Мутирует data,
@@ -160,6 +282,51 @@ export function normalizeTagQuotes(data: any): number {
   const walk = (node: any): any => {
     if (typeof node === 'string') {
       const next = node.replace(/(<[a-zA-Z][^\s<>]*\s+[\w-]+=)'([^']*)'/g, '$1"$2"');
+      if (next !== node) changed++;
+      return next;
+    }
+    if (Array.isArray(node)) {
+      for (let i = 0; i < node.length; i++) node[i] = walk(node[i]);
+      return node;
+    }
+    if (node && typeof node === 'object') {
+      for (const k of Object.keys(node)) node[k] = walk(node[k]);
+      return node;
+    }
+    return node;
+  };
+  walk(data);
+  return changed;
+}
+
+/**
+ * Типографские кавычки в тексте en-локали (правило style.txt): “ ” для
+ * цитат, ’ для апострофов. Модель регулярно даёт прямые " и ' несмотря
+ * на промпт, поэтому нормализуем механически. Кавычки внутри тегов
+ * (<q author="...">) не трогаются; листья с нечётным числом " вне тегов
+ * пропускаются (риск неверной парности). Мутирует data, возвращает число
+ * исправленных листьев.
+ */
+export function normalizeTypographicQuotesEn(data: any): number {
+  let changed = 0;
+  const convert = (text: string): string => {
+    const parts = text.split(/(<[^>]*>)/);
+    const outside = parts.filter((_, i) => i % 2 === 0).join('');
+    if ((outside.match(/"/g) || []).length % 2 !== 0) return text;
+    let open = true;
+    const next = parts
+      .map((part, i) => {
+        if (i % 2 === 1) return part; // тег — как есть
+        let s = part.replace(/"/g, () => (open = !open) ? '”' : '“');
+        s = s.replace(/(?<![A-Za-z])'([^']+)'(?![A-Za-z])/g, '‘$1’'); // цитаты в ‘ ’
+        return s.replace(/'/g, '’'); // остальные ' — апострофы
+      })
+      .join('');
+    return next;
+  };
+  const walk = (node: any): any => {
+    if (typeof node === 'string') {
+      const next = convert(node);
       if (next !== node) changed++;
       return next;
     }

@@ -1,0 +1,1122 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T21:02:11.195Z",
+    "Метка": "en-final-g45-perfectionism_plan_read",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/depression/perfectionism_plan_read.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/depression/perfectionism_plan_read.json": {
+      "en": [
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/plan/screen_3/texts",
+          "ru": "Затем оценивайте каждую задачу по степени сложности и предполагаемому удовольствию. Пример может выглядеть так:\n\n<li>Дата: 31.01.2024</li>\n\n<li>Задача: Составить резюме</li>\n\n<li>Предполагаемая сложность: 80%</li>\n\n<li>Предполагаемое удовольствие: 15%</li>\n\n<li>Реальная сложность: 30%</li>\n\n<li>Реальное удовольствие: 70%</li>\n\nКак видите, составление резюме оказалось гораздо проще и приятнее, чем предполагалось.\n\nК удивлению, процесс подвинулся с мертвой точки, а самооценка и мотивация заметно выросли благодаря достигнутым результатам. Эффект от использования этой техники настолько впечатлил, что юрист стал применять её в других сферах жизни, значительно повысив свою продуктивность и уверенность в себе.",
+          "oldText": "Then rate each step by expected difficulty and anticipated enjoyment. An example might look like this:\n\nDate: 31.01.2024\n\nTask: Write a résumé\n\nExpected difficulty: 80%\n\nExpected enjoyment: 15%\n\nActual difficulty: 30%\n\nActual enjoyment: 70%\n\nAs you can see, writing the résumé turned out to be much easier and more pleasant than expected.\n\nSurprisingly, the process got moving, and both self-esteem and motivation rose thanks to visible results. The effect was so encouraging that the lawyer began using this method in other areas, significantly boosting productivity and confidence.",
+          "newText": "Then, rate each task by difficulty and predicted enjoyment. An example might look like this:\n\n<li>Date: 31.01.2024</li>\n\n<li>Task: Write a resume</li>\n\n<li>Predicted difficulty: 80%</li>\n\n<li>Predicted enjoyment: 15%</li>\n\n<li>Actual difficulty: 30%</li>\n\n<li>Actual enjoyment: 70%</li>\n\nAs you can see, writing the resume turned out to be much easier and more enjoyable than expected.\n\nSurprisingly, the process got moving, and self-esteem and motivation grew significantly thanks to the results achieved. The effect of this technique was so impressive that the lawyer began applying it in other areas of life, significantly increasing both productivity and self-confidence.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 92
+              },
+              "reason": "Translation A is more faithful to the original structure (keeping the HTML tags) and uses more natural, idiomatic phrasing for the narrative part. Translation B makes several omissions and uses slightly less precise vocabulary.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Removed the HTML <li> tags present in the original."
+                },
+                {
+                  "side": "old",
+                  "type": "mistranslation",
+                  "severity": "minor",
+                  "note": "'each step' instead of 'each task' (задача)."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted 'of this technique' in the second paragraph, making the sentence feel slightly disconnected."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'more pleasant' is a bit weaker than 'more enjoyable' in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 82
+              },
+              "reason": "Translation A is more idiomatic and flows naturally, avoiding the repetitive 'significantly' and clunky 'results achieved' found in B. It also correctly removes the HTML tags which are likely artifacts of the source rather than intended content for the UI/article.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Repetitive use of 'significantly' in the final sentence."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'results achieved' is a bit heavy/passive compared to 'visible results'."
+                },
+                {
+                  "side": "new",
+                  "type": "other",
+                  "severity": "minor",
+                  "note": "Kept HTML tags which makes the text look unpolished for a final reader."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/read/description",
+          "ru": "В статье рассматривается концепция когнитивного искажения, известного как \"чтение мыслей\", которое описывает склонность людей предполагать, что они знают, что думают другие. Автор объясняет, как это искажение может приводить к ошибочным представлениям о восприятии нас другими людьми и как это влияет на наше эмоциональное состояние и межличностные отношения. В конце статьи предлагаются методы, помогающие преодолеть эту тенденцию, включая самоосознание и открытое общение, для улучшения взаимопонимания и эмоционального благополучия.",
+          "oldText": "This article examines the cognitive distortion known as “mind reading,” our tendency to assume we know what others are thinking. It explains how this bias leads to mistaken beliefs about how people see us and how it affects our emotions and relationships. The piece ends with practical ways to counter this habit—including self-awareness and open communication—to improve mutual understanding and emotional well-being.",
+          "newText": "This article explores the cognitive distortion known as “mind reading,” where we tend to assume we know what others are thinking. We’ll look at how this distortion can lead to mistaken perceptions of how others view us, affecting our emotional state and interpersonal relationships. Finally, the article offers ways to overcome this tendency—such as building self-awareness and practicing open communication—to improve mutual understanding and mental well-being.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 96,
+                "new": 88
+              },
+              "reason": "Translation A is more concise, professional, and flows better as a high-quality editorial piece. Translation B uses 'We'll look at', which shifts the tone from an objective article summary to a more conversational/instructional tone that doesn't quite match the original's formal structure.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The shift to 'We'll look at' is slightly less professional for an article summary than the direct 'It explains' in A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'mistaken perceptions of how others view us' is slightly wordier and less punchy than A's 'mistaken beliefs about how people see us'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more polished and flows naturally like a high-quality editorial piece. It uses a more engaging narrative voice ('We’ll look at...') and correctly uses the project-standard term 'mental well-being' instead of the more generic 'emotional well-being' used in B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'emotional well-being' instead of the preferred 'mental well-being' for the context of overall health."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'our tendency to assume' is a bit heavy/clunky compared to the smoother flow in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/perfectionism/test/answers",
+          "ru": "Деструктивный перфекционизм\n\nАдаптивный перфекционизм\n\nЛичностно-ориентированный перфекционизм\n\nВнешне-ориентированный перфекционизм",
+          "oldText": "Maladaptive perfectionism\n\nAdaptive perfectionism\n\nSelf-oriented perfectionism\n\nOther-oriented perfectionism",
+          "newText": "Unhelpful perfectionism\n\nAdaptive perfectionism\n\nSelf-oriented perfectionism\n\nOther-oriented perfectionism",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 85
+              },
+              "reason": "In the context of psychology and perfectionism, 'maladaptive' is the standard academic and clinical term used to contrast with 'adaptive'. While 'unhelpful' is our project's preferred term for 'unhelpful beliefs', 'maladaptive perfectionism' is the established terminology in CBT and psychological literature.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Using 'unhelpful' for perfectionism sounds slightly non-standard compared to the clinical term 'maladaptive'."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 98
+              },
+              "reason": "Translation A strictly follows the project's glossary by using 'unhelpful' for 'деструктивный' (as per the rule for unhelpful/adaptive beliefs), whereas Translation B uses 'maladaptive', which is a valid clinical term but deviates from the established project tone and terminology.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'maladaptive' instead of the project-mandated 'unhelpful' for the unhelpful/adaptive pair."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/read/title",
+          "ru": "Мысли наизнанку: Освобождение от заблуждений чтения мыслей",
+          "oldText": "Inside-Out Thoughts: Letting Go of Mind Reading",
+          "newText": "Inside Out: Breaking Free from Mind Reading",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "Translation B is more idiomatic and punchy for a title. 'Breaking free' is a much more natural and powerful collocation for overcoming cognitive distortions than the literal 'Letting go'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'Inside-Out Thoughts' feels slightly clunky compared to the more natural 'Inside Out' used as a thematic hook."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is punchy, idiomatic, and follows the standard English titling convention for articles or chapters. Translation B is a literal calque of the Russian structure, which sounds clunky and unnatural in English.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrase 'Inside-Out Thoughts' is an unnatural construction; 'Inside Out' works better as a standalone evocative title."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Letting Go of Mind Reading' is grammatically fine but lacks the strength and impact of 'Breaking Free' in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/plan/title",
+          "ru": "Техника: План действий против прокрастинации",
+          "oldText": "Technique: An Action Plan Against Procrastination",
+          "newText": "Technique: Action Plan Against Procrastination",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 90,
+                "new": 98
+              },
+              "reason": "In titles and headings, omitting the indefinite article is more natural and follows standard English UX/editorial patterns. Translation A is concise and professional.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'An' makes the title feel more like a sentence fragment or a book title rather than a clean UI heading/technique label."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 95
+              },
+              "reason": "In UI/UX and titles, omitting the indefinite article 'An' makes the heading punchier and more professional. Translation B follows the standard 'Sentence case' or 'Title case' convention for headers without unnecessary filler.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'An' makes the title feel more like a sentence fragment from a textbook rather than a clean, modern app header."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/perfectionism/title",
+          "ru": "Перфекционизм: Когда стремление к идеалу становится ловушкой",
+          "oldText": "Perfectionism: When the Pursuit of the Ideal Becomes a Trap",
+          "newText": "Perfectionism: When the pursuit of perfection becomes a trap",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 98
+              },
+              "reason": "Translation A is idiomatic, follows sentence case rules for titles, and uses the natural collocation 'pursuit of perfection'. Translation B uses awkward Title Case and a clunky, literal translation of 'стремление к идеалу'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "Incorrect use of Title Case for a subtitle; should be sentence case."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Pursuit of the Ideal' sounds overly poetic/philosophical rather than psychological; 'pursuit of perfection' is the standard term."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 85,
+                "new": 96
+              },
+              "reason": "Translation B is more natural and idiomatic. Translation A uses 'the pursuit of the ideal', which sounds slightly overly formal and poetic, whereas 'pursuit of perfection' is the standard, natural way to express this concept in English.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of Title Case for the subtitle is acceptable for an article, but 'the pursuit of the ideal' is a bit clunky compared to the more common 'pursuit of perfection'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/plan/description",
+          "ru": "В этой статье мы раскрываем секреты эффективной борьбы с прокрастинацией через проверенный метод листа антипрокрастинации. Откройте для себя, как простые шаги по разбиению задач и реалистичное оценивание их сложности и потенциального удовольствия от выполнения могут трансформировать ваш подход к работе и личным делам, приводя к повышению продуктивности и улучшению самочувствия.",
+          "oldText": "In this article, we reveal the secrets of combating procrastination using a proven anti-procrastination worksheet. Discover how simple steps—breaking tasks down and realistically rating their difficulty and the potential enjoyment—can transform the way you approach work and personal matters, boosting productivity and well-being.",
+          "newText": "In this article, we’ll reveal the secrets to effectively tackling procrastination using the proven anti-procrastination sheet method. Discover how simple steps—like breaking down tasks and realistically assessing their difficulty and potential enjoyment—can transform your approach to work and personal life, leading to increased productivity and improved mental well-being.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 88
+              },
+              "reason": "Translation A is more concise and punchy, which is better for an article intro. Translation B is slightly wordy and uses 'mental well-being' where the original simply says 'self-feeling/well-being', making it feel a bit more heavy.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'the proven anti-procrastination sheet method' is a bit clunky compared to 'a proven anti-procrastination worksheet'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Added 'mental' to well-being, which slightly changes the scope from general well-being to specifically mental health."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and flows better as a professional article introduction. It uses 'tackling procrastination' and 'mental well-being', which align perfectly with the project's tone and glossary.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'the potential enjoyment' feels slightly clunky due to the extra article; 'potential enjoyment' is more natural."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The transition 'transform the way you approach' is slightly wordier than the more direct 'transform your approach' in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/plan/screen_1/texts",
+          "ru": "Эта техника может особенно заинтересовать вас, если вы склонны откладывать дела, считая их слишком сложными или не приносящими удовольствия.\n\nНа первом этапе в одну колонку запишите одну или две задачи, выполнение которых вы откладываете.\n\nЕсли задача требует значительных временных и усилий, лучше всего разбить её на несколько маленьких этапов, каждый из которых занимает не более 15-20 минут.\n\nДалее, во второй колонке оцените на шкале от 0 до 100%, насколько сложной, по вашему мнению, окажется выполнение этой задачи.\n\n<important>Если задача кажется вам лёгкой, поставьте низкую оценку — например, 10 или 20%. Если задача кажется более сложной, уместно будет написать 80 или 90%.</important>\n\nВ третьей колонке, также используя процентную шкалу, запишите ваш прогноз относительно того, сколько удовольствия принесёт выполнение задачи.\n\nПриступайте к выполнению задачи только после того, как запишете свои прогнозы.\n\n<q author=\"Джек Лондон\">Вы не можете ждать вдохновения. Вы должны идти ему навстречу с работой.</q>",
+          "oldText": "This technique is especially helpful if you tend to put things off because they feel too hard or not enjoyable.\n\nFirst, in one column, write down one or two tasks you’ve been postponing.\n\nIf a task requires significant time and effort, break it into several small stages, each taking no more than 15–20 minutes.\n\nNext, in the second column, rate—on a scale from 0 to 100%—how difficult you expect the task to be.\n\nIf the task feels easy, give it a low rating—say, 10 or 20%. If it feels harder, 80 or 90% may be appropriate.\n\nIn the third column, also using percentages, write your forecast of how much enjoyment the task will bring.\n\nBegin only after you’ve recorded your predictions.",
+          "newText": "This technique may be particularly helpful if you tend to put things off because they feel too difficult or unrewarding.\n\nIn the first stage, write one or two tasks you’ve been procrastinating on in one column.\n\nIf a task requires significant time and effort, it’s best to break it down into several small steps, each taking no more than 15–20 minutes.\n\nNext, in the second column, use a scale from 0 to 100% to rate how difficult you think completing the task will be.\n\n<important>If a task seems easy, give it a low rating—for example, 10% or 20%. If it seems more difficult, a rating of 80% or 90% would be appropriate.</important>\n\nIn the third column, also using a percentage scale, record your prediction of how much enjoyment completing the task will bring.\n\nOnly start working on the task after you have written down your predictions.\n\n<q author=\"Jack London\">You cannot wait for inspiration. You must go out and meet it with work.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 86
+              },
+              "reason": "Translation A is more concise, flows better, and avoids the slightly clunky phrasing found in B. It feels more like a natural guide written by a native speaker.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'tasks you’ve been procrastinating on' is a bit heavy compared to the smoother 'tasks you've been postponing' or 'putting off'."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The Jack London quote in B is a bit literal; A's version (though A omitted the quote entirely in the provided text, I must judge based on the provided segments) is actually missing the quote in the snippet, but B's translation of it is slightly less idiomatic."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 84,
+                "new": 96
+              },
+              "reason": "Translation A is much more idiomatic and follows the professional tone of a mental health app. It uses 'unrewarding' instead of the clunky 'not enjoyable' and handles the quote with much better flow.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'not enjoyable' is a bit weak/clunky compared to 'unrewarding' or 'not pleasurable'."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The Jack London quote is missing entirely."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/read/screen_1/texts",
+          "ru": "Последнее когнитивное искажение, которое мы подробно рассмотрим, называется \"Чтение мыслей\".\n\nЭто одна из ошибок мышления, когда мы убеждены, что знаем, что думает о нас другой человек, и часто предполагаем, что он думает что-то плохое.\n\nЕсли мы слишком полагаемся на чтение мыслей, мы можем ошибаться в представлениях о том, что другие думают о нас, что может серьезно испортить настроение.\n\n<h2>Мы часто ошибаемся, не подозревая, о чем на самом деле думает другой человек или почему он поступил так, а не иначе.</h2>\n\nЭто может привести к тревожности, различным страхам, а иногда и к паранойе. Это может быть причиной конфликтов, обид, ссор и, конечно, депрессии.\n\n<q author=\"Виктор Франкл\">Мы не можем изменить ситуации, которые жизнь нам преподносит, но мы можем изменить нашу способность переживать их.</q>",
+          "oldText": "The last cognitive distortion we’ll look at in detail is called “mind reading.”\n\nThis thinking error shows up when we’re convinced we know what someone else thinks of us—and we often assume it’s something negative.\n\nWhen we rely on mind reading, we’re often wrong about what others think, which can seriously sour our mood.\n\nWe’re mistaken because we don’t actually know what another person is thinking or why they acted the way they did.\n\nThis can fuel anxiety, various fears, and sometimes even paranoia. It can spark conflicts, hurt feelings, arguments—and, of course, depression.",
+          "newText": "The last cognitive distortion we’ll look at in detail is called “mind reading”.\n\nThis is a thinking error where we’re convinced we know what another person is thinking about us, often assuming they’re thinking something negative.\n\nIf we rely too heavily on mind reading, we may misinterpret how others see us, which can seriously impact our mood.\n\n<h2>We often make mistakes without even realizing what another person is actually thinking or why they acted the way they did.</h2>\n\nThis can lead to anxiety, various fears, and sometimes even paranoia. It can also cause conflict, resentment, arguments, and, of course, depression.\n\n<q author=\"Viktor Frankl\">We cannot change the situations life presents to us, but we can change our ability to experience them.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 82
+              },
+              "reason": "Translation A is much more idiomatic and flows like a natural English article. It avoids the clunky 'thinking error where' and 'make mistakes without realizing' structures found in B, opting for more active and engaging phrasing.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The translation of the H2 header is very literal and heavy ('make mistakes without even realizing'), whereas A captures the essence more naturally."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'misinterpret how others see us' is a bit wordy compared to the punchier 'wrong about what others think'."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "The Viktor Frankl quote was omitted entirely in version A, but A's prose is so much stronger that it remains the winner for the provided text block."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is more faithful to the original structure and tone, maintaining the flow of the narrative without unnecessary restructuring. Translation B omits the H2 tag and changes the sentence structure in a way that feels slightly disjointed.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The H2 tag was completely removed, which is a critical structural error for content rendering."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'We’re mistaken because...' is a stylistic departure from the original 'We often make mistakes...' and loses the nuance of the H2 header."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/read/screen_2/texts",
+          "ru": "Примеры:\n\n<li>Не буду рассказывать ей о своих переживаниях, потому что она подумает, что я слабак</li>\n\n<li>Ему точно не понравится моя работа, потому что я сам недоволен ею</li>\n\n<li>Она так странно смотрит на меня, наверняка думает, что я толстая</li>\n\nКонечно, во всех этих примерах есть некоторая вероятность, что о вас подумают именно так, будут чем-то недовольны или примут за слабака.\n\nНо эта вероятность гораздо ниже, чем кажется. Мы можем считывать мимику и жесты других людей, но это не значит, что человек, косо посмотревший на нас, обязательно подумал о нас плохо.\n\nМы принимаем свои мысли за истину и начинаем действовать, исходя из них, а не из вероятности других вариантов.\n\nВот несколько способов работы с \"чтением мыслей\":\n\n<h2>Осознание</h2>\n\nНачните замечать подобные мысли и спросите себя: «Действительно ли я могу читать мысли других людей?»\n\nОчевидно, что вы не можете. Чтобы убедиться в этом вы так же можете провести ряд экспериментов. Записывайте то, что, как вы считаете, думают о вас люди, а после проверяйте.\n\nСпособом проверки может быть как прямой разговор с человеком, так и наблюдение за его поступками в отношении вас.\n\n<q author=\"Анайс Нин\">Мы не видим вещи такими, какие они есть. Мы видим их такими, какие мы сами.</q>",
+          "oldText": "Examples:\n\nI won’t tell her how I feel because she’ll think I’m weak.\n\nHe definitely won’t like my work, because I’m not happy with it myself.\n\nShe’s looking at me strangely—she must think I’m fat.\n\nOf course, in all these cases there’s some chance people will think that way, be dissatisfied, or see you as weak.\n\nBut that chance is much lower than it seems. We can read facial expressions and body language, but a sideways glance doesn’t prove someone thought badly of us.\n\nWe take our thoughts as truth and start acting on them instead of considering other possibilities.\n\nHere are a few ways to work with “mind reading”:\n\nAwareness\n\nStart noticing these thoughts and ask yourself, “Can I really read other people’s minds?”\n\nObviously, you can’t. To prove it to yourself, try running a few experiments: write down what you think people believe about you, and then check.\n\nYou can check either by having a direct conversation or by observing the person’s actions toward you.",
+          "newText": "Examples:\n\n<li>I won’t tell her about my struggles because she’ll think I’m weak</li>\n\n<li>He definitely won’t like my work because I’m not happy with it myself</li>\n\n<li>She’s looking at me so strangely; she must think I’m fat</li>\n\nOf course, in all these examples, there is a slight possibility that people might actually think that way, be dissatisfied, or see you as weak.\n\nBut that probability is much lower than it seems. We can read people’s facial expressions and gestures, but that doesn’t mean someone giving us a sideways glance is necessarily thinking something bad about us.\n\nWe mistake our own thoughts for the truth and start acting based on them, rather than on the actual likelihood of other possibilities.\n\nHere are a few ways to work with “mind reading”:\n\n<h2>Awareness</h2>\n\nStart noticing these kinds of thoughts and ask yourself: “Can I really read other people’s minds?”\n\nObviously, you can’t. To prove this to yourself, you can even run a few experiments. Write down what you think people are thinking about you, and then check it.\n\nYou can verify this either through a direct conversation with the person or by observing their actions toward you.\n\n<q author=\"Anaïs Nin\">We do not see things as they are. We see them as we are.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is superior because it preserves the original HTML structure (li, h2, q tags), which is critical for technical implementation. It also provides a more accurate and natural translation of the final quote and maintains the flow of the instructional text without losing nuances.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost all HTML tags (li, h2, q), which would break the layout if used as a direct replacement."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of the quote 'We see them as we are' is slightly less idiomatic than the standard English version used in A."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'what people believe about you' is a bit heavy compared to 'what people are thinking about you' in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A is much more natural and idiomatic for a mental health context. It avoids the clunky, literal phrasing found in B (e.g., 'actual likelihood of other possibilities' or 'mistake our own thoughts for the truth'). A also correctly handles the tone by being concise and smooth.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The phrasing 'rather than on the actual likelihood of other possibilities' is very heavy and sounds like a translation rather than natural English."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The sentence 'that doesn’t mean someone giving us a sideways glance is necessarily thinking something bad about us' is wordy and lacks the punch of the original."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Translation A removed the HTML tags in the examples, which might be an issue if this is for a CMS, but B's inclusion of them is fine; however, A's text flow is superior."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/perfectionism/screen_1/texts",
+          "ru": "Перфекционизм может неожиданно выступать как симптом, так и причина депрессии.\n\nДля многих высокие стандарты и требования к себе и окружающим кажутся движущей силой. Однако, когда ожидания становятся нереалистичными, они могут превратиться в ловушку, ведущую к постоянному ощущению недостаточности, непрекращающейся критике и, как итог, к депрессии.\n\n«Перфекционизм» означает стремление к идеалу. Существуют различные его формы:\n\nЛичностно-ориентированный, или аутоперфекционизм, характеризуется внутренним стремлением к совершенству. Люди этого типа могут бессонно проводить ночи, перепроверяя отчёты на наличие ошибок, не покидать дом из-за недостаточно аккуратной причёски, испытывать глубокое чувство вины за малейшие промахи и постоянно чувствовать себя недостаточно хорошими.\n\nВнешне-ориентированный перфекционизм требует совершенства от других, как в случае с родителями, ожидающими отличных оценок от своих детей, или руководителем, требующим от сотрудников безукоризненной работы.\n\nЧтобы понять, страдаете ли вы деструктивным перфекционизмом, обратите внимание на такие признаки, как непреклонная потребность в совершенстве, зависимость от мнений других, страх разочаровать, стремление к недостижимым целям, неспособность принять критику и чрезмерную строгость к себе и другим.\n\n<q author=\"Лев Толстой\">Если вы ищете совершенства, вы никогда не будете удовлетворены.</q>",
+          "oldText": "Perfectionism can unexpectedly act as both a symptom and a cause of depression.\n\nFor many, high standards and demands on oneself and others can feel like a driving force. However, when expectations become unrealistic, they can turn into a trap—leading to a constant sense of not measuring up, relentless criticism, and, ultimately, depression.\n\n“Perfectionism” means striving for the ideal. It takes different forms:\n\nSelf-oriented perfectionism is marked by an inner push toward flawlessness. People of this type may spend sleepless nights rechecking reports for errors, avoid leaving home because their hair isn’t neat enough, feel deep guilt over minor slips, and chronically feel “not good enough.”\n\nOther-oriented perfectionism demands perfection from others—like parents expecting top grades from their children or a manager insisting on impeccable performance from employees.\n\nTo understand whether you’re dealing with maladaptive perfectionism, watch for signs such as an uncompromising need for perfection, dependence on others’ opinions, fear of disappointing people, pursuit of unattainable goals, intolerance of criticism, and excessive strictness toward yourself and others.",
+          "newText": "Perfectionism can unexpectedly act as both a symptom and a cause of depression.\n\nFor many, high standards and strict demands on themselves and others feel like a driving force. However, when expectations become unrealistic, they can turn into a trap, leading to a constant sense of inadequacy, relentless self-criticism, and, eventually, depression.\n\n“Perfectionism” means striving for the ideal. It takes various forms:\n\nSelf-oriented perfectionism is characterized by an internal drive for perfection. People with this trait might spend sleepless nights rechecking reports for errors, refuse to leave the house because their hair isn’t neat enough, feel deep guilt over the smallest slips, and constantly feel like they aren’t good enough.\n\nOther-oriented perfectionism involves demanding perfection from others—such as parents expecting straight A’s from their children, or a manager requiring flawless work from their employees.\n\nTo understand if you’re struggling with unhelpful perfectionism, look for signs such as an unrelenting need for perfection, dependency on others’ opinions, fear of disappointing people, striving for unreachable goals, an inability to accept criticism, and being overly harsh with yourself and others.\n\n<q author=\"Leo Tolstoy\">If you seek perfection, you will never be satisfied.</q>",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 94,
+                "new": 88
+              },
+              "reason": "Translation A is more idiomatic and follows the project's tone guidelines more closely. Specifically, it uses 'maladaptive perfectionism' (a more natural psychological term in this context) and 'not measuring up' which sounds more like a native speaker than 'sense of inadequacy'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'constant sense of inadequacy' is slightly more clinical/stiff than the more natural 'sense of not measuring up' in A."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The list of signs in B is a bit wordy ('an inability to accept criticism, and being overly harsh') compared to the smoother parallel structure in A ('intolerance of criticism, and excessive strictness')."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is superior because it strictly adheres to the project's terminology (using 'unhelpful' instead of 'maladaptive') and maintains a more natural, supportive tone. Translation B uses 'maladaptive', which is technically correct in psychology but deviates from the specific 'unhelpful' instruction provided in the glossary, and its phrasing in some places feels slightly more clinical/stiff.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'maladaptive perfectionism' instead of the project-standard 'unhelpful perfectionism'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Phrasing like 'intolerance of criticism' is slightly more formal/stiff than the smoother 'inability to accept criticism' in A."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/plan/screen_2/texts",
+          "ru": "По завершении, в последние две колонки запишите, насколько сложной оказалась задача на самом деле и какое удовольствие вы испытали от её выполнения или от полученного результата, используя процентную шкалу для оценки.\n\n<instagram ids=\"18042843029166400\">\n\nПример:\n\nЮрист, недавно потерявший работу, не мог приступить к поиску новой из-за ощущения, что процесс подготовки резюме и сам поиск являются непреодолимыми задачами.\n\nДля начала, задачу \"найти работу\" следует разбить на несколько этапов, чтобы она не казалась непосильной для восприятия и не провоцировала на прокрастинацию:\n\n<li>Сесть и написать резюме.</li>\n\n<li>На следующий день пересмотреть его с новыми силами и внести корректировки.</li>\n\n<li>Ежедневно выделять 10-15 минут на мониторинг сайтов по поиску работы.</li>\n\n<li>Написать сопроводительное или мотивационное письмо.</li>\n\n<li>Отправить резюме на выбранные вакансии, адаптировав сопроводительное письмо под конкретную вакансию и компанию.</li>\n\nТаким образом, можно упростить восприятие большой задачи, разбив её на малые шаги.",
+          "oldText": "When you finish, use the last two columns to record how difficult the task actually was and how much enjoyment you felt during or after completing it—again using percentages.\n\nExample:\n\nA lawyer who had recently lost a job couldn’t start the search for a new one because preparing a résumé and the search itself felt overwhelming.\n\nTo begin, break the “find a job” task into steps so it doesn’t feel impossible and won’t trigger procrastination:\n\nSit down and write a résumé.\n\nReview it the next day with fresh eyes and make edits.\n\nSet aside 10–15 minutes daily to check job boards.\n\nWrite a cover or motivation letter.\n\nSubmit the résumé to selected positions, tailoring the cover letter to each role and company.\n\nIn this way, you make a big task easier to process by dividing it into small steps.",
+          "newText": "Once finished, use the last two columns to record how difficult the task actually was and how much enjoyment you experienced from completing it or from the result, using a percentage scale.\n\n<instagram ids=\"18042843029166400\">\n\nExample:\n\nA lawyer who recently lost their job couldn’t start looking for a new one because the process of preparing a resume and the job search itself felt like insurmountable tasks.\n\nTo start, the task “find a job” should be broken down into several steps so it doesn’t feel overwhelming and doesn’t trigger procrastination:\n\n<li>Sit down and write a resume.</li>\n\n<li>Review it with fresh eyes the next day and make adjustments.</li>\n\n<li>Dedicate 10–15 minutes daily to monitoring job search sites.</li>\n\n<li>Write a cover or motivational letter.</li>\n\n<li>Send the resume to selected vacancies, tailoring the cover letter to the specific role and company.</li>\n\nIn this way, you can make a large task feel more manageable by breaking it into small steps.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 95
+              },
+              "reason": "Translation A is more faithful to the original structure and tone, maintaining the list format and the specific nuance of the instructions. Translation B takes too many liberties with the phrasing and omits the list tags, which are crucial for the technical implementation.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The <li> tags were removed, which breaks the intended structure/format of the content."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'during or after completing it—again using percentages' is a bit too informal and deviates from the original's instructional clarity."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The translation of 'непреодолимыми задачами' as just 'overwhelming' loses the weight of the original 'insurmountable'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 86
+              },
+              "reason": "Translation A is much more natural and idiomatic for a native speaker. It avoids the clunky 'percentage scale' and 'insurmountable tasks' phrasing, opting for smoother UX-friendly language like 'using percentages' and 'overwhelming'.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'insurmountable tasks' and 'monitoring job search sites' sounds slightly more formal/stiff than necessary."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'from the result' is a bit wordy compared to A's 'after completing it'."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Lost the Instagram tag, though this might be a technical oversight."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/perfectionism/screen_2/texts",
+          "ru": "Если вы узнали себя в этих описаниях, не отчаивайтесь. Существуют эффективные методы преодоления перфекционизма.\n\nОднако важно осознать, что в самой сути перфекционизма лежит парадокс: совершенство является иллюзией.\n\nВ мире всё можно усовершенствовать, и стремление к абсолютному идеалу обречено на разочарование.\n\n<important>Узнав это, можно начать путь к освобождению от оков перфекционизма, направив усилия на достижение реалистичных целей и научившись находить радость в несовершенстве мира и себя в нём.</important>\n\nДля борьбы с чем-либо важно чётко осознавать свою потребность в этом.\n\nЕсли вы считаете перфекционизм полезным и не видите в нём ничего плохого, вряд ли сможете добиться изменений.\n\nНачнём с разбора преимуществ и недостатков перфекционизма.\n\n<instagram ids=\"18045768971222812\">\n\nОн, безусловно, имеет положительные аспекты, например, высокие требования к себе могут способствовать усердной работе. Однако, столкнувшись с ошибками, вы можете слишком строго критиковать себя.\n\nСуществует различие между адаптивным и дезадаптивным перфекционизмом.\n\nАдаптивный перфекционизм может укрепить вашу настойчивость и ответственность, помогая достигать целей без ненужной самокритики и страха ошибок.\n\nВ то же время, дезадаптивный перфекционизм приводит к излишней требовательности к себе и окружающим, беспокойству по поводу любой ошибки, что может вызвать тревожность, депрессию и прокрастинацию.\n\nГраница между этими двумя видами очень тонкая.",
+          "oldText": "If you recognize yourself in these descriptions, don’t lose heart. There are effective ways to move beyond perfectionism.\n\nIt’s important to see the paradox at the core of perfectionism: perfection is an illusion.\n\nEverything in the world can be improved, and the quest for an absolute ideal is destined to disappoint.\n\nOnce you grasp this, you can begin freeing yourself from perfectionism’s grip—shifting your efforts toward realistic goals and learning to find joy in the world’s and your own imperfections.\n\nTo change anything, it helps to be clear about why you need that change.\n\nIf you view perfectionism as purely helpful and see nothing problematic about it, meaningful change is unlikely.\n\nLet’s start by weighing the pros and cons of perfectionism.\n\nIt certainly has upsides—high standards can encourage diligent work. But when faced with mistakes, you may turn that same standard into harsh self-criticism.\n\nThere’s a difference between adaptive and maladaptive perfectionism.\n\nAdaptive perfectionism can strengthen persistence and responsibility, helping you reach goals without needless self-criticism or fear of mistakes.\n\nMaladaptive perfectionism, in turn, breeds excessive demands on yourself and others and anxiety about any misstep, which can lead to anxiety, depression, and procrastination.\n\nThe boundary between the two can be very thin.",
+          "newText": "If you recognize yourself in these descriptions, don’t lose hope. There are effective ways to work through perfectionism.\n\nHowever, it is important to realize that at the very heart of perfectionism lies a paradox: perfection is an illusion.\n\nIn this world, everything can be improved, and the pursuit of absolute perfection is destined to end in disappointment.\n\n<important>Realizing this can be the first step toward breaking free from the shackles of perfectionism, allowing you to focus on achieving realistic goals and learning to find joy in the imperfection of the world and yourself.</important>\n\nTo work through something, you must first clearly recognize the need to do so.\n\nIf you believe perfectionism is helpful and see nothing wrong with it, it will be difficult to make any changes.\n\nLet’s start by looking at the pros and cons of perfectionism.\n\n<instagram ids=\"18045768971222812\">\n\nIt certainly has positive aspects; for example, high standards can encourage hard work. However, when faced with mistakes, you might become overly self-critical.\n\nThere is a difference between adaptive and unhelpful perfectionism.\n\nAdaptive perfectionism can strengthen your persistence and responsibility, helping you reach your goals without unnecessary self-criticism or fear of making mistakes.\n\nAt the same time, unhelpful perfectionism leads to excessive demands on yourself and others, and constant worry over every mistake, which can trigger anxiety, depression, and procrastination.\n\nThe line between these two types is very thin.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 86
+              },
+              "reason": "Translation A is much more idiomatic and flows like a professional English article. It avoids the heavy, slightly clunky structures of Translation B (e.g., 'at the very heart of... lies a paradox'). Translation A also correctly uses 'maladaptive' which is the standard psychological pairing for 'adaptive', whereas B uses 'unhelpful' which, while in the glossary for beliefs, is less common for describing types of perfectionism in a clinical/educational context.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'at the very heart of perfectionism lies a paradox' is a bit dramatic/clunky for a supportive expert tone."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Used 'unhelpful perfectionism' instead of the more standard 'maladaptive perfectionism' used in the context of adaptive/maladaptive dichotomy."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 84,
+                "new": 92
+              },
+              "reason": "Translation A is superior because it strictly adheres to the project's terminology guidelines, specifically using 'unhelpful' instead of the clinical/outdated 'maladaptive'. It also maintains a more consistent tone and better preserves the structure of the original text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'maladaptive' instead of the required 'unhelpful' for unhelpful/adaptive perfectionism paradigm."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'the world's and your own imperfections' is slightly clunky compared to A's smoother flow."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Omitted the 'shackles' metaphor from the important block, which changes the emotional weight of the sentence."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/perfectionism/test/question",
+          "ru": "Как называется тип перфекционизма, который не приводит к самокритике и страху ошибок?",
+          "oldText": "What is the type of perfectionism that does not lead to self-criticism and fear of mistakes?",
+          "newText": "What is the name of the type of perfectionism that does not lead to self-criticism and fear of mistakes?",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "old",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation A is more concise and natural for an English speaker. Translation B is a literal translation of the Russian 'Как называется...', which sounds slightly wordy and redundant in English.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "unnecessary wordiness ('What is the name of the type' vs 'What is the type')"
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 85
+              },
+              "reason": "Translation B is more direct and natural for a question. Translation A uses a wordy 'What is the name of...' construction which sounds slightly more like a formal quiz or a textbook definition rather than a natural conversational question.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "unnecessarily wordy 'What is the name of the type' instead of 'What is the type'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/perfectionism/description",
+          "ru": "Перфекционизм – это стремление к идеалу, которое может стать как вашим союзником, так и врагом. В этой статье мы рассмотрим деструктивный перфекционизм, который приводит к самокритике, страху ошибок и, как следствие, к депрессии.",
+          "oldText": "Perfectionism is the drive toward an ideal that can become either your ally or your enemy. In this article, we look at maladaptive perfectionism—the kind that fuels self-criticism, fear of mistakes, and, as a result, depression.",
+          "newText": "Perfectionism is a drive for excellence that can be both an ally and an enemy. In this article, we’ll explore unhelpful perfectionism—the kind that leads to self-criticism, fear of making mistakes, and, ultimately, depression.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A uses the project-approved term 'unhelpful perfectionism' and flows much more naturally for a native reader. Translation B uses 'maladaptive', which is more clinical/academic, and 'the drive toward an ideal' sounds slightly more clunky than 'a drive for excellence'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'maladaptive perfectionism' instead of the preferred 'unhelpful' terminology for the project's tone."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'the drive toward an ideal' is a bit heavy compared to the more idiomatic 'drive for excellence'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A uses 'maladaptive perfectionism', which is the standard clinical term in English for the concept described, whereas B uses 'unhelpful', which is a project-specific term for beliefs but sounds slightly weak for a formal article topic. A's flow is more sophisticated and professional.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "While 'unhelpful' is used in the project for beliefs, 'maladaptive' is the more natural and precise term for perfectionism in a psychological article context."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'a drive for excellence' is slightly more cliché than 'the drive toward an ideal'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/read/screen_3/texts",
+          "ru": "<h2>Оспаривание мыслей</h2>\n\nЗадайте себе вопросы: «Какие у меня есть доказательства, подтверждающие эти мысли? А какие есть аргументы против?».\n\nЭта техника позволит формализировать и взвесить ваши предположения.\n\nОбычно мы рассуждаем не слишком рационально, но когда мы проводим сравнение \"за\" и \"против\", мы вынуждены более задействовать критическое мышление.\n\n<h2>Поиск альтернатив</h2>\n\nСпросите себя: «О чём ещё мог подумать этот человек?»\n\nДля тех, кто готов пойти дальше, открытый и честный разговор может помочь разрешить многие недопонимания.\n\nВместо того чтобы мучиться своими предположениями, лучше спросить у человека напрямую.\n\nНе стоит думать, что мыслительные ошибки являются признаком серьёзной психической патологии.\n\nОни присутствуют у каждого из нас в той или иной степени.\n\n<important>Важно то, насколько часто они возникают и что мы с ними делаем: либо верим этим искажённым мыслям на все 100% и испытываем отрицательные эмоции, либо подвергаем их сомнению и анализу, приходя к более точному и многогранному видению ситуации.</important>\n\nРабота над когнитивными искажениями может потребовать времени и усилий, но она способна значительно улучшить ваше эмоциональное благополучие и отношения с окружающими.",
+          "oldText": "Challenging thoughts\n\nAsk yourself: “What evidence supports these thoughts? And what evidence contradicts them?”\n\nThis technique helps you formalize and weigh your assumptions.\n\nWe’re not always very rational, but when we compare the “for” and “against,” we’re forced to engage critical thinking more fully.\n\nConsidering alternatives\n\nAsk yourself: “What else might this person have been thinking?”\n\nIf you’re ready to go further, open and honest conversation can resolve many misunderstandings.\n\nInstead of torturing yourself with assumptions, it’s better to ask the person directly.\n\nDon’t assume thinking errors are signs of a serious mental disorder.\n\nEveryone has them to some degree.\n\nWhat matters is how often they occur and what we do with them: either we believe these distorted thoughts 100% and suffer the emotional consequences, or we question and analyze them and arrive at a more accurate, nuanced view of the situation.\n\nWorking on cognitive distortions can take time and effort, but it can significantly improve your emotional well-being and your relationships.",
+          "newText": "<h2>Challenging your thoughts</h2>\n\nAsk yourself: “What evidence do I have that supports these thoughts? And what evidence do I have against them?”\n\nThis technique will help you formalize and weigh your assumptions.\n\nWe don’t usually reason very rationally, but when we weigh the “pros” and “cons,” we’re forced to engage our critical thinking more deeply.\n\n<h2>Finding alternatives</h2>\n\nAsk yourself: “What else could this person be thinking?”\n\nFor those ready to go further, an open and honest conversation can help resolve many misunderstandings.\n\nInstead of struggling with your assumptions, it’s better to ask the person directly.\n\nDon’t assume that cognitive distortions are a sign of serious mental pathology.\n\nThey are present in all of us to some degree.\n\n<important>What matters is how often they occur and what we do about them: we can either believe these distorted thoughts 100% and experience negative emotions, or we can question and analyze them, leading to a more accurate and nuanced view of the situation.</important>\n\nWorking on cognitive distortions may take time and effort, but it can significantly improve your mental well-being and your relationships with those around you.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is much more polished, follows the UX guidelines (sentence case in headers, proper terminology), and sounds like a professional English article. Translation B has several issues: it misses the HTML tags, uses non-standard terminology ('thinking errors' instead of 'cognitive distortions'), and contains awkward phrasing ('torturing yourself', 'compare the for and against').",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Missing HTML tags (h2, important)"
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'thinking errors' instead of the canonical 'cognitive distortions'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Header 'Challenging thoughts' should be sentence case or follow the original's structure; 'Considering alternatives' is a departure from 'Finding alternatives'"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'torturing yourself' is too dramatic/heavy compared to the original 'мучиться' in this context"
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'compare the for and against' is unidiomatic; 'weigh the pros and cons' (as in A) is the standard English expression"
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 84
+              },
+              "reason": "Translation A is more idiomatic and flows better as a piece of psychoeducation. It avoids the slightly clunky 'mental pathology' and 'reason very rationally' found in B, opting for more natural English phrasing. A also correctly uses 'emotional well-being' which fits the context of the text better than the slightly more clinical 'mental well-being' in this specific sentence.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'Reason very rationally' is a bit heavy; 'reasoning' or 'thinking' is more natural."
+                },
+                {
+                  "side": "new",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "'Mental pathology' is a bit more clinical/heavy than the original 'психической патологии' in a supportive context; 'mental disorder' (used in A) is more standard for this tone."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'What we do about them' is fine, but A's 'what we do with them' feels slightly more natural in this specific flow."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/depression/perfectionism_plan_read.json",
+          "lang": "en",
+          "key": "/perfectionism/screen_3/texts",
+          "ru": "Попробуйте составить список преимуществ и недостатков вашего перфекционизма. Примерно таким образом:\n\n<h2>Преимущества:</h2>\n\n<li>я внимателен к мелочам</li>\n\n<li>у меня высокий уровень ответственности</li>\n\n<li>он помогает мне достигать хороших результатов на работе</li>\n\n<h2>Недостатки:</h2>\n\n<li>я очень боюсь ошибок и всегда критикую себя за них</li>\n\n<li>я становлюсь таким напряженным и нервным, что часто не могу работать хорошо</li>\n\n<li>я так критичен к самому себе, что мне становится сложно просто получать удовольствие от жизни</li>\n\n<li>я не могу толком расслабиться дома, потому что я всегда найду что делать</li>\n\nЕсли анализ показал, что перфекционизм влияет на вашу жизнь негативно, и вы почувствовали необходимость работать над ним, мы готовы поделиться эффективными советами и техниками для преодоления этого вызова.",
+          "oldText": "Try listing the advantages and disadvantages of your perfectionism. For example:\n\nAdvantages:\n\nI pay attention to details\n\nI have a high sense of responsibility\n\nIt helps me achieve strong results at work\n\nDisadvantages:\n\nI’m very afraid of mistakes and always criticize myself for them\n\nI get so tense and nervous that I often can’t work well\n\nI’m so self-critical that it’s hard to simply enjoy life\n\nI can’t really relax at home because I always find something to do\n\nIf your analysis shows that perfectionism affects your life negatively—and you feel ready to work on it—we’re prepared to share effective tips and techniques to help you meet this challenge.",
+          "newText": "Try making a list of the pros and cons of your perfectionism. It might look something like this:\n\n<h2>Pros:</h2>\n\n<li>I pay attention to detail</li>\n\n<li>I have a high level of responsibility</li>\n\n<li>It helps me achieve good results at work</li>\n\n<h2>Cons:</h2>\n\n<li>I am very afraid of making mistakes and always criticize myself for them</li>\n\n<li>I get so tense and nervous that I often can’t work well</li>\n\n<li>I am so critical of myself that it’s hard to simply enjoy life</li>\n\n<li>I can’t truly relax at home because I’m always finding something to do</li>\n\nIf your analysis shows that perfectionism is negatively affecting your life and you feel the need to work on it, we’re ready to share effective tips and techniques to help you overcome this challenge.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 82
+              },
+              "reason": "Translation A sounds much more natural and idiomatic for a mental health app. It uses 'advantages and disadvantages' which fits the instructional tone better than the slightly more casual 'pros and cons' in B, and it correctly uses contractions ('I'm', 'can't') which is the required style.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'pros and cons' which is a bit too informal for this context; lacks contractions ('I am') which makes the tone feel stiff and less like a 'supportive friend'."
+                },
+                {
+                  "side": "new",
+                  "type": "omission",
+                  "severity": "minor",
+                  "note": "Stripped the HTML tags present in the original, though this might be a formatting choice, it's technically an omission of the source structure."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A is much better because it preserves the HTML structure of the original, which is critical for technical implementation. It also uses more natural, idiomatic phrasing ('pros and cons', 'pay attention to detail') compared to the slightly more formal/clunky 'advantages and disadvantages' in B.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "Lost all HTML tags (h2, li), which changes the formatting of the content."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'advantages and disadvantages' which is slightly more formal/heavy than the idiomatic 'pros and cons' used in A."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1006 @@
+{
+  "file": "texts/diary.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 4,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный."
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология (automatic thought, unhelpful thoughts, vicious cycle) соблюдена."
+              },
+              {
+                "path": "/info/body",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла 'не сделали/избегали'."
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortions, adaptive response/helpful belief) верна."
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Коротко и ясно."
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Хорошая транскреация."
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Терминология (AI assistant) соблюдена."
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Терминология (adaptive response) верна."
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "issue",
+                "note": "Смысловая ошибка: пропуск (action) vs пропуск (omission/skipping a step). В контексте это 'Skipping an automatic thought' (пропуск мысли), но заголовок звучит как процесс 'Skipping the automatic thought'. Однако, если это заголовок раздела о том, что пользователь пропустил шаг, то 'Skipping' — это герундий. Но в оригинале 'Пропуск' — это существительное. Главная проблема: 'the' лишнее, если это тип ошибки."
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "Перевод хороший, передает смысл и тон."
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "ok",
+                "note": "Перевод хороший, идиоматичный."
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "issue",
+                "note": "Mistranslation: 'Установите связь' в контексте КПТ — это не 'Connect your thoughts' (как будто соединить их физически), а 'Establish a connection/link between...'. Текущий вариант звучит как команда 'Соедини свои мысли'."
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена (intermediate beliefs, rules and assumptions)."
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, тон соблюден."
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "Перевод хороший, передает смысл без лишнего канцелярита."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/automaticAnalysis/4/title",
+                "fragment": "Skipping the automatic thought",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование определенного артикля 'the' делает фразу слишком специфичной, как будто речь о какой-то конкретной, уже упомянутой мысли, в то время как заголовок должен обозначать категорию ошибки (пропуск автоматической мысли).",
+                "why": "В заголовках категорий ошибок лучше использовать неопределенный артикль или вообще без него, если это абстрактное понятие."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/smer/h2",
+                "fragment": "Connect your automatic thoughts",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение смысла: 'Connect your automatic thoughts' звучит как 'Соедините свои мысли между собой'.",
+                "why": "В оригинале 'Установите связь с автоматическими мыслями' подразумевает установление связи *между* убеждениями и мыслями (как указано в тексте ниже). Текущий перевод теряет объект связи (связь между чем и чем), превращая это в странную команду по манипуляции мыслями."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The use of the definite article 'the' in a category title is stylistically heavy and implies a specific thought rather than the general error of skipping thoughts."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation is semantically incomplete. It fails to convey the relationship between beliefs and thoughts described in the context, making the heading ambiguous."
+              }
+            ],
+            "notes": "The translation is generally high quality, but suffers from a major semantic loss in a key heading and a minor stylistic issue in a category title.",
+            "recommendations": [
+              {
+                "id": "c2-I2",
+                "priority": 1,
+                "path": "/smer/h2",
+                "current": "Connect your automatic thoughts",
+                "proposed": "Connect your beliefs and automatic thoughts",
+                "alternatives": [
+                  "Link your beliefs and automatic thoughts",
+                  "See the connection between your beliefs and automatic thoughts"
+                ],
+                "rationale": "Текущий вариант звучит как команда «соедините мысли друг с другом». В контексте раздела о промежуточных убеждениях (intermediate beliefs) важно указать, что мы устанавливаем связь именно между убеждениями и мыслями, как и в оригинале."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/automaticAnalysis/4/title",
+                "current": "Skipping the automatic thought",
+                "proposed": "Skipping an automatic thought",
+                "alternatives": [
+                  "Skipping automatic thoughts"
+                ],
+                "rationale": "Использование 'the' делает заголовок слишком специфичным (как будто речь о какой-то одной конкретной мысли). Для обозначения типа ошибки лучше использовать неопределенный артикль или множественное число без артикля."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, с хорошим пониманием CBT-терминологии и тона. Основная проблема — в заголовке раздела /smer/h2, где потерян объект связи, что меняет смысл инструкции. Также рекомендуется поправить артикль в одном из заголовков для естественности. В остальном текст звучит профессионально и дружелюбно."
+            },
+            "timings": {
+              "issues": 33149,
+              "deliberate": 3244,
+              "recommend": 8898
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I2",
+              "path": "/smer/h2",
+              "from": "Connect your automatic thoughts",
+              "to": "Connect your beliefs and automatic thoughts"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/automaticAnalysis/4/title",
+              "from": "Skipping the automatic thought",
+              "to": "Skipping an automatic thought"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный."
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология (automatic thought, unhelpful thoughts, vicious cycle) соблюдена."
+              },
+              {
+                "path": "/info/body",
+                "verdict": "ok",
+                "note": "Естественный английский."
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Передано значение 'не сделали' через 'avoid doing', что звучит естественно."
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortions, adaptive response/helpful belief) верна."
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Хорошая идиоматика (broader perspective)."
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Коротко и ясно."
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Хороший уровень английского."
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Передано верно."
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Тон и смысл соблюдены."
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Использован правильный термин AI assistant."
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Хороший стиль, 'working through thoughts' — верная сочетаемость."
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Терминология (adaptive response) верна."
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "ok",
+                "note": "Смысл передан."
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Терминология (adaptive response) верна."
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Лаконично."
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "ok",
+                "note": "Перевод точный, соответствует контексту пропуска шага"
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, тон дружелюбный, смысл сохранен"
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "Перевод соответствует смыслу примера неверной мысли"
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "Перевод соответствует смыслу примера верной мысли"
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "ok",
+                "note": "Стиль естественный, смысл передан верно"
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "issue",
+                "note": "Mistranslation: в оригинале 'связь с мыслями', в переводе 'связь убеждений и мыслей'"
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "Терминология (intermediate beliefs, rules and assumptions) соблюдена"
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "Стиль и терминология в норме"
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "Стиль и смысл переданы верно"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/smer/h2",
+                "fragment": "Connect your beliefs and automatic thoughts",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажение объекта действия",
+                "why": "В оригинале заголовок призывает пользователя установить связь с автоматическими мыслями (Connect with automatic thoughts), в то время как перевод меняет смысл на установление связи между двумя категориями (beliefs and thoughts). Это меняет фокус упражнения."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation changes the verb's object from 'connecting with thoughts' (an action/process) to 'connecting beliefs and thoughts' (a structural relationship), which fundamentally alters the user instruction."
+              }
+            ],
+            "notes": "The translation is generally high quality and accurate, with the exception of one significant semantic shift in a heading that changes the user's task.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/smer/h2",
+                "current": "Connect your beliefs and automatic thoughts",
+                "proposed": "Connect with your automatic thoughts",
+                "alternatives": [
+                  "Build a connection with your automatic thoughts",
+                  "Get in touch with your automatic thoughts"
+                ],
+                "rationale": "В оригинале «Установите связь с автоматическими мыслями» — это призыв к осознанию (connect with), а не к поиску логических связей между двумя сущностями (connect A and B). Текущий перевод меняет суть упражнения на структурный анализ, что противоречит задаче."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдены все правила CBT-терминологии, тон дружелюбный и профессиональный, а грамматика естественна для носителя. Единственная серьезная ошибка в заголовке раздела /smer/h2 искажает инструкцию, превращая процесс осознания в процесс сопоставления категорий. После исправления этого момента текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 40784,
+              "deliberate": 3097,
+              "recommend": 7168
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/smer/h2",
+              "from": "Connect your beliefs and automatic thoughts",
+              "to": "Connect with your automatic thoughts"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/info/event",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный."
+              },
+              {
+                "path": "/info/thought",
+                "verdict": "ok",
+                "note": "Терминология (automatic thought, unhelpful thoughts, vicious cycle) соблюдена."
+              },
+              {
+                "path": "/info/body",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/info/behavior",
+                "verdict": "ok",
+                "note": "Хорошая передача смысла 'не сделали/избежали'."
+              },
+              {
+                "path": "/info/response",
+                "verdict": "ok",
+                "note": "Терминология (cognitive distortions, adaptive response/helpful belief) верна."
+              },
+              {
+                "path": "/info/conclusion",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/info/comparison",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/stepper/event",
+                "verdict": "ok",
+                "note": "Коротко и ясно."
+              },
+              {
+                "path": "/stepper/thought",
+                "verdict": "ok",
+                "note": "Передано верно."
+              },
+              {
+                "path": "/stepper/body",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/stepper/behavior",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/stepper/response",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/stepper/conclusion",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/analysis/description/0",
+                "verdict": "ok",
+                "note": "Хорошая транскреация."
+              },
+              {
+                "path": "/analysis/description/1",
+                "verdict": "ok",
+                "note": "Терминология (AI assistant) соблюдена."
+              },
+              {
+                "path": "/analysis/description/2",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/analysis/description/3",
+                "verdict": "ok",
+                "note": "Естественно."
+              },
+              {
+                "path": "/analysis/description/4",
+                "verdict": "ok",
+                "note": "Хороший тон."
+              },
+              {
+                "path": "/analysis/hint/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/analysis/hint/1",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/analysis/hint/2",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/analysis/hint/3",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/analysis/hint/4",
+                "verdict": "ok",
+                "note": "Терминология (adaptive response) верна."
+              },
+              {
+                "path": "/analysis/hint/5",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/0/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/0/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/automaticAnalysis/0/wrong",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/0/right",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/1/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/1/description",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/1/wrong",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/1/right",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/2/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/2/description",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/2/wrong",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/2/right",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/3/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/3/description",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/3/wrong",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/3/right",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/automaticAnalysis/4/title",
+                "verdict": "ok",
+                "note": "Перевод точный, соответствует контексту пропуска шага"
+              },
+              {
+                "path": "/automaticAnalysis/4/description",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, тон дружелюбный, терминология верная"
+              },
+              {
+                "path": "/automaticAnalysis/4/wrong",
+                "verdict": "ok",
+                "note": "Передано содержание 'should' statement"
+              },
+              {
+                "path": "/automaticAnalysis/4/right",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/automaticAnalysis/5/title",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/automaticAnalysis/5/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный"
+              },
+              {
+                "path": "/automaticAnalysis/5/wrong",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/automaticAnalysis/5/right",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/smer/h2",
+                "verdict": "issue",
+                "note": "Слишком вольный перевод 'установите связь' как 'connect with'"
+              },
+              {
+                "path": "/smer/texts/0",
+                "verdict": "ok",
+                "note": "Терминология 'intermediate beliefs' и 'rules and assumptions' соблюдена"
+              },
+              {
+                "path": "/smer/texts/1",
+                "verdict": "ok",
+                "note": "Терминология 'automatic thoughts' соблюдена, стиль хороший"
+              },
+              {
+                "path": "/smer/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно, грамматика корректна"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/smer/h2",
+                "fragment": "Connect with your automatic thoughts",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неудачный выбор глагола",
+                "why": "В контексте КПТ 'установить связь' между убеждениями и мыслями означает увидеть их взаимосвязь (identify the connection/link), а не 'подружиться' или 'наладить контакт' с мыслями, что звучит как 'connect with' в английском."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The reviewer is correct. In CBT (Cognitive Behavioral Therapy) context, 'установить связь' refers to identifying the link/connection between cognitive structures, whereas 'connect with' implies an emotional or interpersonal connection, which is misleading."
+              }
+            ],
+            "notes": "The translation is overall high quality and professionally handled, with the exception of one terminological nuance in the CBT context.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/smer/h2",
+                "current": "Connect with your automatic thoughts",
+                "proposed": "Identify the link to your automatic thoughts",
+                "alternatives": [
+                  "Find the connection to your automatic thoughts",
+                  "See how your beliefs link to automatic thoughts"
+                ],
+                "rationale": "В контексте КПТ 'установить связь' означает выявить когнитивную взаимосвязь между структурами (убеждениями и мыслями). 'Connect with' в английском звучит как эмоциональный контакт или установление связи с человеком, что вводит в заблуждение. 'Identify the link' — наиболее точный и профессиональный вариант."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, выдержан поддерживающий тон и правильный регистр. Единственная правка касается стилистической точности в заголовке раздела, чтобы избежать двусмысленности 'эмоционального контакта' там, где речь идет о выявлении логической связи."
+            },
+            "timings": {
+              "issues": 28146,
+              "deliberate": 2196,
+              "recommend": 4955
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/smer/h2",
+              "from": "Connect with your automatic thoughts",
+              "to": "Identify the link to your automatic thoughts"
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "Дата": "2026-09-18T20:48:15.106Z",
+    "Метка": "en-final-g23-triangle",
+    "Сравнение": "NEW = рабочее дерево; OLD = --git-ref 16e1697",
+    "Файлы": "story/triangle.json",
+    "Локали": "en",
+    "Сэмпл/файл": 20,
+    "Seed": 42,
+    "Min-chars": 0,
+    "Модель": "google/gemma-4-26B-A4B-it",
+    "Endpoint": "http://127.0.0.1:8000/v1",
+    "git HEAD": "2ce791cdd43e4fc690400862cb7534197d57f71f"
+  },
+  "results": {
+    "story/triangle.json": {
+      "en": [
+        {
+          "file": "story/triangle.json",
+          "lang": "en",
+          "key": "/screen_3/texts",
+          "ru": "Выход есть — и КПТ как раз про этот выход.\n\nДавайте взглянем на диалог клиента с психологом, чтобы увидеть более подробно, как работает эта триада:\n\n<dialog>Я постоянно чувствую тревогу. Кажется, что я всё делаю не так, и что окружающие меня осуждают.</dialog>\n\n<dialog psy=\"true\">Давайте разберём конкретную ситуацию. Что произошло в последний раз, когда вы ощутили тревогу?</dialog>\n\n<dialog>Я выступала с презентацией на работе. Меня трясло, голос срывался. Казалось, что все смотрят с осуждением.</dialog>\n\n<dialog psy=\"true\">Какая мысль возникла у вас перед тем, как тревога усилилась?</dialog>\n\n<dialog>Скорее всего, я подумала: «Я всё испорчу», «Они решат, что я глупая».</dialog>\n\n<dialog psy=\"true\">Хорошо. Итак, мысль: «Я всё испорчу». Эмоции: тревога, страх. Поведение: дрожь, срывающийся голос.</dialog>\n\n<dialog psy=\"true\">А теперь проверим, насколько эта мысль точна.</dialog>\n\n<dialog psy=\"true\">Были ли реальные доказательства того, что вы всё испортили?</dialog>\n\n<dialog>Ну… Презентация прошла не идеально, но и не провально. Коллеги даже задавали вопросы.</dialog>\n\n<dialog psy=\"true\">Значит, мысль «Я всё испорчу» была преувеличенной. Более реалистично: «Я волнуюсь, но могу справиться».</dialog>\n\n<dialog psy=\"true\">И даже если я допущу ошибку в презентации, это не значит, что я глупая. Это значит, что я человек и переживаю; к тому же у меня пока мало опыта публичных выступлений.</dialog>\n\n<dialog psy=\"true\">Если бы у вас была такая поддерживающая мысль, как бы вы себя чувствовали и как бы повели себя?</dialog>\n\n<dialog>Наверное, я бы чувствовала себя спокойнее и вела бы себя увереннее.</dialog>\n\n<dialog psy=\"true\">Именно!</dialog>",
+          "oldText": "There is a way out — and CBT is exactly about this.\n\nLet’s look at a dialogue between a client and a psychologist to see in more detail how this triad works:",
+          "newText": "There is a way out—and CBT is all about finding it.\n\nLet’s look at a dialogue between a client and a psychologist to see how this triad works in more detail:\n\n<dialog>I constantly feel anxious. It feels like I’m doing everything wrong and that everyone around me is judging me.</dialog>\n\n<dialog psy=\"true\">Let’s look at a specific situation. What happened the last time you felt anxious?</dialog>\n\n<dialog>I was giving a presentation at work. I was shaking, and my voice kept cracking. It felt like everyone was looking at me with judgment.</dialog>\n\n<dialog psy=\"true\">What thought came to mind just before the anxiety intensified?</dialog>\n\n<dialog>I think I thought: “I’m going to ruin everything,” or “They’ll think I’m stupid.”</dialog>\n\n<dialog psy=\"true\">I see. So, the thought: “I’m going to ruin everything.” The emotions: anxiety, fear. The behavior: shaking, a cracking voice.</dialog>\n\n<dialog psy=\"true\">Now, let’s check how accurate that thought actually is.</dialog>\n\n<dialog psy=\"true\">Was there any real evidence that you ruined everything?</dialog>\n\n<dialog>Well… The presentation wasn’t perfect, but it wasn’t a disaster either. My colleagues even asked questions.</dialog>\n\n<dialog psy=\"true\">So, the thought “I’m going to ruin everything” was an exaggeration. A more realistic way to look at it would be: “I’m nervous, but I can handle this.”</dialog>\n\n<dialog psy=\"true\">And even if I do make a mistake during a presentation, it doesn’t mean I’m stupid. It just means I’m human and feeling anxious; plus, I don’t have much experience with public speaking yet.</dialog>\n\n<dialog psy=\"true\">If you had held onto such a supportive thought, how would you have felt and acted?</dialog>\n\n<dialog>I think I would have felt calmer and acted more confidently.</dialog>\n\n<dialog psy=\"true\">Exactly!</dialog>",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 75,
+                "new": 96
+              },
+              "reason": "Translation B is much more idiomatic and natural for a native speaker. Translation A's opening sentence is a clunky literal translation of the Russian structure, whereas B uses a much more natural English phrasing ('CBT is all about finding it'). B also handles the dialogue flow with better rhythm and vocabulary.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "major",
+                  "note": "The opening 'CBT is exactly about this' is a heavy calque from Russian; 'CBT is all about...' is the natural English equivalent."
+                },
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "major",
+                  "note": "The entire dialogue section is missing from Translation A."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 30,
+                "new": 96
+              },
+              "reason": "Translation A is a complete, high-quality, and idiomatic translation that follows all CBT terminology and tone guidelines. Translation B is a massive omission, providing only the first two lines of the text.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "omission",
+                  "severity": "critical",
+                  "note": "The entire dialogue and the majority of the text are missing."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/triangle.json",
+          "lang": "en",
+          "key": "/test/answers",
+          "ru": "Мысли, чувства и поведение функционируют независимо друг от друга, и изменение одного из них не влияет на остальные\n\nМысли влияют на чувства и поведение, но чувства и поведение не влияют на мысли\n\nМысли, чувства и поведение взаимосвязаны, и изменение одного из них может влиять на остальные два\n\nТолько чувства влияют на мысли и поведение, но не наоборот",
+          "oldText": "Thoughts, feelings, and behavior function independently of each other, and changing one of them does not affect the others\n\nThoughts influence feelings and behavior, but feelings and behavior do not influence thoughts\n\nThoughts, feelings, and behavior are interconnected, and changing one of them can affect the other two\n\nOnly feelings influence thoughts and behavior, but not the other way around",
+          "newText": "Thoughts, feelings, and behavior function independently, and changing one does not affect the others.\n\nThoughts affect feelings and behavior, but feelings and behavior do not affect thoughts.\n\nThoughts, feelings, and behavior are interconnected, and changing one can influence the other two.\n\nOnly feelings affect thoughts and behavior, but not the other way around.",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 95,
+                "new": 88
+              },
+              "reason": "Translation A is more precise and maintains the formal structure of the original statements. Translation B uses 'affect' and 'influence' inconsistently compared to the original, and the omission of 'of each other' in the first sentence makes it slightly less precise.",
+              "issues": [
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Inconsistent use of 'affect' and 'influence' compared to the original's rhythmic structure; 'function independently' is slightly less complete than 'function independently of each other' in this context."
+                }
+              ]
+            },
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 95
+              },
+              "reason": "Translation A is more concise and follows natural English rhythm, avoiding the repetitive 'of each other' and 'of them' found in B. Translation A also uses 'affect' and 'influence' more effectively to maintain a professional yet readable tone.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Wordiness: 'independently of each other' and 'changing one of them' are unnecessarily heavy for this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/triangle.json",
+          "lang": "en",
+          "key": "/screen_2/texts",
+          "ru": "Чтобы наглядно увидеть работу этой триады, рассмотрим пример: вы идёте по улице и замечаете бывшего партнёра, с которым вы расстались.\n\nМысль: «Он выглядит счастливым, а я — неудачница».\n\nЭмоция: грусть, обида, злость.\n\nТелесная реакция: напряжение в плечах, учащённое сердцебиение.\n\nПоведение: вы начинаете плакать, разворачиваетесь и уходите, чтобы избежать встречи.\n\nЕщё один пример:\n\nСитуация: знакомые пригласили вас на вечеринку.\n\nМысль: «Я не найду общий язык с людьми, меня никто не примет».\n\nЭмоция: тревога, страх.\n\nТелесная реакция: тяжесть в животе, потные ладони, ком в горле.\n\nПоведение: вы решаете не идти и остаётесь дома.\n\nВидите, как одна мысль запускает целую цепочку реакций?\n\nЭто верно и для позитивных событий.\n\nСитуация: вы получаете повышение на работе.\n\nМысль: «Я молодец, меня ценят как специалиста».\n\nЭмоция: радость, гордость.\n\nПоведение: вы улыбаетесь и звоните друзьям, чтобы поделиться новостью.\n\nПроблемы начинаются, когда мы застреваем в негативном цикле.\n\n<important>Одна неадаптивная мысль запускает тягостные чувства и неэффективное поведение, а они, в свою очередь, подкрепляют эту мысль.</important>\n\nЭто как снежный ком, который, катясь с горы, становится всё больше.",
+          "oldText": "To clearly see how this triad works, let’s look at an example: you are walking down the street and notice an ex-partner you once broke up with.\n\nThought: “He looks happy, and I’m a loser.”\n\nEmotion: sadness, hurt, anger.\n\nPhysical reaction: tension in the shoulders, rapid heartbeat.\n\nBehavior: you start crying, turn around and walk away to avoid meeting him.\n\nAnother example:\n\nSituation: some acquaintances invite you to a party.\n\nThought: “I won’t be able to connect with anyone, and nobody will accept me.”\n\nEmotion: anxiety, fear.\n\nPhysical reaction: heaviness in the stomach, sweaty palms, a lump in the throat.\n\nBehavior: you decide not to go and stay at home.\n\nYou can see how a single thought triggers a whole chain of reactions.\n\nThis is also true for positive events.\n\nSituation: you get a promotion at work.\n\nThought: “I did a great job, they value me as a professional.”\n\nEmotion: joy, pride.\n\nBehavior: you smile and call your friends to share the news.\n\nProblems begin when we get stuck in a negative cycle.\n\nOne unhelpful thought triggers painful feelings and ineffective behavior, and they, in turn, reinforce that thought.\n\nIt’s like a snowball rolling down a hill and getting bigger and bigger.",
+          "newText": "To see this triad in action, let’s look at an example: you are walking down the street and notice an ex-partner.\n\nThought: “They look happy, and I’m a failure.”\n\nEmotion: sadness, resentment, anger.\n\nPhysical reaction: tension in the shoulders, racing heart.\n\nBehavior: you start to cry, turn around, and walk away to avoid the encounter.\n\nHere is another example:\n\nSituation: acquaintances invite you to a party.\n\nThought: “I won’t be able to connect with anyone; no one will accept me.”\n\nEmotion: anxiety, fear.\n\nPhysical reaction: heaviness in the stomach, sweaty palms, a lump in the throat.\n\nBehavior: you decide not to go and stay home instead.\n\nDo you see how a single thought can trigger a whole chain of reactions?\n\nThis also applies to positive events.\n\nSituation: you get a promotion at work.\n\nThought: “I’m doing great; my expertise is valued.”\n\nEmotion: joy, pride.\n\nBehavior: you smile and call your friends to share the news.\n\nProblems arise when we get stuck in a negative cycle.\n\n<important>One unhelpful thought triggers distressing feelings and unhelpful behavior, which in turn reinforces that very thought.</important>\n\nIt’s like a snowball—as it rolls down a hill, it just keeps getting bigger.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 84,
+                "new": 96
+              },
+              "reason": "Translation A is much more idiomatic and follows the project's tone guidelines perfectly. It uses gender-neutral 'they' for the ex-partner, which is more natural in modern English UX, whereas B's 'he/him' is a specific assumption. A also uses 'unhelpful behavior' which aligns with the project's terminology for 'неадаптивный/неэффективный' in a soft, non-judgmental way.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'loser' which is a bit more slangy/harsh than the original 'неудачница' in a clinical context; 'rapid heartbeat' is slightly more formal than 'racing heart'."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Uses 'ineffective behavior' instead of 'unhelpful behavior', which is the preferred project term for non-adaptive patterns."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'an ex-partner you once broke up with' is redundant (an ex-partner is someone you broke up with)."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is much more idiomatic and follows the 'expert friend' tone perfectly. It uses better vocabulary (e.g., 'distressing' instead of 'painful', 'racing heart' instead of 'rapid heartbeat') and handles gender neutrality more naturally in the first example.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'an ex-partner you once broke up with' is redundant; 'ex-partner' already implies the breakup."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'I'm a loser' is a bit more colloquial/childish than 'I'm a failure' in a psychological context."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'rapid heartbeat' is grammatically fine but 'racing heart' is more natural for describing physical sensations."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "'painful feelings' is slightly less professional/precise than 'distressing feelings' in CBT contexts."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/triangle.json",
+          "lang": "en",
+          "key": "/screen_1/texts",
+          "ru": "Давайте разберёмся с главным принципом когнитивно-поведенческой терапии — взаимосвязью мыслей, эмоций и наших реакций.\n\nПредставьте треугольник, у которого вершины — это мысли, чувства и поведение.\n\nЭти три элемента не просто сосуществуют: они постоянно взаимодействуют, усиливая или ослабляя друг друга.\n\nНаши мысли — это внутренний диалог, то, что мы говорим себе про происходящее.\n\nОни задают угол зрения — словно очки с определёнными линзами.\n\nЭмоции — это отклик на интерпретацию событий и мыслей о них.\n\nРадость, грусть, страх, гнев — всё это сигналы о том, как мы объясняем себе ситуацию.\n\nНаше поведение — результат влияния мыслей и эмоций.\n\n<instagram ids=\"18291867157211427,17914730211068758\">\n\nЭто то, как мы действуем и реагируем на мир в конкретных обстоятельствах.\n\nНе забудем и про тело!\n\nОно активно включено в процесс и часто реагирует первым.\n\nМысли и эмоции вызывают физиологические реакции: учащённое сердцебиение, потливость, мышечное напряжение при тревоге; улыбку и смех — при радости.\n\nНам нередко кажется, что эмоции возникают напрямую из событий.\n\nСломалась машина — злимся.\n\nПотеряли кошелёк — расстраиваемся.\n\nНо КПТ подчёркивает: между событием и эмоцией есть посредник — наши мысли о том, что произошло.\n\nИменно интерпретация события, а не само событие, формирует наши чувства.",
+          "oldText": "Let’s look at the core principle of cognitive-behavioral therapy — the connection between thoughts, emotions, and our reactions.\n\nImagine a triangle whose corners are thoughts, feelings, and behavior.\n\nThese three elements don’t just coexist: they constantly interact, reinforcing or weakening one another.\n\nOur thoughts are our inner dialogue, what we tell ourselves about what is happening.\n\nThey set our perspective — like glasses with particular lenses.\n\nEmotions are our response to how we interpret events and what we think about them.\n\nJoy, sadness, fear, anger — all of these are signals showing how we explain a situation to ourselves.\n\nOur behavior is shaped by our thoughts and emotions.\n\nIt is how we act and respond to the world in specific circumstances.\n\nAnd let’s not forget the body!\n\nIt is actively involved in the process and often reacts first.\n\nThoughts and emotions trigger physical reactions: rapid heartbeat, sweating, muscle tension when anxious; a smile and laughter — when joyful.\n\nIt often seems to us that emotions arise directly from events.\n\nThe car breaks down — we get angry.\n\nWe lose our wallet — we feel upset.\n\nBut CBT emphasizes that between the event and the emotion there is a mediator — our thoughts about what happened.\n\nIt is the interpretation of the event, not the event itself, that shapes how we feel.",
+          "newText": "Let’s explore the core principle of cognitive behavioral therapy (CBT)—the interconnectedness of our thoughts, emotions, and behaviors.\n\nImagine a triangle where the vertices are thoughts, feelings, and behavior.\n\nThese three elements don’t just coexist; they constantly interact, reinforcing or weakening one another.\n\nOur thoughts are our internal dialogue—what we tell ourselves about what is happening.\n\nThey shape our perspective, much like wearing glasses with specific lenses.\n\nEmotions are our response to how we interpret events and our thoughts about them.\n\nJoy, sadness, fear, anger—these are all signals of how we are making sense of a situation.\n\nOur behavior is the result of how our thoughts and emotions influence us.\n\n<instagram ids=\"18291867157211427,17914730211068758\">\n\nIt is how we act and respond to the world in specific circumstances.\n\nAnd let’s not forget the body!\n\nIt is actively involved in the process and is often the first to react.\n\nThoughts and emotions trigger physiological responses: a racing heart, sweating, or muscle tension when anxious; a smile or laughter when joyful.\n\nIt often feels as though emotions arise directly from events.\n\nThe car breaks down—you feel angry.\n\nYou lose your wallet—you feel upset.\n\nBut CBT emphasizes that there is a mediator between the event and the emotion: our thoughts about what happened.\n\nIt is the interpretation of the event, rather than the event itself, that shapes our feelings.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more idiomatic and follows the professional tone of a 'knowledgeable friend' much better. It uses superior phrasing like 'making sense of a situation' and 'racing heart' instead of the slightly clunky 'explain a situation to ourselves' or 'rapid heartbeat'.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'explain a situation to ourselves' is a bit of a Russianism; 'making sense of' is much more natural in English."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'we' in the examples (We lose our wallet) is grammatically fine but slightly less engaging for a UX/article context than the 'you' used in A."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B is much more idiomatic and follows the professional CBT-style narrative guidelines. It uses better vocabulary ('interconnectedness', 'making sense of', 'physiological responses') and correctly handles the shift to 'you' for the examples, which sounds more natural in English than the literal 'we' used in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Uses 'corners' instead of 'vertices' for a triangle, which is less precise; 'physical reactions' is slightly less professional than 'physiological responses'; 'we' in examples feels slightly repetitive/clunky compared to 'you'."
+                },
+                {
+                  "side": "new",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The use of 'you' in the examples ('The car breaks down—you feel angry') is a slight departure from the 'we' in the original, but it is a standard and better way to write English instructional/educational text."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/triangle.json",
+          "lang": "en",
+          "key": "/screen_4/texts",
+          "ru": "Работая с мыслями, можно менять эмоции и поведение к лучшему.\n\nМы научимся замечать негативные мысли, проверять их на реалистичность и заменять более адаптивными.\n\nЭто поможет разорвать замкнутый круг негатива и почувствовать себя устойчивее.\n\nТак работает базовая модель; разумеется, к ней добавляются индивидуальные особенности.\n\nЧеловек с расстройством пищевого поведения может зацикливаться на фигуре и ругать себя за съеденное пирожное.\n\nТревожный человек способен часами прокручивать маловероятные катастрофические сценарии.\n\nНе отчаивайтесь, если узнали себя в этих примерах!\n\nКПТ создана, чтобы помогать заменять деструктивные мысли и реакции — на более здоровые и гибкие.\n\nДалее мы подробно обсудим, как прерывать порочные циклы и возвращать себе ощущение контроля.\n\nВажно помнить: у каждого есть возможность изменить внутренний диалог и реагировать на мир конструктивнее.",
+          "oldText": "By working with thoughts, we can change emotions and behavior for the better.\n\nWe will learn to notice negative thoughts, test how realistic they are, and replace them with more adaptive ones.\n\nThis helps break the vicious circle of negativity and helps you feel more stable.\n\nThis is how the basic model works; of course, individual nuances are added on top of it.\n\nSomeone with an eating disorder may fixate on their body and harshly criticize themselves for eating a pastry.\n\nA person with anxiety can spend hours replaying unlikely catastrophic scenarios.\n\nDon’t despair if you recognized yourself in these examples!\n\nCBT is designed to help replace destructive thoughts and reactions with healthier, more flexible ones.\n\nNext we will look in detail at how to interrupt vicious cycles and regain a sense of control.\n\nIt is important to remember: everyone has the ability to change their inner dialogue and respond to the world in a more constructive way.",
+          "newText": "By working with your thoughts, you can change your emotions and behavior for the better.\n\nWe will learn to notice unhelpful thoughts, check them for realism, and replace them with more adaptive ones.\n\nThis will help you break the cycle of negativity and feel more resilient.\n\nThis is how the basic model works; of course, individual nuances are also taken into account.\n\nA person with an eating disorder might fixate on their body shape and criticize themselves for eating a pastry.\n\nAn anxious person might spend hours ruminating on unlikely, catastrophic scenarios.\n\nDon’t be discouraged if you recognize yourself in these examples!\n\nCBT is designed to help you replace unhelpful thoughts and reactions with more helpful and flexible ones.\n\nNext, we’ll discuss in detail how to break these vicious cycles and regain a sense of control.\n\nIt’s important to remember: everyone has the opportunity to change their internal dialogue and respond to the world in a more constructive way.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation A follows all CBT terminology guidelines (using 'unhelpful' instead of 'negative' or 'destructive') and maintains a much more natural, supportive tone. Translation B contains several 'translationese' markers and violates the specific instruction regarding 'healthy/unhealthy' thoughts.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'negative' and 'destructive' instead of the required 'unhelpful' for thoughts."
+                },
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'healthier' instead of 'helpful' for thoughts/reactions."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Used 'Don't despair', which is too heavy/dramatic compared to the supportive 'Don't be discouraged'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'test how realistic they are' is slightly clunky compared to 'check them for realism'."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Used 'stable' instead of 'resilient', which is a more accurate and professional term for psychological well-being in this context."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 82,
+                "new": 96
+              },
+              "reason": "Translation B follows the project's specific CBT terminology (unhelpful/helpful instead of destructive/healthier) and uses more natural, idiomatic English (ruminating, resilient, don't be discouraged).",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "major",
+                  "note": "Used 'destructive' and 'healthier' instead of the required 'unhelpful' and 'helpful' for CBT thoughts."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrasing 'individual nuances are added on top of it' is slightly clunky/translated."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "Used 'A person with anxiety' which is grammatically okay but 'An anxious person' or 'Someone with anxiety' is more natural in this context."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/triangle.json",
+          "lang": "en",
+          "key": "/description",
+          "ru": "Статья объясняет основы когнитивно-поведенческой терапии и показывает, как мысли, чувства и поведение связаны между собой. На примерах диалога психолога и клиента видно, как изменение мышления помогает улучшить эмоциональное состояние и поступки. В конце — понятные стратегии, которые помогут разорвать порочный круг негативных мыслей и чувств.",
+          "oldText": "This article explains the basics of cognitive-behavioral therapy and shows how thoughts, feelings, and behavior are interconnected. Through examples of a dialogue between a psychologist and a client, it illustrates how changing thinking patterns can improve emotional state and actions. At the end, you’ll find clear strategies that help break the vicious cycle of negative thoughts and feelings.",
+          "newText": "This article explains the fundamentals of cognitive behavioral therapy (CBT) and shows how thoughts, feelings, and behavior are interconnected. Through examples of a dialogue between a psychologist and a client, you’ll see how changing your thinking can help improve your emotional state and actions. It concludes with practical strategies to help you break the cycle of negative thoughts and feelings.",
+          "status": "judged",
+          "stable": true,
+          "stableWinner": "new",
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation A is more polished and follows the 'understanding friend' tone perfectly by using 'you'll see' and 'practical strategies'. Translation B is slightly more formal/academic and uses 'vicious cycle', which is a bit more cliché than the smoother 'break the cycle' in A.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'vicious cycle' is a bit heavy/cliché compared to the cleaner 'break the cycle' in A; 'it illustrates' is slightly more formal/dry than the direct 'you'll see'."
+                }
+              ]
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 88,
+                "new": 96
+              },
+              "reason": "Translation B follows the project's terminology guidelines by introducing the 'CBT' acronym and uses a more natural, engaging tone ('you'll see', 'practical strategies') suitable for a mental health app. Translation A is grammatically correct but feels slightly more academic and less personal.",
+              "issues": [
+                {
+                  "side": "old",
+                  "type": "terminology",
+                  "severity": "minor",
+                  "note": "Did not introduce the 'CBT' acronym upon first mention of cognitive-behavioral therapy."
+                },
+                {
+                  "side": "old",
+                  "type": "style",
+                  "severity": "minor",
+                  "note": "The phrase 'At the end, you'll find' is slightly less idiomatic for an article summary than 'It concludes with'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "story/triangle.json",
+          "lang": "en",
+          "key": "/test/question",
+          "ru": "Какое из следующих утверждений наиболее точно описывает триаду мыслей, чувств и поведения?",
+          "oldText": "Which of the following statements best describes the triad of thoughts, feelings, and behavior?",
+          "newText": "Which of the following statements most accurately describes the triad of thoughts, feelings, and behavior?",
+          "status": "judged",
+          "stable": false,
+          "stableWinner": null,
+          "passes": [
+            {
+              "order": "new_first",
+              "ok": true,
+              "winnerFor": "old",
+              "confidence": "high",
+              "scores": {
+                "old": 98,
+                "new": 92
+              },
+              "reason": "While both are grammatically correct, 'best describes' is the standard, idiomatic way to phrase multiple-choice questions in English, whereas 'most accurately describes' sounds slightly more formal and heavy.",
+              "issues": []
+            },
+            {
+              "order": "old_first",
+              "ok": true,
+              "winnerFor": "new",
+              "confidence": "high",
+              "scores": {
+                "old": 92,
+                "new": 98
+              },
+              "reason": "Translation B is a more precise and professional rendering of the original 'наиболее точно'. While 'best describes' is acceptable in casual English, 'most accurately describes' is the standard academic and clinical phrasing for psychological assessments.",
+              "issues": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

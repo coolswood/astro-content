@@ -1,0 +1,500 @@
+{
+  "file": "texts/mood.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "en",
+      "converged": false,
+      "totalApplied": 6,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/finish/h2",
+                "verdict": "ok",
+                "note": "Переведено адекватно, well-being уместно"
+              },
+              {
+                "path": "/finish/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, tone of voice соблюден"
+              },
+              {
+                "path": "/finish/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология psychologist ок"
+              },
+              {
+                "path": "/finish/texts/2",
+                "verdict": "ok",
+                "note": "Грамматически верно, смысл сохранен"
+              },
+              {
+                "path": "/finish/texts/3",
+                "verdict": "issue",
+                "note": "Утерян важный смысловой нюанс: 'в течение дня' превратилось в 'позже сегодня'"
+              },
+              {
+                "path": "/start/h2",
+                "verdict": "ok",
+                "note": "Соответствует терминологии Daily check-in"
+              },
+              {
+                "path": "/start/texts/0",
+                "verdict": "ok",
+                "note": "Терминология CBT и check-in верная"
+              },
+              {
+                "path": "/start/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/start/texts/2",
+                "verdict": "ok",
+                "note": "Соблюдена терминология psychologist и exercises"
+              },
+              {
+                "path": "/start/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/start/texts/4",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/finishScore/h2",
+                "verdict": "minor",
+                "note": "effectiveness звучит немного формально, но допустимо"
+              },
+              {
+                "path": "/finishScore/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/finishScore/texts/1",
+                "verdict": "ok",
+                "note": "Терминология mental well-being соблюдена"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/finish/texts/3",
+                "fragment": "It’s best to re-evaluate later today",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "искажение временного интервала",
+                "why": "В оригинале 'в течение дня' (throughout the day), что подразумевает возможность сделать это в любой момент дня. В переводе 'later today' звучит как разовое действие 'позже сегодня', что сужает смысл инструкции."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation 'later today' implies a specific future point, whereas 'в течение дня' implies any time during the day. This changes the instructional nuance."
+              }
+            ],
+            "notes": "The translation is generally high quality, but there is a significant loss of nuance in the timing instructions in the '/finish' section.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/finish/texts/3",
+                "current": "It’s best to re-evaluate later today so you can see the changes.",
+                "proposed": "It’s best to re-evaluate throughout the day to see the changes.",
+                "alternatives": [
+                  "It’s best to re-evaluate at different times during the day to see the changes.",
+                  "It’s best to re-evaluate later in the day to see the changes."
+                ],
+                "rationale": "Вариант 'later today' (как в текущем переводе) ошибочно указывает на разовое действие в будущем, тогда как оригинал 'в течение дня' подразумевает процесс или возможность повторной оценки в любой момент дня. 'Throughout the day' наиболее точно передает этот смысл и соответствует тону инструкции."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, соблюдены правила терминологии (mental well-being, psychologist) и тональности. Основная проблема заключалась в сужении временного интервала в одной из ключевых инструкций, что могло запутать пользователя. После исправления текста на 'throughout the day' статья готова к публикации."
+            },
+            "timings": {
+              "issues": 12074,
+              "deliberate": 1830,
+              "recommend": 5285
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/finish/texts/3",
+              "from": "It’s best to re-evaluate later today so you can see the changes.",
+              "to": "It’s best to re-evaluate throughout the day to see the changes."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/finish/h2",
+                "verdict": "ok",
+                "note": "Перевод точный, соответствует контексту"
+              },
+              {
+                "path": "/finish/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, 'check-in' уместен"
+              },
+              {
+                "path": "/finish/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон дружелюбный"
+              },
+              {
+                "path": "/finish/texts/2",
+                "verdict": "issue",
+                "note": "Слово 'state' звучит слишком клинически/механически для UX"
+              },
+              {
+                "path": "/finish/texts/3",
+                "verdict": "issue",
+                "note": "Пропущено дополнение 'самочувствия', из-за чего фраза звучит незавершенно"
+              },
+              {
+                "path": "/start/h2",
+                "verdict": "ok",
+                "note": "Соответствует терминологии"
+              },
+              {
+                "path": "/start/texts/0",
+                "verdict": "ok",
+                "note": "Терминология CBT соблюдена"
+              },
+              {
+                "path": "/start/texts/1",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/start/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, 'psychologist' использован верно"
+              },
+              {
+                "path": "/start/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/start/texts/4",
+                "verdict": "ok",
+                "note": "Перевод естественный"
+              },
+              {
+                "path": "/finishScore/h2",
+                "verdict": "issue",
+                "note": "Слово 'effectiveness' не совсем подходит для заголовка о результатах/продуктивности"
+              },
+              {
+                "path": "/finishScore/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/finishScore/texts/1",
+                "verdict": "ok",
+                "note": "Терминология 'mental well-being' соблюдена"
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/finish/texts/2",
+                "fragment": "rate your state again",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование 'state' вместо 'how you feel' или 'mood'",
+                "why": "В английском языке 'rate your state' звучит излишне формально или медицински. В контексте ментал-хелс приложений естественнее использовать 'rate how you feel' или 'check in again'."
+              },
+              {
+                "id": "I2",
+                "path": "/finish/texts/3",
+                "fragment": "It’s best to re-evaluate throughout the day",
+                "type": "omission",
+                "severity": "minor",
+                "problem": "Пропущено объект оценки (самочувствие)",
+                "why": "В оригинале 'сделать повторную оценку [самочувствия]'. В английском 're-evaluate' без дополнения звучит немного обрывисто, хотя и допустимо. Однако для плавности лучше 're-evaluate your mood/well-being'."
+              },
+              {
+                "id": "I3",
+                "path": "/finishScore/h2",
+                "fragment": "Today’s effectiveness",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Неестественный заголовок",
+                "why": "Слово 'effectiveness' (эффективность) в данном контексте звучит как оценка работы сотрудника. Если речь о том, насколько продуктивно пользователь поработал с собой, лучше использовать 'Today's progress' или 'Daily productivity score'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The term 'state' is indeed overly clinical/stilted for a user-friendly mental health app; 'how you feel' is much more natural."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 3,
+                "note": "While grammatically possible, adding the object improves the flow and matches the clarity of the Russian original."
+              },
+              {
+                "id": "I3",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical stylistic error; 'effectiveness' implies professional performance, whereas 'progress' or 'well-being' is appropriate for a user's personal journey."
+              }
+            ],
+            "notes": "The translation is accurate in meaning but suffers from a slightly clinical and formal tone that lacks the empathy expected in mental health applications.",
+            "recommendations": [
+              {
+                "id": "I3",
+                "priority": 1,
+                "path": "/finishScore/h2",
+                "current": "Today’s effectiveness",
+                "proposed": "Today’s progress",
+                "alternatives": [
+                  "Daily progress",
+                  "Your progress today"
+                ],
+                "rationale": "effectiveness звучит как оценка эффективности сотрудника или процесса. В контексте личного развития и КПТ 'progress' — наиболее естественный и поддерживающий термин."
+              },
+              {
+                "id": "I1",
+                "priority": 2,
+                "path": "/finish/texts/2",
+                "current": "Once you’re done, come back here and rate your state again.",
+                "proposed": "Once you’re done, come back here and rate how you feel again.",
+                "alternatives": [
+                  "Once you’re done, come back here and check in again."
+                ],
+                "rationale": "rate your state — слишком клинический и тяжеловесный вариант. 'rate how you feel' звучит по-человечески и соответствует Tone of Voice приложения."
+              },
+              {
+                "id": "I2",
+                "priority": 3,
+                "path": "/finish/texts/3",
+                "current": "It’s best to re-evaluate throughout the day to see the changes.",
+                "proposed": "It’s best to re-evaluate your well-being throughout the day to see the changes.",
+                "alternatives": [
+                  "It’s best to check in again throughout the day to see the changes."
+                ],
+                "rationale": "В английском re-evaluate без дополнения звучит незавершенно. Добавление 'your well-being' делает фразу грамматически полной и точной по отношению к оригиналу."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод в целом качественный, но содержит несколько стилистических ошибок, характерных для кальки с русского. Основные риски: использование слишком формального/клинического слова 'effectiveness' вместо 'progress' и 'state' вместо 'how you feel', что нарушает дружелюбный тон приложения. После внесения правок текст станет естественным для носителя."
+            },
+            "timings": {
+              "issues": 14526,
+              "deliberate": 3514,
+              "recommend": 8520
+            }
+          },
+          "applied": [
+            {
+              "id": "I3",
+              "path": "/finishScore/h2",
+              "from": "Today’s effectiveness",
+              "to": "Today’s progress"
+            },
+            {
+              "id": "I1",
+              "path": "/finish/texts/2",
+              "from": "Once you’re done, come back here and rate your state again.",
+              "to": "Once you’re done, come back here and rate how you feel again."
+            },
+            {
+              "id": "I2",
+              "path": "/finish/texts/3",
+              "from": "It’s best to re-evaluate throughout the day to see the changes.",
+              "to": "It’s best to re-evaluate your well-being throughout the day to see the changes."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 3,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/finish/h2",
+                "verdict": "ok",
+                "note": "Переведено точно, well-being уместно."
+              },
+              {
+                "path": "/finish/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая транскреация, 'check-in' вместо 'evaluation' звучит естественно."
+              },
+              {
+                "path": "/finish/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, тон дружелюбный."
+              },
+              {
+                "path": "/finish/texts/2",
+                "verdict": "ok",
+                "note": "Грамматически верно, смысл сохранен."
+              },
+              {
+                "path": "/finish/texts/3",
+                "verdict": "minor",
+                "note": "Лишний артикль 'the' перед 'changes' делает фразу менее естественной."
+              },
+              {
+                "path": "/start/h2",
+                "verdict": "ok",
+                "note": "Соответствует терминологии (Daily check-in)."
+              },
+              {
+                "path": "/start/texts/0",
+                "verdict": "ok",
+                "note": "Терминология (CBT, check-ins) соблюдена."
+              },
+              {
+                "path": "/start/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/start/texts/2",
+                "verdict": "minor",
+                "note": "Слово 'state' в конце звучит немного формально/медицински по сравнению с 'how you feel'."
+              },
+              {
+                "path": "/start/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/start/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/finishScore/h2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация 'Эффективность' -> 'Progress'."
+              },
+              {
+                "path": "/finishScore/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/finishScore/texts/1",
+                "verdict": "ok",
+                "note": "Терминология (mental well-being) соблюдена."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/finish/texts/3",
+                "fragment": "to see the changes",
+                "type": "style",
+                "severity": "minor",
+                "problem": "избыточный определенный артикль",
+                "why": "В английском языке при упоминании изменений в общем смысле (результат процесса) артикль 'the' не требуется. 'To see changes' звучит более естественно для носителя."
+              },
+              {
+                "id": "I2",
+                "path": "/start/texts/2",
+                "fragment": "rate your state again",
+                "type": "style",
+                "severity": "minor",
+                "problem": "излишне формальный выбор слова",
+                "why": "Слово 'state' (состояние) в данном контексте звучит суховато и клинически. В рамках Tone of Voice 'rate how you feel' или 'check in again' подошло бы лучше, так как 'state' — это калька с русского 'состояние'."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The definite article 'the' before 'changes' is unnecessary and sounds slightly unnatural in this context."
+              },
+              {
+                "id": "I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The term 'state' is a literal translation of 'состояние' and feels overly clinical; 'how you feel' is more appropriate for the app's tone."
+              }
+            ],
+            "notes": "The translation is accurate but suffers from slight over-formalization and minor grammatical stiffness in certain phrases.",
+            "recommendations": [
+              {
+                "id": "I2",
+                "priority": 1,
+                "path": "/start/texts/2",
+                "current": "First, do a check-in in the morning. Throughout the day, complete exercises, try new experiments, or work with a psychologist. In the evening, rate your state again to see the changes.",
+                "proposed": "First, do a check-in in the morning. Throughout the day, complete exercises, try new experiments, or work with a psychologist. In the evening, rate how you feel again to see changes.",
+                "alternatives": [
+                  "In the evening, check in again to see changes.",
+                  "In the evening, rate your mood again to see changes."
+                ],
+                "rationale": "Слово 'state' — это калька с русского 'состояние', которая звучит слишком клинически. Согласно Tone of Voice, лучше использовать 'how you feel', чтобы сохранить теплый и поддерживающий тон. Также я сразу исправил ошибку из I1 в этом предложении для целостности."
+              },
+              {
+                "id": "I1",
+                "priority": 2,
+                "path": "/finish/texts/3",
+                "current": "It’s best to re-evaluate your well-being throughout the day to see the changes.",
+                "proposed": "It’s best to re-evaluate your well-being throughout the day to see changes.",
+                "alternatives": [
+                  "It’s best to re-evaluate your well-being throughout the day to track changes."
+                ],
+                "rationale": "Артикль 'the' перед 'changes' избыточен, так как речь идет об изменениях в общем смысле, а не о конкретном, ранее упомянутом списке изменений. Без артикля фраза звучит более естественно."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, он точен и соответствует терминологии. Основные замечания касаются излишней формальности ('state') и мелких стилистических нюансов с артиклями. После внесения правок текст будет полностью соответствовать Tone of Voice."
+            },
+            "timings": {
+              "issues": 12703,
+              "deliberate": 2905,
+              "recommend": 9430
+            }
+          },
+          "applied": [
+            {
+              "id": "I2",
+              "path": "/start/texts/2",
+              "from": "First, do a check-in in the morning. Throughout the day, complete exercises, try new experiments, or work with a psychologist. In the evening, rate your state again to see the changes.",
+              "to": "First, do a check-in in the morning. Throughout the day, complete exercises, try new experiments, or work with a psychologist. In the evening, rate how you feel again to see changes."
+            },
+            {
+              "id": "I1",
+              "path": "/finish/texts/3",
+              "from": "It’s best to re-evaluate your well-being throughout the day to see the changes.",
+              "to": "It’s best to re-evaluate your well-being throughout the day to see changes."
+            }
+          ],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
