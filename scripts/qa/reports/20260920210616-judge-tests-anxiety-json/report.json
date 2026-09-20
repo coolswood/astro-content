@@ -1,0 +1,913 @@
+{
+  "file": "tests/anxiety.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный"
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология 'نوبة هلع' верна"
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл 'взять себя в руки'"
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, хороший ритм"
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология верна"
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "issue",
+                "note": "Грамматическая ошибка в согласовании рода"
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология верна"
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология (الجهاز العصبي اللاودّي) верна."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Термины (نوبات الهلع) и (فرط التهوية) использованы правильно."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл замкнутого круга (حلقة مفرغة)."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Терминология (الجهاز العصبي الودي) верна."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен, термин (متلازمة القولون العصبي) на месте."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует MSA."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Термин (علم الجلد النفسي) корректен."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Использование кавычек «» для термина (التوهج) соответствует правилам."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Перевод точный, термины (الوظائف المعرفية) и (الرفاهية العاطفية) на месте."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Перевод 'قلق واضح' (явная тревога) вместо 'Выраженное тревожное состояние'."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "issue",
+                "note": "Несоответствие перевода заголовка оригиналу."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "Атрибуты отсутствуют, что верно для данной локали."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/6/text",
+                "fragment": "يمكن أن تنتج الصداع",
+                "type": "style",
+                "severity": "major",
+                "problem": "Грамматическая ошибка: слово 'الصداع' (головная боль) в арабском языке мужского рода, поэтому глагол должен быть 'ينتج' (мужской род), а не 'تنتج' (женский род).",
+                "why": "Нарушение правил грамматики арабского языка (согласование подлежащего и сказуемого)."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/result/severe/title",
+                "fragment": "قلق واضح",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Смысловое ослабление",
+                "why": "Оригинал: 'Выраженное тревожное состояние'. Перевод 'قلق واضح' означает 'явная/очевидная тревога'. Для медицинского/психологического контекста лучше использовать 'قلق شديد' или 'حالة قلق واضحة', чтобы передать интенсивность состояния, а не просто его видимость."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Serious grammatical error in subject-verb agreement (gender mismatch) which affects professional quality."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translation 'clear anxiety' is weaker than 'pronounced anxiety' in a clinical context, though understandable."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "rejected",
+                "note": "No issue I2 was provided in the input, only I1 and c2-I1 (which is likely a typo in the user's ID list)."
+              }
+            ],
+            "notes": "The translation is generally high quality and accurate, but contains a critical grammatical error in a description block that must be fixed to maintain authority.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps_description/6/text",
+                "current": "يمكن أن تنتج الصداع، وآلام الرقبة والظهر، عن مجموعة من العوامل",
+                "proposed": "يمكن أن ينتج الصداع، وآلام الرقبة والظهر، عن مجموعة من العوامل",
+                "alternatives": [],
+                "rationale": "Грамматическая ошибка: подлежащее «الصداع» (головная боль) в арабском языке мужского рода, поэтому глагол должен быть в мужском роде «ينتج», а не «تنتج»."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/result/severe/title",
+                "current": "قلق واضح",
+                "proposed": "حالة قلق واضحة",
+                "alternatives": [
+                  "قلق شديد"
+                ],
+                "rationale": "Оригинал «Выраженное тревожное состояние» подразумевает состояние (حالة). Вариант «قلق واضح» звучит как «очевидная тревога» (просто заметная), в то время как «حالة قلق واضحة» точнее передает клинический контекст выраженного состояния. Вариант «قلق شديد» (сильная тревога) тоже хорош, но «حالة قلق واضحة» ближе к структуре оригинала."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на высоком уровне, терминология соблюдена. Основная проблема — грубая грамматическая ошибка в согласовании рода в одном из описаний, которую необходимо исправить. Также рекомендуется уточнить заголовок результата для более точного соответствия оригиналу."
+            },
+            "timings": {
+              "issues": 58000,
+              "deliberate": 6001,
+              "recommend": 10930
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I1",
+              "path": "/result/severe/title",
+              "from": "قلق واضح",
+              "to": "حالة قلق واضحة"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/6/text",
+              "reason": "цитата судьи не похожа на лист (сходство 26%)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация идиомы."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Естественная фраза."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Стиль соответствует MSA."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Терминология верная."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "issue",
+                "note": "Грамматическая ошибка в согласовании рода (الصداع — мужской род)."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Переведено точно, терминология (парасимпатическая система) верна."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно, стиль естественный."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Термины (панические атаки, гипервентиляция) на месте."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Перевод точный, передает причинно-следственную связь."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Симпатическая система переведена верно."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "СРК переведено как متلازمة القولون العصبي, что верно."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Психодерматология переведена верно."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Флюшинг переведен как التوهج в кавычках, что соответствует правилам."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "issue",
+                "note": "Использование 'العواطف' вместо 'المشاعر' для эмоций."
+              },
+              {
+                "path": "/steps_description/18/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Кратко и верно."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Кратко и верно."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Кратко и верно."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Кратко и верно."
+              },
+              {
+                "path": "/range/normal",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/range/light",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/range/severe",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/range/extreme",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/result/normal/title",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/result/normal/text",
+                "verdict": "ok",
+                "note": "Стиль поддерживающий, смысл точный."
+              },
+              {
+                "path": "/result/light/title",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/result/light/text",
+                "verdict": "ok",
+                "note": "Перевод хороший, естественный."
+              },
+              {
+                "path": "/result/severe/title",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/result/severe/text",
+                "verdict": "ok",
+                "note": "Термин 'психолог' переведен как 'أخصائي نفسي' согласно глоссарию."
+              },
+              {
+                "path": "/result/extreme/title",
+                "verdict": "ok",
+                "note": "Верно."
+              },
+              {
+                "path": "/result/extreme/text",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, смысл сохранен."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен без изменений, как и положено."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/6/text",
+                "fragment": "يمكن أن تنتج الصداع",
+                "type": "style",
+                "severity": "major",
+                "problem": "Неправильный род существительного",
+                "why": "Слово 'صداع' (головная боль) в арабском языке мужского рода, поэтому глагол должен быть 'ينتج' (يمكن أن ينتج الصداع), а не 'تنتج'."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/18/text",
+                "fragment": "تنظيم العواطف",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование 'العواطف' вместо 'المشاعر'",
+                "why": "Согласно правилам и корпусу, для 'эмоций' в контексте психологии предпочтительнее использовать 'المشاعر'. 'العواطف' звучит более книжно/литературно."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Грамматическая ошибка: 'صداع' мужского рода, глагол должен быть 'ينتج'."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Стилистическая рекомендация: 'المشاعر' более естественно для психологического контекста, чем книжное 'العواطف'."
+              }
+            ],
+            "notes": "Перевод в целом качественный и точный, однако выявлена одна серьезная грамматическая ошибка в согласовании рода и одна стилистическая неточность в терминологии.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps_description/6/text",
+                "current": "يمكن أن تنتج الصداع، وآلام الرقبة والظهر، عن مجموعة من العوامل",
+                "proposed": "يمكن أن ينتج الصداع، وآلام الرقبة والظهر، عن مجموعة من العوامل",
+                "alternatives": [],
+                "rationale": "Грамматическая ошибка: существительное 'صداع' (головная боль) мужского рода, поэтому глагол должен быть 'ينتج' вместо 'تنتج'. Это критическая ошибка согласования."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/steps_description/18/text",
+                "current": "يساعد الحصول على قسط كافٍ من الراحة ليلاً في تنظيم العواطف",
+                "proposed": "يساعد الحصول على قسط كافٍ من الراحة ليلاً في تنظيم المشاعر",
+                "alternatives": [],
+                "rationale": "Согласно правилам и корпусу, для перевода 'эмоции' в психологическом контексте следует использовать 'المشاعر'. Термин 'العواطف' является слишком книжным и менее естественным для современного терапевтического текста."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне, терминология соблюдена (особенно в сложных медицинских терминах). Основная проблема — одна грубая грамматическая ошибка в согласовании рода глагола и существительного, а также одна стилистическая неточность в выборе слова для 'эмоций'. После исправления этих двух моментов текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 45550,
+              "deliberate": 4427,
+              "recommend": 10315
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/6/text",
+              "reason": "цитата судьи не похожа на лист (сходство 26%)"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/18/text",
+              "reason": "цитата судьи не похожа на лист (сходство 25%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

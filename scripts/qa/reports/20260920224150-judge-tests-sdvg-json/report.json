@@ -1,0 +1,433 @@
+{
+  "file": "tests/sdvg.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Терминология СДВГ соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "issue",
+                "note": "Mistranslation: термин 'разделенное внимание' переведен как 'تشتت الانتباه' (отвлечение внимания), что является другим понятием."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Перевод точный, СДВГ переведено согласно глоссарию."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "issue",
+                "note": "Пропущено слово 'чувство' в начале предложения, что делает фразу грамматически неполной."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Естественный перевод."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Использованы правильные кавычки «»."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/steps_description/14/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/16/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/17/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/rarely",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/sometimes",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Перевод качественный, тон поддерживающий."
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "ok",
+                "note": "Ок."
+              },
+              {
+                "path": "/description/text/1",
+                "verdict": "ok",
+                "note": "Ок."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/10/fact",
+                "fragment": "تُعرف هذه الظاهرة باسم «تشتت الانتباه»",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Неверный перевод термина",
+                "why": "В оригинале «разделенное внимание» (split attention), что описывает ситуацию, когда внимание распределено между двумя стимулами. В переводе использовано «تشتت الانتباه» (distraction/attention deficit), что означает потерю концентрации или отвлечение. Это разные когнитивные процессы."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/steps_description/12/text",
+                "fragment": "لشعور القلق والاضطراب جذور تطورية",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущена определенная форма существительного или артикль в начале, из-за чего фраза звучит как обрывок. В оригинале 'Чувство тревоги...', в арабском 'Чувство тревоги...' (без артикля или с ошибкой в структуре).",
+                "why": "В арабском языке для обозначения конкретного понятия в начале предложения необходимо использовать определенный артикль (الشعور بالقلق) или перестроить конструкцию, иначе предложение звучит неестественно и грамматически незавершенно."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical terminology error. 'Split attention' (разделенное внимание) is a specific cognitive phenomenon, whereas 'تشتت الانتباه' refers to distraction or ADHD itself. This changes the scientific meaning."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Grammatical/Stylistic issue. Starting the sentence with 'لشعور' (for the feeling) without a proper subject or definite article makes the sentence structure feel incomplete or like a fragment in formal Arabic."
+              }
+            ],
+            "notes": "The translation is generally high quality, but contains one major terminological error regarding a cognitive concept and one stylistic/grammatical weakness in sentence structure.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/steps_description/10/fact",
+                "current": "تُعرف هذه الظاهرة باسم «تشتت الانتباه».",
+                "proposed": "تُعرف هذه الظاهرة باسم «تشتت الانتباه الموزع».",
+                "alternatives": [
+                  "تُعرف هذه الظاهرة باسم «توزيع الانتباه»"
+                ],
+                "rationale": "В оригинале «разделенное внимание» (split attention). Текущий перевод «تشتت الانتباه» означает «отвлечение внимания» или «дефицит внимания», что является ошибкой. Вариант «تشتت الانتباه الموزع» или «توزيع الانتباه» точнее передает суть процесса распределения ресурса между стимулами."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/steps_description/12/text",
+                "current": "لشعور القلق والاضطراب جذور تطورية",
+                "proposed": "إن للشعور بالقلق والاضطراب جذورًا تطورية",
+                "alternatives": [
+                  "للقلق والاضطراب جذور تطورية"
+                ],
+                "rationale": "Текущая конструкция «لشعور...» без артикля или усилительной частицы звучит как грамматический обрывок. Использование «إن» (Inna) в начале предложения делает структуру классической, завершенной и естественной для научного/психологического текста на фусхе."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В тексте обнаружена серьезная терминологическая ошибка: термин «разделенное внимание» переведен как «отвлечение внимания», что меняет научный смысл. Также есть стилистическая шероховатость в начале одного из абзацев, делающая его грамматически незавершенным. Необходимо исправить эти моменты перед публикацией."
+            },
+            "timings": {
+              "issues": 41181,
+              "deliberate": 4892,
+              "recommend": 10504
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/10/fact",
+              "reason": "цитата судьи не похожа на лист (сходство 26%)"
+            },
+            {
+              "id": "c2-I1",
+              "path": "/steps_description/12/text",
+              "reason": "цитата судьи не похожа на лист (сходство 25%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

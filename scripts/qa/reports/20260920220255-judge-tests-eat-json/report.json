@@ -1,0 +1,558 @@
+{
+  "file": "tests/eat.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/steps/0",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный."
+              },
+              {
+                "path": "/steps/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/18",
+                "verdict": "ok",
+                "note": "Перевод точный, удачная адаптация смысла."
+              },
+              {
+                "path": "/steps/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/20",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/21",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/22",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/23",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/24",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps/25",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/0/text",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/steps_description/0/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/1/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/2/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/3/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/4/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/5/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/6/text",
+                "verdict": "issue",
+                "note": "Термин 'орторексия' не переведен на арабский, оставлен транслитерацией."
+              },
+              {
+                "path": "/steps_description/6/fact",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/7/text",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              },
+              {
+                "path": "/steps_description/7/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/8/text",
+                "verdict": "ok",
+                "note": "Терминология и смысл соблюдены."
+              },
+              {
+                "path": "/steps_description/8/fact",
+                "verdict": "ok",
+                "note": "Медицинские термины переведены корректно."
+              },
+              {
+                "path": "/steps_description/9/text",
+                "verdict": "ok",
+                "note": "Использованы правильные кавычки и термины."
+              },
+              {
+                "path": "/steps_description/9/fact",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/steps_description/10/text",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/steps_description/10/fact",
+                "verdict": "ok",
+                "note": "Данные переданы верно."
+              },
+              {
+                "path": "/steps_description/11/text",
+                "verdict": "ok",
+                "note": "Термин 'الأفكار القهرية' использован верно."
+              },
+              {
+                "path": "/steps_description/11/fact",
+                "verdict": "ok",
+                "note": "Смысл сохранен."
+              },
+              {
+                "path": "/steps_description/12/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/12/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/13/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/13/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/14/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/15/text",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/15/fact",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/16/text",
+                "verdict": "ok",
+                "note": "Стиль и смысл соблюдены."
+              },
+              {
+                "path": "/steps_description/17/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/18/text",
+                "verdict": "ok",
+                "note": "Термин 'الأورثوريكسيا' допустим (транслитерация)."
+              },
+              {
+                "path": "/steps_description/19/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/20/text",
+                "verdict": "ok",
+                "note": "Терминология КПТ соблюдена."
+              },
+              {
+                "path": "/steps_description/21/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/22/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/22/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/23/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/23/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/steps_description/24/text",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/steps_description/25/text",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/steps_description/25/fact",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/variants/always",
+                "verdict": "ok",
+                "note": "Коротко и точно."
+              },
+              {
+                "path": "/variants/often",
+                "verdict": "ok",
+                "note": "Коротко и точно."
+              },
+              {
+                "path": "/variants/seldom",
+                "verdict": "ok",
+                "note": "Коротко и точно."
+              },
+              {
+                "path": "/variants/never",
+                "verdict": "ok",
+                "note": "Коротко и точно."
+              },
+              {
+                "path": "/range/low",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/range/middle",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/range/high",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/result/low/title",
+                "verdict": "ok",
+                "note": "Соответствует глоссарию."
+              },
+              {
+                "path": "/result/low/text",
+                "verdict": "ok",
+                "note": "Тон и смысл соблюдены."
+              },
+              {
+                "path": "/result/middle/title",
+                "verdict": "ok",
+                "note": "Соответствует глоссарию."
+              },
+              {
+                "path": "/result/middle/text",
+                "verdict": "ok",
+                "note": "Смысл передан точно, тон поддерживающий, терминология соблюдена."
+              },
+              {
+                "path": "/result/high/title",
+                "verdict": "ok",
+                "note": "Терминология РПП (اضطرابات الأكل) верна."
+              },
+              {
+                "path": "/result/high/text",
+                "verdict": "ok",
+                "note": "Перевод естественный, термины (الحالة العاطفية) соответствуют глоссарию."
+              },
+              {
+                "path": "/description/text/0",
+                "verdict": "issue",
+                "note": "Использование термина 'النهام' для булимии вместо общепринятого в контексте медицины/психологии."
+              },
+              {
+                "path": "/instagram/0",
+                "verdict": "ok",
+                "note": "ID сохранен без изменений, что верно для локали, отличной от ru/en."
+              },
+              {
+                "path": "/instagram/1",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/2",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/3",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/4",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/5",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              },
+              {
+                "path": "/instagram/6",
+                "verdict": "ok",
+                "note": "ID сохранен."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/steps_description/6/text",
+                "fragment": "الأورثوريكسيا",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование транслитерации вместо описательного перевода или общепринятого арабского термина",
+                "why": "Хотя термин понятен специалистам, в тексте для широкой аудитории (self-help) лучше использовать либо арабское описание, либо убедиться, что это стандарт для данного контекста. В арабском языке для орторексии часто используют описательные конструкции, так как прямого устоявшегося термина в MSA меньше, чем в английском."
+              },
+              {
+                "id": "c3-I1",
+                "path": "/description/text/0",
+                "fragment": "النهام",
+                "type": "terminology",
+                "severity": "minor",
+                "problem": "Использование термина 'النهام' для перевода 'булимия'",
+                "why": "В арабской медицинской и психологической литературе для обозначения булимии чаще используется термин 'النهام العصبي' (Bulimia Nervosa). Слово 'النهام' само по себе означает 'обжора' и звучит менее клинически и более описательно, что может снижать профессиональный тон текста."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Transliteration of 'orthorexia' is indeed less natural in MSA than a descriptive phrase for a general audience."
+              },
+              {
+                "id": "c3-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The term 'النهام' is too colloquial/descriptive; 'النهام العصبي' is the standard clinical term for Bulimia Nervosa in Arabic medical contexts."
+              }
+            ],
+            "notes": "The translation is high quality, but requires minor clinical terminology adjustments to maintain a professional tone suitable for a psychological assessment.",
+            "recommendations": [
+              {
+                "id": "c3-I1",
+                "priority": 1,
+                "path": "/description/text/0",
+                "current": "النهام",
+                "proposed": "النهام العصبي",
+                "alternatives": [
+                  "الشره العصبي"
+                ],
+                "rationale": "Термин 'النهام' сам по себе звучит слишком описательно (как 'обжорство'). Для соответствия клиническому стандарту и профессиональному тону (как указано в замечании) необходимо использовать 'النهام العصبي' или 'الشره العصبي', что является эквивалентом Bulimia Nervosa."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/steps_description/6/text",
+                "current": "الأورثوريكسيا",
+                "proposed": "هوس الأكل الصحي",
+                "alternatives": [
+                  "اضطراب الأكل الصحي القهري"
+                ],
+                "rationale": "Транслитерация 'الأورثوريكسيا' не является естественной для широкой аудитории в MSA. Описательный перевод 'هوس الأكل الصحي' (одержимость здоровой едой) гораздо понятнее пользователю и лучше передает суть термина в контексте самопомощи."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне, с соблюдением терминологии и поддерживающего тона. Основные риски связаны с использованием слишком описательных или транслитерированных терминов (булимия, орторексия), которые могут снизить клиническую достоверность текста. После внесения двух правок по терминологии текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 58482,
+              "deliberate": 5733,
+              "recommend": 12598
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c3-I1",
+              "path": "/description/text/0",
+              "reason": "цитата судьи не похожа на лист (сходство 2%)"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/steps_description/6/text",
+              "reason": "цитата судьи не похожа на лист (сходство 6%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
