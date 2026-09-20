@@ -1,0 +1,802 @@
+{
+  "file": "story/history.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология соблюдена"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Атрибуты instagram удалены согласно конвенции для не-en/ru локалей"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "issue",
+                "note": "Идиома переведена слишком буквально/просто, потерян оттенок оригинала"
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Метафора адаптирована хорошо"
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/16",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/17",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/18",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/19",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/20",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/21",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/22",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/screen_2/texts/23",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Терминология соблюдена (CBT)."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Использованы правильные арабские кавычки."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "issue",
+                "note": "Пропущено уточнение 'когнитивная терапия' в пользу общего 'когнитивная терапия' (العلاج المعرفي), хотя в контексте КПТ это допустимо, но есть нюанс с 'о материальном он мог беспокоиться меньше' — перевод ушел в 'стабильность', что является добавлением."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Естественный перевод."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Стиль хороший, терминология верная."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "issue",
+                "note": "Mistranslation: 'Мы искренне ценим КПТ' переведено как 'Мы верим в эффективность КПТ'. Это изменение смысла."
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Стиль соответствует (обращение к группе)."
+              },
+              {
+                "path": "/screen_3/texts/14",
+                "verdict": "ok",
+                "note": "Стиль соответствует."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_1/texts/7",
+                "fragment": "«المواجهة هي خير علاج»",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком упрощенная передача идиомы",
+                "why": "Оригинал использует русскую идиому «Клин клином вышибают», которая подразумевает борьбу со злом с помощью аналогичного средства. Арабский вариант «Столкновение — лучшее лечение» звучит как сухая констатация факта, теряя литературный и эмоциональный окрас, который был заложен в оригинале."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/screen_3/texts/0",
+                "fragment": "لجعلته يقلق بشكل أقل على استقراره المادي",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлено слово 'стабильность' (استقرار)",
+                "why": "В оригинале просто 'о материальном он мог беспокоиться меньше'. Хотя это звучит естественно, это небольшое отступление от текста."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/screen_3/texts/10",
+                "fragment": "نحن نؤمن حقًا بفعالية العلاج المعرفي السلوكي (CBT)",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Искажен смысл: 'Мы ценим КПТ' превратилось в 'Мы верим в эффективность КПТ'",
+                "why": "Ценить (appreciate/value) и верить в эффективность (believe in effectiveness) — это разные семантические оттенки. В контексте эмоциональной связи с методом это важно."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "The translation loses the idiomatic flavor of 'fighting fire with fire' and replaces it with a literal, dry statement."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "rejected",
+                "note": "This is a natural transcreation. Adding 'stability' (استقرار) to 'financial well-being' (материальное благополучие) is a standard way to make the sentence sound professional and fluid in Arabic."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator changed the subject's attitude from 'valuing/appreciating' the method to 'believing in its effectiveness', which shifts the semantic nuance from personal regard to technical conviction."
+              }
+            ],
+            "notes": "The translation is generally high-quality, but there is a significant semantic shift in the final screens regarding the emotional stance towards CBT, and a loss of idiomatic richness in the early parts.",
+            "recommendations": [
+              {
+                "id": "c2-I2",
+                "priority": 1,
+                "path": "/screen_3/texts/10",
+                "current": "نحن نؤمن حقًا بفعالية العلاج المعرفي السلوكي (CBT) (وهذا ليس مجرد كلام).",
+                "proposed": "نحن نقدّر العلاج المعرفي السلوكي (CBT) حقًّا (وهذا ليس مجرد كلام).",
+                "alternatives": [
+                  "نحن نعتزّ بالعلاج المعرفي السلوكي (CBT) حقًّا (وهذا ليس مجرد كلام)."
+                ],
+                "rationale": "Перевод 'نحن نؤمن بفعالية' (мы верим в эффективность) искажает смысл оригинала 'Мы ценим КПТ'. Вариант 'نحن نقدّر' наиболее точно передает значение 'ценить/высоко оценивать' в контексте профессионального уважения к методу."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/screen_1/texts/7",
+                "current": "«المواجهة هي خير علاج»، هكذا ربما فكر آرون الشاب وهو يتغلب على خوفه من الدماء ويقضي ساعات طويلة في غرف العمليات.",
+                "proposed": "«الوقاية من الخوف بمواجهته»، هكذا ربما فكر آرون الشاب وهو يتغلب على خوفه من الدماء ويقضي ساعات طويلة في غرف العمليات.",
+                "alternatives": [
+                  "«لا شيء يهزم الخوف إلا مواجهته»"
+                ],
+                "rationale": "Оригинальная идиома «Клин клином вышибают» подразумевает использование того же инструмента для борьбы с проблемой. Текущий вариант «Столкновение — лучшее лечение» слишком сух. Предложенный вариант лучше передает идею преодоления страха через само действие, сохраняя литературный стиль."
+              }
+            ],
+            "overall": {
+              "score": 88,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, с хорошим пониманием терминологии и стиля. Основная проблема — семантическое искажение в финальной части (замена 'ценим' на 'верим в эффективность') и потеря идиоматичности в начале. После внесения этих правок текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 53992,
+              "deliberate": 7851,
+              "recommend": 15643
+            }
+          },
+          "applied": [
+            {
+              "id": "c2-I2",
+              "path": "/screen_3/texts/10",
+              "from": "نحن نؤمن حقًا بفعالية العلاج المعرفي السلوكي (CBT) (وهذا ليس مجرد كلام).",
+              "to": "نحن نقدّر العلاج المعرفي السلوكي (CBT) حقًّا (وهذا ليس مجرد كلام)."
+            },
+            {
+              "id": "c1-I1",
+              "path": "/screen_1/texts/7",
+              "from": "«المواجهة هي خير علاج»، هكذا ربما فكر آرون الشاب وهو يتغلب على خوفه من الدماء ويقضي ساعات طويلة في غرف العمليات.",
+              "to": "«الوقاية من الخوف بمواجهته»، هكذا ربما فكر آرون الشاب وهو يتغلب على خوفه من الدماء ويقضي ساعات طويلة في غرف العمليات."
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует"
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, терминология соблюдена"
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая адаптация"
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Атрибуты instagram удалены согласно конвенции для не-en/ru локалей"
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный, тон сохранен"
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "issue",
+                "note": "Идиома переведена слишком буквально, теряется смысл поговорки"
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Метафора адаптирована хорошо"
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/20",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/21",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/22",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/23",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Терминология соблюдена (CBT)."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Использованы правильные кавычки «»."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "issue",
+                "note": "Пропущено уточнение 'когнитивная терапия' в пользу общего 'когнитивная терапия', но есть нюанс с 'когнитивным подходом' и кавычками."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Стиль хороший, терминология верная."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Терминология CBT соблюдена."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_1/texts/7",
+                "fragment": "«الوقاية من الخوف بمواجهته»",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Буквальный перевод идиомы",
+                "why": "Русская идиома «Клин клином вышибают» означает решение проблемы через встречу с её причиной. Арабский перевод «Профилактика страха через его противостояние» звучит как медицинский или технический совет, теряя эмоциональную и разговорную окраску оригинала."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/screen_3/texts/0",
+                "fragment": "العلاج المعرفي",
+                "type": "minor",
+                "severity": "minor",
+                "problem": "Неполное соответствие термину 'Когнитивная терапия'",
+                "why": "В оригинале 'Когнитивная терапия', в переводе просто 'Когнитивная терапия' (العلاج المعرفي), что допустимо, но в контексте статьи о Беке и КПТ, лучше было бы использовать более полный термин или придерживаться единообразия с последующим упоминанием CBT, хотя это не является ошибкой."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translation is too literal and clinical; it fails to capture the idiomatic spirit of the Russian proverb, sounding like a medical instruction rather than a thought."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "rejected",
+                "note": "This is a stylistic preference rather than an error. 'العلاج المعرفي' is the standard and correct translation for 'Когнитивная терапия' in Arabic. The text maintains consistency with CBT elsewhere."
+              }
+            ],
+            "notes": "The translation is generally high-quality and accurate, but it struggles with idiomatic expressions, opting for literalism over natural flow in one instance.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/screen_1/texts/7",
+                "current": "«الوقاية من الخوف بمواجهته»",
+                "proposed": "«مواجهة الخوف هي السبيل للتغلب عليه»",
+                "alternatives": [
+                  "«الخوف يُهزم بالمواجهة»",
+                  "«لا بد من مواجهة الخوف لكسره»"
+                ],
+                "rationale": "Текущий вариант звучит как сухая медицинская инструкция («Профилактика страха через противостояние»). Предложенный вариант «Борьба со страхом — путь к его преодолению» лучше передает смысл русской идиомы «Клин клином вышибают» в контексте размышлений героя, сохраняя естественный ритм арабской речи."
+              }
+            ],
+            "overall": {
+              "score": 94,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне, с отличным соблюдением терминологии (CBT, автоматические мысли, деструктивные убеждения) и тональности. Единственный нюанс — слишком буквальный перевод идиомы в первом экране, который лишает текст эмоциональности. После правки идиомы текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 41362,
+              "deliberate": 4157,
+              "recommend": 8514
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/screen_1/texts/7",
+              "reason": "цитата судьи не похожа на лист (сходство 23%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

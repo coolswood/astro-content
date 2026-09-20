@@ -1,0 +1,498 @@
+{
+  "file": "story/diary.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Термин 'Дневник автоматических мыслей' переведен верно согласно глоссарию."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, термины 'КПТ', 'автоматические мысли' и 'глубинные убеждения' использованы правильно."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль соответствует."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, сохранена метафора."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный, термины 'ситуация', 'мысли', 'эмоции' на месте."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "issue",
+                "note": "Mistranslation: в оригинале 'Эмоции: чувства', в переводе 'المشاعر: الأحاسيس'. 'الأحاسيس' — это скорее ощущения (sensations), а не чувства (feelings/emotions)."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Термин 'Адаптивный ответ' переведен верно согласно глоссарию."
+              },
+              {
+                "path": "/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Атрибуты Instagram удалены согласно конвенции для не-en/ru локалей."
+              },
+              {
+                "path": "/screen_1/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Термин 'уровень убежденности' переведен верно (درجة الاقتناع)."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/18",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/20",
+                "verdict": "ok",
+                "note": "Термин 'الاستجابة التكيفية' использован верно"
+              },
+              {
+                "path": "/screen_2/texts/21",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/22",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/23",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/24",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/25",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/26",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/27",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/28",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/29",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/30",
+                "verdict": "issue",
+                "note": "Тавтология: 'الإدراك هو عمليات الإدراك' (Когниция — это процессы восприятия)"
+              },
+              {
+                "path": "/screen_2/texts/31",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_2/texts/32",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/screen_2/texts/33",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/screen_3/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_1/texts/9",
+                "fragment": "المشاعر: الأحاسيس التي شعرت بها",
+                "type": "mistranslation",
+                "severity": "minor",
+                "problem": "Подмена понятий: 'чувства' (emotions) переведены как 'الأحاسيس' (sensations/physical feelings).",
+                "why": "В контексте психологии 'чувства/эмоции' — это المشاعر, а 'ощущения' — это الأحاسيس. В оригинале идет разделение: 'эмоции, ощущения, поведение'. В переводе в этом пункте 'эмоции' (المشاعر) ошибочно определены через 'ощущения' (الأحاسيس)."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/screen_2/texts/30",
+                "fragment": "الإدراك هو عمليات الإدراك",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Тавтология",
+                "why": "В арабском языке (как и в русском) определение через само слово («Когниция — это процессы восприятия») звучит избыточно и стилистически слабо. Лучше использовать «Когниция — это процессы мышления...» или «Когнитивные процессы — это...»"
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical terminological error in a psychological context. The translation conflates 'emotions' (المشاعر) with 'sensations' (الأحاسيس), which breaks the distinction made in the source text (emotions, sensations, behavior)."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Stylistic tautology in the definition of cognition, making the sentence sound unnatural in Arabic."
+              }
+            ],
+            "notes": "The translation is generally high quality, but contains a significant terminological error regarding the distinction between emotions and sensations, and a minor stylistic tautology.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/screen_1/texts/9",
+                "current": "المشاعر: الأحاسيس التي شعرت بها في تلك اللحظة.",
+                "proposed": "المشاعر: ما شعرت به من عواطف في تلك اللحظة.",
+                "alternatives": [
+                  "المشاعر: الأحاسيس العاطفية التي مررت بها في تلك اللحظة."
+                ],
+                "rationale": "В оригинале 'Эмоции: чувства...'. В арабском языке 'المشاعر' — это эмоции/чувства, а 'الأحاسيس' — это физические ощущения (sensations). Поскольку в следующем пункте (10) идет речь о поведении, а в пункте (15) — о телесных ощущениях, здесь важно сохранить терминологическую чистоту. Однако, чтобы избежать тавтологии 'чувства, которые вы чувствовали', лучше использовать 'ما شعرت به من عواطف' (то, что вы чувствовали в виде эмоций)."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/screen_2/texts/30",
+                "current": "الإدراك هو عمليات الإدراك والتفكير (الأفكار، الصور، التصورات) التي تحدث في وعينا.",
+                "proposed": "الإدراك هو مجموعة من عمليات التفكير (الأفكار، الصور، التصورات) التي تحدث في وعينا.",
+                "alternatives": [
+                  "تتمثل العمليات الإدراكية في التفكير (الأفكار، الصور، التصورات) الذي يحدث في وعينا."
+                ],
+                "rationale": "Устранение тавтологии 'Когниция — это процессы когниции'. Вариант с 'مجموعة من عمليات التفكير' (совокупность процессов мышления) звучит естественно, профессионально и сохраняет смысл оригинала, не дублируя корень слова."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, соблюден поддерживающий тон и правильная терминология КПТ. Основные риски связаны с тонким разграничением 'эмоций' и 'ощущений' в психологии, что требует исправления в одном месте, чтобы не запутать пользователя. Также рекомендуется убрать стилистическую тавтологию в определении когниции."
+            },
+            "timings": {
+              "issues": 57151,
+              "deliberate": 4000,
+              "recommend": 14409
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/screen_2/texts/30",
+              "reason": "цитата судьи не похожа на лист (сходство 49%)"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/screen_1/texts/9",
+              "reason": "валидация листа: теги — потеряны: <li> </li> (нет в: screen_1/texts/9)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

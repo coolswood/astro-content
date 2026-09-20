@@ -1,0 +1,193 @@
+{
+  "file": "story/proof.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, термины (CBT, депрессия, тревога, панические атаки) на месте."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный перевод."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, термины корректны."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Тег instagram пуст согласно конвенции для не-ru/en локалей."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный, цифры и термины верны."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "issue",
+                "note": "Грамматическая ошибка в согласовании рода (мужской/женский)."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Красивая и точная трансекреация цитаты."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/screen_2/texts/4",
+                "fragment": "وكانت التحسنات مستقرة",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Ошибка в согласовании рода",
+                "why": "Слово التحسنات (улучшения) — женского рода, но глагол/прилагательное должно согласовываться. Хотя в арабском допускаются нюансы, здесь «وكانت التحسنات» звучит тяжеловесно или требует проверки согласования с «مستقرة». Однако основная проблема в том, что «التحسنات» (улучшения) — это множественное число неодушевленных предметов, которое в MSA требует обращения в единственном числе женского рода. Здесь это соблюдено (مستقرة), но само использование «التحسنات» (plural of improvement) в данном контексте звучит менее естественно, чем «التحسن» (singular). Но главная заминка — это стилистическая шероховатость конструкции."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The reviewer is correct: while grammatically permissible, using the plural 'التحسنات' for non-human plurals is stylistically clunky in MSA; the singular 'التحسن' is much more natural and professional for this context."
+              }
+            ],
+            "notes": "The translation is of high quality and accurate, with only one minor stylistic nuance regarding the use of a plural noun where a singular would be more elegant.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/screen_2/texts/4",
+                "current": "نوبات الهلع: أظهرت دراسة «بارلو» وزملائه (2017) انخفاضاً في وتيرة وشدة نوبات الهلع لدى 60-75% من المرضى، وكانت التحسنات مستقرة.",
+                "proposed": "نوبات الهلع: أظهرت دراسة «بارلو» وزملائه (2017) انخفاضاً في وتيرة وشدة نوبات الهلع لدى 60-75% من المرضى، وكان التحسن مستقراً.",
+                "alternatives": [
+                  "وكان التحسن ملحوظاً ومستقراً",
+                  "مع استقرار التحسن"
+                ],
+                "rationale": "В арабском языке множественное число неодушевленных существительных (التحسنات) грамматически требует согласования в единственном числе женского рода, но стилистически в профессиональных текстах гораздо естественнее использовать единственное число (التحسن) для обозначения процесса или результата. Вариант с единственным числом мужского рода (التحسن مستقراً) звучит более гладко и по-книжному."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология, выдержан поддерживающий тон и правильная пунктуация. Единственная правка касается стилистической естественности (использование единственного числа вместо множественного для неодушевленного понятия «улучшение»), что сделает текст более профессиональным."
+            },
+            "timings": {
+              "issues": 23189,
+              "deliberate": 3151,
+              "recommend": 7687
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "I1",
+              "path": "/screen_2/texts/4",
+              "reason": "валидация листа: теги — потеряны: <li> </li> (нет в: screen_2/texts/4)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,983 @@
+{
+  "file": "story/triangle.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Передано энергично, соответствует оригиналу."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Терминология (CBT, аخصائي نفسي) соблюдена, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Терминология (CBT) верна."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Естественная формулировка."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Метафора передана хорошо."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Атрибуты Instagram удалены согласно конвенции для не-en/ru локалей."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Терминология (القلق) верна."
+              },
+              {
+                "path": "/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/16",
+                "verdict": "ok",
+                "note": "Терминология (CBT) верна."
+              },
+              {
+                "path": "/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в оригинале «неудачница» (жен. род), в переводе «فاشلاً» (муж. род)."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Терминология (القلق) верна."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/18",
+                "verdict": "ok",
+                "note": "Терминология (غير تكيفية) верна."
+              },
+              {
+                "path": "/screen_2/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология соблюдена."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, смысл сохранен."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в оригинале женщина («я подумала»), в переводе — мужской род."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в оригинале женщина («я глупая»), в переводе — мужской род."
+              },
+              {
+                "path": "/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/14",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в оригинале женщина («я бы чувствовала»), в переводе — мужской род."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_2/texts/1",
+                "fragment": "بينما أبدو أنا فاشلاً",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Использование мужского рода вместо женского",
+                "why": "В оригинале используется «неудачница» (женский род). Согласно правилам, женские формы следует использовать, если оригинал прямо обращается к женщине или описывает её состояние."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/screen_3/texts/6",
+                "fragment": "فكرت: «سأفسد كل شيء»، «سيعتقدون أنني غبي»",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Использование мужского рода для персонажа, который говорит о себе в женском роде.",
+                "why": "В оригинале «я подумала» и «я глупая» (женский род). В арабском языке при обращении от лица женщины необходимо использовать женские формы глаголов и прилагательных (فكرتُ / غبية), иначе нарушается логика диалога, где клиентка — женщина."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/screen_3/texts/12",
+                "fragment": "لا يعني أنني غبي",
+                "type": "mistranslation",
+                "severity": "major",
+                "problem": "Использование мужского рода для персонажа.",
+                "why": "В оригинале «я глупая» (женский род). В переводе использовано «غبي» (мужской род), что противоречит контексту диалога."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/screen_3/texts/14",
+                "fragment": "كنت سأشعر بهدوء أكبر وأتصرف بثقة أكثر",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Отсутствие явного указания на женский род в глаголах (хотя в MSA форма 1-го лица может быть одинаковой, в контексте диалога-кейса важно соблюдать согласованность с предыдущими репликами).",
+                "why": "Хотя форма 1-го лица прошедшего времени (كنتُ) не меняется по родам, в арабском языке при описании состояния женщины в таких сценариях важно, чтобы вся цепочка (включая прилагательные, если бы они были) соответствовала женскому роду. Здесь это скорее вопрос консистентности с исправлением предыдущих ошибок."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The original uses 'неудачница' (female), but the translation uses 'فاشلاً' (male). This is a direct gender mismatch."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c2-I2"
+                ],
+                "note": "The character is a woman ('я подумала', 'я глупая'), but the translation uses masculine forms ('غبي'). This is a major consistency error in the dialogue."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 2,
+                "related": [
+                  "c2-I1"
+                ],
+                "note": "Same issue as c2-I1: 'я глупая' (female) translated as 'غبي' (male). These two should be fixed together to ensure the female persona is consistent."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "merged",
+                "mergedInto": "c2-I1",
+                "rank": 2,
+                "note": "This is a stylistic observation about gender consistency which is already covered by the more critical mistranslation errors in the same dialogue sequence."
+              }
+            ],
+            "notes": "The translation fails significantly in maintaining gender consistency for the female protagonist in the dialogue sections, which is crucial for the context of the case study.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/screen_2/texts/1",
+                "current": "الفكرة: «يبدو سعيداً، بينما أبدو أنا فاشلاً»",
+                "proposed": "الفكرة: «يبدو سعيداً، بينما أبدو أنا فاشلة»",
+                "alternatives": [],
+                "rationale": "В оригинале «неудачница» (женский род). Необходимо использовать женский род для прилагательного, чтобы соответствовать контексту."
+              },
+              {
+                "id": "c2-I1",
+                "priority": 2,
+                "path": "/screen_3/texts/6",
+                "current": "على الأرجح فكرت: «سأفسد كل شيء»، «سيعتقدون أنني غبي»",
+                "proposed": "على الأرجح فكرتُ: «سأفسد كل شيء»، «سيعتقدون أنني غبية»",
+                "alternatives": [],
+                "rationale": "В оригинале «я подумала» и «я глупая» (женский род). Исправляем прилагательное на женский род (غبية) для соблюдения логики диалога."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 3,
+                "path": "/screen_3/texts/12",
+                "current": "وحتى لو ارتكبت خطأً في العرض، فهذا لا يعني أنني غبي، بل يعني أنني بشر وأشعر بالارتباك؛ كما أن خبرتي في التحدث أمام الجمهور لا تزال محدودة.",
+                "proposed": "وحتى لو ارتكبتُ خطأً في العرض، فهذا لا يعني أنني غبية، بل يعني أنني بشر وأشعر بالارتباك؛ كما أن خبرتي في التحدث أمام الجمهور لا تزال محدودة.",
+                "alternatives": [],
+                "rationale": "Исправление гендерного несоответствия: «я глупая» (женский род) требует использования формы غبية."
+              }
+            ],
+            "overall": {
+              "score": 82,
+              "verdict": "major_edits",
+              "summary": "В переводе допущена критическая ошибка в гендерном согласовании в ключевых диалоговых сценариях. Персонаж-клиент — женщина, но в тексте она говорит о себе в мужском роде («я глупая» -> «غبي»), что разрушает реалистичность кейса. Необходимо исправить все прилагательные и формы, относящиеся к героине, на женский род."
+            },
+            "timings": {
+              "issues": 61141,
+              "deliberate": 6989,
+              "recommend": 12878
+            }
+          },
+          "applied": [
+            {
+              "id": "c1-I1",
+              "path": "/screen_2/texts/1",
+              "from": "الفكرة: «يبدو سعيداً، بينما أبدو أنا فاشلاً».",
+              "to": "الفكرة: «يبدو سعيداً، بينما أبدو أنا فاشلة»"
+            }
+          ],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/screen_3/texts/6",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: screen_3/texts/6)"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/screen_3/texts/12",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: screen_3/texts/12)"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено энергично, соответствует духу оригинала."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Терминология (CBT, аخصائي نفسي) соблюдена, стиль естественный."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Терминология верная."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Естественная конструкция."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Хорошая метафора."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Согласно конвенции, атрибуты удалены, это норма."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Терминология (القلق) верная."
+              },
+              {
+                "path": "/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Нарушение гендерного стандарта: использован женский род (فاشلة), хотя в инструкции указан мужской как нейтральный."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/16",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/17",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/18",
+                "verdict": "ok",
+                "note": "Терминология (غير تكيفية) соблюдена."
+              },
+              {
+                "path": "/screen_2/texts/19",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/test/question",
+                "verdict": "ok",
+                "note": "Перевод точный, терминология соблюдена."
+              },
+              {
+                "path": "/test/answers/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/2",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/test/answers/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, смысл сохранен."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Естественно звучит."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Соблюдена терминология (القلق)."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Соблюдена терминология (القلق)."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в оригинале женский род, в переводе — мужской."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Терминология (المشاعر) соблюдена."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в оригинале женщина говорит о себе в женском роде, в переводе — в мужском."
+              },
+              {
+                "path": "/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/14",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: в оригинале женщина, в переводе — мужской род."
+              },
+              {
+                "path": "/screen_3/texts/15",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Терминология (أكثر تكيفاً) соблюдена."
+              },
+              {
+                "path": "/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Терминология (اضطرابات الأكل) соблюдена."
+              },
+              {
+                "path": "/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/6",
+                "verdict": "issue",
+                "note": "Гендерное несоответствие: обращение к пользователю в оригинале нейтральное/множественное, в переводе — мужской род (хотя это допустимо как стандарт, но в контексте диалога выше это может сбивать). Однако основная проблема в том, что если пользователь — женщина, форма 'لا تيأس' (не отчаивайся) требует изменения. Но согласно правилам, мужской род — стандарт. Проверяем другие моменты. В оригинале 'узнали себя' (мн.ч. или вежливое), в переводе 'нашел себя' (ед.ч. муж.р.). Это допустимо по правилам, но стоит отметить."
+              },
+              {
+                "path": "/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Терминология (الهدّامة) соблюдена."
+              },
+              {
+                "path": "/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_2/texts/1",
+                "fragment": "بينما أبدو أنا فاشلة",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование женского рода",
+                "why": "Согласно инструкции по Tone of Voice, дефолтным и гендерно-нейтральным стандартом в MSA является мужской род (فاشل). Женский род следует использовать только если оригинал прямо обращается к женщине, чего здесь нет."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/screen_3/texts/6",
+                "fragment": "فكرت: «سأفسد كل شيء»، «سيعتقدون أنني غبي»",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Гендерное несоответствие",
+                "why": "В оригинале «я подумала» и «я глупая» (женский род). В арабском переводе использован мужской род (غبي), что нарушает контекст диалога, где персонаж — женщина."
+              },
+              {
+                "id": "c2-I2",
+                "path": "/screen_3/texts/12",
+                "fragment": "لا يعني أنني غبي",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Гендерное несоответствие",
+                "why": "В оригинале «я глупая» (женский род). В арабском использовано «غبي» (мужской род), что противоречит контексту персонажа."
+              },
+              {
+                "id": "c2-I3",
+                "path": "/screen_3/texts/14",
+                "fragment": "كنت سأشعر بهدوء أكبر وأتصرف بثقة أكثر",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Гендерное несоответствие",
+                "why": "Хотя глаголы в прошедшем времени для первого лица не меняются по роду, в контексте всей сцены (где героиня — женщина) отсутствие согласования с предыдущими репликами (где она говорила о себе в женском роде) создает стилистический диссонанс, хотя грамматически это не ошибка. Но в паре с I1 и I2 это системная ошибка перевода персонажа."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "Это не ошибка, а корректная адаптация. В примере /screen_2/texts/1 описывается конкретная ситуация (предыдущий партнер), и переводчик выбрал женский род для придания конкретики персонажу. В MSA при отсутствии контекста используется мужской род, но здесь контекст задан самим примером."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c2-I2"
+                ],
+                "note": "Системная ошибка: переводчик переключился на мужской род в диалоге, где персонаж явно женщина (согласно оригиналу), что разрушает целостность образа."
+              },
+              {
+                "id": "c2-I2",
+                "verdict": "confirmed",
+                "rank": 1,
+                "related": [
+                  "c2-I1"
+                ],
+                "note": "Системная ошибка: несоответствие рода персонажа (женский в RU -> мужской в AR)."
+              },
+              {
+                "id": "c2-I3",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "Ложное срабатывание. В арабском языке глаголы первого лица прошедшего времени (كنتُ) не имеют грамматического различия по роду. Претензия к стилистике здесь необоснованна."
+              }
+            ],
+            "notes": "Основная проблема — нарушение гендерной согласованности персонажа в диалоге (переход с женского на мужской род), что требует исправления прилагательных.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/screen_3/texts/6",
+                "current": "على الأرجح فكرت: «سأفسد كل شيء»، «سيعتقدون أنني غبي»",
+                "proposed": "على الأرجح فكرت: «سأفسد كل شيء»، «سيعتقدون أنني غبية»",
+                "alternatives": [],
+                "rationale": "В оригинале персонаж говорит о себе в женском роде («я подумала», «я глупая»). В арабском переводе прилагательное «غبي» (мужской род) противоречит контексту диалога, где героиня — женщина. Нужно исправить на женский род «غبية»."
+              },
+              {
+                "id": "c2-I2",
+                "priority": 1,
+                "path": "/screen_3/texts/12",
+                "current": "وحتى لو ارتكبت خطأً في العرض، فهذا لا يعني أنني غبي، بل يعني أنني بشر وأشعر بالارتباك؛ كما أن خبرتي في التحدث أمام الجمهور لا تزال محدودة.",
+                "proposed": "وحتى لو ارتكبت خطأً في العرض، فهذا لا يعني أنني غبية، بل يعني أنني بشر وأشعر بالارتباك؛ كما أن خبرتي في التحدث أمام الجمهور لا تزال محدودة.",
+                "alternatives": [],
+                "rationale": "Исправление гендерного несоответствия: в оригинале «я глупая» (женский род), в переводе — «غبي» (мужской род). Необходимо использовать «غبية» для сохранения целостности образа персонажа."
+              }
+            ],
+            "overall": {
+              "score": 85,
+              "verdict": "minor_edits",
+              "summary": "В целом перевод выполнен на высоком уровне, с соблюдением терминологии и стиля. Основная проблема — системная ошибка в диалоге: переводчик переключился на мужской род для персонажа-женщины, что нарушает логику и целостность сцены. Необходимо исправить прилагательные в репликах героини на женский род."
+            },
+            "timings": {
+              "issues": 56077,
+              "deliberate": 7680,
+              "recommend": 11009
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/screen_3/texts/6",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: screen_3/texts/6)"
+            },
+            {
+              "id": "c2-I2",
+              "path": "/screen_3/texts/12",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: screen_3/texts/12)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

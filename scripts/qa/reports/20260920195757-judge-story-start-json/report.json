@@ -1,0 +1,287 @@
+{
+  "file": "story/start.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/title",
+                "verdict": "ok",
+                "note": "Переведено точно, терминология соблюдена."
+              },
+              {
+                "path": "/description",
+                "verdict": "ok",
+                "note": "Смысл передан верно, термины (глубинные/промежуточные убеждения) на месте."
+              },
+              {
+                "path": "/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный перевод."
+              },
+              {
+                "path": "/screen_1/texts/1",
+                "verdict": "issue",
+                "note": "Пропущено слово 'невроз' в переводе."
+              },
+              {
+                "path": "/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Хорошая адаптация."
+              },
+              {
+                "path": "/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Тон и смысл сохранены."
+              },
+              {
+                "path": "/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Терминология (деструктивные установки) соблюдена."
+              },
+              {
+                "path": "/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Атрибуты instagram удалены согласно конвенции для не-en/ru локалей."
+              },
+              {
+                "path": "/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Смысл передан точно, термины (мысли, эмоции) соблюдены, стиль естественный."
+              },
+              {
+                "path": "/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Хорошая трансекреация, отсутствие кальки с русского синтаксиса, пунктуация верная."
+              },
+              {
+                "path": "/screen_3/texts/12",
+                "verdict": "ok",
+                "note": "Тон поддерживающий, глагольные конструкции естественны, терминология соблюдена."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/screen_1/texts/1",
+                "fragment": "الاكتئاب، والاضطرابات النفسية، واضطراب ما بعد الصدمة (PTSD)",
+                "type": "omission",
+                "severity": "major",
+                "problem": "Пропущено упоминание невроза (невроз/психические расстройства)",
+                "why": "В оригинале перечисляются конкретные состояния: депрессия, невроз, ПТСР. В переводе 'невроз' заменен общим термином 'психические расстройства' (الاضطرابات النفسية), что сужает смысл и теряет точность перечисления."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator replaced a specific clinical term 'neurosis' (невроз) with a broad category 'psychological disorders' (الاضطرابات النفسية), which changes the nuance of the original list."
+              }
+            ],
+            "notes": "The translation is generally high quality and professional, but it suffers from a loss of precision in the clinical terminology in the first screen.",
+            "recommendations": [
+              {
+                "id": "c1-I1",
+                "priority": 1,
+                "path": "/screen_1/texts/1",
+                "current": "الاكتئاب، والاضطرابات النفسية، واضطراب ما بعد الصدمة (PTSD)",
+                "proposed": "الاكتئاب، والعصاب، واضطراب ما بعد الصدمة (PTSD)",
+                "alternatives": [
+                  "الاكتئاب، والاضطرابات العصابية، واضطراب ما بعد الصدمة (PTSD)"
+                ],
+                "rationale": "В оригинале указан конкретный термин «невроз». Переводчик заменил его на широкое понятие «психические расстройства» (الاضطرابات النفسية), что является фактической ошибкой (обобщением). В арабской психологической литературе «невроз» передается термином «العصاب». Вариант с «العصاب» наиболее точен и соответствует списку конкретных состояний."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюдена терминология КПТ, выдержан поддерживающий тон и правильная стилистика MSA. Единственная серьезная ошибка — замена конкретного термина «невроз» на общее понятие «психические расстройства», что нарушает точность перечисления в оригинале. После исправления этого момента текст будет полностью готов к публикации."
+            },
+            "timings": {
+              "issues": 33036,
+              "deliberate": 3254,
+              "recommend": 7842
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c1-I1",
+              "path": "/screen_1/texts/1",
+              "reason": "цитата судьи не похожа на лист (сходство 32%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
