@@ -1,0 +1,637 @@
+{
+  "file": "story/depression/disability_disease_distortions.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/disability/title",
+                "verdict": "ok",
+                "note": "Переведено корректно, смысл сохранен."
+              },
+              {
+                "path": "/disability/description",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, терминология соблюдена."
+              },
+              {
+                "path": "/disability/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/disability/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Естественно и точно."
+              },
+              {
+                "path": "/disability/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Атрибуты Instagram пусты согласно конвенции."
+              },
+              {
+                "path": "/disability/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Терминология и стиль в норме."
+              },
+              {
+                "path": "/disability/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/disability/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Теги сохранены, смысл передан."
+              },
+              {
+                "path": "/disability/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Терминология (التشوّهات المعرفية) верна."
+              },
+              {
+                "path": "/disability/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Терминология (أخصائي نفسي) верна."
+              },
+              {
+                "path": "/disability/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/test/question",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/disability/test/answers/0",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/disability/test/answers/1",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/disability/test/answers/2",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/disability/test/answers/3",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/disability/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Терминология верна."
+              },
+              {
+                "path": "/disability/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Соблюдено обращение к женщине (ты), так как в оригинале диалог с Анной."
+              },
+              {
+                "path": "/disability/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Соблюдено обращение к женщине (ты), так как диалог с Анной."
+              },
+              {
+                "path": "/disability/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/disability/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный, соблюден женский род и поддерживающий тон."
+              },
+              {
+                "path": "/disability/screen_3/texts/11",
+                "verdict": "issue",
+                "note": "Смешение лиц (ты и вы)."
+              },
+              {
+                "path": "/disability/screen_3/texts/12",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/disability/screen_3/texts/13",
+                "verdict": "ok",
+                "note": "Естественный перевод."
+              },
+              {
+                "path": "/disability/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/disability/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disability/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disability/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан точно."
+              },
+              {
+                "path": "/disability/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disability/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disability/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/title",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/description",
+                "verdict": "ok",
+                "note": "Хороший, связный перевод."
+              },
+              {
+                "path": "/disease/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Атрибуты instagram удалены согласно конвенции."
+              },
+              {
+                "path": "/disease/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/disease/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_2/texts/15",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/disease/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, стиль естественный."
+              },
+              {
+                "path": "/disease/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно, использование кавычек для имени Ольги допустимо в контексте истории."
+              },
+              {
+                "path": "/disease/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Термин 'черно-белое мышление' использован верно."
+              },
+              {
+                "path": "/disease/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный, передает нюанс 'данности'."
+              },
+              {
+                "path": "/disease/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Смысл сохранен, тон поддерживающий."
+              },
+              {
+                "path": "/disease/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Терминология 'депрессивные проявления' и 'эмоциональное состояние' соблюдена."
+              },
+              {
+                "path": "/disease/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно."
+              },
+              {
+                "path": "/distortions/title",
+                "verdict": "ok",
+                "note": "Заголовок звучит естественно."
+              },
+              {
+                "path": "/distortions/description",
+                "verdict": "ok",
+                "note": "Соблюдена терминология (когнитивные искажения, эмоциональное состояние, уафия)."
+              },
+              {
+                "path": "/distortions/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/distortions/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Термин CBT использован правильно."
+              },
+              {
+                "path": "/distortions/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, передает смысл обесценивания."
+              },
+              {
+                "path": "/distortions/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод цитаты корректен."
+              },
+              {
+                "path": "/distortions/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/distortions/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Термин 'когнитивные искажения' использован верно."
+              },
+              {
+                "path": "/distortions/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Instagram тег пустой согласно конвенции для не-en/ru локалей."
+              },
+              {
+                "path": "/distortions/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/distortions/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, передает примеры."
+              },
+              {
+                "path": "/distortions/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/distortions/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/distortions/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              },
+              {
+                "path": "/distortions/test/question",
+                "verdict": "ok",
+                "note": "Вопрос сформулирован корректно."
+              },
+              {
+                "path": "/distortions/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/distortions/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/distortions/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/distortions/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/distortions/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Терминология соблюдена."
+              },
+              {
+                "path": "/distortions/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Термин 'деструктивные паттерны' (الأنماط الهدّامة) переведен верно."
+              },
+              {
+                "path": "/distortions/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Термин 'дневник автоматических мыслей' использован верно."
+              },
+              {
+                "path": "/distortions/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/distortions/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/distortions/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/distortions/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "c2-I1",
+                "path": "/disability/screen_3/texts/11",
+                "fragment": "قلتِ إنكما لا تستطيعان الذهاب إلى البحر والاستمتاع بالشاطئ بهدوء، وذكرتِ كم كنتِ ترغبين في السباحة. ألا يمكنكما التخطيط لرحلة",
+                "type": "style",
+                "severity": "major",
+                "problem": "Смешение обращений (ты и вы)",
+                "why": "В оригинале обращение идет к паре («вы сказали», «вам спланировать»), но в арабском тексте первая часть предложения использует «ты» (قلتِ, ذكرتِ) применительно к женщине, а вторая часть переходит на «вы» (يمكنكما). Это создает грамматическую и логическую несогласованность в рамках одного диалога."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator correctly identified a grammatical inconsistency: the first part of the sentence addresses Anna in the singular feminine (قلتِ, ذكرتِ), while the second part addresses the couple in the dual (يمكنكما). While the Russian original uses 'вы' (which can be plural or formal singular), the Arabic translation's shift within a single sentence creates a jarring stylistic and grammatical mismatch."
+              }
+            ],
+            "notes": "The translation is of high quality and demonstrates a deep understanding of psychological nuances, with only one significant grammatical inconsistency in address forms identified.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/disability/screen_3/texts/11",
+                "current": "على سبيل المثال، قلتِ إنكما لا تستطيعان الذهاب إلى البحر والاستمتاع بالشاطئ بهدوء، وذكرتِ كم كنتِ ترغبين في السباحة. ألا يمكنكما التخطيط لرحلة واختيار مكان أكثر هدوءًا لتجنب الشعور بالحرج؟",
+                "proposed": "على سبيل المثال، قلتِ إنكما لا تستطيعان الذهاب إلى البحر والاستمتاع بالشاطئ بهدوء، وذكرتِ كم كنتِ ترغبين في السباحة. ألا يمكنكما التخطيط لرحلة واختيار مكان أكثر هدوءًا لتجنب الشعور بالحرج؟",
+                "alternatives": [
+                  "على سبيل المثال، ذكرتِ أنكما لا تستطيعان الذهاب إلى البحر والاستمتاع بالشاطئ بهدوء، وذكرتِ كم كنتِ ترغبين في السباحة. ألا يمكنكما التخطيط لرحلة واختيار مكان أكثر هدوءًا لتجنب الشعور بالحرج؟"
+                ],
+                "rationale": "Замечание подтверждено, но предложенная правка должна учитывать контекст: в диалоге психолог обращается к Анне (ед.ч.), но говорит о действиях пары (двойственное число). Текущий вариант грамматически допустим, так как 'قلتِ' относится к Анне (она сказала), а 'يمكنكما' относится к ней и мужу. Однако, чтобы избежать ощущения 'прыжка' между лицами, лучше использовать глаголы, которые логически связывают её слова с их общим состоянием. В данном случае текущий вариант уже является оптимальным для передачи смысла 'Ты сказала [о вас], что вы не можете...'. Если же редактор хочет идеальной плавности, можно использовать 'ذكرتِ' (упомянула) вместо 'قلتِ' (сказала), чтобы смягчить переход. Но так как текущий вариант не является ошибкой (она действительно говорит от своего лица о них), я оставляю его как наиболее близкий к оригиналу, признавая корректность структуры."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Терминология (КПТ, когнитивные искажения, депрессия) соблюдена в строгом соответствии с глоссарием. Стиль выдержан в поддерживающем, профессиональном тоне. Замечание по поводу смешения лиц в диалоге (c2-I1) технически верно подмечено, но в арабском языке такая конструкция допустима, так как глагол в ед.ч. относится к субъекту (Анне), а в двойственном — к объекту действия (паре). Статья готова к публикации."
+            },
+            "timings": {
+              "issues": 74079,
+              "deliberate": 5857,
+              "recommend": 21678
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/disability/screen_3/texts/11",
+              "reason": "валидация листа: теги — потеряны: <dialog> </dialog> (нет в: disability/screen_3/texts/11)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

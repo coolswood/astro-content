@@ -1,0 +1,810 @@
+{
+  "file": "story/depression/duty_guilt_incrimination.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/duty/title",
+                "verdict": "ok",
+                "note": "Переведено согласно глоссарию (عبارات «يجب»)"
+              },
+              {
+                "path": "/duty/description",
+                "verdict": "ok",
+                "note": "Смысл передан точно, терминология соблюдена"
+              },
+              {
+                "path": "/duty/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Естественный перевод, термины на месте"
+              },
+              {
+                "path": "/duty/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Терминология (CBT) соблюдена"
+              },
+              {
+                "path": "/duty/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Перевод понятен, когниция передана через الإدراك"
+              },
+              {
+                "path": "/duty/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Теги сохранены, смысл передан"
+              },
+              {
+                "path": "/duty/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Цитата переведена адекватно"
+              },
+              {
+                "path": "/duty/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Терминология (дневник автоматических мыслей) соблюдена"
+              },
+              {
+                "path": "/duty/screen_2/texts/1",
+                "verdict": "issue",
+                "note": "Ошибка в использовании кавычек внутри кавычек"
+              },
+              {
+                "path": "/duty/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Атрибуты Instagram удалены согласно конвенции для не-en/ru локалей"
+              },
+              {
+                "path": "/duty/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/13",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_2/texts/14",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/test/question",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/test/answers/0",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/test/answers/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/test/answers/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/test/answers/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_3/texts/0",
+                "verdict": "issue",
+                "note": "Нарушение правил использования кавычек в термине"
+              },
+              {
+                "path": "/duty/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/duty/screen_3/texts/5",
+                "verdict": "issue",
+                "note": "Нарушение правил использования кавычек в термине"
+              },
+              {
+                "path": "/duty/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/guilt/title",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/guilt/description",
+                "verdict": "ok",
+                "note": "Перевод корректен"
+              },
+              {
+                "path": "/guilt/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Переведено точно, терминология соблюдена."
+              },
+              {
+                "path": "/guilt/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/guilt/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки «» использованы правильно."
+              },
+              {
+                "path": "/guilt/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Смысл передан верно."
+              },
+              {
+                "path": "/guilt/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Перевод естественный."
+              },
+              {
+                "path": "/guilt/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/guilt/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/guilt/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен, кавычки «» на месте."
+              },
+              {
+                "path": "/guilt/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Термин 'благополучие' переведен как 'عافية' (wellness/well-being), что соответствует контексту."
+              },
+              {
+                "path": "/guilt/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_3/texts/11",
+                "verdict": "issue",
+                "note": "Стилистическая ошибка: использование слова 'توبة' (покаяние/раскаяние в религиозном смысле) вместо психологического контекста."
+              },
+              {
+                "path": "/guilt/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/guilt/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Перевод точный, передает эмоциональный накал"
+              },
+              {
+                "path": "/guilt/screen_4/texts/5",
+                "verdict": "ok",
+                "note": "Естественный арабский язык"
+              },
+              {
+                "path": "/guilt/screen_4/texts/6",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/guilt/screen_4/texts/7",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/guilt/screen_4/texts/8",
+                "verdict": "ok",
+                "note": "Терминология соблюдена"
+              },
+              {
+                "path": "/guilt/screen_4/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/guilt/screen_4/texts/10",
+                "verdict": "ok",
+                "note": "Перевод точный, кавычки «» использованы верно"
+              },
+              {
+                "path": "/guilt/screen_4/texts/11",
+                "verdict": "ok",
+                "note": "Терминология (تشوّهات معرفية) верна"
+              },
+              {
+                "path": "/guilt/screen_4/texts/12",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/incrimination/title",
+                "verdict": "ok",
+                "note": "Хороший литературный перевод"
+              },
+              {
+                "path": "/incrimination/description",
+                "verdict": "ok",
+                "note": "Стиль соответствует"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/1",
+                "verdict": "ok",
+                "note": "Кавычки «» использованы верно"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/3",
+                "verdict": "ok",
+                "note": "Атрибуты instagram удалены согласно конвенции"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/7",
+                "verdict": "ok",
+                "note": "Терминология (وضع الملصقات) верна"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/11",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/12",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_1/texts/13",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/2",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/3",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/4",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/5",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/6",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/7",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/8",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/9",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/10",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/11",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_2/texts/12",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/0",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/1",
+                "verdict": "ok",
+                "note": "Ок"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/2",
+                "verdict": "ok",
+                "note": "Смысл передан точно, стиль соответствует"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/3",
+                "verdict": "ok",
+                "note": "Перевод точный, использование терминов корректно"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/4",
+                "verdict": "ok",
+                "note": "Естественный арабский синтаксис"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/5",
+                "verdict": "ok",
+                "note": "Хорошая адаптация, смысл сохранен"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/6",
+                "verdict": "ok",
+                "note": "Лаконично и верно"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/7",
+                "verdict": "ok",
+                "note": "Перевод живой, не калька"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/8",
+                "verdict": "ok",
+                "note": "Смысл передан верно"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/9",
+                "verdict": "ok",
+                "note": "Стиль поддерживающий"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/10",
+                "verdict": "ok",
+                "note": "Вопросы сформулированы естественно"
+              },
+              {
+                "path": "/incrimination/screen_3/texts/11",
+                "verdict": "ok",
+                "note": "Смысл и тон сохранены"
+              },
+              {
+                "path": "/incrimination/screen_4/texts/0",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/incrimination/screen_4/texts/1",
+                "verdict": "ok",
+                "note": "Терминология и смысл в порядке"
+              },
+              {
+                "path": "/incrimination/screen_4/texts/2",
+                "verdict": "ok",
+                "note": "Перевод точный"
+              },
+              {
+                "path": "/incrimination/screen_4/texts/3",
+                "verdict": "ok",
+                "note": "Хорошая структура предложения"
+              },
+              {
+                "path": "/incrimination/screen_4/texts/4",
+                "verdict": "ok",
+                "note": "Тон эмпатичный, перевод верный"
+              }
+            ],
+            "issues": [
+              {
+                "id": "c1-I1",
+                "path": "/duty/screen_2/texts/1",
+                "fragment": "«عبارات «يجب»»",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Вложенные кавычки",
+                "why": "В арабской типографике использование одинаковых кавычек « » внутри других таких же кавычек создает визуальный хаос. Рекомендуется использовать разные типы или перефразировать."
+              },
+              {
+                "id": "c1-I2",
+                "path": "/duty/screen_3/texts/0",
+                "fragment": "«عبارات «يجب»»",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Вложенные кавычки",
+                "why": "Аналогично: использование « » внутри « » затрудняет чтение. В арабском языке для вложенности лучше использовать другие знаки или изменить структуру предложения."
+              },
+              {
+                "id": "c1-I3",
+                "path": "/duty/screen_3/texts/5",
+                "fragment": "«عبارات «يجب»»",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Вложенные кавычки",
+                "why": "Повторяющаяся проблема с вложенными кавычками в названии искажения."
+              },
+              {
+                "id": "c2-I1",
+                "path": "/guilt/screen_3/texts/11",
+                "fragment": "وهي في جوهرها توبة صادقة",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Использование слова 'توبة' (tawba)",
+                "why": "Слово 'توبة' в арабском языке имеет сильный религиозный подтекст (покаяние перед Богом). В контексте психологии и КПТ для передачи смысла 'искреннее раскаяние' лучше использовать 'ندم صادق' или 'تأسف صادق', чтобы избежать ненужной религиозной окраски и сохранить научный/терапевтический тон."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "c1-I1",
+                "verdict": "confirmed",
+                "rank": 2,
+                "note": "Visual clutter due to nested identical quotation marks."
+              },
+              {
+                "id": "c1-I2",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "rank": 2,
+                "note": "Duplicate issue regarding nested quotes in the same term."
+              },
+              {
+                "id": "c1-I3",
+                "verdict": "merged",
+                "mergedInto": "c1-I1",
+                "rank": 2,
+                "note": "Duplicate issue regarding nested quotes in the same term."
+              },
+              {
+                "id": "c2-I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "Critical nuance: 'tawba' is heavily religious; 'nadam' is more appropriate for a clinical/psychological context."
+              }
+            ],
+            "notes": "The translation is high quality, but requires attention to stylistic nuances in Arabic: avoiding religious connotations in psychological terms and fixing typographic issues with nested quotes.",
+            "recommendations": [
+              {
+                "id": "c2-I1",
+                "priority": 1,
+                "path": "/guilt/screen_3/texts/11",
+                "current": "وهي في جوهرها توبة صادقة من خلال التواضع والتقبل.",
+                "proposed": "وهي في جوهرها ندم صادق من خلال التواضع والتقبل.",
+                "alternatives": [
+                  "وهي في جوهرها تأسف صادق من خلال التواضع والتقبل"
+                ],
+                "rationale": "Слово 'توبة' имеет сильный религиозный подтекст (покаяние перед Богом). Для психологического контекста (раскаяние/сожаление) гораздо естественнее и профессиональнее использовать 'ندم' (сожаление/раскаяние)."
+              },
+              {
+                "id": "c1-I1",
+                "priority": 2,
+                "path": "/duty/screen_2/texts/1",
+                "current": "سنبدأ بتشوّه «عبارات «يجب»».",
+                "proposed": "سنبدأ بتشوّه عبارات «يجب».",
+                "alternatives": [
+                  "سنبدأ بتشوّه «عبارات يجب»"
+                ],
+                "rationale": "Вложенные одинаковые кавычки « » создают визуальный шум. Лучшее решение — убрать внешние кавычки у термина, оставив их только для самого слова «يجب», либо использовать перефразирование, чтобы избежать нагромождения."
+              }
+            ],
+            "overall": {
+              "score": 92,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на высоком уровне, терминология соблюдена (особенно в части когнитивных искажений). Основные риски связаны с культурным контекстом: необходимо заменить религиозный термин 'توبة' на психологически нейтральный 'ندم'. Также требуется исправить типографику с вложенными кавычками в названиях искажений для улучшения читаемости."
+            },
+            "timings": {
+              "issues": 88984,
+              "deliberate": 7881,
+              "recommend": 15814
+            }
+          },
+          "applied": [],
+          "skipped": [
+            {
+              "id": "c2-I1",
+              "path": "/guilt/screen_3/texts/11",
+              "reason": "цитата судьи не похожа на лист (сходство 38%)"
+            },
+            {
+              "id": "c1-I1",
+              "path": "/duty/screen_2/texts/1",
+              "reason": "цитата судьи не похожа на лист (сходство 31%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
