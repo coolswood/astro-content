@@ -1,0 +1,243 @@
+{
+  "file": "homeBot/stats.json",
+  "model": "см. endpoint клиента",
+  "rounds": 3,
+  "results": [
+    {
+      "lang": "ar",
+      "converged": true,
+      "totalApplied": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daysCommon/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон дружелюбный."
+              },
+              {
+                "path": "/daysCommon/1",
+                "verdict": "ok",
+                "note": "Смысл передан верно, использование мужского рода как стандарта соблюдено."
+              },
+              {
+                "path": "/daysCommon/2",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysCommon/3",
+                "verdict": "ok",
+                "note": "Перевод корректен."
+              },
+              {
+                "path": "/daysInRow/0",
+                "verdict": "issue",
+                "note": "Добавлено лишнее слово 'в практике упражнений', которого нет в оригинале."
+              },
+              {
+                "path": "/daysInRow/1",
+                "verdict": "ok",
+                "note": "Перевод точный, естественный."
+              },
+              {
+                "path": "/daysInRow/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysInRow/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysInRow/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysMissed/0",
+                "verdict": "ok",
+                "note": "Перевод точный, соблюден поддерживающий тон."
+              },
+              {
+                "path": "/daysMissed/1",
+                "verdict": "ok",
+                "note": "Перевод точный, 'бережно' передано через 'بلطف' (мягко/с добротой), что уместно."
+              },
+              {
+                "path": "/daysMissed/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysMissed/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/daysInRow/0",
+                "fragment": "في ممارسة التمارين",
+                "type": "addition",
+                "severity": "minor",
+                "problem": "Добавлена фраза «в практике упражнений»",
+                "why": "В оригинале просто «день занятий подряд». Хотя это не меняет смысл критически, это избыточное уточнение, которого нет в исходном тексте."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "confirmed",
+                "rank": 1,
+                "note": "The translator added context 'in practicing exercises' which is not present in the source, though it fits the app's domain. It is a minor stylistic addition."
+              }
+            ],
+            "notes": "The translation is high quality and follows the source closely; the only issue is a minor semantic addition that doesn't harm the user experience.",
+            "recommendations": [
+              {
+                "id": "I1",
+                "priority": 1,
+                "path": "/daysInRow/0",
+                "current": "هذا هو يومك الـ <b>{days}</b> على التوالي في ممارسة التمارين — تقدم مذهل!",
+                "proposed": "هذا هو يومك الـ <b>{days}</b> على التوالي — تقدم مذهل!",
+                "alternatives": [
+                  "هذا هو يومك الـ <b>{days}</b> على التوالي من العمل على نفسك — تقدم مذهل!"
+                ],
+                "rationale": "Удаление избыточной фразы «في ممارسة التمارين» (в практике упражнений), так как в оригинале указано просто «день занятий». Это делает текст более точным и менее перегруженным, соответствуя принципу минимальной достаточности."
+              }
+            ],
+            "overall": {
+              "score": 96,
+              "verdict": "minor_edits",
+              "summary": "Перевод выполнен на очень высоком уровне: соблюден поддерживающий тон, правильное использование гендерно-нейтральных форм и отличная адаптация идиом. Единственное замечание касается небольшой избыточности в одной фразе, которую стоит убрать для идеального соответствия оригиналу."
+            },
+            "timings": {
+              "issues": 9988,
+              "deliberate": 2571,
+              "recommend": 7256
+            }
+          },
+          "applied": [
+            {
+              "id": "I1",
+              "path": "/daysInRow/0",
+              "from": "هذا هو يومك الـ <b>{days}</b> على التوالي في ممارسة التمارين — تقدم مذهل!",
+              "to": "هذا هو يومك الـ <b>{days}</b> على التوالي — تقدم مذهل!"
+            }
+          ],
+          "skipped": []
+        },
+        {
+          "round": 2,
+          "verdict": {
+            "scan": [
+              {
+                "path": "/daysCommon/0",
+                "verdict": "ok",
+                "note": "Перевод точный, тон поддерживающий."
+              },
+              {
+                "path": "/daysCommon/1",
+                "verdict": "ok",
+                "note": "Перевод точный, соблюдено обращение в мужском роде."
+              },
+              {
+                "path": "/daysCommon/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysCommon/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysInRow/0",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysInRow/1",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysInRow/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysInRow/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysInRow/4",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysMissed/0",
+                "verdict": "issue",
+                "note": "Нарушение согласования рода: в оригинале 'Рада' (женский род), в переводе 'يسعدني' (нейтрально/мужской), но в начале 'لم أرك' (я не видел тебя) — в арабском языке глагол в прошедшем времени 'أراك' не меняет форму по роду говорящего, но контекст 'Рада' в русском указывает на женский род AI. Однако в арабском 'يسعدني' — это 'меня радует', что является стандартным и корректным решением для нейтрального/мужского AI. Проблема в другом: 'أتمنى أن تكون بخير' — это 'надеюсь, ты (мужчина) в порядке'. Если пользователь женщина, это не ошибка, но если мы следуем правилу 'дефолт — мужской род', то здесь всё ок. Однако, есть стилистический нюанс в 'لم أرك' (я не видел тебя) — это звучит как личное обращение человека, что допустимо для AI-помощника."
+              },
+              {
+                "path": "/daysMissed/1",
+                "verdict": "ok",
+                "note": "Перевод точный, 'بلطف' хорошо передает 'бережно' в данном контексте."
+              },
+              {
+                "path": "/daysMissed/2",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              },
+              {
+                "path": "/daysMissed/3",
+                "verdict": "ok",
+                "note": "Перевод точный."
+              }
+            ],
+            "issues": [
+              {
+                "id": "I1",
+                "path": "/daysMissed/0",
+                "fragment": "لم أرك",
+                "type": "style",
+                "severity": "minor",
+                "problem": "Слишком персонализированная форма глагола",
+                "why": "Конструкция 'لم أرك' (я не видел тебя) звучит очень по-человечески. Для AI-помощника в арабском языке более естественно использовать безличные или менее интимные конструкции, хотя в рамках 'теплого тона' это допустимо как вольная транскреация."
+              }
+            ],
+            "reviewed": [
+              {
+                "id": "I1",
+                "verdict": "rejected",
+                "rank": null,
+                "note": "The phrase 'لم أرك' is a standard way to express 'I haven't seen you' in a friendly, conversational tone. Given the context of a supportive app (using emojis and warm language), this transcreation is appropriate and fits the 'warm tone' requirement. It is not an error, but a stylistic choice."
+              }
+            ],
+            "notes": "The translation is high quality, maintaining a warm and encouraging tone consistent with the source. No critical errors found.",
+            "recommendations": [],
+            "overall": {
+              "score": 98,
+              "verdict": "publish",
+              "summary": "Перевод выполнен на очень высоком уровне. Соблюден теплый, поддерживающий тон, характерный для психологической помощи, при этом сохранена грамотность и естественность MSA. Замечание по поводу персонализации (I1) отклонено, так как в контексте дружелюбного AI-помощника использование первого лица допустимо и помогает выстраивать эмпатичную связь с пользователем."
+            },
+            "timings": {
+              "issues": 15514,
+              "deliberate": 2538,
+              "recommend": 2613
+            }
+          },
+          "applied": [],
+          "skipped": []
+        }
+      ]
+    }
+  ]
+}
