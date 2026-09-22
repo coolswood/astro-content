@@ -25,3 +25,11 @@ pnpm-debug.log*
 
 # translation cache (partial batch results for resume)
 scripts/.translate-cache/
+
+# служебные артефакты конвейера перевода: QA-отчёты судьи и локальные
+# снапшоты-бэкапы живут только на диске бокса (под restic), в гит не тянем
+scripts/qa/reports/
+backups/
+
+# воркспейс ZCode
+.zcode/
