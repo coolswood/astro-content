@@ -43,6 +43,13 @@ export interface StageRequest {
   /** Перекрывает requestPriority клиента для этого запроса (0 = поле не слать). */
   priority?: number;
   /**
+   * Пер-запросный override модели: тело запроса уходит с этим именем вместо
+   * модели клиента. Смысл — мульти-модельный endpoint (agy-шим scripts/agy_proxy.py):
+   * он роутит по имени модели в теле, поэтому «критические» стадии могут ходить
+   * на старшую модель, а bulk — на локальную gemma через тот же endpoint.
+   */
+  model?: string;
+  /**
    * vLLM: рассуждающий режим модели (chat_template_kwargs.enable_thinking).
    * Размышления приходят в message.reasoning, content остаётся чистым;
    * maxTokens увеличивается, т.к. reasoning расходует токены генерации.
@@ -137,7 +144,7 @@ export class VllmClient implements StageClient {
 
   async complete(req: StageRequest): Promise<string> {
     const body: Record<string, unknown> = {
-      model: this.model,
+      model: req.model ?? this.model,
       messages: [
         { role: 'system', content: req.system },
         { role: 'user', content: req.user },
@@ -625,6 +632,9 @@ export interface PipelineResult {
  */
 export type CaptureStage = 'main' | 'editor' | 'review' | 'fix';
 
+/** Пер-стадийные override'ы модели (мульти-модельный endpoint — см. StageRequest.model). */
+export type StageModelMap = Partial<Record<CaptureStage, string>>;
+
 /** Листьев в одном чанке перевода: модели стабильно срезают хвосты длинных
  *  документов («потеряны ключи: /x/screen_3/texts/11»), на ≤40 листьях ответ
  *  устойчив. Чанки режутся по контейнерам; предыдущие чанки уходят в context
@@ -725,6 +735,8 @@ async function runStagesOnce(
     context?: Record<string, string>;
     /** Служебная мета ключей (ui: @-мета ARB) — контекст запроса, не перевода. */
     meta?: Record<string, any>;
+    /** Пер-стадийные модели (мульти-модельный endpoint): undefined = модель клиента. */
+    stageModels?: StageModelMap;
   },
 ): Promise<{ draft: any; timings: PipelineResult['timings'] }> {
   // В чанк уходит только мета его собственных ключей (пути без ведущего
@@ -758,6 +770,7 @@ async function runStagesOnce(
           temperature: 0.3,
           maxTokens: 16_384,
           jsonMode: true,
+          model: o.stageModels?.main,
         }
       : {
           system: prompts.main,
@@ -765,6 +778,7 @@ async function runStagesOnce(
           temperature: 0.3,
           maxTokens: 16_384,
           jsonMode: o.jsonModeMain ?? false,
+          model: o.stageModels?.main,
         },
   );
   timings.main = Date.now() - t;
@@ -856,6 +870,7 @@ async function runStagesOnce(
       temperature: 0.2,
       maxTokens: 16_384,
       jsonMode: attempt > 1,
+      model: o.stageModels?.editor,
     }),
     (text) => parseStageObject('editor', text),
   );
@@ -877,6 +892,7 @@ async function runStagesOnce(
         temperature: 0.2,
         maxTokens: 8_192,
         jsonMode: true,
+        model: o.stageModels?.review,
       }),
       async (text) => {
         const parsed = await parseWithRepair<any>(text);
@@ -895,15 +911,16 @@ async function runStagesOnce(
         client,
         'fix',
         o.stageAttempts,
-        (attempt) => ({
-          system: prompts.fix!,
-          user:
-            `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}\n\n` +
-            `ЗАМЕЧАНИЯ РЕВЬЮЕРА (исправь каждое):\n${review.raw}`,
-          temperature: 0.2,
-          maxTokens: 16_384,
-          jsonMode: attempt > 1,
-        }),
+      (attempt) => ({
+        system: prompts.fix!,
+        user:
+          `ОРИГИНАЛ (ru):\n${payloadText}\n\nПЕРЕВОД:\n${JSON.stringify(draft)}\n\n` +
+          `ЗАМЕЧАНИЯ РЕВЬЮЕРА (исправь каждое):\n${review.raw}`,
+        temperature: 0.2,
+        maxTokens: 16_384,
+        jsonMode: attempt > 1,
+        model: o.stageModels?.fix,
+      }),
         (text) => parseStageObject('fix', text),
       );
       timings.fix = Date.now() - t;
@@ -953,6 +970,8 @@ export async function runPipeline(
     context?: Record<string, string>;
     /** Служебная мета ключей (ui: @-мета ARB) — в запросы, не в перевод. */
     meta?: Record<string, any>;
+    /** Пер-стадийные модели (мульти-модельный endpoint): undefined = модель клиента. */
+    stageModels?: StageModelMap;
   } = {},
 ): Promise<PipelineResult> {
   const sourceLocale = opts.sourceLocale ?? 'ru';
@@ -1028,6 +1047,7 @@ export async function runPipeline(
           capture: opts.capture,
           context,
           meta: opts.meta,
+          stageModels: opts.stageModels,
         },
       ));
     } catch (e) {
@@ -1048,6 +1068,7 @@ export async function runPipeline(
           capture: opts.capture,
           context,
           meta: opts.meta,
+          stageModels: opts.stageModels,
         },
       ));
     }
@@ -1213,6 +1234,7 @@ export async function runPipeline(
         temperature: 0.2,
         maxTokens: 8_192,
         jsonMode: true,
+        model: opts.stageModels?.main,
       });
       let recovered = await parseWithRepair<any>(recText);
       if (recovered && typeof recovered === 'object' && !Array.isArray(recovered) && 'data' in recovered) {
