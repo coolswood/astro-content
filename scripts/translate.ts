@@ -60,7 +60,7 @@ import {
   type StageModelMap,
 } from './lib/pipeline.js';
 import { MAX_REPAIR_GROUPS, repairDuplicateGroups } from './lib/duplicate-repair.js';
-import { TranslationState, type ScopeState } from './lib/state.js';
+import { TranslationState, hashLeaf, type ScopeState } from './lib/state.js';
 import { analyzeTree, keysToTranslate, type Analysis } from './lib/analyze.js';
 import {
   validateTranslation,
@@ -69,7 +69,12 @@ import {
   type ValidationIssue,
 } from './lib/validation.js';
 import { judgeFile } from './lib/judge.js';
-import { restoreMediaPaths, sourceLeavesForLang } from './lib/media-paths.js';
+import {
+  restoreMediaPaths,
+  sourceLeavesForLang,
+  instagramArrayForLang,
+  isInstagramArrayLeaf,
+} from './lib/media-paths.js';
 import { reconcileInstagramTags } from './lib/tag-reconcile.js';
 import {
   flattenLeaves,
@@ -783,6 +788,42 @@ async function runContent(ctx: RunCtx): Promise<number> {
   }
   await ctx.state.save();
 
+  // 3b. Массив instagram (ID постов) — механические данные: существует только
+  // в ru и en, в модель не отправляется никогда (см. фильтр todo ниже). Для
+  // en: отсутствующие ID дописываются из ru, существующие НЕ перезаписываются
+  // (у en свой легаси-набор, как у instagram-тегов), state якорится, чтобы
+  // ключ не числился missing/changed.
+  for (const item of items) {
+    const igLeaves: Leaves = {};
+    for (const [p, v] of Object.entries(item.ruLeaves)) {
+      if (isInstagramArrayLeaf(p)) igLeaves[p] = v;
+    }
+    if (Object.keys(igLeaves).length === 0) continue;
+    for (const lang of ctx.langs) {
+      if (!instagramArrayForLang(lang) || lang.toLowerCase() === 'ru') continue;
+      const targetPath = path.join(ROOT, 'src', 'i18n', lang.toLowerCase(), item.relPath);
+      const target = await readJsonOr<any>(targetPath, null);
+      if (target == null) continue; // файла нет — целиком создаст перевод
+      const flat = flattenLeaves(target);
+      const fill: Leaves = {};
+      for (const [p, v] of Object.entries(igLeaves)) {
+        if (!flat[p]) fill[p] = v; // отсутствующий/пустой ID → из ru
+      }
+      const stale = Object.keys(igLeaves).filter((p) => item.scope[p] !== hashLeaf(igLeaves[p]!));
+      if (Object.keys(fill).length === 0 && stale.length === 0) continue;
+      if (Object.keys(fill).length > 0) {
+        applyLeaves(target, fill);
+        await writeJsonAtomic(targetPath, target);
+      }
+      ctx.state.markTranslated(item.scope, igLeaves);
+      await ctx.state.save();
+      console.log(
+        `🔁 ${lang} ${item.relPath}: instagram вне перевода — дописано из ru ${Object.keys(fill).length}, якорь state ${stale.length}`,
+      );
+    }
+  }
+  await ctx.state.save();
+
   // 4. Перевод: пул воркеров по задачам файл×язык; лимит одновременных
   // запросов к модели держит семафор VllmClient, воркеров — не больше concurrency.
   const tasks: Array<{ item: ContentItem; lang: string; todo: string[] }> = [];
@@ -792,7 +833,10 @@ async function runContent(ctx: RunCtx): Promise<number> {
         item.perLang[lang],
         args.full,
         Object.keys(sourceLeavesForLang(item.ruLeaves, lang)),
-      );
+      )
+        // instagram — механические данные: не уходит в модель даже в --full
+        // (для не-ru/en локалей его уже нет в источнике, тут достраховка для en).
+        .filter((p) => !(isInstagramArrayLeaf(p) && instagramArrayForLang(lang)));
       if (todo.length === 0) {
         console.log(`⏭  ${lang} ${item.relPath}: актуально`);
         continue;

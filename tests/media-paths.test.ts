@@ -6,6 +6,8 @@ import {
   mediaLocaleFor,
   restoreMediaPaths,
   sourceLeavesForLang,
+  instagramArrayForLang,
+  isInstagramArrayLeaf,
 } from '../scripts/lib/media-paths.js';
 import { validateTranslation } from '../scripts/lib/validation.js';
 import { flattenLeaves } from '../scripts/lib/tree.js';
@@ -106,6 +108,37 @@ describe('isVideoPath / sourceLeavesForLang — видео только для r
   test('валидация для ru по-прежнему требует ru-сегмент видео-пути', () => {
     const ru = { video: 'diary/ru/v2.mp4' };
     expect(validateTranslation('ru', flattenLeaves(ru), { video: 'diary/en/v2.mp4' }).length).toBe(1);
+  });
+});
+
+describe('массив instagram — только ru и en', () => {
+  const ruLeaves = flattenLeaves({
+    title: 'Тест',
+    instagram: ['18035271944388619', '18481071250010619'],
+    instagramFallback: ['id'],
+  });
+
+  test('instagramArrayForLang: ru/en — да, остальные — нет', () => {
+    expect(instagramArrayForLang('ru')).toBe(true);
+    expect(instagramArrayForLang('en')).toBe(true);
+    expect(instagramArrayForLang('de')).toBe(false);
+    expect(instagramArrayForLang('pt_BR')).toBe(false);
+  });
+
+  test('для не-ru/en локалей instagram-листья выбрасываются из источника (→ мёртвые → purge)', () => {
+    const forJa = sourceLeavesForLang(ruLeaves, 'ja');
+    expect(Object.keys(forJa)).toEqual(['/title', '/instagramFallback/0']);
+  });
+
+  test('en сохраняет instagram в источнике (синхронизация механическая, не перевод)', () => {
+    expect(Object.keys(sourceLeavesForLang(ruLeaves, 'en'))).toHaveLength(4);
+  });
+
+  test('isInstagramArrayLeaf: сегмент instagram, но не instagramFallback', () => {
+    expect(isInstagramArrayLeaf('/instagram/0')).toBe(true);
+    expect(isInstagramArrayLeaf('/texts/1/instagram/3')).toBe(true);
+    expect(isInstagramArrayLeaf('/instagramFallback/0')).toBe(false);
+    expect(isInstagramArrayLeaf('/title')).toBe(false);
   });
 });
 
