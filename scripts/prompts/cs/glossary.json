@@ -1,157 +1,257 @@
 [
   {
-    "ru": "Глубинное убеждение / Глубинные убеждения",
-    "lang": "hluboké přesvědčení",
-    "context": "Подтверждено: Hluboká přesvědčení."
-  },
-  {
-    "ru": "Промежуточное убеждение / Промежуточные убеждения",
-    "lang": "mezipřesvědčení",
-    "context": "Подтверждено: Mezipřesvědčení."
+    "ru": "Когнитивно-поведенческая терапия / КПТ",
+    "lang": "kognitivně-behaviorální terapie (KBT)",
+    "context": "Корпус: полная форма — 34 вхождения, аббревиатура KBT — 78. Чешская аббревиатура — KBT (не КПТ и не CBT). При первом упоминании — полный термин, далее можно KBT."
   },
   {
     "ru": "Автоматическая мысль / Автоматические мысли",
     "lang": "automatická myšlenka",
-    "context": "Подтверждено: automatické myšlenky."
+    "context": "Поле дневника в UI (diary_field_thought) и 29 файлов корпуса (92 вхождения). Смежное: «дневник автоматических мыслей» — deník automatických myšlenek (5 вхождений + UI diary_title)."
+  },
+  {
+    "ru": "Когнитивные искажения / Когнитивная ошибка",
+    "lang": "kognitivní zkreslení",
+    "context": "Поле дневника в UI (diary_field_distortions, daybook_ai_loading_phrase_4 «Hledám kognitivní zkreslení...») и 26 файлов корпуса (107 вхождений); ед.ч. — kognitivní zkreslení (первые фразы всех статей distortions.json)."
+  },
+  {
+    "ru": "Глубинное убеждение / Глубинные убеждения",
+    "lang": "hluboké přesvědčení",
+    "context": "Корпус: ед.ч. — 7, мн.ч. (hluboká přesvědčení) — 13 вхождений; вариант jádrová — 0 в корпусе. UI-раздел GPT-анализа называет их Jádrová přesvědčení (gpt_deep_title) — допустимо как имя раздела в интерфейсных строках; в текстах сайта — hluboké přesvědčení."
+  },
+  {
+    "ru": "Промежуточное убеждение / Промежуточные убеждения",
+    "lang": "mezipřesvědčení",
+    "context": "Корпус: 32 вхождения; вариант mezilehlá přesvědčení — 0 в корпусе. UI: gpt_middle_title «Mezilehlá přesvědčení», gpt_recommendation_intermediate_title «Analýza mezilehlých přesvědčení od AI» — допустимо в интерфейсных строках; в текстах сайта — mezipřesvědčení."
   },
   {
     "ru": "Деструктивное убеждение / Деструктивные убеждения",
-    "lang": "nefunkční přesvědčení",
-    "context": "Подтверждено: в проекте nefunkční (а не destruktivní)."
+    "lang": "destruktivní přesvědčení",
+    "context": "FIX 2026-09-22: в старом словаре стояло nefunkční — в корпусе всего 3 вхождения против 4 у destruktivní přesvědčení (а с «destruktivní myšlenky» и производными — 13 файлов). UI использует škodlivé přesvědčení (destructive, coping_banner_title, coping_believe_title) и neprospěšná přesvědčení (stepper_record_coping_continue) — оба варианта 0 в корпусе, только интерфейсные. Единый термин для текстов — destruktivní přesvědčení."
   },
   {
-    "ru": "Когнитивные искажения / Когнитивные ошибки",
-    "lang": "kognitivní zkreslení",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Когнитивно-поведенческая терапия / КПТ",
-    "lang": "kognitivně-behaviorální terapie (KBT)",
-    "context": "Подтверждено; чешская аббревиатура — KBT."
-  },
-  {
-    "ru": "Дневник",
-    "lang": "deník",
-    "context": "Подтверждено: vést deník."
-  },
-  {
-    "ru": "Запись (в дневнике)",
-    "lang": "záznam",
-    "context": "Подтверждено: do jednoho záznamu."
-  },
-  {
-    "ru": "Ежедневник",
-    "lang": "deník",
-    "context": "В проекте Ежедневник и Дневник совпадают (Deník)."
-  },
-  {
-    "ru": "Умный ежедневник",
-    "lang": "chytrý deník",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Копинг-карточка / Копинг-карточки",
-    "lang": "copingová kartička",
-    "context": "Подтверждено: copingové kartičky."
+    "ru": "Конструктивное убеждение",
+    "lang": "konstruktivní přesvědčení",
+    "context": "UI (constructive «Konstruktivní přesvědčení») и корпус (konstruktivn- — 10 файлов / 15 вхождений). Пара к destruktivní."
   },
   {
     "ru": "Адаптивный ответ",
     "lang": "adaptivní odpověď",
-    "context": "Подтверждено."
+    "context": "UI: diary_field_response, daybook_ai_loading_phrase_5 «Připravuji adaptivní odpověď...»; корпус: texts/diary.json, story/diary.json. Единый термин (adaptivní myšlení/strategie в корпусе — другие контексты, не заменять ими поле дневника)."
+  },
+  {
+    "ru": "Копинг-карточка / Копинг-карточки",
+    "lang": "copingová kartička",
+    "context": "UI: coping_card, coping_title (Copingové kartičky), create_coping; корпус — 17 вхождений в 4 файлах (мн.ч. copingové kartičky — 9). Чешская транслитерация coping- с -ová, не «zvládací»."
   },
   {
     "ru": "Уровень веры / Убеждённость",
-    "lang": "míra přesvědčení",
-    "context": "Подтверждено: míru přesvědčení ohodnotit."
+    "lang": "míra víry",
+    "context": "FIX 2026-09-22: в старом словаре стояло míra přesvědčení — 0 вхождений в корпусе. Единственный якорь — UI (coping_believe_title «Míra víry ve škodlivé přesvědčení»). В текстах пишем míra víry v (destruktivní) přesvědčení."
   },
   {
-    "ru": "Катастрофизация",
-    "lang": "katastrofizace",
-    "context": "Подтверждено."
+    "ru": "Дневник автоматических мыслей",
+    "lang": "deník automatických myšlenek",
+    "context": "Заголовок инструмента в UI (diary_title «Deník automatických myšlenek») и 5 вхождений корпуса. Не сливать с общим разделом «Дневник» — также deník."
   },
   {
-    "ru": "Чёрно-белое мышление",
-    "lang": "černobílé myšlení",
-    "context": "Подтверждено."
+    "ru": "Дневник",
+    "lang": "deník",
+    "context": "Раздел приложения (ключ diary); «ведение дневника» — vedení deníku (notifications_diary_channelname); 17 файлов корпуса (47 вхождений, incl. «Statistiky k deníku» в sitemap)."
   },
   {
-    "ru": "Чтение мыслей",
-    "lang": "čtení myšlenek",
-    "context": "Подтверждено."
+    "ru": "Запись (в дневнике)",
+    "lang": "zápis / záznam",
+    "context": "Оба живут: sitemap — «Export zápisů z deníku», «formát zápisu „vděčnost“»; UI — daybook_inner «Zápis», subtab_diary_new «Nový záznam», notifications_diary_title «Zapište si do deníku novou událost». В корпусе zápis — 9 файлов / 22, záznam — 8 / 19; единообразие внутри одного текста важнее выбора одного слова."
   },
   {
-    "ru": "Сверхобобщение / Обобщение",
-    "lang": "zobecňování",
-    "context": "Подтверждено (полн.: přehnané zobecňování)."
+    "ru": "Ежедневник",
+    "lang": "deník",
+    "context": "В чешском переводе «Ежедневник» и «Дневник» слились в deník: sitemap «AI в ежедневнике» → «AI v deníku», «Изображения в ежедневнике» → «Obrázky v deníku». Не вводить diář/plánovač (0 вхождений в корпусе)."
   },
   {
-    "ru": "Персонализация",
-    "lang": "personalizace",
-    "context": "Стандартный термин чешских материалов по КПТ."
+    "ru": "Умный ежедневник",
+    "lang": "chytrý deník",
+    "context": "UI (daybook_title «Chytrý deník») и sitemap («Přidat do chytrého deníku formát zápisu „vděčnost“»)."
   },
   {
-    "ru": "Долженствование",
-    "lang": "myšlenky typu „musím“",
-    "context": "Стандартное название искажения в чешской литературе."
+    "ru": "Индекс личностной гармонии",
+    "lang": "Index osobní harmonie",
+    "context": "Название теста DAS в UI (ключ das). В корпусе 0 вхождений — придерживаться этого варианта."
   },
   {
-    "ru": "Навешивание ярлыков",
-    "lang": "nálepkování",
-    "context": "Стандартный термин из списка искажений."
+    "ru": "Личностная гармония (раздел историй)",
+    "lang": "osobní harmonie",
+    "context": "UI story_distortions_title «Osobní harmonie». Слово harmonie само по себе в корпусе — общее («внутренняя гармония», «harmoničtější život»), не термин теста."
   },
   {
-    "ru": "Мысленный фильтр",
-    "lang": "mentální filtr",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Эмоциональное обоснование",
-    "lang": "emoční zdůvodňování",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Обесценивание позитивного",
-    "lang": "znehodnocování pozitiva",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Панические атаки",
-    "lang": "panická ataka",
-    "context": "Подтверждено: panické ataky."
-  },
-  {
-    "ru": "Навязчивые мысли",
-    "lang": "vtíravé myšlenky",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Инсайт",
+    "ru": "Инсайт / Инсайты",
     "lang": "vhled",
-    "context": "Стандартный чешский термин (не калька инсайт)."
+    "context": "Корпус: «vnitřní vhledy» (texts/daybook), «nový vhled do sebe sama» (articles); UI: stepper_test_first «osobní vhled». Не английская калька insight."
+  },
+  {
+    "ru": "Практика благодарности / Благодарность",
+    "lang": "praxe vděčnosti / vděčnost",
+    "context": "Корпус: «pravidelná praxe vděčnosti», «je praxe vděčnosti» (story/distortions/autonomy); UI-фича — Cvičení vděčnosti (daybook_gratitude_title); «дневник благодарности» — deník vděčnosti (sitemap). Благодарность — vděčnost (6 файлов корпуса)."
+  },
+  {
+    "ru": "Дыхательные практики",
+    "lang": "dechová cvičení",
+    "context": "FIX 2026-09-22: в старом словаре стояло dechové techniky — 1 вхождение (releases) против dechová cvičení в UI (exercises_therapy_relax_title) и корпусе (tests/anxiety, tests/sociophobia). Единый термин — dechová cvičení; «ритм дыхания» в breathing.json — dechový rytmus."
+  },
+  {
+    "ru": "Сократический диалог",
+    "lang": "sokratovský dialog",
+    "context": "Sitemap (заголовок «Sokratovský dialog»). Одно вхождение — держаться его; не sokratický."
+  },
+  {
+    "ru": "Эмоции",
+    "lang": "emoce",
+    "context": "Поле дневника (diary_field_emotions), gpt_recommendation_emotions_title; 42 файла корпуса (115 вхождений). «Интенсивность эмоции» в UI — Intenzita emocí (emotion_intensity)."
   },
   {
     "ru": "Настроение",
     "lang": "nálada",
-    "context": "Ключевой термин трекинга состояния."
+    "context": "12 файлов корпуса / 16 вхождений. Ключевой термин трекинга состояния."
   },
   {
-    "ru": "Психологическое благополучие",
-    "lang": "psychická pohoda",
-    "context": "Подтверждено."
+    "ru": "Состояние",
+    "lang": "stav",
+    "context": "UI: «váš stav se zlepšil/zhoršil» (believe_final_*), «sledovat, jak se váš stav mění» (das_hint), «vnímat tvůj stav» (homeBot)."
   },
   {
-    "ru": "Дыхательные практики",
-    "lang": "dechové techniky",
-    "context": "Подтверждено."
+    "ru": "Тревога / Тревожность",
+    "lang": "úzkost",
+    "context": "Проблема в UI (intro_new_problem_anxiety «Úzkost»), название теста (constants: anxiety) и 36 файлов корпуса (272 вхождения — самый частотный термин корпуса). «Тревожное расстройство» — úzkostná porucha, «социальная тревожность» — см. отдельную статью."
   },
   {
-    "ru": "AI-помощник",
-    "lang": "asistent s umělou inteligencí",
-    "context": "Подтверждено; допустимо AI asistent."
+    "ru": "Депрессия",
+    "lang": "deprese",
+    "context": "Название теста BDI (constants) и 22 файла корпуса (121 вхождение)."
+  },
+  {
+    "ru": "Психологические тесты",
+    "lang": "psychologické testy",
+    "context": "UI (psy_tests); ед.ч. — psychologický test."
   },
   {
     "ru": "Психолог",
     "lang": "psycholog",
-    "context": "Стандартное обращение к специалисту."
+    "context": "36 файлов корпуса / 107 вхождений. Не психиатр (psychiatr) и не психотерапевт (psychoterapeut) — контекст решает."
+  },
+  {
+    "ru": "AI-помощник / AI",
+    "lang": "asistent s umělou inteligencí / AI",
+    "context": "В чешском аббревиатура AI стандартна и в UI не раскрывается (Doporučení od AI, Odpověď AI, Analýza od AI, Podpora AI; discount_activate_ai «asistenta umělé inteligence»). В нарративных текстах — как в releases.json: «asistent s umělou inteligencí» / «umělá inteligence» при первом упоминании, далее можно AI."
+  },
+  {
+    "ru": "Психологическое благополучие",
+    "lang": "psychická pohoda",
+    "context": "Корпус: texts + distortions.json («zhoršovat psychickou pohodu»); также «duševní pohoda» в UI (tutorial_daybook_gpt_description). Прилагательное «психологический» — psychologický, «психический/душевный» — psychický/duševní по контексту."
+  },
+  {
+    "ru": "Панические атаки / Паника",
+    "lang": "panická ataka",
+    "context": "Корпус склоняет: Panické ataky, panických atak, panickými atakami — 5 файлов (proof, anxiety, bdi, sociophobia, key). Единичный outlier «panickým záchvatům» (story/distortions/key.json) не копировать. UI: intro_new_problem_panic «Panika»."
+  },
+  {
+    "ru": "Навязчивые мысли / ОКР",
+    "lang": "vtíravé myšlenky / obsedantně-kompulzivní porucha (OCD)",
+    "context": "Мысли — vtíravé myšlenky (15 вхождений); расстройство — Obsedantně-kompulzivní porucha (название теста в constants, tests/okr), внутри теста аббревиатура OCD — 17 раз (плюс 1 в bdi): OCD в чешском стандартна."
+  },
+  {
+    "ru": "Выгорание",
+    "lang": "vyhoření",
+    "context": "7 файлов корпуса / 22 вхождения; название теста — Pracovní vyhoření (constants: burnout), в текстах теста и статей — просто vyhoření."
+  },
+  {
+    "ru": "Прокрастинация",
+    "lang": "prokrastinace",
+    "context": "UI (intro_new_problem_procrastination) и 9 файлов корпуса / 18 вхождений."
+  },
+  {
+    "ru": "Бессонница",
+    "lang": "nespavost",
+    "context": "UI (intro_new_problem_sleep «Nespavost»); в корпусе 2 файла / 3 вхождения."
+  },
+  {
+    "ru": "Социальная тревожность / Социофобия",
+    "lang": "sociální úzkost / Sociální fobie",
+    "context": "В связных текстах доминирует sociální úzkost (33 вхождения против ~7 форм fobie); название теста в UI-реестре — Sociální fobie (constants: sociophobia), и внутри теста клинические упоминания тоже sociální fobie. Разделение: тексты сайта — sociální úzkost, название теста/клиника — sociální fobie."
+  },
+  {
+    "ru": "СДВГ",
+    "lang": "ADHD / Porucha pozornosti",
+    "context": "Название теста в реестре — Porucha pozornosti (constants: sdvg), внутри теста ADHD — 31 вхождение: чешские материалы используют аббревиатуру ADHD, не транслитерацию СДВГ. «Гиперактивность» — hyperaktivita."
+  },
+  {
+    "ru": "РПП / Расстройства пищевого поведения",
+    "lang": "poruchy příjmu potravy",
+    "context": "Мн.ч. — основной вариант корпуса (20+ вхождений, tests/eat и статьи); название теста в ед.ч. — Porucha příjmu potravy (constants: eat)."
+  },
+  {
+    "ru": "Катастрофизация",
+    "lang": "katastrofizace",
+    "context": "Название в списке искажений UI (errors_catastrophization_title) и первое предложение статьи distortions.json («Katastrofizace je kognitivní zkreslení...»)."
+  },
+  {
+    "ru": "Чёрно-белое мышление",
+    "lang": "černobílé myšlení",
+    "context": "UI (errors_blackandwhite_title) и первая фраза статьи distortions.json — одинаково."
+  },
+  {
+    "ru": "Сверхобобщение / Обобщение",
+    "lang": "nadměrné zobecňování",
+    "context": "FIX 2026-09-22: в старом словаре — zobecňování (полн. přehnané zobecňování). Название искажения в UI (errors_common_title) и в тексте distortions.json — Nadměrné zobecňování; «přehnané zobecňování» — 1 случайное вхождение. Bare zobecňování = «обобщение» вообще."
+  },
+  {
+    "ru": "Чтение мыслей",
+    "lang": "čtení myšlenek",
+    "context": "UI (errors_read_title) и текст distortions.json («Kognitivní zkreslení „čtení myšlenek“...»)."
+  },
+  {
+    "ru": "Персонализация",
+    "lang": "personalizace",
+    "context": "UI (errors_personalization_title) и первая фраза статьи distortions.json (RESPONSE: «Personalizace je kognitivní zkreslení...»)."
+  },
+  {
+    "ru": "Долженствование",
+    "lang": "Požadavky typu „musím“ / zkreslení „mělo by“",
+    "context": "Два валидных якоря: название в списке UI (errors_should_statements_title) — «Požadavky typu „musím“»; в связном тексте distortions.json (DUE) — «Zkreslení „mělo by“». Кавычки — чешские нижние „“."
+  },
+  {
+    "ru": "Навешивание ярлыков",
+    "lang": "nálepkování",
+    "context": "UI (errors_label_title) и первая фраза статьи distortions.json — одинаково."
+  },
+  {
+    "ru": "Мысленный фильтр",
+    "lang": "mentální filtr",
+    "context": "UI (errors_filter_title) и первая фраза статьи distortions.json — одинаково."
+  },
+  {
+    "ru": "Эмоциональное обоснование",
+    "lang": "emoční zdůvodňování",
+    "context": "UI (errors_emo_title) и текст distortions.json («Kognitivní zkreslení „emoční zdůvodňování“...»)."
+  },
+  {
+    "ru": "Обесценивание позитивного",
+    "lang": "Znehodnocování pozitivního / zlehčování pozitivního",
+    "context": "Название в списке UI (errors_discval_title) — Znehodnocování pozitivního; в связном тексте distortions.json (DISCVAL) — «Zlehčování pozitivního je kognitivní zkreslení...». Не приводить механически одно к другому; учитывать, что zlehčování также вторая половина «zveličování a zlehčování»."
+  },
+  {
+    "ru": "Преувеличение и преуменьшение",
+    "lang": "zveličování a zlehčování",
+    "context": "UI (errors_magnification_minimization_title) и первая фраза статьи distortions.json (MORE_MINE: «Zkreslení „zveličování a zlehčování“...»)."
+  },
+  {
+    "ru": "«Можно было бы»",
+    "lang": "„Co by bylo, kdyby“ / „co kdyby“",
+    "context": "Название в списке UI (errors_maybe_title) — „Co by bylo, kdyby“; в связном тексте distortions.json (MAYBE) — «Zkreslení „co kdyby“». Оба якоря валидны; кавычки чешские „“."
+  },
+  {
+    "ru": "Туннельное мышление",
+    "lang": "tunelové vidění",
+    "context": "Название в UI (errors_tunnel_vision_title); в текстах корпуса не встречается — придерживаться этого варианта."
   }
 ]
