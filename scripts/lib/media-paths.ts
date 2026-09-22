@@ -1,10 +1,19 @@
 /**
- * Защита медиа-путей от перевода: картинки существуют только для en и ru
- * (stories.json: поле img, формат «<секция>/<lang>/<файл>»), поэтому во всех
- * языках, кроме ru, языковой сегмент пути обязан быть «en». Видео существуют
- * ТОЛЬКО для ru: в остальных локалях видео-поля не переводятся и существовать
- * не должны (sourceLeavesForLang выбрасывает их из источника, purge мёртвых
- * ключей выпиливает из целевых файлов).
+ * Защита механических данных от перевода.
+ *
+ * Медиа-пути: картинки существуют только для en и ru (stories.json: поле img,
+ * формат «<секция>/<lang>/<файл>»), поэтому во всех языках, кроме ru, языковой
+ * сегмент пути обязан быть «en». Видео существуют ТОЛЬКО для ru: в остальных
+ * локалях видео-поля не переводятся и существовать не должны
+ * (sourceLeavesForLang выбрасывает их из источника, purge мёртвых ключей
+ * выпиливает из целевых файлов).
+ *
+ * Массив instagram (tests/*.json: ID постов на экране результата) — тот же
+ * случай: контент есть только у ru и en (как и атрибуты тегов <instagram>,
+ * см. tag-reconcile.ts), ID — не текст. В остальных локалях ключа быть не
+ * должно (API сайта берёт набор постов из en: data.instagram || en.instagram),
+ * а для en он не отправляется в модель — синхронизируется механически
+ * (translate.ts, шаг 3b).
  *
  * Три уровня обороны:
  *   1. Промпт (prompts/base/fragments/common.txt) — просим модель не трогать пути.
@@ -57,21 +66,42 @@ export function isVideoPath(value: unknown): boolean {
 }
 
 /**
- * Представление ru-источника для целевого языка: видео-листья существуют
- * только для ru, в остальных локалях они не переводятся вообще — не уходят
- * в payload, не валидируются, не пишутся, а в целевых файлах считаются
- * «мёртвыми» и выпиливаются штатным purge.
+ * Представление ru-источника для целевого языка. Непереводимые данные,
+ * которых у локали быть не может, выбрасываются: видео-листья — только для
+ * ru, листья массива instagram — только для ru и en. Выброшенное не уходит
+ * в payload, не валидируется, не пишется, а в целевых файлах считается
+ * «мёртвым» и выпиливается штатным purge.
  */
 export function sourceLeavesForLang<T extends Record<string, unknown>>(
   ruLeaves: T,
   lang: string,
 ): T {
-  if (normalizeLangCode(lang) === 'ru') return ruLeaves;
+  const lc = normalizeLangCode(lang);
+  if (lc === 'ru') return ruLeaves;
+  const keepInstagram = instagramArrayForLang(lc);
   const out: Record<string, unknown> = {};
   for (const [p, v] of Object.entries(ruLeaves)) {
-    if (!isVideoPath(v)) out[p] = v;
+    if (isVideoPath(v)) continue;
+    if (!keepInstagram && isInstagramArrayLeaf(p)) continue;
+    out[p] = v;
   }
   return out as T;
+}
+
+/** Локали, у которых существует собственный массив instagram (ID постов). */
+const INSTAGRAM_ARRAY_LOCALES = new Set(['ru', 'en']);
+
+/** Существует ли массив instagram для локали (ru и en; остальным API отдаёт en). */
+export function instagramArrayForLang(lang: string): boolean {
+  return INSTAGRAM_ARRAY_LOCALES.has(normalizeLangCode(lang));
+}
+
+/**
+ * Лист принадлежит массиву instagram — путь содержит сегмент «instagram»
+ * («/instagram/0»). Ключи вроде instagramFallback сегментом не являются.
+ */
+export function isInstagramArrayLeaf(p: string): boolean {
+  return p.split('/').includes('instagram');
 }
 
 /**
