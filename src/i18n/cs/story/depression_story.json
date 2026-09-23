@@ -1,39 +1,38 @@
 {
   "title": "Příběh Alice: cesta k překonání deprese",
-  "description": "V tomto článku se podíváme na příběh člověka, který se potýkal s depresí, abychom ukázali, jak spolu souvisejí automatické myšlenky, mezipřesvědčení a hluboká přesvědčení. Na příběhu Alice a její práci s psychologem uvidíme, jak se přesvědčení vytvářejí a jak je lze měnit, aby bylo možné depresi lépe zvládat. Přístup vychází z principů kognitivně-behaviorální terapie (KBT).",
+  "description": "V tomto článku rozebereme příběh člověka, který čelil depresi, abychom ukázali, jak spolu souvisí automatické myšlenky, mezipřesvědčení a hluboká přesvědčení. Skrze příběh Alice a její spolupráci s psychologem uvidíme, jak se přesvědčení formují a jak je lze měnit, abychom dokázali zvládat depresi. Tento přístup vychází z principů kognitivně-behaviorální terapie (KBT).",
   "screen_1": {
     "texts": [
-      "Abychom názorně ukázali vztah mezi automatickými myšlenkami, mezipřesvědčeními a hlubokými přesvědčeními, podívejme se na příběh Alice — mladé ženy, která se potýká s depresí a pochybnostmi o sobě.",
-      "Nejprve si krátce přiblížíme její život a prostředí:",
-      "Alice vyrůstala v neúplné rodině v menším městě. Když jí bylo šest, otec odešel k jiné ženě. Vztah s matkou byl složitý: často Alici kritizovala a jen zřídka ji chválila.",
-      "Po rozvodu spolu rodiče téměř nekomunikovali a Alice měla pocit, že stojí mezi dvěma stranami a snaží se vyhovět oběma. Otec měl v nové rodině tři děti a trávil s nimi hodně času — jezdili na výlety do přírody a společně sportovali. Alice prožívala zranění, žárlivost a pocit, že je odstrčená.",
-      "Ve škole se Alice stala premiantkou hlavně proto, aby si zasloužila matčino uznání, přičemž dobré známky byly pro matku „samozřejmost“. Později dokončila univerzitu s vyznamenáním v oboru marketing. Je jí 23 let, není vdaná a nemá děti. Kvůli hledání práce a stability vyhledá psychologa, protože se potýká s depresí.",
-      "Její stav se zhoršil kvůli potížím s hledáním zaměstnání. Omezila sociální aktivity, většinu času se cítí sklesle a je přesvědčená, že se jí nic nepodaří."
+      "Abychom názorně ukázali souvislost mezi automatickými myšlenkami, mezipřesvědčeními a hlubokými přesvědčeními, podívejme se na příběh Alice — mladé ženy, která čelí depresi a pochybnostem o sobě.",
+      "Nejprve se trochu blíže seznámíme s jejím životem a okolím:",
+      "Alice vyrostla v neúplné rodině v malém městě. Když jí bylo 6 let, otec odešel k jiné ženě. Vztahy s matkou nebyly jednoduché: matka Alici často kritizovala a málokdy ji chválila.",
+      "Po rozvodu spolu rodiče téměř nemluvili a Alice se cítila rozpolcená mezi oběma stranami, když se snažila vyhovět každému. Otec měl ve své nové rodině tři děti a trávil s nimi hodně času — společné výlety do přírody, sport. Alice prožívala pocity urážky, žárlivosti a pocit vyloučení.",
+      "Ve škole byla Alice vynikající studentkou, což však bylo do značné míry motivováno snahou získat uznání matky, pro kterou byly dobré známky samozřejmostí. Později dokončila univerzitu s výborným výsledkem v oboru marketing. Nyní je jí 23 let, je svobodná a nemá děti. Při hledání práce a stability se kvůli depresi obrací na psychologa.",
+      "Její stav se zhoršil v souvislosti s obtížemi při hledání práce. Její sociální aktivita klesla, většinu času se cítí sklesle a je přesvědčena, že nic se jí nepodaří.",
+      "<instagram>"
     ]
   },
   "screen_2": {
     "texts": [
-      "Teď se podívejme, jak se u Alice projevují tři úrovně myšlení na příkladu jejího rozhovoru s psychologem:"
-    ],
-    "dialog": [
-      "Alice, zkuste si prosím vybavit situaci, kdy jste v poslední době cítila silné negativní emoce.",
-      "Bylo to včera. Prohlížela jsem pracovní nabídky a uviděla jsem ideální pozici: zajímavá firma, flexibilní pracovní doba, dobrý výdělek. Ale úplně jsem ztuhla a životopis jsem nakonec neposlala.",
-      "Co vás konkrétně zastavilo?",
-      "Napadlo mě, že mě stejně nevezmou. Že je to pro mě moc složité. Že to nezvládnu (automatická myšlenka).",
-      "Co pro vás znamená myšlenka, že to nezvládnete?",
-      "Že úkoly neudělám dobře a že chyby jsou něco hodně špatného (mezipřesvědčení).",
-      "Jak byste nazvala člověka, který dělá chyby a nezvládá věci?",
-      "Je to nula, co nezvládne nic pořádného.",
-      "A když se to děje vám — když narazíte na obtíže a uděláte chyby — kdo jste pak vy?",
-      "Asi jsem nula (hluboké přesvědčení)."
+      "Nyní se podívejme, jak se projevují tři úrovně Alicina myšlení na příkladu jejího dialogu s psychologem:",
+      "<dialog psy=\"true\">Alice, vzpomeňte si prosím na situaci, kdy jste nedávno prožívala silné negativní emoce.</dialog>",
+      "<dialog>Bylo to včera. Prohlížela jsem si pracovní nabídky a narazila na ideální práci: zajímavá společnost, flexibilní pracovní doba, dobrý příjem. Ale ztuhla jsem a životopis jsem nakonec neodeslala.</dialog>",
+      "<dialog psy=\"true\">Co vás přesně zastavilo?</dialog>",
+      "<dialog>Pomyslela jsem si, že mě stejně nepřijmou. Že je to na mě příliš složité. Že to nezvládnu (automatická myšlenka).</dialog>",
+      "<dialog psy=\"true\">Co pro vás znamená ta myšlenka, že byste to nezvládla?</dialog>",
+      "<dialog>Že nebudu schopná úkoly dobře plnit a že chyby jsou velmi špatné (mezipřesvědčení).</dialog>",
+      "<dialog psy=\"true\">Jak byste označila člověka, který dělá chyby a nezvládá věci?</dialog>",
+      "<dialog>Byl by to neschopný člověk, který není schopen ničeho vážného.</dialog>",
+      "<dialog psy=\"true\">A co když se to děje vám — když čelíte obtížím a děláte chyby, kým jste tedy vy?</dialog>",
+      "<dialog>Pravděpodobně jsem neschopná (hluboké přesvědčení).</dialog>"
     ]
   },
   "screen_3": {
     "texts": [
-      "Teď už vidíme, jak spolu tři úrovně Alicina myšlení souvisejí a jak formují její emoční stav.",
-      "Je důležité si připomenout: Alice se s těmito přesvědčeními nenarodila. Vznikla a upevnila se v průběhu života pod vlivem událostí a prostředí. A to znamená, že se dají změnit.",
-      "Práce začíná u automatických myšlenek. Když se je Alice naučí zachytit a zpochybnit, oslabí jejich vliv a může se posunout k dalšímu kroku — ke změnám v mezipřesvědčeních.",
-      "Postupně, krok za krokem, jí tyto změny pomohou přetvořit i hluboká přesvědčení a nahradit je realističtějšími a podpůrnějšími."
+      "Nyní už vidíme, jak jsou tři úrovně Alicina myšlení propojeny a jak ovlivňují její emocionální stav.",
+      "Alice se s těmito přesvědčeními nenarodila. Ta vznikla a upevnila se v průběhu života pod vlivem událostí a okolí. To znamená, že je lze změnit.",
+      "Práce začíná u automatických myšlenek. Jakmile se Alice naučí si jich všímat a zpochybňovat je, bude moci oslabit jejich vliv a přejít k další úrovni změn — k mezipřesvědčením.",
+      "Postupně, krok za krokem, jí tyto změny pomohou transformovat i hluboká přesvědčení tím, že je nahradí realističtějšími a více podporujícími přesvědčeními."
     ]
   }
 }
