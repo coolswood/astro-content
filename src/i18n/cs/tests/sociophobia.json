@@ -1,322 +1,452 @@
 {
   "steps": [
-    "Jak se cítíte, když potřebujete někoho požádat o pomoc nebo laskavost?",
-    "Jak se cítíte, když máte vystoupit před velkým publikem?",
-    "Jak reagujete, když se s vámi cizí lidé dávají do řeči?",
-    "Jak často se vyhýbáte telefonátům nebo videohovorům?",
-    "Jak často se vyhýbáte kontaktu s lidmi mimo práci nebo školu?",
-    "Cítíte se nepříjemně, když vstoupíte do místnosti, kde už všichni sedí?",
+    "Jak se cítíte, když musíte požádat o pomoc nebo o nějakou službu?",
+    "Jak se cítíte, když máte vystupovat před velkým publikem?",
+    "Jak reagujete, když se s vámi pokusí promluvit cizí člověk?",
+    "Jak často máte chuť vyhýbat se telefonátům a videokonferencím?",
+    "Jak často máte chuť vyhýbat se sociálnímu kontaktu mimo práci nebo studium?",
+    "Cítíte nepohodlí, když vstupujete do místnosti, kde už všichni sedí?",
     "Jak vnímáte kritiku na sociálních sítích?",
-    "Na pracovních poradách dáváte často přednost mlčení?",
-    "Jak se cítíte, když vás někdo požádá, abyste před skupinou vyjádřili svůj názor?",
+    "Jak často je pro vás na pracovních schůzkách snazší mlčet?",
+    "Jak se cítíte, když vás skupina požádá, abyste vyjádřili svůj názor?",
     "Jak se cítíte na místech s velkým množstvím lidí, například v metru?",
-    "Jak často se snažíte vyhnout tomu, abyste byli ve společnosti středem pozornosti?",
-    "Jak často se vyhýbáte návštěvám veřejných míst, jako jsou restaurace, kluby nebo bary?",
-    "Pociťujete úzkost, když jste středem pozornosti?",
-    "Jak často pociťujete úzkost před blížícím se setkáním nebo komunikací s lidmi?",
-    "Cítíte nervozitu při komunikaci s nadřízenými?",
-    "Jak často se vyhýbáte návštěvám velkých nákupních center nebo obchodních domů?",
-    "Jak se cítíte, když máte udělat něco nového, například zajít do nové kavárny?",
-    "Jak se cítíte, když máte před neznámým publikem splnit nový úkol?",
-    "Jak často se vyhýbáte volání lidem, které moc neznáte?",
-    "Pociťujete úzkost, když vracíte zboží do obchodu?",
-    "Jak se cítíte, když vás na poslední chvíli požádají o veřejné vystoupení?",
-    "Pociťujete úzkost, když si něco zapisujete v přítomnosti druhých?",
-    "Cítíte úzkost, když odmítáte dotěrného prodejce?",
-    "Cítíte úzkost, když vyjadřujete nesouhlas lidem, které příliš neznáte?",
-    "Jak reagujete na nečekaná pozvání na svatbu nebo jiné oslavy?",
-    "Jak často se vyhýbáte telefonním hovorům v přítomnosti jiných lidí?",
-    "Jak často se vyhýbáte večírkům a společenským akcím?",
-    "Jak často se vyhýbáte používání veřejných toalet?",
-    "Jak reagujete na návrhy sejít se nebo jít na rande s potenciálním partnerem?",
-    "Jak často se vyhýbáte přijímání hovorů z neznámých čísel?",
-    "Jak se cítíte při komunikaci s neznámými lidmi během cestování nebo dovolené?",
-    "Pociťujete úzkost při očním kontaktu s neznámými lidmi?",
-    "Jak často se vyhýbáte konfliktům nebo sporům s cizími lidmi?",
-    "Jak se cítíte při skupinovém fotografování?",
-    "Jak reagujete na nabídky přidat se k nové skupině nebo komunitě?",
-    "Jak často se vyhýbáte setkáním s neznámými lidmi?",
-    "Pociťujete úzkost před praktickou zkouškou dovedností?",
-    "Pociťujete úzkost při rozhovoru s kýmkoli?",
-    "Dáváte přednost procházkám ve chvílích, kdy je venku málo lidí nebo skoro nikdo?",
-    "Jak často se vyhýbáte očnímu kontaktu s neznámými lidmi?"
+    "Jak často máte chuť vyhýbat se pozornosti ostatních v rámci společnosti?",
+    "Jak často se snažíte vyhýbat návštěvám restaurací, klubů a dalších veřejných míst?",
+    "Cítíte úzkost, když je na vás zaměřena pozornost celého okolí?",
+    "Jak často ve vás vyvolává nadcházející sociální interakce úzkost?",
+    "Cítíte znepokojení při komunikaci s vedením?",
+    "Jak často se snažíte vyhýbat rozsáhlým obchodním centrům a obchodním domům?",
+    "Jak reagujete na nutnost udělat něco nového v neznámém prostředí?",
+    "Jak se cítíte, když máte vykonat nový úkol před neznámými lidmi?",
+    "Jak často máte potíže rozhodnout se pro telefonát někomu, koho málo znáte?",
+    "Cítíte úzkost, když vracíte zboží do obchodu?",
+    "Jak se cítíte, když vás někdo nečekaně požádá o veřejné vystoupení?",
+    "Zažíváte úzkost, když něco píšete v přítomnosti ostatních?",
+    "Cítíte úzkost, když musíte odmítnout naléhavého prodavače?",
+    "Cítíte úzkost, když vyjadřujete nesouhlas s lidmi, které málo znáte?",
+    "Jak obvykle vnímáte nečekaná pozvání na oslavy a slavnosti?",
+    "Jak často se snažíte neodpovídat na hovory v přítomnosti ostatních lidí?",
+    "Jak často vyhýbáte se večírkům a setkáním v rámci společnosti?",
+    "Jak často vyhýbáte se veřejným toaletám?",
+    "Jak obvykle vnímáte návrh na setkání s člověkem, který by se vám mohl líbit?",
+    "Jak často neodpovídáte na hovory z neznámých čísel?",
+    "Jak obvykle vnímáte komunikaci s cizími lidmi na cestách nebo na dovolené?",
+    "Cítíte úzkost, když se díváte neznámým lidem do očí?",
+    "Jak často vyhýbáte se konfliktům nebo sporům s neznámými lidmi?",
+    "Jaký máte postoj k účasti na skupinových fotografiích?",
+    "Jak reagujete na návrhy na připojení se k nové skupině nebo komunitě?",
+    "Jak často máte chuť nechodit na setkání s neznámými lidmi?",
+    "Cítíte úzkost před zkouškou praktických dovedností?",
+    "Zažíváte úzkost při rozhovoru s kýmkoli?",
+    "Častěji si vybíráte čas na procházku v době, kdy je venku méně lidí?",
+    "Jak často se snažíte vyhnout očnímu kontaktu s neznámými lidmi?"
   ],
   "variants": {
     "0": [
-      "Bez problémů požádám, je to pro mě normální",
+      "S lehkostí prosím o pomoc, je to v pořádku",
       "Cítím mírné nepohodlí, ale zvládnu to",
-      "Je mi to nepříjemné, snažím se obejít bez pomoci",
-      "Je mi to velmi nepříjemné, raději se tomu vyhýbám"
+      "Je to nepříjemné, snažím se zvládnout to sám",
+      "Je to velmi nepříjemné, vyhýbám se tomu"
     ],
     "1": [
       "Sebevědomě a klidně",
-      "S určitou úzkostí",
-      "Jsem nervózní, ale dokážu vystoupit",
-      "Propadám panice"
+      "S určitou mírou úzkosti",
+      "Mám nervozitu, ale dokážu vystoupit",
+      "Začínám panikařit"
     ],
     "2": [
       "Přátelsky a otevřeně",
-      "Opatrně a s nedůvěrou",
-      "Snažím se rozhovoru vyhnout",
-      "Raději uteču"
+      "Opatrně a nedůvěryčivě",
+      "Pokouším se vyhnout se rozhovoru",
+      "Doslova prchám"
     ],
-    "3": ["Téměř nikdy", "Někdy", "Poměrně často", "Téměř vždy"],
-    "4": ["Téměř nikdy", "Někdy", "Poměrně často", "Téměř vždy"],
-    "5": ["Nikdy", "Někdy", "Často", "Neustále"],
+    "3": [
+      "Skoro nikdy",
+      "Občas",
+      "Poměrně často",
+      "Skoro vždy"
+    ],
+    "4": [
+      "Skoro nikdy",
+      "Občas",
+      "Poměrně často",
+      "Skoro vždy"
+    ],
+    "5": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
     "6": [
-      "Klidně, je to jen názor druhých",
+      "Klidně, je to jen cizí názor",
       "Trochu mě to mrzí, ale rychle na to zapomenu",
-      "Silně to prožívám, může mi to zkazit den",
+      "Velmi mě to trápí, může mi to zkazit celý den",
       "Může to ve mně vyvolat silnou úzkost"
     ],
-    "7": ["Nikdy", "Někdy", "Často", "Neustále"],
+    "7": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
     "8": [
       "Sebevědomě",
-      "S určitou úzkostí",
-      "Je mi hodně nepříjemně",
-      "Je mi opravdu zle"
+      "S určitou mírou úzkosti",
+      "Velmi nepříjemně",
+      "Velmi špatně"
     ],
     "9": [
-      "Naprosto v pořádku",
-      "Trochu napjatě, ale dá se to",
-      "Je mi velmi nepříjemně, takovým místům se vyhýbám",
+      "Úplně v pořádku",
+      "Trochu napjatě, ale je to v pořádku",
+      "Velmi nepříjemné, vyhýbám se takovým místům",
       "Panika nebo silná úzkost"
     ],
-    "10": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "11": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "12": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
-    "13": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "14": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
-    "15": ["Nikdy", "Někdy", "Často", "Neustále"],
+    "10": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "11": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "12": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
+    "13": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "14": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
+    "15": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
     "16": [
-      "Je to pro mě zajímavá zkušenost, baví mě zkoušet nové věci",
+      "Je to zajímavá zkušenost, rád zkouším nové věci",
       "Cítím mírné nepohodlí, ale zvládnu to",
       "Snažím se takovým situacím vyhýbat",
-      "Vyvolává to ve mně silnou úzkost nebo paniku"
+      "Vyvolává to u mě silnou úzkost nebo paniku"
     ],
     "17": [
       "Jednám sebevědomě",
-      "S určitou úzkostí",
+      "S mírnou úzkostí",
       "Snažím se tomu vyhnout",
-      "Propadám panice a strachu"
+      "Zažívám paniku a strach"
     ],
-    "18": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "19": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
+    "18": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "19": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
     "20": [
       "Vystoupím bez problémů",
       "Cítím úzkost, ale souhlasím",
-      "Je mi hodně nepříjemně, ale souhlasím",
+      "Je mi velmi nepříjemně, ale souhlasím",
       "Okamžitě odmítnu"
     ],
-    "21": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
-    "22": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
-    "23": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
+    "21": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
+    "22": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
+    "23": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
     "24": [
-      "S radostí přijmu",
-      "Trochu se nervuji, ale jdu",
-      "Raději se takovým akcím vyhýbám",
-      "Opravdu nechci jít"
+      "Rád přijímám",
+      "Trochu se nervuji, ale jdu do toho",
+      "Raději se takovým situacím vyhýbám",
+      "Moc do toho nechci jít"
     ],
-    "25": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "26": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "27": ["Nikdy", "Někdy", "Často", "Neustále"],
+    "25": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "26": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "27": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
     "28": [
-      "S radostí souhlasím",
-      "Trochu se nervuji, ale jdu",
-      "Rande se raději vyhýbám",
-      "Okamžitě odmítnu"
+      "Rád souhlasím",
+      "Trochu se nervuji, ale jdu do toho",
+      "Snažím se vyhýbat schůzkám",
+      "Okamžitě odmítám"
     ],
-    "29": ["Nikdy", "Někdy", "Často", "Neustále"],
+    "29": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
     "30": [
-      "Seznamuji se a povídám si",
-      "Stydím se, ale seznamuji se",
-      "Snažím se komunikaci vyhýbat",
-      "S cizími lidmi nemluvím"
+      "Navazuji kontakty a komunikuji",
+      "Mám trochu stud, ale navazuji kontakt",
+      "Snažím se vyhýbat komunikaci",
+      "Nemluvím s cizími lidmi"
     ],
-    "31": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
-    "32": ["Téměř nikdy", "Někdy", "Poměrně často", "Téměř vždy"],
+    "31": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
+    "32": [
+      "Skoro nikdy",
+      "Občas",
+      "Poměrně často",
+      "Skoro vždy"
+    ],
     "33": [
-      "S radostí souhlasím",
+      "Rád souhlasím",
       "Je mi trochu nepříjemně, ale souhlasím",
-      "Raději se tomu vyhýbám",
-      "Odmítnu"
+      "Raději se vyhýbám",
+      "Odmítám"
     ],
     "34": [
-      "S radostí přijmu nabídku",
-      "Stydím se, ale souhlasím",
-      "Raději se nepřidávám",
-      "Odmítnu"
+      "Nabídku přijímám s radostí",
+      "Mám trochu stud, ale souhlasím",
+      "Raději do toho nevstupuji",
+      "Odmítám"
     ],
-    "35": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "36": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
-    "37": ["Ne", "Mírná úzkost", "Střední úzkost", "Intenzivní úzkost"],
-    "38": ["Nikdy", "Někdy", "Často", "Neustále"],
-    "39": ["Nikdy", "Někdy", "Často", "Neustále"]
+    "35": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "36": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
+    "37": [
+      "Ne",
+      "Mírná úzkost",
+      "Střední úzkost",
+      "Silná úzkost"
+    ],
+    "38": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ],
+    "39": [
+      "Nikdy",
+      "Občas",
+      "Často",
+      "Neustále"
+    ]
   },
   "steps_description": {
     "0": {
-      "text": "Sociální fobie neboli sociální úzkostná porucha se projevuje silnou úzkostí ze situací, které zahrnují sociální kontakt. Požádat o pomoc je jednou z častých situací, které u lidí s touto poruchou vyvolávají úzkost.",
-      "fact": "Charles Darwin, slavný přírodovědec a autor evoluční teorie, trpěl výraznou sociální fobií. Vyhýbal se veřejným vystoupením a často zažíval záchvaty paniky, když musel jednat s lidmi, navzdory svým mimořádným úspěchům."
+      "text": "Sociální fobie, neboli sociální úzkostná porucha, se projevuje silnou úzkostí v situacích sociální interakce. Žádost o pomoc patří mezi běžné situace, které lidem s touto poruchou vyvolávají úzkost.",
+      "fact": "Charles Darwin, známý přírodovědec a autor teorie evoluce, trpěl silnou sociální fobií. Přestože dosáhl mimořádných úspěchů, vyhýbal se veřejnému vystupování a často prožíval panické ataky před nutností interakce s lidmi."
     },
     "1": {
-      "text": "Glosofobie je strach z veřejného vystupování a patří k nejčastějším formám sociální fobie. Přibližně 75 % lidí pociťuje alespoň určitou míru strachu z vystoupení na veřejnosti.",
-      "fact": "Podle průzkumu Americké psychologické asociace má zhruba 30 % Američanů výrazný strach z veřejného vystupování, což z něj dělá jeden z nejrozšířenějších strachů."
+      "text": "Glossofobie je strach z veřejného vystupování a patří k nejčastějším formám sociální fobie. Přibližně 75 % lidí pociťuje určitou míru strachu z mluvení před publikem.",
+      "fact": "Podle průzkumu American Psychological Association pociťuje asi 30 % Američanů silný strach z veřejného vystupování, což z něj činí jednu z nejrozšířenějších obav."
     },
     "2": {
-      "text": "Jedním z klíčových rysů sociální fobie je strach ze sociálního kontaktu s neznámými lidmi. Může se projevovat vyhýbáním se kontaktům, snahou být nenápadný a pocitem trapnosti či úzkosti.",
-      "fact": "Franz Kafka, známý spisovatel, trpěl výraznou sociální úzkostí a často měl potíže při komunikaci s neznámými lidmi. Jeho díla, například „Proces“ a „Zámek“, odrážejí jeho hluboké obavy a úzkosti."
+      "text": "Jedním z klíčových aspektů sociální fobie je strach ze sociální interakce s cizími lidmi. To se může projevovat vyhýbáním kontaktů, snahou zůstat neviditelným nebo pocitem trapnosti či úzkosti.",
+      "fact": "Franz Kafka, slavný spisovatel, trpěl silnou sociální fobií a často měl potíže při komunikaci s cizími lidmi. Jeho díla, jako jsou „Proces“ nebo „Zámek“, odrážejí jeho hluboké strachy a úzkosti."
     },
     "3": {
-      "text": "Lidé se sociální úzkostí se často vyhýbají telefonátům a videokonferencím ze strachu, že budou špatně pochopeni nebo že udělají špatný dojem. Mohou se obávat, jak zní jejich hlas, nebo toho, co řeknou.",
-      "fact": "Jedním ze způsobů, jak snížit úzkost před telefonáty, je trénink a příprava. Pomoci může například sepsat si předem body, otázky a možné odpovědi — člověk se pak cítí jistěji a strach je menší."
+      "text": "Lidé se sociální fobií se často vyhýbají telefonním hovorům a videokonferencím kvůli obavě, že budou špatně pochopeni nebo že udělají špatný dojem. Mohou mít obavy z toho, jak zní jejich hlas, nebo co přesně řeknou.",
+      "fact": "Jedním ze způsobů, jak snížit úzkost před telefonními hovory, je praxe a příprava. Vytvoření seznamu otázek a odpovědí před hovorem může člověku pomoci cítit se sebevědoměji a snížit strach."
     },
     "4": {
-      "text": "Sociální úzkost může vést k tomu, že se lidé vyhýbají kontaktu i mimo povinné situace (jako je práce nebo škola), aby se nemuseli potýkat s potenciálně stresujícími interakcemi.",
-      "fact": "Výzkumy ukazují, že přibližně 15 milionů Američanů (asi 7 % populace USA) trpí sociální úzkostnou poruchou a značná část z nich dává přednost vyhýbání se sociálním situacím mimo své povinné role."
+      "text": "Sociální fobie může lidi nutit vyhýbat se komunikaci mimo nezbytné situace (jako je práce nebo škola), aby se vyhnuli potenciálně úzkostným sociálním interakcím.",
+      "fact": "Výzkumy ukazují, že asi 15 milionů Američanů (přibližně 7 % populace USA) trpí sociální fobií, přičemž značná část z nich raději vyhýbá sociální situace mimo své povinné role."
     },
     "5": {
-      "text": "Vstup do místnosti, kde už všichni sedí, může být pro lidi se sociální úzkostí obzvlášť stresující kvůli strachu, že na ně bude upřena pozornost. Mohou mít obavy, že si jich budou ostatní všímat nebo je hodnotit.",
-      "fact": "Albert Einstein, slavný fyzik, trpěl výraznou sociální úzkostí a vyhýbal se velkým shromážděním. Dával přednost práci o samotě a kontaktu jen s úzkým okruhem přátel a kolegů."
+      "text": "Vstup do zaplněné místnosti může být pro lidi se sociální fobií obzvláště úzkostný kvůli strachu, že budou v centru pozornosti. Mohou mít obavy, že na ně lidé budou hledět nebo je budou hodnotit.",
+      "fact": "Albert Einstein, slavný fyzik, trpěl silnou sociální fobií a vyhýbal se velkým shromážděním. Raději pracoval v osamění a komunikoval pouze s blízkými přáteli a kolegy."
     },
     "6": {
-      "text": "Lidé se sociální úzkostí mohou vnímat kritiku velmi bolestně, zejména na sociálních sítích, kde je veřejná a může ji vidět mnoho dalších lidí.",
-      "fact": "Digitální detox je stále populárnější. Mnoho lidí, včetně známých osobností, si dává na čas pauzu od sociálních sítí, aby podpořili duševní pohodu a snížili dopad negativních komentářů."
+      "text": "Lidé se sociální fobií mohou vnímat kritiku velmi bolestivě, zejména v sociálních sítích, kde je veřejná a může ji vidět mnoho lidí.",
+      "fact": "Digitální detox se stává stále populárnějším. Mnoho lidí, včetně celebrit, se dočasně odpojuje od sociálních sítí, aby obnovili svou psychickou pohodu a snížili dopad negativní kritiky."
     },
     "7": {
-      "text": "Mlčení může být způsob, jak se vyhnout pozornosti a možné kritice, zároveň ale může omezovat profesní růst i pracovní příležitosti.",
-      "fact": "Pomoci mohou techniky aktivního naslouchání. Například soustředit se na to, co říkají ostatní, a připravit si dopředu otázky nebo krátké poznámky může snížit úzkost a usnadnit zapojení do diskuse."
+      "text": "Mlčení může být způsobem, jak se vyhnout negativní pozornosti a potenciální kritice, ale zároveň může omezovat jejich kariérní růst a profesní možnosti.",
+      "fact": "Techniky aktivního naslouchání mohou lidem pomoci cítit se na schůzích sebevědoměji. Například soustředění se na naslouchání a předem připravené otázky či komentáře mohou pomoci snížit úzkost a zlepšit účast na diskusích."
     },
     "8": {
-      "text": "Sociální úzkost se vyznačuje silnou nervozitou v situacích, kdy člověka mohou druzí hodnotit. Jednou z takových situací je žádost vyjádřit svůj názor před skupinou. Může se objevit strach z chyby nebo z negativního hodnocení."
+      "text": "Sociální fobie je charakteristická silnou úzkostí v situacích, kdy může být člověk ostatními hodnocen. Jednou z takových situací je žádost o vyjádření názoru před skupinou. To může vyvolávat strach z chyby nebo z negativního hodnocení."
     },
     "9": {
-      "text": "Lidé se sociální úzkostí mohou pociťovat výrazné napětí a diskomfort na místech s velkým množstvím lidí, například v metru. Taková prostředí mohou vyvolávat obavy, že si jich někdo všimne, bude je hodnotit nebo že dojde k nečekané sociální situaci.",
-      "fact": "Adele, známá britská zpěvačka, otevřeně mluvila o sociální úzkosti a panických atakách. Vyhýbá se velmi rušným místům, aby snížila riziko panických příznaků."
+      "text": "Lidé se sociální fobií mohou pociťovat silnou úzkost a nepříjemnost v místech s velkým shlukem lidí, například v metru. Taková místa mohou vyvolávat strach z toho, že budou všimnuti, hodnoceni nebo že narazí na nečekané sociální situace.",
+      "fact": "Adele, slavná britská zpěvačka, trpí sociální fobií a panickými ataky. Vyhýbá se přeplněným místům, jako je metro, aby snížila riziko výskytu panických symptomů."
     },
     "10": {
-      "text": "Lidé se sociální úzkostí se často snaží vyhnout tomu, být středem pozornosti, aby na sebe nepřitahovali zájem a nebyli hodnoceni. Strach z kritiky nebo posměchu může posilovat potřebu zůstat „v pozadí“."
+      "text": "Lidé se sociální fobií se často snaží nebýt v centru pozornosti, aby si neupoutali zbytečný zájem a nestali se terčem hodnocení okolí. Mohou pociťovat strach z kritiky nebo posměchu, což prohlubuje jejich touhu zůstat v úkrytu."
     },
     "11": {
-      "text": "Podle amerického Národního institutu duševního zdraví (NIMH) zažije sociální úzkostnou poruchu během života přibližně 12,1 % populace, což často vede k vyhýbání se veřejným místům."
+      "text": "Podle údajů National Institute of Mental Health v USA trpí sociální úzkostnou poruchou přibližně 12,1 % populace během svého života, což často vede k vyhýbání se veřejným místům."
     },
     "12": {
-      "text": "Výzkumy ukazují, že mírná úroveň úzkosti může výkon dokonce zlepšit — aktivuje sympatický nervový systém a zvyšuje soustředění. Tento jev je známý jako Yerkesův–Dodsonův zákon."
+      "text": "Výzkumy ukazují, že mírná úzkost může ve skutečnosti zlepšit výkon tím, že aktivuje sympatický nervový systém a zvyšuje koncentraci. Tento jev je znám jako Yerkesův-Dodsonův zákon."
     },
     "13": {
-      "text": "Úzkost před sociálním kontaktem se označuje jako „sociální úzkost“ a může sahat od lehkého nepohodlí až po silný strach. Často se uvádí jako třetí nejčastější psychická porucha po depresi a alkoholismu."
+      "text": "Úzkost před sociální interakcí je známá jako „sociální úzkost“ a může se pohybovat od mírné nepříjemnosti až po silný strach. Je to třetí nejčastější duševní porucha po depresi a alkoholismu."
     },
     "14": {
-      "text": "Strach z autorit se někdy označuje jako „hierarchofobie“. Nejde o oficiální medicínský termín, ale používá se k popisu nadměrného napětí při komunikaci s lidmi ve vyšší pozici.",
-      "fact": "Warren Buffett, jeden z nejúspěšnějších investorů na světě, měl v mládí výrazný strach z veřejného vystupování i z kontaktu s autoritami. Přihlásil se dokonce do kurzu, který mu pomohl tento strach překonat, a později z toho výrazně těžil i v kariéře."
+      "text": "Strach z autorit má své vlastní označení – „hierachofobie“. Není to oficiální lékařský termín, ale často se používá pro popis nadměrné úzkosti při komunikaci s lidmi, kteří mají vyšší postavení.",
+      "fact": "Warren Buffett, jeden z nejúspěšnějších investorů na světě, v mládí pociťoval silný strach z veřejného vystupování a komunikace s autoritami. Dokonce absolvoval kurz, jak tento strach překonat, což mu později výrazně pomohlo v kariéře."
     },
     "15": {
-      "text": "Strach z návštěv nákupních center může souviset s agorafobií — obavou z otevřených prostor nebo míst, odkud je těžké rychle odejít. Může však jít i o projev sociální úzkosti nebo ochlofobie (strachu z davu)."
+      "text": "Strach z návštěv obchodních center může být spojen s agorafobií – obavou z otevřených prostor nebo míst, kde je těžké rychle najít východ. Může to však být také projev sociální fobie nebo ochlofobie (strachu z davu)."
     },
     "16": {
-      "text": "Psychologové někdy mluví o „intoleranci nejistoty“, která souvisí se strachem z neznámého. Tento stav může ovlivňovat nejen sociální situace, ale i rozhodování obecně."
+      "text": "Psychologové nazývají strach z neznámého „netolerancí k nejistotě“. Tento stav může ovlivňovat nejen sociální situace, ale i rozhodování obecně."
     },
     "17": {
-      "text": "Strach z vystupování před neznámým publikem se označuje jako „úzkost ze sociálního hodnocení“. Jde o kombinaci obavy z negativního hodnocení a strachu z nových situací.",
-      "fact": "Emma Stone, držitelka Oscara, otevřeně mluvila o své zkušenosti s panickými atakami, zejména v situacích, kdy musela vystupovat před novým publikem. Pomáhala jí terapie i dechová cvičení."
+      "text": "Strach před neznámým publikem se nazývá „sociální hodnotící úzkost“. Je to kombinace strachu z negativního hodnocení a obavy z nových situací.",
+      "fact": "Emma Stone, držitelka ceny Oscar, otevřeně mluvila o svém boji s panickými ataky, zejména v situacích spojených s vystupováním před novým publikem. K jejich zvládnutí využívala terapii a dechová cvičení."
     },
     "18": {
-      "text": "Strach z telefonování se někdy označuje jako „telefobie“. V době digitální komunikace, kdy si lidé zvykají na psaní zpráv, je tento jev stále častější.",
-      "fact": "Studie společnosti BankMyCell z roku 2019 ukázala, že 76 % mileniálů pociťuje úzkost, když musí zavolat. U generace Z bylo číslo ještě vyšší — 81 %."
+      "text": "Strach z telefonických hovorů dostal název „telefonofobie“. Tento jev se v éře digitální komunikace stává stále běžnějším, protože lidé jsou zvyklí na textovou komunikaci.",
+      "fact": "Průzkum provedený BankMyCell v roce 2019 ukázal, že 76 % mileniálů pociťuje úzkost, když musí provést telefonický hovor. U generace Z je toto číslo ještě vyšší – 81 %."
     },
     "19": {
-      "text": "Úzkost při vracení zboží může souviset se strachem z konfliktu, obavou z negativního hodnocení nebo pocitem viny, že personálu „přiděláváte práci“.",
-      "fact": "Úzkost při vracení zboží bývá někdy spojována s širším jevem nazývaným „asertofobie“ — strachem hájit svá práva nebo vyjadřovat své potřeby."
+      "text": "Úzkost při vrácení zboží může být spojena se strachem ze konfliktu, obavou z negativního hodnocení nebo pocity viny za to, že „obnáháte personál obchodu nějakým nepohodlím“.",
+      "fact": "Úzkost při vrácení zboží je často spojena s širším jevem známým jako „assertofobie“ – strach hájit svá práva nebo vyjadřovat své potřeby."
     },
     "20": {
-      "text": "Strach z nepřipraveného vystoupení často souvisí se „syndromem podvodníka“ — pocitem, že nejste dost kompetentní a můžete být „odhaleni“.",
-      "fact": "Pomoci může technika „improvizačního myšlení“. Místo paniky z toho, že nemáte přípravu, zkuste situaci vnímat jako příležitost ke spontánnímu a autentickému kontaktu s publikem."
+      "text": "Strach z nepřipravených vystoupení je často spojen s „syndromem impostora“ – pocitem, že nejste dostatečně kompetentní a že můžete být „odhaleni“.",
+      "fact": "Užitečná může být technika „improvisovaného myšlení“. Místo toho, abyste panikařili kvůli nedostatku přípravy, zkuste situaci vnímat jako příležitost k spontánní a upřímné komunikaci s publikem."
     },
     "21": {
-      "text": "Strach psát nebo pořizovat si poznámky v přítomnosti druhých se někdy označuje jako „skriptofobie“. Jde o specifický projev sociální úzkosti spojený se strachem z hodnocení okolím.",
-      "fact": "Přesná data o četnosti nejsou k dispozici, ale studie publikovaná v Journal of Anxiety Disorders naznačila, že asi 7 % lidí pociťuje výrazný diskomfort, když musí psát v přítomnosti druhých."
+      "text": "Strach ze psaní nebo dělání zápisů v přítomnosti ostatních se někdy nazývá „skriptofobie“. Je to specifický případ sociální úzkosti spojený s obavou z hodnocení okolím.",
+      "fact": "Přesná data o rozšířenosti tohoto strachu neexistují, ale studie publikovaná v Journal of Anxiety Disorders ukázala, že přibližně 7 % lidí pociťuje značnou nepříjemnost, když musí psát v přítomnosti ostatních."
     },
     "22": {
-      "text": "Potíže říkat „ne“, zejména dotěrným lidem, se někdy popisují jako „syndrom zavděčování“. Souvisí to se snahou vyhnout se konfliktu a se strachem z negativního hodnocení.",
-      "fact": "Studie Univerzity v Pensylvánii ukázala, že zhruba 68 % lidí pociťuje nepohodlí, když mají v prodejních situacích říct „ne“."
+      "text": "Psychologové nazývají potíže s odmítáním, zejména u vytrvalých lidí, „syndromem vyhovování ostatním“ nebo „nemocí služebnosti“.",
+      "fact": "Studie provedená na Pennsilvánské univerzitě ukázala, že přibližně 68 % lidí pociťuje nepříjemnost, když musí v prodejních situacích říct „ne“."
     },
     "23": {
-      "text": "Martin Luther King Jr., známý bojovník za občanská práva, na začátku své kariéry prožíval silnou úzkost, když měl vyjádřit svůj názor před skupinou. Postupným překonáváním strachu se ale stal jedním z nejvlivnějších řečníků a lídrů hnutí za lidská práva."
+      "text": "Martin Luther King Jr., známý bojovník za občanská práva, na začátku své kariéry pociťoval silnou úzkost při vyjadřování svého názoru před skupinami. Překonáním svých strachů se však stal jedním z nejvlivnějších řečníků a vůdců hnutí za lidská práva."
     },
     "24": {
-      "text": "Lidé se sociální úzkostí mohou prožívat výrazný stres při nečekaných pozvánkách na svatby nebo jiné oslavy. Podobné akce často znamenají kontakt s mnoha lidmi a zapojení do společenských situací, což může být velmi náročné.",
-      "fact": "Daniel Radcliffe, známý rolí Harryho Pottera, mluvil o sociální úzkosti a často se vyhýbá velkým veřejným akcím. Dává přednost času v menší společnosti přátel a rodiny."
+      "text": "Lidé se sociální fobií mohou pociťovat silnou úzkost a stres při nečekaných pozvání na svatby nebo jiné oslavy. Takové události často vyžadují komunikaci s velkým množstvím lidí a účast v sociálních interakcích, což může být pro ně obzvláště náročné.",
+      "fact": "Daniel Radcliffe, známý ze své role Harryho Pottera, trpí sociální fobií a často se vyhýbá velkým veřejným akcím. Raději tráví čas v menších společnostech přátel a rodiny."
     },
     "25": {
-      "text": "Lidé se sociální úzkostí se často vyhýbají telefonování v přítomnosti ostatních ze strachu, že je někdo uslyší a bude je hodnotit. Mohou mít obavy z toho, jak zní jejich hlas, že udělají chybu nebo že jejich hovor vyvolá negativní reakci okolí."
+      "text": "Lidé se sociální fobií se často vyhýbají telefonním hovorům v přítomnosti ostatních lidí kvůli strachu, že budou slyšeni a posouzeni. Mohou mít obavy z toho, jak zní jejich hlas, z možných chyb v řeči nebo z toho, že jejich rozhovor vyvolá u okolí negativní reakci."
     },
     "26": {
-      "text": "Vyhýbání se večírkům může souviset s „bezpečnostním chováním“ — strategií, která krátkodobě úzkost snižuje, ale dlouhodobě může posilovat sociální izolaci a strach."
+      "text": "Vyhýbání se večírkům může být spojeno s „ochranným chováním“ — strategií, která v krátkodobém horizontu snižuje úzkost, ale v dlouhodobém může posílit sociální izolaci a strach."
     },
     "27": {
-      "text": "Podle studií trpí přibližně 7–9 % lidí parurézou, známou také jako syndrom „stydlivého močení“, což je vede k vyhýbání se veřejným toaletám."
+      "text": "Podle výzkumů trpí asi 7–9 % lidí pararezí, známou také jako syndrom plachého močení, což nutí vyhýbat se používání veřejných toalet."
     },
     "28": {
-      "text": "Lidé se sociální úzkostí mohou při návrzích na schůzku nebo rande prožívat výraznou nervozitu. Mezi hlavní důvody patří strach z negativního hodnocení, nejistota a obavy z chyb v komunikaci."
+      "text": "Lidé se sociální fobií mohou pociťovat silnou úzkost při obdržení návrhů na setkání nebo rande. Mezi hlavní příčiny patří strach z negativního hodnocení, nejistota sama o sobě a obavy z možných chyb v komunikaci."
     },
     "29": {
-      "text": "Strach z telefonátů, zejména z neznámých čísel, může vycházet z obav, že člověk nebude vědět, jak správně reagovat, nebo že se rozhovor vyvine jinak, než čekal. Může v tom být i strach z možné konfrontace nebo z nutnosti rychle odpovídat na nečekané otázky."
+      "text": "Strach z telefonických hovorů, zejména z neznámých čísel, může být vyvolán obavou, že člověk neví, jak správně odpovědět, nebo že rozhovor by se mohl vyvíjet jinak, než bylo očekáváno. To může zahrnovat i strach z možné konfrontace nebo nutnost rychle reagovat na nečekané otázky."
     },
     "30": {
-      "text": "Během cestování nebo dovolené mohou lidé se sociální úzkostí pociťovat výrazné napětí při komunikaci s neznámými lidmi. Mohou se obávat negativního hodnocení, toho, že řeknou něco nevhodného, nebo že nebudou vědět, jak rozhovor udržet."
+      "text": "Lidé se sociální fobií mohou pociťovat značnou úzkost při komunikaci s cizími lidmi během cestování nebo dovolené. Mohou se bát negativního hodnocení, že udělají něco nevhodného, nebo že nebudou vědět, jak udržet konverzaci."
     },
     "31": {
-      "text": "Výzkumy naznačují, že přibližně 60 % lidí se sociální úzkostí pociťuje diskomfort při očním kontaktu. Může to být jedna z nejstresovějších částí sociální interakce."
+      "text": "Výzkumy ukazují, že přibližně 60 % lidí se sociální úzkostí pociťuje nepříjemnost při očním kontaktu. To může být jedním z nejúzkostnějších aspektů sociálních interakcí."
     },
     "32": {
-      "text": "Lidé se sociální úzkostí mohou prožívat silnou nervozitu při možnosti konfliktu nebo sporu s neznámými lidmi. Mohou se obávat negativního hodnocení, nepochopení nebo i agresivní reakce, což vede k vyhýbání se potenciálně konfliktním situacím."
+      "text": "Lidé se sociální fobií mohou pociťovat silnou úzkost při možnosti konfliktů nebo sporů s cizími lidmi. Mohou se bát negativního hodnocení, nepochopení nebo dokonce agresivní reakce, což vede k vyhýbání se jakýmkoli potenciálně konfliktním situacím."
     },
     "33": {
-      "text": "Podle výzkumů pociťuje přibližně 20–30 % lidí výrazné nepohodlí při fotografování, zejména ve skupině. Tato úzkost může souviset se strachem z hodnocení a s nespokojeností se vzhledem."
+      "text": "Podle výzkumů pociťuje asi 20–30 % lidí značnou nepříjemnost při fotografování, zejména v skupinách. Tato úzkost může být spojena se strachem z negativního hodnocení a s odporem k vlastnímu vzhledu."
     },
     "34": {
-      "text": "Isaac Newton, slavný vědec, byl velmi uzavřený a vyhýbal se společenským akcím i novým skupinám. Dával přednost samotě a vědecké práci."
+      "text": "Isaac Newton, slavný vědec, byl také velmi uzavřený a vyhýbal se účasti na veřejných akcích a v nových skupinách. Raději trávil čas v osamění při vědeckém výzkumu."
     },
     "35": {
-      "text": "Výzkumy ukazují, že kognitivně-behaviorální terapie (KBT) může být při léčbě sociální úzkosti velmi účinná. Pomáhá měnit negativní myšlenky a rozvíjet zdravější přístup k sociálním situacím."
+      "text": "Výzkumy ukazují, že kognitivně-behaviorální terapie (KBT) může být velmi účinná při léčbě sociální úzkosti. KBT pomáhá lidem změnit negativní myšlenky a rozvíjet pozitivnější přístup k sociálním interakcím."
     },
     "36": {
-      "text": "Úzkost před praktickou zkouškou dovedností je častá, zejména u lidí se sociální úzkostí. Strach z hodnocení a možnost neúspěchu mohou stres a nervozitu výrazně zvyšovat.",
-      "fact": "Thomas Edison, známý vynálezce, měl potíže s tradičním vzděláváním a zkouškami. Dávala mu smysl spíše praxe, experimenty a pokusy než formální testování."
+      "text": "Úzkost před zkouškou praktických dovedností a schopností je běžným problémem, zejména u lidí se sociální fobií. Strach z hodnocení a možnost neúspěchu mohou prohlubovat stres a nervozitu.",
+      "fact": "Thomas Edison, známý vynálezce, měl potíže s tradičními metodami učení a zkouškami. Raději se učil prostřednictvím praktických experimentů a pokusů a vyhýbal se formálním zkouškám."
     },
     "37": {
-      "text": "Lidé se sociální úzkostí často pociťují při rozhovorech silné napětí. Strach z negativního hodnocení, obavy z toho, jak budou jejich slova přijata, a strach z chyby mohou úzkost ještě zvyšovat."
+      "text": "Lidé se sociální fobií často pociťují silnou úzkost při rozhovorech s ostatními lidmi. Strach z negativního hodnocení, obavy z toho, jak budou jejich slova vnímána, a strach z chyby mohou prohlubovat úzkost a nervozitu."
     },
     "38": {
-      "text": "Lidé se sociální úzkostí často preferují procházky v době, kdy je venku málo lidí nebo skoro nikdo. Pomáhá jim to vyhnout se kontaktům, které mohou vyvolávat úzkost a stres.",
-      "fact": "Howard Hughes, známý americký podnikatel a letec, který byl spojován se sociální úzkostí a řadou fobií, dával přednost osamělým procházkám a vyhýbal se davům. Snažil se být nenápadný a minimalizovat sociální kontakt."
+      "text": "Lidé se sociální fobií často raději chodí ven v době, kdy je na ulicích málo lidí nebo když jsou tam vůbec. Pomáhá jim to vyhnout se sociálním interakcím, které mohou vyvolávat úzkost a stres.",
+      "fact": "Howard Hughes, slavný americký podnikatel a aviátor, známý svou sociální fobií a mnoha dalšími fobiemi, preferoval osamělé procházky a vyhýbal se přeplněným místům. Snažil se zůstat neviditelný a vyhýbat se sociálním interakcím."
     },
     "39": {
-      "text": "Oční kontakt aktivuje zrcadlové neurony, což může posílit empatii a porozumění, ale zároveň vyvolat silné emoce. To může být jeden z důvodů, proč je pro některé lidi oční kontakt tak úzkostný."
+      "text": "Oční kontakt aktivuje zrcadlové neurony, což může posílit pocit empatie a porozumění, ale také vyvolat silné emoce. To může být jedním z důvodů, proč oční kontakt vyvolává takovou úzkost."
     }
   },
   "range": {
     "normal": "Bez sociální fobie",
     "mild": "Mírně vyjádřená sociální fobie",
-    "moderate": "Výrazná sociální fobie"
+    "moderate": "Těžká sociální fobie"
   },
   "result": {
     "normal": {
-      "title": "Bez známek sociální úzkosti",
-      "text": "Vaše výsledky ukazují, že se ve většině sociálních situací cítíte jistě. Kontakt s neznámými lidmi, zapojení do diskuse nebo vystupování před publikem u vás obvykle nevyvolává výrazný diskomfort. To naznačuje, že se dokážete volně pohybovat mezi lidmi a v sociálním prostředí se cítíte poměrně pohodlně."
+      "title": "Neexistují žádné známky sociální úzkosti",
+      "text": "Vaše výsledky ukazují, že se ve většině sociálních situací cítíte sebevědomě. Kontakt s cizími lidmi, účast na diskusích nebo vystupování před publikem ve vás obvykle nevzbuzují výraznou nepříjemnost. To znamená, že s ostatními můžete volně interagovat a v společnosti se cítíte komfortně."
     },
     "mild": {
-      "title": "Střední sociální úzkost",
-      "text": "Vaše odpovědi naznačují, že v některých sociálních situacích můžete pociťovat napětí nebo nejistotu. Komunikace s neznámými lidmi, vystoupení nebo pozornost okolí pro vás mohou být stresující. Je to poměrně běžné a s podporou a pravidelným tréninkem se může vaše jistota znatelně posílit."
+      "title": "Mírná sociální úzkost",
+      "text": "Vaše odpovědi naznačují, že v některých sociálních situacích můžete pociťovat napětí nebo nejistotu. Komunikace s neznámými lidmi, vystupování nebo pozornost ostatních mohou být pro vás stresující. Je to poměrně běžný stav, a s podporou a tréninkem můžete své sebevědomí výrazně posílit."
     },
     "moderate": {
       "title": "Výrazná sociální úzkost",
-      "text": "Vaše výsledky ukazují, že sociální situace u vás mohou vyvolávat výraznou úzkost a nepohodlí. To může ovlivňovat sebedůvěru i chuť navazovat kontakt s druhými. Tyto prožitky mohou být velmi vyčerpávající, ale s podporou a při ochotě na tom pracovat lze úzkost postupně snižovat a cítit se v komunikaci svobodněji."
+      "text": "Vaše výsledky ukazují, že sociální situace u vás mohou vyvolávat značnou úzkost a nepříjemnost. To může ovlivňovat vaše sebevědomí i ochotu vstupovat do kontaktu s ostatními. Takové pocity mohou být velmi vyčerpávající, ale s podporou a snahou na tomto stavu pracovat je možné úzkost postupně snížit a v komunikaci se cítit volněji."
     }
   },
   "description": {
     "text": [
-      "Jak pohodlně se cítíte v sociálních situacích? Nervozita při komunikaci, seznamování s novými lidmi nebo při vystupování je poměrně běžná reakce.",
-      "Tento test vám pomůže lépe porozumět tomu, jak prožíváte sociální kontakt a jaká může být vaše míra sociální úzkosti. Uvědomění si vlastních reakcí je důležitým krokem k posílení sebedůvěry a většímu klidu ve společnosti."
+      "Jak moc se cítíte v sociálních situacích komfortně? Úzkost při komunikaci, seznamování s novými lidmi nebo při vystupování je poměrně běžná reakce.",
+      "Tento test vám pomůže lépe pochopit váš vztah k sociální interakci a úroveň možné sociální úzkosti. Uvědomění si vlastních reakcí je důležitým krokem k budování sebevědomí a pocitu klidu v společnosti."
     ]
   }
 }

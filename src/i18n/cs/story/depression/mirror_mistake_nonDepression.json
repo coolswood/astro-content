@@ -1,122 +1,114 @@
 {
   "mirror": {
     "title": "Technika: Zrcadlo sebekritiky",
-    "description": "Tato praxe pomáhá uvidět, jak tvrdý umí být vnitřní kritik. V krátké roleové hře přenesete své obvyklé sebekritické věty na blízkého člověka a ucítíte, jak znějí zvenčí. Cvičení učí všímat si nespravedlnosti sebeshazování a rozvíjet k sobě laskavější přístup.",
+    "description": "Tato praxe vám pomůže uvědomit si, jak tvrdá může být vaše vnitřní kritika. Skrze krátkou hru na role si své obvyklé sebekritické fráze přenesete na blízkou osobu a sami pocítíte, jak znějí zvenčí. Toto cvičení vám pomůže vnímat nespravedlnost sebepodceňování a rozvíjet k sobě laskavější přístup.",
     "screen_1": {
       "texts": [
-        "Zkuste jednoduchý postup: zkuste na své blízké klást stejné nároky, jaké obvykle kladete na sebe. A buďte v tom opravdu upřímní.",
-        "Velmi často už během prvních minut vyjde najevo, jak přísná a nespravedlivá dokáže být vnitřní kritika.",
-        "Představme si toto cvičení na příkladu rozhovoru pacienta s psychologem:",
-        "Dmitriji, říkal jste, že výpověď ve vás vyvolala pocit selhání a myšlenky typu: „Jsem neschopný, nic mi nejde.“",
-        "Zkusme se na tyto myšlenky podívat z jiného úhlu. Navrhuji krátkou scénku: své kritické věty vyslovíte, ale ne směrem k sobě — nýbrž k blízkému člověku, třeba k nejlepšímu příteli.",
-        "Já budu hrát roli přítele, který také přišel o práci. Vy budete sám sebou. Jste připravený to zkusit?",
-        "Ano, pojďme to zkusit."
+        "<activitylink id=\"alkjnaNNasz\">",
+        "Zkuste jeden trik: začněte klást blízkým stejné nároky, jaké obvykle kladete sami sobě. Dělejte to upřímně.",
+        "Velmi často je už během prvních minut jasné, jak přísná a nespravedlivá vnitřní kritika může být.",
+        "Představme si toto cvičení na příkladu dialogu mezi klientem a psychologem:",
+        "<dialog psy=\"true\">Dmitře, říkal jste, že výpověď u vás vyvolala pocit selhání a myšlenky jako: „Jsem neschopný, nic mi nejde“.</dialog>",
+        "<dialog psy=\"true\">Zkusme na tyto myšlenky pohlédnout z jiného úhlu. Navrhuji krátkou scénku: své kritické fráze vyslovíte, ale ne směřujete je k sobě, nýbrž k blízké osobě — například k nejlepšímu příteli.</dialog>",
+        "<dialog psy=\"true\">Já budu hrát roli přítele, který také přišel o práci. Vy budete sami sebou. Zkusíme to?</dialog>",
+        "<dialog man=\"true\">Ano, zkusme to.</dialog>"
       ]
     },
     "screen_2": {
       "texts": [
-        "Začneme. Já říkám: „Dnes mě vyhodili.“",
-        "Asi… jsi udělal něco špatně. Jinak by tě nevyhodili.",
-        "Co přesně myslíš?",
-        "No… možná jsi dělal chyby, nebyl jsi dost pozorný.",
-        "Takže mě teď kritizuješ?",
-        "Asi ano. Vypadá to, že jsi to nezvládal. Možná prostě nejsi ve své práci dost dobrý.",
-        "Je mi velmi nepříjemné to slyšet. Doufal jsem, že mě podpoříš.",
-        "Chápu… ale když jsi dělal chyby a nezvládal to, jak tě můžu podpořit?",
-        "Po této roleové hře Dmitrij řekl, že pro něj bylo velmi těžké mluvit takhle k blízkému člověku. Uvědomil si, že by to ve skutečnosti nikdy neudělal — ale sám k sobě tak mluvil pořád."
+        "<dialog psy=\"true\">Začněme. Říkám: „Dnes mě propustili z práce“.</dialog>",
+        "<dialog man=\"true\">Asi jsi... udělal něco špatně. Jinak by tě nepropustili.</dialog>",
+        "<dialog psy=\"true\">Co přesně, jak si myslíš?</dialog>",
+        "<dialog man=\"true\">No... možná jsi dělal chyby nebo jsi nebyl dostatečně pozorný.</dialog>",
+        "<dialog psy=\"true\">Takže mě teď kritizuješ?</dialog>",
+        "<dialog man=\"true\">Asi ano. Vypadá to, že jsi to nezvládal. Možná prostě nejsi ve své práci dost dobrý.</dialog>",
+        "<dialog psy=\"true\">To mě mrzí slyšet. Doufal jsem v podporu.</dialog>",
+        "<dialog man=\"true\">Chápu... ale když jsi dělal chyby a nezvládal to, jak tě mám podpořit?</dialog>",
+        "Po této hře na role Dmitrij uvedl, že pro něj bylo velmi těžké říkat takové věci blízkému člověku. Uvědomil si, že v realitě by tak nikdy nejednal — ale ke svému já tak jednal neustále."
       ]
     },
     "screen_3": {
       "texts": [
-        "Zajímavé, že? To, co je téměř nemožné říct druhému, si někdy dokážeme říkat úplně snadno.",
-        "K druhým často umíme být trpěliví, jemní a chápaví — a na sebe v tom zapomínáme.",
-        "Zkuste se vzdát dvojího metru. I vy si zasloužíte respekt, podporu a laskavost.",
-        "Pamatujte: zdravé sebehodnocení je jeden z klíčových základů vaší motivace, cílů a životní energie.",
-        "Při nízkém sebehodnocení své možnosti podceňujete a jako byste si sami brali právo na štěstí.",
-        "Začněte postupně měnit vztah k sobě: všímejte si malých úspěchů, dovolte si být člověkem, dělat chyby a učit se. Malé kroky vedou k velkým změnám."
-      ],
-      "quote": {
-        "text": "Mluvte se sebou tak, jako byste mluvili s člověkem, kterého milujete.",
-        "author": "Brené Brown"
-      }
+        "<q author=\"Brené Brown\">Mluvte na sebe tak, jako byste mluvili s člověkem, kterého máte rádi.</q>",
+        "Zajímavé, že? To, co bychom druhému skoro nemohli říct, si někdy snadno říkáme sami sobě.",
+        "K druhým často projevujeme trpělivost, laskavost a pochopení — a zcela zapomínáme projevovat totéž sami sobě.",
+        "Zkuste se vzdát dvojích standardů. I vy si zasloužíte respekt, podporu a laskavost.",
+        "Pamatujte: zdravé sebehodnocení je jedním ze základních pilířů vaší motivace, cílů a životní energie.",
+        "Při nízkém sebehodnocení podceňujeme své možnosti a jako bychom si sami upírali právo na štěstí.",
+        "Začněte postupně měnit svůj přístup k sobě: všímejte si malých úspěchů, dovolte si být člověkem, chybovat a učit se. Malé kroky vedou k velkým změnám."
+      ]
     }
   },
   "mistake": {
-    "title": "Technika: Zbavení se strachu z chyb",
-    "description": "Článek nabízí účinné metody, jak se vypořádat s perfekcionismem — přijmout nedokonalost a snížit strach z chyb.",
+    "title": "Technika: Jak se zbavit strachu z chyb",
+    "description": "Tento článek nabízí efektivní metody, jak bojovat s perfekcionismem, zaměřující se na přijetí nedokonalosti a snížení strachu z chyb.",
     "screen_1": {
       "texts": [
-        "Podívejme se na několik jednoduchých, ale mimořádně účinných metod, které vám pomohou překonat perfekcionistické tendence.",
-        "„Antiperfekcionistický seznam“",
-        "Mnozí perfekcionisté žijí v přesvědčení, že si něco mohou skutečně užít jen tehdy, když to udělají dokonale. Navrhujeme vám tuto představu zpochybnit.",
-        "Během jednoho týdne si zapisujte nejrůznější úkoly, které děláte spontánně a běžně — ať už je to „čištění zubů“, „vaření večeře“, „příprava pracovního reportu“ nebo „úklid doma“.",
-        "Ve druhém sloupci si poznamenejte, jak efektivně jste podle svého názoru úkol splnili — v procentech.",
-        "Ve třetím sloupci uveďte, kolik radosti vám jeho splnění přineslo.",
-        "Příklady mohou vypadat takto:",
-        "Vaření večeře – 50 % (mohl jsem zvolit složitější a chutnější recept) – 90 % (jednoduché, ale strašně dobré a nezabralo mi to moc času).",
-        "Úklid doma – 70 % (udělal jsem to hlavní, ale nedošlo na lednici a sporák) – 100 % (pořádek doma mi vždycky dělá radost).",
-        "Příprava pracovního reportu – 85 % (dal jsem si s reportem hodně práce) – 20 % (neustálé myšlenky, že to mohlo být lepší, mě připravily o radost z procesu).",
-        "Toto cvičení vám pomůže uvědomit si, že dokonalost není nutnou podmínkou pro to, abyste si proces užili."
-      ],
-      "quote": {
-        "text": "Dokonalost není dosažitelný cíl, ale směr, kterým se vydáváme.",
-        "author": "Thomas Watson"
-      }
+        "Probereme několik jednoduchých, ale velmi účinných metod, které vám pomohou překonat snahu o dokonalost.",
+        "<h2>Seznam „antiperfekcionismu“</h2>",
+        "<activitylink id=\"naslSLnadfl\">",
+        "Mnoho perfekcionistů žije v přesvědčení, že si něco můžete plnohodnotně užít pouze tehdy, pokud to zvládnete dokonale. Navrhujeme vám, abyste tuto myšlenku zkusili zpochybnit.",
+        "Během týdne si zapisujte různé spontánní úkoly, které vykonáváte — ať už jde o „čištění zubů“, „přípravu večeře“, „psaní pracovní zprávy“ nebo „úklid domácnosti“.",
+        "Ve druhém sloupci si uveďte, jak efektivně jste podle vás úkol zvládli, vyjádřeno v procentech.",
+        "Ve třetím sloupci uveďte, kolik vám jeho vykonání přineslo radosti.",
+        "Příklady mohou vypadat následovně:",
+        "<li>Příprava večeře – 50 % (mohl jsem zvolit složitější a chutnější recept) – 90 % (jednoduché, ale o-o-obrovsky chutné a nezabralo to moc času).</li>",
+        "<li>Úklid domácnosti – 70 % (udělal jsem vše podstatné, ale nestihl jsem vyčistit lednici a sporák) – 100 % (čistota v domě mi vždy přináší radost).</li>",
+        "<li>Příprava pracovní zprávy – 85 % (vložil jsem do zprávy značné úsilí) – 20 % (neustálé myšlenky na to, že by to mohlo být lepší, mě připravily o radost ze samotného procesu).</li>",
+        "Toto cvičení vám pomůže uvědomit si, že dosažení dokonalosti není nezbytnou podmínkou pro to, abyste si mohli užít samotný proces.",
+        "<q author=\"Thomas Watson\">Dokonalost není dosažitelný cíl, ale směr pohybu.</q>"
+      ]
     },
     "screen_2": {
       "texts": [
-        "Přijetí možnosti udělat chybu",
-        "Chyby nemá rád nikdo, ale pro perfekcionisty se často stávají obzvlášť silným zdrojem strachu.",
+        "<h2>Přijetí možnosti udělat chybu</h2>",
+        "<activitylink id=\"lsvnnDSnsdl\">",
+        "Nikdo nemá chyby rád, ale pro perfekcionisty vyvolávají zvláštní strach.",
         "Jedním z nejúčinnějších způsobů, jak překonat strach z nedokonalosti, je naučit se své chyby přijímat.",
-        "Cítíte, jak se vám už při pouhé myšlence na možnou chybu rozbuší srdce? To jsou známky strachu a úzkosti.",
-        "Abyste se otevřeli možnosti udělat chybu, začněte tím, že napíšete esej o tom, proč jsou chyby normální a proč je snaha o absolutní dokonalost iracionální.",
-        "Jedna dívka, která bojovala s perfekcionismem, to popsala takto:",
-        "Strach z chyby vychází z mého černobílého vnímání světa: jedna chyba a všechno se zhroutí. To je omyl. Malá chyba přece nemůže zničit všechno dobré, co bylo uděláno.",
-        "Chyby jsou užitečné — díky nim se učíme. Bez chyb není učení možné. A protože nikdo není vůči chybám imunní, je důležité se je naučit přijímat a pokračovat v učení z vlastní zkušenosti.",
-        "Přiznání chyb nám umožňuje upravovat své chování, a tím dosahovat uspokojivějších výsledků — což nás následně činí šťastnějšími a zlepšuje kvalitu našeho života.",
-        "Většina lidí nás kvůli chybám nebude odsuzovat ani nás nepřestane mít ráda — koneckonců chybují všichni a mnozí se v přítomnosti „dokonalých“ lidí cítí nesví.",
-        "Chyba neznamená konec světa.",
-        "Samozřejmě, sepsání takového seznamu neznamená okamžitou proměnu ani to, že začnete chyby milovat — ale je to důležitý krok ke změně vztahu k nedokonalosti.",
-        "Napište svou vlastní esej o tom, proč je dělat chyby normální a dokonce užitečné. Připomínejte si, že i když uděláte chybu, svět se nezboří — je to přirozená součást každého procesu, i když ne zrovna příjemná."
+        "Cítíte, jak vám při pouhé myšlence na možnou chybu začne bušit srdce? To jsou známky strachu a úzkosti.",
+        "Abyste se dokázali otevřít možnosti udělat chybu, začněte napsáním eseje na téma, proč jsou chyby v pořádku a proč je snaha o absolutní dokonalost neracionální.",
+        "Jedna dívka, která bojuje s perfekcionismem, vyjádřila tyto myšlenky:",
+        "<dialog>Strach z chyby vychází z mého vnímání světa v černobílých barvách: jedna chyba a vše se zhroutí. To je omyl. Malá chyba totiž není schopna zničit všechno to dobré, co již bylo uděláno.</dialog>",
+        "<dialog>Chyby jsou užitečné, protože díky nim se učíme. Bez chyb není učení možné. Protože nikdo není chráněn před chybami, je důležité naučit se je přijímat a pokračovat v učení se z vlastních zkušeností.</dialog>",
+        "<dialog>Přiznání chyb nám umožňuje korigovat naše chování, díky čemuž dosahujeme uspokojivějších výsledků, což nás zase činí šťastnějšími a zlepšuje kvalitu našeho života.</dialog>",
+        "<dialog>Většina lidí nás za chyby nebude odsuzovat ani nás kvůli nim nepřestane milovat — konec konců, všichni chybují, a mnoho lidí se ve společnosti „dokonalých“ lidí cítí nepříjemně.</dialog>",
+        "<dialog>Chyba neznamená konec světa.</dialog>",
+        "Sestavení takového seznamu samozřejmě neznamená okamžitou proměnu ani okamžitou lásku k chybám, ale je to důležitý krok ke změně vašeho vztahu k nedokonalosti.",
+        "Napište si vlastní esej na téma, proč je v pořádku (a dokonce i užitečné) dělat chyby. Připomínejte si, že i když uděláte chybu, svět se nezboří — je to přirozená součást každého procesu, i když není ta nejpožadovanější."
       ]
     }
   },
   "nonDepression": {
-    "title": "Být smutný neznamená trpět depresí",
-    "description": "V tomto článku mluvíme o důležitém rozdílu mezi přirozeným smutkem a klinickou depresí. Ztráty, rozchody, potíže i změny jsou součástí života — a prožívat bolest je lidsky normální. Vysvětlujeme, jak odlišit přirozené emoce od deprese, kde hraje velkou roli zkreslené myšlení a může být potřeba odborná pomoc. Materiál vám pomůže lépe rozumět vlastním pocitům a včas si všimnout, kdy smutek překračuje hranice běžné zkušenosti.",
+    "title": "Smutek neznamená depresi",
+    "description": "V tomto článku se zaměřujeme na důležitý rozdíl mezi přirozeným smutkem a klinickou depresí. Ztráty, rozchody, životní obtíže a změny jsou součástí života a prožívat bolest je lidsky naprosto přirozené. Vysvětlíme vám, jak odlišit přirozené emoce od deprese, kde velkou roli hraje zkreslené myšlení a vyžaduje odbornou pomoc. Materiál vám pomůže lépe porozumět svým pocitům a včas si všimnout, kdy smutek přechází do neobvyklých mezí.",
     "screen_1": {
       "texts": [
-        "V předchozích částech jsme mluvili o tom, jak skutečné a bolestivé mohou být události jako ztráta, nemoc, rozchod, nevěra nebo výpověď.",
-        "Každý člověk se s podobnými zkušenostmi někdy setká. Jsou těžké, hluboké a velmi lidské. Samy o sobě ale ještě neznamenají depresi.",
-        "Nabízí se otázka: existuje „zdravý smutek“ — takový, který nesouvisí s depresí?",
-        "Ano, samozřejmě.",
-        "Být smutný, truchlit a cítit tíseň jsou přirozené reakce na důležité události, ztráty a změny. Takové pocity nám pomáhají prožít zkušenost, porozumět tomu, co se děje, a jít dál.",
-        "Jsou to normální lidské emoce a pro každého je důležité dovolit si je prožívat — ne je potlačovat nebo se za ně stydět.",
-        "Když jste po rozchodu smutní, je to normální. Znamená to, že umíte cítit a navazovat vztahy.",
-        "Když vás bolí vzpomínky na někoho blízkého, kdo odešel, je to odraz lásky, ne známka slabosti.",
-        "Deprese ale není jen smutek. Je to stav, který vzniká a udržuje se zkresleným a beznadějným pohledem na sebe, svět a budoucnost.",
-        "Při depresi intenzita a trvání negativních emocí neodpovídají situaci — jsou mnohem silnější, hlubší a tíživější."
-      ],
-      "quote": {
-        "text": "Mezi podnětem a reakcí je prostor. V něm je naše svoboda zvolit si, jak zareagujeme. A v této volbě je naše síla i růst.",
-        "author": "Viktor Frankl"
-      }
+        "V předchozích částech jsme mluvili o tom, jak reálné a bolestivé mohou být události jako ztráta, nemoc, rozchod, zrada nebo ztráta zaměstnání.",
+        "<q author=\"Viktor Frankl\">Mezi podnětem a reakcí existuje prostor. V tomto prostoru je naše svoboda zvolit, jak budeme reagovat. A právě v tomto výběru spočívá naše síla a růst.</q>",
+        "Každý člověk se v nějaké fázi života s podobnými prožitky střetává. Jsou těžké, hluboké a velmi lidské. Samy o sobě však ještě neznamenají depresi.",
+        "Vzniká otázka: existuje takový „zdravý smutek“, který není spojen s depresí?",
+        "Samozřejmě, že ano.",
+        "<important>Smutek, žal a pocit lítosti jsou přirozenými reakcemi na důležité události, ztráty a změny. Tyto pocity nám pomáhají prožít zkušenost, uvědomit si, co se děje, a jít dál.</important>",
+        "Jedná se o normální lidské emoce a je důležité dovolit si je prožívat, místo abychom je potlačovali nebo se kvůli nim styděli.",
+        "Pokud je vám smutno po rozchodu, je to v pořádku. Je to důkaz vaší schopnosti cítit a vytvářet si vazby.",
+        "Pokud vás bolí vzpomínka na blízkého, který odešel, je to odraz lásky, nikoliv známka slabosti.",
+        "<instagram>",
+        "Deprese však není jen obyčejný smutek. Je to stav, který je udržován zkresleným, beznadějným pohledem na sebe sama, svět i budoucnost.",
+        "Při depresi intenzita a délka negativních emocí neodpovídají situaci — jsou mnohem silnější, hlubší a těžší."
+      ]
     },
     "screen_2": {
       "texts": [
-        "Když je člověk v depresi, i běžné potíže se mu mohou jevit jako katastrofa.",
-        "Malá chyba působí jako totální selhání, nepříjemnost jako tragédie a zármutek se může prožívat jako nekonečná tma.",
-        "Představte si sprchovou baterii se směšovačem teplé a studené vody. V běžném životě přepínáme mezi emocemi — radostí, smutkem, nadějí, lítostí.",
-        "Při depresi to vypadá, jako by byl puštěný jen „studený kohoutek“ — smutek, úzkost a beznaděj. A často to není důsledek samotné situace, ale výsledek zkresleného vnímání, které potřebuje péči a úpravu.",
-        "Náš vztah k událostem hraje obrovskou roli. Smutek sám o sobě není nebezpečný. Nebezpečným se stává tehdy, když ho myšlenky promění v bezmoc a zoufalství.",
-        "Upřímně doufáme, že vám tato část pomohla lépe pochopit podstatu deprese a naučila vás všímat si jejích příznaků.",
-        "Dozvěděli jste se zde o klíčových symptomech deprese a o způsobech, jak se svým stavem pracovat s oporou v cvičeních a technikách.",
-        "K těmto materiálům se můžete kdykoli vracet, znovu je číst a používat cvičení. A my pro vás už připravujeme další užitečné nástroje."
-      ],
-      "quote": {
-        "text": "Nejkrásnější lidé jsou ti, kteří prošli bolestí, ztrátou, bojem — a přesto našli cestu nahoru.",
-        "author": "Viktor Frankl"
-      }
+        "Když se člověk v depresi střetne i s běžnými obtížemi, může je vnímat jako katastrofu.",
+        "Malá chyba se zdá být selháním, nepříjemnost tragédií a žal se může jevit jako nekonečná temnota.",
+        "Představte si baterii s teplou a studenou vodou. V běžném životě se mezi emocemi neustále střídáme — od radosti přes smutek až po naději či lítost.",
+        "<q author=\"Viktor Frankl\">Nejkrásnější lidé jsou ti, kteří prošli bolestí, ztrátou i bojem a přesto našli cestu vzhůru.</q>",
+        "Při depresi je to, jako by byl otevřen pouze „studený kohoutek“ — smutek, úzkost a pocit beznaděje. A často to není důsledkem samotné situace, ale výsledkem zkresleného vnímání, které vyžaduje péči a úpravu.",
+        "<important>Náš vztah k událostem hraje obrovskou roli. Samotný smutek není nebezpečný. Nebezpečný se stává tehdy, když jej myšlenky promění v bezmoc a zoufalství.</important>",
+        "Upřímně doufáme, že vám tato část pomohla lépe pochopit povahu deprese a naučila vás vnímat její příznaky.",
+        "Zde jste se dozvěděli o klíčových symptomech deprese a o tom, jak pracovat se svým stavem s využitím různých praktik a technik.",
+        "K těmto materiálům se můžete kdykoli vrátit, znovu si je přečíst a procvičovat úkoly. My pro vás již připravujeme další užitečné nástroje."
+      ]
     }
   }
 }
