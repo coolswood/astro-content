@@ -22,7 +22,7 @@ import { loadGlossary } from './glossary-utils.js';
 import { parseWithRepair } from './json-repair.js';
 import { flattenLeaves, type Leaves } from './tree.js';
 import { validateTranslation, type ValidationIssue } from './validation.js';
-import { stripInstagramAttributes } from './tag-reconcile.js';
+import { stripInstagramAttributes, normalizeApostrophesIt } from './tag-reconcile.js';
 import { writeJsonAtomic, writeTextAtomic, readJsonOr } from './atomic-fs.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -417,6 +417,14 @@ export async function applyJudgeRecommendations(
   const stripped = stripInstagramAttributes(target, lang);
   if (stripped > 0) {
     console.warn(`   ⚠️ [judge-apply] срезаны атрибуты <instagram> в ${stripped} листах (${lang})`);
+  }
+
+  // Апострофы it — типографские ’ (рекомендации судьи пишутся прямыми ').
+  if (lang.toLowerCase() === 'it') {
+    const apostrophes = normalizeApostrophesIt(target);
+    if (apostrophes > 0) {
+      console.warn(`   ⚠️ [judge-apply] апострофы приведены к типографским в ${apostrophes} листах (${lang})`);
+    }
   }
 
   await writeJsonAtomic(targetPath, target);

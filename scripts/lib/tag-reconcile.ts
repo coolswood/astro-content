@@ -345,12 +345,51 @@ export function normalizeTypographicQuotesEn(data: any): number {
 }
 
 /**
- * Конвенция платформы: встраиваемый пост Instagram рендерится только для
- * ru и en; в остальных локалях <instagram> обязан быть ПУСТЫМ тегом.
- * Промптовое правило модель регулярно нарушает, копируя тег из оригинала
- * дословно, поэтому атрибуты срезаются механически (мутирует data,
- * возвращает число исправленных листьев).
+ * Типографский апостроф ’ в тексте it-локали (правило style.txt и канона
+ * корпуса: 1255 вхождений ’ против 0 прямых '). Модель регулярно даёт
+ * прямые ' несмотря на промпт, поэтому нормализуем механически: элизия
+ * между буквами (l'ansia, un'opportunità) и финальный апостроф слова
+ * (un po'). Апострофы внутри тегов (author='…') не трогаются. Мутирует
+ * data, возвращает число исправленных листьев.
  */
+export function normalizeApostrophesIt(data: any): number {
+  let changed = 0;
+  const convert = (text: string): string => {
+    if (!text.includes("'")) return text;
+    const parts = text.split(/(<[^>]*>)/);
+    let touched = false;
+    const next = parts
+      .map((part, i) => {
+        if (i % 2 === 1) return part; // тег — как есть
+        let s = part;
+        const before = s;
+        s = s.replace(/([A-Za-z])'(?=[A-Za-z])/g, '$1\u2019'); // l'ansia
+        s = s.replace(/([A-Za-z])'(?=[\s,.:;!?\u2026»)\u2019]|$)/g, '$1\u2019'); // un po'
+        if (s !== before) touched = true;
+        return s;
+      })
+      .join('');
+    return touched ? next : text;
+  };
+  const walk = (node: any): any => {
+    if (typeof node === 'string') {
+      const next = convert(node);
+      if (next !== node) changed++;
+      return next;
+    }
+    if (Array.isArray(node)) {
+      for (let i = 0; i < node.length; i++) node[i] = walk(node[i]);
+      return node;
+    }
+    if (node && typeof node === 'object') {
+      for (const k of Object.keys(node)) node[k] = walk(node[k]);
+      return node;
+    }
+    return node;
+  };
+  walk(data);
+  return changed;
+}
 export function stripInstagramAttributes(data: any, lang: string): number {
   if (INSTAGRAM_ATTR_LOCALES.has(lang.toLowerCase())) return 0;
   let changed = 0;
