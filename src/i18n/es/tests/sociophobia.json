@@ -1,327 +1,452 @@
 {
   "steps": [
-    "¿Cómo te sientes cuando necesitas pedir ayuda o solicitar un servicio?",
-    "¿Cómo te sientes cuando tienes que hablar en público ante una audiencia numerosa?",
-    "¿Cómo reaccionas cuando personas desconocidas intentan entablar una conversación contigo?",
-    "¿Con qué frecuencia evitas hacer llamadas telefónicas o videollamadas?",
-    "¿Con qué frecuencia intentas evitar relacionarte con personas fuera del trabajo o de los estudios?",
-    "¿Te resulta incómodo entrar en una sala donde las demás personas ya están sentadas?",
-    "¿Cómo vives las críticas en redes sociales?",
-    "¿Sueles preferir guardar silencio en las reuniones de trabajo?",
-    "¿Cómo te sientes cuando te piden dar tu opinión delante de un grupo?",
-    "¿Cómo te sientes en lugares muy concurridos, como el metro?",
-    "¿Con qué frecuencia intentas evitar ser el centro de atención en un grupo?",
-    "¿Con qué frecuencia evitas ir a lugares públicos como restaurantes, clubes o bares?",
-    "¿Sientes ansiedad cuando estás en el centro de atención?",
-    "¿Con qué frecuencia sientes ansiedad antes de una situación en la que tienes que relacionarte con otras personas?",
-    "¿Sientes inquietud o ansiedad cuando tienes que hablar con la dirección o con personas en puestos de autoridad?",
-    "¿Con qué frecuencia evitas ir a grandes centros comerciales o grandes almacenes?",
-    "¿Cómo te sientes cuando tienes que hacer algo nuevo, por ejemplo entrar en una cafetería en la que nunca has estado?",
-    "¿Cómo te sientes cuando tienes que hacer tareas nuevas delante de un público que no conoces?",
-    "¿Con qué frecuencia evitas llamar a personas con las que apenas has hablado?",
-    "¿Sientes ansiedad cuando tienes que devolver un producto en una tienda?",
-    "¿Cómo te sientes si te piden hablar en público en el último momento?",
-    "¿Sientes ansiedad al escribir o tomar notas cuando otras personas te están viendo?",
-    "¿Sientes ansiedad cuando tienes que decir que no a una persona vendedora insistente?",
-    "¿Sientes ansiedad cuando expresas desacuerdo con personas poco conocidas?",
-    "¿Cómo reaccionas ante invitaciones inesperadas a bodas u otras celebraciones?",
-    "¿Con qué frecuencia evitas hablar por teléfono cuando hay otras personas presentes?",
-    "¿Con qué frecuencia evitas asistir a fiestas o reuniones sociales?",
-    "¿Con qué frecuencia evitas usar baños públicos?",
-    "¿Cómo reaccionas cuando alguien te propone quedar o tener una cita romántica?",
-    "¿Con qué frecuencia evitas contestar llamadas de números desconocidos?",
-    "¿Cómo vives el contacto con personas desconocidas cuando viajas o estás de vacaciones?",
-    "¿Sientes ansiedad al mirar a los ojos a personas que no conoces?",
-    "¿Con qué frecuencia evitas conflictos o discusiones con personas desconocidas?",
-    "¿Cómo te sientes cuando sales en fotos de grupo?",
-    "¿Cómo reaccionas cuando te proponen unirte a un nuevo grupo o comunidad?",
-    "¿Con qué frecuencia evitas encuentros con personas que no conoces?",
-    "¿Sientes ansiedad antes de exámenes que evalúan habilidades prácticas?",
-    "¿Sientes ansiedad cuando hablas con alguien?",
-    "¿Prefieres salir a pasear cuando casi no hay gente en la calle o cuando no hay nadie?",
-    "¿Con qué frecuencia evitas mirar a los ojos a personas desconocidas?"
+    "¿Cómo se siente cuando tiene que pedir ayuda o solicitar un servicio?",
+    "¿Cómo se siente cuando tiene que hablar ante una audiencia numerosa?",
+    "¿Cómo reacciona cuando un desconocido intenta entablar conversación con usted?",
+    "¿Con qué frecuencia siente deseos de evitar las llamadas o las videoconferencias?",
+    "¿Con qué frecuencia siente deseos de evitar la interacción social fuera del trabajo o los estudios?",
+    "¿Siente incomodidad al entrar en una habitación donde ya hay gente?",
+    "¿Cómo percibe las críticas en las redes sociales?",
+    "¿Con qué frecuencia le resulta más fácil guardar silencio en las reuniones de trabajo?",
+    "¿Cómo se siente cuando se le pide que dé su opinión ante un grupo?",
+    "¿Cómo se siente en lugares concurridos, como el metro?",
+    "¿Con qué frecuencia siente deseos de evitar ser el centro de atención en un grupo?",
+    "¿Con qué frecuencia intenta evitar ir a restaurantes, clubes u otros lugares públicos?",
+    "¿Siente ansiedad cuando toda la atención se dirige hacia usted?",
+    "¿Con qué frecuencia le genera ansiedad una interacción social inminente?",
+    "¿Siente inquietud al comunicarse con sus superiores?",
+    "¿Con qué frecuencia intenta evitar ir a grandes centros comerciales o tiendas?",
+    "¿Cómo reacciona ante la necesidad de hacer algo nuevo en un entorno desconocido?",
+    "¿Cómo se siente cuando tiene que realizar una tarea nueva frente a personas desconocidas?",
+    "¿Con qué frecuencia le resulta difícil decidirse a llamar a alguien que apenas conoce?",
+    "¿Siente ansiedad al devolver un producto en una tienda?",
+    "¿Cómo se siente si, de repente, se le pide que hable en público?",
+    "¿Siente ansiedad cuando escribe algo en presencia de otras personas?",
+    "¿Siente ansiedad al decirle que no a un vendedor insistente?",
+    "¿Siente ansiedad cuando expresa su desacuerdo ante personas que no conoce bien?",
+    "¿Cómo suele percibir las invitaciones inesperadas a fiestas o celebraciones?",
+    "¿Con qué frecuencia intenta no responder a las llamadas cuando hay otras personas presentes?",
+    "¿Con qué frecuencia evita las fiestas y las reuniones sociales?",
+    "¿Con qué frecuencia evita usar los baños públicos?",
+    "¿Cómo suele percibir la propuesta de quedar con alguien que le podría gustar?",
+    "¿Con qué frecuencia no responde a las llamadas de números desconocidos?",
+    "¿Cómo suele percibir la interacción con desconocidos durante viajes o vacaciones?",
+    "¿Siente ansiedad al mirar a los ojos a personas desconocidas?",
+    "¿Con qué frecuencia evita conflictos o discusiones con personas desconocidas?",
+    "¿Qué opina de participar en fotografías grupales?",
+    "¿Cómo reacciona ante la propuesta de unirse a un nuevo grupo o comunidad?",
+    "¿Con qué frecuencia siente deseos de no asistir a reuniones con desconocidos?",
+    "¿Siente ansiedad antes de un examen de habilidades prácticas?",
+    "¿Siente ansiedad al hablar con cualquier persona?",
+    "¿Suele elegir horarios para pasear cuando hay poca gente en la calle?",
+    "¿Con qué frecuencia intenta evitar el contacto visual con personas desconocidas?"
   ],
   "variants": {
     "0": [
-      "Pido ayuda con facilidad, me parece algo normal",
-      "Siento una ligera incomodidad, pero puedo hacerlo",
-      "Me resulta incómodo, intento arreglármelas por mi cuenta",
-      "Me resulta muy incómodo, intento evitarlo"
+      "Pedir ayuda me resulta fácil, es normal.",
+      "Siento un poco de incomodidad, pero puedo manejarlo.",
+      "Es incómodo, trato de sobrellevarlo por mi cuenta.",
+      "Es muy incómodo, trato de evitarlo."
     ],
     "1": [
-      "Con seguridad y calma",
-      "Con algo de ansiedad",
-      "Me invade mucho nerviosismo, pero puedo hablar",
-      "Entro en pánico"
+      "Con confianza y calma.",
+      "Con cierta ansiedad.",
+      "Estoy nervioso, pero puedo hablar.",
+      "Siento pánico."
     ],
     "2": [
-      "De forma abierta y amable",
-      "Con cautela y cierta desconfianza",
-      "Intento evitar la conversación",
-      "Me aparto casi huyendo"
+      "De forma amable y abierta.",
+      "Con cautela y desconfianza.",
+      "Intento evitar la conversación.",
+      "Salgo corriendo literalmente."
     ],
-    "3": ["Casi nunca", "A veces", "Bastante a menudo", "Casi siempre"],
+    "3": [
+      "Casi nunca.",
+      "A veces.",
+      "Bastante a menudo.",
+      "Casi siempre."
+    ],
     "4": [
+      "Casi nunca.",
+      "De vez en cuando.",
+      "Bastante a menudo.",
+      "Casi siempre."
+    ],
+    "5": [
+      "Nunca.",
+      "A veces.",
+      "A menudo.",
+      "Constantemente."
+    ],
+    "6": [
+      "Tranquilo, es solo la opinión de los demás.",
+      "Me desanima un poco, pero lo olvido rápido.",
+      "Me afecta mucho, puede arruinarme el día.",
+      "Puede causarme una fuerte ansiedad."
+    ],
+    "7": [
+      "Nunca.",
+      "A veces.",
+      "A menudo.",
+      "Constantemente."
+    ],
+    "8": [
+      "Con confianza.",
+      "Con cierta ansiedad.",
+      "Muy incómodo.",
+      "Muy mal."
+    ],
+    "9": [
+      "Completamente normal.",
+      "Algo tenso, pero es normal.",
+      "Muy incómodo, evito esos lugares.",
+      "Pánico o ansiedad intensa."
+    ],
+    "10": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "11": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "12": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "13": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "14": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "15": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "16": [
+      "Es una experiencia interesante, me alegra probar cosas nuevas",
+      "Siento un poco de incomodidad, pero puedo afrontarlo",
+      "Trato de evitar este tipo de situaciones",
+      "Esto me provoca una fuerte ansiedad o pánico"
+    ],
+    "17": [
+      "Actúo con confianza",
+      "Con cierta ansiedad",
+      "Trato de evitarlo",
+      "Siento pánico y miedo"
+    ],
+    "18": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "19": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "20": [
+      "Lo haré sin problemas",
+      "Siento ansiedad, pero lo acepto",
+      "Me siento muy incómodo, pero lo acepto",
+      "Me niego de inmediato"
+    ],
+    "21": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "22": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "23": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "24": [
+      "Lo acepto con gusto",
+      "Estoy algo nervioso, pero voy",
+      "Prefiero evitar este tipo de eventos",
+      "No tengo muchas ganas de ir"
+    ],
+    "25": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "26": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "27": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "28": [
+      "Lo acepto con alegría",
+      "Estoy algo nervioso, pero voy",
+      "Trato de evitar las citas",
+      "Me niego de inmediato"
+    ],
+    "29": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "30": [
+      "Me presento e interactúo",
+      "Me siento cohibido, pero me presento",
+      "Intento evitar la interacción",
+      "No interactúo con desconocidos"
+    ],
+    "31": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "32": [
       "Casi nunca",
-      "De vez en cuando",
+      "A veces",
       "Bastante a menudo",
       "Casi siempre"
     ],
-    "5": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "6": [
-      "Con calma, es solo la opinión de otras personas",
-      "Me molesta un poco, pero lo olvido rápido",
-      "Lo paso mal, puede estropearme el día",
-      "Puede provocar una ansiedad muy intensa"
-    ],
-    "7": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "8": [
-      "Con seguridad",
-      "Con algo de ansiedad",
-      "Me resulta muy incómodo",
-      "Me siento realmente mal"
-    ],
-    "9": [
-      "Lo vivo como algo totalmente normal",
-      "Siento algo de tensión, pero lo llevo bien",
-      "Me resulta muy incómodo, intento evitar estos lugares",
-      "Siento pánico o una ansiedad muy fuerte"
-    ],
-    "10": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "11": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "12": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "13": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "14": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "15": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "16": [
-      "Lo vivo como una experiencia interesante, me gusta probar cosas nuevas",
-      "Siento una ligera incomodidad, pero puedo hacerlo",
-      "Intento evitar este tipo de situaciones",
-      "Me genera una ansiedad muy intensa o pánico"
-    ],
-    "17": [
-      "Actúo con seguridad",
-      "Con algo de ansiedad",
-      "Intento evitarlo",
-      "Siento pánico y miedo"
-    ],
-    "18": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "19": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "20": [
-      "Puedo hablar sin problema",
-      "Siento ansiedad, pero acepto",
-      "Me resulta muy incómodo, pero acepto",
-      "Rechazo la propuesta de inmediato"
-    ],
-    "21": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "22": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "23": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "24": [
-      "Acepto con gusto",
-      "Siento algo de nervios, pero voy",
-      "Prefiero evitar este tipo de eventos",
-      "No quiero ir en absoluto"
-    ],
-    "25": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "26": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "27": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "28": [
-      "Acepto con ilusión",
-      "Siento algo de nervios, pero voy",
-      "Intento evitar las citas",
-      "Rechazo enseguida"
-    ],
-    "29": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "30": [
-      "Conozco gente y hablo",
-      "Me da algo de vergüenza, pero socializo",
-      "Intento evitar el contacto",
-      "No hablo con desconocidos"
-    ],
-    "31": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "32": ["Casi nunca", "A veces", "Bastante a menudo", "Casi siempre"],
     "33": [
-      "Acepto con gusto",
-      "Me resulta algo incómodo, pero acepto",
+      "Lo acepto con gusto",
+      "Algo incómodo, pero lo acepto",
       "Prefiero evitarlo",
-      "Rechazo la propuesta"
+      "Me niego"
     ],
     "34": [
-      "Acepto con entusiasmo",
-      "Me da algo de vergüenza, pero me uno",
-      "Prefiero no integrarme",
-      "Rechazo la invitación"
+      "Acepto la propuesta con alegría",
+      "Me siento cohibido, pero acepto",
+      "Prefiero no participar",
+      "Me niego"
     ],
-    "35": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "36": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "37": ["No", "Ansiedad leve", "Ansiedad moderada", "Ansiedad intensa"],
-    "38": ["Nunca", "A veces", "A menudo", "Constantemente"],
-    "39": ["Nunca", "A veces", "A menudo", "Constantemente"]
+    "35": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "36": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "37": [
+      "No",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad intensa"
+    ],
+    "38": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ],
+    "39": [
+      "Nunca",
+      "A veces",
+      "A menudo",
+      "Constantemente"
+    ]
   },
   "steps_description": {
     "0": {
-      "text": "La fobia social, o trastorno de ansiedad social, se manifiesta en una fuerte ansiedad ante situaciones de interacción con otras personas. Pedir ayuda es una de las situaciones cotidianas que con frecuencia generan miedo en quienes viven con este trastorno.",
-      "fact": "Charles Darwin, el célebre naturalista y autor de la teoría de la evolución, sufría una fobia social intensa. Evitaba hablar en público y a menudo experimentaba pánico ante la necesidad de relacionarse con otras personas, pese a sus logros extraordinarios."
+      "text": "La fobia social, o trastorno de ansiedad social, se manifiesta como una fuerte ansiedad ante situaciones de interacción social. Pedir ayuda es una de las situaciones más comunes que provocan ansiedad en las personas con este trastorno.",
+      "fact": "Charles Darwin, el célebre naturalista y autor de la teoría de la evolución, sufría de una fuerte fobia social. A pesar de sus extraordinarios logros, evitaba las presentaciones en público y a menudo experimentaba ataques de pánico ante la necesidad de interactuar con otras personas."
     },
     "1": {
-      "text": "La glosofobia, o miedo a hablar en público, es una de las formas más frecuentes de fobia social. Se calcula que alrededor del 75 % de las personas experimentan algún grado de miedo antes de hablar ante una audiencia.",
-      "fact": "Según encuestas citadas por la Asociación Americana de Psicología, cerca del 30 % de la población estadounidense siente un miedo muy intenso ante la idea de hablar en público, lo que convierte este temor en uno de los más extendidos."
+      "text": "La glosofobia es el miedo a hablar en público, una de las formas más comunes de fobia social. Aproximadamente el 75 % de las personas experimentan algún grado de miedo al hablar ante una audiencia.",
+      "fact": "Según una encuesta de la Asociación Americana de Psicología, cerca del 30 % de los estadounidenses experimentan un fuerte miedo a hablar en público, lo que lo convierte en uno de los temores más extendidos."
     },
     "2": {
-      "text": "Uno de los rasgos centrales de la fobia social es el miedo a relacionarse con personas desconocidas. Esto puede traducirse en evitar el contacto, intentar no llamar la atención y sentir mucha incomodidad o ansiedad en esas situaciones.",
-      "fact": "Franz Kafka, escritor célebre, sufría una fobia social intensa y le costaba mucho comunicarse con personas que no conocía. Sus obras, como \"El proceso\" y \"El castillo\", reflejan en parte sus miedos y preocupaciones."
+      "text": "Uno de los aspectos clave de la fobia social es el miedo a la interacción con personas desconocidas. Esto puede manifestarse mediante la evitación del contacto, el deseo de pasar desapercibido y una sensación de incomodidad o ansiedad.",
+      "fact": "Franz Kafka, el reconocido escritor, sufría de una fuerte fobia social y a menudo tenía dificultades para comunicarse con desconocidos. Sus obras, como «El proceso» y «El castillo», reflejan sus profundos temores y ansiedades."
     },
     "3": {
-      "text": "Las personas con fobia social a menudo evitan llamadas telefónicas y videoconferencias por miedo a causar una mala impresión o a ser malinterpretadas. Pueden preocuparse por cómo suena su voz o por decir algo \"incorrecto\".",
-      "fact": "Una forma de reducir la ansiedad antes de una llamada es prepararse con antelación: anotar los puntos importantes o posibles preguntas y respuestas ayuda a sentirse más seguro y a bajar el nivel de tensión."
+      "text": "Las personas con fobia social suelen evitar las llamadas telefónicas y las videoconferencias por miedo a ser malinterpretadas o a causar una mala impresión. Pueden preocuparse por el tono de su voz o por lo que van a decir.",
+      "fact": "Una forma de reducir la ansiedad ante las llamadas telefónicas es la práctica y la preparación. Elaborar una lista de preguntas y respuestas antes de llamar puede ayudar a la persona a sentirse más segura y a disminuir el miedo."
     },
     "4": {
-      "text": "La fobia social puede llevar a evitar el contacto fuera de los contextos obligatorios, como el trabajo o los estudios, para no tener que enfrentarse a interacciones sociales que generan ansiedad.",
-      "fact": "Los datos de algunos estudios indican que alrededor de 15 millones de personas en Estados Unidos (en torno al 7 % de la población) viven con fobia social, y muchas de ellas tienden a evitar los encuentros sociales fuera de sus obligaciones formales."
+      "text": "La fobia social puede llevar a las personas a evitar la interacción fuera de situaciones obligatorias (como el trabajo o los estudios) para no enfrentarse a interacciones sociales potencialmente estresantes.",
+      "fact": "Las investigaciones muestran que unos 15 millones de estadounidenses (aproximadamente el 7 % de la población de EE. UU.) sufren de fobia social, y una parte significativa de ellos prefiere evitar las situaciones sociales fuera de sus roles obligatorios."
     },
     "5": {
-      "text": "Entrar en una sala ya llena puede resultar especialmente estresante para las personas con fobia social debido al miedo a convertirse en el centro de atención. Pueden imaginar que todo el mundo las observa o las juzga.",
-      "fact": "Albert Einstein, el famoso físico, también evitaba los grandes encuentros sociales. Prefería trabajar en calma y relacionarse solo con un círculo reducido de amistades y colegas."
+      "text": "Entrar en una habitación llena de gente puede ser especialmente angustiante para las personas con fobia social debido al miedo a ser el centro de atención. Pueden preocuparse por el hecho de que los miren o los juzguen.",
+      "fact": "Albert Einstein, el gran físico, sufría de una fuerte fobia social y evitaba las grandes reuniones. Prefería trabajar en soledad y comunicarse únicamente con amigos cercanos y colegas."
     },
     "6": {
-      "text": "Quienes viven con fobia social pueden tomarse las críticas de forma muy dolorosa, sobre todo en redes sociales, donde los comentarios son visibles para muchas personas y quedan registrados.",
-      "fact": "Cada vez más personas, incluidas figuras públicas, recurren a \"descansos digitales\" para desconectar temporalmente de las redes y proteger su salud mental frente al impacto de las críticas constantes."
+      "text": "Las personas con fobia social pueden percibir las críticas de manera muy dolorosa, especialmente en las redes sociales, donde estas son públicas y pueden ser vistas por muchas personas.",
+      "fact": "La desintoxicación digital es cada vez más popular. Muchas personas, incluidas celebridades, se desconectan temporalmente de las redes sociales para recuperar su bienestar psicológico y reducir el impacto de las críticas negativas."
     },
     "7": {
-      "text": "Guardar silencio puede convertirse en una manera de evitar la atención y el posible juicio de otras personas, pero al mismo tiempo puede limitar las oportunidades de crecimiento profesional y de participación activa.",
-      "fact": "Las técnicas de escucha activa pueden ayudar a sentirse más seguro en las reuniones. Preparar con antelación alguna pregunta o comentario sencillo permite intervenir sin tanta ansiedad y participar más en las conversaciones."
+      "text": "El silencio puede ser una forma de evitar la atención negativa y las posibles críticas, pero también puede limitar su crecimiento profesional y sus oportunidades laborales.",
+      "fact": "Las técnicas de escucha activa pueden ayudar a las personas a sentirse más seguras en las reuniones. Por ejemplo, centrarse en escuchar y preparar preguntas o comentarios con antelación puede ayudar a reducir la ansiedad y mejorar la participación en los debates."
     },
     "8": {
-      "text": "La fobia social se caracteriza por una fuerte ansiedad en contextos donde una persona puede sentirse evaluada. Que le pidan expresar su opinión delante de un grupo puede activar el miedo a equivocarse o a recibir una valoración negativa."
+      "text": "La fobia social se caracteriza por una fuerte ansiedad en situaciones en las que la persona puede ser evaluada por los demás. Una de estas situaciones es cuando se le pide que exprese su opinión ante un grupo, lo que puede generar miedo a cometer un error o a recibir una valoración negativa."
     },
     "9": {
-      "text": "Quienes tienen fobia social pueden sentir mucha tensión en lugares muy concurridos, como el metro. Estos espacios pueden despertar el miedo a ser observado, juzgado o a vivir situaciones sociales inesperadas.",
-      "fact": "Adele, la reconocida cantante británica, ha contado que sufre ansiedad social y ataques de pánico. Para reducir el riesgo de crisis, intenta evitar lugares con grandes concentraciones de gente."
+      "text": "Las personas con fobia social pueden experimentar una gran inquietud e incomodidad en lugares con mucha gente, como el metro. Estos lugares pueden provocar miedo a ser notado, juzgado o a enfrentarse a situaciones sociales inesperadas.",
+      "fact": "Adele, la famosa cantante británica, sufre de fobia social y ataques de pánico. Evita los lugares concurridos, como el metro, para reducir el riesgo de presentar síntomas de pánico."
     },
     "10": {
-      "text": "Las personas con fobia social suelen hacer todo lo posible por no ser el centro de atención, para no exponerse al escrutinio ni a la crítica. El temor a las burlas o al rechazo puede reforzar el deseo de pasar desapercibidas."
+      "text": "Las personas con fobia social suelen intentar no ser el centro de atención para no atraer un interés excesivo y no someterse al juicio de los demás. Pueden sentir miedo a las críticas o a las burlas, lo que refuerza su deseo de permanecer en la sombra."
     },
     "11": {
-      "text": "Según el Instituto Nacional de Salud Mental de Estados Unidos, aproximadamente el 12,1 % de la población experimenta un trastorno de ansiedad social a lo largo de su vida, lo que con frecuencia se traduce en evitar espacios públicos."
+      "text": "Según datos del Instituto Nacional de Salud Mental de EE. UU., aproximadamente el 12,1 % de la población experimentará un trastorno de ansiedad social a lo largo de su vida, lo que a menudo conduce a la evitación de lugares públicos."
     },
     "12": {
-      "text": "Las investigaciones muestran que un nivel moderado de ansiedad puede incluso mejorar el rendimiento, al activar el sistema nervioso simpático y aumentar la concentración. Este fenómeno se conoce como la ley de Yerkes-Dodson."
+      "text": "Las investigaciones demuestran que un nivel moderado de ansiedad puede, de hecho, mejorar el rendimiento al activar el sistema nervioso simpático y aumentar la concentración. Este fenómeno se conoce como la ley de Yerkes-Dodson."
     },
     "13": {
-      "text": "La ansiedad previa a la interacción social, conocida como ansiedad social, puede ir desde un malestar leve hasta un miedo muy intenso. Se considera uno de los trastornos mentales más frecuentes, junto con la depresión y los problemas relacionados con el consumo de alcohol."
+      "text": "La ansiedad ante la interacción social se conoce como «ansiedad social» y puede variar desde una ligera incomodidad hasta un miedo intenso. Es el tercer trastorno mental más común, después de la depresión y el alcoholismo."
     },
     "14": {
-      "text": "El miedo a relacionarse con figuras de autoridad a veces se denomina \"jerarcafobia\". No es un término médico oficial, pero se utiliza para describir una preocupación excesiva al comunicarse con personas en posiciones más altas.",
-      "fact": "Warren Buffett, uno de los inversores más conocidos del mundo, de joven sentía un miedo muy intenso a hablar en público y a relacionarse con figuras de autoridad. Inscribirse en un curso específico para superar este miedo cambió de forma significativa su carrera."
+      "text": "El miedo a las figuras de autoridad tiene su propio nombre: «jerarquifobia». No es un término médico oficial, pero se utiliza con frecuencia para describir la preocupación excesiva al comunicarse con personas que ocupan una posición superior.",
+      "fact": "Warren Buffett, uno de los inversores más exitosos del mundo, experimentó en su juventud un fuerte miedo a hablar en público y a comunicarse con figuras de autoridad. Incluso se inscribió en un curso para superar este miedo, lo que posteriormente ayudó significativamente a su carrera."
     },
     "15": {
-      "text": "El miedo a los centros comerciales o a los grandes espacios puede relacionarse con la agorafobia, el miedo a lugares donde resulta difícil retirarse con rapidez. También puede asociarse a la fobia social o al miedo a las multitudes."
+      "text": "El miedo a ir a centros comerciales puede estar relacionado con la agorafobia (el miedo a los espacios abiertos o a los lugares de los que es difícil salir rápidamente). Sin embargo, también puede ser una manifestación de la fobia social o de la oclofobia (miedo a las multitudes)."
     },
     "16": {
-      "text": "En psicología se habla de \"intolerancia a la incertidumbre\" para describir el miedo a lo desconocido. Esta característica puede influir tanto en las situaciones sociales como en la toma de decisiones en general."
+      "text": "Los psicólogos llaman al miedo a lo desconocido «intolerancia a la incertidumbre». Este estado puede afectar no solo a las situaciones sociales, sino también a la toma de decisiones en general."
     },
     "17": {
-      "text": "El miedo a realizar tareas nuevas delante de un público desconocido se vincula a la ansiedad por la evaluación social: la combinación entre el miedo a una valoración negativa y la preocupación ante situaciones nuevas.",
-      "fact": "Emma Stone, ganadora del Óscar, ha hablado abiertamente de sus ataques de pánico, especialmente en contextos relacionados con presentaciones ante nuevas audiencias. Ha utilizado la terapia y técnicas de respiración para manejar estos episodios."
+      "text": "El miedo a hablar ante una audiencia desconocida se denomina «ansiedad de evaluación social». Es una combinación del miedo a la evaluación negativa y del temor a las situaciones nuevas.",
+      "fact": "Emma Stone, ganadora del Óscar, ha hablado abiertamente sobre su lucha contra los ataques de pánico, especialmente en situaciones relacionadas con presentaciones ante nuevas audiencias. Utilizó terapia y técnicas de respiración para afrontarlo."
     },
     "18": {
-      "text": "El miedo a las llamadas telefónicas, sobre todo a las que implican hablar con personas poco conocidas, se ha descrito como \"telefonofobia\". Con la expansión de la comunicación digital, este fenómeno se ha vuelto más común.",
-      "fact": "Un estudio realizado por BankMyCell en 2019 mostró que el 76 % de las personas de la generación millennial sienten ansiedad al tener que hacer una llamada telefónica. Entre la generación Z, la cifra era aún mayor: un 81 %."
+      "text": "El miedo a las llamadas telefónicas ha recibido el nombre de «telefonofobia». Este fenómeno es cada vez más común en la era de la comunicación digital, cuando las personas se acostumbran más a la comunicación por texto.",
+      "fact": "Un estudio realizado por BankMyCell en 2019 mostró que el 76 % de los mileniales experimentan ansiedad ante la necesidad de hacer una llamada telefónica. Entre la Generación Z, esta cifra es aún mayor: el 81 %."
     },
     "19": {
-      "text": "La ansiedad al devolver productos en una tienda puede estar relacionada con el miedo al conflicto, a la desaprobación o con la sensación de estar \"molestando\" al personal.",
-      "fact": "Este tipo de ansiedad se asocia con lo que algunas personas especialistas llaman \"fobia a la asertividad\": el miedo a defender los propios derechos o expresar las propias necesidades."
+      "text": "La ansiedad al devolver productos puede estar relacionada con el miedo al conflicto, el temor a la evaluación negativa o el sentimiento de culpa por «causar molestias» al personal de la tienda.",
+      "fact": "La ansiedad al devolver productos suele estar vinculada a un fenómeno más amplio conocido como «asertofobia»: el miedo a defender los propios derechos o a expresar las propias necesidades."
     },
     "20": {
-      "text": "El miedo a un discurso improvisado suele vincularse con el síndrome del impostor: la sensación de no ser suficientemente competente y de poder ser \"descubierto\".",
-      "fact": "Reencuadrar la situación como una oportunidad para un diálogo sencillo y sincero, en lugar de como un examen, puede ayudar a disminuir la tensión y a hablar de forma más libre."
+      "text": "El miedo a realizar presentaciones sin preparación suele estar relacionado con el «síndrome del impostor», esa sensación de que no eres lo suficientemente competente y de que puedes ser «descubierto».",
+      "fact": "La técnica del «pensamiento improvisado» puede ser útil. En lugar de entrar en pánico por la falta de preparación, intente ver la situación como una oportunidad para una comunicación espontánea y sincera con la audiencia."
     },
     "21": {
-      "text": "El miedo a escribir o tomar notas delante de otras personas a veces se denomina \"scriptofobia\". Es una forma concreta de ansiedad social relacionada con el miedo a ser observado y juzgado.",
-      "fact": "Aunque los datos son limitados, un estudio publicado en el Journal of Anxiety Disorders sugiere que alrededor del 7 % de las personas siente un malestar significativo cuando debe escribir en presencia de otros."
+      "text": "El miedo a escribir o tomar notas en presencia de otras personas a veces se denomina «scriptofobia».",
+      "fact": "No existen datos exactos sobre la prevalencia de este miedo, pero un estudio publicado en el *Journal of Anxiety Disorders* mostró que alrededor del 7 % de las personas experimentan una incomodidad significativa cuando tienen que escribir en presencia de otros."
     },
     "22": {
-      "text": "La dificultad para decir que no, sobre todo ante personas insistentes, se relaciona con lo que algunos autores llaman \"síndrome de la complacencia\". Tiene que ver con el deseo de evitar conflictos y el miedo a una valoración negativa.",
-      "fact": "Un estudio de la Universidad de Pensilvania mostró que cerca del 68 % de las personas siente incomodidad cuando tiene que decir \"no\" en contextos de venta."
+      "text": "Los psicólogos llaman a la dificultad para decir que no, especialmente ante personas insistentes, «síndrome de complacencia» o «enfermedad del servilismo». Esto se debe al deseo de evitar conflictos y al miedo a la evaluación negativa.",
+      "fact": "Un estudio realizado por la Universidad de Pensilvania mostró que aproximadamente el 68 % de las personas experimentan incomodidad cuando tienen que decir «no» en situaciones de ventas."
     },
     "23": {
-      "text": "Martin Luther King Jr., uno de los líderes más influyentes en la lucha por los derechos civiles, al inicio de su trayectoria también sentía ansiedad al expresar sus opiniones ante grupos. Con el tiempo, trabajando sus miedos, se convirtió en un orador excepcional y una figura clave del movimiento."
+      "text": "Martin Luther King Jr., el célebre luchador por los derechos civiles, experimentó una fuerte ansiedad al expresar su opinión ante grupos al inicio de su carrera. Sin embargo, al superar sus miedos, se convirtió en uno de los oradores y líderes de los derechos humanos más influyentes."
     },
     "24": {
-      "text": "Las personas con fobia social pueden sentir una ansiedad intensa ante invitaciones inesperadas a bodas u otras celebraciones. Este tipo de eventos suele implicar mucha gente y múltiples interacciones sociales, lo que puede resultar especialmente difícil.",
-      "fact": "Daniel Radcliffe, conocido por su papel de Harry Potter, ha contado que sufre ansiedad social y suele evitar los grandes eventos públicos. Prefiere pasar el tiempo en círculos reducidos de amistades y familia."
+      "text": "Las personas con fobia social pueden experimentar una fuerte ansiedad y estrés ante invitaciones inesperadas a bodas u otras celebraciones. Estos eventos suelen implicar interactuar con mucha gente, lo que puede resultar especialmente difícil para ellas.",
+      "fact": "Daniel Radcliffe, conocido por su papel en Harry Potter, sufre de fobia social y suele evitar los grandes eventos públicos. Prefiere pasar tiempo en grupos pequeños con amigos y familiares."
     },
     "25": {
-      "text": "Quienes tienen fobia social a menudo evitan hablar por teléfono cuando hay otras personas cerca por miedo a ser escuchados y juzgados. Pueden preocuparse por su forma de hablar, por equivocarse o por la posible reacción de quienes los rodean."
+      "text": "Las personas con fobia social suelen evitar las llamadas telefónicas en presencia de otros por miedo a ser escuchadas y juzgadas. Pueden preocuparse por cómo suena su voz, por posibles errores al hablar o por si su conversación provocará una reacción negativa en quienes las rodean."
     },
     "26": {
-      "text": "Evitar fiestas y reuniones sociales puede formar parte de lo que en psicoterapia se denomina \"conducta de seguridad\" o \"conducta de evitación\": una estrategia que reduce la ansiedad a corto plazo pero que, a largo plazo, mantiene el miedo y contribuye al aislamiento."
+      "text": "Evitar las fiestas puede estar relacionado con una «conducta de protección»: una estrategia que reduce la ansiedad a corto plazo, pero que a largo plazo puede intensificar el aislamiento social y el miedo."
     },
     "27": {
-      "text": "Las investigaciones indican que alrededor del 7–9 % de las personas presenta paruresis, también conocida como \"síndrome de la vejiga tímida\", que puede llevar a evitar el uso de baños públicos."
+      "text": "Según diversas investigaciones, alrededor del 7-9 % de las personas sufren de paruresis, también conocida como síndrome de la micción tímida, lo que les lleva a evitar el uso de baños públicos."
     },
     "28": {
-      "text": "Las propuestas de encuentro o de cita romántica pueden generar mucha ansiedad en personas con fobia social. Entre los motivos más frecuentes están el miedo a la evaluación negativa, la inseguridad y la preocupación por \"no saber qué hacer\" o qué decir."
+      "text": "Las personas con fobia social pueden sentir una fuerte ansiedad ante propuestas de encuentros o citas. Las causas principales incluyen el miedo a la evaluación negativa, la falta de confianza en sí mismas y la preocupación por posibles errores en la comunicación."
     },
     "29": {
-      "text": "El miedo a las llamadas de números desconocidos puede estar ligado a la preocupación por no saber cómo reaccionar, por tener que responder rápido o por una posible confrontación inesperada."
+      "text": "El miedo a las llamadas telefónicas, especialmente de números desconocidos, puede deberse a la inquietud de no saber cómo responder correctamente o a que la conversación no resulte como se esperaba. Esto puede incluir el temor a una posible confrontación o a la necesidad de reaccionar rápidamente ante preguntas inesperadas."
     },
     "30": {
-      "text": "Durante los viajes o las vacaciones, las interacciones con personas desconocidas pueden ser una fuente de ansiedad para quienes viven con fobia social. Pueden temer equivocarse, resultar \"extraños\" o no saber cómo sostener una conversación."
+      "text": "Las personas con fobia social pueden experimentar una ansiedad significativa al interactuar con desconocidos durante viajes o vacaciones. Pueden temer ser juzgadas, hacer algo inadecuado o no saber cómo mantener una conversación."
     },
     "31": {
-      "text": "Diversos estudios señalan que aproximadamente el 60 % de las personas con ansiedad social siente un malestar notable durante el contacto visual. Este puede ser uno de los aspectos más difíciles de las interacciones sociales."
+      "text": "Las investigaciones muestran que cerca del 60 % de las personas con ansiedad social sienten incomodidad al mantener el contacto visual. Este puede ser uno de los aspectos más angustiantes de las interacciones sociales."
     },
     "32": {
-      "text": "Las personas con fobia social suelen evitar los conflictos o discusiones con desconocidos por miedo a la crítica, al rechazo o a una reacción agresiva. Esto puede llevarlas a renunciar a defender sus límites o necesidades."
+      "text": "Las personas con fobia social pueden sentir una fuerte ansiedad ante la posibilidad de conflictos o discusiones con desconocidos. Pueden temer la evaluación negativa, la incomprensión o incluso una reacción agresiva, lo que las lleva a evitar cualquier situación potencialmente conflictiva."
     },
     "33": {
-      "text": "Se estima que entre el 20 y el 30 % de las personas se siente claramente incómoda al ser fotografiada, especialmente en fotos de grupo. La inquietud puede estar relacionada con el miedo a la opinión ajena y con la insatisfacción con la propia imagen."
+      "text": "Según los estudios, entre el 20 % y el 30 % de las personas experimentan una incomodidad significativa al ser fotografiadas, especialmente en grupo. Esta ansiedad puede estar relacionada con el miedo a la evaluación negativa y la falta de aceptación de su apariencia física."
     },
     "34": {
-      "text": "Isaac Newton, uno de los científicos más influyentes de la historia, también era muy reservado y evitaba la participación en eventos sociales y nuevos grupos. Prefería pasar la mayor parte del tiempo dedicado a sus investigaciones en soledad."
+      "text": "Isaac Newton, el gran científico, también era una persona muy retraída y evitaba participar en eventos públicos y en grupos nuevos. Prefería pasar el tiempo en soledad dedicándose a la investigación científica."
     },
     "35": {
-      "text": "Las investigaciones muestran que la terapia cognitivo-conductual (TCC) puede ser muy eficaz en el tratamiento de la ansiedad social. La TCC ayuda a cuestionar los pensamientos negativos y a desarrollar una relación más flexible y amable con las situaciones sociales."
+      "text": "Las investigaciones demuestran que la terapia cognitivo-conductual (TCC) puede ser muy eficaz para tratar la ansiedad social. La TCC ayuda a las personas a cambiar sus pensamientos negativos y a desarrollar una actitud más positiva hacia las interacciones sociales."
     },
     "36": {
-      "text": "La ansiedad antes de exámenes prácticos es muy frecuente, especialmente en personas con fobia social. El miedo a ser evaluado y a cometer errores puede incrementar el estrés y la tensión.",
-      "fact": "Thomas Edison, el conocido inventor, tenía dificultades con los métodos de enseñanza y evaluación tradicionales. Prefería aprender mediante experimentos y práctica, y evitaba en la medida de lo posible los exámenes formales."
+      "text": "La ansiedad ante los exámenes de habilidades prácticas es un problema común, especialmente entre personas con fobia social. El miedo a ser evaluado y la posibilidad de fracasar pueden intensificar el estrés y los nervios.",
+      "fact": "Thomas Edison, el famoso inventor, tenía dificultades con los métodos de enseñanza y los exámenes tradicionales. Prefería aprender mediante experimentos y pruebas prácticas, evitando los exámenes formales."
     },
     "37": {
-      "text": "Quienes viven con fobia social a menudo sienten una ansiedad intensa al conversar con otras personas. El miedo a ser malinterpretados, a no encontrar las palabras o a parecer \"inadecuados\" puede hacer que cualquier diálogo resulte agotador."
+      "text": "Las personas con fobia social suelen experimentar una fuerte ansiedad al hablar con otras personas. El miedo a la evaluación negativa, la preocupación por cómo serán percibidas sus palabras y el temor a cometer un error pueden aumentar la ansiedad y los nervios."
     },
     "38": {
-      "text": "Muchas personas con fobia social prefieren salir a pasear a horas en las que casi no hay gente. De este modo reducen la probabilidad de encuentros o conversaciones que les generen ansiedad.",
-      "fact": "Howard Hughes, empresario y aviador estadounidense, conocido por su reclusión y múltiples fobias, prefería los paseos solitarios y evitaba los lugares concurridos, intentando pasar desapercibido."
+      "text": "Las personas con fobia social suelen preferir pasear en horas en las que hay poca gente en la calle o no hay nadie. Esto les ayuda a evitar las interacciones sociales que pueden provocarles ansiedad y estrés.",
+      "fact": "Howard Hughes, el célebre empresario y aviador estadounidense, conocido por su fobia social y múltiples fobias, prefería los paseos solitarios y evitaba los lugares concurridos. Intentaba pasar desapercibido y evitar las interacciones sociales."
     },
     "39": {
-      "text": "El contacto visual activa redes neuronales relacionadas con la empatía y la lectura emocional, lo que puede intensificar las sensaciones internas. En la ansiedad social, esto hace que mirar a los ojos a otra persona resulte particularmente tenso."
+      "text": "El contacto visual activa las neuronas espejo, lo que puede intensificar el sentimiento de empatía y comprensión, pero también puede provocar emociones intensas. Esta puede ser una de las razones por las que el contacto visual genera tanta ansiedad."
     }
   },
   "range": {
     "normal": "Ausencia de fobia social",
-    "mild": "Fobia social moderada",
-    "moderate": "Fobia social intensa"
+    "mild": "Fobia social de intensidad media",
+    "moderate": "Fobia social moderada"
   },
   "result": {
     "normal": {
-      "title": "Sin signos de ansiedad social",
-      "text": "Tus resultados indican que, en general, te sientes con bastante confianza en la mayoría de las situaciones sociales. El contacto con personas que no conoces, la participación en conversaciones o las intervenciones ante un grupo, por lo común, no producen un malestar intenso. Esto sugiere que puedes relacionarte con otras personas con relativa libertad y te sientes bastante cómodo en compañía."
+      "title": "No hay signos de ansiedad social",
+      "text": "Sus resultados indican que se siente seguro en la mayoría de las situaciones sociales. El contacto con personas desconocidas, participar en debates o hablar ante una audiencia no suelen causarle un malestar significativo. Esto sugiere que puede interactuar libremente con los demás y sentirse cómodo en sociedad."
     },
     "mild": {
       "title": "Ansiedad social moderada",
-      "text": "Tus respuestas muestran que en ciertas situaciones sociales puedes sentir tensión o inseguridad. Hablar con personas que no conoces, estar en el centro de atención o intervenir en público puede resultarte estresante. Este tipo de ansiedad es bastante frecuente, y con práctica, apoyo y experiencias positivas, la confianza en ti puede fortalecerse de forma notable."
+      "text": "Sus respuestas indican que, en algunas situaciones sociales, puede experimentar tensión o inseguridad. Interactuar con desconocidos, hablar en público o recibir la atención de los demás pueden resultarle estresantes. Es un estado bastante común y, con apoyo y práctica, la confianza en sí mismo puede fortalecerse notablemente."
     },
     "moderate": {
-      "title": "Ansiedad social intensa",
-      "text": "Tus resultados sugieren que las situaciones sociales pueden generarte una ansiedad y un malestar significativos. Esto puede influir en tu seguridad personal, en el deseo de conocer gente nueva y en la participación en actividades grupales. Estos sentimientos pueden resultar muy agotadores, pero con apoyo y un trabajo gradual sobre estas experiencias es posible reducir la ansiedad y sentirse más libre y tranquilo en el contacto con otras personas."
+      "title": "Ansiedad social grave",
+      "text": "Sus resultados muestran que las situaciones sociales pueden causarle una ansiedad y un malestar significativos. Esto puede afectar su confianza y sus ganas de interactuar con otras personas. Estas experiencias pueden resultar muy agotadoras, pero con apoyo y el deseo de trabajar en ello, es posible reducir la ansiedad gradualmente y sentirse con mayor libertad al comunicarse."
     }
   },
   "description": {
     "text": [
-      "¿Qué tan cómodo te sientes en situaciones sociales? La ansiedad al relacionarse, conocer gente nueva o hablar en público es una reacción bastante extendida.",
-      "Este test ayuda a comprender mejor cómo vives las interacciones sociales y el posible nivel de ansiedad social. Entender tus propias reacciones es un paso importante para desarrollar más seguridad y sentirte con mayor calma en compañía de otras personas."
+      "¿Qué tan cómodo se siente en situaciones sociales? Sentir ansiedad al comunicarse, conocer gente nueva o hablar en público es una reacción bastante común.",
+      "Este test le ayudará a comprender mejor su actitud ante las interacciones sociales y su posible nivel de ansiedad social. Tomar conciencia de sus reacciones es un paso importante para desarrollar confianza y sentirse con mayor tranquilidad en sociedad."
     ]
   }
 }
