@@ -345,6 +345,58 @@ export function normalizeTypographicQuotesEn(data: any): number {
 }
 
 /**
+ * Типографский апостроф ’ в тексте it-локали (правило style.txt и канона
+ * корпуса: ’ во всех элизиях). Модель регулярно даёт прямые ‘ несмотря на
+ * промпт, поэтому нормализуем механически: вне тегов — все ‘ (элизия
+ * l’ansia, c’è с ударной è, l’80% перед цифрой, финальные un po’, anni ’60);
+ * внутри тега — только в ЗНАЧЕНИЯХ атрибутов в двойных кавычках
+ * (intermediate="«…l’iniziativa…»"): сами кавычки-ограничители не трогаем,
+ * одиночные author=’…’ пропускаем целиком. Мутирует data, возвращает число
+ * исправленных листьев.
+ */
+export function normalizeApostrophesIt(data: any): number {
+  let changed = 0;
+  const APOS = "\u2019";
+  const convert = (text: string): string => {
+    if (!text.includes("'")) return text;
+    let touched = false;
+    const next = text
+      .split(/(<[^>]*>)/)
+      .map((part, i) => {
+        if (i % 2 === 1) {
+          // тег: только содержимое атрибутов в двойных кавычках
+          const fixedAttrs = part.replace(/="[^"]*"/g, (attr) => attr.replace(/'/g, APOS));
+          if (fixedAttrs !== part) touched = true;
+          return fixedAttrs;
+        }
+        if (!part.includes("'")) return part;
+        touched = true;
+        return part.replace(/'/g, APOS);
+      })
+      .join('');
+    return touched ? next : text;
+  };
+  const walk = (node: any): any => {
+    if (typeof node === 'string') {
+      const next = convert(node);
+      if (next !== node) changed++;
+      return next;
+    }
+    if (Array.isArray(node)) {
+      for (let i = 0; i < node.length; i++) node[i] = walk(node[i]);
+      return node;
+    }
+    if (node && typeof node === 'object') {
+      for (const k of Object.keys(node)) node[k] = walk(node[k]);
+      return node;
+    }
+    return node;
+  };
+  walk(data);
+  return changed;
+}
+
+/**
  * Типографский апостроф ’ в тексте fr-локали (правило style.txt и канона
  * корпуса: ’ во всех элизиях — l’anxiété, d’une, qu’est-ce). Модель
  * регулярно даёт прямые ' несмотря на промпт, поэтому нормализуем
