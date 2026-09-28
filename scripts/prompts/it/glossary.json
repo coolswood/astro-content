@@ -1,157 +1,262 @@
 [
   {
-    "ru": "Глубинное убеждение / Глубинные убеждения",
-    "lang": "credenza profonda",
-    "context": "Подтверждено: Credenze profonde (в прозе также convinzioni profonde)."
-  },
-  {
-    "ru": "Промежуточное убеждение / Промежуточные убеждения",
-    "lang": "convinzione intermedia",
-    "context": "Подтверждено: Convinzioni intermedie."
+    "ru": "Когнитивно-поведенческая терапия / КПТ",
+    "lang": "terapia cognitivo-comportamentale (TCC)",
+    "context": "Корпус: TCC — 22 файла / 67 вхождений, полная форма — 22 / 39; sitemap «Materiali aggiuntivi di TCC». Итальянская аббревиатура — TCC (НЕ CBT): 4 вхождения CBT в story/depression/real_rebuff_self_help.json — дрейф, при перегоне устраняется. При первом упоминании в нарративе — полный термин, далее TCC."
   },
   {
     "ru": "Автоматическая мысль / Автоматические мысли",
     "lang": "pensiero automatico",
-    "context": "Подтверждено."
+    "context": "Поле дневника в UI (diary_field_thought) и 26 файлов корпуса / 71 вхождение (мн.ч. pensieri automatici); notifications_diary_body «lavora sui pensieri automatici»."
+  },
+  {
+    "ru": "Дневник автоматических мыслей",
+    "lang": "diario dei pensieri automatici",
+    "context": "Заголовок инструмента в UI (diary_title «Diario dei pensieri automatici»). Именно «dei pensieri»."
+  },
+  {
+    "ru": "Когнитивные искажения / Когнитивная ошибка",
+    "lang": "distorsioni cognitive",
+    "context": "Поле дневника в UI (diary_field_distortions, daybook_ai_loading_phrase_4 «Cerco distorsioni cognitive...») и корпус: мн.ч. — 17 файлов / 58, ед.ч. distorsione cognitiva — 10 / 24 (первые фразы всех статей distortions.json). «errori cognitivi» — 1 вхождение, дрейф: в итальянской КПТ-литературе стандарт — distorsioni."
+  },
+  {
+    "ru": "Глубинное убеждение / Глубинные убеждения",
+    "lang": "credenza profonda",
+    "context": "Корпус: credenze profonde — 4 файла / 28 вхождений против convinzioni profonde — 4 / 4 (дрейф). В текстах сайта — credenze profonde. Интерфейс arb (gpt_deep_title, daybook_dream_subtitle) — «convinzioni profonde»: допустимо в UI-строках до перегона UI, в нарративах не копировать."
+  },
+  {
+    "ru": "Промежуточное убеждение / Промежуточные убеждения",
+    "lang": "credenza intermedia",
+    "context": "Корпус: credenze intermedie — 6 файлов / 25 против convincioni intermedie — 4 / 5. Sitemap «Convinzioni intermedie» и arb (gpt_middle_title) — convincioni в UI; в текстах сайта — credenze intermedie."
   },
   {
     "ru": "Деструктивное убеждение / Деструктивные убеждения",
     "lang": "convinzione disfunzionale",
-    "context": "Подтверждено: в проекте disfunzionale (не distruttiva)."
+    "context": "Корпус: convincioni disfunzionali — 6 файлов / 12 (в прозе сайта disfunzionale, НЕ distruttiva); convincioni distruttive — 3 / 3 (дрейф). UI arb (coping_banner_title, stepper_record_coping_continue) — «convinzioni distruttive»: канон интерфейсных строк, в текстах сайта — disfunzionali."
   },
   {
-    "ru": "Когнитивные искажения / Когнитивные ошибки",
-    "lang": "distorsione cognitiva",
-    "context": "Подтверждено: distorsioni cognitive."
-  },
-  {
-    "ru": "Когнитивно-поведенческая терапия / КПТ",
-    "lang": "terapia cognitivo-comportamentale (TCC)",
-    "context": "Подтверждено; итальянская аббревиатура — TCC (НЕ CBT)."
-  },
-  {
-    "ru": "Дневник",
-    "lang": "diario",
-    "context": "Подтверждено: tenere il diario."
-  },
-  {
-    "ru": "Запись (в дневнике)",
-    "lang": "voce",
-    "context": "Подтверждено: in una sola voce."
-  },
-  {
-    "ru": "Ежедневник",
-    "lang": "diario giornaliero",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Умный ежедневник",
-    "lang": "diario intelligente",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Копинг-карточка / Копинг-карточки",
-    "lang": "scheda di coping",
-    "context": "Подтверждено: schede di coping."
+    "ru": "Конструктивное убеждение",
+    "lang": "convinzione costruttiva",
+    "context": "arb coping_description: «Sostituisca le convinzioni distruttive con quelle costruttive» (взаимозаменяемо con «razionali» — coping_info_text_1). Пара к деструктивному в UI — convincioni costruttive."
   },
   {
     "ru": "Адаптивный ответ",
     "lang": "risposta adattiva",
-    "context": "Подтверждено."
+    "context": "Поле дневника в UI (diary_field_response) и daybook_ai_loading_phrase_5 «Elaboro una risposta adattiva...»; корпус — 1 файл / 3."
   },
   {
-    "ru": "Уровень веры / Убеждённость",
+    "ru": "Копинг-карточка / Копинг-карточки",
+    "lang": "scheda di coping",
+    "context": "UI: coping_card «Scheda di coping», coping_title «Schede di coping»; sitemap «Schede di coping»; корпус — 3 файла / 12. Англицизм coping устоялся, не переводить («scheda di affrontamento» не использовать)."
+  },
+  {
+    "ru": "Уровень веры / Убеждённость (в мысль)",
     "lang": "livello di convinzione",
-    "context": "Подтверждено."
+    "context": "arb comparison_level «Livello di convinzione nell'argomento», coping_believe_title; sitemap «Valutazione del livello di convinzione dopo il lavoro sul pensiero»; корпус — 2 файла / 3. Глагольная форма в UI: belief_rate_title «Valuta quanto ci credi»."
   },
   {
-    "ru": "Катастрофизация",
-    "lang": "catastrofizzazione",
-    "context": "Подтверждено."
+    "ru": "Дневник",
+    "lang": "diario",
+    "context": "Корпус — 16 файлов / 42; arb diary «Diario»; «tenere il diario». Отличать от «ежедневник» (diario giornaliero): атрибут различает инструменты."
   },
   {
-    "ru": "Чёрно-белое мышление",
-    "lang": "pensiero in bianco e nero",
-    "context": "Подтверждено."
+    "ru": "Запись (в дневнике)",
+    "lang": "voce",
+    "context": "UI: add_record «Aggiunga una voce», records «Voci», daybook_inner «Voce», subtab_diary_new «Nuova voce»; sitemap «Esportazione delle voci del diario»; корпус — 10 файлов / 16. НЕ «entrata»/«record» (nota — только «заметка утра» mood_start_daybook_title)."
   },
   {
-    "ru": "Чтение мыслей",
-    "lang": "lettura del pensiero",
-    "context": "Подтверждено."
+    "ru": "Ежедневник",
+    "lang": "diario giornaliero",
+    "context": "Sitemap: «Diario giornaliero», «IA nel diario giornaliero». «Quotidiano» как существительное не используется (0 вхождений); прилагательное quotidiano — только о частоте (vita quotidiana)."
   },
   {
-    "ru": "Сверхобобщение / Обобщение",
-    "lang": "sovrageneralizzazione",
-    "context": "Подтверждено."
+    "ru": "Умный ежедневник",
+    "lang": "diario intelligente",
+    "context": "arb daybook_title «Diario intelligente»; корпус — 1 вхождение."
   },
   {
-    "ru": "Персонализация",
-    "lang": "personalizzazione",
-    "context": "Стандартный термин из списка искажений."
+    "ru": "Поля дневника (событие / поведение / ощущения / вывод)",
+    "lang": "evento / comportamento / sensazioni corporee / conclusione",
+    "context": "arb diary_field_event «Evento», diary_field_behavior «Comportamento», diary_field_body «Sensazioni corporee», diary_field_conclusion «Conclusione»."
   },
   {
-    "ru": "Долженствование",
-    "lang": "pensieri di «devo»",
-    "context": "Стандартное название искажения в итальянской КПТ."
+    "ru": "Личностная гармония (раздел историй)",
+    "lang": "armonia personale",
+    "context": "arb story_distortions_title «Armonia personale» (ru «Личностная гармония»). «Armonia interiore» в корпусе — про внутреннюю гармонию (affirmations/tests), не название раздела."
   },
   {
-    "ru": "Навешивание ярлыков",
-    "lang": "etichettamento",
-    "context": "Стандартный термин из списка искажений."
+    "ru": "Инсайт / Инсайты",
+    "lang": "описательно: comprensione / consapevolezza (в UI — insight)",
+    "context": "arb «insight personale» (stepper_test_first), mood_stats_unlock_body_1 «statistiche e insight!»: англицизм в UI остаётся. В нарративах сайта — описательный перевод (corpus: 1 вхождение insight)."
   },
   {
-    "ru": "Мысленный фильтр",
-    "lang": "filtro mentale",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Эмоциональное обоснование",
-    "lang": "ragionamento emotivo",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Обесценивание позитивного",
-    "lang": "svalutazione del positivo",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Панические атаки",
-    "lang": "attacco di panico",
-    "context": "Подтверждено: attacchi di panico."
-  },
-  {
-    "ru": "Навязчивые мысли",
-    "lang": "pensieri ossessivi",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Инсайт",
-    "lang": "intuizione",
-    "context": "Стандартное слово; в ключе продукта допустимо «insight»."
-  },
-  {
-    "ru": "Настроение",
-    "lang": "umore",
-    "context": "Ключевой термин трекинга состояния."
-  },
-  {
-    "ru": "Психологическое благополучие",
-    "lang": "benessere psicologico",
-    "context": "Подтверждено."
+    "ru": "Практика благодарности / Благодарность",
+    "lang": "pratica della gratitudine / gratitudine",
+    "context": "arb daybook_gratitude_title «Pratica della gratitudine», subtitle «Scriva 3 cose per cui prova gratitudine»; sitemap «Diario della gratitudine»; gratitudine в корпусе — 6 файлов / 12."
   },
   {
     "ru": "Дыхательные практики",
     "lang": "pratiche di respirazione",
-    "context": "Подтверждено."
+    "context": "ru 1 файл / 1 ↔ it 1 / 1 (прямое соответствие); arb breathing_* (техники дыхания)."
   },
   {
-    "ru": "AI-помощник",
-    "lang": "assistente IA",
-    "context": "Подтверждено."
+    "ru": "Сократический диалог",
+    "lang": "dialogo socratico",
+    "context": "Sitemap «Dialogo socratico»; корпус — 1 вхождение. В прозе с маленькой буквы."
+  },
+  {
+    "ru": "Эмоции",
+    "lang": "emozioni",
+    "context": "arb diary_field_emotions, mood_emotions_title «Quali emozioni prova?»."
+  },
+  {
+    "ru": "Настроение",
+    "lang": "umore",
+    "context": "Ключевой термин трекинга: корпус — 27 файлов / 78; arb mood_* («Il suo umore è migliorato»). «stato d'animo» — 2 вхождения, дрейф."
+  },
+  {
+    "ru": "Состояние (в контексте трекинга)",
+    "lang": "stato",
+    "context": "arb mood_trend_* «Lo stato è migliorato...», notifications_mood_* «valuti il suo stato»; sitemap «Valutazione quotidiana dello stato»."
+  },
+  {
+    "ru": "Тревога / Тревожность",
+    "lang": "ansia",
+    "context": "Корпус — 37 файлов / 237 вхождений; sitemap «Test sull'ansia». НЕ «ansietà»."
+  },
+  {
+    "ru": "Депрессия",
+    "lang": "depressione",
+    "context": "Стандартный термин; раздел историй и текстов."
+  },
+  {
+    "ru": "Панические атаки / Паника",
+    "lang": "attacchi di panico",
+    "context": "Корпус — 5 файлов / 10."
+  },
+  {
+    "ru": "Навязчивые мысли",
+    "lang": "pensieri intrusivi",
+    "context": "arb tutorial_tests_description «ansia o i pensieri intrusivi» (ru «навязчивые мысли»); корпус: intrusivi — 2 файла / 19. В контексте ОКР — pensieri ossessivi (1 файл / 4)."
+  },
+  {
+    "ru": "ОКР / Обсессивно-компульсивное расстройство",
+    "lang": "disturbo ossessivo-compulsivo",
+    "context": "Корпус пишет полностью — 5 файлов / 6; при повторном упоминании допустима итальянская аббревиатура DOC. TOC — испанизм, запрещён (0 вхождений в корпусе)."
+  },
+  {
+    "ru": "Выгорание",
+    "lang": "burnout",
+    "context": "Корпус — 7 файлов / 24: англицизм устоялся, не заменять на «esaurimento» как термин."
+  },
+  {
+    "ru": "Прокрастинация",
+    "lang": "procrastinazione",
+    "context": "Корпус — 8 файлов / 17."
+  },
+  {
+    "ru": "Бессонница",
+    "lang": "insonnia",
+    "context": "Корпус — 2 файла / 3."
+  },
+  {
+    "ru": "Социальная тревожность / Социофобия",
+    "lang": "ansia sociale",
+    "context": "Корпус — 2 файла / 39 вхождений (тест социофобии + история): ru «социофобия» (30/2) передаётся как ansia sociale — термин DSM-5 на итальянском (disturbo d'ansia sociale); fobia sociale — 2 вхождения, допустима как синоним в прозе/скобках."
+  },
+  {
+    "ru": "СДВГ",
+    "lang": "ADHD (disturbo da deficit di attenzione e iperattività)",
+    "context": "Прямое соответствие корпусов: ru СДВГ — 31 вхождение / 1 файл (tests/sdvg) ↔ it ADHD — 31 / 1. В итальянской клинической практике доминирует ADHD (TDAH — 0 вхождений). При первом упоминании в нарративе — полный термин с (ADHD), далее ADHD."
+  },
+  {
+    "ru": "РПП / Расстройства пищевого поведения",
+    "lang": "disturbi del comportamento alimentare",
+    "context": "Корпус: полная форма — 5 файлов / 21 против disturbi alimentari — 3 / 5 (дрейф); аббревиатура DCA в корпусе не используется."
+  },
+  {
+    "ru": "Психологические тесты",
+    "lang": "test psicologici",
+    "context": "arb psy_tests «Test psicologici», notifications_tests_body."
   },
   {
     "ru": "Психолог",
     "lang": "psicologo",
-    "context": "Стандартное обращение к специалисту."
+    "context": "Корпус — 43 файла / 141; arb partner_test_title «Il suo psicologo online»; sitemap «Psicologo virtuale». «terapeuta» — 5 файлов / 6 (arb benefit_psychologist «Terapeuta» — UI-дрейф, в текстах сайта psicologo)."
+  },
+  {
+    "ru": "AI-помощник / ИИ / Искусственный интеллект",
+    "lang": "IA / assistente IA / intelligenza artificiale",
+    "context": "arb: «Compila con l'IA», «Risposta dall'IA», «Supporto IA»; intelligenza artificiale в корпусе — 4 файла / 4. Аббревиатура итальянская — IA, НЕ «AI». В коротких UI-строках не раскрывать; в нарративе при первом упоминании — intelligenza artificiale."
+  },
+  {
+    "ru": "Психологическое благополучие",
+    "lang": "benessere psicologico",
+    "context": "Корпус — 10 файлов / 10."
+  },
+  {
+    "ru": "Катастрофизация",
+    "lang": "catastrofizzazione",
+    "context": "arb errors_catastrophization_title; первая фраза статьи CATASTROPHIZATION: «La catastrofizzazione è una distorsione cognitiva...»."
+  },
+  {
+    "ru": "Чёрно-белое мышление",
+    "lang": "pensiero «tutto o niente»",
+    "context": "arb errors_blackandwhite_title «Pensiero tutto o niente»; корпус: «tutto o niente» — 5 файлов / 8 (в т.ч. dialogSummary той же статьи); «in bianco e nero» — 4 / 5 (дрейф первой фразы статьи, унифицировать под arb-канон)."
+  },
+  {
+    "ru": "Сверхобобщение / Обобщение",
+    "lang": "sovrageneralizzazione",
+    "context": "arb errors_common_title; первая фраза статьи COMMON: «La sovrageneralizzazione è una distorsione cognitiva...»."
+  },
+  {
+    "ru": "Чтение мыслей",
+    "lang": "lettura del pensiero",
+    "context": "arb errors_read_title; первая фраза статьи READ: «lettura del pensiero»."
+  },
+  {
+    "ru": "Персонализация",
+    "lang": "personalizzazione",
+    "context": "arb errors_personalization_title; первая фраза статьи RESPONSE."
+  },
+  {
+    "ru": "Долженствование",
+    "lang": "doverizzazione",
+    "context": "Первая фраза статьи DUE: «La doverizzazione è una distorsione cognitiva...»; arb errors_should_statements_title «Doverizzazioni» (мн.ч. в заголовке UI). В прозе — ед.ч. doverizzazione; вариант «pensieri di dovere» не использовать."
+  },
+  {
+    "ru": "Навешивание ярлыков",
+    "lang": "etichettamento",
+    "context": "arb errors_label_title; первая фраза статьи LABEL: «L'etichettamento»."
+  },
+  {
+    "ru": "Мысленный фильтр",
+    "lang": "filtro mentale",
+    "context": "arb errors_filter_title; первая фраза статьи FILTER: «Il filtro mentale»."
+  },
+  {
+    "ru": "Эмоциональное обоснование",
+    "lang": "ragionamento emotivo",
+    "context": "arb errors_emo_title; первая фраза статьи EMO: «ragionamento emotivo»."
+  },
+  {
+    "ru": "Обесценивание позитивного",
+    "lang": "svalutazione del positivo",
+    "context": "arb errors_discval_title; первая фраза статьи DISCVAL: «La svalutazione del positivo»."
+  },
+  {
+    "ru": "Преувеличение и преуменьшение",
+    "lang": "ingrandimento e minimizzazione",
+    "context": "Первая фраза статьи MORE_MINE: «La distorsione «ingrandimento e minimizzazione» compare quando...»; в текстах сайта — ingrandimento. arb errors_magnification_minimization_title «Esagerazione e minimizzazione» — канон UI-заголовка, в нарративах не копировать."
+  },
+  {
+    "ru": "«Можно было бы» (контрфактическое мышление)",
+    "lang": "«avrei potuto»",
+    "context": "Первая фраза статьи MAYBE: «La distorsione dell'«avrei potuto» nasce quando...»; arb errors_maybe_title «Avrei potuto»."
+  },
+  {
+    "ru": "Туннельное мышление",
+    "lang": "visione a tunnel",
+    "context": "Только arb errors_tunnel_vision_title «Visione a tunnel» — в ru-корпусе и текстах сайта термин отсутствует, нужен для UI-консистентности."
   }
 ]
