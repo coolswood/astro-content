@@ -1,51 +1,51 @@
 {
   "steps": [
-    "Combien de temps, au cours d’une journée, vos pensées obsessionnelles vous occupent-elles ?",
-    "Quel impact ces pensées obsessionnelles ont-elles sur votre rythme de vie au quotidien ?",
+    "Pendant combien de temps les pensées intrusives persistent-elles au cours de la journée ?",
+    "Quel est l’impact de ces pensées intrusives sur votre quotidien ?",
     "À quel point ces pensées vous préoccupent-elles ?",
-    "Vous est-il facile de résister aux pensées obsessionnelles ?",
-    "Pouvez-vous contrôler vos pensées obsessionnelles ?",
-    "Combien de temps, au cours d’une journée, consacrez-vous à des actes compulsifs (vérifier votre téléphone sans raison, vous laver les mains, etc.) ?",
-    "Quel impact ces actes ont-ils sur votre vie ?",
-    "Comment vous sentez-vous à cause de ces actes ?",
-    "Parvenez-vous à résister à l’accomplissement des rituels ?",
-    "Dans quelle mesure contrôlez-vous vos rituels ?"
+    "Est-il facile pour vous de ne pas céder à ces pensées intrusives ?",
+    "Arrivez-vous à contrôler vos pensées intrusives ?",
+    "À quelle fréquence effectuez-vous des comportements répétitifs (vérifier votre téléphone sans raison, vous laver les mains, etc.) ?",
+    "Quel est l’impact de ces comportements sur votre vie ?",
+    "Que ressentez-vous face à ces comportements ?",
+    "Parvenez-vous à résister à l’envie d’accomplir vos rituels ?",
+    "Dans quelle mesure parvenez-vous à contrôler vos rituels ?"
   ],
   "variants": {
     "0": [
-      "Pas du tout",
+      "Aucune",
       "Moins d’une heure",
       "De 1 à 3 heures",
       "De 3 à 8 heures",
       "Plus de 8 heures"
     ],
     "1": [
-      "Aucun, je vis comme d’habitude",
-      "À peine perceptible",
-      "Cela complique un peu la vie, mais je gère",
-      "Cela gêne beaucoup, je dois changer mes habitudes",
-      "Cela a complètement bouleversé ma vie"
+      "Pas du tout, je vis normalement",
+      "À peine",
+      "Elles compliquent un peu la vie, mais je m’en sors",
+      "Elles gênent considérablement, je dois changer mes habitudes",
+      "Elles ont totalement bouleversé ma vie"
     ],
     "2": [
-      "Pas du tout",
-      "Un peu",
-      "Assez fort, mais supportable",
-      "Très fort, cela influence mon humeur",
-      "Je ressens en permanence un fort malaise"
+      "Elles ne me préoccupent pas du tout",
+      "C’est un peu désagréable",
+      "C’est assez fort, mais supportable",
+      "C’est très intense, cela affecte mon humeur",
+      "Je ressens un inconfort permanent et intense"
     ],
     "3": [
-      "Presque toujours",
-      "Souvent",
-      "Parfois",
-      "J’y arrive rarement",
-      "Je n’arrive pas du tout à résister"
+      "J’y parviens presque toujours",
+      "J’y parviens souvent",
+      "J’y parviens parfois",
+      "Je peux rarement m’en débarrasser",
+      "Je n’y parviens pas du tout"
     ],
     "4": [
       "Oui, je les contrôle totalement",
-      "La plupart du temps, oui",
-      "Parfois, j’y arrive",
-      "J’y arrive à peine",
-      "Je ne les contrôle pas du tout"
+      "En grande partie, oui",
+      "Parfois, j’y parviens",
+      "À peine",
+      "Je n’arrive pas du tout à les contrôler"
     ],
     "5": [
       "Jamais",
@@ -55,74 +55,74 @@
       "Plus de 8 heures"
     ],
     "6": [
-      "Aucun, tout est comme d’habitude",
+      "Pas du tout, tout est comme d’habitude",
       "À peine perceptible",
-      "Cela complique un peu, mais ce n’est pas critique",
-      "Cela gêne beaucoup, je change mes plans à cause de ça",
-      "Ma vie a changé au point d’en être méconnaissable"
+      "Elles compliquent un peu les choses, mais ce n’est pas critique",
+      "Elles me gênent beaucoup, je change mes plans à cause d’elles",
+      "Ma vie a changé au point d’être méconnaissable"
     ],
     "7": [
-      "Je ne m’en inquiète pas du tout",
-      "Un léger inconfort",
-      "C’est nettement désagréable, mais supportable",
-      "Un fort malaise, cela me pèse",
-      "Un fort malaise en permanence"
+      "Je ne m’en préoccupe pas du tout",
+      "Un tout petit peu inconfortable",
+      "C’est nettement désagréable, mais vivable",
+      "Un inconfort intense, cela me submerge",
+      "Une sensation constante d’inconfort profond"
     ],
     "8": [
-      "Je parviens presque toujours à m’en empêcher",
-      "J’y arrive assez souvent",
-      "Parfois, je peux y renoncer",
-      "J’y arrive rarement",
-      "Je n’arrive pas du tout à résister"
+      "J’arrive presque toujours à me retenir",
+      "J’y parviens assez souvent",
+      "J’y parviens parfois",
+      "Je n’y parviens que rarement",
+      "Je n’y parviens pas du tout"
     ],
     "9": [
-      "Je les contrôle totalement",
+      "Elles sont totalement sous mon contrôle",
       "Je les contrôle en grande partie",
-      "Parfois, je parviens à les gérer",
-      "Je les contrôle très peu",
-      "Je ne les contrôle pas du tout"
+      "J’arrive parfois à les maîtriser",
+      "Je les contrôle à peine",
+      "Je n’arrive pas du tout à les contrôler"
     ]
   },
   "steps_description": {
     "0": {
-      "text": "Chez les personnes présentant un TOC modéré, les obsessions et les compulsions peuvent occuper de 1 à 3 heures par jour, tandis que, dans les formes sévères, elles peuvent dépasser 8 heures par jour.",
-      "fact": "Les études montrent que plus de 60 % des personnes souffrant de TOC ont des pensées obsessionnelles chaque jour."
+      "text": "Pour les personnes souffrant d’une forme modérée de TOC, les pensées intrusives et les compulsions peuvent occuper de 1 à 3 heures par jour, tandis que dans les formes sévères, ces pensées et ces rituels peuvent prendre plus de 8 heures par jour.",
+      "fact": "Des études montrent que plus de 60 % des personnes atteintes de TOC éprouvent des pensées intrusives quotidiennement."
     },
     "1": {
-      "text": "Environ 50 % des personnes souffrant de TOC rapportent que leurs obsessions et compulsions perturbent fortement la vie quotidienne, notamment le travail, les études et les relations sociales.",
-      "fact": "Des obsessions fréquentes et prolongées peuvent entraîner un épuisement physique et des problèmes de santé, comme des maux de tête, des troubles digestifs et une fatigue chronique."
+      "text": "Environ 50 % des personnes atteintes de TOC rapportent que leurs pensées intrusives et leurs compulsions perturbent considérablement leur vie quotidienne, notamment le travail, les études et les interactions sociales.",
+      "fact": "Des pensées intrusives fréquentes et prolongées peuvent provoquer un épuisement physique et des problèmes de santé, tels que des maux de tête, des troubles digestifs et une fatigue chronique."
     },
     "2": {
-      "text": "Une inquiétude intense liée aux pensées obsessionnelles peut se manifester par des symptômes physiques, comme des maux de tête, des tensions musculaires et des troubles digestifs.",
-      "fact": "Même si Franklin D. Roosevelt n’a jamais reçu de diagnostic officiel de TOC, certains historiens estiment que des pensées envahissantes lui causaient une inquiétude marquée, influençant son humeur et sa vie quotidienne."
+      "text": "Une forte anxiété liée aux pensées intrusives peut se manifester par des symptômes physiques, comme des maux de tête, des tensions musculaires et des troubles digestifs.",
+      "fact": "Bien que Franklin Delano Roosevelt n’ait pas eu de diagnostic officiel de TOC, les historiens notent que ses pensées intrusives lui causaient une anxiété importante, influençant son humeur et sa vie quotidienne."
     },
     "3": {
-      "text": "L’intensité et la fréquence des pensées obsessionnelles varient fortement d’une personne à l’autre. Certains parviennent à les gérer la plupart du temps, tandis que d’autres éprouvent des difficultés constantes.",
-      "fact": "La TCC, en particulier l’exposition avec prévention de la réponse (EPR), est l’approche la plus efficace pour traiter le TOC, en aidant à apprendre à résister aux rituels et à tolérer l’inconfort."
+      "text": "L’intensité et la fréquence des pensées intrusives peuvent varier considérablement d’une personne à l’autre. Certaines parviennent à les gérer la majeure partie du temps, tandis que d’autres font face à des difficultés constantes.",
+      "fact": "La TCC, et plus particulièrement la thérapie par exposition avec prévention de la réponse (EPR), est la méthode de traitement la plus efficace pour le TOC, aidant les personnes à apprendre à résister aux pensées intrusives."
     },
     "4": {
-      "text": "Seules 10 à 20 % des personnes souffrant de TOC disent pouvoir contrôler leurs pensées obsessionnelles dans la plupart des situations.",
-      "fact": "Des antidépresseurs comme les ISRS peuvent réduire l’intensité des obsessions et améliorer le contrôle des symptômes chez certaines personnes."
+      "text": "Seulement environ 10 à 20 % des personnes atteintes de TOC rapportent pouvoir contrôler principalement leurs pensées intrusives.",
+      "fact": "Les antidépresseurs, tels que les ISRS, aident souvent les personnes atteintes de TOC à réduire l’intensité de leurs pensées intrusives et à en améliorer le contrôle."
     },
     "5": {
-      "text": "Les compulsions les plus fréquentes incluent le lavage répété des mains, la vérification multiple des serrures ou des appareils ménagers, ainsi que des actions répétitives comme toucher certains objets ou répéter des mots et des phrases.",
-      "fact": "Moins de 5 % des personnes souffrant de TOC accomplissent des compulsions pendant plus de 8 heures par jour, ce qui perturbe gravement leur vie quotidienne."
+      "text": "Les comportements compulsifs les plus courants incluent le lavage fréquent des mains, la vérification répétée des serrures et des appareils ménagers, ainsi que des actions répétitives comme toucher certains objets ou répéter certains mots et phrases.",
+      "fact": "Moins de 5 % des personnes atteintes de TOC effectuent des comportements compulsifs plus de 8 heures par jour, ce qui entrave gravement leur vie quotidienne."
     },
     "6": {
-      "text": "Les compulsions peuvent nuire au travail en diminuant la productivité et en compliquant l’exécution des tâches. Certaines personnes sont contraintes de réduire leur temps de travail ou même de changer d’emploi à cause de leur état.",
-      "fact": "Les compulsions de Howard Hughes, comme le lavage répété des mains et l’évitement des contacts, ont conduit à un isolement social et à des changements majeurs dans sa vie. À terme, son TOC a fortement affecté sa santé et sa carrière."
+      "text": "Les comportements compulsifs peuvent nuire à l’activité professionnelle en réduisant la productivité et en rendant l’exécution des tâches difficiles. Certaines personnes sont contraintes de réduire leurs heures de travail ou même de changer d’emploi à cause de leur état.",
+      "fact": "Les comportements compulsifs de Howard Hughes, tels que le lavage incessant des mains et l’évitement des contacts avec autrui, ont mené à son isolement social et à des changements majeurs dans sa vie. En fin de compte, son TOC a gravement affecté sa santé et sa carrière."
     },
     "7": {
-      "text": "Les compulsions s’accompagnent souvent d’émotions négatives fortes : anxiété, culpabilité, honte et frustration. Ces émotions peuvent intensifier le malaise global et le sentiment d’être dépassé.",
-      "fact": "Les personnes souffrant de TOC présentent fréquemment des troubles comorbides, comme la dépression ou des troubles anxieux, ce qui peut aggraver les symptômes et renforcer l’inconfort."
+      "text": "Les comportements compulsifs sont souvent accompagnés d’émotions négatives intenses, telles que l’anxiété, la culpabilité, la honte et la frustration. Ces émotions peuvent amplifier considérablement l’inconfort général et le sentiment d’être submergé.",
+      "fact": "Les personnes atteintes de TOC souffrent souvent de troubles comorbides, tels que la dépression et les troubles anxieux, ce qui aggrave leur état et accentue leur sentiment d’inconfort."
     },
     "8": {
-      "text": "Le niveau de stress et d’anxiété joue un rôle important dans la capacité à résister aux rituels. En période de stress élevé, il devient plus difficile de s’en empêcher.",
-      "fact": "Le footballeur David Beckham a confié qu’il parvenait parfois à résister à certains rituels, notamment grâce au soutien de sa famille et de ses thérapeutes."
+      "text": "Le niveau de stress et d’anxiété joue un rôle important dans la capacité à résister aux rituels. En période de stress accru, la résistance aux rituels devient plus difficile.",
+      "fact": "Le footballeur David Beckham a confié qu’il parvenait parfois à résister à ses rituels, notamment grâce au soutien de sa famille et de thérapeutes."
     },
     "9": {
-      "text": "Environ 30 à 35 % des personnes indiquent qu’elles parviennent à contrôler leurs rituels dans la plupart des situations.",
-      "fact": "Les pratiques de pleine conscience et la méditation peuvent aider à mieux contrôler les rituels, en réduisant l’anxiété et en améliorant le bien-être psychique global."
+      "text": "Environ 30 à 35 % des personnes notent qu’elles parviennent à contrôler leurs rituels dans la plupart des cas.",
+      "fact": "Les pratiques de pleine conscience et de méditation peuvent aider à améliorer le contrôle des rituels, en favorisant la réduction de l’anxiété et l’amélioration de l’état mental général."
     }
   },
   "range": {
@@ -134,26 +134,26 @@
   "result": {
     "normal": {
       "title": "État normal",
-      "text": "Vos résultats ne suggèrent pas de signes marqués de trouble obsessionnel-compulsif. Les pensées intrusives ou les impulsions, si elles apparaissent, ne provoquent pas de malaise notable et ne gênent pas votre vie quotidienne. Globalement, vous parvenez à garder le contrôle sur vos pensées et vos comportements, et vous vous sentez stable."
+      "text": "Vos résultats indiquent une absence de signes marqués de trouble obsessionnel-compulsif. Les pensées ou impulsions intrusives, si elles surviennent, ne provoquent pas d’inconfort notable et ne perturbent pas votre vie quotidienne. Dans l’ensemble, vous êtes capable de garder le contrôle sur vos pensées et vos comportements et vous vous sentez stable."
     },
     "light": {
       "title": "Manifestations légères de TOC",
-      "text": "Il peut vous arriver d’avoir des pensées répétitives ou l’envie de vérifier quelque chose, surtout en période de stress. Ces manifestations ne sont pas constantes et ne perturbent généralement pas votre rythme de vie. Vous réussissez à garder le contrôle sur ces impulsions et à gérer le quotidien. Si certaines pensées ou actions commencent à vous inquiéter, des techniques simples d’autorégulation peuvent vous aider à préserver votre équilibre émotionnel."
+      "text": "Il peut vous arriver d’avoir des pensées répétitives ou l’envie de vérifier quelque chose, surtout en situation de stress. Ces manifestations ne sont pas permanentes et ne perturbent généralement pas votre rythme de vie habituel. Vous parvenez à garder le contrôle sur ces impulsions et à vous adapter aux tâches quotidiennes. Si certaines pensées ou actions commencent à générer de l’anxiété, des techniques douces de régulation émotionnelle peuvent vous aider à maintenir votre équilibre."
     },
     "severe": {
       "title": "Manifestations modérées de TOC",
-      "text": "Vous pouvez faire face à des pensées insistantes ou à des rituels qui diminuent l’anxiété, mais qui, parfois, limitent votre liberté d’action ou prennent un temps notable. Le besoin d’ordre, de contrôle ou de rituels spécifiques peut créer de la tension, surtout lorsque les circonstances empêchent de suivre vos règles habituelles. Vous parvenez parfois à faire face seul, mais un soutien ponctuel d’un professionnel peut aider à alléger la charge et à gagner en souplesse."
+      "text": "Vous pouvez être confronté à des pensées ou des rituels persistants qui vous aident à réduire l’anxiété, mais qui, parfois, limitent votre liberté d’action ou occupent un temps considérable. Le besoin d’ordre, de contrôle ou de suivre certains rituels peut créer des tensions, surtout lorsque les circonstances empêchent de respecter vos règles habituelles. Vous parvenez parfois à gérer cela seul, mais un soutien professionnel périodique pourrait être utile pour alléger la charge et gagner en flexibilité."
     },
     "extreme": {
       "title": "Signes marqués de TOC",
-      "text": "Vos réponses peuvent indiquer que les pensées obsessionnelles et les rituels influencent nettement votre vie quotidienne et votre état émotionnel. Il se peut que vous ressentiez une forte anxiété lorsque vous ne pouvez pas accomplir des actions habituelles, ce qui peut générer un stress important. Dans ce cas, demander une aide professionnelle peut être une étape clé pour améliorer votre bien-être et réduire la tension. Un soutien existe, et vous pouvez y accéder."
+      "text": "Vos réponses suggèrent que les pensées intrusives et les rituels influencent de manière notable votre vie quotidienne et votre état émotionnel. Vous pouvez ressentir une forte anxiété lorsque vous ne parvenez pas à accomplir vos actions habituelles, ce qui peut générer un stress important. Dans ces cas, solliciter une aide professionnelle peut être une étape essentielle pour améliorer votre bien-être et réduire les tensions. Le soutien existe, et vous pouvez en bénéficier."
     }
   },
   "description": {
     "text": [
-      "Le trouble obsessionnel-compulsif (TOC) associe des pensées obsessionnelles et des comportements répétitifs accomplis pour réduire l’anxiété.",
-      "Les manifestations du TOC varient : pensées envahissantes occasionnelles, rituels répétitifs, ou encore rituels mentaux qui demandent du temps et de l’attention.",
-      "Ce trouble est relativement fréquent. Être attentif à ce que l’on vit et chercher du soutien si nécessaire aide à préserver la qualité de vie et le bien-être émotionnel."
+      "Le trouble obsessionnel-compulsif (TOC) est lié à des pensées intrusives et à des comportements répétitifs que la personne effectue pour réduire son anxiété.",
+      "Les manifestations du TOC peuvent être variées : des pensées intrusives périodiques aux comportements répétitifs et rituels mentaux qui demandent du temps et de l’attention.",
+      "Cet état est assez fréquent, et une étape importante consiste à être attentif à ses ressentis et à chercher du soutien si nécessaire — cela aide à préserver la qualité de vie et le bien-être psychologique."
     ]
   }
 }
