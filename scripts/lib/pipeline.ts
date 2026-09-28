@@ -23,7 +23,7 @@ import { loadGlossary } from './glossary-utils.js';
 import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
-import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes, normalizeTypographicQuotesEn, normalizeApostrophesIt } from './tag-reconcile.js';
+import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes, normalizeTypographicQuotesEn, normalizeApostrophesIt, normalizeApostrophesFr } from './tag-reconcile.js';
 import { realignIdArrays } from './id-arrays.js';
 import { stripIcuConstructs } from './validation.js';
 import { buildSubtree } from './tree.js';
@@ -1152,9 +1152,15 @@ export async function runPipeline(
     }
   }
 
-  // Апострофы it — типографские ’ (канон корпуса; модель даёт прямые ').
+  // Апострофы it/fr — типографские ’ (канон корпуса; модель даёт прямые ').
   if (targetLocale.toLowerCase() === 'it') {
     const apostrophes = normalizeApostrophesIt(draft);
+    if (apostrophes > 0) {
+      console.warn(`⚠️ [quotes] апострофы приведены к типографским в ${apostrophes} листах`);
+    }
+  }
+  if (targetLocale.toLowerCase() === 'fr') {
+    const apostrophes = normalizeApostrophesFr(draft);
     if (apostrophes > 0) {
       console.warn(`⚠️ [quotes] апострофы приведены к типографским в ${apostrophes} листах`);
     }

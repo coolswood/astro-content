@@ -1,157 +1,287 @@
 [
   {
-    "ru": "Глубинное убеждение / Глубинные убеждения",
-    "lang": "croyance profonde",
-    "context": "Подтверждено: Les croyances profondes (в прозе также croyances de base)."
-  },
-  {
-    "ru": "Промежуточное убеждение / Промежуточные убеждения",
-    "lang": "croyance intermédiaire",
-    "context": "Подтверждено."
+    "ru": "Когнитивно-поведенческая терапия / КПТ",
+    "lang": "thérapie cognitivo-comportementale (TCC)",
+    "context": "Корпус: TCC — 26 файлов / 88 вхождений, полная форма — 12 / 15; sitemap «Ressources supplémentaires en TCC». Модель «thérapie cognitive et comportementale» (8 / 15, включая arb story_base_description_1) — дрейф, унифицировать под cognitivo-comportementale. При первом упоминании в нарративе — полная форма с (TCC), далее TCC. CBT — 1 / 2, запрещён."
   },
   {
     "ru": "Автоматическая мысль / Автоматические мысли",
     "lang": "pensée automatique",
-    "context": "Подтверждено."
+    "context": "Поле дневника в UI (diary_field_thought «Pensée automatique») и корпус: 27 файлов / 78 вхождений; notifications_diary_body «vos pensées automatiques»."
+  },
+  {
+    "ru": "Дневник автоматических мыслей",
+    "lang": "Journal des pensées automatiques",
+    "context": "Заголовок инструмента в UI (diary_title). Именно «des pensées»."
+  },
+  {
+    "ru": "Когнитивные искажения / Когнитивная ошибка",
+    "lang": "distorsions cognitives",
+    "context": "Поле дневника в UI (diary_field_distortions), daybook_ai_loading_phrase_4 «Recherche de distorsions cognitives...» и корпус: мн.ч. — 15 файлов / 54, ед.ч. distorsion cognitive — в первых фразах статей distortions.json. «biais cognitifs» — 2 / 3 и «erreurs cognitives» — 2 / 3: дрейф, не копировать."
+  },
+  {
+    "ru": "Глубинное убеждение / Глубинные убеждения",
+    "lang": "croyance profonde",
+    "context": "Корпус — 7 файлов / 28 вхождений; arb gpt_deep_title «Croyances profondes», daybook_dream_subtitle «croyances profondes». «croyances de base» — 2 / 5: дрейф, унифицировать."
+  },
+  {
+    "ru": "Промежуточное убеждение / Промежуточные убеждения",
+    "lang": "croyance intermédiaire",
+    "context": "Корпус — 10 файлов / 28 вхождений; arb gpt_middle_title «Croyances intermédiaires», gpt_recommendation_intermediate_title."
   },
   {
     "ru": "Деструктивное убеждение / Деструктивные убеждения",
-    "lang": "croyance destructrice",
-    "context": "Подтверждено."
+    "lang": "croyance dysfonctionnelle",
+    "context": "Канон — croyances dysfonctionnelles: стандарт французской КПТ + arb-UI (coping_banner_title, stepper_record_coping_continue, coping_believe_title «Niveau d'adhésion à la croyance dysfonctionnelle») + название шкалы в собственном корпусе «Échelle des croyances dysfonctionnelles». Легаси-дрейф destructrices — 6 файлов / 10 (coping.json, key.json, way.json, useful.json...) — унифицировать перегоном. Пары: croyances fonctionnelles (coping_description) / croyances rationnelles (coping_info_text_1); pensées dysfonctionnelles (stepper_record_continue, coping_finish_text)."
   },
   {
-    "ru": "Когнитивные искажения / Когнитивные ошибки",
-    "lang": "distorsion cognitive",
-    "context": "Подтверждено (в прозе также biais cognitifs)."
+    "ru": "Уровень веры / Убеждённость (в мысль)",
+    "lang": "niveau d’adhésion (à la croyance)",
+    "context": "arb coping_believe_title «Niveau d'adhésion à la croyance dysfonctionnelle»; belief_rate_title «Évaluez votre conviction». «niveau de croyance» — 1 / 2: дрейф, не копировать."
   },
   {
-    "ru": "Когнитивно-поведенческая терапия / КПТ",
-    "lang": "thérapie cognitivo-comportementale (TCC)",
-    "context": "Подтверждено; французская аббревиатура — TCC."
+    "ru": "Копинг-карточка / Копинг-карточки",
+    "lang": "fiche de coping",
+    "context": "arb coping_card «Fiche de coping», coping_title «Fiches de coping»; нарратив story/coping.json — 10 вхождений. Sitemap «Cartes de coping» и stories.json — легаси-дрейф, унифицировать под fiche. Англицизм coping устоялся, не переводить."
   },
   {
     "ru": "Дневник",
     "lang": "journal",
-    "context": "Подтверждено: tenir votre journal."
+    "context": "Корпус — 18 файлов / 49 вхождений; оборот «tenir votre journal» — 4 / 7; sitemap «Statistiques du journal», «Exportation des entrées du journal», «Images dans le journal». «carnet» — только физическая записная книжка в прозе («un carnet, un document sur l'ordinateur», 4 файла), не термин продукта."
   },
   {
     "ru": "Запись (в дневнике)",
     "lang": "entrée",
-    "context": "Подтверждено: dans une même entrée."
+    "context": "Корпус — 8 файлов / 23; arb add_record «Ajouter une entrée», records «Entrées», subtab_diary_new «Nouvelle entrée», sitemap «Exportation des entrées du journal». Отдельные UI-строки утренних заметок: daybook_inner «Note», mood_start_daybook_title «Notes du matin» (ru «Утренние записи») — канон интерфейса, в нарративе не копировать."
   },
   {
     "ru": "Ежедневник",
     "lang": "journal quotidien",
-    "context": "Подтверждено."
+    "context": "Sitemap: «Journal quotidien», «IA dans le journal quotidien». «agenda» — 0 вхождений, не использовать; прилагательное quotidien — только о частоте."
   },
   {
     "ru": "Умный ежедневник",
     "lang": "journal intelligent",
-    "context": "Подтверждено."
+    "context": "arb daybook_title «Journal intelligent»; sitemap-описание «dans le journal intelligent»."
   },
   {
-    "ru": "Копинг-карточка / Копинг-карточки",
-    "lang": "carte de coping",
-    "context": "Подтверждено: cartes de coping."
+    "ru": "Поля дневника (событие / поведение / ощущения / вывод)",
+    "lang": "Situation / Comportement / Sensations corporelles / Conclusion",
+    "context": "arb diary_field_event «Situation» (ru «Событие» — в контексте поля только Situation, не Événement), diary_field_behavior, diary_field_body, diary_field_conclusion; emotions «Émotions», thought «Pensée automatique», distortions «Distorsions cognitives»."
   },
   {
     "ru": "Адаптивный ответ",
     "lang": "réponse adaptative",
-    "context": "Подтверждено."
+    "context": "Корпус — 2 файла / 4 (texts/diary.json, story/diary.json). arb-UI использует «Réponse plus adaptée» (diary_field_response) и «une réponse adaptée» (daybook_ai_loading_phrase_5) — канон интерфейсных строк, не считать ошибкой; в нарративе — réponse adaptative."
   },
   {
-    "ru": "Уровень веры / Убеждённость",
-    "lang": "niveau de croyance",
-    "context": "Подтверждено."
+    "ru": "Личностная гармония (раздел историй)",
+    "lang": "Harmonie personnelle",
+    "context": "arb story_distortions_title «Harmonie personnelle» (ru «Личностная гармония»)."
+  },
+  {
+    "ru": "Инсайт",
+    "lang": "описательно: prise de conscience",
+    "context": "Корпус: prise de conscience — 5 / 6, «insight» — 0 в нарративе. arb mood_stats_unlock_body_1 «statistiques et d'insights !» — англицизм в UI-строке остаётся, в текстах сайта не копировать."
+  },
+  {
+    "ru": "Практика благодарности / Благодарность",
+    "lang": "pratique de la gratitude / gratitude",
+    "context": "arb daybook_gratitude_title «Pratique de la gratitude»; sitemap «Journal de gratitude»; gratitude в корпусе — 7 файлов / 16."
+  },
+  {
+    "ru": "Техники дыхания / Дыхательные практики",
+    "lang": "techniques de respiration",
+    "context": "Корпус — 1 вхождение (tests/sociophobia); названия практик во breathing.json — «Respiration carrée» и т.п. «pratiques respiratoires» из старого словаря — 0 вхождений, не использовать."
   },
   {
     "ru": "Катастрофизация",
     "lang": "catastrophisation",
-    "context": "Подтверждено."
+    "context": "arb errors_catastrophization_title; первая фраза статьи CATASTROPHIZATION: «La catastrophisation est une distorsion cognitive...»."
   },
   {
     "ru": "Чёрно-белое мышление",
-    "lang": "pensée « tout ou rien »",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Чтение мыслей",
-    "lang": "lecture de pensée",
-    "context": "Подтверждено."
+    "lang": "pensée tout ou rien",
+    "context": "arb errors_blackandwhite_title «Pensée tout ou rien» (без кавычек внутри); первая фраза статьи: «La pensée tout ou rien est une distorsion cognitive...». «tout ou rien» — 7 / 14 против «noir et blanc» — 2 / 2: дрейф, унифицировать. Вариация shortdesc (errors_blackandwhite_shortdesc): « tout » ou « rien » — с ёлочками и пробелами."
   },
   {
     "ru": "Сверхобобщение / Обобщение",
     "lang": "surgénéralisation",
-    "context": "Подтверждено."
+    "context": "Первая фраза статьи COMMON: «La surgénéralisation est une distorsion cognitive...». arb errors_common_title «Généralisation excessive» — канон UI-заголовка, в нарративах не копировать."
+  },
+  {
+    "ru": "Чтение мыслей",
+    "lang": "lecture de pensée",
+    "context": "arb errors_read_title; первая фраза статьи READ: «lecture de pensée». Ед.ч. «de pensée», не «des pensées»."
   },
   {
     "ru": "Персонализация",
     "lang": "personnalisation",
-    "context": "Стандартный термин из списка искажений."
+    "context": "arb errors_personalization_title; первая фраза статьи RESPONSE."
   },
   {
     "ru": "Долженствование",
-    "lang": "pensées du type « je dois »",
-    "context": "Стандартное название искажения во французской КПТ."
+    "lang": "« il faut / je dois »",
+    "context": "Первая фраза статьи DUE: «Le « il faut/je dois » est une distorsion cognitive...»; arb errors_due_shortdesc «Des « je dois » rigides». arb errors_should_statements_title «Exigences rigides» — канон заголовка. Вариант старого словаря pensées du type je dois — 0 вхождений, не использовать."
   },
   {
     "ru": "Навешивание ярлыков",
     "lang": "étiquetage",
-    "context": "Стандартный термин из списка искажений."
+    "context": "arb errors_label_title «Étiquetage»; первая фраза статьи глагольная: «Coller des étiquettes est une distorsion cognitive...» — допустима в прозе; существительное — étiquetage."
   },
   {
     "ru": "Мысленный фильтр",
     "lang": "filtre mental",
-    "context": "Стандартный термин из списка искажений."
+    "context": "arb errors_filter_title; первая фраза статьи FILTER: «Le filtre mental est une distorsion cognitive...»."
   },
   {
     "ru": "Эмоциональное обоснование",
     "lang": "raisonnement émotionnel",
-    "context": "Стандартный термин из списка искажений."
+    "context": "arb errors_emo_title; первая фраза статьи EMO: «La distorsion cognitive appelée « raisonnement émotionnel »...»."
   },
   {
     "ru": "Обесценивание позитивного",
-    "lang": "dépréciation du positif",
-    "context": "Стандартный термин из списка искажений."
+    "lang": "dévalorisation du positif",
+    "context": "arb errors_discval_title «Dévalorisation du positif». «dépréciation du positif» из старого словаря — 0 вхождений, не использовать; первая фраза статьи DISCVAL описательна («Le fait de minimiser le positif est une distorsion cognitive...») — допустима в прозе."
   },
   {
-    "ru": "Панические атаки",
-    "lang": "attaque de panique",
-    "context": "Подтверждено: attaques de panique."
+    "ru": "Преувеличение и преуменьшение",
+    "lang": "amplification et minimisation",
+    "context": "Полный консенсус: первая фраза статьи MORE_MINE «La distorsion « amplification et minimisation »...» = arb errors_magnification_minimization_title «Amplification et minimisation»."
   },
   {
-    "ru": "Навязчивые мысли",
-    "lang": "pensées envahissantes",
-    "context": "Подтверждено (не калька pensées obsessionnelles)."
+    "ru": "«Можно было бы» (контрфактическое мышление)",
+    "lang": "« J’aurais pu »",
+    "context": "arb errors_maybe_title — форма J'aurais pu в кавычках, канон заголовка. Первая фраза статьи MAYBE легаси: «La distorsion « ça aurait pu »...» — унифицировать под J'aurais pu при перегоне."
   },
   {
-    "ru": "Инсайт",
-    "lang": "prise de conscience",
-    "context": "Стандартное французское слово для инсайта."
+    "ru": "Туннельное мышление",
+    "lang": "vision en tunnel",
+    "context": "Только arb errors_tunnel_vision_title «Vision en tunnel» — в ru-корпусе и текстах сайта термин отсутствует, нужен для UI-консистентности."
   },
   {
     "ru": "Настроение",
     "lang": "humeur",
-    "context": "Ключевой термин трекинга состояния."
+    "context": "Ключевой термин трекинга: корпус — 27 файлов / 65 вхождений; arb mood_comparison_* «Votre humeur s'est améliorée...», mood_freq_*, mood_stability_*."
   },
   {
-    "ru": "Психологическое благополучие",
-    "lang": "équilibre psychologique",
-    "context": "Подтверждено; синоним bien-être psychologique."
+    "ru": "Состояние (в контексте трекинга)",
+    "lang": "état",
+    "context": "arb mood_trend_* «L'état s'est nettement amélioré...», notifications_mood_body «évaluer votre état», mood_chart_title «État émotionnel», mood_evening_state «État du soir»."
   },
   {
-    "ru": "Дыхательные практики",
-    "lang": "pratiques respiratoires",
-    "context": "Подтверждено."
+    "ru": "Эмоции",
+    "lang": "émotions",
+    "context": "arb diary_field_emotions, mood_emotions_title «Quelles émotions ressentez-vous ?»."
   },
   {
-    "ru": "AI-помощник",
-    "lang": "assistant IA",
-    "context": "Подтверждено."
+    "ru": "Тревога / Тревожность",
+    "lang": "anxiété",
+    "context": "Корпус — 34 файла / 208 вхождений; sitemap «Test d'anxiété». «angoisse» — 4 / 5: как термин тревоги не использовать (только в разговорной прозе, если ru — «тоска/страх» в сильном смысле)."
+  },
+  {
+    "ru": "Паническая атака / Панические атаки",
+    "lang": "attaque de panique",
+    "context": "Корпус — 3 файла / 5. «crise d'angoisse» — 0 вхождений: во французской клинике часта, но корпус решает — не вводить."
+  },
+  {
+    "ru": "Социофобия / Социальная тревожность",
+    "lang": "phobie sociale",
+    "context": "Корпус нарратива — 30 вхождений (статья + история). «anxiété sociale» — 11, канон строк теста sociophobia («Aucun signe d'anxiété sociale») — в шкалах не менять; в нарративе — phobie sociale."
+  },
+  {
+    "ru": "СДВГ",
+    "lang": "TDAH (trouble du déficit de l’attention avec ou sans hyperactivité)",
+    "context": "Прямое соответствие корпусов: ru СДВГ ↔ fr TDAH — 32 вхождения / 1 файл (tests/sdvg); ADHD — 0. При первом упоминании в нарративе — полный термин с (TDAH), далее TDAH."
+  },
+  {
+    "ru": "ОКР / Обсессивно-компульсивное расстройство",
+    "lang": "TOC (trouble obsessionnel-compulsif)",
+    "context": "Корпус живёт аббревиатурой: TOC — 13 файлов / 53, полная форма — 0. Тест tests/okr.json. При первом упоминании в нарративе допустима расшифровка с (TOC)."
+  },
+  {
+    "ru": "Депрессия",
+    "lang": "dépression",
+    "context": "Стандартный термин; arb story_depression_title «Surmonter la dépression»; раздел историй и текстов."
+  },
+  {
+    "ru": "Выгорание",
+    "lang": "burn-out",
+    "context": "Корпус — 6 файлов / 17, пишется с дефисом (burn-out 14 против burnout 3). «épuisement professionnel» — 2 вхождения: не заменять термин."
+  },
+  {
+    "ru": "Прокрастинация",
+    "lang": "procrastination",
+    "context": "Корпус — 9 файлов / 20."
+  },
+  {
+    "ru": "Бессонница",
+    "lang": "insomnie",
+    "context": "Корпус — 2 файла / 3."
+  },
+  {
+    "ru": "РПП / Расстройства пищевого поведения",
+    "lang": "TCA (troubles des conduites alimentaires)",
+    "context": "Корпус использует только аббревиатуру: TCA — 7 вхождений (tests/eat.json «Faible probabilité de TCA», sitemap); полная форма — 0. При первом упоминании в нарративе расшифровать: troubles des conduites alimentaires (TCA)."
+  },
+  {
+    "ru": "Навязчивые мысли",
+    "lang": "pensées intrusives",
+    "context": "arb tutorial_tests_description «face rapidement à l'anxiété ou aux pensées intrusives»; современный клинический стандарт. Легаси: «envahissantes» — 4 / 6 (тесты) и «obsessionnelles» — 2 / 11 — унифицировать; obsessionnelles допустимы только в контексте TOC."
+  },
+  {
+    "ru": "Синдром самозванца",
+    "lang": "syndrome de l’imposteur",
+    "context": "Корпус — 4 файла / 26 (tests/impostor)."
+  },
+  {
+    "ru": "Биполярное расстройство",
+    "lang": "trouble bipolaire",
+    "context": "Корпус — 4 файла / 27 (tests/bipolar)."
+  },
+  {
+    "ru": "Безнадёжность",
+    "lang": "désespoir",
+    "context": "Корпус — 12 файлов / 18 (tests/hopeless, шкала безнадёжности Бека)."
   },
   {
     "ru": "Психолог",
     "lang": "psychologue",
-    "context": "Стандартное обращение к специалисту."
+    "context": "Корпус — 25 файлов / 71 вхождение; arb partner_test_title «Votre psychologue en ligne», intro_psy_* (сервис для психологов), sitemap «Psychologue virtuel». arb benefit_psychologist «Thérapeute» — UI-дрейф, в текстах сайта psychologue."
+  },
+  {
+    "ru": "AI-помощник / ИИ / Искусственный интеллект",
+    "lang": "IA / intelligence artificielle",
+    "context": "arb-канон: benefit_ai_help «Soutien IA», gpt_response_title «Analyse par l'IA», daybook_ai_response «Réponse de l'IA»; sitemap «IA dans le journal quotidien». В нарративе при первом упоминании — intelligence artificielle (4 / 4), далее IA. Корпус AI — 40 файлов / 200: крупнейший дрейф легаси, полностью закрывается перегоном; «AI» запрещён."
+  },
+  {
+    "ru": "Психологическое благополучие",
+    "lang": "bien-être psychologique",
+    "context": "Корпус — 6 файлов / 6. «équilibre psychologique» — 1 / 1: дрейф (старый словарь ошибочно канонизировал его). «équilibre mental» (arb stepper_read_article) — отдельное выражение, не термин."
+  },
+  {
+    "ru": "Негативные мысли",
+    "lang": "pensées négatives",
+    "context": "Корпус — 14 файлов / 24; arb story_base_description_3 «modifier vos pensées négatives»."
+  },
+  {
+    "ru": "Схемы (глубинные паттерны)",
+    "lang": "schémas",
+    "context": "Корпус — 13 файлов / 19; arb story_distortions_description_1 «schémas de pensée inadéquats», story_base_description_3 «schémas comportementaux»."
+  },
+  {
+    "ru": "Психологические тесты",
+    "lang": "tests psychologiques",
+    "context": "arb psy_tests «Tests psychologiques», notifications_tests_body; sitemap «Statistiques des tests»."
+  },
+  {
+    "ru": "Шкала депрессии Бека (BDI)",
+    "lang": "Inventaire de dépression de Beck (BDI)",
+    "context": "Корпус: с (BDI) после названия при первом упоминании; в прозе допустимо строчными «l'inventaire de dépression de Beck» (описательное). Тест tests/bdi.json."
+  },
+  {
+    "ru": "Шкала дисфункциональных установок (DAS)",
+    "lang": "« Échelle des croyances dysfonctionnelles » (DAS)",
+    "context": "Корпус — 2 вхождения, в кавычках-ёлочках: «comme l'« Échelle des croyances dysfonctionnelles »...». Тест tests/das/ (подкаталог: das.json + descriptions.json)."
   }
 ]
