@@ -23,7 +23,7 @@ import { loadGlossary } from './glossary-utils.js';
 import { normalizeLangCode } from './lang-codes.js';
 import type { GlossaryItem } from './types.js';
 import { parseWithRepair } from './json-repair.js';
-import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes, normalizeTypographicQuotesEn, normalizeApostrophesIt, normalizeApostrophesFr } from './tag-reconcile.js';
+import { reconcileTags, stripInstagramAttributes, normalizeTagQuotes, normalizeTypographicQuotesEn, normalizeApostrophesIt, normalizeApostrophesFr, normalizeQuotesHe } from './tag-reconcile.js';
 import { realignIdArrays } from './id-arrays.js';
 import { stripIcuConstructs } from './validation.js';
 import { buildSubtree } from './tree.js';
@@ -1163,6 +1163,15 @@ export async function runPipeline(
     const apostrophes = normalizeApostrophesFr(draft);
     if (apostrophes > 0) {
       console.warn(`⚠️ [quotes] апострофы приведены к типографским в ${apostrophes} листах`);
+    }
+  }
+
+  // Кавычки he — гершайим ״…״ (канон корпуса; модель наследует дрейф „…” из
+  // контекста принятых переводов).
+  if (targetLocale.toLowerCase() === 'he') {
+    const quotes = normalizeQuotesHe(draft);
+    if (quotes > 0) {
+      console.warn(`⚠️ [quotes] кавычки приведены к ״…״ в ${quotes} листах`);
     }
   }
 

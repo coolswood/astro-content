@@ -449,6 +449,58 @@ export function normalizeApostrophesFr(data: any): number {
 }
 
 /**
+ * Текстовые кавычки he-локали (правило style.txt и канон корпуса: гершайим
+ * ״…״ (U+05F4) с обеих сторон). Корпус исторически расколот: 404 вхождения
+ * ״ против ~386 „…” — модель, опираясь на контекст принятых переводов,
+ * наследует обе системы; нормализуем механически: „ ” и « » заменяются на ״
+ * безусловно (оба знака пары дают один и тот же гершайим), прямые " — только
+ * при чётном числе вне тегов, причём чётность считается глобально по всем
+ * фрагментам (пара может обрамлять тег). Кавычки внутри тегов
+ * (<q author="...">) не трогаются. Мутирует data, возвращает число
+ * исправленных листьев.
+ */
+export function normalizeQuotesHe(data: any): number {
+  let changed = 0;
+  const GERSHAYIM = "\u05f4";
+  const convert = (text: string): string => {
+    if (!/["„”«»]/.test(text)) return text;
+    const parts = text.split(/(<[^>]*>)/);
+    const straight = parts.filter((_, i) => i % 2 === 0).join('').match(/"/g)?.length ?? 0;
+    const straightOk = straight > 0 && straight % 2 === 0;
+    let touched = false;
+    const next = parts
+      .map((part, i) => {
+        if (i % 2 === 1) return part; // тег — как есть
+        if (!/["„”«»]/.test(part)) return part;
+        let s = part.replace(/[„”«»]/g, GERSHAYIM);
+        if (straightOk) s = s.replace(/"/g, GERSHAYIM);
+        if (s !== part) touched = true;
+        return s;
+      })
+      .join('');
+    return touched ? next : text;
+  };
+  const walk = (node: any): any => {
+    if (typeof node === 'string') {
+      const next = convert(node);
+      if (next !== node) changed++;
+      return next;
+    }
+    if (Array.isArray(node)) {
+      for (let i = 0; i < node.length; i++) node[i] = walk(node[i]);
+      return node;
+    }
+    if (node && typeof node === 'object') {
+      for (const k of Object.keys(node)) node[k] = walk(node[k]);
+      return node;
+    }
+    return node;
+  };
+  walk(data);
+  return changed;
+}
+
+/**
  * Конвенция платформы: встраиваемый пост Instagram рендерится только для
  * ru и en; в остальных локалях <instagram> обязан быть ПУСТЫМ тегом.
  * Промптовое правило модель регулярно нарушает, копируя тег из оригинала
