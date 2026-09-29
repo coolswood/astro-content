@@ -205,6 +205,18 @@ describe('normalizeQuotesHe', () => {
     expect(data.s).toBe('Broken " and ״צריך״ here');
   });
 
+  test('прямая пара вокруг тега заменяется (чётность глобальная по фрагментам)', () => {
+    const data = { s: 'הוא אמר "טקסט <b>מודגש</b> ממשיך" והלאה' };
+    expect(normalizeQuotesHe(data)).toBe(1);
+    expect(data.s).toBe('הוא אמר ״טקסט <b>מודגש</b> ממשיך״ והלאה');
+  });
+
+  test('нечётные прямые вокруг тега не заменяются', () => {
+    const data = { s: 'Broken " and <b>bold</b> tail' };
+    expect(normalizeQuotesHe(data)).toBe(0);
+    expect(data.s).toBe('Broken " and <b>bold</b> tail');
+  });
+
   test('кавычки внутри тегов не трогаются; уже канонические ״ без изменений', () => {
     const data = {
       s: '<q author="דמות 1">אמר „שלום”</q> וגם ״מחשבה״',

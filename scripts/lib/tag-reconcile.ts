@@ -454,7 +454,8 @@ export function normalizeApostrophesFr(data: any): number {
  * ״ против ~386 „…” — модель, опираясь на контекст принятых переводов,
  * наследует обе системы; нормализуем механически: „ ” и « » заменяются на ״
  * безусловно (оба знака пары дают один и тот же гершайим), прямые " — только
- * при чётном числе вне тегов (риск неверной парности). Кавычки внутри тегов
+ * при чётном числе вне тегов, причём чётность считается глобально по всем
+ * фрагментам (пара может обрамлять тег). Кавычки внутри тегов
  * (<q author="...">) не трогаются. Мутирует data, возвращает число
  * исправленных листьев.
  */
@@ -464,16 +465,15 @@ export function normalizeQuotesHe(data: any): number {
   const convert = (text: string): string => {
     if (!/["„”«»]/.test(text)) return text;
     const parts = text.split(/(<[^>]*>)/);
+    const straight = parts.filter((_, i) => i % 2 === 0).join('').match(/"/g)?.length ?? 0;
+    const straightOk = straight > 0 && straight % 2 === 0;
     let touched = false;
     const next = parts
       .map((part, i) => {
         if (i % 2 === 1) return part; // тег — как есть
         if (!/["„”«»]/.test(part)) return part;
         let s = part.replace(/[„”«»]/g, GERSHAYIM);
-        const quotes = (s.match(/"/g) || []).length;
-        if (quotes % 2 === 0 && quotes > 0) {
-          s = s.replace(/"/g, GERSHAYIM);
-        }
+        if (straightOk) s = s.replace(/"/g, GERSHAYIM);
         if (s !== part) touched = true;
         return s;
       })
