@@ -1,157 +1,307 @@
 [
   {
-    "ru": "Глубинное убеждение / Глубинные убеждения",
-    "lang": "keyakinan inti",
-    "context": "Подтверждено: Keyakinan inti."
-  },
-  {
-    "ru": "Промежуточное убеждение / Промежуточные убеждения",
-    "lang": "keyakinan perantara",
-    "context": "Подтверждено."
+    "ru": "Когнитивно-поведенческая терапия / КПТ",
+    "lang": "terapi kognitif-perilaku (CBT)",
+    "context": "FIX: прежде «terapi kognitif perilaku» без дефиса. Канон — дефисная форма: 20 файлов / 27 вхождений (automatic, coping, diary, depths, history...); без дефиса только tests/bdi.json ×3 — дрейф. Аббревиатура CBT латиницей — 26 файлов / 92 вхождения (arb ×8: gpt_*, story_base_description_1 «dasar-dasar CBT»); «ТКП»/кириллицу не вводить. Arb пишет полную форму в обратном порядке «terapi perilaku kognitif» (story_base_description_1) — 0 в корпусе, в статьях не копировать. При первом упоминании terapi kognitif-perilaku (CBT), далее CBT."
   },
   {
     "ru": "Автоматическая мысль / Автоматические мысли",
     "lang": "pikiran otomatis",
-    "context": "Подтверждено."
+    "context": "Поле дневника в UI (arb diary_field_thought «Pikiran otomatis») и 26 файлов / 78 вхождений корпуса; notifications_diary_body «Anda belum memproses pikiran otomatis hari ini»."
+  },
+  {
+    "ru": "Дневник автоматических мыслей",
+    "lang": "jurnal pikiran otomatis",
+    "context": "Заголовок инструмента в UI (arb diary_title «Jurnal pikiran otomatis») и 9 файлов / 12 вхождений корпуса (story/diary.json ×4, sitemap, texts/premium...)."
+  },
+  {
+    "ru": "Когнитивные искажения / Когнитивная ошибка",
+    "lang": "distorsi kognitif",
+    "context": "Поле дневника в UI (arb diary_field_distortions «Distorsi kognitif», daybook_ai_loading_phrase_4 «Mencari distorsi kognitif...») и 17 файлов / 57 вхождений. Ед.ч. — distorsi kognitif (первые фразы статей distortions.json). Составное прилагательное — kognitif-perilaku с дефисом."
+  },
+  {
+    "ru": "Глубинное убеждение / Глубинные убеждения",
+    "lang": "keyakinan inti",
+    "context": "Корпус — 8 файлов / 37 вхождений (depths ×14, start ×7, useful ×6, depression_story ×4...). Arb gpt_deep_title «Keyakinan mendalam» (×3 с daybook_dream_subtitle) — дрейф UI: в корпусе «keyakinan mendalam» 0; в статьях сайта — keyakinan inti."
+  },
+  {
+    "ru": "Промежуточное убеждение / Промежуточные убеждения",
+    "lang": "keyakinan perantara",
+    "context": "Корпус — 9 файлов / 31 вхождение (intermediate ×10, start ×6...) и arb gpt_middle_title «Keyakinan perantara», gpt_recommendation_intermediate_title «Analisis keyakinan perantara dari AI» — полное согласие корпуса и UI."
   },
   {
     "ru": "Деструктивное убеждение / Деструктивные убеждения",
-    "lang": "keyakinan yang melemahkan",
-    "context": "Подтверждено: в проекте принято описательное «ослабляющее убеждение»."
+    "lang": "keyakinan destruktif",
+    "context": "FIX: прежде «keyakinan yang melemahkan» — в корпусе всего 2 вхождения (stories.json), дрейф. Канон — keyakinan destruktif: семейство arb ×7 (coping_banner_title «Anda tidak lagi percaya pada keyakinan destruktif!», coping_believe_title «Tingkat keyakinan pada keyakinan destruktif», coping_description, coping_info_*, stepper_record_coping_continue «Ubah keyakinan destruktif»). «Деструктивные мысли» → pikiran destruktif (arb stepper_record_continue, gpt_limit_description; корпус story/coping.json ×3). «Keyakinan disfungsional» (×4: key.json, das.json) — только как термин шкалы DAS, см. отдельную статью."
   },
   {
-    "ru": "Когнитивные искажения / Когнитивные ошибки",
-    "lang": "distorsi kognitif",
-    "context": "Подтверждено."
+    "ru": "Конструктивное убеждение",
+    "lang": "keyakinan konstruktif",
+    "context": "Пара к destruktif в arb: coping_description «Ganti keyakinan destruktif dengan yang konstruktif». Смежное «рациональное убеждение» — keyakinan rasional (arb coping_info_text_1 «mengganti keyakinan destruktif dengan yang rasional»; корпус story/coping.json ×1)."
   },
   {
-    "ru": "Когнитивно-поведенческая терапия / КПТ",
-    "lang": "terapi kognitif perilaku (CBT)",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Дневник",
-    "lang": "jurnal",
-    "context": "Подтверждено: menulis jurnal."
-  },
-  {
-    "ru": "Запись (в дневнике)",
-    "lang": "entri",
-    "context": "Подтверждено: dalam satu entri."
-  },
-  {
-    "ru": "Ежедневник",
-    "lang": "jurnal harian",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Умный ежедневник",
-    "lang": "jurnal pintar",
-    "context": "Подтверждено."
+    "ru": "Уровень веры / Убеждённость (в мысль)",
+    "lang": "tingkat keyakinan",
+    "context": "Корпус — 4 файла / 7 вхождений (sitemap «Nilai tingkat keyakinan», story/diary, depths, stories) и arb ×5: coping_believe_title «Tingkat keyakinan pada keyakinan destruktif», belief_rate_title «Nilai tingkat keyakinan». Глагольная форма — «menilai tingkat keyakinan»."
   },
   {
     "ru": "Копинг-карточка / Копинг-карточки",
-    "lang": "kartu coping",
-    "context": "Подтверждено (заимствование coping удерживается)."
+    "lang": "kartu koping",
+    "context": "FIX: прежде «kartu coping» латиницей. Нарратив story/coping.json — 10 вхождений «kartu koping» (ассимилированная индонезийская орфография) + arb ×3 (coping_card «Kartu koping», coping_title, coping_info_text_2 «Geser kartu:»). Дрейф: «kartu coping» ×4 (sitemap «Kartu coping», stories ×2, coping ×1) и голое «coping» в arb ×15 — унифицировать перегоном под koping."
   },
   {
     "ru": "Адаптивный ответ",
     "lang": "respons adaptif",
-    "context": "Подтверждено."
+    "context": "Поле дневника в UI (arb diary_field_response «Respons adaptif», daybook_ai_loading_phrase_5 «Menyiapkan respons adaptif...») и корпус 2 файла / 3 (story/diary, texts/diary). Орфография KBBI — respons (с финальной s): «respon» в корпусе 0."
   },
   {
-    "ru": "Уровень веры / Убеждённость",
-    "lang": "tingkat keyakinan",
-    "context": "Подтверждено."
+    "ru": "Альтернативный ответ",
+    "lang": "respons alternatif",
+    "context": "Корпус — 3 файла / 4 (common.json, sitemap ×2 «...dengan penilaian tersendiri dan respons alternatif», story/diary). Не смешивать с «адаптивным ответом» (respons adaptif)."
   },
   {
-    "ru": "Катастрофизация",
-    "lang": "katastrofisasi",
-    "context": "Подтверждено."
+    "ru": "Поля дневника (событие / поведение / ощущения / вывод)",
+    "lang": "peristiwa / perilaku / sensasi di tubuh / kesimpulan",
+    "context": "Arb: diary_field_event «Peristiwa», diary_field_behavior «Perilaku», diary_field_body «Sensasi di tubuh», diary_field_conclusion «Kesimpulan», diary_field_emotions «Emosi», diary_field_thought «Pikiran otomatis», diary_field_distortions «Distorsi kognitif», diary_field_response «Respons adaptif»."
   },
   {
-    "ru": "Чёрно-белое мышление",
-    "lang": "pola pikir hitam-putih",
-    "context": "Подтверждено."
+    "ru": "Дневник",
+    "lang": "jurnal",
+    "context": "Раздел приложения (arb notifications_diary_channelname «Ingatkan untuk mengisi jurnal», notifications_diary_title «Buat catatan baru di jurnal»). «Вести дневник» — menulis jurnal (6 файлов: sitemap, story/diary, autonomy, perfectionism, texts/diary); «статистика по дневнику» — Statistik untuk jurnal (sitemap)."
   },
   {
-    "ru": "Чтение мыслей",
-    "lang": "membaca pikiran",
-    "context": "Подтверждено."
+    "ru": "Запись (в дневнике)",
+    "lang": "catatan",
+    "context": "FIX: прежде «entri». Канон arb ×24: daybook_inner «Catatan», records «Catatan», add_record «Tambahkan catatan», subtab_diary_new «Catatan baru», mood_start_daybook_title «Catatan pagi». Корпус — 18 файлов / 45 (story/diary ×5...). Дрейф: entri ×10 / 3 файла (sitemap ×6 «frekuensi entri», «Ekspor entri jurnal», «dalam satu entri»; homeBot, omnipotence) — унифицировать перегоном: «в одной записи» → dalam satu catatan."
   },
   {
-    "ru": "Сверхобобщение / Обобщение",
-    "lang": "generalisasi",
-    "context": "Подтверждено (полная форма: generalisasi berlebihan)."
+    "ru": "Ежедневник",
+    "lang": "jurnal harian",
+    "context": "Sitemap: заголовок iF6yEanPp3 «Jurnal harian» («Bagian untuk catatan bebas tentang hari...»), «AI di jurnal harian» (sdvsdsdlwwQec), «Gambar di jurnal harian» (lkmvdsvdsfds) — итого ×3."
   },
   {
-    "ru": "Персонализация",
-    "lang": "personalisasi",
-    "context": "Стандартный термин из списка искажений."
+    "ru": "Умный ежедневник",
+    "lang": "jurnal pintar",
+    "context": "Sitemap: «...format entri “rasa syukur” di jurnal pintar» (iFlct67Ldvkwq). В UI приложения фича называется Buku harian cerdas (arb daybook_title) — допустимо как имя фичи в интерфейсных строках; в текстах сайта — jurnal pintar."
   },
   {
-    "ru": "Долженствование",
-    "lang": "pikiran «harusnya»",
-    "context": "Стандартное название искажения в индонезийской КПТ."
-  },
-  {
-    "ru": "Навешивание ярлыков",
-    "lang": "pelabelan",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Мысленный фильтр",
-    "lang": "filter mental",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Эмоциональное обоснование",
-    "lang": "penalaran emosional",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Обесценивание позитивного",
-    "lang": "meremehkan hal positif",
-    "context": "Стандартный термин из списка искажений."
-  },
-  {
-    "ru": "Панические атаки",
-    "lang": "serangan panik",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Навязчивые мысли",
-    "lang": "pikiran obsesif",
-    "context": "Подтверждено."
-  },
-  {
-    "ru": "Инсайт",
-    "lang": "wawasan",
-    "context": "Стандартный индонезийский термин (в проекте встречается и заимствование insight)."
+    "ru": "Эмоции / Чувства / Ощущения",
+    "lang": "emosi / perasaan",
+    "context": "«Эмоции» → emosi — 50 файлов / 291 (arb diary_field_emotions «Emosi», mood_emotions_title); «чувство/самочувствие» → perasaan — 40 файлов / 98 (arb mood_morning_feeling «Perasaan pagi», mood_finish_slider_title «Bagaimana perasaan Anda?»); «ощущения в теле» → sensasi di tubuh (arb diary_field_body)."
   },
   {
     "ru": "Настроение",
     "lang": "suasana hati",
-    "context": "Ключевой термин трекинга состояния."
+    "context": "Ключевой термин трекинга: arb mood_* ×16 (mood_comparison_improved «Suasana hati Anda membaik», mood_stability_stable) и корпус — 25 файлов / 70."
+  },
+  {
+    "ru": "Состояние (в контексте трекинга)",
+    "lang": "kondisi",
+    "context": "Arb: mood_evening_state «Kondisi malam», mood_morning_state «Kondisi pagi», mood_trend_improved «Kondisi membaik...»; sitemap «Penilaian kondisi harian» (iF6sKverhdfd). «Эмоциональное состояние» — kondisi emosional (arb mood_chart_title; корпус 17 файлов / 24). «Оценка (действие)» — penilaian / menilai (47/25 и 56/30 корпуса)."
   },
   {
     "ru": "Психологическое благополучие",
     "lang": "kesejahteraan psikologis",
-    "context": "Подтверждено."
+    "context": "Корпус — 6 файлов / 6 (common, start, mood, premium, hopeless, trap_unemployment) + arb ×1. Смежное «психическое здоровье» — kesehatan mental (13 файлов / 21) — не смешивать."
   },
   {
-    "ru": "Дыхательные практики",
-    "lang": "praktik pernapasan",
-    "context": "Подтверждено."
+    "ru": "Инсайт / Инсайты",
+    "lang": "wawasan",
+    "context": "Канон — wawasan: arb stepper_test_first «Kerjakan tes dan dapatkan wawasan pribadi». Дрейф: заимствование insight ×3 в корпусе (releases, texts/daybook ×2) и ×2 в arb (mood_stats_unlock_body_1) — унифицировать перегоном под wawasan. Мн.ч. — wawasan (неизменяемо)."
   },
   {
-    "ru": "AI-помощник",
-    "lang": "asisten AI",
-    "context": "Подтверждено."
+    "ru": "Практика благодарности / Благодарность",
+    "lang": "latihan syukur / syukur",
+    "context": "NEW (в прошлом словаре отсутствовал). Благодарность — syukur: 7 файлов / 23 + arb ×8 (gratitude «Syukur», gratitude_title, stepper_record_gratitude_continue «Ungkapkan syukur»); «практика благодарности» — latihan syukur (arb daybook_gratitude_title «Latihan syukur», daybook_gratitude_subtitle «Tuliskan 3 hal yang Anda syukuri»); «дневник благодарности» — jurnal syukur (sitemap iFlct67Ldvkwq, tests/impostor). «Gratitudo» — 0 вхождений, не использовать."
   },
   {
-    "ru": "Психолог",
-    "lang": "psikolog",
-    "context": "Стандартное обращение к специалисту."
+    "ru": "Дыхательные практики / упражнения",
+    "lang": "latihan pernapasan",
+    "context": "FIX: прежде «praktik pernapasan» (×1, releases — дрейф). Канон — latihan: arb exercises_therapy_relax_title «Latihan pernapasan», tests/anxiety.json «latihan pernapasan». breathing.json говорит «latihan» + «napas» (×44: «Latihan ini dirancang...»); «дыхание» как процесс — napas, прилагательное — pernapasan (9 файлов / 3). «Релаксация» — relaksasi (6 файлов / 10, breathing.json, relax-контент)."
+  },
+  {
+    "ru": "Сократический диалог",
+    "lang": "dialog Sokrates",
+    "context": "Sitemap (sdvdcarlwwQff «Dialog Sokrates»: «AI akan mengajukan pertanyaan untuk membantu Anda menemukan pikiran otomatis...»). Правописание Sokrates (как в корпусе), не «Sokratik»."
+  },
+  {
+    "ru": "Самооценка",
+    "lang": "harga diri",
+    "context": "Корпус — 22 файла / 105 (duty_guilt ×12, real_rebuff ×8...). Смежное «уверенность в себе» — percaya diri (19 файлов / 40) против kepercayaan diri (10 файлов / 13) — канон percaya diri."
+  },
+  {
+    "ru": "Перфекционизм",
+    "lang": "perfeksionisme",
+    "context": "Корпус — 12 файлов / 54 + арб-дашборд das_item_impeccability «Perfeksionisme». Индонезийское написание через e (perfeksionisme), не «perfektionisme»."
+  },
+  {
+    "ru": "Принятие себя",
+    "lang": "penerimaan diri",
+    "context": "Название теста acceptance в constants.json «Penerimaan diri»; корпус — 5 файлов / 14 (acceptance ×6, bdi, impostor, das...)."
+  },
+  {
+    "ru": "Негативные мысли",
+    "lang": "pikiran negatif",
+    "context": "Корпус — 12 файлов / 20 + arb story_base_description_3 «Pelajari cara mengubah pikiran negatif...». «Негативные убеждения» — keyakinan negatif (9 файлов / 11, stories «...menyusun ulang keyakinan negatif»)."
+  },
+  {
+    "ru": "Схемы (глубинные паттерны)",
+    "lang": "skema",
+    "context": "В корпусе 0 (термин появится с новыми статьями). Стандарт индонезийской терапии схем — skema (терапия схем — terapi skema); вариант «skim» не использовать."
+  },
+  {
+    "ru": "Катастрофизация",
+    "lang": "katastrofisasi",
+    "context": "Первая фраза distortions.json «Katastrofisasi adalah distorsi kognitif...» + arb errors_catastrophization_title «Katastrofisasi» + hopeless, real_rebuff — 3 файла / 4. Полное согласие корпуса и UI."
+  },
+  {
+    "ru": "Чёрно-белое мышление",
+    "lang": "pemikiran hitam-putih",
+    "context": "Название — pemikiran hitam-putih: первая фраза distortions.json «Pemikiran hitam-putih adalah distorsi kognitif...» и arb errors_blackandwhite_title. В связной прозе встречается pola pikir hitam-putih (5 файлов / 6: activities, acceptance, hopeless...) — допустимо в тексте, в названиях/списках — pemikiran."
+  },
+  {
+    "ru": "Сверхобобщение / Обобщение",
+    "lang": "generalisasi berlebihan",
+    "context": "Arb errors_common_title «Generalisasi berlebihan» + первая фраза distortions.json «Generalisasi berlebihan adalah distorsi kognitif...» — 4 файла / 5. Bare generalisasi = «обобщение» вообще (7 файлов / 9); для искажения всегда с berlebihan."
+  },
+  {
+    "ru": "Чтение мыслей",
+    "lang": "membaca pikiran",
+    "context": "Первая фраза distortions.json «Distorsi kognitif “membaca pikiran”...» + arb errors_read_title «Membaca pikiran»; корпус — 4 файла / 9 (perfectionism_plan_read ×6)."
+  },
+  {
+    "ru": "Персонализация",
+    "lang": "personalisasi",
+    "context": "Первая фраза distortions.json «Personalisasi adalah distorsi kognitif...» + arb errors_personalization_title; корпус — 5 файлов / 20 (omnipotence ×15)."
+  },
+  {
+    "ru": "Долженствование",
+    "lang": "pola pikir “harus”",
+    "context": "FIX: прежде «pikiran «harusnya»» — в корпусе как название не встречается. Канон — первая фраза distortions.json «Pola pikir “harus” adalah distorsi kognitif...» + 5 вхождений в прозе (duty_guilt, owed, trap_unemployment). Arb errors_should_statements_title «Pernyataan 'harus'» — заголовок UI, в статьях писать pola pikir “harus”. Слово harusnya (×32) — бытовое наречие, не термин."
+  },
+  {
+    "ru": "Навешивание ярлыков",
+    "lang": "memberi label",
+    "context": "FIX: прежде «pelabelan». Канон — первая фраза distortions.json «Memberi label adalah distorsi kognitif...»: 4 файла / 13 (label_lawyer_lazy ×7, distortions ×3, duty_guilt ×2, activities). Arb errors_label_title «Pelabelan» + 1 вхождение в real_rebuff — вариант заголовка UI, в связных текстах — memberi label."
+  },
+  {
+    "ru": "Мысленный фильтр",
+    "lang": "filter mental",
+    "context": "Первая фраза distortions.json «Filter mental adalah distorsi kognitif...» + arb errors_filter_title «Filter mental»; корпус — 2 файла / 5 (distortions ×3, disability_disease ×2)."
+  },
+  {
+    "ru": "Эмоциональное обоснование",
+    "lang": "penalaran emosional",
+    "context": "Первая фраза distortions.json «Distorsi kognitif “penalaran emosional”...» + arb errors_emo_title «Penalaran emosional». В том же тексте один раз penalaran emosi — унифицировать под emosional."
+  },
+  {
+    "ru": "Обесценивание позитивного",
+    "lang": "mengecilkan hal positif",
+    "context": "FIX: прежде «meremehkan hal positif» (×1 в прозе trap_unemployment — допустимый синоним, но не название). Канон — первая фраза distortions.json «Mengecilkan hal-hal positif adalah distorsi kognitif...» (×3 mengecilkan hal). Arb errors_discval_title «Menyepelekan hal positif» — в корпусе 0 вхождений, заголовок UI не копировать в статьи."
+  },
+  {
+    "ru": "Преувеличение и преуменьшение",
+    "lang": "membesar-besarkan dan mengecilkan",
+    "context": "Первая фраза distortions.json «Distorsi “membesar-besarkan dan mengecilkan”...» и arb errors_magnification_minimization_title — одинаково. Глаголы в тексте — membesar-besarkan / mengecilkan."
+  },
+  {
+    "ru": "«Можно было бы» (контрфактическое мышление)",
+    "lang": "“seandainya”",
+    "context": "Первая фраза distortions.json «Distorsi “seandainya” muncul ketika...» + 5 файлов / 8 (trap_unemployment ×3...). Arb errors_maybe_title «Andaikan saja» — заголовок UI; в текстах — seandainya (в диалогах — сослагательное «andai»/«seandainya...»)."
+  },
+  {
+    "ru": "Туннельное мышление",
+    "lang": "pemikiran terowongan",
+    "context": "Только в UI (arb errors_tunnel_vision_title «Pemikiran terowongan»), в корпусе 0 — придерживаться этого варианта; в связном тексте допустимо раскрытие pola pikir terowongan."
+  },
+  {
+    "ru": "Тревога / Тревожность",
+    "lang": "kecemasan",
+    "context": "Канон: kecemasan — 32 файла / 196 (anxiety.json, sociophobia...); прилагательное — cemas (39 файлов / 285). «Тревожное расстройство» — gangguan kecemasan (9 файлов / 31); «генерализованное тревожное расстройство» — gangguan kecemasan menyeluruh (anxiety.json). «Беспокойство» — khawatir / kekhawatiran (15 файлов / 41 и 8 файлов / 12) — более мягкое, отдельное слово; gelisah (7 файлов / 16) — нервозность-состояние."
+  },
+  {
+    "ru": "Паническая атака / Панические атаки",
+    "lang": "serangan panik",
+    "context": "Корпус — 4 файла / 8 (proof ×4, anxiety ×2, key, bdi). «Паническое расстройство» — gangguan panik (anxiety.json ×2). Bare panik (8 файлов / 20) — «паника» вообще."
+  },
+  {
+    "ru": "Социофобия / Социальная тревожность",
+    "lang": "fobia sosial",
+    "context": "Название теста — constants.json «Fobia sosial» + 19 вхождений в теле sociophobia.json (итого 2 файла / 20); в интерпретациях встречается kecemasan sosial (×12, sociophobia + bdi) — допустимо в связном тексте, в названиях — fobia sosial."
+  },
+  {
+    "ru": "Депрессия",
+    "lang": "depresi",
+    "context": "Корпус — 37 файлов / 289; прилагательное — depresif (2 файла / 6: «pikiran depresif»). Название теста BDI в constants.json — «Depresi»."
+  },
+  {
+    "ru": "Выгорание",
+    "lang": "burnout",
+    "context": "Название теста в constants.json — «Burnout di tempat kerja» («выгорание на работе»); tests/burnout.json использует burnout ×10, das.json ×8 — итого 7 файлов / 24 латиницей. Arb intro_new_problem_burnout описывает как «Kelelahan terus-menerus» (кнопка-описание). Kelelahan (18 файлов / 31) — «усталость» вообще, отдельное слово; смежное «эмоциональное истощение» — kelelahan emosional (3 файла / 5)."
+  },
+  {
+    "ru": "Прокрастинация",
+    "lang": "prokrastinasi",
+    "context": "Корпус — 10 файлов / 20 + arb intro_new_problem_procrastination «Prokrastinasi». «Прокрастинировать» — описательно (menunda-nunda, menunda: 10 файлов / 11)."
+  },
+  {
+    "ru": "Бессонница / Недосып",
+    "lang": "insomnia / kurang tidur",
+    "context": "«Бессонница» — insomnia (3 файла / 4: trap_unemployment ×2, bdi, bipolar; arb intro_new_problem_sleep «Insomnia»); «недосып» — kurang tidur (4 файла / 6: bdi ×3, anxiety, sdvg, omnipotence) — не смешивать. «Нарушения сна» — gangguan tidur (×2)."
+  },
+  {
+    "ru": "РПП / Расстройства пищевого поведения",
+    "lang": "gangguan makan",
+    "context": "Корпус — 6 файлов / 29 (eat ×24, constants «Gangguan makan», triangle, intermediate, key, sitemap). Ед.ч. — gangguan makan (форма не меняется)."
+  },
+  {
+    "ru": "Навязчивые мысли / ОКР",
+    "lang": "pikiran obsesif / gangguan obsesif-kompulsif (OCD)",
+    "context": "Мысли — pikiran obsesif (2 файла / 21: okr ×17, eat ×4). Расстройство — constants.json «Gangguan obsesif-kompulsif», полное имя с дефисом ×4; в теле okr.json — OCD латиницей (2 файла / 19, bdi ×1). При первом упоминании gangguan obsesif-kompulsif (OCD), далее OCD."
+  },
+  {
+    "ru": "СДВГ / Синдром дефицита внимания",
+    "lang": "gangguan pemusatan perhatian (ADHD)",
+    "context": "Название в constants.json — «Gangguan pemusatan perhatian»; в теле sdvg.json — ADHD латиницей ×33 (+ hiperaktivitas ×4). При первом упоминании gangguan pemusatan perhatian dan hiperaktivitas (ADHD), далее ADHD."
+  },
+  {
+    "ru": "Синдром самозванца",
+    "lang": "sindrom impostor",
+    "context": "Корпус — 3 файла / 29 (impostor ×27, constants «Sindrom impostor», das). Латинское impostor — канон (с индонезийским sindrom); «sindrom penipu» — 0 вхождений, не вводить."
+  },
+  {
+    "ru": "Биполярное расстройство",
+    "lang": "gangguan bipolar",
+    "context": "Корпус — 4 файла / 23 (bipolar ×20, constants «Gangguan bipolar», bdi, proof). Разговорных сокращений не вводить."
+  },
+  {
+    "ru": "Безнадёжность / Отчаяние",
+    "lang": "keputusasaan / putus asa",
+    "context": "Название теста hopeless в constants.json — «Keputusasaan» (сущ.-канон, 5 файлов / 7); глагольно-состоятельная форма putus asa — 12 файлов / 15 в прозе. «Ощущать отчаяние» — merasa putus asa."
+  },
+  {
+    "ru": "Психолог / Специалист",
+    "lang": "psikolog / psikiater / psikoterapis",
+    "context": "«Психолог» — psikolog: 42 файла / 143 + arb ×37 (господствующий термин проекта). «Психиатр» — psikiater (×3: control_death, history) — врач, не смешивать. «Психотерапия» — psikoterapi (5 файлов / 8); «психотерапевт» — psikoterapis."
+  },
+  {
+    "ru": "AI-помощник / ИИ / Искусственный интеллект",
+    "lang": "asisten AI / kecerdasan buatan",
+    "context": "«AI-помощник» — asisten AI (arb gpt_button_title «Jawaban pribadi dari asisten AI»; корпус releases ×1). Аббревиатура AI латиницей — 8 файлов / 26 (sitemap «AI di jurnal harian», «AI akan menganalisis catatan...»). Полный термин — kecerdasan buatan (3 файла / 3: sitemap, questions, releases; arb gpt_limit_description «fitur berbasis kecerdasan buatan»)."
+  },
+  {
+    "ru": "Психологические тесты / Шкала / Индекс",
+    "lang": "tes psikologis / skala / indeks",
+    "context": "«Психологические тесты» — arb psy_tests «Tes psikologis» (в корпусе просто tes, ×17 — слово без прилагательного в связном тексте допустимо). «Шкала» — skala (7 файлов / 11); «опросник» — kuesioner (×1, history). «Индекс» — indeks (см. DAS)."
+  },
+  {
+    "ru": "Шкала депрессии Бека (BDI)",
+    "lang": "Skala Depresi Beck (BDI)",
+    "context": "Корпус при первом упоминании — «Skala Depresi Beck» (BDI)» (control_death_diagnostic: «dikembangkan oleh psikiater Aaron Beck»); далее BDI латиницей (bdi.json «BDI adalah instrumen tervalidasi...», constants). Имя Beck латиницей (28 вхождений / 8 файлов, history ×14); «Beck Depression Inventory» латиницей встречается ×1 (real_rebuff) — допустимо в исследовательском контексте."
+  },
+  {
+    "ru": "Шкала дисфункциональных установок (DAS)",
+    "lang": "Indeks keharmonisan kepribadian",
+    "context": "Корпус называет тест «tes indeks keharmonisan kepribadian» (das.json: «Mengikuti tes indeks keharmonisan kepribadian...») и выделяет «7 keyakinan disfungsional» (Kebutuhan akan persetujuan, Ketergantungan pada cinta, Kebutuhan akan pencapaian, Perfeksionisme...). Arb — «Indeks harmoni pribadi» / «tes harmoni kepribadian» (короче, вариант UI). Латиницу DAS не вводить — так и в ru-оригинале тест назван описательно («тест на гармоничность личности»)."
   }
 ]
