@@ -28,6 +28,9 @@
  *   --ui-batch removed        ui-режим чанкуется общим механизмом (--chunk-leaves)
  *   --limit-keys N            канарейка: перевести N ключей, равномерно по канону
  *                             (ui-режим; сэмпл покрывает весь файл, не одну зону)
+ *   --repair-emotions         только инвариант эмоций (ui): детект коллизий
+ *                             каталога из constants.dart, ремонт полным набором;
+ *                             с --dry-run — отчёт без вызова модели. Без перевода.
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *   --stage-model stage=NAME[,stage=NAME]
  *                             пер-стадийная модель (main/editor/review/fix):
@@ -60,6 +63,11 @@ import {
   type StageModelMap,
 } from './lib/pipeline.js';
 import { MAX_REPAIR_GROUPS, repairDuplicateGroups } from './lib/duplicate-repair.js';
+import {
+  emotionCatalogFromPsyDir,
+  enforceEmotionInvariant,
+  type EmotionInvariantReport,
+} from './lib/emotion-invariant.js';
 import { TranslationState, hashLeaf, type ScopeState } from './lib/state.js';
 import { analyzeTree, keysToTranslate, type Analysis } from './lib/analyze.js';
 import {
@@ -164,6 +172,8 @@ interface Args {
   mainPathMap: boolean;
   /** Канарейка: ограничить перевод N ключами, равномерно по каноническому порядку (ui). */
   limitKeys?: number;
+  /** Только инвариант эмоций: детект коллизий (+ремонт без --dry-run), без перевода (ui). */
+  repairEmotions: boolean;
   /** Пер-стадийные модели (CLI --stage-model поверх конфига). */
   stageModels: StageModelMap;
 }
@@ -225,6 +235,11 @@ function parseArgs(): Args {
   const { flags, positional } = parseCli();
   const ui = parseBoolFlag(flags.ui, false);
   const fileArg = positional[0] ?? flags.file ?? null;
+  const repairEmotions = parseBoolFlag(flags['repair-emotions'], false);
+  if (repairEmotions && !ui) {
+    console.error('❌ --repair-emotions — режим UI: добавьте --ui.');
+    process.exit(2);
+  }
   if (!ui && !fileArg) {
     console.error(
       '❌ Укажите файл/каталог внутри src/i18n/ru (напр. story/start.json) или флаг --ui.\n' +
@@ -266,6 +281,7 @@ function parseArgs(): Args {
     // монотонно-повторяющиеся секции могут зациклить генерацию.
     mainPathMap: parseBoolFlag(flags['main-path-map'], !parseBoolFlag(flags['no-main-path-map'], false)),
     limitKeys: parseIntFlag(flags['limit-keys']),
+    repairEmotions,
     stageModels: flags['stage-model']
       ? parseStageModelPairs(flags['stage-model'], '--stage-model')
       : {},
@@ -1222,7 +1238,68 @@ async function runUi(ctx: RunCtx): Promise<number> {
         (notConverged.length > 0 ? `; НЕ сошлись локали: ${notConverged.join(', ')}` : '; сошлось'),
     );
   }
+
+  // Инвариант эмоций: коллегия судит ключи изолированно и сама может создать
+  // коллизию (es-2026: delight→Alegría при joy=Alegría). Детект + ремонт
+  // полного набора — обязательный замыкающий шаг UI-прогона.
+  await enforceEmotionInvariantForLangs(ctx, psyDir, canon.values, ctx.langs);
   return failures;
+}
+
+/**
+ * Инвариант домена эмоций для набора локалей: механический детект коллизий
+ * (значения 68 ключей каталога обязаны быть попарно различными), при находках —
+ * LLM-ремонт полного набора с пер-ключевой валидацией. Отчёт — в qa/reports.
+ */
+async function enforceEmotionInvariantForLangs(
+  ctx: RunCtx,
+  psyDir: string,
+  ruValues: Record<string, any>,
+  langs: string[],
+): Promise<void> {
+  let catalog;
+  try {
+    catalog = await emotionCatalogFromPsyDir(psyDir);
+  } catch (e: any) {
+    console.warn(`⚠️ [emotions] каталог недоступен, инвариант пропущен: ${e?.message ?? e}`);
+    return;
+  }
+  const reports: EmotionInvariantReport[] = [];
+  for (const lang of langs) {
+    const targetPath = arbFilePath(psyDir, lang);
+    const target = await readArbTarget(psyDir, lang);
+    reports.push(
+      await enforceEmotionInvariant({
+        client: ctx.client,
+        lang,
+        catalog,
+        ruValues,
+        target,
+        targetPath,
+        dryRun: ctx.args.dryRun,
+      }),
+    );
+  }
+  const dirty = reports.filter((r) => r.rounds.length > 0 || r.remaining.length > 0);
+  if (dirty.length === 0) return;
+  const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+  const reportDir = path.join(ROOT, 'scripts', 'qa', 'reports', `${stamp}-emotion-invariant`);
+  await fs.mkdir(reportDir, { recursive: true });
+  await writeJsonAtomic(path.join(reportDir, 'report.json'), dirty);
+  console.log(
+    `\n🧭 Инвариант эмоций: ${dirty.length} локал(ей) с нарушениями (или починено) — отчёт ${path.relative(ROOT, reportDir)}/report.json`,
+  );
+}
+
+/** Режим --ui --repair-emotions: без перевода — только инвариант эмоций. */
+async function runEmotionRepair(ctx: RunCtx): Promise<number> {
+  const psyDir = resolvePsyDir(ctx);
+  console.log(`📱 cognitive_psy: ${psyDir}`);
+  const catalog = await emotionCatalogFromPsyDir(psyDir);
+  console.log(`🎭 Каталог эмоций: ${catalog.negative.length} негативных + ${catalog.positive.length} позитивных`);
+  const ru = await readArbTarget(psyDir, 'ru');
+  await enforceEmotionInvariantForLangs(ctx, psyDir, ru, ctx.langs);
+  return 0;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1283,7 +1360,11 @@ async function main(): Promise<number> {
   }
 
   const ctx: RunCtx = { client, state, cfg, args, retries, langs, concurrency };
-  const failures = args.ui ? await runUi(ctx) : await runContent(ctx);
+  const failures = args.ui
+    ? args.repairEmotions
+      ? await runEmotionRepair(ctx)
+      : await runUi(ctx)
+    : await runContent(ctx);
 
   await client.close?.();
   if (failures > 0) {
