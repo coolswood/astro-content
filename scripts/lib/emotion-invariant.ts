@@ -216,13 +216,21 @@ export function parseEmotionPathMap(parsed: unknown): Record<string, string> | n
 /**
  * Пер-ключевое слияние ответа ремонта в рабочий набор. Правка отбраковывается
  * по одной (не валит батч): чужой ключ, пустота/многострочность, guard стадий,
- * коллизия с НЕтронутым ключом после слияния. Порядок применения — каталог,
- * чтобы конфликт двух кандидатур решался детерминированно.
+ * повтор отклонённого значения (валидатор/оператор — сравнение нормализованно,
+ * иначе отклонение обходится сменой регистра), коллизия после слияния.
+ *
+ * Коллизии считаются против «намеренного» состояния: кандидат сверяется не со
+ * СТАРЫМ значением соседа, а с тем, что у соседа будет после этого же батча
+ * (его кандидат, если он есть, иначе текущее). Так валидная перестановка —
+ * обмен значениями двух ключей — применяется целиком, а не бракуется на первой
+ * правке. Конфликт двух кандидатур в одно слово решается порядком каталога
+ * (первый выигрывает, второй отбраковывается с указанием на победителя).
  */
 export function mergeEmotionRepairs(
   catalog: EmotionCatalog,
   currentValues: Record<string, string>,
   candidates: Record<string, string>,
+  rejectedHints: EmotionRejectedEdit[] = [],
 ): { applied: EmotionEdit[]; rejected: EmotionRejectedEdit[] } {
   const applied: EmotionEdit[] = [];
   const rejected: EmotionRejectedEdit[] = [];
@@ -231,6 +239,24 @@ export function mergeEmotionRepairs(
     const v = currentValues[key];
     if (typeof v === 'string' && v.trim()) working[key] = v;
   }
+
+  // Намеренное состояние: кандидат (если валиден как строка) поверх текущего.
+  // Кандидатуры с одинаковым нормализованным значением: выигрывает первая
+  // по каталогу, остальные возвращаются к текущему значению (уйдут в rejected).
+  const intended: Record<string, string> = { ...working };
+  const ownerByNorm = new Map<string, string>();
+  for (const key of emotionKeys(catalog)) {
+    const raw = candidates[key];
+    if (typeof raw !== 'string') continue;
+    const value = raw.trim();
+    if (!value || value.includes('\n') || value.length > MAX_EMOTION_LEN) continue; // брак не претендует на слово
+    const norm = normalizeEmotionValue(value);
+    const owner = ownerByNorm.get(norm);
+    if (owner !== undefined && owner !== key) continue; // слово уже занято кандидатурой раньше по каталогу
+    ownerByNorm.set(norm, key);
+    intended[key] = value;
+  }
+
   for (const key of emotionKeys(catalog)) {
     const raw = candidates[key];
     if (raw === undefined) continue;
@@ -247,13 +273,20 @@ export function mergeEmotionRepairs(
       continue; // модель вернула текущее значение — не правка и не ошибка
     }
     if (reasons.length === 0) {
+      // Отклонённое значение (оператор/валидатор): регистр и пробелы — не обход.
+      const banned = rejectedHints.find(
+        (h) => h.key === key && normalizeEmotionValue(h.value) === normalizeEmotionValue(value),
+      );
+      if (banned) reasons.push(`повторяет отклонённое значение (${banned.reasons.join('; ')})`);
+    }
+    if (reasons.length === 0) {
       // Инвариант после слияния: новое значение не должно совпасть (без
-      // регистра) со значением любого ДРУГОГО ключа набора.
+      // регистра) с намеренным значением любого ДРУГОГО ключа набора.
       const norm = normalizeEmotionValue(value);
       const clash = emotionKeys(catalog).find(
-        (k) => k !== key && working[k] !== undefined && normalizeEmotionValue(working[k]!) === norm,
+        (k) => k !== key && intended[k] !== undefined && normalizeEmotionValue(intended[k]!) === norm,
       );
-      if (clash) reasons.push(`столкнется с «${clash}» (${working[clash]})`);
+      if (clash) reasons.push(`столкнется с «${clash}» (${intended[clash]})`);
     }
     if (reasons.length > 0) {
       rejected.push({ key, value, reasons });
@@ -350,7 +383,7 @@ export async function enforceEmotionInvariant(opts: EnforceEmotionOptions): Prom
       report.rounds.push({ round, applied: [], rejected: [] });
       continue;
     }
-    const { applied, rejected } = mergeEmotionRepairs(opts.catalog, currentValues(), candidates);
+    const { applied, rejected } = mergeEmotionRepairs(opts.catalog, currentValues(), candidates, feedback);
     for (const e of applied) opts.target[e.key] = e.to;
     if (applied.length > 0) await writeJsonAtomic(opts.targetPath, opts.target);
     for (const e of applied) console.log(`   🩹 [emotions] ${opts.lang}: ${e.key}: ${e.from} → ${e.to}`);

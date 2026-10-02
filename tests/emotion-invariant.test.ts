@@ -173,6 +173,40 @@ describe('mergeEmotionRepairs — пер-ключевое слияние с ин
     expect(applied.map((e) => e.key)).toEqual(['sorrow']);
     expect(rejected.map((r) => r.key)).toEqual(['delight']);
   });
+
+  test('ревью #1: отклонённое слово в другом регистре не проходит (hint сверяется нормализованно)', () => {
+    const catExc = catalogOf(['sad', 'sorrow', 'shame'], ['joy', 'delight', 'excitement']);
+    const current = { sad: 'Tristeza', sorrow: 'Pesar', joy: 'Alegría', delight: 'Regocijo', excitement: 'Agitación' };
+    const hints = [{ key: 'excitement', value: 'Agitación', reasons: ['негатив в позитивном списке'] }];
+    // Модель возвращает отклонённое слово, сменив регистр — обход должен быть закрыт
+    const { applied, rejected } = mergeEmotionRepairs(catExc, current, { excitement: 'agitación' }, hints);
+    expect(applied).toEqual([]);
+    expect(rejected).toHaveLength(1);
+    expect(rejected[0]!.reasons.join()).toContain('отклонённое');
+  });
+
+  test('ревью #2: валидная перестановка (обмен значений двух ключей) применяется целиком', () => {
+    // joy=Alegría, delight=Regocijo; модель предлагает поменять их местами
+    const current = { sad: 'Tristeza', sorrow: 'Pesar', joy: 'Alegría', delight: 'Regocijo' };
+    const { applied, rejected } = mergeEmotionRepairs(cat, current, {
+      joy: 'Regocijo',
+      delight: 'Alegría',
+    });
+    expect(applied.map((e) => e.key).sort()).toEqual(['delight', 'joy']);
+    expect(rejected).toEqual([]);
+  });
+
+  test('перестановка, создающая новую коллизию с третьим ключом, бракуется', () => {
+    const current = { sad: 'Tristeza', sorrow: 'Pesar', shame: 'Vergüenza', joy: 'Alegría', delight: 'Regocijo' };
+    // delight претендует на Tristeza — она остаётся у sad
+    const { applied, rejected } = mergeEmotionRepairs(cat, current, {
+      joy: 'Regocijo',
+      delight: 'Tristeza',
+    });
+    expect(applied.map((e) => e.key)).toEqual(['joy']);
+    expect(rejected.map((r) => r.key)).toEqual(['delight']);
+    expect(rejected[0]!.reasons[0]).toContain('sad');
+  });
 });
 
 describe('интеграция детекта и слияния — сценарий es-инцидента', () => {
