@@ -31,6 +31,9 @@
  *   --repair-emotions         только инвариант эмоций (ui): детект коллизий
  *                             каталога из constants.dart, ремонт полным набором;
  *                             с --dry-run — отчёт без вызова модели. Без перевода.
+ *   --reject-emotions k=v;k=v операторные отклонения для ремонта эмоций (ui):
+ *                             форсирует замену указанных значений (полярность,
+ *                             неестественное слово), попадает в payload "rejected"
  *   --endpoint URL, --model NAME, --state PATH, --psy-dir PATH
  *   --stage-model stage=NAME[,stage=NAME]
  *                             пер-стадийная модель (main/editor/review/fix):
@@ -67,6 +70,7 @@ import {
   emotionCatalogFromPsyDir,
   enforceEmotionInvariant,
   type EmotionInvariantReport,
+  type EmotionRejectedEdit,
 } from './lib/emotion-invariant.js';
 import { TranslationState, hashLeaf, type ScopeState } from './lib/state.js';
 import { analyzeTree, keysToTranslate, type Analysis } from './lib/analyze.js';
@@ -174,6 +178,8 @@ interface Args {
   limitKeys?: number;
   /** Только инвариант эмоций: детект коллизий (+ремонт без --dry-run), без перевода (ui). */
   repairEmotions: boolean;
+  /** Операторные отклонения для ремонта эмоций: key=value;key=value (ui). */
+  rejectEmotions?: EmotionRejectedEdit[];
   /** Пер-стадийные модели (CLI --stage-model поверх конфига). */
   stageModels: StageModelMap;
 }
@@ -231,6 +237,21 @@ function parseIntFlag(raw: string | undefined): number | undefined {
   return Number.isNaN(n) ? undefined : n;
 }
 
+/** --reject-emotions "key=value;key=value" → операторные отклонения для ремонта эмоций. */
+function parseRejectEmotions(raw: string | undefined): EmotionRejectedEdit[] | undefined {
+  if (!raw || raw === 'true') return undefined;
+  const out: EmotionRejectedEdit[] = [];
+  for (const pair of raw.split(';')) {
+    const eq = pair.indexOf('=');
+    if (eq === -1) continue;
+    const key = pair.slice(0, eq).trim();
+    const value = pair.slice(eq + 1).trim();
+    if (!key || !value) continue;
+    out.push({ key, value, reasons: ['значение отклонено оператором (--reject-emotions)'] });
+  }
+  return out.length > 0 ? out : undefined;
+}
+
 function parseArgs(): Args {
   const { flags, positional } = parseCli();
   const ui = parseBoolFlag(flags.ui, false);
@@ -282,6 +303,7 @@ function parseArgs(): Args {
     mainPathMap: parseBoolFlag(flags['main-path-map'], !parseBoolFlag(flags['no-main-path-map'], false)),
     limitKeys: parseIntFlag(flags['limit-keys']),
     repairEmotions,
+    rejectEmotions: parseRejectEmotions(flags['reject-emotions']),
     stageModels: flags['stage-model']
       ? parseStageModelPairs(flags['stage-model'], '--stage-model')
       : {},
@@ -1277,6 +1299,7 @@ async function enforceEmotionInvariantForLangs(
         target,
         targetPath,
         dryRun: ctx.args.dryRun,
+        seedRejections: ctx.args.rejectEmotions,
       }),
     );
   }

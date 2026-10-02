@@ -97,6 +97,19 @@ describe('buildEmotionRepairPayload — полный набор в запрос�
     expect(payload.emotions.map((e) => e.key)).toEqual(['joy']);
     expect(payload.collisions).toEqual([]);
   });
+
+  test('отклонения оператора попадают в payload (петля обратной связи)', () => {
+    const payload = buildEmotionRepairPayload(
+      'es',
+      CATALOG,
+      { joy: 'Радость', excitement: 'Волнение' },
+      { joy: 'Alegría', excitement: 'Agitación' },
+      [{ key: 'excitement', value: 'Agitación', reasons: ['негатив в позитивном списке'] }],
+    );
+    expect(payload.rejected).toEqual([
+      { key: 'excitement', value: 'Agitación', reasons: ['негатив в позитивном списке'] },
+    ]);
+  });
 });
 
 describe('parseEmotionPathMap — ответ модели', () => {
