@@ -1,0 +1,409 @@
+/**
+ * Инвариант домена эмоций (UI cognitive_psy). 68 ключей из
+ * lib/components/screens/constants.dart (emotionsNegative/emotionsPositive) —
+ * закрытый набор, который рендерится на ОДНОМ экране рядом. Для него
+ * поштучная коллегия недостаточна: судья видит ключ изолированно и сам
+ * создаёт коллизии (инцидент es-2026-10: delight→Alegría при joy=Alegría,
+ * excitement→Agitación — негативное слово в позитивном списке).
+ *
+ * Здесь два уровня:
+ *  1. Детектор (механика, без модели): значения всех ключей набора обязаны
+ *     быть попарно различными (сравнение без регистра/лишних пробелов —
+ *     «Terror» и «terror» на одном экране неразличимы).
+ *  2. Ремонт (LLM): один запрос со ВСЕМ набором (ru-оригинал, текущий
+ *     перевод, полярность) + список коллизий; ответ — path-map, правки
+ *     проходят пер-ключевую валидацию и проверку уникальности после слияния.
+ *     Полярность (позитивный список — позитивные слова целевого языка)
+ *     механически не проверяется — её судит та же модель в этом же запросе.
+ *
+ * Отдельно от разведки пар контента (duplicate-repair): там чинятся крючки
+ * произвольных листьев, здесь — фиксированный домен, известный заранее.
+ */
+import fs from 'fs/promises';
+import path from 'path';
+import { writeJsonAtomic } from './atomic-fs.js';
+import { parseWithRepair } from './json-repair.js';
+import { MAIN_PATHS_ADDENDUM, stageEditRejections, type StageClient } from './pipeline.js';
+import { loadPrompt } from './prompt-loader.js';
+
+/** Путь до каталога эмоций внутри репозитория cognitive_psy. */
+export const EMOTIONS_DART_RELPATH = 'lib/components/screens/constants.dart';
+
+export interface EmotionCatalog {
+  negative: string[];
+  positive: string[];
+}
+
+/** Максимальная длина значения эмоции: лейбл чипа, не предложение. */
+const MAX_EMOTION_LEN = 48;
+
+/** Раундов ремонта до сдачи (каждый раунд = запрос + пер-ключевое слияние). */
+export const DEFAULT_REPAIR_ROUNDS = 3;
+
+export function parseEmotionConstants(dartSource: string): EmotionCatalog {
+  const grab = (name: string): string[] => {
+    const re = new RegExp(`List<String>\\s+${name}\\s*=\\s*<String>\\[([\\s\\S]*?)\\]`, 'm');
+    const body = re.exec(dartSource)?.[1] ?? '';
+    return [...body.matchAll(/'([^']+)'/g)].map((m) => m[1]!);
+  };
+  const negative = grab('emotionsNegative');
+  const positive = grab('emotionsPositive');
+  return { negative, positive };
+}
+
+/** Читает каталог из репозитория приложения; падает с понятной ошибкой, если файл ушёл. */
+export async function emotionCatalogFromPsyDir(psyDir: string): Promise<EmotionCatalog> {
+  const p = path.join(psyDir, EMOTIONS_DART_RELPATH);
+  let src: string;
+  try {
+    src = await fs.readFile(p, 'utf-8');
+  } catch {
+    throw new Error(`Не найден каталог эмоций ${p} — проверьте --psy-dir.`);
+  }
+  const catalog = parseEmotionConstants(src);
+  if (catalog.negative.length === 0 || catalog.positive.length === 0) {
+    throw new Error(
+      `Каталог эмоций пуст/не распарсился (${p}): negative=${catalog.negative.length}, positive=${catalog.positive.length}.`,
+    );
+  }
+  return catalog;
+}
+
+/** Нормализация для сравнения: регистр и пробельные вариации неразличимы на экране. */
+export function normalizeEmotionValue(s: string): string {
+  return s.trim().replace(/\s+/g, ' ').toLowerCase();
+}
+
+export interface EmotionCollisionGroup {
+  /** Нормализованное значение, под которым столкнулись ключи. */
+  value: string;
+  /** Пример фактического написания из arb. */
+  example: string;
+  /** Ключи в порядке каталога (negative, затем positive). */
+  keys: string[];
+}
+
+/** Канонический порядок ключей каталога: сначала негативные, потом позитивные. */
+export function emotionKeys(catalog: EmotionCatalog): string[] {
+  return [...catalog.negative, ...catalog.positive];
+}
+
+export function polarityOf(catalog: EmotionCatalog, key: string): 'negative' | 'positive' | null {
+  if (catalog.negative.includes(key)) return 'negative';
+  if (catalog.positive.includes(key)) return 'positive';
+  return null;
+}
+
+/**
+ * Механический детект: группы ключей с совпавшими (нормализованно)
+ * непустыми значениями. Отсутствующие/пустые ключи — не коллизия
+ * (недостающее чинит обычный перевод, а не ремонт).
+ */
+export function findEmotionCollisions(
+  catalog: EmotionCatalog,
+  values: Record<string, unknown>,
+): EmotionCollisionGroup[] {
+  const byNorm = new Map<string, string[]>();
+  for (const key of emotionKeys(catalog)) {
+    const raw = values[key];
+    if (typeof raw !== 'string' || !raw.trim()) continue;
+    const norm = normalizeEmotionValue(raw);
+    const list = byNorm.get(norm) ?? [];
+    list.push(key);
+    byNorm.set(norm, list);
+  }
+  const groups: EmotionCollisionGroup[] = [];
+  for (const [norm, keys] of byNorm) {
+    if (keys.length < 2) continue;
+    groups.push({ value: norm, example: String(values[keys[0]!]), keys });
+  }
+  return groups;
+}
+
+/** Аддендум ремонта поверх ui main + MAIN_PATHS_ADDENDUM (path-map формат). */
+const EMOTION_REPAIR_ADDENDUM = `
+
+ЗАДАЧА (инвариант экрана эмоций): поле "emotions" — ПОЛНЫЙ каталог эмоций приложения
+(68 ключей, выводятся на одном экране рядом): key, polarity (negative/positive),
+ru (русский оригинал), current (текущий перевод). Поле "collisions" — группы ключей,
+чьи текущие переводы СОВПАЛИ. Поле "rejected" — правки, уже отклонённые валидатором
+или оператором (причины в reasons): их значения НЕПРИЕМЛЕМЫ, повторять их нельзя.
+Верни в "paths" НОВЫЕ значения:
+- для КАЖДОГО ключа каждой группы коллизий — обязательно, различающиеся между собой
+  и не совпадающие ни с одним current из полного каталога (сравнение без учёта регистра);
+- для КАЖДОГО ключа из rejected — обязательно замену, не равную отклонённому значению;
+- дополнительно — ключи, где current нарушает полярность: слово из негативного
+  спектра в positive-списке (пример: исп. Agitación для Волнения) или наоборот;
+  неуверенные случаи не трогай;
+- для остальных ключей "paths" не включай — их перевод уже принят.
+Каждое значение — одно слово или короткое словосочетание, естественное для носителя,
+в одном регистре и стиле с соседями (current каталога); различие между близкими
+ ru-оригиналами (Радость/Восторг, Печаль/Сожаление) сохрани оттенком, а не длиной.`;
+
+export interface EmotionRepairPayload {
+  sourceLocale: string;
+  targetLocale: string;
+  emotions: Array<{ key: string; polarity: 'negative' | 'positive'; ru: string; current: string }>;
+  collisions: Array<{ value: string; keys: string[] }>;
+  /** Отклонённые ранее значения (валидатор/оператор) — модель обязана дать иные. */
+  rejected?: EmotionRejectedEdit[];
+}
+
+export function buildEmotionRepairPayload(
+  lang: string,
+  catalog: EmotionCatalog,
+  ruValues: Record<string, unknown>,
+  currentValues: Record<string, unknown>,
+  rejected: EmotionRejectedEdit[] = [],
+): EmotionRepairPayload {
+  const emotions = emotionKeys(catalog)
+    .filter((k) => typeof currentValues[k] === 'string' && String(currentValues[k]).trim())
+    .map((k) => ({
+      key: k,
+      polarity: polarityOf(catalog, k)!,
+      ru: String(ruValues[k] ?? ''),
+      current: String(currentValues[k]),
+    }));
+  return {
+    sourceLocale: 'ru',
+    targetLocale: lang,
+    emotions,
+    collisions: findEmotionCollisions(catalog, currentValues).map((g) => ({
+      value: g.example,
+      keys: g.keys,
+    })),
+    rejected,
+  };
+}
+
+export interface EmotionEdit {
+  key: string;
+  from: string;
+  to: string;
+}
+
+export interface EmotionRejectedEdit {
+  key: string;
+  value: string;
+  reasons: string[];
+}
+
+export interface EmotionRepairRound {
+  round: number;
+  applied: EmotionEdit[];
+  rejected: EmotionRejectedEdit[];
+}
+
+export interface EmotionInvariantReport {
+  lang: string;
+  rounds: EmotionRepairRound[];
+  /** Коллизии, оставшиеся после исчерпания раундов (пусто = инвариант держится). */
+  remaining: EmotionCollisionGroup[];
+}
+
+/** Парсит path-map ответ модели в «ключ → значение» (голый ключ или /ключ). */
+export function parseEmotionPathMap(parsed: unknown): Record<string, string> | null {
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return null;
+  const paths = (parsed as any).paths;
+  if (!paths || typeof paths !== 'object' || Array.isArray(paths)) return null;
+  const out: Record<string, string> = {};
+  for (const [k, v] of Object.entries(paths as Record<string, unknown>)) {
+    if (typeof v === 'string') out[k.replace(/^\//, '')] = v;
+  }
+  return out;
+}
+
+/**
+ * Пер-ключевое слияние ответа ремонта в рабочий набор. Правка отбраковывается
+ * по одной (не валит батч): чужой ключ, пустота/многострочность, guard стадий,
+ * повтор отклонённого значения (валидатор/оператор — сравнение нормализованно,
+ * иначе отклонение обходится сменой регистра), коллизия после слияния.
+ *
+ * Коллизии считаются против «намеренного» состояния: кандидат сверяется не со
+ * СТАРЫМ значением соседа, а с тем, что у соседа будет после этого же батча
+ * (его кандидат, если он есть, иначе текущее). Так валидная перестановка —
+ * обмен значениями двух ключей — применяется целиком, а не бракуется на первой
+ * правке. Конфликт двух кандидатур в одно слово решается порядком каталога
+ * (первый выигрывает, второй отбраковывается с указанием на победителя).
+ */
+export function mergeEmotionRepairs(
+  catalog: EmotionCatalog,
+  currentValues: Record<string, string>,
+  candidates: Record<string, string>,
+  rejectedHints: EmotionRejectedEdit[] = [],
+): { applied: EmotionEdit[]; rejected: EmotionRejectedEdit[] } {
+  const applied: EmotionEdit[] = [];
+  const rejected: EmotionRejectedEdit[] = [];
+  const working: Record<string, string> = {};
+  for (const key of emotionKeys(catalog)) {
+    const v = currentValues[key];
+    if (typeof v === 'string' && v.trim()) working[key] = v;
+  }
+
+  // Намеренное состояние: кандидат (если валиден как строка) поверх текущего.
+  // Кандидатуры с одинаковым нормализованным значением: выигрывает первая
+  // по каталогу, остальные возвращаются к текущему значению (уйдут в rejected).
+  const intended: Record<string, string> = { ...working };
+  const ownerByNorm = new Map<string, string>();
+  for (const key of emotionKeys(catalog)) {
+    const raw = candidates[key];
+    if (typeof raw !== 'string') continue;
+    const value = raw.trim();
+    if (!value || value.includes('\n') || value.length > MAX_EMOTION_LEN) continue; // брак не претендует на слово
+    const norm = normalizeEmotionValue(value);
+    const owner = ownerByNorm.get(norm);
+    if (owner !== undefined && owner !== key) continue; // слово уже занято кандидатурой раньше по каталогу
+    ownerByNorm.set(norm, key);
+    intended[key] = value;
+  }
+
+  for (const key of emotionKeys(catalog)) {
+    const raw = candidates[key];
+    if (raw === undefined) continue;
+    const value = String(raw).trim();
+    const reasons: string[] = [];
+    if (!value) reasons.push('пустое значение');
+    else if (value.includes('\n')) reasons.push('многострочное значение');
+    else if (value.length > MAX_EMOTION_LEN) reasons.push(`слишком длинно (${value.length} > ${MAX_EMOTION_LEN})`);
+    const old = working[key];
+    if (reasons.length === 0 && old !== undefined && old !== value) {
+      reasons.push(...stageEditRejections(old, value));
+    }
+    if (reasons.length === 0 && old !== undefined && old === value) {
+      continue; // модель вернула текущее значение — не правка и не ошибка
+    }
+    if (reasons.length === 0) {
+      // Отклонённое значение (оператор/валидатор): регистр и пробелы — не обход.
+      const banned = rejectedHints.find(
+        (h) => h.key === key && normalizeEmotionValue(h.value) === normalizeEmotionValue(value),
+      );
+      if (banned) reasons.push(`повторяет отклонённое значение (${banned.reasons.join('; ')})`);
+    }
+    if (reasons.length === 0) {
+      // Инвариант после слияния: новое значение не должно совпасть (без
+      // регистра) с намеренным значением любого ДРУГОГО ключа набора.
+      const norm = normalizeEmotionValue(value);
+      const clash = emotionKeys(catalog).find(
+        (k) => k !== key && intended[k] !== undefined && normalizeEmotionValue(intended[k]!) === norm,
+      );
+      if (clash) reasons.push(`столкнется с «${clash}» (${intended[clash]})`);
+    }
+    if (reasons.length > 0) {
+      rejected.push({ key, value, reasons });
+      continue;
+    }
+    working[key] = value;
+    applied.push({ key, from: old ?? '', to: value });
+  }
+  return { applied, rejected };
+}
+
+export interface EnforceEmotionOptions {
+  client: StageClient;
+  lang: string;
+  catalog: EmotionCatalog;
+  /** Значения ключей app_ru.arb (канон). */
+  ruValues: Record<string, unknown>;
+  /** Целевой arb целиком (мутируется применёнными правками). */
+  target: Record<string, any>;
+  /** Абсолютный путь целевого arb (для записи). */
+  targetPath: string;
+  maxRounds?: number;
+  /** Только детект и отчёт: модель не вызывается, файл не меняется. */
+  dryRun?: boolean;
+  /**
+   * Операторные отклонения (--reject-emotions): значения, неприемлемые
+   * семантически/стилистически, которые модель обязана заменить. Актуальны,
+   * пока совпадают с текущим значением ключа; форсят раунд ремонта даже без
+   * коллизий (замена полярности и т.п.).
+   */
+  seedRejections?: EmotionRejectedEdit[];
+}
+
+/**
+ * Цикл «детект → ремонт → слияние → запись»: выходит при чистом инварианте
+ * или исчерпании раундов. Отклонённые правки (валидатор + оператор) идут в
+ * следующий раунд полем "rejected" — модель видит, чем именно нельзя.
+ * Каждая правка логируется; итог — отчёт.
+ */
+export async function enforceEmotionInvariant(opts: EnforceEmotionOptions): Promise<EmotionInvariantReport> {
+  const report: EmotionInvariantReport = { lang: opts.lang, rounds: [], remaining: [] };
+  const maxRounds = opts.maxRounds ?? DEFAULT_REPAIR_ROUNDS;
+
+  const currentValues = (): Record<string, string> => {
+    const out: Record<string, string> = {};
+    for (const key of emotionKeys(opts.catalog)) {
+      const v = opts.target[key];
+      if (typeof v === 'string' && v.trim()) out[key] = v;
+    }
+    return out;
+  };
+
+  /** Операторные отклонения, всё ещё актуальные (значение = текущее). */
+  const activeSeeds = (): EmotionRejectedEdit[] =>
+    (opts.seedRejections ?? []).filter((s) => {
+      const cur = currentValues()[s.key];
+      return cur !== undefined && normalizeEmotionValue(cur) === normalizeEmotionValue(s.value);
+    });
+
+  let collisions = findEmotionCollisions(opts.catalog, currentValues());
+  let seeds = activeSeeds();
+  if (collisions.length === 0 && seeds.length === 0) return report;
+  if (collisions.length > 0) {
+    console.log(
+      `   ⚠️ [emotions] ${opts.lang}: коллизии (${collisions.map((g) => `${g.example}×${g.keys.length}`).join(', ')})`,
+    );
+  }
+  if (seeds.length > 0) {
+    console.log(`   ⚠️ [emotions] ${opts.lang}: операторные отклонения (${seeds.map((s) => s.key).join(', ')})`);
+  }
+  if (opts.dryRun) {
+    report.remaining = collisions;
+    return report;
+  }
+
+  const mainPrompt = await loadPrompt('ui', 'main', opts.lang);
+  const system = mainPrompt + MAIN_PATHS_ADDENDUM + EMOTION_REPAIR_ADDENDUM;
+
+  for (let round = 1; round <= maxRounds; round++) {
+    const needsRepair = collisions.length > 0 || seeds.length > 0;
+    if (!needsRepair) break;
+    const feedback = [...seeds];
+    const payload = buildEmotionRepairPayload(opts.lang, opts.catalog, opts.ruValues, currentValues(), feedback);
+    const raw = await opts.client.complete({
+      system,
+      user: JSON.stringify(payload),
+      temperature: 0.3,
+      maxTokens: 8_192,
+      jsonMode: true,
+    });
+    const candidates = parseEmotionPathMap(await parseWithRepair<any>(raw));
+    if (!candidates) {
+      console.warn(`   🩹 [emotions] ${opts.lang}: раунд ${round} — ответ не распарсился`);
+      report.rounds.push({ round, applied: [], rejected: [] });
+      continue;
+    }
+    const { applied, rejected } = mergeEmotionRepairs(opts.catalog, currentValues(), candidates, feedback);
+    for (const e of applied) opts.target[e.key] = e.to;
+    if (applied.length > 0) await writeJsonAtomic(opts.targetPath, opts.target);
+    for (const e of applied) console.log(`   🩹 [emotions] ${opts.lang}: ${e.key}: ${e.from} → ${e.to}`);
+    for (const e of rejected) console.warn(`   🩹 [emotions] ${opts.lang}: правка отброшена: ${e.key} (${e.reasons.join('; ')})`);
+    report.rounds.push({ round, applied, rejected });
+    // Петля обратной связи: отклонённое этой раундом — в контекст следующего.
+    seeds = [...seeds.filter((s) => !applied.some((a) => a.key === s.key)), ...rejected];
+    collisions = findEmotionCollisions(opts.catalog, currentValues());
+    if (round < maxRounds && collisions.length > 0) {
+      console.log(`   ↻ [emotions] ${opts.lang}: раунд ${round} оставил коллизии — следующий с полем rejected`);
+    }
+  }
+
+  report.remaining = collisions;
+  if (collisions.length > 0) {
+    console.warn(
+      `   ⚠️ [emotions] ${opts.lang}: инвариант НЕ восстановлен за ${maxRounds} раундов — осталось ${collisions.length} групп`,
+    );
+  } else {
+    console.log(`   ✅ [emotions] ${opts.lang}: инвариант восстановлен`);
+  }
+  return report;
+}
