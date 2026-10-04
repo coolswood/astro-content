@@ -39,6 +39,11 @@ steps:
       FORGEJO_API: http://127.0.0.1:8101/api/v1
       FORGEJO_TOKEN:
         from_secret: FORGEJO_TOKEN
+      # Автофикс: подтверждённые находки уходят в headless ZCode
+      # (bin/zcode-fix-bridge, максимум 3 захода на PR, отчёты — отдельными
+      # комментариями). Только Woodpecker-флоу: в Actions-воркфлоу этой
+      # переменной нет, двойного спавна нет.
+      ZCODE_FIX: "1"
       GH_REPO: coolswood/astro-content
       PR_NUMBER: ${CI_COMMIT_PULL_REQUEST}
       HEAD_SHA: ${CI_COMMIT_SHA}
