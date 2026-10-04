@@ -1,0 +1,55 @@
+# ai-review — AI-ревью PR локальной Gemma (pr-agent-lab на GX10,
+# см. ~/pr-agent-lab/README.md). Порт .github/workflows/ai-review.yml
+# (Forgejo Actions) на Woodpecker CI, 2026-10-04.
+#
+# Триггер: каждый PR (opened/synchronize/reopened) — Woodpecker получает
+# pull_request-события из Forgejo нативно (webhook репо включает событие).
+# Отмена предыдущего прогона при новом пуше — настройка репо
+# cancel-previous-pipeline-events (push+pull_request, дефолт).
+#
+# Транспорт — Forgejo API v1 через bin/pr-review-ci: FORGEJO_TOKEN — токен
+# инстанса с правом писать комментарии (Woodpecker-секрет репо FORGEJO_TOKEN,
+# разрешён для событий pull_request; на Forgejo Actions эту роль играл
+# авто-токен джобы GITHUB_TOKEN). «Липкий» комментарий в PR — один на PR,
+# обновляется на месте (review + verify или ошибкой).
+#
+# Исполняется НА ХОСТЕ (labels backend=local, нативный агент): обёртке нужны
+# ~/pr-agent-lab, лимитер :8102, llm-router (LOCAL_LLM_TOKEN берётся обёрткой
+# из Infisical) и чекаут репо для детектора профиля фреймворка.
+# Агент v3.18 включает isolated-home (HOME → временный каталог, без кредов
+# Infisical/git) — первым действием возвращаем хостовый HOME.
+# ⚠️ Доллар-фигурные подстановки в commands не использовать — Woodpecker
+# подставляет их в YAML до запуска (drone/envsubst).
+
+when:
+  - event: pull_request
+
+skip_clone: true
+labels:
+  backend: local
+
+steps:
+  - name: ai-review
+    image: bash
+    environment:
+      # PATH агента не содержит ~/.local/bin (gh, uv) — добавляем сами.
+      PATH: /home/coolswood/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      # Локальный loopback-маппинг Forgejo (127.0.0.1:8101->3000): агент и
+      # Forgejo живут на одном боксе, tailnet/TLS не нужны.
+      FORGEJO_API: http://127.0.0.1:8101/api/v1
+      FORGEJO_TOKEN:
+        from_secret: FORGEJO_TOKEN
+      GH_REPO: coolswood/astro-content
+      PR_NUMBER: ${CI_COMMIT_PULL_REQUEST}
+      HEAD_SHA: ${CI_COMMIT_SHA}
+      RUN_URL: ${CI_PIPELINE_URL}
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        # Чекаут головы PR (детектор профиля фреймворка смотрит файлы репо):
+        # CI_COMMIT_SOURCE_BRANCH — ветка-источник PR, фолбэк — ветка события.
+        br=$(printenv CI_COMMIT_SOURCE_BRANCH || true)
+        [ -n "$br" ] || br=$CI_COMMIT_BRANCH
+        git clone --depth 1 -b "$br" https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git .
+        ~/pr-agent-lab/bin/pr-review-ci
