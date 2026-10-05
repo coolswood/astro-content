@@ -27,6 +27,7 @@ when:
 skip_clone: true
 labels:
   backend: local
+  lane: services
 
 steps:
   - name: ai-review
