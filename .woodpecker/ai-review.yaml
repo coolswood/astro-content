@@ -41,7 +41,7 @@ steps:
       FORGEJO_TOKEN:
         from_secret: FORGEJO_TOKEN
       # Автофикс: подтверждённые находки уходят в headless ZCode
-      # (bin/zcode-fix-bridge, максимум 3 захода на PR, отчёты — отдельными
+      # (bin/zcode-fix-bridge, максимум 5 заходов на PR, отчёты — отдельными
       # комментариями). Только Woodpecker-флоу: в Actions-воркфлоу этой
       # переменной нет, двойного спавна нет.
       ZCODE_FIX: "1"
