@@ -132,7 +132,6 @@ export const GET: APIRoute = async ({ params }) => {
           id: 'anxiety',
           title: constants.anxiety,
           color: '#FFBC97',
-          premiumId: 'test',
           levels: {
             44: {
               title: anxiety.result.normal.title,
@@ -156,7 +155,6 @@ export const GET: APIRoute = async ({ params }) => {
           id: 'eat',
           title: constants.eat,
           color: '#FDDB66',
-          premiumId: 'test',
           levels: {
             30: {
               title: eat.result.low.title,
@@ -222,7 +220,6 @@ export const GET: APIRoute = async ({ params }) => {
           id: 'hopeless',
           title: constants.hopelessness,
           color: '#9B9B9B',
-          premiumId: 'test',
           levels: {
             9: {
               title: hopelessness.result.positive.title,
@@ -288,7 +285,6 @@ export const GET: APIRoute = async ({ params }) => {
           id: 'impostor',
           title: constants.impostor,
           color: '#F6851F',
-          premiumId: 'test',
           levels: {
             40: {
               title: impostor.result.normal.title,
@@ -331,7 +327,6 @@ export const GET: APIRoute = async ({ params }) => {
           id: 'sociophobia',
           title: constants.sociophobia,
           color: '#FF725E',
-          premiumId: 'test',
           levels: {
             40: {
               title: sociophobia.result.normal.title,
