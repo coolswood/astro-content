@@ -113,4 +113,27 @@ describe('analyzeTree', () => {
     expect(todo).toEqual(['/title', '/screen/texts/0']);
     expect(keysToTranslate(a, true, Object.keys(ruLeaves))).toEqual(Object.keys(ruLeaves));
   });
+
+  test('protect выводит листья владельца из missing/changed/dead (en-instagram)', () => {
+    // en-кейс: у en своё значение на ru-пути (/instagram/0) и свой пост на
+    // пути, которого в ru нет (/instagram/1); ru-канон в источнике другой.
+    const ig = (p: string) => p.split('/').includes('instagram');
+    const enSource = { ...ruLeaves, '/instagram/0': '17925464928138340' };
+    const enTarget = {
+      ...ruLeaves,
+      '/instagram/0': '18071770460059064',
+      '/instagram/1': '18119180623472807',
+    };
+
+    const a = analyzeTree(enSource, enTarget, scope, { protect: ig });
+    expect(a.missing).toEqual([]);
+    expect(a.changed).toEqual([]);
+    expect(a.dead).toEqual([]);
+
+    // Без protect те же листья классифицировались бы как changed/dead —
+    // purge вырезал бы собственные посты en (инцидент 2026-10-19).
+    const b = analyzeTree(enSource, enTarget, scope);
+    expect(b.changed).toEqual(['/instagram/0']);
+    expect(b.dead).toEqual(['/instagram/1']);
+  });
 });
