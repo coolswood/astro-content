@@ -19,24 +19,31 @@ export interface Analysis {
  * @param ruLeaves      плоские строковые листья ru-источника
  * @param targetLeaves  плоские строковые листья target ({} если файла нет)
  * @param scope         state по этому файлу (уже инициализированный ensureScope)
+ * @param opts.protect  предикат «лист вне конвейера» (данные владельца: en-массив
+ *                      instagram и т.п.). Такие листья не missing, не changed и
+ *                      не dead — purge и отчёты их не трогают ни в одну сторону.
  */
 export function analyzeTree(
   ruLeaves: Leaves,
   targetLeaves: Leaves,
   scope: ScopeState,
-  opts: { retranslateChanged?: boolean } = {},
+  opts: { retranslateChanged?: boolean; protect?: (p: string) => boolean } = {},
 ): Analysis {
   const retranslateChanged = opts.retranslateChanged ?? true;
+  const keep = opts.protect;
   const ruPaths = Object.keys(ruLeaves);
   const targetPaths = Object.keys(targetLeaves);
   const ruSet = new Set(ruPaths);
 
-  const missing = ruPaths.filter((p) => !(p in targetLeaves));
-  const dead = targetPaths.filter((p) => !ruSet.has(p));
+  const missing = ruPaths.filter((p) => !(p in targetLeaves) && !(keep && keep(p)));
+  const dead = targetPaths.filter((p) => !ruSet.has(p) && !(keep && keep(p)));
   const changed = retranslateChanged
     ? // Записи нет вообще (ключ добавлен в ru после инициализации, а в target
       // уже кто-то вписал перевод вручную) — перестраховываемся: переводим заново.
-      ruPaths.filter((p) => p in targetLeaves && scope[p] !== hashLeaf(ruLeaves[p]))
+      ruPaths.filter(
+        (p) =>
+          p in targetLeaves && !(keep && keep(p)) && scope[p] !== hashLeaf(ruLeaves[p]),
+      )
     : [];
 
   return { missing, changed, dead };

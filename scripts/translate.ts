@@ -72,7 +72,7 @@ import {
   type EmotionInvariantReport,
   type EmotionRejectedEdit,
 } from './lib/emotion-invariant.js';
-import { TranslationState, hashLeaf, type ScopeState } from './lib/state.js';
+import { TranslationState, type ScopeState } from './lib/state.js';
 import { analyzeTree, keysToTranslate, type Analysis } from './lib/analyze.js';
 import {
   validateTranslation,
@@ -87,7 +87,7 @@ import {
   instagramArrayForLang,
   isInstagramArrayLeaf,
 } from './lib/media-paths.js';
-import { reconcileInstagramTags } from './lib/tag-reconcile.js';
+import { reconcileInstagramTags, instagramIndependent } from './lib/tag-reconcile.js';
 import {
   flattenLeaves,
   buildSubtree,
@@ -775,8 +775,12 @@ async function runContent(ctx: RunCtx): Promise<number> {
       const target = await readJsonOr<any>(targetPath, {});
       // Видео-медиа существуют только для ru: в остальных локалях видео-листья
       // не переводятся и выпиливаются из целевых файлов как «мёртвые».
+      // Массив instagram у en — данные владельца (свои посты @mindhealth_en,
+      // независимые от ru-канона, как и en-теги <instagram>): protect выводит
+      // его из missing/changed/dead, чтобы purge и отчёты его не трогали.
       perLang[lang] = analyzeTree(sourceLeavesForLang(ruLeaves, lang), flattenLeaves(target), scope, {
         retranslateChanged: args.retranslateChanged,
+        protect: instagramIndependent(lang) ? isInstagramArrayLeaf : undefined,
       });
     }
     items.push({ relPath, ruJson, ruLeaves, scopeId, scope, perLang });
@@ -826,41 +830,12 @@ async function runContent(ctx: RunCtx): Promise<number> {
   }
   await ctx.state.save();
 
-  // 3b. Массив instagram (ID постов) — механические данные: существует только
-  // в ru и en, в модель не отправляется никогда (см. фильтр todo ниже). Для
-  // en: отсутствующие ID дописываются из ru, существующие НЕ перезаписываются
-  // (у en свой легаси-набор, как у instagram-тегов), state якорится, чтобы
-  // ключ не числился missing/changed.
-  for (const item of items) {
-    const igLeaves: Leaves = {};
-    for (const [p, v] of Object.entries(item.ruLeaves)) {
-      if (isInstagramArrayLeaf(p)) igLeaves[p] = v;
-    }
-    if (Object.keys(igLeaves).length === 0) continue;
-    for (const lang of ctx.langs) {
-      if (!instagramArrayForLang(lang) || lang.toLowerCase() === 'ru') continue;
-      const targetPath = path.join(ROOT, 'src', 'i18n', lang.toLowerCase(), item.relPath);
-      const target = await readJsonOr<any>(targetPath, null);
-      if (target == null) continue; // файла нет — целиком создаст перевод
-      const flat = flattenLeaves(target);
-      const fill: Leaves = {};
-      for (const [p, v] of Object.entries(igLeaves)) {
-        if (!flat[p]) fill[p] = v; // отсутствующий/пустой ID → из ru
-      }
-      const stale = Object.keys(igLeaves).filter((p) => item.scope[p] !== hashLeaf(igLeaves[p]!));
-      if (Object.keys(fill).length === 0 && stale.length === 0) continue;
-      if (Object.keys(fill).length > 0) {
-        applyLeaves(target, fill);
-        await writeJsonAtomic(targetPath, target);
-      }
-      ctx.state.markTranslated(item.scope, igLeaves);
-      await ctx.state.save();
-      console.log(
-        `🔁 ${lang} ${item.relPath}: instagram вне перевода — дописано из ru ${Object.keys(fill).length}, якорь state ${stale.length}`,
-      );
-    }
-  }
-  await ctx.state.save();
+  // 3b. Массив instagram у en НЕ досыпается из ru: en владеет своим набором
+  // постов (@mindhealth_en), отсутствующий/пустой массив — норма (блок просто
+  // не рендерится), а не дыра для заполнения. Защита от purge/отчётов —
+  // protect в analyze выше; от утечки в модель — фильтр isInstagramArrayLeaf
+  // в todo ниже (п.4). Досыпка из ru отсюда удалена: именно она возвращала
+  // ru-ID в en после каждой перегенерации (инцидент 2026-10-19).
 
   // 4. Перевод: пул воркеров по задачам файл×язык; лимит одновременных
   // запросов к модели держит семафор VllmClient, воркеров — не больше concurrency.
