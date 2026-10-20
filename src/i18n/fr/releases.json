@@ -1,19 +1,387 @@
-{
-  "570": [
-    "Bonne nouvelle : nous avons décidé de rendre l’application encore plus accessible ! À partir d’aujourd’hui, nous allons proposer davantage de fonctionnalités premium gratuitement. On commence par les sons relaxants : le minuteur d’arrêt est désormais gratuit pour toujours !"
-  ],
-  "574": [
-    "Découvrez la nouvelle rubrique d’exercices : les pratiques respiratoires ! 🧘‍♂️ Elles vous aideront à apaiser le stress, à traverser un moment de panique ou, au contraire, à mobiliser toute votre énergie ! ⚡️"
-  ],
-  "587": [
-    "Mise à jour majeure de l’assistant IA ! Désormais, l’Analyse n’est que le début. Nous avons ajouté un véritable dialogue interactif : discutez des idées reçues et réalisez des pratiques psychologiques sous l’accompagnement attentif de l’intelligence artificielle. Et ce n’est que la première marche vers un tout autre niveau de soutien !"
-  ],
-  "593": [
-    "Remplir votre journal des pensées automatiques ressemble désormais davantage à une séance avec un psychologue. Dans « Dialogue bienveillant », racontez simplement avec vos propres mots ce qui s’est passé : l’assistant vous guidera avec douceur et remplira pour vous les différentes étapes du journal. Vous pourrez ainsi vous concentrer pleinement sur vos souvenirs, vos pensées et ce que vous avez ressenti à ce moment-là, sans avoir à vous préoccuper de la structure du journal."
-  ],
-  "1300": [
-    "L’ajout d’émotions, l’utilisation des fiches de coping et la configuration du code PIN sont désormais gratuits pour tous — l’abonnement n’est plus nécessaire pour accéder à ces fonctionnalités.",
-    "Nous avons modernisé le design : un nouveau chevron « retour » apparaît sur tous les écrans, les en-têtes des sections et l’écran des sons pour le sommeil ont été renouvelés, et de nouvelles couleurs ont été ajoutées pour les histoires et le lecteur.",
-    "Nous avons corrigé les flashs blancs lors des transitions en mode sombre ; la désactivation du renouvellement automatique ne coupe plus l’accès avant la fin de la période déjà payée."
-  ]
-}
+[
+  {
+    "version": "5.22.0",
+    "builds": [
+      "1305"
+    ],
+    "notes": [
+      "L’ajout d’émotions, l’utilisation des fiches de coping et la configuration du code PIN sont désormais gratuits pour tous — l’abonnement n’est plus nécessaire pour accéder à ces fonctionnalités.",
+      "Nous avons modernisé le design : un nouveau chevron « retour » apparaît sur tous les écrans, les en-têtes des sections et l’écran des sons pour le sommeil ont été renouvelés, et de nouvelles couleurs ont été ajoutées pour les histoires et le lecteur.",
+      "Nous avons corrigé les flashs blancs lors des transitions en mode sombre ; la désactivation du renouvellement automatique ne coupe plus l’accès avant la fin de la période déjà payée."
+    ]
+  },
+  {
+    "version": "5.21.1",
+    "builds": [
+      "1225"
+    ]
+  },
+  {
+    "version": "5.21.0",
+    "builds": [
+      "1086",
+      "620",
+      "1094"
+    ]
+  },
+  {
+    "version": "5.20.3",
+    "builds": [
+      "618"
+    ]
+  },
+  {
+    "version": "5.20.2",
+    "builds": [
+      "617"
+    ]
+  },
+  {
+    "version": "5.20.1",
+    "builds": [
+      "616"
+    ]
+  },
+  {
+    "version": "5.20.0",
+    "builds": [
+      "615"
+    ]
+  },
+  {
+    "version": "5.19.6",
+    "builds": [
+      "614"
+    ]
+  },
+  {
+    "version": "5.19.5",
+    "builds": [
+      "613"
+    ]
+  },
+  {
+    "version": "5.19.4",
+    "builds": [
+      "611"
+    ]
+  },
+  {
+    "version": "5.19.3",
+    "builds": [
+      "610"
+    ]
+  },
+  {
+    "version": "5.19.2",
+    "builds": [
+      "609"
+    ]
+  },
+  {
+    "version": "5.19.1",
+    "builds": [
+      "608"
+    ]
+  },
+  {
+    "version": "5.19.0",
+    "builds": [
+      "607"
+    ]
+  },
+  {
+    "version": "5.18.13",
+    "builds": [
+      "606"
+    ]
+  },
+  {
+    "version": "5.18.12",
+    "builds": [
+      "605"
+    ]
+  },
+  {
+    "version": "5.18.11",
+    "builds": [
+      "604"
+    ]
+  },
+  {
+    "version": "5.18.10",
+    "builds": [
+      "603"
+    ]
+  },
+  {
+    "version": "5.18.9",
+    "builds": [
+      "602"
+    ]
+  },
+  {
+    "version": "5.18.8",
+    "builds": [
+      "601"
+    ]
+  },
+  {
+    "version": "5.18.7",
+    "builds": [
+      "600"
+    ]
+  },
+  {
+    "version": "5.18.6",
+    "builds": [
+      "599"
+    ]
+  },
+  {
+    "version": "5.18.5",
+    "builds": [
+      "598"
+    ]
+  },
+  {
+    "version": "5.18.4",
+    "builds": [
+      "597"
+    ]
+  },
+  {
+    "version": "5.18.3",
+    "builds": [
+      "596"
+    ]
+  },
+  {
+    "version": "5.18.2",
+    "builds": [
+      "595"
+    ]
+  },
+  {
+    "version": "5.18.1",
+    "builds": [
+      "594"
+    ]
+  },
+  {
+    "version": "5.18.0",
+    "builds": [
+      "593"
+    ],
+    "notes": [
+      "Remplir votre journal des pensées automatiques ressemble désormais davantage à une séance avec un psychologue. Dans « Dialogue bienveillant », racontez simplement avec vos propres mots ce qui s’est passé : l’assistant vous guidera avec douceur et remplira pour vous les différentes étapes du journal. Vous pourrez ainsi vous concentrer pleinement sur vos souvenirs, vos pensées et ce que vous avez ressenti à ce moment-là, sans avoir à vous préoccuper de la structure du journal."
+    ]
+  },
+  {
+    "version": "5.17.11",
+    "builds": [
+      "592"
+    ]
+  },
+  {
+    "version": "5.17.10",
+    "builds": [
+      "591"
+    ]
+  },
+  {
+    "version": "5.17.9",
+    "builds": [
+      "590"
+    ]
+  },
+  {
+    "version": "5.17.8",
+    "builds": [
+      "589"
+    ]
+  },
+  {
+    "version": "5.17.7",
+    "builds": [
+      "588"
+    ]
+  },
+  {
+    "version": "5.17.6",
+    "builds": [
+      "587"
+    ],
+    "notes": [
+      "Mise à jour majeure de l’assistant IA ! Désormais, l’Analyse n’est que le début. Nous avons ajouté un véritable dialogue interactif : discutez des idées reçues et réalisez des pratiques psychologiques sous l’accompagnement attentif de l’intelligence artificielle. Et ce n’est que la première marche vers un tout autre niveau de soutien !"
+    ]
+  },
+  {
+    "version": "5.17.5",
+    "builds": [
+      "586"
+    ]
+  },
+  {
+    "version": "5.17.4",
+    "builds": [
+      "585"
+    ]
+  },
+  {
+    "version": "5.17.3",
+    "builds": [
+      "584"
+    ]
+  },
+  {
+    "version": "5.17.2",
+    "builds": [
+      "583"
+    ]
+  },
+  {
+    "version": "5.17.1",
+    "builds": [
+      "582"
+    ]
+  },
+  {
+    "version": "5.17.0",
+    "builds": [
+      "581"
+    ]
+  },
+  {
+    "version": "5.16.3",
+    "builds": [
+      "580"
+    ]
+  },
+  {
+    "version": "5.16.2",
+    "builds": [
+      "579"
+    ]
+  },
+  {
+    "version": "5.16.1",
+    "builds": [
+      "578"
+    ]
+  },
+  {
+    "version": "5.16.0",
+    "builds": [
+      "577"
+    ]
+  },
+  {
+    "version": "5.15.2",
+    "builds": [
+      "576"
+    ]
+  },
+  {
+    "version": "5.15.1",
+    "builds": [
+      "575"
+    ]
+  },
+  {
+    "version": "5.15.0",
+    "builds": [
+      "574"
+    ],
+    "notes": [
+      "Découvrez la nouvelle rubrique d’exercices : les pratiques respiratoires ! 🧘‍♂️ Elles vous aideront à apaiser le stress, à traverser un moment de panique ou, au contraire, à mobiliser toute votre énergie ! ⚡️"
+    ]
+  },
+  {
+    "version": "5.14.10",
+    "builds": [
+      "573"
+    ]
+  },
+  {
+    "version": "5.14.9",
+    "builds": [
+      "572"
+    ]
+  },
+  {
+    "version": "5.14.8",
+    "builds": [
+      "571"
+    ]
+  },
+  {
+    "version": "5.14.7",
+    "builds": [
+      "570"
+    ],
+    "notes": [
+      "Bonne nouvelle : nous avons décidé de rendre l’application encore plus accessible ! À partir d’aujourd’hui, nous allons proposer davantage de fonctionnalités premium gratuitement. On commence par les sons relaxants : le minuteur d’arrêt est désormais gratuit pour toujours !"
+    ]
+  },
+  {
+    "version": "5.14.6",
+    "builds": [
+      "569"
+    ]
+  },
+  {
+    "version": "5.14.5",
+    "builds": [
+      "568"
+    ]
+  },
+  {
+    "version": "5.14.4",
+    "builds": [
+      "567"
+    ]
+  },
+  {
+    "version": "5.14.3",
+    "builds": [
+      "566"
+    ]
+  },
+  {
+    "version": "5.14.2",
+    "builds": [
+      "565"
+    ]
+  },
+  {
+    "version": "5.14.1",
+    "builds": [
+      "564"
+    ]
+  },
+  {
+    "version": "5.14.0",
+    "builds": [
+      "563"
+    ]
+  },
+  {
+    "version": "5.13.3",
+    "builds": [
+      "562"
+    ]
+  },
+  {
+    "version": "5.13.2",
+    "builds": [
+      "561"
+    ]
+  },
+  {
+    "version": "5.13.1",
+    "builds": [
+      "560"
+    ]
+  }
+]

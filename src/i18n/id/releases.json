@@ -1,19 +1,387 @@
-{
-  "570": [
-    "Kabar baik: kami memutuskan untuk membuat aplikasi ini semakin mudah diakses! Mulai hari ini, kami akan membuka lebih banyak fitur premium untuk digunakan secara gratis. Kita mulai dari suara relaksasi: timer berhenti kini gratis selamanya!"
-  ],
-  "574": [
-    "Kenalkan bagian baru dalam latihan — praktik pernapasan! 🧘‍♂️ Ini dapat membantu meredakan stres, menghadapi panik, atau sebaliknya, mengumpulkan seluruh energi Anda! ⚡️"
-  ],
-  "587": [
-    "Pembaruan besar untuk asisten AI! Sekarang Analisis hanya permulaan. Kami menambahkan dialog interaktif penuh: bahas insight yang Anda dapatkan dan lakukan praktik psikologis di bawah bimbingan cermat dari kecerdasan buatan. Dan ini baru langkah pertama menuju tingkat dukungan yang benar-benar baru!"
-  ],
-  "593": [
-    "Kini, mengisi jurnal pikiran otomatis terasa lebih seperti sesi bersama psikolog. Dalam “Dialog Penuh Kepedulian”, cukup ceritakan dengan kata-kata Anda sendiri semua yang terjadi—asisten akan membimbing Anda dengan lembut dan mengisi sendiri langkah-langkah jurnal yang diperlukan. Dengan begitu, Anda bisa lebih fokus pada ingatan, pikiran, dan perasaan Anda saat itu tanpa perlu memikirkan struktur jurnal."
-  ],
-  "1300": [
-    "Penambahan emosi, kartu koping, dan PIN kini gratis untuk semua orang—Anda tidak lagi memerlukan langganan untuk menggunakan fitur-fitur ini.",
-    "Kami memperbarui tampilan: ikon chevron “kembali” baru di semua layar, desain header baru untuk bagian dan layar suara tidur, serta warna baru untuk cerita dan pemutar musik.",
-    "Kami telah memperbaiki masalah kilatan putih saat transisi pada tema gelap; pembatalan perpanjangan otomatis kini tidak akan mencabut akses Anda hingga akhir periode yang telah dibayar."
-  ]
-}
+[
+  {
+    "version": "5.22.0",
+    "builds": [
+      "1305"
+    ],
+    "notes": [
+      "Penambahan emosi, kartu koping, dan PIN kini gratis untuk semua orang—Anda tidak lagi memerlukan langganan untuk menggunakan fitur-fitur ini.",
+      "Kami memperbarui tampilan: ikon chevron “kembali” baru di semua layar, desain header baru untuk bagian dan layar suara tidur, serta warna baru untuk cerita dan pemutar musik.",
+      "Kami telah memperbaiki masalah kilatan putih saat transisi pada tema gelap; pembatalan perpanjangan otomatis kini tidak akan mencabut akses Anda hingga akhir periode yang telah dibayar."
+    ]
+  },
+  {
+    "version": "5.21.1",
+    "builds": [
+      "1225"
+    ]
+  },
+  {
+    "version": "5.21.0",
+    "builds": [
+      "1086",
+      "620",
+      "1094"
+    ]
+  },
+  {
+    "version": "5.20.3",
+    "builds": [
+      "618"
+    ]
+  },
+  {
+    "version": "5.20.2",
+    "builds": [
+      "617"
+    ]
+  },
+  {
+    "version": "5.20.1",
+    "builds": [
+      "616"
+    ]
+  },
+  {
+    "version": "5.20.0",
+    "builds": [
+      "615"
+    ]
+  },
+  {
+    "version": "5.19.6",
+    "builds": [
+      "614"
+    ]
+  },
+  {
+    "version": "5.19.5",
+    "builds": [
+      "613"
+    ]
+  },
+  {
+    "version": "5.19.4",
+    "builds": [
+      "611"
+    ]
+  },
+  {
+    "version": "5.19.3",
+    "builds": [
+      "610"
+    ]
+  },
+  {
+    "version": "5.19.2",
+    "builds": [
+      "609"
+    ]
+  },
+  {
+    "version": "5.19.1",
+    "builds": [
+      "608"
+    ]
+  },
+  {
+    "version": "5.19.0",
+    "builds": [
+      "607"
+    ]
+  },
+  {
+    "version": "5.18.13",
+    "builds": [
+      "606"
+    ]
+  },
+  {
+    "version": "5.18.12",
+    "builds": [
+      "605"
+    ]
+  },
+  {
+    "version": "5.18.11",
+    "builds": [
+      "604"
+    ]
+  },
+  {
+    "version": "5.18.10",
+    "builds": [
+      "603"
+    ]
+  },
+  {
+    "version": "5.18.9",
+    "builds": [
+      "602"
+    ]
+  },
+  {
+    "version": "5.18.8",
+    "builds": [
+      "601"
+    ]
+  },
+  {
+    "version": "5.18.7",
+    "builds": [
+      "600"
+    ]
+  },
+  {
+    "version": "5.18.6",
+    "builds": [
+      "599"
+    ]
+  },
+  {
+    "version": "5.18.5",
+    "builds": [
+      "598"
+    ]
+  },
+  {
+    "version": "5.18.4",
+    "builds": [
+      "597"
+    ]
+  },
+  {
+    "version": "5.18.3",
+    "builds": [
+      "596"
+    ]
+  },
+  {
+    "version": "5.18.2",
+    "builds": [
+      "595"
+    ]
+  },
+  {
+    "version": "5.18.1",
+    "builds": [
+      "594"
+    ]
+  },
+  {
+    "version": "5.18.0",
+    "builds": [
+      "593"
+    ],
+    "notes": [
+      "Kini, mengisi jurnal pikiran otomatis terasa lebih seperti sesi bersama psikolog. Dalam “Dialog Penuh Kepedulian”, cukup ceritakan dengan kata-kata Anda sendiri semua yang terjadi—asisten akan membimbing Anda dengan lembut dan mengisi sendiri langkah-langkah jurnal yang diperlukan. Dengan begitu, Anda bisa lebih fokus pada ingatan, pikiran, dan perasaan Anda saat itu tanpa perlu memikirkan struktur jurnal."
+    ]
+  },
+  {
+    "version": "5.17.11",
+    "builds": [
+      "592"
+    ]
+  },
+  {
+    "version": "5.17.10",
+    "builds": [
+      "591"
+    ]
+  },
+  {
+    "version": "5.17.9",
+    "builds": [
+      "590"
+    ]
+  },
+  {
+    "version": "5.17.8",
+    "builds": [
+      "589"
+    ]
+  },
+  {
+    "version": "5.17.7",
+    "builds": [
+      "588"
+    ]
+  },
+  {
+    "version": "5.17.6",
+    "builds": [
+      "587"
+    ],
+    "notes": [
+      "Pembaruan besar untuk asisten AI! Sekarang Analisis hanya permulaan. Kami menambahkan dialog interaktif penuh: bahas insight yang Anda dapatkan dan lakukan praktik psikologis di bawah bimbingan cermat dari kecerdasan buatan. Dan ini baru langkah pertama menuju tingkat dukungan yang benar-benar baru!"
+    ]
+  },
+  {
+    "version": "5.17.5",
+    "builds": [
+      "586"
+    ]
+  },
+  {
+    "version": "5.17.4",
+    "builds": [
+      "585"
+    ]
+  },
+  {
+    "version": "5.17.3",
+    "builds": [
+      "584"
+    ]
+  },
+  {
+    "version": "5.17.2",
+    "builds": [
+      "583"
+    ]
+  },
+  {
+    "version": "5.17.1",
+    "builds": [
+      "582"
+    ]
+  },
+  {
+    "version": "5.17.0",
+    "builds": [
+      "581"
+    ]
+  },
+  {
+    "version": "5.16.3",
+    "builds": [
+      "580"
+    ]
+  },
+  {
+    "version": "5.16.2",
+    "builds": [
+      "579"
+    ]
+  },
+  {
+    "version": "5.16.1",
+    "builds": [
+      "578"
+    ]
+  },
+  {
+    "version": "5.16.0",
+    "builds": [
+      "577"
+    ]
+  },
+  {
+    "version": "5.15.2",
+    "builds": [
+      "576"
+    ]
+  },
+  {
+    "version": "5.15.1",
+    "builds": [
+      "575"
+    ]
+  },
+  {
+    "version": "5.15.0",
+    "builds": [
+      "574"
+    ],
+    "notes": [
+      "Kenalkan bagian baru dalam latihan — praktik pernapasan! 🧘‍♂️ Ini dapat membantu meredakan stres, menghadapi panik, atau sebaliknya, mengumpulkan seluruh energi Anda! ⚡️"
+    ]
+  },
+  {
+    "version": "5.14.10",
+    "builds": [
+      "573"
+    ]
+  },
+  {
+    "version": "5.14.9",
+    "builds": [
+      "572"
+    ]
+  },
+  {
+    "version": "5.14.8",
+    "builds": [
+      "571"
+    ]
+  },
+  {
+    "version": "5.14.7",
+    "builds": [
+      "570"
+    ],
+    "notes": [
+      "Kabar baik: kami memutuskan untuk membuat aplikasi ini semakin mudah diakses! Mulai hari ini, kami akan membuka lebih banyak fitur premium untuk digunakan secara gratis. Kita mulai dari suara relaksasi: timer berhenti kini gratis selamanya!"
+    ]
+  },
+  {
+    "version": "5.14.6",
+    "builds": [
+      "569"
+    ]
+  },
+  {
+    "version": "5.14.5",
+    "builds": [
+      "568"
+    ]
+  },
+  {
+    "version": "5.14.4",
+    "builds": [
+      "567"
+    ]
+  },
+  {
+    "version": "5.14.3",
+    "builds": [
+      "566"
+    ]
+  },
+  {
+    "version": "5.14.2",
+    "builds": [
+      "565"
+    ]
+  },
+  {
+    "version": "5.14.1",
+    "builds": [
+      "564"
+    ]
+  },
+  {
+    "version": "5.14.0",
+    "builds": [
+      "563"
+    ]
+  },
+  {
+    "version": "5.13.3",
+    "builds": [
+      "562"
+    ]
+  },
+  {
+    "version": "5.13.2",
+    "builds": [
+      "561"
+    ]
+  },
+  {
+    "version": "5.13.1",
+    "builds": [
+      "560"
+    ]
+  }
+]
