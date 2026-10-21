@@ -127,7 +127,7 @@ steps:
           cd ../manifests
           for m in *.manifest; do
             [ -e "$m" ] || break
-            [ -d "../releases/${m%.manifest}" ] || rm -f -- "$m"
+            [ -d "../releases/$${m%.manifest}" ] || rm -f -- "$m"
           done
         REMOTE
         ssh -i /home/coolswood/infra/github-runner/.ssh/vps_ru_deploy -o BatchMode=yes root@100.100.213.68 <<'REMOTE'
@@ -137,7 +137,7 @@ steps:
           cd ../manifests
           for m in *.manifest; do
             [ -e "$m" ] || break
-            [ -d "../releases/${m%.manifest}" ] || rm -f -- "$m"
+            [ -d "../releases/$${m%.manifest}" ] || rm -f -- "$m"
           done
         REMOTE
         echo CLEANUP_OK
