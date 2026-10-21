@@ -1,0 +1,151 @@
+# deploy — деплой статики astro-content на оба контура (selfhost с 2026-10-22).
+# Сборка на боксе (node 24 + pnpm, локфайл pnpm — bun.lock в репо игнорируется)
+# → build-info.json + sha256-манифест → rsync на global (netcup, публичный IPv4)
+# → verify манифеста → атомарный swap current → то же на RU (ТОЛЬКО tailnet
+# 100.100.213.68: публичный IPv4 бокс→РФ деградирован — rsync по нему падает)
+# → очистка старых релизов (хранить 3) → проверка build-info на обоих контурах.
+#
+# Раздача: caddy `handle @content` из /srv/content/current (Caddyfile/compose
+# на хостах; раскладка и откат — /srv/mindhealth/DEPLOY.md на global и
+# /srv/content/README.md на обоих). Секретов НЕ требует: SSH-ключи хостовые
+# (~/.ssh/mh_global_deploy, ~/infra/github-runner/.ssh/vps_ru_deploy), rsync
+# установлен на обоих хостах; HOME агента возвращаем первым действием
+# (isolated-home v3.18).
+#
+# Триггеры: push в main (авто) + manual (ручной прогон/переdepлой ветки).
+# build-info.json в dist — контракт мониторинга синхронности контуров.
+# ⚠️ Доллар-фигурные подстановки в commands не использовать — Woodpecker
+# подставляет их в YAML до запуска (drone/envsubst).
+
+when:
+  - event: push
+    branch: main
+  - event: manual
+
+skip_clone: true
+labels:
+  backend: local
+  lane: services
+
+steps:
+  # Сборка чекаутом точного SHA события (fetch по SHA разрешён на Forgejo):
+  # образы/контент обязаны соответствовать коммиту, а не «текущему main».
+  - name: build
+    image: bash
+    environment:
+      PATH: /home/coolswood/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        SHA=$(printenv CI_COMMIT_SHA || true)
+        URL=https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git
+        git init -q .
+        git remote add origin "$URL"
+        if [ -n "$SHA" ]; then
+          git fetch -q --depth 1 origin "$SHA"
+          git checkout -q FETCH_HEAD
+        else
+          BRANCH=$(printenv CI_COMMIT_BRANCH || true)
+          [ -n "$BRANCH" ] || BRANCH=main
+          git fetch -q --depth 1 origin "$BRANCH"
+          git checkout -q FETCH_HEAD
+          SHA=$(git rev-parse HEAD)
+        fi
+        printf '%s' "$SHA" > .deploy-sha
+        # strict-dep-builds: pnpm 12 в CI (CI=true) падает на проигнорированных
+        # postinstall esbuild/sharp; бинарники приходят optionalDependencies,
+        # скрипты не нужны (детерминизм вывода сверен с Vercel байт-в-байт).
+        pnpm install --frozen-lockfile --config.strict-dep-builds=false
+        pnpm build
+        printf '{"sha":"%s","builtAt":"%s","repo":"astro-content","trigger":"ci"}\n' \
+          "$SHA" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > dist/build-info.json
+        (cd dist && find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum) > dist.manifest
+        echo "built $SHA: $(wc -l < dist.manifest) files, $(du -sh dist | cut -f1)"
+
+  # Порядок контуров: global первым (камень дивергенции из задачи переезда).
+  - name: deploy-global
+    image: bash
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        SHA=$(cat .deploy-sha)
+        KEY=/home/coolswood/.ssh/mh_global_deploy
+        RSYNC_RSH="ssh -i $KEY -o BatchMode=yes"
+        rsync -a --delete -e "$RSYNC_RSH" dist/ root@89.58.1.204:/srv/content/releases/$SHA/
+        rsync -a -e "$RSYNC_RSH" dist.manifest root@89.58.1.204:/srv/content/manifests/$SHA.manifest
+        ssh -i "$KEY" -o BatchMode=yes root@89.58.1.204 bash -s -- "$SHA" <<'REMOTE'
+          set -euo pipefail
+          SHA=$1
+          cd /srv/content/releases/$SHA
+          sha256sum -c /srv/content/manifests/$SHA.manifest --quiet
+          ln -sfn releases/$SHA current.new
+          mv -T current.new current
+          echo "GLOBAL_SWAPPED $SHA"
+        REMOTE
+
+  - name: deploy-ru
+    image: bash
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        SHA=$(cat .deploy-sha)
+        KEY=/home/coolswood/infra/github-runner/.ssh/vps_ru_deploy
+        RSYNC_RSH="ssh -i $KEY -o BatchMode=yes"
+        # только tailnet-IP: публичный IPv4 бокс→РФ теряет крупные пакеты
+        rsync -a --delete -e "$RSYNC_RSH" dist/ root@100.100.213.68:/srv/content/releases/$SHA/
+        rsync -a -e "$RSYNC_RSH" dist.manifest root@100.100.213.68:/srv/content/manifests/$SHA.manifest
+        ssh -i "$KEY" -o BatchMode=yes root@100.100.213.68 bash -s -- "$SHA" <<'REMOTE'
+          set -euo pipefail
+          SHA=$1
+          cd /srv/content/releases/$SHA
+          sha256sum -c /srv/content/manifests/$SHA.manifest --quiet
+          ln -sfn releases/$SHA current.new
+          mv -T current.new current
+          echo "RU_SWAPPED $SHA"
+        REMOTE
+
+  # Очистка: 3 свежих релиза на хост (по mtime), манифесты — вслед им.
+  - name: cleanup
+    image: bash
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        ssh -i /home/coolswood/.ssh/mh_global_deploy -o BatchMode=yes root@89.58.1.204 <<'REMOTE'
+          set -euo pipefail
+          cd /srv/content/releases
+          ls -1dt */ 2>/dev/null | tail -n +4 | xargs -r rm -rf --
+          cd ../manifests
+          for m in *.manifest; do
+            [ -e "$m" ] || break
+            [ -d "../releases/${m%.manifest}" ] || rm -f -- "$m"
+          done
+        REMOTE
+        ssh -i /home/coolswood/infra/github-runner/.ssh/vps_ru_deploy -o BatchMode=yes root@100.100.213.68 <<'REMOTE'
+          set -euo pipefail
+          cd /srv/content/releases
+          ls -1dt */ 2>/dev/null | tail -n +4 | xargs -r rm -rf --
+          cd ../manifests
+          for m in *.manifest; do
+            [ -e "$m" ] || break
+            [ -d "../releases/${m%.manifest}" ] || rm -f -- "$m"
+          done
+        REMOTE
+        echo CLEANUP_OK
+
+  # Живая проверка: build-info на обоих контурах отвечает собранным SHA.
+  # RU проверяем по tailnet :80 (публичный путь бокс→РФ деградирован).
+  - name: verify
+    image: bash
+    commands:
+      - |
+        set -euo pipefail
+        SHA=$(cat .deploy-sha)
+        g=$(curl -fsS https://server.mind-health.xyz/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
+        r=$(curl -fsS http://100.100.213.68/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
+        echo "global=$g ru=$r expected=$SHA"
+        [ "$g" = "$SHA" ] && [ "$r" = "$SHA" ]
+        echo VERIFY_OK
