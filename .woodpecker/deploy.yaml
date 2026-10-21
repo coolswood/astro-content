@@ -80,8 +80,11 @@ steps:
           SHA=$1
           cd /srv/content/releases/$SHA
           sha256sum -c /srv/content/manifests/$SHA.manifest --quiet
-          ln -sfn releases/$SHA current.new
-          mv -T current.new current
+          # абсолютные пути: скрипт стоит ВНУТРИ релиза, относительный current
+          # создался бы в каталоге релиза, а настоящий /srv/content/current
+          # остался бы на старом sha (поймано репетицией 2026-10-22)
+          ln -sfn releases/$SHA /srv/content/current.new
+          mv -T /srv/content/current.new /srv/content/current
           echo "GLOBAL_SWAPPED $SHA"
         REMOTE
 
@@ -102,8 +105,11 @@ steps:
           SHA=$1
           cd /srv/content/releases/$SHA
           sha256sum -c /srv/content/manifests/$SHA.manifest --quiet
-          ln -sfn releases/$SHA current.new
-          mv -T current.new current
+          # абсолютные пути: скрипт стоит ВНУТРИ релиза, относительный current
+          # создался бы в каталоге релиза, а настоящий /srv/content/current
+          # остался бы на старом sha (поймано репетицией 2026-10-22)
+          ln -sfn releases/$SHA /srv/content/current.new
+          mv -T /srv/content/current.new /srv/content/current
           echo "RU_SWAPPED $SHA"
         REMOTE
 
@@ -147,5 +153,9 @@ steps:
         g=$(curl -fsS https://server.mind-health.xyz/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
         r=$(curl -fsS http://100.100.213.68/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
         echo "global=$g ru=$r expected=$SHA"
-        [ "$g" = "$SHA" ] && [ "$r" = "$SHA" ]
+        # явный if: `a && b` под set -e не прерывает сценарий при ложном первом операнде
+        if [ "$g" != "$SHA" ] || [ "$r" != "$SHA" ]; then
+          echo "VERIFY_MISMATCH"
+          exit 1
+        fi
         echo VERIFY_OK
