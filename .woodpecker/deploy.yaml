@@ -83,8 +83,14 @@ steps:
           # абсолютные пути: скрипт стоит ВНУТРИ релиза, относительный current
           # создался бы в каталоге релиза, а настоящий /srv/content/current
           # остался бы на старом sha (поймано репетицией 2026-10-22)
-          ln -sfn releases/$SHA /srv/content/current.new
-          mv -T /srv/content/current.new /srv/content/current
+          # switch under a host lock, temp link unique per run: two concurrent
+          # pipelines sharing one current.new swap the site to a wrong SHA /
+          # crash on the missing link (review PR#35)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          NEXT=/srv/content/current.next.$(date +%s%N)
+          ln -sfn releases/$SHA "$NEXT"
+          mv -T "$NEXT" /srv/content/current
           echo "GLOBAL_SWAPPED $SHA"
         REMOTE
 
@@ -108,8 +114,14 @@ steps:
           # абсолютные пути: скрипт стоит ВНУТРИ релиза, относительный current
           # создался бы в каталоге релиза, а настоящий /srv/content/current
           # остался бы на старом sha (поймано репетицией 2026-10-22)
-          ln -sfn releases/$SHA /srv/content/current.new
-          mv -T /srv/content/current.new /srv/content/current
+          # switch under a host lock, temp link unique per run: two concurrent
+          # pipelines sharing one current.new swap the site to a wrong SHA /
+          # crash on the missing link (review PR#35)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          NEXT=/srv/content/current.next.$(date +%s%N)
+          ln -sfn releases/$SHA "$NEXT"
+          mv -T "$NEXT" /srv/content/current
           echo "RU_SWAPPED $SHA"
         REMOTE
 
@@ -122,8 +134,17 @@ steps:
         set -euo pipefail
         ssh -i /home/coolswood/.ssh/mh_global_deploy -o BatchMode=yes root@89.58.1.204 <<'REMOTE'
           set -euo pipefail
+          # prune under the same lock as the swap and never delete the release
+          # `current` points to: rsync -a preserves build-time mtimes, so with
+          # parallel or re-deploys the active release may be the oldest by
+          # mtime and would be pruned, leaving current dangling (review PR#35)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
           cd /srv/content/releases
-          ls -1dt */ 2>/dev/null | tail -n +4 | xargs -r rm -rf --
+          ACTIVE=$(basename "$(readlink /srv/content/current 2>/dev/null)")
+          ls -1dt */ 2>/dev/null | tail -n +4 | while read -r d; do
+            [ "$d" = "$ACTIVE/" ] || rm -rf -- "$d"
+          done
           cd ../manifests
           for m in *.manifest; do
             [ -e "$m" ] || break
@@ -132,8 +153,17 @@ steps:
         REMOTE
         ssh -i /home/coolswood/infra/github-runner/.ssh/vps_ru_deploy -o BatchMode=yes root@100.100.213.68 <<'REMOTE'
           set -euo pipefail
+          # prune under the same lock as the swap and never delete the release
+          # `current` points to: rsync -a preserves build-time mtimes, so with
+          # parallel or re-deploys the active release may be the oldest by
+          # mtime and would be pruned, leaving current dangling (review PR#35)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
           cd /srv/content/releases
-          ls -1dt */ 2>/dev/null | tail -n +4 | xargs -r rm -rf --
+          ACTIVE=$(basename "$(readlink /srv/content/current 2>/dev/null)")
+          ls -1dt */ 2>/dev/null | tail -n +4 | while read -r d; do
+            [ "$d" = "$ACTIVE/" ] || rm -rf -- "$d"
+          done
           cd ../manifests
           for m in *.manifest; do
             [ -e "$m" ] || break
