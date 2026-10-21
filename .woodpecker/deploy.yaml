@@ -5,6 +5,13 @@
 # 100.100.213.68: публичный IPv4 бокс→РФ деградирован — rsync по нему падает)
 # → очистка старых релизов (хранить 3) → проверка build-info на обоих контурах.
 #
+# Оба контура и очистка — одной критической секцией локального flock агента
+# (пайплайны исполняются на одном боксе): параллельные прогоны не могут
+# перемешать порядок переключений и разъехать контуры, а cleanup чужого
+# прогона не удаляет готовящийся релиз. Релиз кладётся в уникальный каталог
+# <sha>.<timestamp> и активируется после проверки манифеста — каталог под
+# current никогда не перезаписывается rsync (review PR#35).
+#
 # Раздача: caddy `handle @content` из /srv/content/current (Caddyfile/compose
 # на хостах; раскладка и откат — /srv/mindhealth/DEPLOY.md на global и
 # /srv/content/README.md на обоих). Секретов НЕ требует: SSH-ключи хостовые
@@ -63,66 +70,66 @@ steps:
         (cd dist && find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum) > dist.manifest
         echo "built $SHA: $(wc -l < dist.manifest) files, $(du -sh dist | cut -f1)"
 
-  # Порядок контуров: global первым (камень дивергенции из задачи переезда).
-  - name: deploy-global
+  # Оба контура одним шагом под локальным flock бокса: секция «global → RU»
+  # одного прогона не перемешивается с чужим прогоном (global A → global B →
+  # RU B → RU A оставляла контуры на разных SHA; verify лишь рапортовал об
+  # ошибке) — review PR#35. Каталог релиза уникален на сборку (RID = SHA +
+  # таймстемп): rsync --delete в releases/$SHA при повторном деплое активного
+  # SHA переписывал бы ЖИВОЙ релиз до проверки манифеста — смесь файлов у
+  # пользователей, полуобновлённый current при обрыве передачи — review PR#35.
+  - name: deploy
     image: bash
     commands:
       - |
         export HOME=/home/coolswood
         set -euo pipefail
         SHA=$(cat .deploy-sha)
+        RID="$SHA.$(date -u +%Y%m%dT%H%M%SZ)"
+        mkdir -p /home/coolswood/.cache
+        exec 8>/home/coolswood/.cache/astro-content-deploy.lock
+        flock -x -w 900 8
+
+        # Порядок контуров: global первым (камень дивергенции из задачи переезда).
         KEY=/home/coolswood/.ssh/mh_global_deploy
         RSYNC_RSH="ssh -i $KEY -o BatchMode=yes"
-        rsync -a --delete -e "$RSYNC_RSH" dist/ root@89.58.1.204:/srv/content/releases/$SHA/
-        rsync -a -e "$RSYNC_RSH" dist.manifest root@89.58.1.204:/srv/content/manifests/$SHA.manifest
-        ssh -i "$KEY" -o BatchMode=yes root@89.58.1.204 bash -s -- "$SHA" <<'REMOTE'
+        rsync -a --delete -e "$RSYNC_RSH" dist/ root@89.58.1.204:/srv/content/releases/$RID/
+        rsync -a -e "$RSYNC_RSH" dist.manifest root@89.58.1.204:/srv/content/manifests/$RID.manifest
+        ssh -i "$KEY" -o BatchMode=yes root@89.58.1.204 bash -s -- "$RID" <<'REMOTE'
           set -euo pipefail
-          SHA=$1
-          cd /srv/content/releases/$SHA
-          sha256sum -c /srv/content/manifests/$SHA.manifest --quiet
+          RID=$1
+          # проверка манифеста И свитч под одним хостовым lock: cleanup не
+          # может втиснуться между проверкой и активацией и оставить current
+          # ссылкой на удалённый каталог (review PR#35)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          cd /srv/content/releases/$RID
+          sha256sum -c /srv/content/manifests/$RID.manifest --quiet
           # абсолютные пути: скрипт стоит ВНУТРИ релиза, относительный current
           # создался бы в каталоге релиза, а настоящий /srv/content/current
           # остался бы на старом sha (поймано репетицией 2026-10-22)
-          # switch under a host lock, temp link unique per run: two concurrent
-          # pipelines sharing one current.new swap the site to a wrong SHA /
-          # crash on the missing link (review PR#35)
-          exec 9>/srv/content/.switch.lock
-          flock -x -w 300 9
           NEXT=/srv/content/current.next.$(date +%s%N)
-          ln -sfn releases/$SHA "$NEXT"
+          ln -sfn releases/$RID "$NEXT"
           mv -T "$NEXT" /srv/content/current
-          echo "GLOBAL_SWAPPED $SHA"
+          echo "GLOBAL_SWAPPED $RID"
         REMOTE
 
-  - name: deploy-ru
-    image: bash
-    commands:
-      - |
-        export HOME=/home/coolswood
-        set -euo pipefail
-        SHA=$(cat .deploy-sha)
+        # RU — только tailnet-IP: публичный IPv4 бокс→РФ теряет крупные пакеты
         KEY=/home/coolswood/infra/github-runner/.ssh/vps_ru_deploy
         RSYNC_RSH="ssh -i $KEY -o BatchMode=yes"
-        # только tailnet-IP: публичный IPv4 бокс→РФ теряет крупные пакеты
-        rsync -a --delete -e "$RSYNC_RSH" dist/ root@100.100.213.68:/srv/content/releases/$SHA/
-        rsync -a -e "$RSYNC_RSH" dist.manifest root@100.100.213.68:/srv/content/manifests/$SHA.manifest
-        ssh -i "$KEY" -o BatchMode=yes root@100.100.213.68 bash -s -- "$SHA" <<'REMOTE'
+        rsync -a --delete -e "$RSYNC_RSH" dist/ root@100.100.213.68:/srv/content/releases/$RID/
+        rsync -a -e "$RSYNC_RSH" dist.manifest root@100.100.213.68:/srv/content/manifests/$RID.manifest
+        ssh -i "$KEY" -o BatchMode=yes root@100.100.213.68 bash -s -- "$RID" <<'REMOTE'
           set -euo pipefail
-          SHA=$1
-          cd /srv/content/releases/$SHA
-          sha256sum -c /srv/content/manifests/$SHA.manifest --quiet
-          # абсолютные пути: скрипт стоит ВНУТРИ релиза, относительный current
-          # создался бы в каталоге релиза, а настоящий /srv/content/current
-          # остался бы на старом sha (поймано репетицией 2026-10-22)
-          # switch under a host lock, temp link unique per run: two concurrent
-          # pipelines sharing one current.new swap the site to a wrong SHA /
-          # crash on the missing link (review PR#35)
+          RID=$1
+          # проверка манифеста И свитч под одним хостовым lock — как на global
           exec 9>/srv/content/.switch.lock
           flock -x -w 300 9
+          cd /srv/content/releases/$RID
+          sha256sum -c /srv/content/manifests/$RID.manifest --quiet
           NEXT=/srv/content/current.next.$(date +%s%N)
-          ln -sfn releases/$SHA "$NEXT"
+          ln -sfn releases/$RID "$NEXT"
           mv -T "$NEXT" /srv/content/current
-          echo "RU_SWAPPED $SHA"
+          echo "RU_SWAPPED $RID"
         REMOTE
 
   # Очистка: 3 свежих релиза на хост (по mtime), манифесты — вслед им.
@@ -132,6 +139,13 @@ steps:
       - |
         export HOME=/home/coolswood
         set -euo pipefail
+        # тот же локальный lock, что и deploy: cleanup параллельного прогона
+        # не удаляет релиз, который другой прогон ещё загружает или уже
+        # проверил, но не активировал (review PR#35); активный релиз сверх
+        # того защищён на хосте под .switch.lock
+        mkdir -p /home/coolswood/.cache
+        exec 8>/home/coolswood/.cache/astro-content-deploy.lock
+        flock -x -w 900 8
         ssh -i /home/coolswood/.ssh/mh_global_deploy -o BatchMode=yes root@89.58.1.204 <<'REMOTE'
           set -euo pipefail
           # prune under the same lock as the swap and never delete the release
