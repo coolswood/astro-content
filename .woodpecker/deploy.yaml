@@ -3,14 +3,16 @@
 # → build-info.json + sha256-манифест → rsync на global (netcup, публичный IPv4)
 # → verify манифеста → атомарный swap current → то же на RU (ТОЛЬКО tailnet
 # 100.100.213.68: публичный IPv4 бокс→РФ деградирован — rsync по нему падает)
-# → очистка старых релизов (хранить 3) → проверка build-info на обоих контурах.
+# → живая проверка build-info на обоих контурах (в той же критической секции)
+# → очистка старых релизов (хранить 3).
 #
-# Оба контура и очистка — одной критической секцией локального flock агента
+# Оба контура, живая проверка и очистка — одной критической секцией
+# локального flock агента
 # (пайплайны исполняются на одном боксе): параллельные прогоны не могут
 # перемешать порядок переключений и разъехать контуры, а cleanup чужого
 # прогона не удаляет готовящийся релиз. Релиз кладётся в уникальный каталог
-# <sha>.<timestamp> и активируется после проверки манифеста — каталог под
-# current никогда не перезаписывается rsync (review PR#35).
+# <sha>.<pipeline>.<timestamp> и активируется после проверки манифеста —
+# каталог под current никогда не перезаписывается rsync (review PR#35).
 #
 # Раздача: caddy `handle @content` из /srv/content/current (Caddyfile/compose
 # на хостах; раскладка и откат — /srv/mindhealth/DEPLOY.md на global и
@@ -73,9 +75,9 @@ steps:
   # Оба контура одним шагом под локальным flock бокса: секция «global → RU»
   # одного прогона не перемешивается с чужим прогоном (global A → global B →
   # RU B → RU A оставляла контуры на разных SHA; verify лишь рапортовал об
-  # ошибке) — review PR#35. Каталог релиза уникален на сборку (RID = SHA +
-  # таймстемп): rsync --delete в releases/$SHA при повторном деплое активного
-  # SHA переписывал бы ЖИВОЙ релиз до проверки манифеста — смесь файлов у
+  # ошибке) — review PR#35. Каталог релиза уникален на прогон (RID = SHA +
+  # номер пайплайна + таймстемп): rsync --delete в releases/$SHA при
+  # повторном деплое активного SHA переписывал бы ЖИВОЙ релиз до проверки манифеста — смесь файлов у
   # пользователей, полуобновлённый current при обрыве передачи — review PR#35.
   - name: deploy
     image: bash
@@ -84,7 +86,13 @@ steps:
         export HOME=/home/coolswood
         set -euo pipefail
         SHA=$(cat .deploy-sha)
-        RID="$SHA.$(date -u +%Y%m%dT%H%M%SZ)"
+        # RID уникален на прогон, а не на секунду: два прогона одного SHA,
+        # дошедшие до deploy одновременно, получили бы одинаковый каталог —
+        # второй rsync --delete переписал бы уже активный релиз до проверки
+        # манифеста (review PR#35)
+        RUN=$(printenv CI_PIPELINE_NUMBER || true)
+        [ -n "$RUN" ] || RUN=manual
+        RID="$SHA.p$RUN.$(date -u +%Y%m%dT%H%M%SZ)"
         mkdir -p /home/coolswood/.cache
         exec 8>/home/coolswood/.cache/astro-content-deploy.lock
         flock -x -w 900 8
@@ -131,6 +139,21 @@ steps:
           mv -T "$NEXT" /srv/content/current
           echo "RU_SWAPPED $RID"
         REMOTE
+
+        # Живая проверка build-info — в той же критической секции, что и
+        # переключение: после освобождения lock чужой прогон успел бы
+        # переключить контуры, и verify ошибочно ронял успешный деплой с
+        # VERIFY_MISMATCH (review PR#35). RU — по tailnet :80 (публичный
+        # путь бокс→РФ деградировал).
+        g=$(curl -fsS https://server.mind-health.xyz/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
+        r=$(curl -fsS http://100.100.213.68/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
+        echo "global=$g ru=$r expected=$SHA"
+        # явный if: `a && b` под set -e не прерывает сценарий при ложном первом операнде
+        if [ "$g" != "$SHA" ] || [ "$r" != "$SHA" ]; then
+          echo "VERIFY_MISMATCH"
+          exit 1
+        fi
+        echo VERIFY_OK
 
   # Очистка: 3 свежих релиза на хост (по mtime), манифесты — вслед им.
   - name: cleanup
@@ -185,21 +208,3 @@ steps:
           done
         REMOTE
         echo CLEANUP_OK
-
-  # Живая проверка: build-info на обоих контурах отвечает собранным SHA.
-  # RU проверяем по tailnet :80 (публичный путь бокс→РФ деградирован).
-  - name: verify
-    image: bash
-    commands:
-      - |
-        set -euo pipefail
-        SHA=$(cat .deploy-sha)
-        g=$(curl -fsS https://server.mind-health.xyz/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
-        r=$(curl -fsS http://100.100.213.68/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
-        echo "global=$g ru=$r expected=$SHA"
-        # явный if: `a && b` под set -e не прерывает сценарий при ложном первом операнде
-        if [ "$g" != "$SHA" ] || [ "$r" != "$SHA" ]; then
-          echo "VERIFY_MISMATCH"
-          exit 1
-        fi
-        echo VERIFY_OK
