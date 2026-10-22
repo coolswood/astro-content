@@ -1,0 +1,295 @@
+# deploy — деплой статики astro-content на оба контура (selfhost с 2026-10-22).
+# Сборка на боксе (node 24 + pnpm, локфайл pnpm — bun.lock в репо игнорируется)
+# → build-info.json + sha256-манифест → rsync+verify манифеста на global
+# (netcup, публичный IPv4) и на RU (ТОЛЬКО tailnet 100.100.213.68: публичный
+# IPv4 бокс→РФ деградирован — rsync по нему падает) — ДО любого переключения
+# → атомарный swap current на global, затем на RU (сбой после свитча global —
+# откат global на прежний релиз, контуры не расходятся)
+# → живая проверка build-info на обоих контурах (в той же критической секции)
+# → очистка старых релизов (хранить 3).
+#
+# Оба контура, живая проверка и очистка — одной критической секцией
+# локального flock агента
+# (пайплайны исполняются на одном боксе): параллельные прогоны не могут
+# перемешать порядок переключений и разъехать контуры, а cleanup чужого
+# прогона не удаляет готовящийся релиз. Релиз кладётся в уникальный каталог
+# <sha>.<pipeline>.<timestamp> и активируется после проверки манифеста —
+# каталог под current никогда не перезаписывается rsync (review PR#35).
+# Гонка сборок: устаревший push-прогон (сборка раннего коммита доросла до
+# деплоя позже свежего) под блокировкой сверяет свой SHA с развёрнутым и
+# уходит без деплоя (review PR#35).
+#
+# Раздача: caddy `handle @content` из /srv/content/current (Caddyfile/compose
+# на хостах; раскладка и откат — /srv/mindhealth/DEPLOY.md на global и
+# /srv/content/README.md на обоих). Секретов НЕ требует: SSH-ключи хостовые
+# (~/.ssh/mh_global_deploy, ~/infra/github-runner/.ssh/vps_ru_deploy), rsync
+# установлен на обоих хостах; HOME агента возвращаем первым действием
+# (isolated-home v3.18).
+#
+# Триггеры: push в main (авто) + manual (ручной прогон/переdepлой ветки).
+# build-info.json в dist — контракт мониторинга синхронности контуров.
+# ⚠️ Доллар-фигурные подстановки в commands не использовать — Woodpecker
+# подставляет их в YAML до запуска (drone/envsubst).
+
+when:
+  - event: push
+    branch: main
+  - event: manual
+
+skip_clone: true
+labels:
+  backend: local
+  lane: services
+
+steps:
+  # Сборка чекаутом точного SHA события (fetch по SHA разрешён на Forgejo):
+  # образы/контент обязаны соответствовать коммиту, а не «текущему main».
+  - name: build
+    image: bash
+    environment:
+      PATH: /home/coolswood/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        SHA=$(printenv CI_COMMIT_SHA || true)
+        URL=https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git
+        git init -q .
+        git remote add origin "$URL"
+        if [ -n "$SHA" ]; then
+          git fetch -q --depth 1 origin "$SHA"
+          git checkout -q FETCH_HEAD
+        else
+          BRANCH=$(printenv CI_COMMIT_BRANCH || true)
+          [ -n "$BRANCH" ] || BRANCH=main
+          git fetch -q --depth 1 origin "$BRANCH"
+          git checkout -q FETCH_HEAD
+          SHA=$(git rev-parse HEAD)
+        fi
+        printf '%s' "$SHA" > .deploy-sha
+        # strict-dep-builds: pnpm 12 в CI (CI=true) падает на проигнорированных
+        # postinstall esbuild/sharp; бинарники приходят optionalDependencies,
+        # скрипты не нужны (детерминизм вывода сверен с Vercel байт-в-байт).
+        pnpm install --frozen-lockfile --config.strict-dep-builds=false
+        pnpm build
+        printf '{"sha":"%s","builtAt":"%s","repo":"astro-content","trigger":"ci"}\n' \
+          "$SHA" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > dist/build-info.json
+        (cd dist && find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum) > dist.manifest
+        echo "built $SHA: $(wc -l < dist.manifest) files, $(du -sh dist | cut -f1)"
+
+  # Оба контура одним шагом под локальным flock бокса: секция «global → RU»
+  # одного прогона не перемешивается с чужим прогоном (global A → global B →
+  # RU B → RU A оставляла контуры на разных SHA; verify лишь рапортовал об
+  # ошибке) — review PR#35. Каталог релиза уникален на прогон (RID = SHA +
+  # номер пайплайна + таймстемп): rsync --delete в releases/$SHA при
+  # повторном деплое активного SHA переписывал бы ЖИВОЙ релиз до проверки манифеста — смесь файлов у
+  # пользователей, полуобновлённый current при обрыве передачи — review PR#35.
+  # Две фазы: (1) rsync+verify манифеста на оба хоста, (2) swap global →
+  # swap RU. Сбой передачи/проверки RU происходит ДО переключений, а сбой
+  # между свитчами откатывает global на прежний релиз — контуры не
+  # расходятся (review PR#35).
+  - name: deploy
+    image: bash
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        SHA=$(cat .deploy-sha)
+        # RID уникален на прогон, а не на секунду: два прогона одного SHA,
+        # дошедшие до deploy одновременно, получили бы одинаковый каталог —
+        # второй rsync --delete переписал бы уже активный релиз до проверки
+        # манифеста (review PR#35)
+        RUN=$(printenv CI_PIPELINE_NUMBER || true)
+        [ -n "$RUN" ] || RUN=manual
+        RID="$SHA.p$RUN.$(date -u +%Y%m%dT%H%M%SZ)"
+        mkdir -p /home/coolswood/.cache
+        exec 8>/home/coolswood/.cache/astro-content-deploy.lock
+        flock -x -w 900 8
+
+        GHOST=root@89.58.1.204
+        GKEY=/home/coolswood/.ssh/mh_global_deploy
+        RUHOST=root@100.100.213.68
+        RKEY=/home/coolswood/infra/github-runner/.ssh/vps_ru_deploy
+        SWAPPED_GLOBAL=0
+        SWAPPED_RU=0
+        PREV_GLOBAL=
+
+        # Откат уже переключённого global, если RU переключиться не смог:
+        # без отката global остался бы на новом релизе, RU — на старом
+        # (review PR#35, «расхождение контуров»). Таргет — прежняя цель
+        # current; при самом первом деплое её нет, откатывать нечего.
+        rollback_global() {
+          if [ "$SWAPPED_GLOBAL" = 1 ] && [ "$SWAPPED_RU" != 1 ] && [ -n "$PREV_GLOBAL" ]; then
+            echo "ROLLBACK_GLOBAL: RU не переключён — global возвращается на $PREV_GLOBAL"
+            ssh -i "$GKEY" -o BatchMode=yes "$GHOST" bash -s -- "$PREV_GLOBAL" <<'REMOTE' || echo "ROLLBACK_GLOBAL_FAILED — контуры проверить вручную"
+          set -euo pipefail
+          PREV=$1
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          NEXT=/srv/content/current.next.$(date +%s%N)
+          ln -sfn "$PREV" "$NEXT"
+          mv -T "$NEXT" /srv/content/current
+          echo "GLOBAL_ROLLED_BACK $PREV"
+        REMOTE
+          fi
+        }
+        trap rollback_global EXIT
+
+        # Гонка сборок (review PR#35, «устаревший деплой»): сборка раннего
+        # коммита может закончиться после деплоя свежего, получить блокировку
+        # позже и перезаписать оба контура старым релизом — SHA-проверка
+        # прогона сравнивает результат со СВОИМ коммитом и подмены не заметит.
+        # Для push-прогонов: если развёрнутый SHA уже содержит наш коммит,
+        # наш устарел — выходим без деплоя. Ручной прогон — намеренный
+        # (пере)деплой, проверка не нужна. Сбой fetch/merge-base или глубина
+        # расхождения >250 коммитов — «не смогли проверить», деплоим как
+        # раньше (fail-open).
+        if [ "$(printenv CI_PIPELINE_EVENT || true)" = push ]; then
+          DEPLOYED=$(ssh -i "$GKEY" -o BatchMode=yes "$GHOST" \
+            'readlink /srv/content/current 2>/dev/null' || true)
+          DEPLOYED=$(basename "$DEPLOYED" 2>/dev/null | cut -d. -f1 || true)
+          if [ -n "$DEPLOYED" ] && [ "$DEPLOYED" != "$SHA" ]; then
+            if git fetch -q --depth 250 origin "$SHA" "$DEPLOYED" 2>/dev/null; then
+              if git merge-base --is-ancestor "$SHA" "$DEPLOYED" 2>/dev/null; then
+                echo "STALE_SKIP: развёрнутый $DEPLOYED уже содержит $SHA — без деплоя"
+                exit 0
+              fi
+            fi
+          fi
+        fi
+
+        # Фаза 1 — доставка и проверка манифеста на ОБОИХ хостах ДО любого
+        # переключения: сбой передачи/проверки RU не оставляет global уже
+        # переключённым (review PR#35). Порядок контуров: global первым
+        # (камень дивергенции из задачи переезда).
+        RSYNC_RSH="ssh -i $GKEY -o BatchMode=yes"
+        rsync -a --delete -e "$RSYNC_RSH" dist/ "$GHOST":/srv/content/releases/$RID/
+        rsync -a -e "$RSYNC_RSH" dist.manifest "$GHOST":/srv/content/manifests/$RID.manifest
+        ssh -i "$GKEY" -o BatchMode=yes "$GHOST" bash -s -- "$RID" <<'REMOTE'
+          set -euo pipefail
+          RID=$1
+          # проверка под тем же хостовым lock, что и свитч: манифест
+          # проверяется до того, как релиз станет чьим-либо current
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          cd /srv/content/releases/$RID
+          sha256sum -c /srv/content/manifests/$RID.manifest --quiet
+          echo "GLOBAL_VERIFIED $RID"
+        REMOTE
+
+        # RU — только tailnet-IP: публичный IPv4 бокс→РФ теряет крупные пакеты
+        RSYNC_RSH="ssh -i $RKEY -o BatchMode=yes"
+        rsync -a --delete -e "$RSYNC_RSH" dist/ "$RUHOST":/srv/content/releases/$RID/
+        rsync -a -e "$RSYNC_RSH" dist.manifest "$RUHOST":/srv/content/manifests/$RID.manifest
+        ssh -i "$RKEY" -o BatchMode=yes "$RUHOST" bash -s -- "$RID" <<'REMOTE'
+          set -euo pipefail
+          RID=$1
+          # проверка под хостовым lock — как на global
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          cd /srv/content/releases/$RID
+          sha256sum -c /srv/content/manifests/$RID.manifest --quiet
+          echo "RU_VERIFIED $RID"
+        REMOTE
+
+        # Фаза 2 — переключение: global, затем RU. Прежняя цель global —
+        # таргет отката для rollback_global.
+        PREV_GLOBAL=$(ssh -i "$GKEY" -o BatchMode=yes "$GHOST" 'readlink /srv/content/current 2>/dev/null' || true)
+        ssh -i "$GKEY" -o BatchMode=yes "$GHOST" bash -s -- "$RID" <<'REMOTE'
+          set -euo pipefail
+          RID=$1
+          # свитч под хостовым lock: cleanup не втиснётся между фазой 1 и
+          # активацией; абсолютные пути: скрипт стоит ВНУТРИ релиза,
+          # относительный current создался бы в каталоге релиза, а настоящий
+          # /srv/content/current остался бы на старом sha (репетиция
+          # 2026-10-22)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          NEXT=/srv/content/current.next.$(date +%s%N)
+          ln -sfn releases/$RID "$NEXT"
+          mv -T "$NEXT" /srv/content/current
+          echo "GLOBAL_SWAPPED $RID"
+        REMOTE
+        SWAPPED_GLOBAL=1
+        ssh -i "$RKEY" -o BatchMode=yes "$RUHOST" bash -s -- "$RID" <<'REMOTE'
+          set -euo pipefail
+          RID=$1
+          # свитч под хостовым lock — как на global; сбой здесь откатит
+          # global через rollback_global
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          NEXT=/srv/content/current.next.$(date +%s%N)
+          ln -sfn releases/$RID "$NEXT"
+          mv -T "$NEXT" /srv/content/current
+          echo "RU_SWAPPED $RID"
+        REMOTE
+        SWAPPED_RU=1
+
+        # Живая проверка build-info — в той же критической секции, что и
+        # переключение: после освобождения lock чужой прогон успел бы
+        # переключить контуры, и verify ошибочно ронял успешный деплой с
+        # VERIFY_MISMATCH (review PR#35). RU — по tailnet :80 (публичный
+        # путь бокс→РФ деградировал).
+        g=$(curl -fsS https://server.mind-health.xyz/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
+        r=$(curl -fsS http://100.100.213.68/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
+        echo "global=$g ru=$r expected=$SHA"
+        # явный if: `a && b` под set -e не прерывает сценарий при ложном первом операнде
+        if [ "$g" != "$SHA" ] || [ "$r" != "$SHA" ]; then
+          echo "VERIFY_MISMATCH"
+          exit 1
+        fi
+        echo VERIFY_OK
+
+  # Очистка: 3 свежих релиза на хост (по mtime), манифесты — вслед им.
+  - name: cleanup
+    image: bash
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        # тот же локальный lock, что и deploy: cleanup параллельного прогона
+        # не удаляет релиз, который другой прогон ещё загружает или уже
+        # проверил, но не активировал (review PR#35); активный релиз сверх
+        # того защищён на хосте под .switch.lock
+        mkdir -p /home/coolswood/.cache
+        exec 8>/home/coolswood/.cache/astro-content-deploy.lock
+        flock -x -w 900 8
+        ssh -i /home/coolswood/.ssh/mh_global_deploy -o BatchMode=yes root@89.58.1.204 <<'REMOTE'
+          set -euo pipefail
+          # prune under the same lock as the swap and never delete the release
+          # `current` points to: rsync -a preserves build-time mtimes, so with
+          # parallel or re-deploys the active release may be the oldest by
+          # mtime and would be pruned, leaving current dangling (review PR#35)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          cd /srv/content/releases
+          ACTIVE=$(basename "$(readlink /srv/content/current 2>/dev/null)")
+          ls -1dt */ 2>/dev/null | tail -n +4 | while read -r d; do
+            [ "$d" = "$ACTIVE/" ] || rm -rf -- "$d"
+          done
+          cd ../manifests
+          for m in *.manifest; do
+            [ -e "$m" ] || break
+            [ -d "../releases/$${m%.manifest}" ] || rm -f -- "$m"
+          done
+        REMOTE
+        ssh -i /home/coolswood/infra/github-runner/.ssh/vps_ru_deploy -o BatchMode=yes root@100.100.213.68 <<'REMOTE'
+          set -euo pipefail
+          # prune under the same lock as the swap and never delete the release
+          # `current` points to: rsync -a preserves build-time mtimes, so with
+          # parallel or re-deploys the active release may be the oldest by
+          # mtime and would be pruned, leaving current dangling (review PR#35)
+          exec 9>/srv/content/.switch.lock
+          flock -x -w 300 9
+          cd /srv/content/releases
+          ACTIVE=$(basename "$(readlink /srv/content/current 2>/dev/null)")
+          ls -1dt */ 2>/dev/null | tail -n +4 | while read -r d; do
+            [ "$d" = "$ACTIVE/" ] || rm -rf -- "$d"
+          done
+          cd ../manifests
+          for m in *.manifest; do
+            [ -e "$m" ] || break
+            [ -d "../releases/$${m%.manifest}" ] || rm -f -- "$m"
+          done
+        REMOTE
+        echo CLEANUP_OK
