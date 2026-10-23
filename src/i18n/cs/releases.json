@@ -1,13 +1,23 @@
 [
   {
+    "version": "5.23.1",
+    "builds": [
+      "1482"
+    ],
+    "notes": [
+      "Opravili jsme výukové příběhy: u snímků bez videa se opět zobrazuje náhled chytrého telefonu se snímkem obrazovky a na telefonech s menšími obrazovkami se již nic neořezává.",
+      "Obrazovka pro copingové kartičky je nyní dostupná ve všech jazycích aplikace."
+    ]
+  },
+  {
     "version": "5.23.0",
     "builds": [
       "1449"
     ],
     "notes": [
-      "Vrácení platby za předplatné se nyní vyřizuje přímo v chatu podpory — nemusíte psát e-mail; během zkušební doby lze zrušení provést během pár kroků.",
-      "Aktualizovali jsme stránky kurzů a seznam všech kurzů; záhlaví vnitřních obrazovek je nyní jednotné podle nového návrhu.",
-      "Obrazovky „myšlenek“ mají nyní teplé pozadí; obsah se při slabém připojení načítá spolehlivěji."
+      "Žádost o vrácení platby za předplatné lze nyní vyřídit přímo v chatu podpory, aniž byste museli psát e-mail; zrušení během zkušební doby probíhá během několika kroků.",
+      "Aktualizovali jsme stránky kurzů a seznam všech kurzů; záhlaví interních obrazovek je nyní podle nového návrhu jednotné.",
+      "Obrazovky pro „Úvahy“ mají nyní teplé pozadí; obsah se při slabém připojení k síti načítá spolehlivěji."
     ]
   },
   {
@@ -16,8 +26,8 @@
       "1305"
     ],
     "notes": [
-      "Přidávání emocí, doporučovací kartičky a PIN kód jsou nyní pro všechny zdarma — k jejich používání již nepotřebujete předplatné.",
-      "Aktualizovali jsme vzhled: ve všech obrazovkách je nová šipka „zpět“, aktualizovaná záhlaví sekcí a obrazovky pro zvuky ke spánku, nové barvy pro příběhy a přehrávač.",
+      "Přidávání emocí, používání doporučovacích kartiček a PIN kód jsou nyní pro všechny zdarma — k těmto funkcím již nepotřebujete předplatné.",
+      "Aktualizovali jsme vzhled: nová šipka „zpět“ na všech obrazovkách, nové záhlaví sekcí a obrazovky pro zvuky pro spánek, nové barvy pro příběhy a přehrávač.",
       "Opravili jsme bílé záblesky při přechodech v tmavém režimu; zrušení automatického prodloužení již neodebere přístup do konce placeného období."
     ]
   },
@@ -185,7 +195,7 @@
       "593"
     ],
     "notes": [
-      "Nyní vyplňování deníku automatických myšlenek připomíná sezení s psychologem. V „Opatrném dialogu“ stačí prostě vlastními slovy popsat vše, co se stalo — asistent vás jemně navede a sám vyplní potřebné kroky deníku. Budete se moci plně soustředit na své vzpomínky, myšlenky a pocity v daný okamžik, aniž byste museli řešit strukturu deníku."
+      "Nyní psaní deníku automatických myšlenek připomíná sezení s psychologem. V „Šetrném dialogu“ stačí prostě svými slovy popsat vše, co se stalo — asistent vás jemně navede a sám vyplní potřebné kroky deníku. Budete se moci plně soustředit na své vzpomínky, myšlenky a pocity z daného okamžiku, aniž byste museli řešit strukturu deníku."
     ]
   },
   {
@@ -224,7 +234,7 @@
       "587"
     ],
     "notes": [
-      "Velká aktualizace AI asistenta! Nyní analýza není jen začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete probrat získané vhledy a věnovat se psychologickým praktikám pod odborným vedením umělé inteligence. A to je jen první krok k úplně nové úrovni podpory!"
+      "Velká aktualizace asistenta s umělou inteligencí! Analýza je teprve začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete probrat získané vhledy a cvičit psychologické techniky pod jemným vedením AI. A to je jen první krok k úplně nové úrovni podpory!"
     ]
   },
   {
@@ -305,7 +315,7 @@
       "574"
     ],
     "notes": [
-      "Pozdravte novou sekci — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, vypořádat se s panikou nebo naopak mobilizovat veškerou energii! ⚡️"
+      "Pozdravte novou sekci v cvičení — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, vypořádat se s panikou nebo naopak mobilizovat veškerou energii! ⚡️"
     ]
   },
   {
@@ -332,7 +342,7 @@
       "570"
     ],
     "notes": [
-      "Skvělé zprávy: rozhodli jsme se, že aplikace bude ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začínáme relaxačními zvuky: časovač pro zastavení je nyní navždy zdarma!"
+      "Skvělá zpráva: rozhodli jsme se udělat aplikaci ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začneme relaxačními zvuky: časovač pro ukončení je nyní navždy zdarma!"
     ]
   },
   {
@@ -356,6 +366,18 @@
   {
     "version": "5.14.3",
     "builds": [
+      "566"
+    ]
+  },
+  {
+    "version": "5.14.2",
+    "builds": [
+      "565"
+    ]
+  },
+  {
+    "version": "5.14.1",
+    "builds": [
       "564"
     ]
   },
@@ -369,18 +391,6 @@
     "version": "5.13.3",
     "builds": [
       "562"
-    ]
-  },
-  {
-    "version": "5.13.2",
-    "builds": [
-      "561"
-    ]
-  },
-  {
-    "version": "5.13.1",
-    "builds": [
-      "560"
     ]
   },
   {

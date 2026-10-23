@@ -1,13 +1,23 @@
 [
   {
+    "version": "5.23.1",
+    "builds": [
+      "1482"
+    ],
+    "notes": [
+      "Fixed onboarding stories: slides without video now correctly show the smartphone mockup with a screenshot, and nothing gets cut off on smaller screens.",
+      "The coping card screen is now available in all app languages."
+    ]
+  },
+  {
     "version": "5.23.0",
     "builds": [
       "1449"
     ],
     "notes": [
-      "Subscription refunds can now be processed directly in the support chat—no need to send an email; canceling your trial is now just a few steps away.",
-      "Updated course pages and the full course list; internal screen headers are now consistent with the new design.",
-      "Reasoning screens now feature a warm background, and content loads more reliably on weak connections."
+      "Subscription refunds can now be processed directly in the support chat—no need to send an email; during the trial period, cancellation is just a few steps away.",
+      "Updated course pages and the full course list; headers for internal screens are now consistent with the design.",
+      "The “Thought Record” screens now feature a warm background; content loads more reliably on weak connections."
     ]
   },
   {
@@ -16,9 +26,9 @@
       "1305"
     ],
     "notes": [
-      "Adding emotions, receiving recommendation cards, and using a PIN code are now free for everyone—a subscription is no longer required.",
-      "Updated the design: a new back chevron on all screens, fresh headers for sections and the sleep sounds screen, and new colors for stories and the player.",
-      "Fixed white flashes when transitioning in dark mode; canceling auto-renewal no longer revokes access before the end of the paid period."
+      "Adding emotions, using recommendation cards, and setting a PIN code is now free for everyone—a subscription is no longer required.",
+      "Updated the design: a new back chevron on all screens, fresh section headers, a new sleep sounds screen, and updated colors for stories and the player.",
+      "Fixed white flashes when transitioning in dark mode; canceling auto-renewal no longer removes access until the end of the paid period."
     ]
   },
   {
@@ -185,7 +195,7 @@
       "593"
     ],
     "notes": [
-      "Filling out your automatic thought journal now feels more like a session with a psychologist. With “Gentle Dialogue,” you can simply describe what happened in your own words—your AI assistant will gently guide you and fill in the necessary steps of the journal for you. This allows you to focus on your memories, thoughts, and feelings in the moment, without being distracted by the journal’s structure."
+      "Filling out your automatic thought journal now feels more like a session with a psychologist. With “Gentle Dialogue,” you can simply describe what happened in your own words—the assistant will gently guide you and fill in the necessary steps of the journal. This allows you to focus on your memories, thoughts, and feelings in the moment, without being distracted by the journal’s structure."
     ]
   },
   {
@@ -224,7 +234,7 @@
       "587"
     ],
     "notes": [
-      "A major update for your AI assistant! Now, Analysis is just the beginning. We’ve added a full interactive dialogue: discuss your insights and work through psychological exercises under the gentle guidance of AI. And this is only the first step toward a whole new level of support!"
+      "A major update to your AI assistant! Analysis is now just the beginning. We’ve added a full interactive dialogue: discuss your insights and work through psychological exercises under the gentle guidance of our AI. And this is only the first step toward a whole new level of support!"
     ]
   },
   {
@@ -305,7 +315,7 @@
       "574"
     ],
     "notes": [
-      "Meet our new exercise section — Breathing Practices! 🧘‍♂️ They’ll help you relieve stress, manage panic, or even boost your energy! ⚡️"
+      "Meet a new section in Exercises — Breathing Practices! 🧘‍♂️ They’ll help you relieve stress, manage panic attacks, or even boost your energy! ⚡️"
     ]
   },
   {
@@ -332,7 +342,7 @@
       "570"
     ],
     "notes": [
-      "Great news: we’ve decided to make the app even more accessible! From today, we’ll be unlocking more Premium features for free use. We’re starting with relaxing sounds: the sleep timer is now free forever!"
+      "Great news: we’ve decided to make the app even more accessible! Starting today, we’ll be unlocking more Premium features for free. We’re starting with relaxing sounds: the sleep timer is now free forever!"
     ]
   },
   {
