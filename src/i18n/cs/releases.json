@@ -1,12 +1,23 @@
 [
   {
+    "version": "5.23.3",
+    "builds": [
+      "1606"
+    ],
+    "notes": [
+      "Škálu hodnocení zlepšení jsme rozdělili do tří úrovní — „Dobře“, „Skvěle“ a „Ideálně“ — a přidali k nim nové ilustrace.",
+      "Obnovili jsme obrazovky přihlášení a onboardingu: teplé pozadí, nové tlačítko pro přihlášení přes Apple a svěží ikony sekcí.",
+      "Opravili jsme potvrzování předplatného: potvrzení nákupu se již při nestabilním připojení neztrácí a aktivuje se automaticky."
+    ]
+  },
+  {
     "version": "5.23.2",
     "builds": [
       "1590"
     ],
     "notes": [
       "Škálu hodnocení zlepšení jsme rozdělili do tří úrovní — „Dobře“, „Skvěle“ a „Ideálně“ — a přidali k nim nové ilustrace.",
-      "Aktualizovali jsme obrazovky přihlášení a onboarding: nové teplé pozadí, nové tlačítko pro přihlášení přes Apple a nové ikony sekcí.",
+      "Aktualizovali jsme obrazovky přihlášení a onboardingu: nové teplé pozadí, nové tlačítko pro přihlášení přes Apple a nové ikony sekcí.",
       "Opravili jsme potvrzování předplatného: potvrzení nákupu se již neztrácí při nestabilním připojení a aktivuje se automaticky."
     ]
   },
@@ -16,8 +27,8 @@
       "1482"
     ],
     "notes": [
-      "Opravili jsme vzdělávací příběhy: snímky bez videa nyní opět zobrazují náhled chytrého telefonu se snímkem obrazovky a na menších obrazovkách se obsah již neokrajovává.",
-      "Obrazovka pro copingové kartičky je nyní dostupná ve všech jazycích aplikace."
+      "Opravili jsme vzdělávací příběhy: u snímků bez videa se znovu zobrazuje náhled chytrého telefonu se snímkem obrazovky a na telefonech s menší obrazovkou se již nic neořezává.",
+      "Obrazovka pro coping je nyní dostupná ve všech jazycích aplikace."
     ]
   },
   {
@@ -26,9 +37,9 @@
       "1449"
     ],
     "notes": [
-      "Žádost o vrácení peněz za předplatné lze nyní vyřídit přímo v chatu podpory, aniž byste museli psát e-mail; zrušení předplatného v zkušební době je nyní otázkou několika kroků.",
+      "Vrácení peněz za předplatné lze nyní vyřídit přímo v chatu podpory, aniž byste museli psát e-mail; zrušení během zkušební doby je nyní otázkou několika kroků.",
       "Aktualizovali jsme stránky kurzů a seznam všech kurzů; záhlaví vnitřních obrazovek má nyní jednotný vzhled.",
-      "Obrazovky pro automatické myšlenky mají nyní teplé pozadí; obsah se při slabém připojení načítá spolehlivěji."
+      "Obrazovky pro „Racionalizaci“ mají nyní teplé pozadí; obsah se při slabém připojení načítá spolehlivěji."
     ]
   },
   {
@@ -37,9 +48,9 @@
       "1305"
     ],
     "notes": [
-      "Přidávání emocí, používání copingových kartiček a PIN kód jsou nyní pro všechny zdarma — k těmto funkcím již nepotřebujete předplatné.",
-      "Aktualizovali jsme design: nové tlačítko „Zpět“ na všech obrazovkách, nové záhlaví sekcí, nové obrazovky pro zvuky ke spánku, nové barvy pro příběhy a přehrávač.",
-      "Opravili jsme bílé záblesky při přechodech v tmavém režimu; zrušení automatického prodloužení neznamená ztrátu přístupu do konce zaplaceného období."
+      "Přidávání emocí, používání doporučovacích kartiček a zadávání PIN kódu je nyní pro všechny zdarma — k těmto funkcím již nepotřebujete předplatné.",
+      "Aktualizovali jsme design: nové tlačítko „zpět“ na všech obrazovkách, nové záhlaví sekcí a obrazovky pro zvuky ke spánku, nové barvy pro příběhy a přehrávač.",
+      "Opravili jsme bílé záblesky při přechodech v tmavém režimu; zrušení automatického prodloužení již neodesírá přístup do konce placeného období."
     ]
   },
   {
@@ -206,7 +217,7 @@
       "593"
     ],
     "notes": [
-      "Nyní se vyplňování deníku automatických myšlenek více podobá sezení s psychologem. V „Šetrném dialogu“ stačí prostě svými slovy vyprávět vše, co se stalo — asistent vás jemně navede a sám vyplní potřebné kroky deníku. Budete se moci soustředit na své vzpomínky, myšlenky a pocity v daný okamžik, aniž byste museli řešit strukturu deníku."
+      "Nyní se vyplňování deníku automatických myšlenek více podobá sezení s psychologem. V „Šetrném dialogu“ stačí prostě vlastními slovy popsat vše, co se stalo — asistent vás jemně navede a sám vyplní potřebné kroky deníku. Budete se moci soustředit na své vzpomínky, myšlenky a pocity v daný okamžik, aniž byste museli řešit strukturu deníku."
     ]
   },
   {
@@ -245,7 +256,7 @@
       "587"
     ],
     "notes": [
-      "Velká aktualizace asistenta s umělou inteligencí! Analýza je nyní jen začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete probírat získané vhledy a věnovat se psychologickým praktikám pod vedením AI. A to je jen první krok k úplně nové úrovni podpory!"
+      "Velká aktualizace asistenta s umělou inteligencí! Analýza je nyní jen začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete probrat získané vhledy a cvičit psychologické praktiky pod odborným vedením AI. A to je jen první krok k úplně nové úrovni podpory!"
     ]
   },
   {
@@ -326,13 +337,7 @@
       "574"
     ],
     "notes": [
-      "Pozdravte novou sekci — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, vypořádat se s panikou nebo naopak mobilizovat veškerou energii! ⚡️"
-    ]
-  },
-  {
-    "version": "5.14.10",
-    "builds": [
-      "573"
+      "Představujeme novou sekci v cvičení — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, vyrovnat se s panikou nebo naopak mobilizovat veškerou energii! ⚡️"
     ]
   },
   {
@@ -351,15 +356,15 @@
     "version": "5.14.7",
     "builds": [
       "570"
-    ],
-    "notes": [
-      "Skvělé zprávy: rozhodli jsme se udělat aplikaci ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začneme relaxačními zvuky: časovač pro zastavení je nyní trvale zdarma!"
     ]
   },
   {
     "version": "5.14.6",
     "builds": [
       "569"
+    ],
+    "notes": [
+      "Skvělé zprávy: rozhodli jsme se udělat aplikaci ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začneme relaxačními zvuky: časovač pro ukončení je nyní navždy zdarma!"
     ]
   },
   {
@@ -408,6 +413,12 @@
     "version": "5.13.2",
     "builds": [
       "561"
+    ]
+  },
+  {
+    "version": "5.13.1",
+    "builds": [
+      "560"
     ]
   },
   {

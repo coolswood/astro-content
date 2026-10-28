@@ -1,13 +1,24 @@
 [
   {
+    "version": "5.23.3",
+    "builds": [
+      "1606"
+    ],
+    "notes": [
+      "A escala de avaliação da recuperação foi dividida em três níveis — «Bom», «Excelente» e «Ideal» — e foram adicionadas novas ilustrações a cada um deles.",
+      "Atualizámos os ecrãs de login e de onboarding: o fundo está mais acolhedor, o botão de acesso com a Apple foi renovado e os ícones das secções foram atualizados.",
+      "Melhorámos a confirmação da subscrição: o comprovativo de compra já não se perde em caso de instabilidade na rede e a subscrição é ativada automaticamente."
+    ]
+  },
+  {
     "version": "5.23.2",
     "builds": [
       "1590"
     ],
     "notes": [
       "A escala de avaliação da recuperação foi dividida em três níveis — «Bom», «Excelente» e «Ideal» — e novas ilustrações foram adicionadas.",
-      "Atualizámos os ecrãs de início de sessão e de onboarding: o fundo está mais acolhedor, o botão de entrada com a Apple foi renovado e os ícones das secções são novos.",
-      "Corrigimos a confirmação da subscrição: o comprovativo de compra já não se perde em redes instáveis e a subscrição é ativada automaticamente."
+      "Atualizámos as telas de login e de onboarding: fundo mais acolhedor, novo botão de entrada com Apple e ícones de secções renovados.",
+      "Corrigimos a confirmação da subscrição: o comprovativo de compra já não se perde em redes instáveis e a ativação agora é automática."
     ]
   },
   {
@@ -16,8 +27,8 @@
       "1482"
     ],
     "notes": [
-      "Corrigimos as histórias de aprendizagem: os diapositivos sem vídeo voltam a mostrar o modelo de smartphone com a captura de ecrã e o conteúdo já não é cortado em ecrãs mais pequenos.",
-      "O ecrã de coping agora está disponível em todos os idiomas da aplicação."
+      "Corrigimos as histórias de aprendizagem: os slides sem vídeo voltam a mostrar o layout do smartphone com a captura de ecrã, e o conteúdo já não é cortado em ecrãs pequenos.",
+      "A tela de enfrentamento agora está disponível em todos os idiomas do aplicativo."
     ]
   },
   {
@@ -26,9 +37,9 @@
       "1449"
     ],
     "notes": [
-      "O reembolso da subscrição pode ser solicitado diretamente no chat de suporte, sem necessidade de enviar um e-mail; o cancelamento durante o período de teste agora é feito em poucos passos.",
-      "Atualizámos as páginas e a lista de todos os cursos; os cabeçalhos dos ecrãs internos foram padronizados.",
-      "Os ecrãs de «Raciocínio» agora têm um fundo mais acolhedor e o conteúdo carrega de forma mais fiável em redes lentas."
+      "O reembolso da subscrição pode ser solicitado diretamente no chat de suporte, sem necessidade de enviar e-mail; o cancelamento durante o período de teste agora é feito em poucos passos.",
+      "Atualizámos as páginas e a lista de cursos; os cabeçalhos das telas internas agora seguem um layout unificado.",
+      "As telas de «Raciocínio» agora têm um fundo mais acolhedor e o conteúdo carrega de forma mais estável em redes lentas."
     ]
   },
   {
@@ -37,9 +48,9 @@
       "1305"
     ],
     "notes": [
-      "Adicionar emoções, usar cartões de recomendação e o código PIN agora são gratuitos para todos — já não é necessária uma subscrição para estas funções.",
-      "Atualizámos o design: novo ícone de «voltar» em todos os ecrãs, novos cabeçalhos de secções e do ecrã de sons para dormir, além de novas cores para as histórias e para o leitor.",
-      "Corrigimos os flashes brancos durante as transições no modo escuro; o cancelamento da renovação automática já não retira o acesso antes do fim do período pago."
+      "Adicionar emoções, cartões de recomendação e o PIN agora é gratuito para todos — já não é necessária subscrição para estas funções.",
+      "Atualizámos o design: novo ícone de «voltar» em todas as telas, cabeçalhos de secções e da tela de sons para dormir renovados, além de novas cores para as histórias e para o player.",
+      "Corrigimos os flashes brancos durante as transições no modo escuro; o cancelamento da renovação automática já não remove o acesso antes do fim do período pago."
     ]
   },
   {
@@ -206,7 +217,7 @@
       "593"
     ],
     "notes": [
-      "Agora, o preenchimento do diário de pensamentos automáticos assemelha-se a uma sessão com um psicólogo. No «Diálogo Acolhedor», basta contar com as suas próprias palavras o que aconteceu — o assistente de IA irá guiá-lo suavemente e preencherá automaticamente os passos necessários do diário. Assim, poderá concentrar-se nas suas memórias, pensamentos e sentimentos daquele momento, sem se distrair com a estrutura do diário."
+      "Agora, o preenchimento do diário de pensamentos automáticos assemelha-se a uma sessão com um psicólogo. No «Diálogo Acolhedor», basta contar com as suas próprias palavras tudo o que aconteceu — o assistente irá guiá-lo suavemente e preencherá automaticamente os passos necessários do diário. Assim, poderá concentrar-se nas suas memórias, pensamentos e sentimentos daquele momento, sem se preocupar com a estrutura do diário."
     ]
   },
   {
@@ -245,7 +256,7 @@
       "587"
     ],
     "notes": [
-      "Grande atualização do assistente de IA! Agora, a Análise é apenas o começo. Adicionámos um diálogo interativo completo: discuta os seus insights e realize práticas psicológicas sob a orientação cuidadosa da inteligência artificial. E este é apenas o primeiro passo para um nível de apoio totalmente novo!"
+      "Grande atualização do assistente de IA! Agora, a Análise é apenas o começo. Adicionámos um diálogo interativo completo: discuta os insights obtidos e realize práticas psicológicas sob a orientação atenciosa da inteligência artificial. E este é apenas o primeiro passo para um nível de apoio totalmente novo!"
     ]
   },
   {
@@ -330,6 +341,12 @@
     ]
   },
   {
+    "version": "5.14.9",
+    "builds": [
+      "572"
+    ]
+  },
+  {
     "version": "5.14.10",
     "builds": [
       "573"
@@ -345,15 +362,15 @@
     "version": "5.14.8",
     "builds": [
       "571"
+    ],
+    "notes": [
+      "Excelentes notícias: decidimos tornar a aplicação ainda mais acessível! A partir de hoje, iremos disponibilizar mais opções premium para uso gratuito. Começamos pelos sons de relaxamento: o temporizador de desligamento agora é gratuito para sempre!"
     ]
   },
   {
     "version": "5.14.7",
     "builds": [
       "570"
-    ],
-    "notes": [
-      "Boas notícias: decidimos tornar a aplicação ainda mais acessível! A partir de hoje, vamos disponibilizar mais opções premium de forma gratuita. Começamos pelos sons de relaxamento: o temporizador de paragem agora é gratuito para sempre!"
     ]
   },
   {
@@ -408,12 +425,6 @@
     "version": "5.13.2",
     "builds": [
       "561"
-    ]
-  },
-  {
-    "version": "5.13.1",
-    "builds": [
-      "560"
     ]
   }
 ]

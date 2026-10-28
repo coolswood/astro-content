@@ -1,11 +1,22 @@
 [
   {
+    "version": "5.23.3",
+    "builds": [
+      "1606"
+    ],
+    "notes": [
+      "We’ve divided the recovery scale into three levels — Good, Excellent, and Perfect — and added new illustrations for each.",
+      "We’ve updated the login and onboarding screens with a warm background, a new Sign in with Apple button, and fresh section icons.",
+      "We’ve fixed subscription confirmation: purchase receipts will no longer be lost during unstable network connections and will now activate automatically."
+    ]
+  },
+  {
     "version": "5.23.2",
     "builds": [
       "1590"
     ],
     "notes": [
-      "The recovery scale has been divided into three levels — “Good”, “Great”, and “Perfect” — and we’ve added new illustrations for them.",
+      "The recovery scale has been divided into three levels—“Good,” “Great,” and “Perfect”—and we’ve added new illustrations for them.",
       "Updated the login and onboarding screens: warm backgrounds, a new Sign in with Apple button, and fresh section icons.",
       "Fixed subscription confirmation: purchase receipts are no longer lost during unstable network connections and will now activate automatically."
     ]
@@ -17,7 +28,7 @@
     ],
     "notes": [
       "Fixed educational stories: slides without video now correctly show a smartphone mockup with a screenshot, and nothing gets cut off on smaller screens.",
-      "The coping screen is now available in all app languages."
+      "The coping card screen is now available in all app languages."
     ]
   },
   {
@@ -26,8 +37,8 @@
       "1449"
     ],
     "notes": [
-      "Subscription refunds can now be processed directly in the support chat — no need to send an email; canceling during the trial period is now just a few steps.",
-      "Updated course pages and the full course list; internal screen headers now follow a unified design.",
+      "Subscription refunds can now be processed directly in the support chat—no need to send an email; canceling during the trial period is now just a few steps.",
+      "Updated course pages and the full course list; internal screen headers now follow a unified layout.",
       "The “Reasoning” screens now feature a warm background, and content loads more reliably on weak connections."
     ]
   },
@@ -37,9 +48,9 @@
       "1305"
     ],
     "notes": [
-      "Adding emotions, receiving recommendation cards, and using a PIN code are now free for everyone — a subscription is no longer required.",
-      "Updated the design: a new “back” chevron on all screens, fresh headers for sections and the sleep sounds screen, and new colors for stories and the player.",
-      "Fixed white flashes when transitioning in Dark Mode; canceling auto-renewal no longer removes access before the end of the paid period."
+      "Adding emotions, using coping cards, and setting a PIN code are now free for everyone—a subscription is no longer required for these features.",
+      "Updated the design: a new “back” chevron on all screens, fresh section headers, a new sleep sounds screen, and updated colors for stories and the player.",
+      "Fixed white flashes during transitions in dark mode; canceling auto-renewal no longer removes access before the end of the paid period."
     ]
   },
   {
@@ -206,7 +217,7 @@
       "593"
     ],
     "notes": [
-      "Filling out your automatic thought journal now feels more like a session with a psychologist. With “Gentle Dialogue,” you can simply describe what happened in your own words — your assistant will gently guide you and fill in the necessary journal steps for you. This lets you focus on your memories, thoughts, and feelings in the moment, without worrying about the journal’s structure."
+      "Filling out your automatic thought journal now feels more like a session with a psychologist. With “Gentle Dialogue,” you can simply describe what happened in your own words—the assistant will gently guide you and fill in the necessary journal steps for you. This lets you focus on your memories, thoughts, and feelings in the moment without worrying about the journal’s structure."
     ]
   },
   {
@@ -245,7 +256,7 @@
       "587"
     ],
     "notes": [
-      "Major AI assistant update! Analysis is now just the beginning. We’ve added a full interactive dialogue: discuss your insights and work through psychological exercises under the gentle guidance of our AI. This is just the first step toward a whole new level of support!"
+      "A major update to the AI assistant! Now, Analysis is just the beginning. We’ve added a full interactive dialogue: discuss your insights and work through psychological exercises under the gentle guidance of our AI. And this is only the first step toward a whole new level of support!"
     ]
   },
   {
