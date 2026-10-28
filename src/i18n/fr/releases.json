@@ -1,13 +1,24 @@
 [
   {
+    "version": "5.23.3",
+    "builds": [
+      "1606"
+    ],
+    "notes": [
+      "L’échelle d’évaluation de la progression a été divisée en trois niveaux — « Bien », « Très bien » et « Idéal » — et accompagnée de nouvelles illustrations.",
+      "Les écrans de connexion et d’onboarding ont été mis à jour : un fond chaleureux, un nouveau bouton de connexion avec Apple et des icônes de section rafraîchies.",
+      "La confirmation de l’abonnement a été corrigée : le reçu d’achat ne se perd plus en cas de connexion instable et s’active désormais automatiquement."
+    ]
+  },
+  {
     "version": "5.23.2",
     "builds": [
       "1590"
     ],
     "notes": [
-      "L’échelle d’évaluation du rétablissement a été divisée en trois niveaux — « Bien », « Très bien » et « Idéal » — et accompagnée de nouvelles illustrations.",
-      "Les écrans de connexion et d’onboarding ont été mis à jour : un fond chaleureux, un nouveau bouton de connexion via Apple et de nouvelles icônes pour les sections.",
-      "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de réseau instable et s’active automatiquement."
+      "L’échelle d’évaluation de la progression a été divisée en trois niveaux — « Bien », « Excellent » et « Idéal » — et accompagnée de nouvelles illustrations.",
+      "Mise à jour des écrans de connexion et d’onboarding : un fond chaleureux, un nouveau bouton de connexion via Apple et des icônes de section rafraîchies.",
+      "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de connexion instable et s’active automatiquement."
     ]
   },
   {
@@ -17,7 +28,7 @@
     ],
     "notes": [
       "Correction des histoires pédagogiques : les diapositives sans vidéo affichent à nouveau une maquette de smartphone avec une capture d’écran, et rien n’est coupé sur les écrans de petite taille.",
-      "L’écran des fiches de coping est désormais disponible dans toutes les langues de l’application."
+      "L’écran de coping est désormais disponible dans toutes les langues de l’application."
     ]
   },
   {
@@ -27,8 +38,8 @@
     ],
     "notes": [
       "Le remboursement de l’abonnement peut désormais se faire directement dans le chat d’assistance, sans avoir à envoyer d’e-mail ; l’annulation durant la période d’essai se fait en quelques étapes.",
-      "Mise à jour des pages de cours et de la liste de tous les cours ; les en-têtes des écrans internes ont été uniformisés.",
-      "Les écrans de « Raisonnement » bénéficient désormais d’un fond chaleureux ; le contenu se charge plus efficacement avec une connexion faible."
+      "Mise à jour des pages de cours et de la liste complète des cours ; les en-têtes des écrans internes ont été uniformisés.",
+      "Les écrans de « Raisonnement » bénéficient désormais d’un fond chaleureux ; le contenu se charge plus efficacement en cas de réseau faible."
     ]
   },
   {
@@ -37,9 +48,9 @@
       "1305"
     ],
     "notes": [
-      "L’ajout d’émotions, les fiches de coping et le code PIN sont désormais gratuits pour tous — l’abonnement n’est plus nécessaire pour ces fonctionnalités.",
-      "Mise à jour du design : nouveau chevron « retour » sur tous les écrans, nouveaux en-têtes de section et pour l’écran des sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur.",
-      "Correction des flashs blancs lors des transitions en mode sombre ; l’annulation du renouvellement automatique ne retire plus l’accès avant la fin de la période payée."
+      "L’ajout d’émotions, les fiches de coping et le code PIN sont désormais gratuits pour tous — l’abonnement n’est plus requis pour ces fonctionnalités.",
+      "Refonte du design : nouveau chevron « retour » sur tous les écrans, nouveaux en-têtes de section et d’écran de sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur.",
+      "Correction des flashs blancs lors des transitions en mode sombre ; l’annulation du renouvellement automatique ne coupe plus l’accès avant la fin de la période payée."
     ]
   },
   {
@@ -206,7 +217,7 @@
       "593"
     ],
     "notes": [
-      "Remplir votre journal des pensées automatiques ressemble désormais à une séance avec un psychologue. Grâce au « Dialogue bienveillant », racontez simplement ce qui s’est passé avec vos propres mots — l’assistant vous guidera avec douceur et remplira lui-même les différentes étapes du journal. Vous pourrez ainsi vous concentrer sur vos souvenirs, vos pensées et vos ressentis, sans vous soucier de la structure du journal."
+      "Désormais, remplir votre journal des pensées automatiques ressemble à une séance avec un psychologue. Grâce au « Dialogue bienveillant », racontez simplement avec vos propres mots ce qui s’est passé — l’assistant vous guidera avec douceur et remplira lui-même les étapes nécessaires du journal. Vous pourrez ainsi vous concentrer sur vos souvenirs, vos pensées et vos ressentis, sans vous soucier de la structure du journal."
     ]
   },
   {
@@ -245,7 +256,7 @@
       "587"
     ],
     "notes": [
-      "Mise à jour majeure de l’assistant IA ! Désormais, l’analyse n’est que le début. Nous avons ajouté un véritable dialogue interactif : discutez de vos prises de conscience et réalisez des exercices de psychologie sous la guidance bienveillante de l’intelligence artificielle. Et ce n’est que la première étape vers un tout nouveau niveau de soutien !"
+      "Mise à jour majeure de l’assistant IA ! L’analyse n’est désormais que le début. Nous avons ajouté un véritable dialogue interactif : discutez de vos prises de conscience et réalisez des exercices de psychologie sous la guidance bienveillante de l’intelligence artificielle. Et ce n’est que la première étape vers un tout nouveau niveau de soutien !"
     ]
   },
   {
@@ -326,19 +337,19 @@
       "574"
     ],
     "notes": [
-      "Découvrez une nouvelle section dans les exercices : les techniques de respiration ! 🧘‍♂️ Elles vous aideront à évacuer le stress, à gérer la panique ou, au contraire, à mobiliser toute votre énergie ! ⚡️"
-    ]
-  },
-  {
-    "version": "5.14.10",
-    "builds": [
-      "573"
+      "Découvrez la nouvelle section d’exercices : les techniques de respiration ! 🧘‍♂️ Elles vous aideront à évacuer le stress, à gérer une attaque de panique ou, au contraire, à mobiliser toute votre énergie ! ⚡️"
     ]
   },
   {
     "version": "5.14.9",
     "builds": [
       "572"
+    ]
+  },
+  {
+    "version": "5.14.8",
+    "builds": [
+      "571"
     ]
   },
   {
@@ -353,7 +364,7 @@
       "569"
     ],
     "notes": [
-      "Excellente nouvelle : nous avons décidé de rendre l’application encore plus accessible ! À partir d’aujourd’hui, nous allons ouvrir davantage d’options premium pour une utilisation gratuite. Commençons par les sons relaxants : le minuteur de fin est désormais gratuit, et ce, pour toujours !"
+      "Excellente nouvelle : nous avons décidé de rendre l’application encore plus accessible ! Dès aujourd’hui, nous allons ouvrir davantage d’options premium pour une utilisation gratuite. Commençons par les sons de relaxation : le minuteur d’arrêt est désormais gratuit, et ce, pour toujours !"
     ]
   },
   {
@@ -402,6 +413,12 @@
     "version": "5.13.2",
     "builds": [
       "561"
+    ]
+  },
+  {
+    "version": "5.13.1",
+    "builds": [
+      "560"
     ]
   },
   {

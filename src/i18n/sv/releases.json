@@ -1,11 +1,22 @@
 [
   {
+    "version": "5.23.3",
+    "builds": [
+      "1606"
+    ],
+    "notes": [
+      "Skalan för att utvärdera återhämtning har delats upp i tre nivåer – ”Bra”, ”Utmärkt” och ”Perfekt” – och vi har lagt till nya illustrationer för varje nivå.",
+      "Vi har uppdaterat inloggningsskärmarna och onboardingen med en varmare bakgrund, en ny knapp för inloggning med Apple samt nya ikoner för olika sektioner.",
+      "Vi har åtgärdat bekräftelsen av prenumerationer: köpkvittot försvinner inte längre vid instabil nätverksanslutning och aktiveras nu automatiskt."
+    ]
+  },
+  {
     "version": "5.23.2",
     "builds": [
       "1590"
     ],
     "notes": [
-      "Återhämtningsskalan har delats upp i tre nivåer – ”Bra”, ”Utmärkt” och ”Perfekt” – och vi har lagt till nya illustrationer för dessa.",
+      "Återhämtningsskalan har delats upp i tre nivåer – ”Bra”, ”Utmärkt” och ”Perfekt” – och vi har lagt till nya illustrationer.",
       "Vi har uppdaterat inloggnings- och onboarding-skärmarna med en varmare bakgrund, en ny knapp för inloggning med Apple samt nya ikoner för olika sektioner.",
       "Vi har åtgärdat bekräftelsen av prenumerationer: köpkvittot försvinner inte längre vid instabil anslutning och aktiveras nu automatiskt."
     ]
@@ -16,8 +27,8 @@
       "1482"
     ],
     "notes": [
-      "Vi har fixat de pedagogiska berättelserna: slides utan video visas nu återigen i smartphone-layout med en skärmdump, och inget innehåll klipps bort på mindre skärmar.",
-      "Copingkort-skärmen finns nu tillgänglig på alla appens språk."
+      "Vi har fixat de pedagogiska berättelserna: slides utan video visas nu återigen i smartphone-layout med en skärmdump, och inget klipps bort på skärmar med mindre utrymme.",
+      "Coping-skärmen finns nu tillgänglig på alla språk."
     ]
   },
   {
@@ -26,7 +37,7 @@
       "1449"
     ],
     "notes": [
-      "Återbetalning för prenumerationer kan nu hanteras direkt i supportchatten utan att du behöver skicka ett mejl; under provperioden kan du avsluta med bara några få steg.",
+      "Återbetalning för prenumeration kan nu hanteras direkt i supportchatten utan att du behöver skicka ett mejl; under provperioden kan du avsluta prenumerationen på bara några steg.",
       "Vi har uppdaterat kurssidorna och kurslistan, samt gett rubrikerna på de interna skärmarna ett mer enhetligt utseende.",
       "Skärmarna för ”Resonemang” har nu en varmare bakgrund, och innehållet laddas mer pålitligt vid svag anslutning."
     ]
@@ -37,8 +48,8 @@
       "1305"
     ],
     "notes": [
-      "Att lägga till känslor, använda copingkort och använda PIN-kod är nu gratis för alla – en prenumeration krävs inte längre för dessa funktioner.",
-      "Vi har uppdaterat designen: en ny ”bakåt”-pil på alla skärmar, fräscha rubriker i sektionerna och på skärmen för sömnljud, samt nya färger för berättelser och spelaren.",
+      "Att lägga till känslor, rekommendationskort och PIN-kod är nu gratis för alla – en prenumeration krävs inte längre för dessa funktioner.",
+      "Vi har uppdaterat designen: en ny ”bakåt”-pil på alla skärmar, nya rubriker för sektioner och sömnljud, samt nya färger för berättelser och spelaren.",
       "Vi har åtgärdat vita blixtar vid övergångar i mörkt läge; att avsluta en automatisk förnyelse innebär inte längre att åtkomsten dras in innan den betalda perioden är slut."
     ]
   },
@@ -206,7 +217,7 @@
       "593"
     ],
     "notes": [
-      "Nu känns det att fylla i dagboken för automatiska tankar mer som ett samtal med en psykolog. Med ”Varsamt samtal” kan du bara berätta med egna ord vad som har hänt – assistenten vägleder dig mjukt och fyller i de nödvändiga stegen i dagboken åt dig. På så sätt kan du fokusera helt på dina minnen, tankar och känslor i stunden, utan att behöva bry dig om dagbokens struktur."
+      "Nu känns det mer som ett samtal med en psykolog när du fyller i dagboken för automatiska tankar. Med ”Varsamt samtal” kan du helt enkelt berätta med egna ord vad som har hänt – assistenten guidar dig mjukt och fyller i de nödvändiga stegen i dagboken åt dig. På så sätt kan du fokusera helt på dina minnen, tankar och känslor i stunden, utan att behöva bry dig om dagbokens struktur."
     ]
   },
   {
@@ -245,7 +256,7 @@
       "587"
     ],
     "notes": [
-      "En stor uppdatering av AI-assistenten! Nu är analysen bara början. Vi har lagt till en fullständig interaktiv dialog: diskutera dina insikter och genomför psykologiska övningar under AI-assistentens varsamma vägledning. Och detta är bara det första steget mot en helt ny nivå av stöd!"
+      "Stor uppdatering av AI-assistenten! Nu är analysen bara början. Vi har lagt till en fullständig interaktiv dialog: diskutera dina insikter och genomför psykologiska övningar under varsam vägledning av AI. Och detta är bara första steget mot en helt ny nivå av stöd!"
     ]
   },
   {
@@ -326,7 +337,7 @@
       "574"
     ],
     "notes": [
-      "Möt vår nya sektion under övningar – andningsövningar! 🧘‍♂️ De hjälper dig att släppa stress, hantera panik eller tvärtom, samla all din energi! ⚡️"
+      "Möt vår nya sektion under övningar – andningsövningar! 🧘‍♂️ De hjälper dig att minska stress, hantera panik eller tvärtom, mobilisera all din energi! ⚡️"
     ]
   },
   {
@@ -353,7 +364,7 @@
       "570"
     ],
     "notes": [
-      "Nya nyheter: vi har beslutat att göra appen ännu mer tillgänglig! Från och med idag låser vi upp fler premiumfunktioner för gratis användning. Vi börjar med avkopplande ljud: nu är sleep timer gratis för alltid!"
+      "Bra nyheter: vi har bestämt oss för att göra appen ännu mer tillgänglig! Från och med idag kommer vi att låsa upp fler premiumfunktioner för gratis användning. Vi börjar med avkopplande ljud: nu är sleep timer gratis för alltid!"
     ]
   },
   {
