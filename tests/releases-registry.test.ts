@@ -12,38 +12,67 @@ import { join } from 'node:path';
 
 const i18nDir = join(import.meta.dir, '..', 'src', 'i18n');
 
-const langs = readdirSync(i18nDir).filter(
-  (lang) => existsSync(join(i18nDir, lang, 'releases.json')),
-);
+// Все каталоги языков, а не только те, где реестр уже есть: отсутствие
+// releases.json у нового языка — провал теста, а не молчаливый пропуск.
+const langs = readdirSync(i18nDir, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name);
+
+/** Ошибки одной записи реестра: пустой список = запись корректна. */
+function entryProblems(entry: unknown): string[] {
+  if (typeof entry !== 'object' || entry === null) {
+    return ['запись не объект'];
+  }
+  const problems: string[] = [];
+  const { version, builds } = entry as Record<string, unknown>;
+  if (typeof version !== 'string' || !/^\d+\.\d+\.\d+$/.test(version)) {
+    problems.push('version не semver');
+  }
+  if (!Array.isArray(builds)) {
+    problems.push('builds не массив');
+  }
+  return problems;
+}
 
 describe('releases registry (src/i18n/<lang>/releases.json)', () => {
   test('файл реестра существует для каждого языка', () => {
+    const missing = langs.filter(
+      (lang) => !existsSync(join(i18nDir, lang, 'releases.json')),
+    );
+    expect(missing).toEqual([]);
     expect(langs.length).toBeGreaterThanOrEqual(19);
   });
 
   for (const lang of langs) {
     describe(lang, () => {
-      const raw = readFileSync(join(i18nDir, lang, 'releases.json'), 'utf8');
-      const data: unknown = JSON.parse(raw);
+      const registryPath = join(i18nDir, lang, 'releases.json');
+      // Отсутствие файла роняет тест выше; null здесь — чтобы сборка
+      // набора не падала исключением до запуска тестов.
+      const data: unknown = existsSync(registryPath)
+        ? JSON.parse(readFileSync(registryPath, 'utf8'))
+        : null;
 
       test('корень — массив записей', () => {
         expect(Array.isArray(data)).toBe(true);
       });
 
-      const entries = (data as Array<Record<string, unknown>>).filter(
-        (entry) => typeof entry === 'object' && entry !== null,
-      );
+      // Проверяем каждый элемент исходного массива: null и примитивы
+      // отклоняются, а не молча вырезаются фильтром.
+      const entries = Array.isArray(data) ? (data as unknown[]) : [];
 
-      test('у каждой записи есть version (semver) и builds (массив)', () => {
-        for (const entry of entries) {
-          expect(typeof entry['version']).toBe('string');
-          expect(String(entry['version'])).toMatch(/^\d+\.\d+\.\d+$/);
-          expect(Array.isArray(entry['builds'])).toBe(true);
-        }
+      test('каждая запись — объект с version (semver) и builds (массив)', () => {
+        entries.forEach((entry, index) => {
+          const problems = entryProblems(entry);
+          expect(problems, `запись #${index}: ${problems.join(', ')}`).toEqual(
+            [],
+          );
+        });
       });
 
       test('версии уникальны — дубль роняет парсер сервера', () => {
-        const versions = entries.map((entry) => String(entry['version']));
+        const versions = entries
+          .filter((entry) => entryProblems(entry).length === 0)
+          .map((entry) => (entry as Record<string, unknown>)['version']);
         const dupes = versions.filter(
           (version, index) => versions.indexOf(version) !== index,
         );
@@ -51,4 +80,15 @@ describe('releases registry (src/i18n/<lang>/releases.json)', () => {
       });
     });
   }
+
+  describe('валидация записей (фикстуры)', () => {
+    test('null и примитивы отклоняются, корректная запись — проходит', () => {
+      for (const invalid of [null, 'invalid', 42, {}]) {
+        expect(entryProblems(invalid).length).toBeGreaterThan(0);
+      }
+      expect(entryProblems({ version: '1.2.3', builds: ['1590'] })).toEqual(
+        [],
+      );
+    });
+  });
 });
