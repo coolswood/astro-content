@@ -1,12 +1,23 @@
 [
   {
+    "version": "5.23.2",
+    "builds": [
+      "1590"
+    ],
+    "notes": [
+      "L’échelle d’évaluation du rétablissement a été divisée en trois niveaux — « Bien », « Très bien » et « Idéal » — et accompagnée de nouvelles illustrations.",
+      "Les écrans de connexion et d’onboarding ont été mis à jour : un fond chaleureux, un nouveau bouton de connexion via Apple et de nouvelles icônes pour les sections.",
+      "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de réseau instable et s’active automatiquement."
+    ]
+  },
+  {
     "version": "5.23.1",
     "builds": [
       "1482"
     ],
     "notes": [
       "Correction des histoires pédagogiques : les diapositives sans vidéo affichent à nouveau une maquette de smartphone avec une capture d’écran, et rien n’est coupé sur les écrans de petite taille.",
-      "L’écran de coping est désormais disponible dans toutes les langues de l’application."
+      "L’écran des fiches de coping est désormais disponible dans toutes les langues de l’application."
     ]
   },
   {
@@ -15,9 +26,9 @@
       "1449"
     ],
     "notes": [
-      "Le remboursement de l’abonnement peut désormais s’effectuer directement dans le chat d’assistance, sans avoir à envoyer d’e-mail ; l’annulation durant la période d’essai se fait en quelques étapes seulement.",
-      "Mise à jour des pages de cours et de la liste complète des cours ; les en-têtes des écrans internes ont été uniformisés selon la maquette.",
-      "Les écrans de « Raisonnement » bénéficient désormais d’un fond chaleureux ; le contenu se charge plus efficacement en cas de connexion faible."
+      "Le remboursement de l’abonnement peut désormais se faire directement dans le chat d’assistance, sans avoir à envoyer d’e-mail ; l’annulation durant la période d’essai se fait en quelques étapes.",
+      "Mise à jour des pages de cours et de la liste de tous les cours ; les en-têtes des écrans internes ont été uniformisés.",
+      "Les écrans de « Raisonnement » bénéficient désormais d’un fond chaleureux ; le contenu se charge plus efficacement avec une connexion faible."
     ]
   },
   {
@@ -27,8 +38,8 @@
     ],
     "notes": [
       "L’ajout d’émotions, les fiches de coping et le code PIN sont désormais gratuits pour tous — l’abonnement n’est plus nécessaire pour ces fonctionnalités.",
-      "Refonte du design : nouveau chevron « retour » sur tous les écrans, nouveaux en-têtes pour les sections et l’écran des sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur.",
-      "Correction des flashs blancs lors des transitions en mode sombre ; l’annulation du renouvellement automatique ne coupe plus l’accès avant la fin de la période payée."
+      "Mise à jour du design : nouveau chevron « retour » sur tous les écrans, nouveaux en-têtes de section et pour l’écran des sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur.",
+      "Correction des flashs blancs lors des transitions en mode sombre ; l’annulation du renouvellement automatique ne retire plus l’accès avant la fin de la période payée."
     ]
   },
   {
@@ -195,7 +206,7 @@
       "593"
     ],
     "notes": [
-      "Grâce au « Dialogue bienveillant », racontez simplement ce qui s’est passé avec vos propres mots — l’assistant vous guidera avec douceur et remplira lui-même les différentes étapes du journal. Vous pourrez ainsi vous concentrer sur vos souvenirs, vos pensées et vos ressentis, sans vous soucier de la structure du journal."
+      "Remplir votre journal des pensées automatiques ressemble désormais à une séance avec un psychologue. Grâce au « Dialogue bienveillant », racontez simplement ce qui s’est passé avec vos propres mots — l’assistant vous guidera avec douceur et remplira lui-même les différentes étapes du journal. Vous pourrez ainsi vous concentrer sur vos souvenirs, vos pensées et vos ressentis, sans vous soucier de la structure du journal."
     ]
   },
   {
@@ -315,7 +326,7 @@
       "574"
     ],
     "notes": [
-      "Découvrez la nouvelle section d’exercices : les techniques de respiration ! 🧘‍♂️ Elles vous aideront à évacuer le stress, à gérer une attaque de panique ou, au contraire, à mobiliser toute votre énergie ! ⚡️"
+      "Découvrez une nouvelle section dans les exercices : les techniques de respiration ! 🧘‍♂️ Elles vous aideront à évacuer le stress, à gérer la panique ou, au contraire, à mobiliser toute votre énergie ! ⚡️"
     ]
   },
   {
@@ -331,24 +342,18 @@
     ]
   },
   {
-    "version": "5.14.8",
-    "builds": [
-      "571"
-    ]
-  },
-  {
     "version": "5.14.7",
     "builds": [
       "570"
-    ],
-    "notes": [
-      "Excellente nouvelle : nous avons décidé de rendre l’application encore plus accessible ! À partir d’aujourd’hui, nous ouvrons davantage d’options premium pour une utilisation gratuite. Commençons par les sons de relaxation : le minuteur de mise en veille est désormais gratuit, et ce, pour toujours !"
     ]
   },
   {
     "version": "5.14.6",
     "builds": [
       "569"
+    ],
+    "notes": [
+      "Excellente nouvelle : nous avons décidé de rendre l’application encore plus accessible ! À partir d’aujourd’hui, nous allons ouvrir davantage d’options premium pour une utilisation gratuite. Commençons par les sons relaxants : le minuteur de fin est désormais gratuit, et ce, pour toujours !"
     ]
   },
   {
@@ -397,6 +402,12 @@
     "version": "5.13.2",
     "builds": [
       "561"
+    ]
+  },
+  {
+    "version": "5.13.1",
+    "builds": [
+      "560"
     ]
   },
   {

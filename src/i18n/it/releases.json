@@ -1,11 +1,22 @@
 [
   {
+    "version": "5.23.2",
+    "builds": [
+      "1590"
+    ],
+    "notes": [
+      "La scala di valutazione del recupero è stata suddivisa in tre livelli — «Bene», «Ottimo» e «Ideale» — e sono state aggiunte nuove illustrazioni.",
+      "Aggiornati gli schermi di accesso e di onboarding: sfondo caldo, nuovo pulsante di accesso con Apple e nuove icone per le sezioni.",
+      "Risolto il problema della conferma dell’abbonamento: la ricevuta d’acquisto non va più persa in caso di rete instabile e si attiva automaticamente."
+    ]
+  },
+  {
     "version": "5.23.1",
     "builds": [
       "1482"
     ],
     "notes": [
-      "Riparati le storie didattiche: le slide senza video mostrano nuovamente il mockup dello smartphone con lo screenshot e il contenuto non viene tagliato sugli schermi più piccoli.",
+      "Risolto il problema delle storie didattiche: le slide senza video mostrano nuovamente il mockup dello smartphone con lo screenshot e su schermi piccoli nulla viene tagliato.",
       "La schermata di coping è ora disponibile in tutte le lingue dell’app."
     ]
   },
@@ -16,8 +27,8 @@
     ],
     "notes": [
       "Il rimborso dell’abbonamento può essere richiesto direttamente in chat con l’assistenza, senza dover inviare un’e-mail; durante il periodo di prova, l’annullamento avviene in pochi passaggi.",
-      "Aggiornate le pagine dei corsi e l’elenco completo dei corsi; le intestazioni delle schermate interne sono state uniformate secondo il nuovo layout.",
-      "Le schermate di «Ragionamenti» presentano ora uno sfondo dai toni caldi; il caricamento dei contenuti è più stabile anche con una connessione debole."
+      "Aggiornate le pagine dei corsi e l’elenco completo dei corsi; l’intestazione degli schermi interni è stata uniformata nel layout.",
+      "Gli schermi dei «Ragionamenti» hanno ora uno sfondo caldo; il caricamento dei contenuti è più stabile anche con una connessione debole."
     ]
   },
   {
@@ -26,9 +37,9 @@
       "1305"
     ],
     "notes": [
-      "L’aggiunta di emozioni, le schede di coping consigliate e il codice PIN sono ora gratuiti per tutti: non è più necessario l’abbonamento per queste funzioni.",
-      "Aggiornato il design: nuova icona «indietro» in tutte le schermate, nuove intestazioni per le sezioni e per la schermata dei suoni per il sonno, nuovi colori per le storie e per il player.",
-      "Riparati i lampi bianchi durante le transizioni in modalità scura; l’annullamento del rinnovo automatico non interrompe più l’accesso prima della fine del periodo già pagato."
+      "L’aggiunta delle emozioni, le schede di coping e il codice PIN sono ora gratuiti per tutti — non è più necessario l’abbonamento per queste funzioni.",
+      "Aggiornato il design: nuova freccia «indietro» in tutti gli schermi, nuove intestazioni per le sezioni e per la schermata dei suoni per dormire, nuovi colori per le storie e per il player.",
+      "Risolto il problema dei lampi bianchi durante le transizioni in modalità scura; l’annullamento del rinnovo automatico non rimuove più l’accesso prima della fine del periodo già pagato."
     ]
   },
   {
@@ -195,7 +206,7 @@
       "593"
     ],
     "notes": [
-      "Ora la compilazione del diario dei pensieri automatici somiglia di più a una sessione con uno psicologo. Con il «Dialogo premuroso», basta raccontare a parole tutto ciò che è accaduto: l’assistente La guiderà con dolcezza e compilerà automaticamente le fasi necessarie del diario. Potrà così concentrarsi sui Suoi ricordi, pensieri ed emozioni del momento, senza dover prestare attenzione alla struttura del diario."
+      "Ora scrivere nel diario dei pensieri automatici assomiglia di più a una sessione con uno psicologo. Con il «Dialogo empatico», basta raccontare a parole tutto ciò che è accaduto: l’assistente La guiderà con dolcezza e compilerà automaticamente le fasi necessarie del diario. Potrà così concentrarsi sui Suoi ricordi, pensieri ed emozioni di quel momento, senza doversi preoccupare della struttura del diario."
     ]
   },
   {
@@ -234,7 +245,7 @@
       "587"
     ],
     "notes": [
-      "Grande aggiornamento dell’assistente con intelligenza artificiale! Ora l’analisi è solo l’inizio. Abbiamo introdotto un vero dialogo interattivo: può discutere gli insight ottenuti e svolgere pratiche psicologiche sotto la guida attenta dell’intelligenza artificiale. E questo è solo il primo passo verso un livello di sostegno completamente nuovo!"
+      "Un grande aggiornamento per l’assistente IA! Ora l’Analisi è solo l’inizio. Abbiamo aggiunto un vero dialogo interattivo: discuta gli insight ottenuti e svolga pratiche psicologiche sotto la guida attenta dell’intelligenza artificiale. E questo è solo il primo passo verso un livello di supporto completamente nuovo!"
     ]
   },
   {
@@ -315,7 +326,7 @@
       "574"
     ],
     "notes": [
-      "Scoprite la nuova sezione degli esercizi: «Pratiche di respirazione»! 🧘‍♂️ Aiuteranno a ridurre lo stress, gestire gli attacchi di panico o, al contrario, a mobilitare tutta la Sua energia! ⚡️"
+      "Aiuteranno ad allevare lo stress, gestire l’ansia o, al contrario, a mobilitare tutta la Sua energia! ⚡️"
     ]
   },
   {
@@ -342,7 +353,7 @@
       "570"
     ],
     "notes": [
-      "Ottime notizie: abbiamo deciso di rendere l’app ancora più accessibile! Da oggi renderemo disponibili gratuitamente più opzioni premium. Iniziamo dai suoni rilassanti: il timer di stop è diventato gratuito per sempre!"
+      "Grandi notizie: abbiamo deciso di rendere l’app ancora più accessibile! Da oggi offriremo più opzioni premium gratuitamente. Iniziamo dai suoni rilassanti: il timer di stop è ora gratuito per sempre!"
     ]
   },
   {
