@@ -1,12 +1,23 @@
 [
   {
+    "version": "5.23.2",
+    "builds": [
+      "1590"
+    ],
+    "notes": [
+      "İyileşme değerlendirme ölçeği \"İyi\", \"Harika\" ve \"Mükemmel\" olmak üzere üç seviyeye ayrıldı ve bunlara yeni illüstrasyonlar eklendi.",
+      "Giriş ve onboarding ekranları güncellendi: daha sıcak bir arka plan, yeni Apple ile giriş butonu ve bölümler için yeni simgeler eklendi.",
+      "Abonelik onaylama sorunu giderildi: Satın alma makbuzu artık istikrarsız ağ bağlantılarında kaybolmuyor ve abonelik otomatik olarak etkinleşiyor."
+    ]
+  },
+  {
     "version": "5.23.1",
     "builds": [
       "1482"
     ],
     "notes": [
-      "Eğitici hikayeler düzeltildi: videosuz slaytlar artık tekrar akıllı telefon maketi ve ekran görüntüsü gösteriyor ve düşük ekranlı cihazlarda içerik kesilmiyor.",
-      "Baş etme ekranı artık uygulamanın tüm dillerinde mevcut."
+      "Eğitici hikayelerdeki hatalar düzeltildi: Videosuz slaytlar artık akıllı telefon maketini ve ekran görüntüsünü tekrar gösteriyor ve küçük ekranlarda içerik kesilmiyor.",
+      "Baş etme kartları ekranı artık uygulamanın tüm dillerinde mevcut."
     ]
   },
   {
@@ -15,9 +26,9 @@
       "1449"
     ],
     "notes": [
-      "Abonelik iadesi artık destek ekibine e-posta göndermeye gerek kalmadan doğrudan destek sohbetinden yapılabiliyor; deneme süresinde iptal işlemi ise birkaç adımda tamamlanabiliyor.",
-      "Kurs sayfaları ve tüm kursların listesi güncellendi; iç ekranların üst kısımları tasarım standartlarına göre tek tip hale getirildi.",
-      "Muhakeme ekranları artık daha sıcak bir arka plana sahip; içerik zayıf ağ bağlantılarında artık daha güvenilir bir şekilde yükleniyor."
+      "Abonelik iadesi artık destek ekibine e-posta göndermeye gerek kalmadan doğrudan destek sohbetinden yapılabiliyor; deneme süresinde iptal işlemi ise sadece birkaç adım sürüyor.",
+      "Kurs sayfaları ve tüm kursların listesi güncellendi; iç ekranların üst kısımları tasarım açısından tek tip hale getirildi.",
+      "Akıl yürütme ekranları artık daha sıcak bir arka plana sahip; içerik zayıf ağ bağlantılarında daha güvenilir bir şekilde yükleniyor."
     ]
   },
   {
@@ -27,8 +38,8 @@
     ],
     "notes": [
       "Duygu ekleme, öneri kartları ve PIN kodu artık herkes için ücretsiz; bu özellikler için artık abonelik gerekmiyor.",
-      "Tasarım güncellendi: tüm ekranlarda yeni bir \"geri\" oku, bölümler ve uyku sesleri ekranı için yeni başlıklar, hikayeler ve oynatıcı için yeni renkler eklendi.",
-      "Karanlık mod geçişlerinde oluşan beyaz parlamalar düzeltildi; otomatik yenilemeyi iptal etmek artık ödenmiş dönemin sonuna kadar erişimi engellemiyor."
+      "Tasarım güncellendi: Tüm ekranlarda yeni bir \"geri\" simgesi, bölümler ve uyku sesleri ekranı için yeni başlıklar, hikayeler ve oynatıcı için yeni renkler eklendi.",
+      "Karanlık mod geçişlerinde oluşan beyaz parlamalar düzeltildi; otomatik yenilemenin iptal edilmesi artık ödenmiş dönemin sonuna kadar erişimi engellemiyor."
     ]
   },
   {
@@ -195,7 +206,7 @@
       "593"
     ],
     "notes": [
-      "Artık otomatik düşünce günlüğü tutmak, bir psikologla yapılan seansa daha çok benziyor. \"Şefkatli Diyalog\" ile yaşadıklarınızı sadece kendi kelimelerinizle anlatmanız yeterli; yapay zekâ asistanınız size nazikçe rehberlik edecek ve günlüğün gerekli adımlarını sizin yerinize dolduracaktır. Böylece günlüğün yapısına takılmadan, sadece o anki anılarınıza, düşüncelerinize ve duygularınıza odaklanabileceksiniz."
+      "Artık otomatik düşünce günlüğü tutmak, bir psikologla görüşme yapmaya daha çok benziyor. \"Şefkatli Diyalog\" ile yaşadıklarınızı sadece kendi kelimelerinizle anlatmanız yeterli; asistanınız size nazikçe rehberlik edecek ve günlüğün gerekli adımlarını sizin yerinize dolduracaktır. Böylece günlüğün yapısına takılmadan, o anki anılarınıza, düşüncelerinize ve duygularınıza odaklanabileceksiniz."
     ]
   },
   {
@@ -234,7 +245,7 @@
       "587"
     ],
     "notes": [
-      "Yapay zekâ asistanında büyük güncelleme! Artık Analiz sadece bir başlangıç. Tam kapsamlı etkileşimli bir diyalog ekledik: elde ettiğiniz içgörüleri tartışabilir ve yapay zekânın nazik rehberliği eşliğinde psikolojik pratikler yapabilirsiniz. Ve bu, tamamen yeni bir destek seviyesine giden yolun sadece ilk adımı!"
+      "Yapay zekâ asistanında büyük güncelleme! Artık Analiz sadece bir başlangıç. Tam kapsamlı etkileşimli bir diyalog ekledik: elde edilen içgörüleri tartışabilir ve yapay zekânın hassas rehberliği eşliğinde psikolojik uygulamalar gerçekleştirebilirsiniz. Ve bu, destek konusunda tamamen yeni bir seviyeye geçişteki ilk adım!"
     ]
   },
   {
@@ -315,7 +326,7 @@
       "574"
     ],
     "notes": [
-      "Egzersizlerde yeni bir bölümle tanışın: Nefes Çalışmaları! 🧘‍♂️ Stresi azaltmanıza, panikle baş etmenize veya tam tersine tüm enerjinizi toplamanıza yardımcı olacaklar! ⚡️"
+      "Egzersizlerde yeni bir bölümle tanışın — Nefes Çalışmaları! 🧘‍♂️ Stresi azaltmaya, panikle baş etmeye veya tam tersine tüm enerjinizi toplamanıza yardımcı olacaklar! ⚡️"
     ]
   },
   {
@@ -342,7 +353,7 @@
       "570"
     ],
     "notes": [
-      "Harika haberler: Uygulamayı daha erişilebilir kılmaya karar verdik! Bugünden itibaren daha fazla premium özelliği ücretsiz kullanımınıza açıyoruz. İlk olarak rahatlatıcı seslerle başlıyoruz: Uyku zamanlayıcısı artık sonsuza dek ücretsiz!"
+      "Harika haberler: Uygulamayı daha erişilebilir kılmaya karar verdik! Bugünden itibaren daha fazla premium özelliği ücretsiz kullanıma açıyoruz. Rahatlatıcı seslerle başlıyoruz: Uyku zamanlayıcısı artık tamamen ücretsiz!"
     ]
   },
   {
