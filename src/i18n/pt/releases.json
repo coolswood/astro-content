@@ -1,13 +1,34 @@
 [
   {
+    "version": "5.24.0",
+    "builds": [
+      "1779"
+    ],
+    "notes": [
+      "O tema claro agora faz parte da paleta de cores quentes do novo design.",
+      "Os widgets de sequência de dias na tela inicial foram totalmente reformulados: layout elegante e contagem de sequência (streak) precisa.",
+      "Melhoramos o diário: edições rápidas e adição de fotos não causam mais falhas."
+    ]
+  },
+  {
+    "version": "5.23.4",
+    "builds": [
+      "1621"
+    ],
+    "notes": [
+      "Corrigimos o encerramento inesperado ao abrir o app no iOS 15–17.",
+      "Restabelecemos o login via Apple e as notificações push."
+    ]
+  },
+  {
     "version": "5.23.3",
     "builds": [
       "1611"
     ],
     "notes": [
-      "A escala de avaliação da recuperação foi dividida em três níveis — «Bom», «Excelente» e «Ideal» — e foram adicionadas novas ilustrações a cada um deles.",
-      "Atualizámos os ecrãs de login e de onboarding: o fundo está mais acolhedor, o botão de acesso com a Apple foi renovado e os ícones das secções foram atualizados.",
-      "Melhorámos a confirmação da subscrição: o comprovativo de compra já não se perde em caso de instabilidade na rede e a subscrição é ativada automaticamente."
+      "A escala de avaliação da recuperação foi dividida em três níveis — \"Bom\", \"Excelente\" e \"Ideal\" — e novas ilustrações foram adicionadas.",
+      "Atualizamos as telas de login e onboarding: fundo mais acolhedor, novo botão de login via Apple e novos ícones para as seções.",
+      "Corrigimos a confirmação da assinatura: o comprovante de compra não é mais perdido em redes instáveis e é ativado automaticamente."
     ]
   },
   {
@@ -16,9 +37,9 @@
       "1590"
     ],
     "notes": [
-      "A escala de avaliação da recuperação foi dividida em três níveis — «Bom», «Excelente» e «Ideal» — e novas ilustrações foram adicionadas.",
-      "Atualizámos as telas de login e de onboarding: fundo mais acolhedor, novo botão de entrada com Apple e ícones de secções renovados.",
-      "Corrigimos a confirmação da subscrição: o comprovativo de compra já não se perde em redes instáveis e a ativação agora é automática."
+      "A escala de avaliação da recuperação foi dividida em três níveis — \"Bom\", \"Excelente\" e \"Ideal\" — e novas ilustrações foram adicionadas.",
+      "Atualizamos as telas de login e onboarding: fundo mais acolhedor, novo botão de login via Apple e novos ícones para as seções.",
+      "Corrigimos a confirmação da assinatura: o comprovante de compra não é mais perdido em redes instáveis e é ativado automaticamente."
     ]
   },
   {
@@ -27,8 +48,8 @@
       "1482"
     ],
     "notes": [
-      "Corrigimos as histórias de aprendizagem: os slides sem vídeo voltam a mostrar o layout do smartphone com a captura de ecrã, e o conteúdo já não é cortado em ecrãs pequenos.",
-      "A tela de enfrentamento agora está disponível em todos os idiomas do aplicativo."
+      "Corrigimos as histórias de aprendizado: slides sem vídeo agora exibem o layout do smartphone com o print, e nada é cortado em telas menores.",
+      "A tela de cartões de enfrentamento agora está disponível em todos os idiomas do aplicativo."
     ]
   },
   {
@@ -37,9 +58,9 @@
       "1449"
     ],
     "notes": [
-      "O reembolso da subscrição pode ser solicitado diretamente no chat de suporte, sem necessidade de enviar e-mail; o cancelamento durante o período de teste agora é feito em poucos passos.",
-      "Atualizámos as páginas e a lista de cursos; os cabeçalhos das telas internas agora seguem um layout unificado.",
-      "As telas de «Raciocínio» agora têm um fundo mais acolhedor e o conteúdo carrega de forma mais estável em redes lentas."
+      "O reembolso da assinatura pode ser solicitado diretamente no chat de suporte — sem necessidade de enviar e-mail; o cancelamento no período de teste é feito em poucos passos.",
+      "Atualizamos as páginas e a lista de cursos; os cabeçalhos das telas internas agora seguem um layout padronizado.",
+      "As telas de \"Raciocínios\" agora têm um fundo quente; o conteúdo carrega de forma mais estável em redes lentas."
     ]
   },
   {
@@ -48,9 +69,9 @@
       "1305"
     ],
     "notes": [
-      "Adicionar emoções, cartões de recomendação e o PIN agora é gratuito para todos — já não é necessária subscrição para estas funções.",
-      "Atualizámos o design: novo ícone de «voltar» em todas as telas, cabeçalhos de secções e da tela de sons para dormir renovados, além de novas cores para as histórias e para o player.",
-      "Corrigimos os flashes brancos durante as transições no modo escuro; o cancelamento da renovação automática já não remove o acesso antes do fim do período pago."
+      "Adicionar emoções, cartões de recomendação e o PIN agora é gratuito para todos — não é mais necessária assinatura para esses recursos.",
+      "Atualizamos o visual: novo ícone de \"voltar\" em todas as telas, novos cabeçalhos de seção e da tela de sons para dormir, além de novas cores para as histórias e para o player.",
+      "Corrigimos os flashes brancos durante as transições no tema escuro; o cancelamento da renovação automática não remove mais o acesso antes do fim do período pago."
     ]
   },
   {
@@ -217,7 +238,7 @@
       "593"
     ],
     "notes": [
-      "Agora, o preenchimento do diário de pensamentos automáticos assemelha-se a uma sessão com um psicólogo. No «Diálogo Acolhedor», basta contar com as suas próprias palavras tudo o que aconteceu — o assistente irá guiá-lo suavemente e preencherá automaticamente os passos necessários do diário. Assim, poderá concentrar-se nas suas memórias, pensamentos e sentimentos daquele momento, sem se preocupar com a estrutura do diário."
+      "Agora, preencher o diário de pensamentos automáticos parece uma sessão com um psicólogo. No \"Diálogo Acolhedor\", basta contar com as suas próprias palavras o que aconteceu — o assistente de IA irá guiá-lo suavemente e preencherá os passos necessários do diário por si. Assim, poderá focar-se nas suas memórias, pensamentos e sentimentos daquele momento, sem se preocupar com a estrutura do diário."
     ]
   },
   {
@@ -256,7 +277,7 @@
       "587"
     ],
     "notes": [
-      "Grande atualização do assistente de IA! Agora, a Análise é apenas o começo. Adicionámos um diálogo interativo completo: discuta os insights obtidos e realize práticas psicológicas sob a orientação atenciosa da inteligência artificial. E este é apenas o primeiro passo para um nível de apoio totalmente novo!"
+      "Grande atualização do assistente de IA! Agora, a Análise é apenas o começo. Adicionámos um diálogo interativo completo: discuta os insights obtidos e realize práticas psicológicas sob a orientação cuidadosa da inteligência artificial. E este é apenas o primeiro passo para um nível de suporte totalmente novo!"
     ]
   },
   {
@@ -337,13 +358,7 @@
       "574"
     ],
     "notes": [
-      "Conheça a nova secção de exercícios — Práticas de respiração! 🧘‍♂️ Elas ajudam a aliviar o stress, lidar com o pânico ou, pelo contrário, mobilizar toda a sua energia! ⚡️"
-    ]
-  },
-  {
-    "version": "5.14.9",
-    "builds": [
-      "572"
+      "Conheça a nova seção de exercícios — Práticas de Respiração! 🧘‍♂️ Elas ajudam a aliviar o stress, lidar com o pânico ou, pelo contrário, mobilizar toda a sua energia! ⚡️"
     ]
   },
   {
@@ -353,18 +368,24 @@
     ]
   },
   {
+    "version": "5.14.9",
+    "builds": [
+      "572"
+    ]
+  },
+  {
     "version": "5.14.8",
     "builds": [
       "571"
-    ],
-    "notes": [
-      "Excelentes notícias: decidimos tornar a aplicação ainda mais acessível! A partir de hoje, iremos disponibilizar mais opções premium para uso gratuito. Começamos pelos sons de relaxamento: o temporizador de desligamento agora é gratuito para sempre!"
     ]
   },
   {
     "version": "5.14.7",
     "builds": [
       "570"
+    ],
+    "notes": [
+      "Boas notícias: decidimos tornar o aplicativo ainda mais acessível! A partir de hoje, disponibilizaremos mais opções premium gratuitamente. Começamos pelos sons de relaxamento: o temporizador de paragem agora é gratuito para sempre!"
     ]
   },
   {
