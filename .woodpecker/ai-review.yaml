@@ -57,5 +57,5 @@ steps:
         # CI_COMMIT_SOURCE_BRANCH — ветка-источник PR, фолбэк — ветка события.
         br=$(printenv CI_COMMIT_SOURCE_BRANCH || true)
         [ -n "$br" ] || br=$CI_COMMIT_BRANCH
-        git clone --depth 1 -b "$br" https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git .
+        git clone --depth 1 -b "$br" https://git.box.mind-health.xyz:4443/coolswood/astro-content.git .
         ~/pr-agent-lab/bin/pr-review-ci
