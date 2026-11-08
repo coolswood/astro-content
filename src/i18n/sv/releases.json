@@ -1,13 +1,25 @@
 [
   {
+    "version": "5.24.1",
+    "builds": [
+      "1941",
+      "1942"
+    ],
+    "notes": [
+      "Premium kan nu tecknas med bara några tryck – även utan registrering",
+      "AI-dialoger fungerar utan inloggning om du redan har premium, och vid inloggning synkroniseras allt till ditt konto",
+      "Alla psykologiska tester är nu gratis"
+    ]
+  },
+  {
     "version": "5.24.0",
     "builds": [
       "1785"
     ],
     "notes": [
-      "Det ljusa temat har fått en varmare färgpalett i det nya designutseendet.",
-      "Widgetarna för dagsserier på hemskärmen har gjorts om helt: snyggare layout och en mer exakt räkning av din streak.",
-      "Vi har fixat dagboken: snabba redigeringar och tillägg av foton orsakar inte längre krascher."
+      "Det ljusa temat har fått en varmare färgpalett i det nya designutförandet",
+      "Widgets på startsidan för dagliga serier har gjorts om helt: snyggare layout och en mer pålitlig räkning av din streak",
+      "Vi har fixat dagboken: snabba redigeringar och tillägg av foton orsakar inte längre krascher"
     ]
   },
   {
@@ -16,8 +28,8 @@
       "1621"
     ],
     "notes": [
-      "Vi har åtgärdat krascher vid uppstart på iOS 15–17.",
-      "Inloggning med Apple och push-notiser är tillbaka."
+      "Fixat krascher vid uppstart på iOS 15–17",
+      "Återinfört inloggning via Apple och push-notiser"
     ]
   },
   {
@@ -38,8 +50,8 @@
     ],
     "notes": [
       "Skalan för återhämtning har delats upp i tre nivåer – ”Bra”, ”Utmärkt” och ”Perfekt” – och vi har lagt till nya illustrationer för dem.",
-      "Vi har uppdaterat inloggnings- och onboarding-skärmarna: varmare bakgrund, en ny knapp för inloggning med Apple och nya ikoner för olika sektioner.",
-      "Vi har fixat prenumerationsbekräftelsen: köpkvittot försvinner inte längre vid instabil anslutning och aktiveras nu automatiskt."
+      "Uppdaterat inloggnings- och onboarding-skärmarna: varmare bakgrund, ny knapp för inloggning via Apple och nya ikoner för sektionerna.",
+      "Fixat prenumerationsbekräftelsen: köpkvittot försvinner inte längre vid instabil anslutning och aktiveras automatiskt."
     ]
   },
   {
@@ -48,8 +60,8 @@
       "1482"
     ],
     "notes": [
-      "Vi har fixat utbildningshistorierna: slides utan video visar nu korrekt en mobilmodell med skärmdump, och inget klipps av på skärmar med mindre utrymme.",
-      "Coping-skärmen finns nu tillgänglig på alla appens språk."
+      "Fixat utbildningshistorierna: slides utan video visar nu återigen en smartphone-modell med skärmdump, och inget klipps bort på skärmar med mindre utrymme.",
+      "Copingkort-skärmen finns nu tillgänglig på alla appens språk."
     ]
   },
   {
@@ -58,9 +70,9 @@
       "1449"
     ],
     "notes": [
-      "Återbetalning för prenumeration kan nu begäras direkt i supportchatten utan att behöva skicka ett mejl; under provperioden kan du avsluta med bara några få steg.",
-      "Vi har uppdaterat kurssidorna och listan över alla kurser; rubrikerna på de interna skärmarna har nu ett enhetligt utseende.",
-      "Skärmarna för ”känslomässigt resonerande” har nu en varmare bakgrund, och innehållet laddas mer pålitligt vid svag anslutning."
+      "Återbetalning för prenumeration kan nu hanteras direkt i supportchatten – utan att behöva skicka ett mejl; uppsägning under provperioden sker på bara några steg.",
+      "Uppdaterat kurssidorna och listan över alla kurser; rubrikerna på de interna skärmarna har fått ett enhetligt utseende.",
+      "Skärmarna för ”Resonemang” har nu en varm bakgrund; innehållet laddas mer pålitligt vid svag anslutning."
     ]
   },
   {
@@ -69,9 +81,9 @@
       "1305"
     ],
     "notes": [
-      "Att lägga till känslor, använda copingkort och använda PIN-kod är nu gratis för alla – en prenumeration krävs inte längre för dessa funktioner.",
-      "Vi har uppdaterat designen: en ny ”bakåt”-pil på alla skärmar, nya rubriker för sektioner och sömnljud, samt nya färger för historier och spelaren.",
-      "Vi har fixat vita blixtar vid övergångar i mörkt läge; att avsluta en automatisk förnyelse innebär inte längre att åtkomsten dras in innan den betalda perioden är slut."
+      "Att lägga till känslor, copingkort och PIN-kod är nu gratis för alla – prenumeration krävs inte längre för dessa funktioner.",
+      "Uppdaterat designen: ny ”bakåt”-pil på alla skärmar, nya rubriker för sektioner och ljudskärmen för sömn, samt nya färger för historier och spelaren.",
+      "Fixat vita blixtar vid övergångar i mörkt läge; att avsluta förnyelse av prenumeration tar inte längre bort åtkomsten innan den betalda perioden är slut."
     ]
   },
   {
@@ -238,7 +250,7 @@
       "593"
     ],
     "notes": [
-      "Att föra dagbok över automatiska tankar känns nu mer som ett samtal med en psykolog. Med ”Varsamt samtal” kan du bara berätta med egna ord vad som har hänt – din AI-assistent guidar dig mjukt och fyller i de nödvändiga stegen i dagboken åt dig. Du kan fokusera helt på dina minnen, tankar och känslor i stunden, utan att behöva bry dig om dagbokens struktur."
+      "Att föra dagbok över automatiska tankar liknar nu mer ett samtal med en psykolog. Med ”Varsamt samtal” kan du bara berätta med egna ord vad som har hänt – assistenten guidar dig mjukt och fyller i de nödvändiga stegen i dagboken åt dig. Du kan fokusera helt på dina minnen, tankar och känslor i stunden, utan att behöva bry dig om dagbokens struktur."
     ]
   },
   {
@@ -277,7 +289,7 @@
       "587"
     ],
     "notes": [
-      "Stor uppdatering av AI-assistenten! Nu är analysen bara början. Vi har lagt till en fullständig interaktiv dialog: diskutera dina insikter och genomför psykologiska övningar under handledning av vår AI. Och detta är bara första steget mot en helt ny nivå av stöd!"
+      "En stor uppdatering av AI-assistenten! Nu är analysen bara början. Vi har lagt till en fullständig interaktiv dialog: diskutera dina insikter och genomför psykologiska övningar under varsam vägledning av AI. Och detta är bara första steget mot en helt ny nivå av stöd!"
     ]
   },
   {
@@ -358,7 +370,7 @@
       "574"
     ],
     "notes": [
-      "Möt vår nya sektion i övningarna – andningsövningar! 🧘‍♂️ De hjälper dig att minska stress, hantera panik eller tvärtom, samla all din energi! ⚡️"
+      "Möt vår nya sektion under övningar – andningsövningar! 🧘‍♂️ De hjälper dig att minska stress, hantera panik eller tvärtom, samla all din energi! ⚡️"
     ]
   },
   {
@@ -385,7 +397,7 @@
       "570"
     ],
     "notes": [
-      "Bra nyheter: vi har bestämt oss för att göra appen ännu mer tillgänglig! Från och med idag kommer vi att låsa upp fler premiumfunktioner för gratis användning. Vi börjar med avslappnande ljud: nu är sleep timer gratis för alltid!"
+      "Goda nyheter: vi har bestämt oss för att göra appen ännu mer tillgänglig! Från och med idag kommer vi att låsa upp fler premiumfunktioner för gratis användning. Vi börjar med avslappnande ljud: nu är sleep timer gratis för alltid!"
     ]
   },
   {

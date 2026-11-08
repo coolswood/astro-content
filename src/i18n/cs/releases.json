@@ -1,13 +1,25 @@
 [
   {
+    "version": "5.24.1",
+    "builds": [
+      "1941",
+      "1942"
+    ],
+    "notes": [
+      "Premium nyní získáte na pár kliknutí — i bez registrace",
+      "AI dialogy fungují i bez přihlášení, pokud již máte aktivní premium; po přihlášení se vše přenese do vašeho účtu",
+      "Všechny psychologické testy jsou nyní zdarma"
+    ]
+  },
+  {
     "version": "5.24.0",
     "builds": [
       "1785"
     ],
     "notes": [
-      "Světlý režim má nyní v rámci nového designu teplou paletu barev.",
-      "Domovské widgety řady dnů byly zcela přepracovány: upravené rozvržení a přesné počítání sérií (streak).",
-      "Opravili jsme deník: rychlé úpravy a přidávání fotografií již nezpůsobují chyby."
+      "Světlý režim má v rámci nového designu teplou paletu barev",
+      "Domovské widgety řady dnů byly zcela přepracovány: mají elegantní rozvržení a přesný počet série dnů (streak)",
+      "Opravili jsme deník: rychlé úpravy a přidávání fotografií již nezpůsobují chyby"
     ]
   },
   {
@@ -16,8 +28,8 @@
       "1621"
     ],
     "notes": [
-      "Oprava pádu aplikace při otevírání na iOS 15–17.",
-      "Obnoveno přihlašování přes Apple a push notifikace."
+      "Opravili jsme pády aplikace při otevírání na iOS 15–17",
+      "Obnovili jsme přihlášení přes Apple a push notifikace"
     ]
   },
   {
@@ -37,9 +49,9 @@
       "1590"
     ],
     "notes": [
-      "Škálu hodnocení obnovy jsme rozdělili na tři úrovně — „Dobře“, „Skvěle“ a „Ideálně“ — a přidali k nim nové ilustrace.",
-      "Aktualizované obrazovky přihlášení a onboardingu: teplé pozadí, nové tlačítko pro přihlášení přes Apple a nové ikony sekcí.",
-      "Oprava potvrzování předplatného: potvrzení nákupu se již neztrácí při nestabilním připojení a aktivuje se automaticky."
+      "Škálu hodnocení zlepšení jsme rozdělili na tři úrovně — „Dobře“, „Skvěle“ a „Ideálně“ — a přidali k nim nové ilustrace.",
+      "Aktualizovali jsme obrazovky přihlášení a úvodní průvodce: přidali jsme teplé pozadí, nové tlačítko pro přihlášení přes Apple a nové ikony sekcí.",
+      "Opravili jsme potvrzování předplatného: potvrzení o nákupu se při nestabilním připojení již neztrácí a aktivuje se automaticky."
     ]
   },
   {
@@ -48,7 +60,7 @@
       "1482"
     ],
     "notes": [
-      "Oprava vzdělávacích příběhů: snímky bez videa opět zobrazují náhled chytrého telefonu se snímkem obrazovky a na menších obrazovkách se nic neokrajovává.",
+      "Opravili jsme vzdělávací příběhy: snímky bez videa nyní opět zobrazují náhled chytrého telefonu se snímkem obrazovky a na telefonech s menšími obrazovkami se nic neokrajovává.",
       "Obrazovka pro copingové kartičky je nyní dostupná ve všech jazycích aplikace."
     ]
   },
@@ -58,9 +70,9 @@
       "1449"
     ],
     "notes": [
-      "Žádost o vrácení peněz za předplatné lze nyní vyřídit přímo v chatu podpory, aniž byste museli psát e-mail; zrušení během zkušební doby je nyní otázkou několika kroků.",
-      "Aktualizované stránky kurzů a seznam všech kurzů; záhlaví vnitřních obrazovek má nyní jednotný design.",
-      "Obrazovky pro automatické myšlenky mají nyní teplé pozadí; obsah se při slabém připojení načítá spolehlivěji."
+      "Žádost o vrácení peněz za předplatné můžete vyřídit přímo v chatu podpory — nemusíte psát e-mail; zrušení zkušební verze je nyní otázkou pár kroků.",
+      "Aktualizovali jsme stránky kurzů a seznam všech kurzů; záhlaví vnitřních obrazovek mají nyní jednotný design.",
+      "Obrazovky pro „Rozvahy“ mají nyní teplé pozadí; obsah se při slabém připojení načítá spolehlivěji."
     ]
   },
   {
@@ -69,9 +81,9 @@
       "1305"
     ],
     "notes": [
-      "Přidávání emocí, copingové kartičky a PIN kód jsou nyní pro všechny zdarma — k těmto funkcím již není potřeba předplatné.",
-      "Nová vizualizace: nová šipka „zpět“ na všech obrazovkách, nové záhlaví sekcí a obrazovky zvuků pro spánek, nové barvy pro příběhy a přehrávač.",
-      "Oprava bílých záblesků při přechodech v tmavém režimu; zrušení automatického prodloužení již nezrušuje přístup do konce placeného období."
+      "Přidávání emocí, copingové kartičky a PIN kód jsou nyní pro všechny zdarma — k těmto funkcím již nepotřebujete předplatné.",
+      "Aktualizovali jsme vzhled: nová šipka „zpět“ na všech obrazovkách, nové záhlaví sekcí, nové obrazovky pro zvuky ke spánku, nové barvy pro příběhy a přehrávač.",
+      "Opravili jsme bílé záblesky při přepínání do tmavého režimu; zrušení automatického prodloužení již neodesírá přístup do konce placeného období."
     ]
   },
   {
@@ -238,7 +250,7 @@
       "593"
     ],
     "notes": [
-      "Nyní se vyplňování deníku automatických myšlenek více podobá sezení u psychologa. V „Šetrném dialogu“ stačí prostě vlastními slovy popsat vše, co se stalo — asistent vás jemně navede a sám vyplní potřebné kroky deníku. Budete se moci plně soustředit na své vzpomínky, myšlenky a pocity v daný okamžik, aniž byste museli řešit strukturu deníku."
+      "Nyní psaní deníku automatických myšlenek připomíná sezení s psychologem. V „Šetrném dialogu“ stačí prostě vlastními slovy vyprávět vše, co se stalo — asistent vás jemně navede a sám vyplní potřebné kroky deníku. Můžete se tak plně soustředit na své vzpomínky, myšlenky a pocity v daný okamžik, aniž byste museli řešit strukturu deníku."
     ]
   },
   {
@@ -277,7 +289,7 @@
       "587"
     ],
     "notes": [
-      "Velká aktualizace AI asistenta! Analýza je nyní jen začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete diskutovat o získaných vhledech a provádět psychologická cvičení pod odborným vedením umělé inteligence. A to je jen první krok k úplně nové úrovni podpory!"
+      "Velká aktualizace asistenta s umělou inteligencí! Analýza je nyní jen začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete diskutovat o získaných vhledech a cvičit psychologické techniky pod citlivým vedením umělé inteligence. A to je jen první krok k úplně nové úrovni podpory!"
     ]
   },
   {
@@ -358,7 +370,7 @@
       "574"
     ],
     "notes": [
-      "Vítejte v nové sekci — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, poradit si s panikou nebo naopak mobilizovat veškerou energii! ⚡️"
+      "Objevte novou sekci v cvičeních — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, vypořádat se s panikou nebo naopak dodat vám energii! ⚡️"
     ]
   },
   {
@@ -385,7 +397,7 @@
       "570"
     ],
     "notes": [
-      "Skvělá novina: rozhodli jsme se, že aplikace bude ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začínáme relaxačními zvuky: časovač pro ukončení je nyní navždy zdarma!"
+      "Skvělé zprávy: rozhodli jsme se učinit aplikaci ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začneme relaxačními zvuky: časovač zastavení je nyní navždy zdarma!"
     ]
   },
   {
