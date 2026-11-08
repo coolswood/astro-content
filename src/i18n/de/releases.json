@@ -1,5 +1,17 @@
 [
   {
+    "version": "5.24.1",
+    "builds": [
+      "1941",
+      "1942"
+    ],
+    "notes": [
+      "Premium ist jetzt mit nur wenigen Klicks verfügbar – sogar ohne Registrierung.",
+      "KI-Dialoge funktionieren auch ohne Login, sofern Premium bereits abgeschlossen wurde; nach dem Login werden alle Daten automatisch mit dem Konto verknüpft.",
+      "Alle psychologischen Tests sind ab sofort kostenlos."
+    ]
+  },
+  {
     "version": "5.24.0",
     "builds": [
       "1785"
@@ -7,7 +19,7 @@
     "notes": [
       "Der helle Modus ist jetzt in der warmen Farbpalette des neuen Designs gestaltet.",
       "Die Home-Widgets der Days-Serie wurden komplett überarbeitet: mit sauberem Layout und einer präzisen Streak-Anzeige.",
-      "Fehler im Tagebuch wurden behoben: Schnelle Bearbeitungen und das Hinzufügen von Fotos führen nicht mehr zu Abstürzen."
+      "Das Tagebuch wurde optimiert: Schnelle Bearbeitungen und das Hinzufügen von Fotos führen nicht mehr zu Fehlern."
     ]
   },
   {
@@ -17,7 +29,7 @@
     ],
     "notes": [
       "Abstürze beim Öffnen unter iOS 15–17 wurden behoben.",
-      "Der Login via Apple und Push-Benachrichtigungen sind wieder verfügbar."
+      "Der Login via Apple und Push-Benachrichtigungen wurden wiederhergestellt."
     ]
   },
   {
@@ -37,9 +49,9 @@
       "1590"
     ],
     "notes": [
-      "Die Skala zur Einschätzung der Genesung wurde in drei Stufen unterteilt – „Gut“, „Sehr gut“ und „Perfekt“ – und mit neuen Illustrationen ergänzt.",
+      "Die Skala zur Einschätzung des Befindens wurde in drei Stufen unterteilt – „Gut“, „Ausgezeichnet“ und „Ideal“ – und mit neuen Illustrationen ergänzt.",
       "Die Login- und Onboarding-Bildschirme wurden aktualisiert: warmer Hintergrund, ein neuer Apple-Login-Button und frische Icons für die Bereiche.",
-      "Fehler bei der Abonnement-Bestätigung wurden behoben: Der Kaufbeleg geht bei instabiler Verbindung nicht mehr verloren und wird automatisch aktiviert."
+      "Die Abonnement-Bestätigung wurde korrigiert: Der Kaufbeleg geht bei instabiler Verbindung nicht mehr verloren und das Abo wird automatisch aktiviert."
     ]
   },
   {
@@ -48,7 +60,7 @@
       "1482"
     ],
     "notes": [
-      "Fehler in den Lerngeschichten wurden behoben: Slides ohne Video zeigen nun wieder das Smartphone-Layout mit Screenshot an, und auf kleineren Bildschirmen wird nichts mehr abgeschnitten.",
+      "Die Lerngeschichten wurden korrigiert: Slides ohne Video zeigen nun wieder ein Smartphone-Mockup mit Screenshot an, und auf kleineren Bildschirmen wird nichts mehr abgeschnitten.",
       "Der Coping-Bildschirm ist nun in allen App-Sprachen verfügbar."
     ]
   },
@@ -58,9 +70,9 @@
       "1449"
     ],
     "notes": [
-      "Rückerstattungen für Abonnements können direkt im Support-Chat beantragt werden, ohne eine E-Mail schreiben zu müssen; die Kündigung während des Probezeitraums erfolgt in nur wenigen Schritten.",
+      "Rückerstattungen für Abonnements können direkt im Support-Chat beantragt werden, ohne eine E-Mail schreiben zu müssen; die Kündigung im Probezeitraum erfolgt in nur wenigen Schritten.",
       "Die Kursseiten und die Kursübersicht wurden aktualisiert; die Header der internen Bildschirme folgen nun einem einheitlichen Design.",
-      "Die „Reflexion“-Bildschirme haben nun einen warmen Hintergrund; Inhalte werden bei schwacher Verbindung zuverlässiger geladen."
+      "Die „Reflexion“-Bildschirme haben nun einen warmen Hintergrund; Inhalte werden bei schwacher Internetverbindung zuverlässiger geladen."
     ]
   },
   {
@@ -69,9 +81,9 @@
       "1305"
     ],
     "notes": [
-      "Das Hinzufügen von Gefühlen, Coping-Karten und die PIN-Code-Funktion sind nun für alle kostenlos – ein Abonnement ist dafür nicht mehr erforderlich.",
-      "Das Design wurde aktualisiert: ein neuer „Zurück“-Chevron auf allen Bildschirmen, frische Header für die Bereiche sowie für den Schlafklänge-Bildschirm und neue Farben für die Stories und den Player.",
-      "Das weiße Flackern beim Wechsel in den Dark Mode wurde behoben; das Kündigen der automatischen Verlängerung entzieht den Zugang nicht mehr vor Ablauf des bezahlten Zeitraums."
+      "Das Hinzufügen von Gefühlen, Coping-Karten und die PIN-Code-Funktion sind ab sofort für alle kostenlos – ein Abonnement ist dafür nicht mehr erforderlich.",
+      "Das Design wurde aktualisiert: ein neuer „Zurück“-Chevron auf allen Bildschirmen, frische Header für die Bereiche sowie für die Schlafklänge und neue Farben für die Stories und den Player.",
+      "Das weiße Flackern beim Wechsel zum Dark Mode wurde behoben; das Deaktivieren der automatischen Verlängerung entzieht den Zugriff nicht mehr vor Ablauf des bereits bezahlten Zeitraums."
     ]
   },
   {
@@ -238,7 +250,7 @@
       "593"
     ],
     "notes": [
-      "Das Ausfüllen des Gedankentagebuchs fühlt sich jetzt wie eine Therapiesitzung an. Im „Empathischen Dialog“ können Sie einfach in Ihren eigenen Worten erzählen, was passiert ist – Ihr Assistent wird Sie sanft leiten und die notwendigen Schritte im Tagebuch automatisch für Sie ausfüllen. So können Sie sich ganz auf Ihre Erinnerungen, Gedanken und Gefühle konzentrieren, ohne sich mit der Struktur des Tagebuchs aufhalten zu müssen."
+      "Das Ausfüllen des Gedankentagebuchs fühlt sich jetzt wie eine Sitzung bei einem Psychologen an. Im „Einfühlsamen Dialog“ können Sie einfach in Ihren eigenen Worten erzählen, was passiert ist – der Assistent wird Sie sanft leiten und die notwendigen Schritte im Tagebuch automatisch für Sie ausfüllen. So können Sie sich ganz auf Ihre Erinnerungen, Gedanken und Gefühle in diesem Moment konzentrieren, ohne sich mit der Struktur des Tagebuchs aufhalten zu müssen."
     ]
   },
   {
@@ -277,7 +289,7 @@
       "587"
     ],
     "notes": [
-      "Ein großes Update für Ihren KI-Assistenten! Die Analyse ist erst der Anfang. Wir haben einen interaktiven Dialog hinzugefügt: Besprechen Sie Ihre Erkenntnisse und führen Sie psychologische Übungen unter der einfühlsamen Anleitung der künstlichen Intelligenz durch. Dies ist lediglich der erste Schritt zu einer völlig neuen Ebene der Unterstützung!"
+      "Ein großes Update für den KI-Assistenten! Die Analyse ist jetzt erst der Anfang. Wir haben einen voll interaktiven Dialog hinzugefügt: Besprechen Sie Ihre Erkenntnisse und führen Sie psychologische Übungen unter der einfühlsamen Anleitung der künstlichen Intelligenz durch. Dies ist erst der erste Schritt zu einer völlig neuen Ebene der Unterstützung!"
     ]
   },
   {
@@ -358,7 +370,7 @@
       "574"
     ],
     "notes": [
-      "Entdecken Sie unseren neuen Bereich in den Übungen – die Atemtechniken! 🧘‍♂️ Sie helfen Ihnen dabei, Stress abzubauen, Panik zu bewältigen oder neue Energie zu tanken! ⚡️"
+      "Entdecken Sie unseren neuen Bereich in den Übungen: Atemtechniken! 🧘‍♂️ Sie helfen Ihnen, Stress abzubauen, Panik zu bewältigen oder neue Energie zu tanken! ⚡️"
     ]
   },
   {
@@ -385,7 +397,7 @@
       "570"
     ],
     "notes": [
-      "Gute Nachrichten: Wir möchten die App für Sie noch zugänglicher machen! Ab heute werden wir mehr Premium-Optionen kostenlos zur Verfügung stellen. Wir beginnen mit den Entspannungsklängen: Der Sleep-Timer ist ab sofort dauerhaft kostenlos!"
+      "Gute Nachrichten: Wir haben uns dazu entschieden, die App noch zugänglicher zu machen! Ab heute werden wir mehr Premium-Optionen für die kostenlose Nutzung freischalten. Wir beginnen mit den Entspannungsklängen: Der Sleep-Timer ist ab sofort dauerhaft kostenlos verfügbar!"
     ]
   },
   {

@@ -1,13 +1,25 @@
 [
   {
+    "version": "5.24.1",
+    "builds": [
+      "1941",
+      "1942"
+    ],
+    "notes": [
+      "Premium można teraz wykupić w kilka kliknięć – nawet bez rejestracji",
+      "Dialogi AI działają bez logowania, jeśli masz już wykupiony Premium; po zalogowaniu wszystko zostanie przeniesione na Twoje konto",
+      "Wszystkie testy psychologiczne są teraz dostępne bezpłatnie"
+    ]
+  },
+  {
     "version": "5.24.0",
     "builds": [
       "1785"
     ],
     "notes": [
-      "Jasny motyw ma teraz ciepłą paletę barw w nowym designie.",
-      "Widżety domowe z serii dni zostały całkowicie przebudowane: przejrzysty układ i rzetelne liczenie serii (streak).",
-      "Naprawiliśmy dziennik: szybkie edycje i dodawanie zdjęć nie powodują już błędów."
+      "Jasny motyw został wzbogacony o ciepłą paletę barw w nowym designie",
+      "Widżety domowe z serią dni zostały całkowicie przebudowane: przejrzysty układ i rzetelne liczenie serii dni (streak), którą utrzymujesz",
+      "Naprawiliśmy dziennik: szybkie edycje i dodawanie zdjęć nie powodują już błędów"
     ]
   },
   {
@@ -16,8 +28,8 @@
       "1621"
     ],
     "notes": [
-      "Naprawiono problem z wyłączaniem się aplikacji przy otwieraniu na iOS 15–17.",
-      "Przywrócono logowanie przez Apple oraz powiadomienia push."
+      "Naprawiliśmy błąd powodujący zamykanie aplikacji przy otwieraniu na iOS 15–17",
+      "Przywróciliśmy logowanie przez Apple oraz powiadomienia push"
     ]
   },
   {
@@ -37,8 +49,8 @@
       "1590"
     ],
     "notes": [
-      "Skalę oceny powrotu do zdrowia podzieliliśmy na trzy poziomy: „Dobrze”, „Świetnie” i „Idealnie”, dodając do nich nowe ilustracje.",
-      "Zaktualizowaliśmy ekrany logowania i onboardingu: ciepłe tło, nowy przycisk logowania przez Apple oraz świeże ikony sekcji.",
+      "Skalę oceny powrotu do formy podzieliliśmy na trzy poziomy: „Dobrze”, „Świetnie” i „Idealnie”, dodając do nich nowe ilustracje.",
+      "Odświeżyliśmy ekrany logowania i onboardingu: ciepłe tło, nowy przycisk logowania przez Apple oraz nowe ikony sekcji.",
       "Naprawiliśmy potwierdzanie subskrypcji: potwierdzenie zakupu nie ginie już przy niestabilnym połączeniu i aktywuje się automatycznie."
     ]
   },
@@ -48,8 +60,8 @@
       "1482"
     ],
     "notes": [
-      "Naprawiliśmy historie edukacyjne: slajdy bez wideo ponownie wyświetlają makietę smartfona ze zrzutem ekranu, a na mniejszych ekranach nic nie zostaje ucięte.",
-      "Ekran karty radzenia sobie jest już dostępny we wszystkich językach aplikacji."
+      "Naprawiliśmy historie edukacyjne: slajdy bez wideo ponownie wyświetlają makietę smartfona ze zrzutem ekranu, a na mniejszych ekranach nic nie jest ucinane.",
+      "Karta radzenia sobie (coping) jest już dostępna we wszystkich językach aplikacji."
     ]
   },
   {
@@ -58,9 +70,9 @@
       "1449"
     ],
     "notes": [
-      "Zwrot za subskrypcję można teraz załatwić bezpośrednio na czacie wsparcia – bez konieczności pisania maila; w okresie próbnym rezygnacja zajmuje tylko kilka kroków.",
-      "Zaktualizowaliśmy strony kursów oraz listę wszystkich kursów; nagłówki ekranów wewnętrznych mają teraz spójny wygląd.",
-      "Ekrany rozumowania mają teraz ciepłe tło; treść ładuje się stabilniej przy słabym połączeniu sieciowym."
+      "Zwrot za subskrypcję można teraz zgłosić bezpośrednio na czacie wsparcia – bez konieczności pisania maila; anulowanie w okresie próbnym zajmuje tylko kilka kroków.",
+      "Odświeżyliśmy strony kursów oraz listę wszystkich kursów; nagłówki ekranów wewnętrznych mają teraz spójny wygląd.",
+      "Ekrany „Rozważań” mają teraz ciepłe tło; treść ładuje się stabilniej nawet przy słabym połączeniu sieciowym."
     ]
   },
   {
@@ -69,9 +81,9 @@
       "1305"
     ],
     "notes": [
-      "Dodawanie emocji, karty radzenia sobie oraz kod PIN są teraz dostępne za darmo dla wszystkich – subskrypcja nie jest już do nich wymagana.",
-      "Odświeżyliśmy wygląd: nowa strzałka „wstecz” na wszystkich ekranach, nowe nagłówki sekcji i ekranu dźwięków do snu oraz nowe kolory historii i odtwarzacza.",
-      "Naprawiliśmy białe błyski podczas przełączania na tryb ciemny; anulowanie automatycznego odnowienia nie odbiera już dostępu przed końcem opłaconego okresu."
+      "Dodawanie emocji, karty radzenia sobie oraz kod PIN są teraz bezpłatne dla wszystkich – subskrypcja nie jest już do nich wymagana.",
+      "Odświeżyliśmy wygląd: nowy przycisk „wstecz” na wszystkich ekranach, nowe nagłówki sekcji i ekranu dźwięków do snu oraz nowa kolorystyka historii i odtwarzacza.",
+      "Naprawiliśmy białe błyski podczas przełączania na ciemny motyw; anulowanie automatycznego odnowienia nie odbiera już dostępu do końca opłaconego okresu."
     ]
   },
   {
@@ -238,7 +250,7 @@
       "593"
     ],
     "notes": [
-      "Wypełnianie dziennika myśli automatycznych przypomina teraz bardziej sesję z psychologiem. W „Czułym dialogu” wystarczy, że opowiesz własnymi słowami o tym, co się wydarzyło – asystent delikatnie Cię poprowadzi i sam uzupełni niezbędne kroki w dzienniku. Dzięki temu będziesz mógł skupić się na swoich wspomnieniach, myślach i emocjach z tamtego momentu, nie martwiąc się o strukturę wpisu."
+      "Wypełnianie dziennika myśli automatycznych przypomina teraz sesję z psychologiem. W „Wspierającym dialogu” po prostu opowiedz własnymi słowami o tym, co się wydarzyło – asystent delikatnie Cię poprowadzi i sam uzupełni niezbędne kroki dziennika. Dzięki temu będziesz mógł skupić się na swoich wspomnieniach, myślach i emocjach z tamtego momentu, nie martwiąc się o strukturę wpisu."
     ]
   },
   {
@@ -277,7 +289,7 @@
       "587"
     ],
     "notes": [
-      "Wielka aktualizacja asystenta AI! Teraz analiza to dopiero początek. Wprowadziliśmy pełnowymiarowy, interaktywny dialog: omawiaj uzyskane spostrzeżenia i wykonuj praktyki psychologiczne pod uważnym przewodnictwem sztucznej inteligencji. To dopiero pierwszy krok do zupełnie nowego poziomu wsparcia!"
+      "Ogromna aktualizacja asystenta AI! Teraz analiza to dopiero początek. Dodaliśmy pełnowymiarowy, interaktywny dialog: możesz omawiać uzyskane spostrzeżenia i wykonywać praktyki psychologiczne pod czujnym okiem sztucznej inteligencji. To dopiero pierwszy krok do zupełnie nowego poziomu wsparcia!"
     ]
   },
   {
@@ -358,7 +370,7 @@
       "574"
     ],
     "notes": [
-      "Poznaj nową sekcję w ćwiczeniach — Praktyki oddechowe! 🧘‍♂️ Pomogą Ci zredukować stres, poradzić sobie z atakami paniki lub wręcz przeciwnie — odzyskać energię do działania! ⚡️"
+      "Poznaj nową sekcję ćwiczeń — Praktyki oddechowe! 🧘‍♂️ Pomogą Ci zredukować stres, opanować ataki paniki lub wręcz przeciwnie — odzyskać energię do działania! ⚡️"
     ]
   },
   {
@@ -385,7 +397,7 @@
       "570"
     ],
     "notes": [
-      "Świetne wieści: postanowiliśmy uczynić aplikację jeszcze bardziej dostępną! Od dziś będziemy udostępniać więcej opcji premium za darmo. Zaczynamy od dźwięków relaksacyjnych: timer wyciszania jest teraz dostępny na zawsze bez opłat!"
+      "Świetne wieści: postanowiliśmy uczynić aplikację jeszcze bardziej dostępną! Od dziś będziemy udostępniać więcej opcji premium do bezpłatnego użytku. Zaczynamy od dźwięków relaksacyjnych: timer wyciszania jest teraz darmowy na zawsze!"
     ]
   },
   {

@@ -1,12 +1,24 @@
 [
   {
+    "version": "5.24.1",
+    "builds": [
+      "1941",
+      "1942"
+    ],
+    "notes": [
+      "Ahora puede suscribirse a Premium con solo un par de toques, incluso sin registrarse.",
+      "Los diálogos con la IA funcionan sin iniciar sesión si ya tiene Premium; al iniciar sesión, todo se sincronizará con su cuenta.",
+      "Todos los tests psicológicos ahora son gratuitos."
+    ]
+  },
+  {
     "version": "5.24.0",
     "builds": [
       "1785"
     ],
     "notes": [
-      "El tema claro ahora cuenta con la paleta cálida del nuevo diseño.",
-      "Los widgets de la serie de días en la pantalla de inicio se han rediseñado por completo: diseño más limpio y un contador de rachas preciso.",
+      "El tema claro ahora cuenta con una paleta de colores cálida según el nuevo diseño.",
+      "Los widgets de la serie de días en la pantalla de inicio se han rediseñado por completo: un diseño más limpio y un contador de rachas preciso.",
       "Hemos corregido el diario: las ediciones rápidas y la adición de fotos ya no causan errores."
     ]
   },
@@ -37,8 +49,8 @@
       "1590"
     ],
     "notes": [
-      "La escala de evaluación de la recuperación se ha dividido en tres niveles — «Bien», «Excelente» e «Ideal» — y se han añadido nuevas ilustraciones.",
-      "Se han actualizado las pantallas de inicio y de bienvenida: fondo cálido, nuevo botón de inicio con Apple e iconos de secciones renovados.",
+      "La escala de evaluación de la recuperación se ha dividido en tres niveles —«Bien», «Excelente» e «Ideal»— y se han añadido nuevas ilustraciones.",
+      "Hemos actualizado las pantallas de inicio de sesión y de bienvenida: fondo cálido, nuevo botón de inicio con Apple y nuevos iconos para las secciones.",
       "Se ha corregido la confirmación de la suscripción: el comprobante de compra ya no se pierde con una conexión inestable y se activa automáticamente."
     ]
   },
@@ -49,7 +61,7 @@
     ],
     "notes": [
       "Se han corregido las historias de aprendizaje: las diapositivas sin vídeo vuelven a mostrar el diseño del smartphone con la captura de pantalla, y el contenido ya no se corta en pantallas pequeñas.",
-      "La pantalla de afrontamiento ya está disponible en todos los idiomas de la aplicación."
+      "La pantalla de las tarjetas de afrontamiento ya está disponible en todos los idiomas de la aplicación."
     ]
   },
   {
@@ -58,9 +70,9 @@
       "1449"
     ],
     "notes": [
-      "Los reembolsos de la suscripción se gestionan directamente en el chat de soporte, sin necesidad de enviar un correo; la cancelación durante el periodo de prueba se realiza en un par de pasos.",
-      "Se han actualizado las páginas y la lista de todos los cursos; los encabezados de las pantallas internas ahora tienen un diseño uniforme.",
-      "Las pantallas de «pensamientos automáticos» ahora tienen un fondo cálido"
+      "El reembolso de la suscripción se puede solicitar directamente en el chat de soporte, sin necesidad de enviar un correo; la cancelación durante el periodo de prueba se realiza en un par de pasos.",
+      "Hemos actualizado las páginas de los cursos y la lista completa de los mismos; los encabezados de las pantallas internas ahora tienen un diseño uniforme.",
+      "Las pantallas de «Razonamiento» ahora tienen un fondo cálido; el contenido se carga de forma más estable con una conexión débil."
     ]
   },
   {
@@ -69,9 +81,9 @@
       "1305"
     ],
     "notes": [
-      "Añadir emociones, usar tarjetas de recomendación y el código PIN ahora son gratuitos para todos; ya no es necesaria la suscripción para estas funciones.",
-      "Se ha actualizado el diseño: nuevo botón de «atrás» en todas las pantallas, encabezados de secciones y de la pantalla de sonidos para dormir renovados, y nuevos colores para las historias y el reproductor.",
-      "Se han corregido los destellos blancos al cambiar entre temas en el modo oscuro; la cancelación de la renovación automática ya no retira el acceso hasta el final del periodo pagado."
+      "Añadir emociones, usar las tarjetas de recomendación y el código PIN ahora son gratuitos para todos; ya no es necesaria la suscripción para estas funciones.",
+      "Hemos actualizado el diseño: nuevo icono de «atrás» en todas las pantallas, nuevos encabezados de sección y de la pantalla de sonidos para dormir, y nuevos colores para las historias y el reproductor.",
+      "Se han corregido los destellos blancos al cambiar entre temas en el modo oscuro; la cancelación de la renovación automática ya no retira el acceso hasta que finalice el periodo pagado."
     ]
   },
   {
@@ -238,7 +250,7 @@
       "593"
     ],
     "notes": [
-      "Ahora, completar el diario de pensamientos automáticos se siente más como una sesión con un psicólogo. Con el «Diálogo empático», solo tiene que contar con sus propias palabras lo que ha sucedido; el asistente le guiará con suavidad y completará los pasos necesarios del diario por usted. Así podrá centrarse en sus recuerdos, pensamientos y sensaciones de ese momento, sin preocuparse por la estructura del diario."
+      "Ahora, completar el diario de pensamientos automáticos se parece más a una sesión con un psicólogo. Con el «Diálogo empático», simplemente cuente con sus propias palabras lo que ha sucedido; el asistente le guiará con suavidad y completará los pasos necesarios del diario por usted. Así, podrá centrarse en sus recuerdos, pensamientos y emociones de ese momento, sin tener que preocuparse por la estructura del diario."
     ]
   },
   {
@@ -277,7 +289,7 @@
       "587"
     ],
     "notes": [
-      "¡Gran actualización del asistente de IA! Ahora, el análisis es solo el comienzo. Hemos añadido un diálogo interactivo completo: puede conversar sobre los insights obtenidos y realizar prácticas psicológicas bajo la guía atenta de la inteligencia artificial. ¡Y este es solo el primer paso hacia un nivel de apoyo totalmente nuevo!"
+      "¡Gran actualización del asistente de IA! Ahora, el Análisis es solo el comienzo. Hemos añadido un diálogo interactivo completo: debata los insights obtenidos y realice prácticas psicológicas bajo la guía atenta de la inteligencia artificial. ¡Y este es solo el primer paso hacia un nivel de apoyo totalmente nuevo!"
     ]
   },
   {
@@ -358,7 +370,7 @@
       "574"
     ],
     "notes": [
-      "Ya está disponible la nueva sección de ejercicios: prácticas de respiración. 🧘‍♂️ Le ayudarán a reducir el estrés, afrontar ataques de pánico o, por el contrario, movilizar toda su energía. ⚡️"
+      "¡Descubra la nueva sección de ejercicios: prácticas de respiración! 🧘‍♂️ ¡Le ayudarán a aliviar el estrés, afrontar los ataques de pánico o, por el contrario, a movilizar toda su energía! ⚡️"
     ]
   },
   {
@@ -385,7 +397,7 @@
       "570"
     ],
     "notes": [
-      "Buenas noticias: ¡hemos decidido que la aplicación sea aún más accesible! A partir de hoy, habilitaremos más opciones premium para su uso gratuito. Empezamos con los sonidos relajantes: ¡el temporizador de apagado ahora es gratuito para siempre!"
+      "Buenas noticias: ¡hemos decidido hacer la aplicación aún más accesible! A partir de hoy, habilitaremos más opciones premium para su uso gratuito. Empezamos con los sonidos para relajarse: ¡el temporizador de apagado ahora es gratuito para siempre!"
     ]
   },
   {

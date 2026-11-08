@@ -1,13 +1,25 @@
 [
   {
+    "version": "5.24.1",
+    "builds": [
+      "1941",
+      "1942"
+    ],
+    "notes": [
+      "L’activation du Premium se fait désormais en quelques clics, même sans inscription",
+      "Les dialogues avec l’IA fonctionnent sans connexion si le Premium est déjà actif, puis se synchronisent avec votre compte lors de la connexion",
+      "Tous les tests psychologiques sont désormais gratuits"
+    ]
+  },
+  {
     "version": "5.24.0",
     "builds": [
       "1785"
     ],
     "notes": [
-      "Le thème clair arbore désormais une palette chaleureuse dans le nouveau design.",
-      "Les widgets de la série « Jours » sur l’écran d’accueil ont été entièrement repensés : mise en page soignée et suivi précis de votre série de jours.",
-      "Correction du journal : les modifications rapides et l’ajout de photos ne provoquent plus de plantages."
+      "Le thème clair arbore désormais une palette chaleureuse dans notre nouveau design",
+      "Les widgets de la série « Jours » ont été entièrement repensés : une mise en page soignée et un suivi précis de votre série (streak)",
+      "Correction du journal : les modifications rapides et l’ajout de photos ne provoquent plus de plantages"
     ]
   },
   {
@@ -16,8 +28,8 @@
       "1621"
     ],
     "notes": [
-      "Correction des fermetures inattendues lors de l’ouverture sur iOS 15–17.",
-      "Rétablissement de la connexion via Apple et des notifications push."
+      "Correction du problème de fermeture inattendue lors de l’ouverture sur iOS 15–17",
+      "Rétablissement de la connexion via Apple et des notifications push"
     ]
   },
   {
@@ -37,8 +49,8 @@
       "1590"
     ],
     "notes": [
-      "L’échelle d’évaluation de la récupération a été divisée en trois niveaux — « Bien », « Très bien » et « Idéal » — avec de nouvelles illustrations.",
-      "Mise à jour des écrans de connexion et d’onboarding : fond chaleureux, nouveau bouton de connexion via Apple et nouvelles icônes pour les sections.",
+      "L’échelle d’évaluation du rétablissement a été divisée en trois niveaux — « Bien », « Excellent » et « Idéal » — et accompagnée de nouvelles illustrations",
+      "Mise à jour des écrans de connexion et d’onboarding : fond chaleureux, nouveau bouton de connexion via Apple et nouvelles icônes de section",
       "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de réseau instable et s’active automatiquement."
     ]
   },
@@ -48,8 +60,8 @@
       "1482"
     ],
     "notes": [
-      "Correction des histoires pédagogiques : les diapositives sans vidéo affichent à nouveau la maquette du smartphone avec la capture d’écran, et rien n’est coupé sur les écrans de petite taille.",
-      "L’écran des fiches de coping est désormais disponible dans toutes les langues de l’application."
+      "Correction des histoires pédagogiques : les diapositives sans vidéo affichent à nouveau une maquette de smartphone avec une capture d’écran, et rien n’est coupé sur les écrans de petite taille",
+      "L’écran de coping est désormais disponible dans toutes les langues de l’application."
     ]
   },
   {
@@ -58,9 +70,9 @@
       "1449"
     ],
     "notes": [
-      "Le remboursement de l’abonnement peut désormais se faire directement dans le chat d’assistance, sans avoir à envoyer d’e-mail ; l’annulation durant la période d’essai se fait en quelques étapes.",
-      "Mise à jour des pages et de la liste des cours ; les en-têtes des écrans internes ont été uniformisés.",
-      "Les écrans d’analyse disposent désormais d’un fond chaleureux ; le contenu se charge plus efficacement en cas de connexion faible."
+      "Le remboursement de l’abonnement peut être demandé directement dans le chat d’assistance, sans avoir à envoyer d’e-mail ; l’annulation durant la période d’essai se fait en quelques étapes",
+      "Mise à jour des pages et de la liste des cours ; les en-têtes des écrans internes ont été uniformisés",
+      "Les écrans de l’analyse bénéficient désormais d’un fond aux tons chaleureux ; le contenu se charge plus efficacement en cas de connexion faible."
     ]
   },
   {
@@ -69,9 +81,9 @@
       "1305"
     ],
     "notes": [
-      "L’ajout d’émotions, les fiches de coping et le code PIN sont désormais gratuits pour tous — l’abonnement n’est plus nécessaire pour ces fonctionnalités.",
-      "Refonte du design : nouveau chevron « retour » sur tous les écrans, nouveaux en-têtes de section et pour l’écran des sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur.",
-      "Correction des flashs blancs lors des transitions en mode sombre ; l’annulation du renouvellement automatique ne retire plus l’accès avant la fin de la période payée."
+      "L’ajout d’émotions, les fiches de coping et le code PIN sont désormais gratuits pour tous — l’abonnement n’est plus nécessaire pour ces fonctions",
+      "Mise à jour du design : nouveau bouton « retour » sur tous les écrans, nouveaux en-têtes de section et d’écran de sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur",
+      "Correction des flashs blancs lors des transitions en mode sombre ; l’annulation du renouvellement automatique ne coupe plus l’accès avant la fin de la période payée."
     ]
   },
   {
@@ -238,7 +250,7 @@
       "593"
     ],
     "notes": [
-      "Le remplissage du journal des pensées automatiques ressemble désormais à une séance avec un psychologue. Grâce au « Dialogue bienveillant », racontez simplement ce qui s’est passé avec vos propres mots — l’assistant vous guidera avec douceur et remplira lui-même les étapes nécessaires du journal. Vous pourrez ainsi vous concentrer pleinement sur vos souvenirs, vos pensées et vos émotions sur le moment, sans vous soucier de la structure du journal."
+      "Remplir le journal des pensées automatiques ressemble désormais à une séance avec un psychologue. Grâce au « Dialogue bienveillant », racontez simplement ce qui s’est passé avec vos propres mots — l’assistant vous guidera avec douceur et remplira lui-même les étapes nécessaires du journal. Vous pourrez vous concentrer sur vos souvenirs, vos pensées et vos ressentis, sans vous soucier de la structure du journal."
     ]
   },
   {
@@ -277,7 +289,7 @@
       "587"
     ],
     "notes": [
-      "Mise à jour majeure de l’assistant IA ! Désormais, l’analyse n’est que le début. Nous avons ajouté un véritable dialogue interactif : discutez de vos prises de conscience et réalisez des pratiques psychologiques sous la direction attentive de l’intelligence artificielle. Et ce n’est que la première étape vers un tout nouveau niveau de soutien !"
+      "Mise à jour majeure de l’assistant IA ! Désormais, l’Analyse n’est que le début. Nous avons ajouté un véritable dialogue interactif : discutez de vos prises de conscience et réalisez des pratiques psychologiques sous la direction attentive de l’intelligence artificielle. Et ce n’est que la première étape vers un tout nouveau niveau de soutien !"
     ]
   },
   {
@@ -385,7 +397,7 @@
       "570"
     ],
     "notes": [
-      "Bonne nouvelle : nous avons décidé de rendre l’application encore plus accessible ! Dès aujourd’hui, nous ouvrons davantage d’options premium à un usage gratuit. Commençons par les sons de relaxation : le minuteur de mise en veille est désormais gratuit, et ce, pour toujours !"
+      "Excellente nouvelle : nous avons décidé de rendre l’application encore plus accessible ! Dès aujourd’hui, nous allons ouvrir davantage d’options premium pour une utilisation gratuite. Commençons par les sons de relaxation : le minuteur de mise en veille est désormais gratuit, et ce, pour toujours !"
     ]
   },
   {
