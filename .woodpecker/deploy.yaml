@@ -1,7 +1,7 @@
 # deploy — деплой статики astro-content на оба контура (selfhost с 2026-10-22).
 # Сборка на боксе (node 24 + pnpm, локфайл pnpm — bun.lock в репо игнорируется)
 # → build-info.json + sha256-манифест → rsync+verify манифеста на global
-# (netcup, публичный IPv4) и на RU (ТОЛЬКО tailnet 100.100.213.68: публичный
+# (netcup, публичный IPv4) и на RU (ТОЛЬКО mesh 100.81.0.4, headscale: публичный
 # IPv4 бокс→РФ деградирован — rsync по нему падает) — ДО любого переключения
 # → атомарный swap current на global, затем на RU (сбой после свитча global —
 # откат global на прежний релиз, контуры не расходятся)
@@ -108,7 +108,7 @@ steps:
 
         GHOST=root@89.58.1.204
         GKEY=/home/coolswood/.ssh/mh_global_deploy
-        RUHOST=root@100.100.213.68
+        RUHOST=root@100.81.0.4
         RKEY=/home/coolswood/infra/github-runner/.ssh/vps_ru_deploy
         SWAPPED_GLOBAL=0
         SWAPPED_RU=0
@@ -177,7 +177,7 @@ steps:
           echo "GLOBAL_VERIFIED $RID"
         REMOTE
 
-        # RU — только tailnet-IP: публичный IPv4 бокс→РФ теряет крупные пакеты
+        # RU — только mesh-IP (headscale): публичный IPv4 бокс→РФ теряет крупные пакеты
         RSYNC_RSH="ssh -i $RKEY -o BatchMode=yes"
         rsync -a --delete -e "$RSYNC_RSH" dist/ "$RUHOST":/srv/content/releases/$RID/
         rsync -a -e "$RSYNC_RSH" dist.manifest "$RUHOST":/srv/content/manifests/$RID.manifest
@@ -228,10 +228,10 @@ steps:
         # Живая проверка build-info — в той же критической секции, что и
         # переключение: после освобождения lock чужой прогон успел бы
         # переключить контуры, и verify ошибочно ронял успешный деплой с
-        # VERIFY_MISMATCH (review PR#35). RU — по tailnet :80 (публичный
+        # VERIFY_MISMATCH (review PR#35). RU — по mesh-IP :80 (публичный
         # путь бокс→РФ деградировал).
         g=$(curl -fsS https://server.mind-health.xyz/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
-        r=$(curl -fsS http://100.100.213.68/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
+        r=$(curl -fsS http://100.81.0.4/build-info.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
         echo "global=$g ru=$r expected=$SHA"
         # явный if: `a && b` под set -e не прерывает сценарий при ложном первом операнде
         if [ "$g" != "$SHA" ] || [ "$r" != "$SHA" ]; then
@@ -273,7 +273,7 @@ steps:
             [ -d "../releases/$${m%.manifest}" ] || rm -f -- "$m"
           done
         REMOTE
-        ssh -i /home/coolswood/infra/github-runner/.ssh/vps_ru_deploy -o BatchMode=yes root@100.100.213.68 <<'REMOTE'
+        ssh -i /home/coolswood/infra/github-runner/.ssh/vps_ru_deploy -o BatchMode=yes root@100.81.0.4 <<'REMOTE'
           set -euo pipefail
           # prune under the same lock as the swap and never delete the release
           # `current` points to: rsync -a preserves build-time mtimes, so with
