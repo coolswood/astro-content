@@ -1,13 +1,24 @@
 [
   {
+    "version": "5.24.2",
+    "builds": [
+      "2043"
+    ],
+    "notes": [
+      "Atualizamos as estatísticas dos diários: nova tela “Seu progresso” — com a distribuição dos registros entre os 4 diários, seu diário favorito, nível de ansiedade e a dinâmica de registros da semana.",
+      "Corrigimos o pagamento via PIX: se o aplicativo do banco não abrir ao clicar em “Pagar”, o pagamento não será mais perdido — você pode voltar à lista de bancos e concluir a transação.",
+      "Pagamentos em Reais agora exigem login na conta."
+    ]
+  },
+  {
     "version": "5.24.1",
     "builds": [
       "1941",
       "1942"
     ],
     "notes": [
-      "Agora você pode assinar o Premium com apenas alguns toques — mesmo sem estar logado",
-      "Os diálogos com a Assistente de IA funcionam sem login se o Premium já estiver ativo; ao entrar, tudo é transferido para sua conta",
+      "O Premium agora pode ser assinado com apenas alguns toques — mesmo sem registro",
+      "Os diálogos com a Assistente de IA funcionam sem login caso o Premium já esteja ativo; ao fazer login, tudo é sincronizado com sua conta",
       "Todos os testes psicológicos agora são gratuitos"
     ]
   },
@@ -17,8 +28,8 @@
       "1785"
     ],
     "notes": [
-      "O tema claro agora faz parte da paleta de cores acolhedora do novo design",
-      "Os widgets de sequência de dias na tela inicial foram totalmente reformulados: layout organizado e contagem precisa de dias seguidos (streak)",
+      "O tema claro agora faz parte da paleta acolhedora do novo design",
+      "Os widgets de série de dias foram totalmente reformulados: layout mais limpo e contagem de dias consecutivos (streak) precisa",
       "Corrigimos o diário: edições rápidas e adição de fotos não causam mais erros"
     ]
   },
@@ -28,8 +39,8 @@
       "1621"
     ],
     "notes": [
-      "Corrigimos o fechamento inesperado do app ao abrir no iOS 15–17",
-      "Retornamos o login via Apple e as notificações push"
+      "Corrigimos o fechamento inesperado ao abrir no iOS 15–17",
+      "Restauramos o login via Apple e as notificações push"
     ]
   },
   {
@@ -38,9 +49,9 @@
       "1611"
     ],
     "notes": [
-      "A escala de avaliação da recuperação foi dividida em três níveis — “Bom”, “Excelente” e “Ideal” — e novas ilustrações foram adicionadas.",
-      "Atualizamos as telas de login e de introdução: fundo mais acolhedor, novo botão de login via Apple e ícones de seções renovados.",
-      "Corrigimos a confirmação da assinatura: o comprovante de compra não é mais perdido em redes instáveis e a ativação agora é automática."
+      "A escala de avaliação da recuperação foi dividida em três níveis — “Bom”, “Excelente” e “Ideal” — e ganhou novas ilustrações.",
+      "Atualizamos as telas de login e de introdução: fundo acolhedor, novo botão de login via Apple e ícones de seções renovados.",
+      "Corrigimos a confirmação da assinatura: o comprovante de compra não é mais perdido em conexões instáveis e a ativação agora é automática."
     ]
   },
   {
@@ -49,9 +60,9 @@
       "1590"
     ],
     "notes": [
-      "A escala de avaliação da recuperação foi dividida em três níveis — “Bom”, “Excelente” e “Ideal” — e ganhou novas ilustrações.",
-      "Atualizamos as telas de login e de introdução: fundo acolhedor, novo botão de login via Apple e ícones de seções renovados.",
-      "Corrigimos a confirmação da assinatura: o comprovante de compra não é mais perdido em conexões instáveis e a ativação agora é automática."
+      "Dividimos a escala de avaliação de recuperação em três níveis — “Bom”, “Excelente” e “Perfeito” — e adicionamos novas ilustrações para eles.",
+      "Atualizamos as telas de login e onboarding: fundo acolhedor, novo botão de login via Apple e ícones de seções renovados.",
+      "Corrigimos a confirmação da assinatura: o comprovante de compra não é mais perdido em conexões instáveis e a assinatura é ativada automaticamente."
     ]
   },
   {
@@ -60,8 +71,8 @@
       "1482"
     ],
     "notes": [
-      "Corrigimos as histórias de aprendizado: slides sem vídeo agora mostram o layout do smartphone com o print, e o conteúdo não é mais cortado em telas menores.",
-      "A tela de enfrentamento agora está disponível em todos os idiomas do app."
+      "Corrigimos as histórias de aprendizado: slides sem vídeo agora mostram novamente o layout do smartphone com o print, e nada é cortado em telas menores.",
+      "A tela de enfrentamento agora está disponível em todos os idiomas do aplicativo."
     ]
   },
   {
@@ -70,9 +81,9 @@
       "1449"
     ],
     "notes": [
-      "O reembolso da assinatura pode ser solicitado diretamente no chat de suporte — sem precisar enviar e-mail; o cancelamento no período de teste agora leva apenas alguns passos.",
-      "Atualizamos as páginas e a lista de cursos; os cabeçalhos das telas internas agora seguem um padrão único.",
-      "As telas de “Raciocínio” agora têm um fundo acolhedor; o conteúdo carrega de forma mais estável em conexões lentas."
+      "O reembolso da assinatura pode ser solicitado diretamente no chat de suporte — sem precisar enviar e-mail; o cancelamento no período de teste é feito em poucos passos.",
+      "Atualizamos as páginas e a lista de todos os cursos; os cabeçalhos das telas internas agora seguem um padrão único de layout.",
+      "As telas de Argumentos a favor e contra agora possuem um fundo acolhedor; o conteúdo carrega de forma mais estável em conexões lentas."
     ]
   },
   {
@@ -81,9 +92,9 @@
       "1305"
     ],
     "notes": [
-      "Adicionar emoções, usar cartões de enfrentamento e o PIN agora são gratuitos para todos — não é mais necessária assinatura para isso.",
-      "Atualizamos o visual: novo ícone de “voltar” em todas as telas, cabeçalhos renovados nas seções e na tela de sons para dormir, além de novas cores para as histórias e para o player.",
-      "Corrigimos os flashes brancos ao alternar para o tema escuro; o cancelamento da renovação automática não remove mais o acesso até o fim do período já pago."
+      "A adição de emoções, os cartões de enfrentamento e o PIN agora são gratuitos para todos — não é mais necessária uma assinatura para usá-los.",
+      "Atualizamos o visual: novo ícone de “voltar” em todas as telas, novos cabeçalhos para as seções e para a tela de sons para dormir, além de novas cores para as histórias e para o player.",
+      "Corrigimos os flashes brancos ao alternar para o tema escuro; o cancelamento da renovação automática não interrompe mais o acesso até o fim do período já pago."
     ]
   },
   {
@@ -250,7 +261,7 @@
       "593"
     ],
     "notes": [
-      "Agora, preencher o Diário de pensamentos automáticos está mais parecido com uma sessão de terapia. No “Diálogo Acolhedor”, basta contar com suas próprias palavras tudo o que aconteceu — a Assistente de IA irá te guiar suavemente e preencherá os passos necessários do diário para você. Assim, você pode se concentrar em suas memórias, pensamentos e sentimentos daquele momento, sem se preocupar com a estrutura do registro."
+      "Agora, preencher o Diário de pensamentos automáticos está mais parecido com uma sessão de terapia. No “Diálogo Acolhedor”, basta contar com suas próprias palavras o que aconteceu — a Assistente de IA irá te guiar suavemente e preencherá os passos necessários do diário para você. Assim, você pode focar em suas memórias, pensamentos e sentimentos daquele momento, sem se preocupar com a estrutura do diário."
     ]
   },
   {
@@ -289,7 +300,7 @@
       "587"
     ],
     "notes": [
-      "Grande atualização da Assistente de IA! Agora, a Análise é apenas o começo. Adicionamos um diálogo interativo completo: discuta os insights recebidos e realize práticas psicológicas sob a orientação cuidadosa da inteligência artificial. E este é apenas o primeiro passo para um nível totalmente novo de suporte!"
+      "Grande atualização da Assistente de IA! Agora, a análise é apenas o começo. Adicionamos um diálogo interativo completo: discuta os insights recebidos e realize práticas psicológicas sob a orientação cuidadosa da inteligência artificial. E este é apenas o primeiro passo para um nível totalmente novo de suporte!"
     ]
   },
   {
@@ -370,7 +381,7 @@
       "574"
     ],
     "notes": [
-      "Conheça a nova seção de exercícios — Práticas de Respiração! 🧘‍♂️ Elas vão te ajudar a aliviar o estresse, lidar com ataques de pânico ou, pelo contrário, mobilizar toda a sua energia! ⚡️"
+      "Conheça a nova seção de atividades — Práticas de Respiração! 🧘‍♂️ Elas ajudam a aliviar o estresse, lidar com o pânico ou, pelo contrário, mobilizar toda a sua energia! ⚡️"
     ]
   },
   {
@@ -397,7 +408,7 @@
       "570"
     ],
     "notes": [
-      "Boas notícias: decidimos tornar o app ainda mais acessível! A partir de hoje, liberaremos mais opções premium para uso gratuito. Começaremos pelos sons relaxantes: agora o timer de parada é gratuito para sempre!"
+      "Boas notícias: decidimos tornar o aplicativo ainda mais acessível! A partir de hoje, liberaremos mais opções premium para uso gratuito. Começaremos com os sons relaxantes: agora o timer de parada é gratuito para sempre!"
     ]
   },
   {
