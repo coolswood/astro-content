@@ -1,13 +1,24 @@
 [
   {
+    "version": "5.24.2",
+    "builds": [
+      "2043"
+    ],
+    "notes": [
+      "Updated journal statistics: a new “Your progress” screen shows your entry distribution across 4 journals, your favorite journal, anxiety levels, and entry trends over the week.",
+      "Fixed SBP payments: if the bank app doesn’t open after tapping “Pay,” your payment is no longer lost — you can return to the bank list and complete the transaction.",
+      "Rubles payments now require you to be logged in."
+    ]
+  },
+  {
     "version": "5.24.1",
     "builds": [
       "1941",
       "1942"
     ],
     "notes": [
-      "Get Premium in just a few taps — even without registering",
-      "AI chats work without logging in if you already have Premium; once you sign in, everything syncs to your account",
+      "Premium can now be activated in just a few taps — even without registering",
+      "AI dialogues work without logging in if you already have Premium; once you log in, everything is synced to your account",
       "All psychological tests are now free"
     ]
   },
@@ -17,8 +28,8 @@
       "1785"
     ],
     "notes": [
-      "The Light theme now features a warm palette in our new design",
-      "Home screen day series widgets have been completely redesigned: clean layouts and accurate streak counting",
+      "The light theme now features a warm palette from our new design",
+      "Home widgets for the day series have been completely redesigned: clean layouts and accurate streak counting",
       "Fixed the journal: quick edits and adding photos no longer cause crashes"
     ]
   },
@@ -29,7 +40,7 @@
     ],
     "notes": [
       "Fixed crashes when opening on iOS 15–17",
-      "Restored Apple Sign-in and push notifications"
+      "Restored Sign in with Apple and push notifications"
     ]
   },
   {
@@ -38,9 +49,9 @@
       "1611"
     ],
     "notes": [
-      "The recovery rating scale has been split into three levels—“Good,” “Great,” and “Perfect”—and includes new illustrations.",
-      "Updated login and onboarding screens: warm backgrounds, a new Sign in with Apple button, and fresh section icons.",
-      "Fixed subscription confirmation: purchase receipts are no longer lost on unstable networks and will activate automatically."
+      "The rating scale has been split into three levels — “Good”, “Great”, and “Perfect” — and updated with new illustrations.",
+      "Updated login and onboarding screens: warm backgrounds, a new Apple Sign-in button, and fresh section icons.",
+      "Fixed subscription confirmation: purchase receipts are no longer lost on unstable networks and now activate automatically."
     ]
   },
   {
@@ -49,9 +60,9 @@
       "1590"
     ],
     "notes": [
-      "The rating scale has been split into three levels — “Good”, “Great”, and “Perfect” — and updated with new illustrations.",
-      "Updated login and onboarding screens: warm backgrounds, a new Apple Sign-in button, and fresh section icons.",
-      "Fixed subscription confirmation: purchase receipts are no longer lost on unstable networks and now activate automatically."
+      "The recovery rating scale has been split into three levels — “Good,” “Great,” and “Perfect” — and we’ve added new illustrations for them.",
+      "Updated the login and onboarding screens: warm backgrounds, a new Sign in with Apple button, and fresh section icons.",
+      "Fixed subscription confirmation: purchase receipts are no longer lost on unstable networks and will activate automatically."
     ]
   },
   {
@@ -70,9 +81,9 @@
       "1449"
     ],
     "notes": [
-      "Subscription refunds can now be processed directly in support chat — no need to email support; canceling a trial period is now just a few steps.",
+      "Subscription refunds can now be requested directly in the support chat — no need to send an email; canceling during the trial period is now just a few steps.",
       "Updated course pages and the full course list; internal screen headers now follow a unified layout.",
-      "The “Reasoning” screens now feature a warm background, and content loads more reliably on weak connections."
+      "Thought record screens now feature a warm background, and content loads more reliably on weak connections."
     ]
   },
   {
@@ -81,9 +92,9 @@
       "1305"
     ],
     "notes": [
-      "Adding emotions, coping cards, and PIN code are now free for everyone — a subscription is no longer required.",
-      "Updated the design: a new “back” chevron on all screens, fresh section headers, a new sleep sounds screen, and new colors for stories and the player.",
-      "Fixed white flashes when transitioning in Dark theme; canceling auto-renewal no longer removes access before the end of the paid period."
+      "Adding emotions, coping cards, and PIN code is now free for everyone — no subscription required.",
+      "Updated the design: a new “back” chevron on all screens, fresh headers for sections and sleep sounds, and new colors for stories and the player.",
+      "Fixed white flashes when switching to dark theme; canceling auto-renewal no longer revokes access before the end of the paid period."
     ]
   },
   {
@@ -250,7 +261,7 @@
       "593"
     ],
     "notes": [
-      "Filling out your automatic thought journal now feels more like a session with a psychologist. With “Gentle Dialogue,” you can simply describe what happened in your own words — your AI assistant will gently guide you and fill in the necessary journal steps for you. This lets you focus on your memories, thoughts, and feelings in the moment, without worrying about the journal’s structure."
+      "Filling out your automatic thought journal now feels more like a session with a psychologist. With “Gentle Dialogue,” you can simply describe what happened in your own words — the AI assistant will gently guide you and fill in the necessary journal steps for you. This lets you focus on your memories, thoughts, and feelings in the moment without worrying about the journal’s structure."
     ]
   },
   {
@@ -397,7 +408,7 @@
       "570"
     ],
     "notes": [
-      "Great news: we’ve decided to make the app even more accessible! From today, we’ll be making more premium features free to use. We’re starting with relaxing sounds: the stop timer is now free forever!"
+      "Great news: we’ve decided to make the app even more accessible! From today, we’ll be unlocking more Premium features for free use. We’re starting with relaxing sounds: the sleep timer is now free forever!"
     ]
   },
   {
