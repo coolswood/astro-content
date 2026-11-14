@@ -47,14 +47,16 @@ steps:
         git init -q .
         git remote add origin "$URL"
         if [ -n "$SHA" ]; then
-          git fetch -q --depth 1 origin "$SHA"
+          # timeout: зависший fetch (сервер принял соединение и замолчал)
+          # не занимает слот агента до внешнего прерывания (ревью PR #54).
+          timeout 120 git fetch -q --depth 1 origin "$SHA"
           git checkout -q FETCH_HEAD
         else
           # фолбэк — ветка-источник события, затем ветка события
           BRANCH=$(printenv CI_COMMIT_SOURCE_BRANCH || true)
           [ -n "$BRANCH" ] || BRANCH=$(printenv CI_COMMIT_BRANCH || true)
           [ -n "$BRANCH" ] || { echo "no SHA and no branch to test"; exit 1; }
-          git fetch -q --depth 1 origin "$BRANCH"
+          timeout 120 git fetch -q --depth 1 origin "$BRANCH"
           git checkout -q FETCH_HEAD
           SHA=$(git rev-parse HEAD)
         fi
