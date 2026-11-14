@@ -69,7 +69,7 @@ steps:
         # credential-store git: это доверенные команды пайплайна, код
         # коммита их не исполняет.
         SHA=$(printenv CI_COMMIT_SHA || true)
-        URL=https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git
+        URL=https://git.box.mind-health.xyz:4443/coolswood/astro-content.git
         git init -q .
         git remote add origin "$URL"
         if [ -n "$SHA" ]; then
