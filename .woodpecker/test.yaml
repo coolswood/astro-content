@@ -1,0 +1,109 @@
+# test — guard-тесты репозитория на каждый PR (opened/synchronize/reopened,
+# нативные pull_request-события Forgejo — как в ai-review.yaml).
+#
+# Что гоняет: bun test по tests/*.test.ts (20 файлов, доли секунды). Ядро —
+# tests/releases-registry.test.ts: уникальность версий в
+# src/i18n/<lang>/releases.json, который mindhealth-server парсит на каждый
+# запрос (дубль версии = репорт «releases registry: duplicate version …» в
+# оба контура на каждый процесс сервера, GlitchTip #4181/#4187). Релиз-
+# заметочные PR уже дважды заноили дубли в реестр (волна 28.10 —
+# ar/fr/id/ko/pl, #4179–#4181; рецидив 13.11 — дубль 5.13.1 в ar/cs/ja,
+# PR #53/0b567a4). Тест существовал с 28.10 (70bf76f), но CI его не
+# исполнял — подключён этим пайплайном: дубль ломает PR до влития.
+#
+# Зависимостей у тестов нет (bun:test + node builtins + коммитные
+# scripts/lib/*.js) — pnpm install не нужен, чекаут гоняется как есть.
+# Разделение доверия (review PR #54): чекаут точного SHA события (головы
+# PR; fetch по SHA разрешён на Forgejo; паттерн deploy.yaml) выполняют
+# сами команды пайплайна на хосте (backend=local; HOME агента — только для
+# credential-store git), а КОД КОММИТА (тесты и package.json-скрипты из
+# головы PR) исполняется в ВЫКИДНОМ КОНТЕЙНЕРЕ oven/bun:1.4.2 (версия
+# хостового bun; docker-бэкенд-агента на боксе нет, но docker CLI доступен
+# агенту через группу docker): сеть отрезана (--network none), каталог
+# репо смонтирован read-only, HOME/секреты бокса и docker-сокет в контейнер
+# не проброшены, контейнер с лимитами CPU/памяти/PID и гарантированной
+# очисткой по имени (docker rm -f в trap на EXIT) — изменённый PR-ом тест
+# или скрипт test не читает домашний каталог и секреты агента
+# (credential-store, Infisical), не меняет файлы хоста и не съедает его
+# ресурсы. isolated-home агента (v3.18) такое НЕ даёт: он подменяет только
+# переменную HOME, процесс на local-бэкенде остаётся пользователем хоста.
+# Граница остаточного доверия (ревью PR #54, заход 4): Woodpecker читает сам
+# этот YAML из головы PR, поэтому «доверенные команды на хосте» доверенны
+# ровно настолько, насколько доверен автор PR. На этом контуре автор PR
+# один — владелец: Forgejo приватный и tailnet-only, регистрация закрыта,
+# посторонних аккаунтов с доступом к репо нет (проверено 2026-11-14).
+# Остаточный сценарий — скомпрометированный агентский токен владельца;
+# его закрытие (конфиг из защищённого источника или секретлесс-агент для
+# PR-пайплайнов) — отдельная инфраструктурная задача, сознательно вне
+# этого PR.
+# Деплой (push в main) тесты сознательно не гоняет: при зелёном PR-пайплайне
+# дубль в main не попадает — guard стоит перед влитием, а не после.
+# ⚠️ Подстановки «доллар + фигурные скобки» и двойной доллар в commands
+# не использовать — Woodpecker подставляет их в YAML до запуска
+# (drone/envsubst: имя в фигурных скобках → значение, двойной доллар →
+# один; двойной доллар в имени контейнера ронял шаг с exit 125,
+# pipeline 75). envsubst обрабатывает ВЕСЬ файл, включая комментарии, —
+# литеральных доллар-последовательностей не должно быть нигде.
+
+when:
+  - event: pull_request
+
+skip_clone: true
+labels:
+  backend: local
+  lane: services
+
+steps:
+  - name: test
+    image: bash
+    environment:
+      # Шагу нужны git/timeout/docker — всё в системных путях; личные
+      # bin-каталоги больше не нужны (bun переехал в контейнер).
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        # Чекаут точного SHA события (головы PR): тестируем коммит, а не
+        # «текущую main» (паттерн deploy.yaml). HOME агента — только для
+        # credential-store git: это доверенные команды пайплайна, код
+        # коммита их не исполняет.
+        SHA=$(printenv CI_COMMIT_SHA || true)
+        URL=https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git
+        git init -q .
+        git remote add origin "$URL"
+        if [ -n "$SHA" ]; then
+          # timeout: зависший fetch (сервер принял соединение и замолчал)
+          # не занимает слот агента до внешнего прерывания (ревью PR #54).
+          timeout 120 git fetch -q --depth 1 origin "$SHA"
+          git checkout -q FETCH_HEAD
+        else
+          # фолбэк — ветка-источник события, затем ветка события
+          BRANCH=$(printenv CI_COMMIT_SOURCE_BRANCH || true)
+          [ -n "$BRANCH" ] || BRANCH=$(printenv CI_COMMIT_BRANCH || true)
+          [ -n "$BRANCH" ] || { echo "no SHA and no branch to test"; exit 1; }
+          timeout 120 git fetch -q --depth 1 origin "$BRANCH"
+          git checkout -q FETCH_HEAD
+          SHA=$(git rev-parse HEAD)
+        fi
+        echo "testing $SHA"
+        # Код коммита — только в выкидном контейнере (см. шапку): без сети,
+        # репо read-only, без HOME/секретов/сокета хоста. Лимиты ресурсов
+        # (CPU/память/PID): тесты идут долями секунды, запас кратный, а
+        # зависший или зловредный тест не съедает память и PID'ы хоста.
+        # timeout -k — как у fetch выше (зависший тест не занимает слот
+        # агента), плюс добивающий SIGKILL для CLI, игнорирующего SIGTERM.
+        # Контейнер ИМЕНОВАННЫЙ: timeout останавливает только docker CLI,
+        # сам контейнер может жить дальше (--rm срабатывает лишь после
+        # остановки) — trap на EXIT делает docker rm -f по имени при любом
+        # исходе шага (ревью PR #54, заход 3). Сам rm тоже под timeout -k
+        # (заход 4): при зависшем docker-daemon основной запуск останавливает
+        # свой timeout, а cleanup не должен вечно держать слот агента.
+        # Суффикс уникальности — наносекунды, НЕ двойной доллар: envsubst
+        # сплющивает его в одинокий доллар ещё до bash (pipeline 75/76:
+        # невалидное имя контейнера → docker exit 125).
+        CNAME="wc-test-$(printenv CI_PIPELINE_NUMBER 2>/dev/null || echo 0)-$(date +%s%N)"
+        trap 'timeout -k 10 30 docker rm -f "$CNAME" >/dev/null 2>&1 || true' EXIT
+        timeout -k 30 300 docker run --rm --name "$CNAME" \
+          --network none --memory 4g --cpus 4 --pids-limit 512 \
+          -v "$PWD:/repo:ro" -w /repo oven/bun:1.4.2 run test
