@@ -12,12 +12,21 @@
 # исполнял — подключён этим пайплайном: дубль ломает PR до влития.
 #
 # Зависимостей у тестов нет (bun:test + node builtins + коммитные
-# scripts/lib/*.js) — pnpm install не нужен, чекаут гоняется как есть;
-# bun живёт на хосте (~/.bun/bin). Исполнение НА ХОСТЕ (backend=local,
-# isolated-home агента v3.18) — чекаут точного SHA события (головы PR;
-# fetch по SHA разрешён на Forgejo), как в deploy.yaml. Деплой (push в
-# main) тесты сознательно не гоняет: при зелёном PR-пайплайне дубль в
-# main не попадает — guard стоит перед влитием, а не после.
+# scripts/lib/*.js) — pnpm install не нужен, чекаут гоняется как есть.
+# Разделение доверия (review PR #54): чекаут точного SHA события (головы
+# PR; fetch по SHA разрешён на Forgejo; паттерн deploy.yaml) выполняют
+# сами команды пайплайна на хосте (backend=local; HOME агента — только для
+# credential-store git), а КОД КОММИТА (тесты и package.json-скрипты из
+# головы PR) исполняется в ВЫКИДНОМ КОНТЕЙНЕРЕ oven/bun:1.4.2 (версия
+# хостового bun; docker-бэкенд-агента на боксе нет, но docker CLI доступен
+# агенту через группу docker): сеть отрезана (--network none), каталог
+# репо смонтирован read-only, HOME/секреты бокса и docker-сокет в контейнер
+# не проброшены — изменённый PR-ом тест или скрипт test не читает домашний
+# каталог и секреты агента (credential-store, Infisical) и не меняет файлы
+# хоста. isolated-home агента (v3.18) такое НЕ даёт: он подменяет только
+# переменную HOME, процесс на local-бэкенде остаётся пользователем хоста.
+# Деплой (push в main) тесты сознательно не гоняет: при зелёном PR-пайплайне
+# дубль в main не попадает — guard стоит перед влитием, а не после.
 # ⚠️ Доллар-фигурные подстановки в commands не использовать — Woodpecker
 # подставляет их в YAML до запуска (drone/envsubst).
 
@@ -33,15 +42,17 @@ steps:
   - name: test
     image: bash
     environment:
-      # PATH агента не содержит bun (~/.bun/bin) — добавляем сами (как
-      # ai-review.yaml добавляет ~/.local/bin).
-      PATH: /home/coolswood/.bun/bin:/home/coolswood/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      # Шагу нужны git/timeout/docker — всё в системных путях; личные
+      # bin-каталоги больше не нужны (bun переехал в контейнер).
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     commands:
       - |
         export HOME=/home/coolswood
         set -euo pipefail
         # Чекаут точного SHA события (головы PR): тестируем коммит, а не
-        # «текущую main» (паттерн deploy.yaml).
+        # «текущую main» (паттерн deploy.yaml). HOME агента — только для
+        # credential-store git: это доверенные команды пайплайна, код
+        # коммита их не исполняет.
         SHA=$(printenv CI_COMMIT_SHA || true)
         URL=https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git
         git init -q .
@@ -61,4 +72,8 @@ steps:
           SHA=$(git rev-parse HEAD)
         fi
         echo "testing $SHA"
-        bun run test
+        # Код коммита — только в выкидном контейнере (см. шапку): без сети,
+        # репо read-only, без HOME/секретов/сокета хоста. timeout — как у
+        # fetch выше: зависший тест не занимает слот агента.
+        timeout 300 docker run --rm --network none \
+          -v "$PWD:/repo:ro" -w /repo oven/bun:1.4.2 run test
