@@ -1,0 +1,62 @@
+# test — guard-тесты репозитория на каждый PR (opened/synchronize/reopened,
+# нативные pull_request-события Forgejo — как в ai-review.yaml).
+#
+# Что гоняет: bun test по tests/*.test.ts (20 файлов, доли секунды). Ядро —
+# tests/releases-registry.test.ts: уникальность версий в
+# src/i18n/<lang>/releases.json, который mindhealth-server парсит на каждый
+# запрос (дубль версии = репорт «releases registry: duplicate version …» в
+# оба контура на каждый процесс сервера, GlitchTip #4181/#4187). Релиз-
+# заметочные PR уже дважды заноили дубли в реестр (волна 28.10 —
+# ar/fr/id/ko/pl, #4179–#4181; рецидив 13.11 — дубль 5.13.1 в ar/cs/ja,
+# PR #53/0b567a4). Тест существовал с 28.10 (70bf76f), но CI его не
+# исполнял — подключён этим пайплайном: дубль ломает PR до влития.
+#
+# Зависимостей у тестов нет (bun:test + node builtins + коммитные
+# scripts/lib/*.js) — pnpm install не нужен, чекаут гоняется как есть;
+# bun живёт на хосте (~/.bun/bin). Исполнение НА ХОСТЕ (backend=local,
+# isolated-home агента v3.18) — чекаут точного SHA события (головы PR;
+# fetch по SHA разрешён на Forgejo), как в deploy.yaml. Деплой (push в
+# main) тесты сознательно не гоняет: при зелёном PR-пайплайне дубль в
+# main не попадает — guard стоит перед влитием, а не после.
+# ⚠️ Доллар-фигурные подстановки в commands не использовать — Woodpecker
+# подставляет их в YAML до запуска (drone/envsubst).
+
+when:
+  - event: pull_request
+
+skip_clone: true
+labels:
+  backend: local
+  lane: services
+
+steps:
+  - name: test
+    image: bash
+    environment:
+      # PATH агента не содержит bun (~/.bun/bin) — добавляем сами (как
+      # ai-review.yaml добавляет ~/.local/bin).
+      PATH: /home/coolswood/.bun/bin:/home/coolswood/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    commands:
+      - |
+        export HOME=/home/coolswood
+        set -euo pipefail
+        # Чекаут точного SHA события (головы PR): тестируем коммит, а не
+        # «текущую main» (паттерн deploy.yaml).
+        SHA=$(printenv CI_COMMIT_SHA || true)
+        URL=https://gx10-7e45.tail5a1858.ts.net:3011/coolswood/astro-content.git
+        git init -q .
+        git remote add origin "$URL"
+        if [ -n "$SHA" ]; then
+          git fetch -q --depth 1 origin "$SHA"
+          git checkout -q FETCH_HEAD
+        else
+          # фолбэк — ветка-источник события, затем ветка события
+          BRANCH=$(printenv CI_COMMIT_SOURCE_BRANCH || true)
+          [ -n "$BRANCH" ] || BRANCH=$(printenv CI_COMMIT_BRANCH || true)
+          [ -n "$BRANCH" ] || { echo "no SHA and no branch to test"; exit 1; }
+          git fetch -q --depth 1 origin "$BRANCH"
+          git checkout -q FETCH_HEAD
+          SHA=$(git rev-parse HEAD)
+        fi
+        echo "testing $SHA"
+        bun run test
