@@ -38,8 +38,9 @@
 # этого PR.
 # Деплой (push в main) тесты сознательно не гоняет: при зелёном PR-пайплайне
 # дубль в main не попадает — guard стоит перед влитием, а не после.
-# ⚠️ Доллар-фигурные подстановки в commands не использовать — Woodpecker
-# подставляет их в YAML до запуска (drone/envsubst).
+# ⚠️ Доллар-фигурные подстановки (${}) и $$ в commands не использовать —
+# Woodpecker подставляет их в YAML до запуска (drone/envsubst: ${X} →
+# значение, $$ → $; $$ в имени контейнера роняло шаг с exit 125, pipeline 75).
 
 when:
   - event: pull_request
@@ -95,7 +96,10 @@ steps:
         # исходе шага (ревью PR #54, заход 3). Сам rm тоже под timeout -k
         # (заход 4): при зависшем docker-daemon основной запуск останавливает
         # свой timeout, а cleanup не должен вечно держать слот агента.
-        CNAME="wc-test-$(printenv CI_PIPELINE_NUMBER 2>/dev/null || echo 0)-$$"
+        # Суффикс уникальности — наносекунды, НЕ $$: envsubst Woodpecker
+        # сплющивает $$ в один $ ещё до bash (pipeline 75/76: имя
+        # «wc-test-76-$» → docker exit 125).
+        CNAME="wc-test-$(printenv CI_PIPELINE_NUMBER 2>/dev/null || echo 0)-$(date +%s%N)"
         trap 'timeout -k 10 30 docker rm -f "$CNAME" >/dev/null 2>&1 || true' EXIT
         timeout -k 30 300 docker run --rm --name "$CNAME" \
           --network none --memory 4g --cpus 4 --pids-limit 512 \
