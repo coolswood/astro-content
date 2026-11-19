@@ -1,13 +1,24 @@
 [
   {
+    "version": "5.24.3",
+    "builds": [
+      "2128"
+    ],
+    "notes": [
+      "Günlükler güncellendi: Haftalık takvim, kayıt kartları ve ayarlar artık tek bir sayfada yer alıyor; ayrıca kayıtlar artık kaydırarak silinebiliyor.",
+      "\"Huzur\" ekranına \"Aktiviteler\" kutucuğu eklendi.",
+      "iOS'ta metin seçerken yaşanan kapanma sorunu giderildi; wellness bölümlerindeki filigranlar ve başlıklar düzeltildi."
+    ]
+  },
+  {
     "version": "5.24.2",
     "builds": [
       "2043"
     ],
     "notes": [
-      "Günlük istatistikleri güncellendi: Yeni \"Gelişiminiz\" ekranı ile kayıtlarınızın 4 farklı günlüğe dağılımını, en çok kullandığınız günlüğü, kaygı seviyenizi ve haftalık kayıt dinamiğinizi takip edebilirsiniz.",
-      "SBP (Hızlı Ödeme Sistemi) ile ilgili ödeme sorunu giderildi: \"Öde\" butonuna basıldığında banka uygulaması açılmazsa ödeme artık kaybolmuyor; banka listesine geri dönüp ödemenizi tamamlayabilirsiniz.",
-      "Ruble ile yapılan ödemelerde artık hesap girişi yapılması gerekmektedir."
+      "Günlük istatistikleri güncellendi: Yeni \"Gelişiminiz\" ekranı ile kayıtların 4 farklı günlüğe dağılımını, en çok kullanılan günlüğü, kaygı seviyenizi ve haftalık kayıt dinamiğinizi takip edebilirsiniz.",
+      "SBP (Hızlı Ödeme Sistemi) ile ödeme sorunu giderildi: \"Öde\" butonuna basıldığında banka uygulaması açılmazsa ödeme artık kaybolmuyor; banka listesine geri dönüp ödemeyi tamamlayabilirsiniz.",
+      "Ruble ile yapılan ödemeler artık hesap girişi gerektiriyor."
     ]
   },
   {
@@ -17,9 +28,9 @@
       "1942"
     ],
     "notes": [
-      "Premium üyeliğe artık kayıt olmaya gerek kalmadan, sadece birkaç dokunuşla sahip olabilirsiniz.",
-      "Premium üyeliğiniz varsa, giriş yapmadan da yapay zekâ asistanı ile diyalog kurabilirsiniz; giriş yaptığınızda tüm verileriniz hesabınıza aktarılır.",
-      "Tüm psikolojik testler ücretsiz hale getirildi."
+      "Premium artık kayıt olmaya gerek kalmadan sadece birkaç dokunuşla alınabiliyor.",
+      "Premium üyeliğiniz varsa, yapay zekâ diyalogları giriş yapmadan da çalışır; giriş yaptığınızda ise tüm veriler hesabınıza aktarılır.",
+      "Tüm psikolojik testler artık ücretsiz."
     ]
   },
   {
@@ -29,8 +40,8 @@
     ],
     "notes": [
       "Açık tema, yeni tasarımın sıcak renk paletiyle güncellendi.",
-      "Ana ekrandaki seri gün widget'ları tamamen yenilendi: Daha düzenli bir yerleşim ve doğru bir seri (streak) sayacı eklendi.",
-      "Günlük özelliği iyileştirildi: Hızlı düzenleme ve fotoğraf ekleme işlemleri artık sorunsuz çalışıyor."
+      "Gün serisi ana ekran widget'ları tamamen yenilendi: Daha düzenli bir görünüm ve doğru seri (streak) sayacı eklendi.",
+      "Günlük hatası giderildi: Hızlı düzenlemeler ve fotoğraf ekleme işlemleri artık uygulamayı çökertmiyor."
     ]
   },
   {
@@ -39,8 +50,8 @@
       "1621"
     ],
     "notes": [
-      "iOS 15–17 sürümlerinde yaşanan kapanma sorunu giderildi.",
-      "Apple ile giriş ve anlık bildirimler (push notifications) geri getirildi."
+      "iOS 15–17 sürümlerinde uygulama açılırken yaşanan kapanma sorunu giderildi.",
+      "Apple ile giriş ve anlık bildirimler geri getirildi."
     ]
   },
   {
@@ -50,8 +61,8 @@
     ],
     "notes": [
       "İyileşme değerlendirme ölçeği \"İyi\", \"Harika\" ve \"Mükemmel\" olmak üzere üç seviyeye ayrıldı ve yeni illüstrasyonlar eklendi.",
-      "Giriş ve karşılama (onboarding) ekranları güncellendi: sıcak bir arka plan, yeni Apple ile giriş butonu ve yenilenmiş bölüm ikonları eklendi.",
-      "Abonelik onaylama sorunu giderildi: Satın alma makbuzu artık zayıf ağ bağlantılarında kaybolmuyor ve abonelik otomatik olarak aktifleşiyor."
+      "Giriş ve karşılama (onboarding) ekranları güncellendi: Sıcak bir arka plan, yeni Apple ile giriş butonu ve yenilenmiş bölüm simgeleri eklendi.",
+      "Abonelik onaylama sorunu giderildi: İnternet bağlantısı zayıf olduğunda satın alma fişi artık kaybolmuyor ve abonelik otomatik olarak aktifleşiyor."
     ]
   },
   {
@@ -60,8 +71,8 @@
       "1590"
     ],
     "notes": [
-      "İyileşme değerlendirme ölçeği \"İyi\", \"Harika\" ve \"Mükemmel\" olmak üzere üç seviyeye ayrıldı ve yeni illüstrasyonlar eklendi.",
-      "Giriş ve karşılama (onboarding) ekranları güncellendi: Sıcak bir arka plan, yeni Apple ile giriş butonu ve yenilenmiş bölüm simgeleri eklendi.",
+      "İyileşme değerlendirme ölçeği üç seviyeye ayrıldı — \"İyi\", \"Harika\" ve \"Mükemmel\" — ve bunlara yeni illüstrasyonlar eklendi.",
+      "Giriş ve tanıtım ekranları güncellendi: Sıcak bir arka plan, yeni Apple ile giriş butonu ve yenilenmiş bölüm ikonları eklendi.",
       "Abonelik onaylama sorunu giderildi: İnternet bağlantısı zayıf olduğunda satın alma fişi artık kaybolmuyor ve abonelik otomatik olarak aktifleşiyor."
     ]
   },
@@ -71,8 +82,8 @@
       "1482"
     ],
     "notes": [
-      "Eğitici hikayeler düzeltildi: Videolu olmayan slaytlarda akıllı telefon maketi ve ekran görüntüsü tekrar görünüyor; küçük ekranlarda içerik kesilmesi sorunu giderildi.",
-      "Baş etme kartları ekranı artık uygulamanın tüm dillerinde mevcut."
+      "Eğitici hikayelerdeki hatalar giderildi: Videolu olmayan slaytlarda akıllı telefon taslağı ve ekran görüntüsü tekrar görünüyor; ayrıca küçük ekranlarda içerik kesilmiyor.",
+      "Baş etme ekranı artık uygulamanın tüm dillerinde mevcut."
     ]
   },
   {
@@ -81,9 +92,9 @@
       "1449"
     ],
     "notes": [
-      "Abonelik iadesi artık destek e-postası göndermeye gerek kalmadan doğrudan destek sohbetinden yapılabiliyor; deneme süresinde iptal işlemi birkaç adımda tamamlanıyor.",
-      "Kurs sayfaları ve tüm kursların listesi güncellendi; uygulama içi ekranların üst kısımları (header) tek bir tasarım düzenine getirildi.",
-      "\"Akıl Yürütme\" ekranları artık sıcak bir arka plana sahip; içerikler zayıf internet bağlantısında daha güvenilir bir şekilde yükleniyor."
+      "Abonelik iadeleri, destek ekibine e-posta göndermenize gerek kalmadan doğrudan destek sohbeti üzerinden gerçekleştirilir; deneme süresinde iptal işlemi ise sadece birkaç adım sürer.",
+      "Kurs sayfaları ve tüm kursların listesi güncellendi; iç ekranların üst kısımları tasarım şablonuna uygun olarak tek tip hale getirildi.",
+      "\"Düşünceler\" ekranları artık daha sıcak bir arka plana sahip; içerikler zayıf ağ bağlantılarında daha güvenilir bir şekilde yükleniyor."
     ]
   },
   {
@@ -92,9 +103,9 @@
       "1305"
     ],
     "notes": [
-      "Duygu ekleme, öneri kartları ve pin kodu artık herkes için ücretsiz — bu özellikler için artık abonelik gerekmiyor.",
-      "Tasarım güncellendi: Tüm ekranlarda yeni bir \"geri\" oku, bölümler ve uyku sesleri ekranı için yeni başlıklar, hikayeler ve oynatıcı için yeni renkler eklendi.",
-      "Karanlık temada geçişler sırasında oluşan beyaz parlamalar giderildi; otomatik yenilemeyi iptal etmek artık ödenmiş sürenin sonuna kadar erişimi engellemiyor."
+      "Duygu ekleme, öneri kartları ve PIN kodu artık herkes için ücretsiz; bu özellikler için artık abonelik gerekmiyor.",
+      "Tasarım güncellendi: Tüm ekranlarda yeni bir \"geri\" oku, yenilenmiş bölüm başlıkları, uyku sesleri ekranındaki yenilikler, hikayeler ve oynatıcı için yeni renkler eklendi.",
+      "Karanlık temada geçiş yaparken oluşan beyaz parlamalar giderildi; otomatik yenilemeyi iptal etmek artık ödenmiş dönemin sonuna kadar erişimi engellemiyor."
     ]
   },
   {
@@ -261,7 +272,7 @@
       "593"
     ],
     "notes": [
-      "Otomatik düşünce günlüğü doldurmak artık bir psikologla görüşüyormuşsunuz gibi hissettiriyor. \"Şefkatli Diyalog\" ile sadece olanları kendi kelimelerinizle anlatın; asistanınız size nazikçe rehberlik edecek ve günlüğün gerekli adımlarını sizin yerinize dolduracaktır. Böylece günlüğün yapısına takılmadan sadece o anki anılarınıza, düşüncelerinize ve duygularınıza odaklanabileceksiniz."
+      "Otomatik düşünce günlüğü doldurmak artık bir psikologla görüşüyormuşsunuz gibi hissettiriyor. \"Şefkatli Diyalog\" ile olan biten her şeyi sadece kendi kelimelerinizle anlatın; asistanınız size nazikçe rehberlik edecek ve günlüğün gerekli adımlarını sizin yerinize dolduracaktır. Böylece günlüğün yapısına takılmadan sadece o anki anılarınıza, düşüncelerinize ve duygularınıza odaklanabileceksiniz."
     ]
   },
   {
@@ -300,7 +311,7 @@
       "587"
     ],
     "notes": [
-      "Yapay zekâ asistanında büyük güncelleme! Artık Analiz sadece bir başlangıç. Tam kapsamlı etkileşimli bir diyalog ekledik: Elde ettiğiniz içgörüleri tartışabilir ve yapay zekânın hassas rehberliği eşliğinde psikolojik pratikler yapabilirsiniz. Ve bu, tamamen yeni bir destek seviyesine giden yolun sadece ilk adımı!"
+      "Yapay zekâ asistanında büyük güncelleme! Artık Analiz sadece bir başlangıç. Tam kapsamlı etkileşimli bir diyalog ekledik: elde ettiğiniz içgörüleri tartışabilir ve yapay zekânın hassas rehberliği altında psikolojik pratikler yapabilirsiniz. Ve bu, tamamen yeni bir destek seviyesine giden yolda sadece ilk adım!"
     ]
   },
   {
@@ -381,7 +392,7 @@
       "574"
     ],
     "notes": [
-      "Egzersizlerde yeni bir bölümle tanışın: Nefes Çalışmaları! 🧘‍♂️ Stresi azaltmanıza, panik ataklarla baş etmenize veya tam tersine, tüm enerjinizi toplamanıza yardımcı olacaklar! ⚡️"
+      "Egzersizlerde yeni bir bölümle tanışın — Nefes Çalışmaları! 🧘‍♂️ Stresi azaltmanıza, panik ataklarla baş etmenize veya tam tersine, tüm enerjinizi toplamanıza yardımcı olacaklar! ⚡️"
     ]
   },
   {
@@ -408,7 +419,7 @@
       "570"
     ],
     "notes": [
-      "Harika haberler: Uygulamayı daha erişilebilir kılmaya karar verdik! Bugünden itibaren daha fazla premium seçeneği ücretsiz kullanıma açıyoruz. Rahatlatıcı seslerle başlıyoruz: Artık durdurma zamanlayıcısı sonsuza dek ücretsiz!"
+      "Harika haberler: Uygulamayı daha erişilebilir kılmaya karar verdik! Bugünden itibaren daha fazla premium özelliği ücretsiz kullanımınıza açacağız. Rahatlatıcı seslerle başlıyoruz: Uyku zamanlayıcısı artık tamamen ücretsiz!"
     ]
   },
   {

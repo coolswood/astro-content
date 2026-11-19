@@ -1,12 +1,23 @@
 [
   {
+    "version": "5.24.3",
+    "builds": [
+      "2128"
+    ],
+    "notes": [
+      "Wir haben die Tagebücher aktualisiert: Wochenkalender, Einträge und Einstellungen befinden sich nun auf einer Seite, und Einträge können per Swipe gelöscht werden.",
+      "Auf dem Bildschirm „Ruhe“ gibt es jetzt die Kachel „Aktivitäten“.",
+      "Ein Absturz unter iOS bei der Textauswahl wurde behoben, zudem wurden Wasserzeichen und Überschriften in den Wellness-Bereichen korrigiert."
+    ]
+  },
+  {
     "version": "5.24.2",
     "builds": [
       "2043"
     ],
     "notes": [
-      "Wir haben die Tagebuch-Statistik aktualisiert: Auf dem neuen Bildschirm „Ihr Fortschritt“ sehen Sie die Verteilung Ihrer Einträge auf die vier Tagebücher, Ihr bevorzugtes Tagebuch, Ihr Angstniveau sowie die Dynamik Ihrer Einträge der letzten Woche.",
-      "Fehler bei der Zahlung via SBP behoben: Falls sich die Bank-App nach dem Klicken auf „Bezahlen“ nicht automatisch öffnet, geht die Zahlung nicht mehr verloren – Sie können zur Bankenliste zurückkehren und den Vorgang abschließen.",
+      "Die Tagebuch-Statistik wurde aktualisiert: Der neue Bildschirm „Ihr Fortschritt“ zeigt die Verteilung der Einträge auf die 4 Tagebücher, Ihr bevorzugtes Tagebuch, Ihr Angstniveau sowie die Dynamik der Einträge der letzten Woche.",
+      "Fehler bei der Zahlung via SBP behoben: Falls die Bank nach dem Klicken auf „Bezahlen“ nicht automatisch geöffnet wird, geht die Zahlung nicht mehr verloren – Sie können zur Bankenliste zurückkehren und den Vorgang abschließen.",
       "Zahlungen in Rubel erfordern nun eine Anmeldung im Konto."
     ]
   },
@@ -17,9 +28,9 @@
       "1942"
     ],
     "notes": [
-      "Premium-Abonnements können jetzt mit nur wenigen Klicks abgeschlossen werden – sogar ohne vorherige Registrierung.",
-      "KI-Dialoge funktionieren auch ohne Anmeldung, sofern bereits ein Premium-Abo besteht; nach dem Login werden alle Daten automatisch mit Ihrem Konto verknüpft.",
-      "Alle psychologischen Tests sind ab sofort kostenlos verfügbar."
+      "Premium ist jetzt mit nur wenigen Klicks abschließbar – sogar ohne Registrierung.",
+      "KI-Dialoge funktionieren ohne Anmeldung, sofern Premium bereits aktiviert ist; nach der Anmeldung werden alle Daten in Ihr Konto übertragen.",
+      "Alle psychologischen Tests sind nun kostenlos verfügbar."
     ]
   },
   {
@@ -28,8 +39,8 @@
       "1785"
     ],
     "notes": [
-      "Der helle Modus ist nun Teil der warmen Farbpalette unseres neuen Designs.",
-      "Die Home-Widgets für die Days-Serie wurden komplett überarbeitet: mit einem übersichtlichen Layout und einer präzisen Zählung Ihrer Serie (Streak).",
+      "Der helle Modus ist nun in der warmen Farbpalette des neuen Designs gestaltet.",
+      "Die Home-Widgets für die Tagesreihen wurden komplett überarbeitet: mit sauberem Layout und einer präzisen Zählung der Streaks.",
       "Fehler im Tagebuch behoben: Schnelle Bearbeitungen und das Hinzufügen von Fotos führen nicht mehr zu Abstürzen."
     ]
   },
@@ -39,8 +50,8 @@
       "1621"
     ],
     "notes": [
-      "Abstürze beim Öffnen auf iOS 15–17 wurden behoben.",
-      "Der Login via Apple und Push-Benachrichtigungen sind wieder verfügbar."
+      "Abstürze beim Öffnen unter iOS 15–17 wurden behoben.",
+      "Login via Apple und Push-Benachrichtigungen wurden wiederhergestellt."
     ]
   },
   {
@@ -51,7 +62,7 @@
     "notes": [
       "Die Skala zur Einschätzung des Befindens wurde in drei Stufen unterteilt – „Gut“, „Ausgezeichnet“ und „Ideal“ – und mit neuen Illustrationen ergänzt.",
       "Die Login- und Onboarding-Bildschirme wurden aktualisiert: warmer Hintergrund, ein neuer Apple-Login-Button und frische Icons für die Bereiche.",
-      "Die Abonnement-Bestätigung wurde korrigiert: Der Kaufbeleg geht bei instabiler Verbindung nicht mehr verloren und das Abo wird automatisch aktiviert."
+      "Fehler bei der Abonnement-Bestätigung behoben: Der Kaufbeleg geht bei instabiler Internetverbindung nicht mehr verloren und das Abo wird automatisch aktiviert."
     ]
   },
   {
@@ -60,9 +71,9 @@
       "1590"
     ],
     "notes": [
-      "Die Skala zur Einschätzung des Befindens wurde in drei Stufen unterteilt – „Gut“, „Ausgezeichnet“ und „Ideal“ – und mit neuen Illustrationen ergänzt.",
+      "Die Skala zur Einschätzung des Befindens wurde in drei Stufen unterteilt – „Gut“, „Ausgezeichnet“ und „Perfekt“ – und mit neuen Illustrationen ergänzt.",
       "Die Login- und Onboarding-Bildschirme wurden aktualisiert: warmer Hintergrund, ein neuer Apple-Login-Button und frische Icons für die Bereiche.",
-      "Fehler bei der Abonnement-Bestätigung behoben: Der Kaufbeleg geht bei instabiler Internetverbindung nicht mehr verloren und das Abo wird automatisch aktiviert."
+      "Fehler bei der Abonnement-Bestätigung behoben: Der Kaufbeleg geht bei instabiler Verbindung nicht mehr verloren und wird automatisch aktiviert."
     ]
   },
   {
@@ -71,7 +82,7 @@
       "1482"
     ],
     "notes": [
-      "Die Lerngeschichten wurden korrigiert: Slides ohne Video zeigen nun wieder ein Smartphone-Mockup mit Screenshot, und auf kleineren Bildschirmen wird nichts mehr abgeschnitten.",
+      "Die Lerngeschichten wurden korrigiert: Slides ohne Video zeigen nun wieder ein Smartphone-Mockup mit Screenshot an, und auf kleineren Bildschirmen wird nichts mehr abgeschnitten.",
       "Der Coping-Bildschirm ist nun in allen App-Sprachen verfügbar."
     ]
   },
@@ -81,9 +92,9 @@
       "1449"
     ],
     "notes": [
-      "Stornierungen von Abonnements können direkt im Support-Chat vorgenommen werden, ohne eine E-Mail schreiben zu müssen; während der Testphase erfolgt die Kündigung in nur wenigen Schritten.",
-      "Die Kursseiten und die Kursübersicht wurden aktualisiert; die Header der internen Bildschirme folgen nun einem einheitlichen Design.",
-      "Die „Reflexion“-Bildschirme haben nun einen warmen Hintergrund; Inhalte werden bei schwacher Internetverbindung zuverlässiger geladen."
+      "Rückerstattungen für Abonnements können direkt über den Support-Chat beantragt werden, ohne eine separate E-Mail schreiben zu müssen; während der Testphase ist die Kündigung nun in nur wenigen Schritten möglich.",
+      "Die Kursseiten und die Kursübersicht wurden aktualisiert; die Kopfzeilen der internen Bildschirme wurden gemäß dem neuen Layout vereinheitlicht.",
+      "Die „Reflexion“-Bildschirme haben nun einen warmen Hintergrund; Inhalte werden bei einer schwachen Internetverbindung jetzt zuverlässiger geladen."
     ]
   },
   {
@@ -92,9 +103,9 @@
       "1305"
     ],
     "notes": [
-      "Das Hinzufügen von Gefühlen, Coping-Karten und die PIN-Code-Funktion sind jetzt für alle kostenlos – ein Abonnement ist dafür nicht mehr erforderlich.",
-      "Wir haben das Design aktualisiert: ein neuer „Zurück“-Chevron auf allen Bildschirmen, neue Header für die Bereiche und den Schlafbildschirm sowie neue Farben für die Geschichten und den Player.",
-      "Weiße Blitze beim Wechsel zum Dark Mode wurden behoben; das Stornieren der automatischen Verlängerung führt nicht mehr zum sofortigen Entzug des Zugangs vor Ende des bezahlten Zeitraums."
+      "Das Hinzufügen von Gefühlen, die Coping-Karten und die PIN-Code-Funktion sind nun für alle kostenlos – ein Abonnement ist dafür nicht mehr erforderlich.",
+      "Das Design wurde aktualisiert: ein neuer „Zurück“-Chevron auf allen Bildschirmen, frische Kopfzeilen für die Bereiche sowie für die Schlafgeräusche und neue Farben für die Stories und den Player.",
+      "Weiße Blitze beim Wechsel in den Dark Mode wurden behoben; das Deaktivieren der automatischen Verlängerung führt nicht mehr zum sofortigen Entzug des Zugangs vor Ende des bereits bezahlten Zeitraums."
     ]
   },
   {
@@ -261,7 +272,7 @@
       "593"
     ],
     "notes": [
-      "Das Ausfüllen des Gedankentagebuchs fühlt sich jetzt wie eine Therapiesitzung an. Im „Empathischen Dialog“ können Sie einfach in Ihren eigenen Worten erzählen, was passiert ist – Ihr Assistent wird Sie sanft durch den Prozess leiten und die notwendigen Schritte im Tagebuch automatisch für Sie ausfüllen. So können Sie sich ganz auf Ihre Erinnerungen, Gedanken und Gefühle konzentrieren, ohne sich um die Struktur des Tagebuchs kümmern zu müssen."
+      "Das Ausfüllen des Gedankentagebuchs fühlt sich jetzt wie eine Therapiesitzung an. Im „Empathischen Dialog“ können Sie einfach in Ihren eigenen Worten erzählen, was passiert ist – Ihr Assistent wird Sie sanft leiten und die notwendigen Schritte im Tagebuch automatisch für Sie ausfüllen. So können Sie sich ganz auf Ihre Erinnerungen, Gedanken und Gefühle konzentrieren, ohne sich um die Struktur des Tagebuchs kümmern zu müssen."
     ]
   },
   {
@@ -300,7 +311,7 @@
       "587"
     ],
     "notes": [
-      "Großes Update für den KI-Assistenten! Eine Analyse ist jetzt erst der Anfang. Wir haben einen interaktiven Dialog hinzugefügt: Besprechen Sie Ihre Erkenntnisse und führen Sie psychologische Übungen unter der einfühlsamen Anleitung der Künstlichen Intelligenz durch. Dies ist erst der erste Schritt zu einer völlig neuen Ebene der Unterstützung!"
+      "Großes Update für den KI-Assistenten! Die Analyse ist jetzt erst der Anfang. Wir haben einen interaktiven Dialog hinzugefügt: Besprechen Sie Ihre Erkenntnisse und führen Sie psychologische Übungen unter der einfühlsamen Anleitung der künstlichen Intelligenz durch. Dies ist erst der erste Schritt zu einer völlig neuen Ebene der Unterstützung!"
     ]
   },
   {
@@ -381,7 +392,7 @@
       "574"
     ],
     "notes": [
-      "Entdecken Sie unseren neuen Bereich in den Übungen – Atemtechniken! 🧘‍♂️ Sie helfen Ihnen dabei, Stress abzubauen, Panik zu bewältigen oder im Gegenteil, neue Energie zu mobilisieren! ⚡️"
+      "Entdecken Sie den neuen Bereich in den Übungen – Atemtechniken! 🧘‍♂️ Sie helfen Ihnen, Stress abzubauen, mit Panik umzugehen oder im Gegenteil, neue Energie zu tanken! ⚡️"
     ]
   },
   {
@@ -408,7 +419,7 @@
       "570"
     ],
     "notes": [
-      "Gute Nachrichten: Wir möchten die App noch zugänglicher machen! Ab heute werden wir mehr Premium-Optionen für die kostenlose Nutzung freischalten. Wir beginnen mit entspannenden Klängen: Der Sleep-Timer ist ab sofort dauerhaft kostenlos!"
+      "Gute Nachrichten: Wir haben beschlossen, die App noch zugänglicher zu machen! Ab heute werden wir mehr Premium-Optionen für die kostenlose Nutzung freischalten. Wir beginnen mit den Entspannungsklängen: Der Sleep-Timer ist ab sofort dauerhaft kostenlos!"
     ]
   },
   {

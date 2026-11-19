@@ -1,12 +1,23 @@
 [
   {
+    "version": "5.24.3",
+    "builds": [
+      "2128"
+    ],
+    "notes": [
+      "Mise à jour des journaux : le calendrier hebdomadaire, les entrées et les paramètres sont désormais regroupés sur une seule page. Vous pouvez aussi supprimer une entrée d’un simple balayage.",
+      "Un nouveau bloc « Activités » est apparu sur l’écran « Sérénité ».",
+      "Correction d’un crash sur iOS lors de la sélection de texte, et ajustements des filigranes et des titres dans les sections de bien-être."
+    ]
+  },
+  {
     "version": "5.24.2",
     "builds": [
       "2043"
     ],
     "notes": [
-      "Mise à jour des statistiques du journal : nouvel écran « Votre progression » avec la répartition des entrées entre les 4 journaux, votre journal favori, votre niveau d’anxiété et la dynamique des entrées sur la semaine.",
-      "Correction du paiement via SBP : si l’application bancaire ne s’ouvre pas après avoir cliqué sur « Payer », le paiement n’est plus perdu — vous pouvez revenir à la liste des banques pour finaliser l’opération.",
+      "Mise à jour des statistiques du journal : nouvel écran « Votre progression » présentant la répartition de vos entrées entre les 4 journaux, votre journal favori, votre niveau d’anxiété et la dynamique de vos saisies sur la semaine.",
+      "Correction du paiement via SBP : si l’application bancaire ne s’ouvre pas après avoir cliqué sur « Payer », le paiement n’est plus perdu — vous pouvez revenir à la liste des banques et finaliser l’opération.",
       "Le paiement en roubles nécessite désormais une connexion au compte."
     ]
   },
@@ -28,8 +39,8 @@
       "1785"
     ],
     "notes": [
-      "Le thème clair adopte désormais une palette chaleureuse dans le nouveau design.",
-      "Les widgets d’accueil de la série « Jours » ont été entièrement repensés : mise en page soignée et calcul précis de votre série (streak).",
+      "Le mode clair adopte désormais la palette chaleureuse de notre nouveau design.",
+      "Les widgets d’accueil de la série des jours ont été entièrement repensés : une mise en page soignée et un décompte précis de votre série (streak).",
       "Correction du journal : les modifications rapides et l’ajout de photos ne provoquent plus de plantages."
     ]
   },
@@ -39,8 +50,8 @@
       "1621"
     ],
     "notes": [
-      "Correction du problème de fermeture inattendue lors de l’ouverture sur iOS 15–17.",
-      "Retour de la connexion via Apple et des notifications push."
+      "Correction d’un crash lors de l’ouverture sur iOS 15–17.",
+      "Rétablissement de la connexion via Apple et des notifications push."
     ]
   },
   {
@@ -49,9 +60,9 @@
       "1611"
     ],
     "notes": [
-      "L’échelle d’évaluation du rétablissement a été divisée en trois niveaux — « Bien », « Excellent » et « Idéal » — et accompagnée de nouvelles illustrations",
-      "Mise à jour des écrans de connexion et d’onboarding : fond chaleureux, nouveau bouton de connexion via Apple et nouvelles icônes de section",
-      "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de réseau instable et s’active automatiquement."
+      "L’échelle d’évaluation de la récupération a été divisée en trois niveaux — « Bien », « Très bien » et « Idéal » — avec de nouvelles illustrations.",
+      "Mise à jour des écrans de connexion et d’onboarding : fond chaleureux, nouveau bouton de connexion via Apple et nouvelles icônes pour les sections.",
+      "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de réseau instable et l’abonnement s’active automatiquement."
     ]
   },
   {
@@ -60,9 +71,9 @@
       "1590"
     ],
     "notes": [
-      "L’échelle d’évaluation de la récupération a été divisée en trois niveaux — « Bien », « Très bien » et « Idéal » — avec de nouvelles illustrations.",
+      "L’échelle d’évaluation de la récupération a été divisée en trois niveaux — « Bien », « Excellent » et « Idéal » — avec de nouvelles illustrations.",
       "Mise à jour des écrans de connexion et d’onboarding : fond chaleureux, nouveau bouton de connexion via Apple et nouvelles icônes pour les sections.",
-      "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de réseau instable et l’abonnement s’active automatiquement."
+      "Correction de la confirmation d’abonnement : le reçu d’achat n’est plus perdu en cas de réseau instable et s’active automatiquement."
     ]
   },
   {
@@ -72,7 +83,7 @@
     ],
     "notes": [
       "Correction des histoires pédagogiques : les diapositives sans vidéo affichent à nouveau une maquette de smartphone avec une capture d’écran, et rien n’est coupé sur les écrans de petite taille.",
-      "La fiche de coping est désormais disponible dans toutes les langues de l’application."
+      "L’écran de coping est désormais disponible dans toutes les langues de l’application."
     ]
   },
   {
@@ -81,9 +92,9 @@
       "1449"
     ],
     "notes": [
-      "Le remboursement de l’abonnement peut désormais se faire directement dans le chat d’assistance, sans avoir à envoyer d’e-mail ; l’annulation pendant la période d’essai se fait en quelques étapes.",
-      "Mise à jour des pages et de la liste des cours ; les en-têtes des écrans internes sont désormais uniformisés.",
-      "Les écrans de « Raisonnement » bénéficient désormais d’un fond chaleureux ; le contenu se charge plus fiablement en cas de réseau faible."
+      "Le remboursement de l’abonnement s’effectue directement dans le chat d’assistance, sans avoir à envoyer d’e-mail ; l’annulation durant la période d’essai se fait en quelques étapes.",
+      "Mise à jour des pages de cours et de la liste complète des cours ; les en-têtes des écrans internes sont désormais uniformisés selon la nouvelle maquette.",
+      "Les écrans de « Raisonnement » disposent désormais d’un fond chaleureux ; le contenu se charge plus efficacement en cas de connexion faible."
     ]
   },
   {
@@ -93,7 +104,7 @@
     ],
     "notes": [
       "L’ajout d’émotions, les fiches de coping et le code PIN sont désormais gratuits pour tous — l’abonnement n’est plus nécessaire pour ces fonctionnalités.",
-      "Mise à jour du design : nouveau chevron « retour » sur tous les écrans, nouveaux en-têtes pour les sections et l’écran des sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur.",
+      "Refonte du design : nouveau chevron « retour » sur tous les écrans, nouveaux en-têtes pour les sections et l’écran des sons pour le sommeil, ainsi que de nouvelles couleurs pour les histoires et le lecteur.",
       "Correction des flashs blancs lors des transitions en mode sombre ; l’annulation du renouvellement automatique ne coupe plus l’accès avant la fin de la période payée."
     ]
   },
@@ -261,7 +272,7 @@
       "593"
     ],
     "notes": [
-      "Avec le « Dialogue bienveillant », racontez simplement ce qui s’est passé avec vos propres mots — l’assistant vous guidera avec douceur et remplira lui-même les étapes nécessaires du journal. Vous pourrez ainsi vous concentrer sur vos souvenirs, vos pensées et vos émotions du moment, sans vous soucier de la structure du journal."
+      "Remplir le journal des pensées automatiques ressemble désormais à une séance avec un psychologue. Grâce au « Dialogue bienveillant », racontez simplement avec vos propres mots ce qui s’est passé — l’assistant vous guidera avec douceur et remplira lui-même les étapes nécessaires du journal. Vous pourrez ainsi vous concentrer sur vos souvenirs, vos pensées et vos ressentis du moment, sans être distrait par la structure du journal."
     ]
   },
   {
@@ -408,7 +419,7 @@
       "570"
     ],
     "notes": [
-      "Excellente nouvelle : nous avons décidé de rendre l’application encore plus accessible ! Dès aujourd’hui, nous allons ouvrir davantage d’options premium pour une utilisation gratuite. Commençons par les sons de relaxation : le minuteur de fin est désormais gratuit, et ce, pour toujours !"
+      "Bonne nouvelle : nous avons décidé de rendre l’application encore plus accessible ! Dès aujourd’hui, nous allons ouvrir davantage d’options premium pour une utilisation gratuite. Commençons par les sons de relaxation : le minuteur de fin est désormais gratuit pour toujours !"
     ]
   },
   {
