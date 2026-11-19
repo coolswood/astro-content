@@ -1,12 +1,23 @@
 [
   {
+    "version": "5.24.3",
+    "builds": [
+      "2128"
+    ],
+    "notes": [
+      "Aktualizovali jsme deníky: kalendář týdne, karty záznamů a nastavení jsou nyní na jedné stránce a záznamy lze odstraňovat přejetím (swipe).",
+      "Na obrazovce „Klid“ se objevila dlaždice „Aktivity“.",
+      "Opravili jsme pád aplikace na iOS při označování textu a upravili vodoznaky a nadpisy v sekcích pro wellness."
+    ]
+  },
+  {
     "version": "5.24.2",
     "builds": [
       "2043"
     ],
     "notes": [
       "Aktualizovali jsme statistiky deníků: nová obrazovka „Váš pokrok“ zobrazuje rozdělení záznamů mezi 4 deníky, váš nejoblíbenější deník, úroveň úzkosti a dynamiku záznamů za týden.",
-      "Opravili jsme platbu přes SBP: pokud se po kliknutí na tlačítko „Zaplatit“ bankovní aplikace neotevřela, platba se již neztratí — můžete se vrátit k seznamu bank a platbu dokončit.",
+      "Opravili jsme platby přes SBP: pokud se po kliknutí na tlačítko „Zaplatit“ bankovní aplikace neotevře, platba už neztratíte — můžete se vrátit k seznamu bank a platbu dokončit.",
       "Platba v rublech nyní vyžaduje přihlášení k účtu."
     ]
   },
@@ -17,8 +28,8 @@
       "1942"
     ],
     "notes": [
-      "Premium nyní můžete aktivovat během pár kliknutí — i bez registrace.",
-      "AI dialogy fungují i bez přihlášení, pokud je prémiové předplatné již aktivní; po přihlášení se vše synchronizuje s vaším účtem.",
+      "Premium nyní lze zakoupit během pár klepnutí — i bez registrace.",
+      "AI dialogy fungují i bez přihlášení, pokud již máte aktivní premium, a po přihlášení se vše přenese k vašemu účtu.",
       "Všechny psychologické testy jsou nyní zdarma."
     ]
   },
@@ -28,8 +39,8 @@
       "1785"
     ],
     "notes": [
-      "Světlý režim má v rámci nového designu teplou paletu barev.",
-      "Domovské widgety řady dnů byly zcela přestavěny: nyní mají elegantní rozvržení a přesně zobrazují vaši sérii dní (streak).",
+      "Světlý režim je nyní součástí teplé palety nového designu.",
+      "Domovské widgety řady dnů byly zcela přepracovány: elegantní rozvržení a poctivé počítání série dnů (streak).",
       "Opravili jsme deník: rychlé úpravy a přidávání fotografií již nezpůsobují chyby."
     ]
   },
@@ -50,8 +61,8 @@
     ],
     "notes": [
       "Škálu hodnocení zlepšení jsme rozdělili na tři úrovně — „Dobře“, „Skvěle“ a „Ideálně“ — a přidali k nim nové ilustrace.",
-      "Aktualizovali jsme obrazovky přihlášení a úvodní průvodce: přidali jsme teplé pozadí, nové tlačítko pro přihlášení přes Apple a nové ikony sekcí.",
-      "Opravili jsme potvrzování předplatného: potvrzení o nákupu se při nestabilním připojení již neztrácí a aktivuje se automaticky."
+      "Aktualizovali jsme obrazovky přihlášení a onboarding: nové teplé pozadí, tlačítko pro přihlášení přes Apple a ikony sekcí.",
+      "Opravili jsme potvrzování předplatného: potvrzení o nákupu se při nestabilním připojení již neztratí a předplatné se aktivuje automaticky."
     ]
   },
   {
@@ -60,9 +71,9 @@
       "1590"
     ],
     "notes": [
-      "Škálu hodnocení zlepšení jsme rozdělili na tři úrovně — „Dobře“, „Skvěle“ a „Ideálně“ — a přidali k nim nové ilustrace.",
-      "Aktualizovali jsme obrazovky přihlášení a onboarding: nové teplé pozadí, tlačítko pro přihlášení přes Apple a ikony sekcí.",
-      "Opravili jsme potvrzování předplatného: potvrzení o nákupu se při nestabilním připojení již neztratí a předplatné se aktivuje automaticky."
+      "Škálu hodnocení regenerace jsme rozdělili do tří úrovní — „Dobře“, „Skvěle“ a „Ideálně“ — a přidali k nim nové ilustrace.",
+      "Aktualizovali jsme obrazovky přihlášení a onboardingu: teplé pozadí, nové tlačítko pro přihlášení přes Apple a nové ikony sekcí.",
+      "Opravili jsme potvrzování předplatného: potvrzení o nákupu se při nestabilním připojení již neztrácí a aktivuje se automaticky."
     ]
   },
   {
@@ -71,8 +82,8 @@
       "1482"
     ],
     "notes": [
-      "Opravili jsme vzdělávací příběhy: snímky bez videa opět zobrazují náhled chytrého telefonu se snímkem obrazovky a na menších obrazovkách se obsah již neokrajovává.",
-      "Obrazovka pro coping je nyní dostupná ve všech jazycích aplikace."
+      "Opravili jsme vzdělávací příběhy: snímky bez videa opět zobrazují náhled chytrého telefonu se snímkem obrazovky a na menších obrazovkách se nic neokrajovává.",
+      "Obrazovka pro copingové kartičky je nyní dostupná ve všech jazycích aplikace."
     ]
   },
   {
@@ -81,9 +92,9 @@
       "1449"
     ],
     "notes": [
-      "Žádost o vrácení peněz za předplatné lze nyní vyřídit přímo v chatu podpory — bez nutnosti psát e-mail; během zkušební doby lze předplatné zrušit během pár kroků.",
-      "Aktualizovali jsme stránky kurzů a jejich seznam; záhlaví vnitřních obrazovek má nyní jednotný design.",
-      "Obrazovky „Uvažování“ mají nyní teplé pozadí; obsah se při slabém připojení načítá spolehlivěji."
+      "Vrácení peněz za předplatné probíhá přímo v chatu podpory — nemusíte psát e-mail; během zkušební doby lze předplatné zrušit během pár kroků.",
+      "Aktualizovali jsme stránky kurzů a seznam všech kurzů; záhlaví vnitřních obrazovek je nyní jednotné podle nového návrhu.",
+      "Obrazovky „Reasoning“ mají nyní teplé pozadí; obsah se při slabém připojení načítá spolehlivěji."
     ]
   },
   {
@@ -92,9 +103,9 @@
       "1305"
     ],
     "notes": [
-      "Přidávání emocí, copingové kartičky a PIN kód jsou nyní zdarma pro všechny — k těmto funkcím již nepotřebujete předplatné.",
-      "Aktualizovali jsme vzhled: nová šipka „zpět“ na všech obrazovkách, nové záhlaví sekcí a obrazovky pro zvuky ke spánku, nové barvy pro příběhy a přehrávač.",
-      "Opravili jsme bílé záblesky při přechodech v tmavém režimu; zrušení automatického prodloužení již nezrušuje přístup do konce placeného období."
+      "Přidávání emocí, copingové kartičky a PIN kód jsou nyní pro všechny zdarma — předplatné pro tyto funkce již není potřeba.",
+      "Nové grafické zpracování: nový šipkový symbol „zpět“ na všech obrazovkách, nové záhlaví sekcí a obrazovky zvuků pro spánek, nové barvy pro příběhy a přehrávač.",
+      "Opravili jsme bílé záblesky při přechodech v tmavém režimu; zrušení automatického prodloužení již nezrušuje přístup do konce již zaplaceného období."
     ]
   },
   {
@@ -300,7 +311,7 @@
       "587"
     ],
     "notes": [
-      "Velká aktualizace asistenta s umělou inteligencí! Analýza je nyní jen začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete probrat získané vhledy a cvičit psychologické techniky pod citlivým vedením umělé inteligence. A to je jen první krok k úplně nové úrovni podpory!"
+      "Velká aktualizace asistenta s umělou inteligencí! Analýza je nyní jen začátek. Přidali jsme plnohodnotný interaktivní dialog: můžete diskutovat o získaných vhledech a cvičit psychologické techniky pod odborným vedením umělé inteligence. A to je jen první krok k úplně nové úrovni podpory!"
     ]
   },
   {
@@ -313,12 +324,6 @@
     "version": "5.17.4",
     "builds": [
       "585"
-    ]
-  },
-  {
-    "version": "5.17.3",
-    "builds": [
-      "584"
     ]
   },
   {
@@ -379,15 +384,15 @@
     "version": "5.15.0",
     "builds": [
       "574"
-    ],
-    "notes": [
-      "Pozdravte novou sekci v cvičení — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, vyrovnat se s panikou nebo naopak mobilizovat veškerou energii! ⚡️"
     ]
   },
   {
     "version": "5.14.10",
     "builds": [
       "573"
+    ],
+    "notes": [
+      "Poznejte novou sekci v cvičení — dechová cvičení! 🧘‍♂️ Pomohou vám zvládnout stres, vypořádat se s panikou nebo naopak mobilizovat veškerou energii! ⚡️"
     ]
   },
   {
@@ -406,15 +411,15 @@
     "version": "5.14.7",
     "builds": [
       "570"
-    ],
-    "notes": [
-      "Skvělá novina: rozhodli jsme se, že aplikace bude ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začínáme relaxačními zvuky: časovač pro zastavení je nyní navždy zdarma!"
     ]
   },
   {
     "version": "5.14.6",
     "builds": [
       "569"
+    ],
+    "notes": [
+      "Skvělé zprávy: rozhodli jsme se, že aplikace bude ještě dostupnější! Od dneška budeme zpřístupňovat více prémiových funkcí pro bezplatné používání. Začínáme relaxačními zvuky: časovač pro zastavení je nyní navždy zdarma!"
     ]
   },
   {
@@ -424,15 +429,27 @@
     ]
   },
   {
-    "version": "5.14.4",
+    "version": "5.14.5",
     "builds": [
-      "567"
+      "568"
     ]
   },
   {
-    "version": "5.14.3",
+    "version": "5.14.2",
     "builds": [
-      "566"
+      "565"
+    ]
+  },
+  {
+    "version": "5.14.1",
+    "builds": [
+      "564"
+    ]
+  },
+  {
+    "version": "5.14.2",
+    "builds": [
+      "565"
     ]
   },
   {

@@ -1,11 +1,22 @@
 [
   {
+    "version": "5.24.3",
+    "builds": [
+      "2128"
+    ],
+    "notes": [
+      "Atualizámos os diários: o calendário semanal, os cartões de anotações e as definições agora estão na mesma página, e pode apagar as anotações deslizando o dedo.",
+      "Adicionámos o bloco \"Atividades\" ao ecrã \"Calma\".",
+      "Corrigimos o erro que causava o fecho inesperado no iOS ao selecionar texto e ajustámos as marcas de água e os títulos nas secções de bem-estar."
+    ]
+  },
+  {
     "version": "5.24.2",
     "builds": [
       "2043"
     ],
     "notes": [
-      "Atualizámos as estatísticas do diário: novo ecrã \"O seu progresso\" — veja a distribuição das anotações pelos 4 diários, o seu diário favorito, o nível de ansiedade e a dinâmica semanal de anotações.",
+      "Atualizámos as estatísticas dos diários: novo ecrã \"O seu progresso\" — distribuição das anotações pelos 4 diários, o seu diário favorito, nível de ansiedade e a dinâmica de anotações semanal.",
       "Corrigimos o pagamento via SBP: se o banco não abrir ao clicar em \"Pagar\", o pagamento já não se perde — pode voltar à lista de bancos e concluir a operação.",
       "O pagamento em rublos agora requer o início de sessão na conta."
     ]
@@ -17,9 +28,9 @@
       "1942"
     ],
     "notes": [
-      "Agora pode subscrever o Premium com apenas alguns toques — mesmo sem registo.",
-      "Os diálogos com a assistente de IA funcionam sem necessidade de início de sessão se o Premium já estiver ativo; ao entrar na conta, tudo é transferido para a conta.",
-      "Todos os testes psicológicos passaram a ser gratuitos."
+      "O Premium agora pode ser assinado com apenas alguns toques — mesmo sem registo",
+      "Os diálogos com a assistente de IA funcionam sem início de sessão se o Premium já estiver ativo; ao iniciar sessão, tudo é transferido para a sua conta",
+      "Todos os testes psicológicos passaram a ser gratuitos"
     ]
   },
   {
@@ -28,19 +39,19 @@
       "1785"
     ],
     "notes": [
-      "O tema claro agora faz parte da paleta de cores quentes do novo design.",
-      "Os widgets de série de dias foram totalmente redesenhados: layout cuidado e contagem precisa de dias consecutivos (streak).",
-      "Corrigimos o diário: edições rápidas e a adição de fotos já não causam erros de funcionamento."
+      "O tema claro agora faz parte da paleta de cores quentes do novo design",
+      "Os widgets de série de dias foram totalmente redesenhados: layout mais cuidado e contagem de dias consecutivos (streak) mais precisa",
+      "Corrigimos o diário: edições rápidas e a adição de fotos já não causam falhas no sistema"
     ]
   },
   {
     "version": "5.23.4",
     "builds": [
-      "1612"
+      "1621"
     ],
     "notes": [
-      "Corrigimos o erro de encerramento inesperado ao abrir no iOS 15–17.",
-      "Restaurámos o início de sessão com a Apple e as notificações push."
+      "Corrigimos o erro que causava o fecho inesperado ao abrir no iOS 15–17",
+      "Reintroduzimos o início de sessão com Apple e as notificações push"
     ]
   },
   {
@@ -49,9 +60,9 @@
       "1611"
     ],
     "notes": [
-      "A escala de avaliação da recuperação foi dividida em três níveis — «Bom», «Excelente» e «Ideal» — e novas ilustrações foram adicionadas.",
-      "Atualizámos os ecrãs de login e onboarding: fundo quente, novo botão de login via Apple e novos ícones para as secções.",
-      "Corrigida a confirmação da subscrição: o comprovativo de compra não se perde mais em redes instáveis e é ativado automaticamente."
+      "A escala de avaliação da recuperação foi dividida em três níveis — \"Bom\", \"Excelente\" e \"Ideal\" — e adicionámos novas ilustrações para cada um.",
+      "Atualizámos os ecrãs de início de sessão e de onboarding: fundo quente, novo botão de início de sessão com a Apple e novos ícones para as secções.",
+      "Corrigimos a confirmação da subscrição: o comprovativo de compra já não se perde em redes instáveis e é ativado automaticamente."
     ]
   },
   {
@@ -60,9 +71,9 @@
       "1590"
     ],
     "notes": [
-      "A escala de avaliação da recuperação foi dividida em três níveis — \"Bom\", \"Excelente\" e \"Ideal\" — e adicionámos novas ilustrações para cada um.",
-      "Atualizámos os ecrãs de início de sessão e de onboarding: fundo quente, novo botão de início de sessão com a Apple e novos ícones para as secções.",
-      "Corrigimos a confirmação da subscrição: o comprovativo de compra já não se perde em redes instáveis e é ativado automaticamente."
+      "Dividimos a escala de avaliação da recuperação em três níveis — \"Bom\", \"Excelente\" e \"Ideal\" — e adicionámos novas ilustrações para cada um.",
+      "Atualizámos os ecrãs de início de sessão e de onboarding: fundo acolhedor, novo botão de início de sessão com Apple e novos ícones para as secções.",
+      "Corrigimos a confirmação da subscrição: o comprovativo de compra já não se perde em redes instáveis e a subscrição é ativada automaticamente."
     ]
   },
   {
@@ -71,7 +82,7 @@
       "1482"
     ],
     "notes": [
-      "Corrigimos as histórias de aprendizagem: os diapositivos sem vídeo voltam a mostrar o modelo de smartphone com o screenshot, e nada é cortado em ecrãs pequenos.",
+      "Corrigimos as histórias educativas: os diapositivos sem vídeo voltam a mostrar o modelo do smartphone com o screenshot, e o conteúdo já não é cortado em ecrãs pequenos.",
       "O ecrã de enfrentamento agora está disponível em todos os idiomas da aplicação."
     ]
   },
@@ -81,9 +92,9 @@
       "1449"
     ],
     "notes": [
-      "O reembolso da subscrição pode ser solicitado diretamente no chat de suporte — sem necessidade de enviar e-mail; o cancelamento no período experimental é feito em poucos passos.",
-      "Atualizámos as páginas e a lista de todos os cursos; os cabeçalhos dos ecrãs internos foram uniformizados conforme o novo design.",
-      "Os ecrãs de \"Raciocínio\" agora têm um fundo quente; o conteúdo carrega de forma mais fiável em redes lentas."
+      "O reembolso da subscrição é processado diretamente no chat de suporte — sem necessidade de enviar um e-mail; durante o período de teste, o cancelamento é feito em apenas alguns passos.",
+      "Atualizámos as páginas dos cursos e a lista completa de cursos; os cabeçalhos dos ecrãs internos foram padronizados de acordo com o novo design.",
+      "Os ecrãs de \"Raciocínio\" agora têm um fundo de tons quentes; o carregamento de conteúdo está mais estável em redes lentas."
     ]
   },
   {
@@ -92,8 +103,8 @@
       "1305"
     ],
     "notes": [
-      "A adição de emoções, os cartões de enfrentamento e o código PIN agora são gratuitos para todos — já não é necessária uma subscrição para estas funções.",
-      "Atualizámos o design: novo ícone de \"voltar\" em todos os ecrãs, novos cabeçalhos para as secções e para o ecrã de sons para dormir, além de novas cores para as histórias e para o leitor.",
+      "A adição de emoções, os cartões de recomendação e o código PIN agora são gratuitos para todos — já não é necessária uma subscrição para estas funções.",
+      "Atualizámos o design: novo ícone de \"voltar\" em todos os ecrãs, novos cabeçalhos para as secções e para o ecrã de sons para dormir, e novas cores para as histórias e para o leitor.",
       "Corrigimos os flashes brancos durante a transição para o tema escuro; o cancelamento da renovação automática já não interrompe o acesso antes do fim do período pago."
     ]
   },
@@ -261,7 +272,7 @@
       "593"
     ],
     "notes": [
-      "Agora, preencher o diário de pensamentos automáticos assemelha-se a uma sessão com um psicólogo. No \"Diálogo Atencioso\", basta contar com as suas próprias palavras o que aconteceu — a assistente de IA irá guiá-lo suavemente e preencherá os passos necessários do diário por si. Assim, poderá focar-se nas suas memórias, pensamentos e sentimentos daquele momento, sem se preocupar com a estrutura do diário."
+      "Agora, o preenchimento do diário de pensamentos automáticos assemelha-se a uma sessão com um psicólogo. No \"Diálogo Acolhedor\", basta contar com as suas próprias palavras o que aconteceu — a assistente irá guiá-lo suavemente e preencherá os passos necessários do diário por si. Poderá concentrar-se nas suas memórias, pensamentos e emoções daquele momento, sem se preocupar com a estrutura do diário."
     ]
   },
   {
@@ -300,7 +311,7 @@
       "587"
     ],
     "notes": [
-      "Grande atualização da assistente de IA! Agora, a Análise é apenas o começo. Adicionámos um diálogo interativo completo: discuta os insights obtidos e realize práticas psicológicas sob a orientação cuidadosa da inteligência artificial. E este é apenas o primeiro passo para um nível de apoio totalmente novo!"
+      "Grande atualização da assistente de IA! Agora, a Análise é apenas o começo. Adicionámos um diálogo interativo completo: discuta os insights obtidos e realize práticas psicológicas sob a orientação atenciosa da inteligência artificial. E este é apenas o primeiro passo para um nível de apoio totalmente novo!"
     ]
   },
   {
@@ -313,12 +324,6 @@
     "version": "5.17.4",
     "builds": [
       "585"
-    ]
-  },
-  {
-    "version": "5.17.3",
-    "builds": [
-      "584"
     ]
   },
   {
@@ -379,15 +384,15 @@
     "version": "5.15.0",
     "builds": [
       "574"
-    ],
-    "notes": [
-      "Conheça a nova secção de exercícios — Práticas de respiração! 🧘‍♂️ Elas ajudam a aliviar o stress, lidar com o pânico ou, pelo contrário, mobilizar toda a sua energia! ⚡️"
     ]
   },
   {
     "version": "5.14.10",
     "builds": [
       "573"
+    ],
+    "notes": [
+      "Conheça a nova secção de exercícios — Práticas de Respiração! 🧘‍♂️ Elas ajudam a aliviar o stress, lidar com o pânico ou, pelo contrário, mobilizar toda a sua energia! ⚡️"
     ]
   },
   {
@@ -406,15 +411,21 @@
     "version": "5.14.7",
     "builds": [
       "570"
-    ],
-    "notes": [
-      "Boas notícias: decidimos tornar a aplicação ainda mais acessível! A partir de hoje, vamos disponibilizar mais opções premium para utilização gratuita. Começamos com os sons de relaxamento: agora o temporizador de paragem é gratuito para sempre!"
     ]
   },
   {
     "version": "5.14.6",
     "builds": [
       "569"
+    ],
+    "notes": [
+      "Boas notícias: decidimos tornar a aplicação ainda mais acessível! A partir de hoje, vamos disponibilizar mais opções premium para uso gratuito. Começamos com os sons de relaxamento: o temporizador de paragem agora é gratuito para sempre!"
+    ]
+  },
+  {
+    "version": "5.14.5",
+    "builds": [
+      "568"
     ]
   },
   {

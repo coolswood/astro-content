@@ -1,13 +1,24 @@
 [
   {
+    "version": "5.24.3",
+    "builds": [
+      "2128"
+    ],
+    "notes": [
+      "Pembaruan pada jurnal: kalender mingguan, kartu catatan, dan pengaturan kini berada di satu halaman, serta catatan dapat dihapus dengan cara menggeser (swipe).",
+      "Ubin “Aktivitas” kini tersedia di layar “Ketenangan”.",
+      "Memperbaiki masalah aplikasi tertutup sendiri (crash) pada iOS saat memilih teks, serta memperbaiki watermark dan judul di bagian wellness."
+    ]
+  },
+  {
     "version": "5.24.2",
     "builds": [
       "2043"
     ],
     "notes": [
-      "Statistik jurnal telah diperbarui: layar baru “Progres Anda” menampilkan distribusi catatan di 4 jurnal, jurnal favorit, tingkat kecemasan, dan dinamika catatan selama seminggu terakhir.",
-      "Perbaikan pembayaran via SBP: jika aplikasi bank tidak terbuka saat tombol “Bayar” ditekan, pembayaran tidak akan hilang lagi—Anda dapat kembali ke daftar bank dan menyelesaikan pembayaran.",
-      "Pembayaran dalam rubel kini memerlukan login ke akun."
+      "Pembaruan statistik jurnal: layar baru “Progres Anda” — distribusi catatan di 4 jurnal, jurnal favorit, tingkat kecemasan, dan dinamika catatan selama seminggu terakhir.",
+      "Perbaikan pembayaran via SBP: jika bank tidak terbuka saat tombol “Bayar” ditekan, pembayaran tidak akan hilang lagi — Anda dapat kembali ke daftar bank dan menyelesaikan pembayaran.",
+      "Pembayaran dalam mata uang Rubel kini memerlukan login ke akun."
     ]
   },
   {
@@ -17,8 +28,8 @@
       "1942"
     ],
     "notes": [
-      "Langganan Premium kini dapat dilakukan dengan lebih mudah—bahkan tanpa registrasi.",
-      "Dialog AI dapat digunakan tanpa login jika Premium sudah aktif, dan saat Anda login, semua data akan dipindahkan ke akun Anda.",
+      "Langganan Premium kini dapat dilakukan hanya dengan beberapa ketukan — bahkan tanpa registrasi.",
+      "Dialog AI dapat digunakan tanpa login jika Premium sudah aktif, dan semua data akan dipindahkan ke akun saat Anda login.",
       "Semua tes psikologis kini tersedia secara gratis."
     ]
   },
@@ -29,8 +40,8 @@
     ],
     "notes": [
       "Tema terang kini hadir dengan palet warna hangat dalam desain baru.",
-      "Widget beranda seri harian telah dirombak total: tata letak yang lebih rapi dan penghitungan streak yang lebih akurat.",
-      "Perbaikan jurnal: pengeditan cepat dan penambahan foto tidak lagi menyebabkan error."
+      "Widget beranda jurnal harian telah diperbarui sepenuhnya: tata letak yang lebih rapi dan penghitungan streak yang lebih akurat.",
+      "Perbaikan pada jurnal: pengeditan cepat dan penambahan foto tidak lagi menyebabkan error."
     ]
   },
   {
@@ -39,8 +50,8 @@
       "1621"
     ],
     "notes": [
-      "Perbaikan masalah aplikasi tertutup sendiri (crash) saat dibuka pada iOS 15–17.",
-      "Fitur login via Apple dan notifikasi push telah dikembalikan."
+      "Memperbaiki masalah aplikasi tertutup sendiri (crash) saat dibuka pada iOS 15–17.",
+      "Mengembalikan fitur login melalui Apple dan push-notifikasi."
     ]
   },
   {
@@ -49,9 +60,9 @@
       "1611"
     ],
     "notes": [
-      "Skala penilaian pemulihan kini dibagi menjadi tiga tingkat—“Baik”, “Sangat Baik”, dan “Sempurna”—serta dilengkapi dengan ilustrasi baru.",
-      "Pembaruan pada layar masuk dan onboarding: latar belakang yang hangat, tombol masuk melalui Apple yang baru, serta ikon bagian yang lebih segar.",
-      "Perbaikan pada konfirmasi langganan: bukti pembelian tidak lagi hilang saat koneksi tidak stabil dan akan aktif secara otomatis."
+      "Skala penilaian pemulihan kini dibagi menjadi tiga tingkat—“Baik”, “Sangat Baik”, dan “Sempurna”—lengkap dengan ilustrasi baru.",
+      "Pembaruan layar login dan onboarding: latar belakang yang hangat, tombol login via Apple yang baru, dan ikon bagian yang lebih segar.",
+      "Perbaikan konfirmasi langganan: bukti pembelian tidak akan hilang lagi saat koneksi tidak stabil dan akan aktif secara otomatis."
     ]
   },
   {
@@ -60,8 +71,8 @@
       "1590"
     ],
     "notes": [
-      "Skala penilaian pemulihan kini dibagi menjadi tiga tingkat—“Baik”, “Sangat Baik”, dan “Sempurna”—lengkap dengan ilustrasi baru.",
-      "Pembaruan layar login dan onboarding: latar belakang yang hangat, tombol login via Apple yang baru, dan ikon bagian yang lebih segar.",
+      "Skala penilaian pemulihan kini dibagi menjadi tiga tingkat — “Baik”, “Sangat Baik”, dan “Sempurna” — lengkap dengan ilustrasi baru.",
+      "Pembaruan pada layar login dan onboarding: latar belakang yang hangat, tombol baru untuk login melalui Apple, dan ikon bagian yang baru.",
       "Perbaikan konfirmasi langganan: bukti pembelian tidak akan hilang lagi saat koneksi tidak stabil dan akan aktif secara otomatis."
     ]
   },
@@ -71,7 +82,7 @@
       "1482"
     ],
     "notes": [
-      "Perbaikan cerita edukasi: slide tanpa video kini kembali menampilkan mockup smartphone dengan tangkapan layar, dan konten tidak lagi terpotong pada layar kecil.",
+      "Perbaikan pada cerita edukasi: slide tanpa video kini kembali menampilkan mockup smartphone dengan tangkapan layar, dan tidak ada elemen yang terpotong pada layar kecil.",
       "Layar kartu koping kini tersedia dalam semua bahasa aplikasi."
     ]
   },
@@ -81,8 +92,8 @@
       "1449"
     ],
     "notes": [
-      "Pengembalian dana langganan dapat dilakukan langsung melalui chat dukungan—tanpa perlu mengirim email; pembatalan selama masa uji coba kini lebih mudah dilakukan.",
-      "Pembaruan halaman kursus dan daftar semua kursus; header pada layar internal kini memiliki desain yang seragam.",
+      "Pengembalian dana langganan kini dapat dilakukan langsung melalui chat dukungan — tanpa perlu mengirim email; pembatalan selama masa percobaan dapat dilakukan hanya dalam beberapa langkah saja.",
+      "Memperbarui halaman kursus dan daftar semua kursus; header pada layar internal kini telah diseragamkan sesuai desain.",
       "Layar “Penalaran” kini menggunakan latar belakang yang hangat; konten dimuat dengan lebih stabil pada koneksi internet yang lemah."
     ]
   },
@@ -92,9 +103,9 @@
       "1305"
     ],
     "notes": [
-      "Penambahan emosi, kartu koping, dan PIN kini gratis untuk semua orang—Anda tidak lagi memerlukan langganan untuk fitur-fitur ini.",
-      "Pembaruan desain: chevron “kembali” baru di semua layar, header bagian dan layar suara untuk tidur yang lebih segar, serta warna baru untuk cerita dan pemutar musik.",
-      "Perbaikan kilatan cahaya putih saat berpindah ke tema gelap; pembatalan perpanjangan otomatis tidak lagi mencabut akses hingga akhir periode yang telah dibayar."
+      "Penambahan emosi, kartu koping, dan PIN kini gratis untuk semua orang — langganan tidak lagi diperlukan untuk fitur-fitur ini.",
+      "Memperbarui tampilan: chevron “kembali” baru di semua layar, header bagian dan layar suara untuk tidur yang baru, serta warna baru untuk cerita dan pemutar musik.",
+      "Memperbaiki kedipan putih saat transisi pada tema gelap; pembatalan perpanjangan otomatis tidak lagi mencabut akses hingga akhir periode yang telah dibayar."
     ]
   },
   {
@@ -261,7 +272,7 @@
       "593"
     ],
     "notes": [
-      "Sekarang mengisi jurnal pikiran otomatis terasa seperti sesi dengan psikolog. Dalam “Dialog yang Menenangkan”, Anda cukup menceritakan apa yang terjadi dengan kata-kata Anda sendiri—asisten AI akan membimbing Anda dengan lembut dan mengisi langkah-langkah jurnal yang diperlukan secara otomatis. Anda dapat lebih fokus pada ingatan, pikiran, dan perasaan Anda pada saat itu, tanpa perlu terganggu oleh struktur jurnal."
+      "Sekarang mengisi jurnal pikiran otomatis terasa lebih seperti sesi dengan psikolog. Dalam “Dialog yang Menenangkan”, Anda cukup menceritakan semua yang terjadi dengan kata-kata Anda sendiri—asisten AI akan membimbing Anda dengan lembut dan mengisi langkah-langkah jurnal yang diperlukan secara otomatis. Anda dapat fokus pada ingatan, pikiran, dan perasaan Anda pada saat itu tanpa perlu terganggu oleh struktur jurnal."
     ]
   },
   {
@@ -300,7 +311,7 @@
       "587"
     ],
     "notes": [
-      "Pembaruan besar untuk asisten AI! Sekarang, Analisis hanyalah sebuah awal. Kami telah menambahkan dialog interaktif yang lengkap: diskusikan wawasan yang Anda dapatkan dan lakukan latihan psikologis di bawah bimbingan asisten AI yang penuh perhatian. Dan ini barulah langkah pertama menuju level dukungan yang sepenuhnya baru!"
+      "Pembaruan besar untuk asisten AI! Sekarang, Analisis hanyalah sebuah awal. Kami telah menambahkan dialog interaktif yang lengkap: diskusikan wawasan yang Anda dapatkan dan lakukan latihan psikologis di bawah panduan cerdas dari kecerdasan buatan. Dan ini hanyalah langkah pertama menuju tingkat dukungan yang sepenuhnya baru!"
     ]
   },
   {
@@ -381,7 +392,7 @@
       "574"
     ],
     "notes": [
-      "Sambut fitur baru dalam latihan—latihan pernapasan! 🧘‍♂️ Ini akan membantu Anda meredakan stres, mengatasi serangan panik, atau sebaliknya, memobilisasi seluruh energi Anda! ⚡️"
+      "Kenali bagian baru dalam latihan—Latihan Pernapasan! 🧘‍♂️ Ini akan membantu Anda meredakan stres, mengatasi serangan panik, atau justru memobilisasi seluruh energi Anda! ⚡️"
     ]
   },
   {
@@ -408,7 +419,7 @@
       "570"
     ],
     "notes": [
-      "Kabar baik: kami memutuskan untuk membuat aplikasi ini lebih mudah diakses! Mulai hari ini, kami akan membuka lebih banyak opsi premium untuk digunakan secara gratis. Kita mulai dengan suara relaksasi: sekarang timer penghenti sudah gratis selamanya!"
+      "Kabar gembira: kami memutuskan untuk membuat aplikasi ini lebih mudah diakses! Mulai hari ini, kami akan membuka lebih banyak opsi premium untuk digunakan secara gratis. Kita mulai dengan suara relaksasi: sekarang timer untuk menghentikan suara sudah gratis selamanya!"
     ]
   },
   {

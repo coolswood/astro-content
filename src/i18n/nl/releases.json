@@ -1,13 +1,24 @@
 [
   {
+    "version": "5.24.3",
+    "builds": [
+      "2128"
+    ],
+    "notes": [
+      "De dagboeken zijn vernieuwd: de weekkalender, de notities en de instellingen staan nu op één pagina, en je kunt notities verwijderen door te swipen.",
+      "Op het scherm 'Rust' is een nieuw blokje 'Activiteiten' toegevoegd.",
+      "Het probleem waarbij iOS crashte bij het selecteren van tekst is opgelost, en de watermerken en koppen in de wellness-secties zijn gecorrigeerd."
+    ]
+  },
+  {
     "version": "5.24.2",
     "builds": [
       "2043"
     ],
     "notes": [
-      "De dagboekstatistieken zijn bijgewerkt: een nieuw scherm 'Jouw voortgang' met de verdeling van je notities over de 4 dagboeken, je favoriete dagboek, je angstniveau en de dynamiek van je notities per week.",
-      "Betalingen via SBP zijn hersteld: als de bank-app niet opent na het klikken op 'Betalen', gaat de betaling niet langer verloren. Je kunt gewoon terugkeren naar de lijst met banken om de betaling af te ronden.",
-      "Voor betalingen in roebels moet je nu ingelogd zijn op je account."
+      "De statistieken van de dagboeken zijn vernieuwd: een nieuw scherm 'Jouw voortgang' met de verdeling van notities over de 4 dagboeken, je favoriete dagboek, het angstniveau en de dynamiek van je notities per week.",
+      "Betalingen via SBP zijn gerepareerd: als de bank niet opent na het klikken op 'Betalen', gaat de betaling niet langer verloren — je kunt terugkeren naar de lijst met banken om de betaling af te ronden.",
+      "Betalingen in roebels vereisen nu dat je bent ingelogd op je account."
     ]
   },
   {
@@ -18,8 +29,8 @@
     ],
     "notes": [
       "Premium afsluiten kan nu met slechts een paar tikken — zelfs zonder registratie.",
-      "AI-dialogen werken zonder inloggen als je al premium hebt. Na het inloggen wordt alles automatisch naar je account overgezet.",
-      "Alle psychologische tests zijn nu gratis."
+      "AI-dialogen werken zonder inloggen als je al premium hebt; bij het inloggen wordt alles automatisch naar je account overgezet.",
+      "Alle psychologische tests zijn nu gratis toegankelijk."
     ]
   },
   {
@@ -28,19 +39,19 @@
       "1785"
     ],
     "notes": [
-      "De lichte modus heeft nu een warm kleurenpalet in een nieuw ontwerp.",
+      "De lichte modus heeft nu een warm kleurenpalet in het nieuwe design.",
       "De home-widgets voor de dagreeks zijn volledig vernieuwd: een strakke lay-out en een nauwkeurige teller voor je streak.",
-      "Het dagboek is hersteld: snelle bewerkingen en het toevoegen van foto's veroorzaken geen crashes meer."
+      "Het dagboek is gerepareerd: snelle bewerkingen en het toevoegen van foto's veroorzaken geen crashes meer."
     ]
   },
   {
     "version": "5.23.4",
     "builds": [
-      "1612"
+      "1621"
     ],
     "notes": [
-      "Het probleem waarbij de app crashte bij het openen op iOS 15–17 is opgelost.",
-      "Inloggen via Apple en pushmeldingen werken weer naar behoren."
+      "Het probleem waarbij iOS 15–17 crashte bij het openen van de app is opgelost.",
+      "Inloggen via Apple en pushmeldingen zijn hersteld."
     ]
   },
   {
@@ -49,9 +60,9 @@
       "1611"
     ],
     "notes": [
-      "De schaal voor het beoordelen van herstel is opgedeeld in drie niveaus — 'Goed', 'Uitstekend' en 'Perfect' — en voorzien van nieuwe illustraties.",
-      "De inlog- en onboarding-schermen zijn vernieuwd: een warme achtergrond, een nieuwe Apple-inlogknop en nieuwe iconen voor de secties.",
-      "De abonnementbevestiging is gerepareerd: de aankoopbevestiging gaat niet meer verloren bij een instabiele verbinding en wordt automatisch geactiveerd."
+      "De schaal voor herstelbeoordeling is verdeeld in drie niveaus — 'Goed', 'Uitstekend' en 'Perfect' — en we hebben hier nieuwe illustraties aan toegevoegd.",
+      "De inlog- en onboarding-schermen zijn vernieuwd: een warme achtergrond, een nieuwe knop voor inloggen via Apple en nieuwe iconen voor de secties.",
+      "De bevestiging van abonnementen is hersteld: de aankoopbevestiging gaat niet langer verloren bij een instabiele verbinding en wordt automatisch geactiveerd."
     ]
   },
   {
@@ -60,9 +71,9 @@
       "1590"
     ],
     "notes": [
-      "De schaal voor herstelbeoordeling is verdeeld in drie niveaus — 'Goed', 'Uitstekend' en 'Perfect' — en we hebben hier nieuwe illustraties aan toegevoegd.",
-      "De inlog- en onboarding-schermen zijn vernieuwd: een warme achtergrond, een nieuwe knop voor inloggen via Apple en nieuwe iconen voor de secties.",
-      "De bevestiging van abonnementen is hersteld: de aankoopbevestiging gaat niet langer verloren bij een instabiele verbinding en wordt automatisch geactiveerd."
+      "De schaal voor het beoordelen van herstel is verdeeld in drie niveaus — 'Goed', 'Uitstekend' en 'Perfect' — en we hebben hier nieuwe illustraties bij toegevoegd.",
+      "De inlog- en onboarding-schermen zijn vernieuwd: een warme achtergrond, een nieuwe knop om in te loggen via Apple en nieuwe iconen voor de secties.",
+      "Het bevestigen van abonnementen is gerepareerd: de aankoopbevestiging gaat niet langer verloren bij een instabiele verbinding en wordt nu automatisch geactiveerd."
     ]
   },
   {
@@ -71,7 +82,7 @@
       "1482"
     ],
     "notes": [
-      "De educatieve verhalen zijn hersteld: dia's zonder video tonen nu weer een smartphone-mockup met een screenshot, en op kleinere schermen wordt de inhoud niet meer afgesneden.",
+      "De educatieve verhalen zijn gerepareerd: dia's zonder video tonen nu weer een smartphone-mockup met een screenshot, en op kleinere schermen wordt er niets meer afgesneden.",
       "Het coping-scherm is nu beschikbaar in alle talen van de app."
     ]
   },
@@ -81,9 +92,9 @@
       "1449"
     ],
     "notes": [
-      "Het terugvragen van een terugbetaling voor een abonnement kan nu direct via de supportchat — zonder een e-mail te sturen. Tijdens de proefperiode kan dit in slechts een paar stappen.",
-      "De cursuspagina's en de lijst met alle cursussen zijn vernieuwd; de koppen van de interne schermen hebben nu een uniforme lay-out.",
-      "De schermen voor 'Redeneren' hebben nu een warme achtergrond; de inhoud wordt beter geladen bij een zwakke verbinding."
+      "Abonnement-terugbetalingen worden direct via de supportchat afgehandeld — je hoeft geen e-mail te sturen; tijdens de proefperiode kun je met slechts een paar stappen opzeggen.",
+      "De cursuspagina's en de volledige cursuslijst zijn vernieuwd; de koppen van de interne schermen hebben nu een uniform ontwerp volgens de nieuwe lay-out.",
+      "De schermen voor 'Redeneringen' hebben nu een warme achtergrond; de inhoud wordt beter geladen bij een zwakke verbinding."
     ]
   },
   {
@@ -92,9 +103,9 @@
       "1305"
     ],
     "notes": [
-      "Het toevoegen van emoties, copingkaarten en de pincode is nu gratis voor iedereen — een abonnement is hiervoor niet langer nodig.",
-      "De vormgeving is vernieuwd: een nieuw 'terug'-icoon op alle schermen, nieuwe koppen voor secties en het slaapgeluidenscherm, en nieuwe kleuren voor verhalen en de speler.",
-      "Witte flitsen bij het wisselen naar de donkere modus zijn opgelost; het annuleren van de automatische verlenging zorgt er niet langer voor dat de toegang direct wordt beëindigd, maar blijft geldig tot het einde van de betaalde periode."
+      "Het toevoegen van emoties, de aanbevelingskaarten en de pincode zijn nu gratis voor iedereen — een abonnement is hiervoor niet langer nodig.",
+      "Het ontwerp is vernieuwd: een nieuw 'terug'-icoon op alle schermen, nieuwe koppen voor secties en het slaapgeluidenscherm, en nieuwe kleuren voor verhalen en de speler.",
+      "Witte flitsen bij het overschakelen naar de donkere modus zijn opgelost; het opzeggen van automatische verlenging zorgt er niet langer voor dat de toegang direct vervalt, maar blijft geldig tot het einde van de betaalde periode."
     ]
   },
   {
@@ -261,7 +272,7 @@
       "593"
     ],
     "notes": [
-      "Het invullen van het dagboek met automatische gedachten voelt nu meer als een sessie met een psycholoog. In de 'Zorgvuldige Dialoog' vertel je gewoon in je eigen woorden wat er is gebeurd — de AI-assistent begeleidt je vriendelijk en vult de benodigde stappen in het dagboek voor je in. Zo kun je je volledig concentreren op je herinneringen, gedachten en gevoelens van dat moment, zonder je zorgen te maken over de structuur."
+      "Het invullen van het dagboek voor automatische gedachten voelt nu meer als een sessie met een psycholoog. In de 'Zorgvuldige Dialoog' vertel je gewoon in je eigen woorden wat er is gebeurd — de AI-assistent begeleidt je vriendelijk en vult zelf de benodigde stappen in het dagboek in. Zo kun je je volledig concentreren op je herinneringen, gedachten en gevoelens van dat moment, zonder je af te hoeven vragen hoe je het dagboek moet structureren."
     ]
   },
   {
@@ -300,7 +311,7 @@
       "587"
     ],
     "notes": [
-      "Grote update voor de AI-assistent! Een analyse is nu pas het begin. We hebben een volledige interactieve dialoog toegevoegd: bespreek je inzichten en voer psychologische oefeningen uit onder deskundige begeleiding van de AI. En dit is slechts de eerste stap naar een geheel nieuw niveau van ondersteuning!"
+      "Een grote update voor de AI-assistent! Analyse is nu pas het begin. We hebben een volledige interactieve dialoog toegevoegd: bespreek je inzichten en voer psychologische oefeningen uit onder deskundige begeleiding van de AI. Dit is pas de eerste stap naar een geheel nieuw niveau van ondersteuning!"
     ]
   },
   {
@@ -381,7 +392,7 @@
       "574"
     ],
     "notes": [
-      "Maak kennis met de nieuwe sectie in de oefeningen: ademhalingsoefeningen! 🧘‍♂️ Ze helpen je om stress te verminderen, paniekaanvallen te beheersen of juist je energie te bundelen! ⚡️"
+      "Maak kennis met de nieuwe sectie in de oefeningen: ademhalingsoefeningen! 🧘‍♂️ Ze helpen je om stress te verminderen, paniek te beheersen of juist je energie te bundelen! ⚡️"
     ]
   },
   {
